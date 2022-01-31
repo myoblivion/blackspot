@@ -70,7 +70,7 @@ const HomeComponent = () => {
               {/* game list */}
 
               <div className="first hero">
-                <img className="hero-profile-img" src={game1} alt="" />
+                <img className="hero-profile-img" src={game1} alt="Scion Fist Game" />
                 <div className="hero-description-bk"></div>
 
                 <div className="hero-description">
@@ -84,7 +84,7 @@ const HomeComponent = () => {
                 </div>
               </div>
               <div className="second hero">
-                <img className="hero-profile-img" src={game2} alt="" />
+                <img className="hero-profile-img" src={game2} alt="Gogo Racing" />
                 <div className="hero-description-bk"></div>
 
                 <div className="hero-description">
@@ -98,7 +98,7 @@ const HomeComponent = () => {
                 </div>
               </div>
               <div className="third hero">
-                <img className="hero-profile-img" src={game3} alt="" />
+                <img className="hero-profile-img" src={game3} alt="Gogo Chain" />
                 <div className="hero-description-bk"></div>
                 <div className="hero-description">
                   <p>GOGO CHAIN</p>
@@ -111,7 +111,7 @@ const HomeComponent = () => {
                 </div>
               </div>
               <div className="fourth hero">
-                <img className="hero-profile-img" src={game4} alt="" />
+                <img className="hero-profile-img" src={game4} alt="Gogo World" />
                 <div className="hero-description-bk"></div>
                 <div className="hero-description">
                   <p>GOGO WORLD</p>
