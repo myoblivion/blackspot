@@ -9,9 +9,7 @@ import logo from "../images/logorandom.png";
 // Image Js
 import emailjs from "emailjs-com";
 
-
 const HomeComponent = () => {
-
   // Email Js
   function sendEmail(e) {
     e.preventDefault();
@@ -146,66 +144,58 @@ const HomeComponent = () => {
           </div>
         </div>
         <div className="contact">
-        <form className="form" onSubmit={sendEmail}>
-        <div className="containers">
-          <div className="rows">
-            <div className="col-8">
-              <label htmlFor="name">
-                 Name
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                name="name"
-                required
-              />
-              <span class="separator"> </span>
+          <form className="form" onSubmit={sendEmail}>
+            <div className="containers">
+              <div className="rows">
+                <div className="col-8">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                  <span class="separator"> </span>
+                </div>
+                <div className="col-8">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <span class="separator"> </span>
+                </div>
+                <div className="col-8">
+                  <label htmlFor="subject">Subject</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="subject"
+                    name="subject"
+                    required
+                  />
+                  <span class="separator"> </span>
+                </div>
+              </div>
+              <div className="message">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <span class="separator"> </span>
+              </div>
+              <div className="btn">
+                <input type="submit" className="btn-btn" value="Send" />
+              </div>
             </div>
-            <div className="col-8">
-              <label htmlFor="email">
-                 Email
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                name="email"
-                required
-              />
-              <span class="separator"> </span>
-            </div>
-            <div className="col-8">
-              <label htmlFor="subject">
-                 Subject
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="subject"
-                name="subject"
-                required
-              />
-              <span class="separator"> </span>
-            </div>
-          </div>
-          <div className="message">
-            <label htmlFor="message">
-             Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <span class="separator"> </span>
-          </div>
-          <div className="btn">
-            <input type="submit" className="btn-btn" value="Send" />
-          </div>
-        </div>
-      </form>
+          </form>
         </div>
       </div>
       {/* Brand */}
