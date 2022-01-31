@@ -1,10 +1,10 @@
 import React from "react";
 
 // Images
-import game2 from "../images/game2.png";
-import game1 from "../images/Screenshot8.png";
+import game2 from "../images/game2.jpg";
+import game1 from "../images/Screenshot8.jpg";
 import game3 from "../images/game3.jpg";
-import game4 from "../images/game4.png";
+import game4 from "../images/game4.jpg";
 import logo from "../images/logorandom.png";
 // Image Js
 import emailjs from "emailjs-com";
