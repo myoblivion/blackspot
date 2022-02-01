@@ -104,6 +104,7 @@ body {
       rgba(0, 0, 0, 1) 41%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c0000",endColorstr="#000000",GradientType=1);
+    // Wraps games
     .game-wrapper {
       backdrop-filter: blur(30px);
       display: flex;
