@@ -1,11 +1,13 @@
 import React from "react";
 
 // Images
-import game2 from "../images/game2.jpg";
-import game1 from "../images/Screenshot8.jpg";
-import game3 from "../images/game3.jpg";
-import game4 from "../images/game4.jpg";
+
 import logo from "../images/logorandom.png";
+import game1 from "../images/cards/scionfist.png";
+import game2 from "../images/cards/gogoracing.png";
+import game3 from "../images/cards/gogochain.png";
+import game4 from "../images/cards/gogoworld.png";
+import android from "../images/icons/android.png";
 // Image Js
 import emailjs from "emailjs-com";
 
@@ -64,73 +66,79 @@ const HomeComponent = () => {
         </div>
         {/* Games */}
         <div className="container-2" id="game">
-          <h2>Our Games</h2>
-          <div className="card-wrapper">
-            <div className="wrapper-cards">
-              {/* game list */}
-
-              <div className="first hero">
-                <img className="hero-profile-img" src={game1} alt="Scion Fist Game" />
-                <div className="hero-description-bk"></div>
-
-                <div className="hero-description">
-                  <p>SCION FIST</p>
-                </div>
-                <div className="hero-date">
-                  <p>Coming soon</p>
-                </div>
-                <div className="hero-btn">
-                  <a href="#">Learn More</a>
-                </div>
-              </div>
-              <div className="second hero">
-                <img className="hero-profile-img" src={game2} alt="Gogo Racing" />
-                <div className="hero-description-bk"></div>
-
-                <div className="hero-description">
-                  <p>GOGO RACING</p>
-                </div>
-                <div className="hero-date">
-                  <p>Coming soon</p>
-                </div>
-                <div className="hero-btn">
-                  <a href="#">Learn More</a>
-                </div>
-              </div>
-              <div className="third hero">
-                <img className="hero-profile-img" src={game3} alt="Gogo Chain" />
-                <div className="hero-description-bk"></div>
-                <div className="hero-description">
-                  <p>GOGO CHAIN</p>
-                </div>
-                <div className="hero-date">
-                  <p>Coming soon</p>
-                </div>
-                <div className="hero-btn">
-                  <a href="#">Learn More</a>
-                </div>
-              </div>
-              <div className="fourth hero">
-                <img className="hero-profile-img" src={game4} alt="Gogo World" />
-                <div className="hero-description-bk"></div>
-                <div className="hero-description">
-                  <p>GOGO WORLD</p>
-                </div>
-                <div className="hero-date">
-                  <p>Coming soon</p>
-                </div>
-                <div className="hero-btn">
-                  <a href="#">Learn More</a>
-                </div>
-              </div>
+          <div className="game-wrapper">
+            <div className="game-title">
+              <h2>Our Games</h2>
             </div>
+            <ul className="game-list">
+              <li className="game-item">
+                <a href="#">
+                  <img
+                    src={game1}
+                    alt="Scion Fist"
+                    sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
+                  />
+                  <div className="game-content">
+                    <h3>Scion Fist</h3>
+                    <span>Coming Soon</span>
+                    <img src={android} alt="android" />
+                  </div>
+                </a>
+              </li>
+              <li className="game-item">
+                <a href="#">
+                  <img
+                    src={game2}
+                    alt="Go Go Racing"
+                    sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
+                  />
+                  <div className="game-content">
+                    <h3>Go Go Racing</h3>
+                    <span>Coming Soon</span>
+                    <img src={android} alt="android" />
+                  </div>
+                </a>
+              </li>
+              <li className="game-item">
+                <a href="#">
+                  <img
+                    src={game3}
+                    alt="Go GO Chain"
+                    sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
+                  />
+                  <div className="game-content">
+                    <h3>Go Go Chain</h3>
+                    <span>Coming Soon</span>
+                    <img src={android} alt="android" />
+                  </div>
+                </a>
+              </li>
+              <li className="game-item">
+                <a href="#">
+                  <img
+                    src={game4}
+                    alt="Scion Fist"
+                    sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
+                  />
+                  <div className="game-content">
+                    <h3>Go Go World</h3>
+                    <span>Coming Soon</span>
+                    <img src={android} alt="android" />
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="brand">
+        {/* Brand */}
+        {/* <div className="brand">
           <h2>BRAND</h2>
-          <span className="box-1"></span>
-          <span className="box-2"></span>
-          <span className="box-3"></span>
+          <span className="character1">
+            <img src={character} alt="Scion Fist Character Elena" />
+          </span>
+          <span className="character2">
+            <img src={character2} alt="Scion Fist Character Elena" />
+          </span>
           <div className="video-responsive">
             <iframe
               width="560"
@@ -196,7 +204,7 @@ const HomeComponent = () => {
               </div>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
       {/* Brand */}
     </div>
