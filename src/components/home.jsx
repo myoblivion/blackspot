@@ -10,7 +10,7 @@ import game4 from "../images/cards/gogoworld.png";
 import android from "../images/icons/android.png";
 import character from "../images/characters/Steven_blue.png";
 import character2 from "../images/characters/Grace.png";
-// Images for social 
+// Images for social
 import facebook from "../images/icons/facebook.png";
 import instagram from "../images/icons/instagram.png";
 import twitter from "../images/icons/twitter.png";
@@ -143,7 +143,7 @@ const HomeComponent = () => {
           </div>
         </div>
         {/* Brand */}
-         <div className="brand">
+        <div className="brand">
           <h2>BRAND</h2>
           <span className="character1">
             <img src={character} alt="Scion Fist Character Elena" />
@@ -207,23 +207,32 @@ const HomeComponent = () => {
             </div>
           </form>
           <div className="socials">
-          <h2>Socials</h2>
+            <h2>Socials</h2>
             <div className="sc-container">
-              <a href="https://www.facebook.com/BlackspotstudioPH" target="_blank">
-              <img src={facebook} alt="Facebook" />
+              <a
+                href="https://www.facebook.com/BlackspotstudioPH"
+                target="_blank"
+              >
+                <img src={facebook} alt="Facebook" />
               </a>
-              <a href="https://www.instagram.com/phblackspotstudio/" target="_blank">
-              <img src={instagram} alt="Instagram" />
+              <a
+                href="https://www.instagram.com/phblackspotstudio/"
+                target="_blank"
+              >
+                <img src={instagram} alt="Instagram" />
               </a>
-              <a href="https://www.reddit.com/r/BlackSpotStudioPH/" target="_blank">
-              <img src={reddit} alt="Reddit" />
+              <a
+                href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                target="_blank"
+              >
+                <img src={reddit} alt="Reddit" />
               </a>
               <a href="https://twitter.com/BlackSpotPH" target="_blank">
-              <img src={twitter} alt="Twitter" />
+                <img src={twitter} alt="Twitter" />
               </a>
-              </div>
+            </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   );
