@@ -1,26 +1,19 @@
 @use "../components/mixins" as mixin;
 
 .navbar {
-  background-color: #a7a2ff83;
   position: sticky;
   top: 0;
-  z-index: 9;
+  z-index: 99;
   display: flex;
   align-items: center;
   backdrop-filter: blur(30px);
   width: 100%;
-  background-color: #3d3c3c60;
-  background-image: -webkit-linear-gradient(top, #e0e0e062, #c8c8c87a);
-  background-image: -moz-linear-gradient(top, #e0e0e073, #c8c8c862);
-  background-image: -o-linear-gradient(top, #e0e0e073(200, 200, 200, 0.699) C8);
-  background-image: -ms-linear-gradient(top, #e0e0e05d, #c8c8c850);
-  background-image: linear-gradient(top, #e0e0e052, #c8c8c848);
-  -webkit-box-shadow: inset 0 1px #ffffff71, inset 0 -1px #dadada50,
-    0 1px 2px rgba(221, 221, 221, 0.705);
-  -moz-box-shadow: inset 0 1px #ffffff50, inset 0 -1px #dadada62,
-    0 1px 2px rgba(221, 221, 221, 0.308);
-  box-shadow: inset 0 1px #ffffff67, inset 0 -1px #dadada48,
-    0 1px 2prgba (221, 221, 221, 0.918) DD;
+  background-color: #fd040460;
+  background-image: -webkit-linear-gradient(top, #e0e0e0, #c8c8c8);
+  background-image: -moz-linear-gradient(top, #e0e0e0, #c8c8c8);
+  background-image: -o-linear-gradient(top, #e0e0e0, #c8c8c8);
+  background-image: -ms-linear-gradient(top, #e0e0e0, #c8c8c8);
+  background-image: linear-gradient(top, #e0e0e0, #c8c8c8);
   .clearfix {
     margin-top: 0;
   }
@@ -44,8 +37,9 @@
     justify-content: center;
     align-items: center;
     img {
-      width: 150px;
-      margin-left: 3rem;
+      width: 100px;
+      height: 40px;
+      margin-left: 4rem;
       padding: 0;
     }
   }
@@ -66,7 +60,7 @@
       a {
         display: block;
         text-decoration: none;
-        padding: 22px 50px;
+        padding: 18px 50px;
         font-weight: bold;
         text-shadow: 0 1px #f8f8f8;
         color: #444;

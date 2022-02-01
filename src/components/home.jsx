@@ -8,6 +8,14 @@ import game2 from "../images/cards/gogoracing.png";
 import game3 from "../images/cards/gogochain.png";
 import game4 from "../images/cards/gogoworld.png";
 import android from "../images/icons/android.png";
+import character from "../images/characters/Steven_blue.png";
+import character2 from "../images/characters/Grace.png";
+// Images for social 
+import facebook from "../images/icons/facebook.png";
+import instagram from "../images/icons/instagram.png";
+import twitter from "../images/icons/twitter.png";
+import reddit from "../images/icons/reddit.png";
+
 // Image Js
 import emailjs from "emailjs-com";
 
@@ -74,6 +82,7 @@ const HomeComponent = () => {
               <li className="game-item">
                 <a href="#">
                   <img
+                    className="game-banner"
                     src={game1}
                     alt="Scion Fist"
                     sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
@@ -88,6 +97,7 @@ const HomeComponent = () => {
               <li className="game-item">
                 <a href="#">
                   <img
+                    className="game-banner"
                     src={game2}
                     alt="Go Go Racing"
                     sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
@@ -102,6 +112,7 @@ const HomeComponent = () => {
               <li className="game-item">
                 <a href="#">
                   <img
+                    className="game-banner"
                     src={game3}
                     alt="Go GO Chain"
                     sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
@@ -116,6 +127,7 @@ const HomeComponent = () => {
               <li className="game-item">
                 <a href="#">
                   <img
+                    className="game-banner"
                     src={game4}
                     alt="Scion Fist"
                     sizes="(min-width: 1890px) 855px,(min-width: 1280px) calc(50vw - 90px),(min-width: 960px) calc(50vw - 50px),calc(100vw - 40px)"
@@ -131,7 +143,7 @@ const HomeComponent = () => {
           </div>
         </div>
         {/* Brand */}
-        {/* <div className="brand">
+         <div className="brand">
           <h2>BRAND</h2>
           <span className="character1">
             <img src={character} alt="Scion Fist Character Elena" />
@@ -154,6 +166,7 @@ const HomeComponent = () => {
         <div className="contact">
           <form className="form" onSubmit={sendEmail}>
             <div className="containers">
+              <h2>CONTACT US</h2>
               <div className="rows">
                 <div className="col-8">
                   <label htmlFor="name">Name</label>
@@ -164,7 +177,7 @@ const HomeComponent = () => {
                     name="name"
                     required
                   />
-                  <span class="separator"> </span>
+                  <span className="separator"> </span>
                 </div>
                 <div className="col-8">
                   <label htmlFor="email">Email</label>
@@ -175,18 +188,7 @@ const HomeComponent = () => {
                     name="email"
                     required
                   />
-                  <span class="separator"> </span>
-                </div>
-                <div className="col-8">
-                  <label htmlFor="subject">Subject</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="subject"
-                    name="subject"
-                    required
-                  />
-                  <span class="separator"> </span>
+                  <span className="separator"> </span>
                 </div>
               </div>
               <div className="message">
@@ -197,16 +199,32 @@ const HomeComponent = () => {
                   cols="30"
                   rows="10"
                 ></textarea>
-                <span class="separator"> </span>
+                <span className="separator"> </span>
               </div>
               <div className="btn">
                 <input type="submit" className="btn-btn" value="Send" />
               </div>
             </div>
           </form>
-        </div> */}
+          <div className="socials">
+          <h2>Socials</h2>
+            <div className="sc-container">
+              <a href="https://www.facebook.com/BlackspotstudioPH" target="_blank">
+              <img src={facebook} alt="Facebook" />
+              </a>
+              <a href="https://www.instagram.com/phblackspotstudio/" target="_blank">
+              <img src={instagram} alt="Instagram" />
+              </a>
+              <a href="https://www.reddit.com/r/BlackSpotStudioPH/" target="_blank">
+              <img src={reddit} alt="Reddit" />
+              </a>
+              <a href="https://twitter.com/BlackSpotPH" target="_blank">
+              <img src={twitter} alt="Twitter" />
+              </a>
+              </div>
+          </div>
+        </div> 
       </div>
-      {/* Brand */}
     </div>
   );
 };

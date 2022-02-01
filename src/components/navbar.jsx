@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-import logo from "../images/logorandom.png";
+import logo from "../images/icons/logo.png";
 
 const NavbarComponent = ({ currentRoute }) => {
   const [navbar, setNavbar] = useState(false);
