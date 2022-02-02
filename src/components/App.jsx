@@ -1,39 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, useLocation } from "react-router-dom";
 
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
-import MainComponent from "./main";
-import BusinessComponent from "./business";
-import WithComponent from "./with";
-import GlobalComponent from "./global";
+import AboutComponent from "./about";
+import DirectionComponent from "./direction";
+import JobComponent from "./job";
+import NewsComponent from "./news";
+import ScionComponent from "./scion";
+import LoadingComponent from "./loading";
 // styles
 import "./scss/index.scss";
 
 const Appcomponent = () => {
-    const location = useLocation().pathname;
-    const newClass = location.split("/")[1];
-    return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+  const location = useLocation().pathname;
+  const newClass = location.split("/")[1];
+  return (
+    <>
+      {loading ? (
+        <LoadingComponent />
+      ) : (
         <div className={"main " + newClass}>
-        <NavbarComponent currentRoute={newClass}/>
-    <Route exact path="/">
-        <HomeComponent />
-    </Route>
-    <Route path="/main">
-    <MainComponent />
-    </Route>
-    <Route path="/business">
-    <BusinessComponent />
-    </Route>
-    <Route path="/with">
-    <WithComponent />
-    </Route>
-    <Route path="/global">
-    <GlobalComponent />
-    </Route>
+          <NavbarComponent currentRoute={newClass} />
+          <Route exact path="/">
+            <HomeComponent />
+          </Route>
+          <Route path="/about">
+            <AboutComponent />
+          </Route>
+          <Route path="/direction">
+            <DirectionComponent />
+          </Route>
+          <Route path="/job">
+            <JobComponent />
+          </Route>
+          <Route path="/news">
+            <NewsComponent />
+          </Route>
+          <Route path="/scion">
+            <ScionComponent />
+          </Route>
         </div>
-        );
+      )}
+    </>
+  );
 };
 
 export default Appcomponent;

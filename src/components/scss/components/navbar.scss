@@ -8,12 +8,7 @@
   align-items: center;
   backdrop-filter: blur(30px);
   width: 100%;
-  background-color: #fd040460;
-  background-image: -webkit-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: -moz-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: -o-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: -ms-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: linear-gradient(top, #e0e0e0, #c8c8c8);
+  border-bottom: 2px solid white;
   .clearfix {
     margin-top: 0;
   }
@@ -33,13 +28,14 @@
   justify-content: space-between;
   align-items: center;
   .logo {
+    margin-top: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
       width: 100px;
-      height: 40px;
-      margin-left: 4rem;
+      height: 50px;
+      margin-left: 7rem;
       padding: 0;
     }
   }
@@ -62,12 +58,11 @@
         text-decoration: none;
         padding: 18px 50px;
         font-weight: bold;
-        text-shadow: 0 1px #f8f8f8;
-        color: #444;
+        color: rgb(255, 255, 255);
         margin: 0;
 
         &:hover {
-          box-shadow: 0 0 24px #000000;
+          color: black;
         }
       }
     }
@@ -76,7 +71,7 @@
 
 .container > ul > li > a:hover,
 .container > ul > li:hover {
-  background-color: white;
+  background-color: rgb(168, 168, 168);
   border-left: none;
 }
 .container .tab {
@@ -85,8 +80,8 @@
   min-width: 200px;
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
-  color: #787878;
-  background-color: white;
+  color: #ffffff;
+  background-color: rgb(168, 168, 168);
   padding: 10px 15px 10px;
   display: none;
   li {
@@ -97,7 +92,7 @@
       text-decoration: none;
       font-size: 10pt;
       padding: 10px 15px 10px;
-      color: #787878;
+      color: #ffffff;
       &:hover {
         color: black;
         background-color: #f9f9f9;
@@ -106,20 +101,15 @@
   }
 }
 .active {
-  background-color: #d4d4d4;
-  background-image: -webkit-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: -moz-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: -o-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: -ms-linear-gradient(top, #e0e0e0, #c8c8c8);
-  background-image: linear-gradient(top, #e0e0e0, #c8c8c8);
-
+  background-color: #929292;
+  transition: background-color .28s;
+  border-bottom: none;
   ul li a {
     display: block;
     text-decoration: none;
     padding: 18px 50px;
     font-weight: bold;
-    text-shadow: 0 1px #f8f8f8;
-    color: #444;
+    color: rgb(255, 255, 255);
   }
 }
 // tabs

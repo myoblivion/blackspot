@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
 import logo from "../images/icons/logo.png";
 
 const NavbarComponent = ({ currentRoute }) => {
@@ -29,7 +28,7 @@ const NavbarComponent = ({ currentRoute }) => {
             to="/"
             style={
               currentRoute === "home"
-                ? { borderBottom: "2px solid white" }
+                ? { borderBottom: "2px solid yellow" }
                 : { borderBottom: "2px solid transparent" }
             }
           >
@@ -42,71 +41,81 @@ const NavbarComponent = ({ currentRoute }) => {
               to="/"
               style={
                 currentRoute === "home"
-                  ? { borderBottom: "2px solid white" }
+                  ? { borderBottom: "2px solid yellow" }
                   : { borderBottom: "2px solid transparent" }
               }
             >
               Home
             </Link>
           </li>
+
+          <li>
+            <a href="#">Games</a>
+          </li>
           <li>
             <a href="#">About</a>
             <ul className="tab">
               <li>
                 <Link
-                  to="/main"
+                  to="/about"
                   style={
-                    currentRoute === "main"
-                      ? { borderBottom: "2px solid white" }
+                    currentRoute === "about"
+                      ? { borderBottom: "2px solid yellow" }
                       : { borderBottom: "2px solid transparent" }
                   }
                 >
-                  Main Spot
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/business"
+                  to="/direction"
                   style={
-                    currentRoute === "business"
-                      ? { borderBottom: "2px solid white" }
+                    currentRoute === "direction"
+                      ? { borderBottom: "2px solid yellow" }
                       : { borderBottom: "2px solid transparent" }
                   }
                 >
-                  Business Spot
+                  Directions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/with"
+                  to="/scion"
                   style={
-                    currentRoute === "with"
-                      ? { borderBottom: "2px solid white" }
+                    currentRoute === "scion"
+                      ? { borderBottom: "2px solid yellow" }
                       : { borderBottom: "2px solid transparent" }
                   }
                 >
-                  With Spot
+                  Scion Fist
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/global"
+                  to="/job"
                   style={
-                    currentRoute === "global"
-                      ? { borderBottom: "2px solid white" }
+                    currentRoute === "job"
+                      ? { borderBottom: "2px solid yellow" }
                       : { borderBottom: "2px solid transparent" }
                   }
                 >
-                  Global Spot
+                  Job Postings
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/news"
+                  style={
+                    currentRoute === "news"
+                      ? { borderBottom: "2px solid yellow" }
+                      : { borderBottom: "2px solid transparent" }
+                  }
+                >
+                  News & Announcements
                 </Link>
               </li>
             </ul>
-          </li>
-          <li>
-            <a href="#">Games</a>
-          </li>
-          <li>
-            <a href="#">Brand</a>
           </li>
           <li>
             <a href="#">Contact</a>
