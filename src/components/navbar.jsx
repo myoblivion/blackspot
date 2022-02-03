@@ -53,7 +53,7 @@ const NavbarComponent = ({ currentRoute }) => {
             <a href="#">Games</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <p>About</p>
             <ul className="tab">
               <li>
                 <Link
@@ -77,18 +77,6 @@ const NavbarComponent = ({ currentRoute }) => {
                   }
                 >
                   Directions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/scion"
-                  style={
-                    currentRoute === "scion"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
-                >
-                  Scion Fist
                 </Link>
               </li>
               <li>

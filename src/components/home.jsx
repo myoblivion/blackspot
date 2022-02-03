@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 // Images
 
 import logo from "../images/logorandom.png";
-import game1 from "../images/cards/scionfist.png";
-import game2 from "../images/cards/gogoracing.png";
-import game3 from "../images/cards/gogochain.png";
-import game4 from "../images/cards/gogoworld.png";
+import game1 from "../images/cards/scionfist.jpg";
+import game2 from "../images/cards/gogoracing.jpg";
+import game3 from "../images/cards/gogochain.jpg";
+import game4 from "../images/cards/gogoworld.jpg";
 import android from "../images/icons/android.png";
 // import character from "../images/characters/Steven_blue.png";
 // import character2 from "../images/characters/Grace.png";
@@ -14,11 +14,44 @@ import facebook from "../images/icons/facebook.png";
 import instagram from "../images/icons/instagram.png";
 import twitter from "../images/icons/twitter.png";
 import reddit from "../images/icons/reddit.png";
+import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from "react-icons/fa"
 
 // Image Js
 import emailjs from "emailjs-com";
+import Slider from "react-slick";
+
+const images = [game1, game2, game3, game4];
 
 const HomeComponent = () => {
+
+  const NextArrow = ({onClick}) => {
+    return (
+      <div className="arrow next" onClick={onClick} key={NextArrow}>
+        <FaArrowAltCircleRight />
+      </div>
+    )
+  }
+  const PrevArrow = ({onClick}) => {
+    return (
+      <div className="arrow prev" onClick={onClick} key={PrevArrow}>
+        <FaArrowAltCircleLeft />
+      </div>
+    )
+  }
+  const [imageIndex, setImageIndex] = useState(0)
+
+  // img slider
+  const settings = {
+    Infinite: true,
+    lazyload: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
 
   // Title
 
@@ -84,6 +117,13 @@ const HomeComponent = () => {
             <div className="game-title">
               <h2>Our Games</h2>
             </div>
+            <Slider {...settings}>
+              {images.map((img, idx) => (
+                <div className={idx == imageIndex ? "slide activeSlide" : "slide"}>
+                  <img src={img} alt={img} />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
         {/* Contact */}

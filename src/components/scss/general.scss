@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    background: #222;
 }
 
 ul, li {
@@ -38,7 +39,6 @@ Background sample
 
 .wrapper {
     @include mixin.displayFlex(row, start, flex-end);
-    animation: appearBottom 2s ease;
     z-index: 4;
 }
 
@@ -51,14 +51,7 @@ to {
 }
 }
 
-@keyframes appearBottom {
-from {
-    margin-right: 100vh;
-}
-to {
-    margin-right: 0;
-}
-}
+
 
 @keyframes rotate {
 from {
@@ -68,4 +61,11 @@ to {
     -webkit-transform: rotate(360deg);
 }
 }
-
+@keyframes opas {
+    from {
+        margin-top: 400px;
+    }
+    to {
+        margin-top: 0;
+    }
+}

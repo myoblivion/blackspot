@@ -1,4 +1,7 @@
 @use "../components/mixins" as mixin;
+
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 html,
 body {
   width: 100%;
@@ -77,7 +80,9 @@ body {
     height: 100vh;
     min-height: 100vh;
     img {
+      animation: opas 1s ease;
       width: 1000px;
+      backdrop-filter: blur(3px);
     }
   }
 
@@ -87,6 +92,11 @@ body {
     min-height: 100%;
     max-height: 120vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     background: rgb(60, 0, 0);
     background: -moz-linear-gradient(
       90deg,
@@ -105,7 +115,52 @@ body {
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c0000",endColorstr="#000000",GradientType=1);
     // Wraps games
-          // List
+    .game-title {
+      font-size: 30px;
+      text-align: center;
+    }
+    .game-wrapper {
+      width: 100%;
+      margin: 10rem auto;
+      img {
+      height: 470px;
+        width: 100%;
+      }
+      .slide img {
+        width: 30rem;
+        margin: 0 auto;
+      }
+      .slide {
+        transform: scale(0.9);
+        transition: transform 300ms;
+        opacity: .3;
+      }
+      .activeSlide {
+        transform: scale(1.1);
+        opacity: 2.9;
+      }
+      .arrow {
+        position: absolute;
+        cursor: pointer;
+        z-index: 10;
+        color: white;
+        svg {
+          transition: color 300ms;
+          font-size: 40px;
+          &:hover {
+          color: gray;
+          }
+        }
+      }
+      .next {
+        top: 50%;
+        right: 2em;
+      }
+      .prev {
+        left: 2em;
+        top: 50%;
+      }
+    }
   }
 
   // Contacts
