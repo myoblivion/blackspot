@@ -11,11 +11,6 @@ import gogoworld from "../images/icons/gogoworld.png";
 import gogochain from "../images/icons/gogochain.png";
 import gogoracing from "../images/icons/gogoracing.png";
 
-// Images for social
-import facebook from "../images/icons/facebook.png";
-import instagram from "../images/icons/instagram.png";
-import twitter from "../images/icons/twitter.png";
-import reddit from "../images/icons/reddit.png";
 import {
   FaRegArrowAltCircleRight,
   FaRegArrowAltCircleLeft,
