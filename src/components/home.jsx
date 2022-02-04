@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 // Images
 
-import logo from "../images/logorandom.png";
 import game1 from "../images/cards/scionfist.jpg";
 import game2 from "../images/cards/gogoracing.jpg";
 import game3 from "../images/cards/gogochain.jpg";
@@ -133,12 +132,12 @@ const HomeComponent = () => {
         </div>
         {/* Contact */}
         <div className="contact">
-        <h2>CONTACT US</h2>
+          <h2>CONTACT US</h2>
           <div className="wrapper-co">
             <form className="form" onSubmit={sendEmail}>
               <div className="col-8">
                 <input type="text" id="name" name="name" autoFocus required />
-                <label htmlFor="name" className="name" >
+                <label htmlFor="name" className="name">
                   <span className="label-text">Name</span>
                 </label>
               </div>
@@ -149,7 +148,12 @@ const HomeComponent = () => {
                 </label>
               </div>
               <div className="col-8">
-                <textarea id="message" cols="30" rows="10" name="message"></textarea>
+                <textarea
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  name="message"
+                ></textarea>
                 <label htmlFor="message" className="message">
                   <span className="label-text">Message</span>
                 </label>
