@@ -7,14 +7,19 @@ import game2 from "../images/cards/gogoracing.jpg";
 import game3 from "../images/cards/gogochain.jpg";
 import game4 from "../images/cards/gogoworld.jpg";
 import scionlogo from "../images/scionlogo.png";
-// import character from "../images/characters/Steven_blue.png";
-// import character2 from "../images/characters/Grace.png";
+import gogoworld from "../images/icons/gogoworld.png";
+import gogochain from "../images/icons/gogochain.png";
+import gogoracing from "../images/icons/gogoracing.png";
+
 // Images for social
 import facebook from "../images/icons/facebook.png";
 import instagram from "../images/icons/instagram.png";
 import twitter from "../images/icons/twitter.png";
 import reddit from "../images/icons/reddit.png";
-import { FaRegArrowAltCircleRight, FaRegArrowAltCircleLeft } from "react-icons/fa";
+import {
+  FaRegArrowAltCircleRight,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
 
 // Image Js
 import emailjs from "emailjs-com";
@@ -87,7 +92,8 @@ const HomeComponent = () => {
         <div className="homewrapper">
           <ul className="cb-slideshow">
             <li>
-              <span></span>
+              <span>
+              </span>
             </li>
             <li>
               <span></span>
