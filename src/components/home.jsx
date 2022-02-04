@@ -19,6 +19,11 @@ import reddit from "../images/icons/reddit.png";
 import {
   FaRegArrowAltCircleRight,
   FaRegArrowAltCircleLeft,
+  FaInstagram,
+  FaFacebook,
+  FaTwitter,
+  FaReddit,
+  FaYoutube,
 } from "react-icons/fa";
 
 // Image Js
@@ -92,8 +97,7 @@ const HomeComponent = () => {
         <div className="homewrapper">
           <ul className="cb-slideshow">
             <li>
-              <span>
-              </span>
+              <span></span>
             </li>
             <li>
               <span></span>
@@ -134,72 +138,80 @@ const HomeComponent = () => {
         </div>
         {/* Contact */}
         <div className="contact">
-          <form className="form" onSubmit={sendEmail}>
-            <div className="containers">
-              <h2>CONTACT US</h2>
-              <div className="rows">
-                <div className="col-8">
-                  <label htmlFor="name">Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    required
-                  />
-                  <span className="separator"> </span>
-                </div>
-                <div className="col-8">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    required
-                  />
-                  <span className="separator"> </span>
-                </div>
+        <h2>CONTACT US</h2>
+          <div className="wrapper-co">
+            <form className="form" onSubmit={sendEmail}>
+              <div className="col-8">
+                <input type="text" id="n" autoFocus required />
+                <label htmlFor="n" className="name">
+                  <span className="label-text">Name</span>
+                </label>
               </div>
-              <div className="message">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-                <span className="separator"> </span>
+              <div className="col-8">
+                <input type="email" id="e" required />
+                <label htmlFor="e" className="email">
+                  <span className="label-text">Email</span>
+                </label>
               </div>
-              <div className="btn">
-                <input type="submit" className="btn-btn" value="Send" />
+              <div className="col-8">
+                <textarea id="m" cols="30" rows="10"></textarea>
+                <label htmlFor="m" className="message">
+                  <span className="label-text">Message</span>
+                </label>
               </div>
-            </div>
-          </form>
-          <div className="socials">
-            <h2>Socials</h2>
-            <div className="sc-container">
-              <a
-                href="https://www.facebook.com/BlackspotstudioPH"
-                target="_blank"
-              >
-                <img src={facebook} alt="Facebook" />
-              </a>
-              <a
-                href="https://www.instagram.com/phblackspotstudio/"
-                target="_blank"
-              >
-                <img src={instagram} alt="Instagram" />
-              </a>
-              <a
-                href="https://www.reddit.com/r/BlackSpotStudioPH/"
-                target="_blank"
-              >
-                <img src={reddit} alt="Reddit" />
-              </a>
-              <a href="https://twitter.com/BlackSpotPH" target="_blank">
-                <img src={twitter} alt="Twitter" />
-              </a>
+              <input type="submit" value="Send message" className="button" />
+            </form>
+            <div className="direct-contact-container">
+              <h4> Keep In Touch</h4>
+              <hr />
+              <ul className="social-media-list">
+                <li>
+                  <a
+                    href="https://www.facebook.com/BlackspotstudioPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/phblackspotstudio/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaInstagram />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/BlackSpotPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaReddit />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaYoutube />
+                  </a>
+                </li>
+              </ul>
+              <hr />
             </div>
           </div>
         </div>
