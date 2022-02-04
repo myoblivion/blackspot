@@ -382,21 +382,21 @@ body {
     }
 
     // Color inputs
-    #n {
+    #name {
       color: $green;
     }
 
-    #e {
+    #email {
       color: $darkgreen;
     }
 
-    #n:focus + label::before,
-    #n:focus + label::after {
+    #name:focus + label::before,
+    #name:focus + label::after {
       border-color: $green;
     }
 
-    #e:focus + label::before,
-    #e:focus + label::after {
+    #email:focus + label::before,
+    #email:focus + label::after {
       border-color: $darkgreen;
     }
 
@@ -420,7 +420,7 @@ body {
       }
     }
 
-    #m {
+    #message {
       height: 8em;
     }
 

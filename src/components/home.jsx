@@ -142,20 +142,20 @@ const HomeComponent = () => {
           <div className="wrapper-co">
             <form className="form" onSubmit={sendEmail}>
               <div className="col-8">
-                <input type="text" id="n" autoFocus required />
-                <label htmlFor="n" className="name">
+                <input type="text" id="name" name="name" autoFocus required />
+                <label htmlFor="name" className="name" >
                   <span className="label-text">Name</span>
                 </label>
               </div>
               <div className="col-8">
-                <input type="email" id="e" required />
-                <label htmlFor="e" className="email">
+                <input type="email" id="email" name="email" required />
+                <label htmlFor="email" className="email">
                   <span className="label-text">Email</span>
                 </label>
               </div>
               <div className="col-8">
-                <textarea id="m" cols="30" rows="10"></textarea>
-                <label htmlFor="m" className="message">
+                <textarea id="message" cols="30" rows="10" name="message"></textarea>
+                <label htmlFor="message" className="message">
                   <span className="label-text">Message</span>
                 </label>
               </div>
