@@ -1,133 +1,186 @@
 @use "../components/mixins" as mixin;
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  display: flex;
-  align-items: center;
-  background-color: rgba(59, 59, 59, 0.644);
-  width: 100%;
-  border-bottom: 2px solid white;
-  .clearfix {
-    margin-top: 0;
-  }
-  .clearfix:before,
-  .clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-}
-.container {
-  width: 100%;
-  margin-top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .logo {
-    margin-top: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 100px;
-      height: 50px;
-      margin-left: 7rem;
-      padding: 0;
-    }
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    margin: 0;
-    li {
-      display: block;
-      float: left;
-      border-right: 1px solid #bbb;
-      border-right: 1px solid rgba(10, 10, 10, 0.1);
-      li:last-child {
-        border-right: 0px;
-      }
-      p {
-          display: block;
-          text-decoration: none;
-          padding: 18px 50px;
-          font-weight: bold;
-          color: rgb(255, 255, 255);
-          margin: 0;
-          cursor: pointer;
-          &:hover {
-            color: black;
-          }
-      }
-      a {
-        display: block;
-        text-decoration: none;
-        padding: 18px 50px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-        margin: 0;
-        &:hover {
-          color: black;
-        }
-      }
-    }
-  }
+a {
+  color: #000;
 }
 
-.container > ul > li > a:hover,
-.container > ul > li:hover {
-  background-color: rgb(168, 168, 168);
-  border-left: none;
+/* header */
+
+.navbar {
+  background-color: rgb(136, 136, 136);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 20;
 }
-.container .tab {
+
+.navbar ul {
+  margin: 0 25px;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.navbar li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.navbar li p{
+  display: block;
+  padding: 20px 20px;
+  margin: 0;
+  color: black;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+
+.navbar li a:hover,
+.navbar .menu-btn:hover {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+.logo {
+  display: block;
+  float: left;
+  width: 50%;
+  padding: 10px 20px;
+  margin: 0 25px;
+  img {
+    width: 45%;
+  }
+  
+}
+
+.tab {
   position: absolute;
   list-style: none;
   min-width: 200px;
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
-  color: #ffffff;
-  background-color: rgb(168, 168, 168);
-  padding: 10px 15px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(114, 114, 114);
+}
+.navbar ul.tab li {
+  float: none;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+.navbar .tab {
+  position: absolute;
+  z-index: 500;
   display: none;
-  li {
-    float: none;
-    border-bottom: 1px solid rgba(10, 10, 10, 0.1);
-    a {
-      display: block;
-      text-decoration: none;
-      font-size: 10pt;
-      padding: 10px 15px 10px;
-      color: #ffffff;
-      &:hover {
-        color: black;
-        background-color: #f9f9f9;
-      }
-    }
-  }
+  margin-top: -5px;
 }
-.active {
-  background-color: #929292;
-  transition: background-color .28s;
-  border-bottom: none;
-  ul li a {
-    display: block;
-    text-decoration: none;
-    padding: 18px 50px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-  }
-}
-// tabs
-li:hover .tab {
+li:hover > .tab {
   display: block;
   margin-top: 0;
 }
-.container ul > li:last-child {
-  border-right: 0px;
+/* menu */
+
+.navbar .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.navbar .menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.navbar .menu-icon .navicon {
+  background-color: rgb(0, 0, 0);
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background-color 0.2s ease-out;
+  width: 20px;
+}
+
+.navbar .menu-icon .navicon:before,
+.navbar .menu-icon .navicon:after {
+  background-color: rgb(0, 0, 0);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.navbar .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.navbar .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.navbar .menu-btn {
+  display: none;
+}
+
+.navbar .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 450px) {
+  .navbar li {
+    float: left;
+  }
+  .navbar li a {
+    padding: 20px 30px;
+  }
+  .navbar .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .navbar .menu-icon {
+    display: none;
+  }
+  .logo {
+    width: 50%;
+    padding-left: 20px;
+    img {
+      width: 15%;
+      height: 30%;
+    }
+  }
+}
+
+.active {
+  background-color: #fffdfd;
+  transition: background-color 0.28s;
+  border-bottom: none;
 }

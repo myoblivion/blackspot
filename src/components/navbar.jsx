@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import icono from "../images/icons/logo.png";
+import closeIcon from "../images/icons/close.png";
+import openIcon from "../images/icons/more.png";
 import { Link } from "react-router-dom";
-
-import logo from "../images/icons/logo.png";
 
 const NavbarComponent = ({ currentRoute }) => {
   const [navbar, setNavbar] = useState(false);
@@ -22,8 +23,7 @@ const NavbarComponent = ({ currentRoute }) => {
 
   return (
     <header className={navbar ? "navbar active" : "navbar"}>
-      <nav className="container">
-        <div className="logo">
+       <div className="logo">
           <Link
             to="/"
             style={
@@ -32,29 +32,19 @@ const NavbarComponent = ({ currentRoute }) => {
                 : { borderBottom: "2px solid transparent" }
             }
           >
-            <img src={logo} alt="Black Spot Studio" />
+            <img src={icono} alt="Black Spot Studio" />
           </Link>
         </div>
-        <ul className="clearfix">
-          <li>
-            <Link
-              to="/"
-              style={
-                currentRoute === "home"
-                  ? { borderBottom: "2px solid yellow" }
-                  : { borderBottom: "2px solid transparent" }
-              }
-            >
-              Home
-            </Link>
-          </li>
-
-          <li>
-            <a href="#">Games</a>
-          </li>
-          <li>
-            <p>About</p>
-            <ul className="tab">
+  <input className="menu-btn" type="checkbox" id="menu-btn" />
+  <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
+  <ul className="menu">
+    <li><a href="#">Home</a></li>
+    <li>
+      <a href="#">Games</a>
+    </li>
+    <li>
+      <p> About</p>
+      <ul className="tab">
               <li>
                 <Link
                   to="/about"
@@ -104,13 +94,10 @@ const NavbarComponent = ({ currentRoute }) => {
                 </Link>
               </li>
             </ul>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</header>
   );
 };
 
