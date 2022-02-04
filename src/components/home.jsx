@@ -133,6 +133,7 @@ const HomeComponent = () => {
         {/* Contact */}
         <div className="contact">
           <h2>CONTACT US</h2>
+          <h4 id="above">We'd Love to hear from you!</h4>
           <div className="wrapper-co">
             <form className="form" onSubmit={sendEmail}>
               <div className="col-8">
@@ -214,6 +215,9 @@ const HomeComponent = () => {
             </div>
           </div>
         </div>
+        <footer>
+          
+        </footer>
       </div>
     </div>
   );
