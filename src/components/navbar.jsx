@@ -43,7 +43,7 @@ const NavbarComponent = ({ currentRoute }) => {
       <a href="#">Games</a>
     </li>
     <li>
-      <p> About</p>
+    <span> <a href="#"> About</a> </span>
       <ul className="tab">
               <li>
                 <Link

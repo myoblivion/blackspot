@@ -2,13 +2,10 @@ import React, { useState, useEffect } from "react";
 // Images
 import ReCaptchaV2 from "react-google-recaptcha";
 import game1 from "../images/cards/scionfist.jpg";
-import game2 from "../images/cards/gogoracing.jpg";
-import game3 from "../images/cards/gogochain.jpg";
-import game4 from "../images/cards/gogoworld.jpg";
-import scionlogo from "../images/scionlogo.png";
-import gogoworld from "../images/icons/gogoworld.png";
-import gogochain from "../images/icons/gogochain.png";
-import gogoracing from "../images/icons/gogoracing.png";
+import game2 from "../images/gogorc.jpg";
+import game3 from "../images/gogoch.jpg";
+import game4 from "../images/gogow.jpg";
+
 
 import {
   FaRegArrowAltCircleRight,
@@ -19,6 +16,7 @@ import {
   FaReddit,
   FaYoutube,
   FaInstagramSquare,
+  FaPaperPlane,
 } from "react-icons/fa";
 
 import { AiFillInstagram } from "react-icons/ai";
@@ -36,9 +34,9 @@ const handleExpire = () => {
 
 const handleToken = (token) => {
   setForm((currentForm) => {
-   return {...currentForm, token }
-  })
-}
+    return { ...currentForm, token };
+  });
+};
 
 const HomeComponent = () => {
   const NextArrow = ({ onClick }) => {
@@ -183,9 +181,61 @@ const HomeComponent = () => {
                     onChange={handleToken}
                     onExpire={handleExpire}
                   />
-                  <input type="submit" value="Send" id="btn" />
+                  <button type="submit" id="btn"><FaPaperPlane /> </button>
                 </div>
               </form>
+              <div className="direct-contact-container">
+                <h4>Join Our Community</h4>
+                <hr />
+                <ul className="social-media-list">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/BlackspotstudioPH"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/phblackspotstudio/"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <AiFillInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/BlackSpotPH"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaReddit />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaYoutube />
+                    </a>
+                  </li>
+                </ul>
+                <hr />
+              </div>
             </div>
           </div>
         </div>
