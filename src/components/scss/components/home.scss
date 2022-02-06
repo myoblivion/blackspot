@@ -97,7 +97,7 @@ body {
     height: 130vh;
     min-height: 100%;
     max-height: 130vh;
-    padding: 50px 0;
+    padding: 10px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -198,18 +198,18 @@ body {
 
   // Contacts
   .contact {
-    background-image: url("/src/images/banner2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+    background-color: white;
+    color: rgb(255, 255, 255);
     font-family: 300 1.25em "Open Sans", sans-serif;
+    height: 120vh;
+    max-height: 100%;
     width: 100%;
     h2 {
       text-align: center;
       margin: 0 auto;
       padding: 40px 0;
       font-family: 500 60px "Oswald", sans-serif;
-      color: #fff;
+      color: black;
       font-size: 40px;
       text-transform: uppercase;
       letter-spacing: 6px;
@@ -219,231 +219,89 @@ body {
       margin: 0 auto;
       padding: 20px 0;
       font-family: 250 60px "Oswald", sans-serif;
-      color: #fff;
+      color: black;
       text-transform: uppercase;
       letter-spacing: 6px;
     }
-    h4 {
-      font-family: 300 60px "Oswald", sans-serif;
-      text-transform: uppercase;
-    }
+
     .wrapper-co {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: auto;
       position: relative;
-      max-width: 940px;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.74);
-      border: 2px solid white;
+      max-width: 1200px;
+      background-color: #f3f3f3;
       border-radius: 15px;
-    }
-    .direct-contact-container {
-      max-width: 400px;
-      margin: 0 40px;
-    }
-    .social-media-list {
-      font-size: 22px;
-      text-align: center;
-      width: 100%;
-      padding: 0;
-    }
-    
-    .social-media-list li a {
-      color: #fff;
-    }
-    
-    .social-media-list li {
-      position: relative; 
-      display: inline-block;
-      height: 60px;
-      width: 60px;
-      margin: 10px 3px;
-      line-height: 60px;
-      border-radius: 50%;
-      color: #fff;
-      background-color: rgb(27,27,27);
-      cursor: pointer; 
-      transition: all .2s ease-in-out;
-    }
-    
+      height: 70%;
+      box-shadow: 13px 2px 21px 1px gray;
 
-    
-    .social-media-list li:hover {
-      background-color: #fff; 
-    }
-    
-    .social-media-list li:hover:after {
-      opacity: 1;  
-      transform: scale(1.12);
-      transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-    }
-    
-    .social-media-list li:hover a {
-      color: #000;
-    }
-    hr {
-      border-color: rgba(255,255,255,.6);
-    }
-
-
-    form {
-      position: relative;
-    }
-
-    textarea {
-      resize: none;
-    }
-    .col-8 {
-      margin-top: 20px;
-      margin-bottom: 5px;
-    }
-    // General form styling
-    input,
-    textarea {
-      background: transparent;
-      border: 0;
-      box-sizing: border-box;
-      color: inherit;
-      margin: 2em 0;
-      padding: 0.5em;
-      width: 100%;
-      &:focus {
-        outline: 0;
-      }
-    }
-
-    label {
-      position: absolute;
-      left: 0;
-      width: 100%;
-
-      // The colored borders around the text inputs
-      &::before,
-      &::after {
-        border-width: 1px;
-        border-style: solid;
-        content: " ";
-        pointer-events: none;
-        position: absolute;
-        transition: 0.75s;
-        width: 5%;
-        height: 2.25em;
-        z-index: 1;
-      }
-
-      &::before {
-        border-right: 0;
-      }
-
-      &::after {
-        border-left: 0;
-        right: 0;
-      }
-    }
-    .col-8 {
-      position: relative;
-    }
-    // Underlined text
-    .label-text {
-      background: $background;
-      display: block;
-      padding: 0.5em 1em;
-      position: absolute;
-      right: 0;
-      transition: 0.5s;
-      border-radius: 10px;
-      // Underline
-      &::after {
-        border-top: 1px solid;
-        content: " ";
-        display: block;
-        transition: 0.5s;
-      }
-    }
-
-    input:focus,
-    textarea:focus {
-      // Expand borders
-      & + label::before,
-      & + label::after {
+      .form-container {
         width: 50%;
+        max-width: 100%;
+        margin: auto;
       }
 
-      // Move text
-      & + label .label-text {
-        transform: translate3d(100%, 0, 0);
+      .form {
+        padding-bottom: 16px;
+        display: block;
+        width: 100%;
+      }
+      .form-name, .form-email, .form-message {
+        position: relative;
       }
 
-      // Move text underline
-      & + label .label-text::after {
-        transform: translate3d(-100%, -0.75em, 0);
-        width: 1em;
+
+      
+      .form input {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #444;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        outline: none;
+        margin-top: 16px;
+        background-color: white;
+        position: relative;
+        padding: 10px 16px 10px 30px;
       }
-    }
-
-    // Color inputs
-    #name {
-      color: $green;
-    }
-
-    #email {
-      color: $darkgreen;
-    }
-
-    #name:focus + label::before,
-    #name:focus + label::after {
-      border-color: $green;
-    }
-
-    #email:focus + label::before,
-    #email:focus + label::after {
-      border-color: $darkgreen;
-    }
-
-    // Color input labels
-    .name {
-      color: $green;
-      &::before,
-      &::after {
-        border-color: rgba($green, 0.3);
-        top: 0;
+      .form input:focus, .form textarea:focus, .form input:hover, .form textarea:hover {
+        border-color: #666;
       }
-    }
-
-    .email {
-      color: $darkgreen;
-
-      &::before,
-      &::after {
-        border-color: rgba($darkgreen, 0.3);
-        top: 0;
+      .form textarea {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #444;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        outline: none;
+        margin-top: 16px;
+        height: 150px;
+        background-color: white;
+        padding: 10px 16px 10px 30px;
       }
-    }
-
-    #message {
-      height: 8em;
-    }
-
-    .message {
-      color: $lilac;
-      &::before,
-      &::after {
-        height: 8em;
+      #btn {
+        border: 1px solid #444;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        padding: 10px 30px;
+        outline: none;
+        margin-top: 30px;
+        cursor: pointer;
+        background-color: tomato;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #fff;
+        display: inline-block;
+        text-decoration: none;
+      }
+      .center-align {
+        text-align: center;
       }
     }
 
-    .button {
-      color: $red;
-      border: 1px solid;
-      position: relative;
-      transition: 0.3s;
-      cursor: pointer;
-      &:hover {
-        background: rgba($red, 0.2);
-      }
-    }
   }
   // Loading
 }

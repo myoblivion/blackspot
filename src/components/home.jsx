@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // Images
-
+import ReCaptchaV2 from "react-google-recaptcha";
 import game1 from "../images/cards/scionfist.jpg";
 import game2 from "../images/cards/gogoracing.jpg";
 import game3 from "../images/cards/gogochain.jpg";
@@ -18,13 +18,27 @@ import {
   FaTwitter,
   FaReddit,
   FaYoutube,
+  FaInstagramSquare,
 } from "react-icons/fa";
+
+import { AiFillInstagram } from "react-icons/ai";
 
 // Image Js
 import emailjs from "emailjs-com";
 import Slider from "react-slick";
 
 const images = [game1, game2, game3, game4];
+const handleExpire = () => {
+  setForm((currentForm) => {
+    return { ...currentForm, token: null };
+  });
+};
+
+const handleToken = (token) => {
+  setForm((currentForm) => {
+   return {...currentForm, token }
+  })
+}
 
 const HomeComponent = () => {
   const NextArrow = ({ onClick }) => {
@@ -135,89 +149,46 @@ const HomeComponent = () => {
           <h2>CONTACT US</h2>
           <h4 id="above">We'd Love to hear from you!</h4>
           <div className="wrapper-co">
-            <form className="form" onSubmit={sendEmail}>
-              <div className="col-8">
-                <input type="text" id="name" name="name" autoFocus required />
-                <label htmlFor="name" className="name">
-                  <span className="label-text">Name</span>
-                </label>
-              </div>
-              <div className="col-8">
-                <input type="email" id="email" name="email" required />
-                <label htmlFor="email" className="email">
-                  <span className="label-text">Email</span>
-                </label>
-              </div>
-              <div className="col-8">
-                <textarea
-                  id="message"
-                  cols="30"
-                  rows="10"
-                  name="message"
-                ></textarea>
-                <label htmlFor="message" className="message">
-                  <span className="label-text">Message</span>
-                </label>
-              </div>
-              <input type="submit" value="Send message" className="button" />
-            </form>
-            <div className="direct-contact-container">
-              <h4> Keep In Touch</h4>
-              <hr />
-              <ul className="social-media-list">
-                <li>
-                  <a
-                    href="https://www.facebook.com/BlackspotstudioPH"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaFacebook />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/phblackspotstudio/"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/BlackSpotPH"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaTwitter />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaReddit />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaYoutube />
-                  </a>
-                </li>
-              </ul>
-              <hr />
+            <div className="form-container">
+              <form className="form" onSubmit={sendEmail}>
+                <div className="form-name">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div className="form-email">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div className="form-message">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required=""
+                  ></textarea>
+                </div>
+                <div className="center-align">
+                  <ReCaptchaV2
+                    sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                    onChange={handleToken}
+                    onExpire={handleExpire}
+                  />
+                  <input type="submit" value="Send" id="btn" />
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <footer>
-          
-        </footer>
       </div>
     </div>
   );

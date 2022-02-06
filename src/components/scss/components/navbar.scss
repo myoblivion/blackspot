@@ -7,9 +7,6 @@ a {
 /* header */
 
 .navbar {
-  background-color: rgba(173, 173, 173, 0.521);
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
   width: 100%;
   z-index: 20;
   display: flex;
@@ -184,8 +181,8 @@ li:hover > .tab {
   }
 }
 
-.active {
-  background-color: #494949;
-  transition: background-color 0.28s;
-  border-bottom: none;
-}
+// .active {
+//   background-color: #494949;
+//   transition: background-color 0.28s;
+//   border-bottom: none;
+// }
