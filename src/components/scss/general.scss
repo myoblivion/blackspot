@@ -2,70 +2,67 @@
 
 html {
   scroll-behavior: smooth;
-
 }
 
-body { 
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    background: #222;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  background: #222;
 }
 
-ul, li {
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .tablet {
-    display: none;
+  display: none;
 }
 .desktop {
-    display: block;
+  display: block;
 }
-Background sample
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: 0.5s ease;
-    background-color: rgb(22, 21, 21);    
+Background sample .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.5s ease;
+  background-color: rgb(22, 21, 21);
 }
 .main.about {
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 
 .wrapper {
     @include mixin.displayFlex(row, start, flex-end);
-    z-index: 4;
+  z-index: 4;
 }
 
 @keyframes appear {
-from {
+  from {
     opacity: 0;
-}
-to {
+  }
+  to {
     opacity: 1;
+  }
 }
-}
-
-
 
 @keyframes rotate {
-from {
+  from {
     -webkit-transform: rotate(0deg);
-}
-to {
+  }
+  to {
     -webkit-transform: rotate(360deg);
-}
+  }
 }
 @keyframes opas {
-    from {
-        margin-top: 400px;
-    }
-    to {
-        margin-top: 0;
-    }
+  from {
+    margin-top: 400px;
+  }
+  to {
+    margin-top: 0;
+  }
 }

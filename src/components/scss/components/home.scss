@@ -149,28 +149,46 @@ body {
           -moz-element() 0px -127px no-repeat;
         position: relative;
         height: 140px;
-        width: 360px;
         top: 247px;
       }
       img {
         height: 500px;
-        min-height: 500px;
+        min-height: 100%;
         max-width: 100%;
         width: 100%;
         border-radius: 15px;
       }
+
       .slide img {
         width: 100%;
-        margin: 0 auto;
+        position: relative;
       }
       .slide {
         transform: scale(0.8);
         transition: transform 300ms;
         opacity: 0.4;
+
       }
       .activeSlide {
         transform: scale(1);
         opacity: 2.9;
+        width: 100%;
+      }
+      #game1 {
+        .buts {
+          position: absolute;
+        }
+        ul {
+          display: flex;
+          li {
+            margin: 15px;
+          }
+        }
+        a {
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+        }
       }
       .arrow {
         position: absolute;
@@ -179,7 +197,7 @@ body {
         color: white;
         svg {
           transition: color 300ms;
-          font-size: 40px;
+          font-size: 50px;
           &:hover {
             color: gray;
           }
@@ -232,7 +250,7 @@ body {
     .wrapper-co {
       margin: 0 auto;
       max-width: 1200px;
-      background-color: #f3f3f3;
+      background-color: #eeeeee;
       border-radius: 15px;
       box-shadow: 13px 2px 21px 1px gray;
 
@@ -253,12 +271,12 @@ body {
         width: 100%;
         margin: 20px auto;
       }
-      .form-name, .form-email, .form-message {
+      .form-name,
+      .form-email,
+      .form-message {
         position: relative;
       }
 
-
-      
       .form input {
         display: block;
         width: 80%;
@@ -272,7 +290,10 @@ body {
         position: relative;
         padding: 10px 16px 10px 30px;
       }
-      .form input:focus, .form textarea:focus, .form input:hover, .form textarea:hover {
+      .form input:focus,
+      .form textarea:focus,
+      .form input:hover,
+      .form textarea:hover {
         border-color: #666;
       }
       .form textarea {
@@ -334,11 +355,11 @@ body {
         width: 100%;
         padding: 0;
       }
-    
+
       .social-media-list li a {
         color: #fff;
       }
-    
+
       .social-media-list li {
         position: relative;
         display: inline-block;
@@ -353,14 +374,14 @@ body {
         cursor: pointer;
         transition: all 0.2s ease-in-out;
       }
-    
+
       .social-media-list li:nth-child(1) {
         background-color: #4267b2;
       }
       .social-media-list li:nth-child(2) {
         background: rgb(150, 0, 87);
       }
-    
+
       .social-media-list li:nth-child(3) {
         background-color: #1da1f2;
       }
@@ -370,7 +391,7 @@ body {
       .social-media-list li:nth-child(5) {
         background-color: red;
       }
-    
+
       .social-media-list li:hover:after {
         opacity: 1;
         transform: scale(1.12);
@@ -380,7 +401,7 @@ body {
       .social-media-list li:hover {
         background-color: #fff;
       }
-    
+
       .social-media-list li:nth-child(1):hover a {
         color: #4267b2;
       }
@@ -418,7 +439,7 @@ body {
         );
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002296",endColorstr="#f6aa20",GradientType=1);
       }
-    
+
       .social-media-list li:nth-child(3):hover a {
         color: #1da1f2;
       }
@@ -431,10 +452,27 @@ body {
       hr {
         border-color: rgba(255, 255, 255, 0.6);
       }
-    
     }
 
   }
+      footer {
+        height: 25vh;
+        background-color: black;
+        img {
+            width: 100px;
+        }
+        a {
+            margin: 0 40px;
+        color: white;
+    }
+    .lower {
+        display: flex;
+        margin: 0 40px;
+        .text {
+            margin: 0 40px;
+        }
+    }
+    }
   // Loading
 }
 

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import ReCaptchaV2 from "react-google-recaptcha";
 import game1 from "../images/cards/scionfist.jpg";
 import game2 from "../images/gogorc.jpg";
-import game3 from "../images/gogoch.jpg";
+import game3 from "../images/cards/gogochain.jpg";
 import game4 from "../images/gogow.jpg";
-
+import icono from "../images/icons/logo.png";
 
 import {
   FaRegArrowAltCircleRight,
@@ -95,6 +95,7 @@ const HomeComponent = () => {
       );
     e.target.reset();
   }
+
   return (
     // Home
     <div className="wrapper">
@@ -128,16 +129,39 @@ const HomeComponent = () => {
             </div>
             <div className="slider-game">
               <Slider {...settings}>
-                {images.map((img, idx) => (
-                  <div
-                    className={
-                      idx == imageIndex ? "slide activeSlide" : "slide"
-                    }
-                    key={images.map}
-                  >
-                    <img src={img} alt={img} />
+                <div
+                  className={"slide activeSlide"}
+                  id="game1"
+                  key={images.map}
+                >
+                  <img src={game1} alt="image" />
+                  <div className="buts">
+                    <ul>
+                      <li>
+                        {" "}
+                        <a href="#">Play Now</a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="https://youtu.be/4yHhsZou5HY" target="_blank">
+                          Watch Trailer
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                ))}
+                </div>
+                <div className={"slide activeSlide"} key={images.map}>
+                  <img src={game2} alt="image" />
+                  <h3>COMING SOON</h3>
+                </div>
+                <div className={"slide activeSlide"} key={images.map}>
+                  <img src={game3} alt="image" />
+                  <h3>COMING SOON</h3>
+                </div>
+                <div className={"slide activeSlide"} key={images.map}>
+                  <img src={game4} alt="image" />
+                  <h3>COMING SOON</h3>
+                </div>
               </Slider>
             </div>
           </div>
@@ -181,7 +205,9 @@ const HomeComponent = () => {
                     onChange={handleToken}
                     onExpire={handleExpire}
                   />
-                  <button type="submit" id="btn"><FaPaperPlane /> </button>
+                  <button type="submit" id="btn">
+                    <FaPaperPlane />{" "}
+                  </button>
                 </div>
               </form>
               <div className="direct-contact-container">
@@ -239,6 +265,19 @@ const HomeComponent = () => {
             </div>
           </div>
         </div>
+        <footer>
+          <div className="footers">
+            <a href="#">Privacy Policy</a>
+            <hr />
+            <div className="lower">
+              <img src={icono} alt="icon" />
+              <div className="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores repudiandae soluta maiores! </p>
+                <p className="tel"><strong>Tel:</strong> 123-456-7890</p>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
