@@ -1,44 +1,50 @@
 import React, { useState, useEffect } from "react";
-// Images
+import { Link } from "react-router-dom";
+
 import ReCaptchaV2 from "react-google-recaptcha";
+
+// Images
 import game1 from "../images/cards/scionfist.jpg";
-import game2 from "../images/gogorc.jpg";
+import game2 from "../images/cards/gogoracing.jpg";
 import game3 from "../images/cards/gogochain.jpg";
 import game4 from "../images/gogow.jpg";
 import icono from "../images/icons/logo.png";
+// Slider
+import Slider from "react-slick";
 
+// Icons
 import {
-  FaRegArrowAltCircleRight,
-  FaRegArrowAltCircleLeft,
-  FaInstagram,
+  FaEnvelope,
   FaFacebook,
-  FaTwitter,
-  FaReddit,
-  FaYoutube,
+  FaGamepad,
   FaInstagramSquare,
+  FaMapMarked,
   FaPaperPlane,
+  FaPhone,
+  FaReddit,
+  FaRegArrowAltCircleLeft,
+  FaRegArrowAltCircleRight,
+  FaTwitter,
+  FaYoutube,
 } from "react-icons/fa";
-
 import { AiFillInstagram } from "react-icons/ai";
 
 // Image Js
 import emailjs from "emailjs-com";
-import Slider from "react-slick";
 
-const images = [game1, game2, game3, game4];
+// Captcha :D
+const handleToken = (token) => {
+  setForm((currentForm) => {
+    return { ...currentForm, token };
+  });
+};
 const handleExpire = () => {
   setForm((currentForm) => {
     return { ...currentForm, token: null };
   });
 };
 
-const handleToken = (token) => {
-  setForm((currentForm) => {
-    return { ...currentForm, token };
-  });
-};
-
-const HomeComponent = () => {
+const HomeComponent = ({ currentRoute }) => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick} key={NextArrow}>
@@ -54,8 +60,6 @@ const HomeComponent = () => {
     );
   };
   const [imageIndex, setImageIndex] = useState(0);
-
-  // img slider
   const settings = {
     Infinite: true,
     lazyload: true,
@@ -69,7 +73,6 @@ const HomeComponent = () => {
   };
 
   // Title
-
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
@@ -100,9 +103,8 @@ const HomeComponent = () => {
     // Home
     <div className="wrapper">
       <div className="home">
-        {/* slide show */}
-        <div className="homewrapper">
-          <ul className="cb-slideshow">
+        <div className="slidewrap">
+          <ul className="slideshow">
             <li>
               <span></span>
             </li>
@@ -117,102 +119,180 @@ const HomeComponent = () => {
             </li>
           </ul>
         </div>
-        {/* level 1 */}
         <div className="container-1">
           <div className="container-wrapper"></div>
         </div>
-        {/* Games */}
-        <div className="container-2" id="game">
+        {/* Game */}
+        <div className="container-2">
           <div className="game-wrapper">
             <div className="game-title">
               <h2>Our Games</h2>
             </div>
-            <div className="slider-game">
+            <div className="sliders">
               <Slider {...settings}>
-                <div
-                  className={"slide activeSlide"}
-                  id="game1"
-                  key={images.map}
-                >
-                  <img src={game1} alt="image" />
-                  <div className="buts">
+                <div className="slider-image">
+                  <img src={game1} alt="Game" id="g1" />
+                  <div className="link">
                     <ul>
                       <li>
-                        {" "}
-                        <a href="#">Play Now</a>
+                        <Link
+                          id="scion"
+                          to="/scion"
+                          style={
+                            currentRoute === "scion"
+                              ? { borderBottom: "2px solid yellow" }
+                              : { borderBottom: "2px solid transparent" }
+                          }
+                        >
+                          <FaGamepad />
+                        </Link>
                       </li>
                       <li>
-                        {" "}
-                        <a href="https://youtu.be/4yHhsZou5HY" target="_blank">
-                          Watch Trailer
+                        <a
+                          id="youtube"
+                          href="https://youtu.be/_4EqPiPzc_I"
+                          target="_blank"
+                        >
+                          <FaYoutube />
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div className={"slide activeSlide"} key={images.map}>
-                  <img src={game2} alt="image" />
-                  <h3>COMING SOON</h3>
+                <div className="slider-image">
+                  <img src={game2} alt="Game" />
+                  <div className="link">
+                    <h2>Coming Soon</h2>
+                  </div>
                 </div>
-                <div className={"slide activeSlide"} key={images.map}>
-                  <img src={game3} alt="image" />
-                  <h3>COMING SOON</h3>
+                <div className="slider-image">
+                  <img src={game3} alt="Game" />
+                  <div className="link">
+                    <h2>Coming Soon</h2>
+                  </div>
                 </div>
-                <div className={"slide activeSlide"} key={images.map}>
-                  <img src={game4} alt="image" />
-                  <h3>COMING SOON</h3>
+                <div className="slider-image">
+                  <img src={game4} alt="Game" />
+                  <div className="link">
+                    <h2>Coming Soon</h2>
+                  </div>
                 </div>
               </Slider>
             </div>
           </div>
         </div>
-        {/* Contact */}
-        <div className="contact">
-          <h2>CONTACT US</h2>
-          <h4 id="above">We'd Love to hear from you!</h4>
-          <div className="wrapper-co">
-            <div className="form-container">
-              <form className="form" onSubmit={sendEmail}>
-                <div className="form-name">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Name"
-                    required
-                  />
-                </div>
-                <div className="form-email">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div className="form-message">
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                    required=""
-                  ></textarea>
-                </div>
-                <div className="center-align">
+        {/* Contact Us */}
+        <div className="contactforms">
+          <div className="container contact-us-section">
+            <div className="row h-100">
+              <div className="col-md-3 section-title">
+                <h2>
+                  Contct Us <span>Stay Connected</span>
+                </h2>
+              </div>
+              <div className="col-md-9">
+                <form className="contact-us-form" onSubmit={sendEmail}>
+                  <div className="form-group">
+                    <label htmlFor="name">Name : *</label>
+                    <input
+                      placeholder="enter name"
+                      type="text"
+                      required
+                      id="name"
+                      name="name"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="email">Email Address : *</label>
+                    <input type="email" name="email" id="email" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="message">Message :</label>
+                    <textarea
+                      placeholder="Message"
+                      required
+                      id="message"
+                      rows="2"
+                      name="message"
+                    ></textarea>
+                  </div>
+                  <div className="form-group clearfix">
                   <ReCaptchaV2
-                    sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
-                    onChange={handleToken}
-                    onExpire={handleExpire}
-                  />
-                  <button type="submit" id="btn">
-                    <FaPaperPlane />{" "}
-                  </button>
-                </div>
-              </form>
-              <div className="direct-contact-container">
-                <h4>Join Our Community</h4>
-                <hr />
+                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      onChange={handleToken}
+                    />
+                    <button
+                      type="sumbit"
+                      data-id="#accessories-holder"
+                      className="red-select-btn model-selector btn-send-message"
+                    >
+                      <span>Submit</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Footer */}
+        <div className="section">
+          <footer className="footer-distributed">
+            <div className="footer-left">
+              <img src={icono} alt="" />
+              <p className="footer-links">
+                <a href="#">About Us</a>
+
+                <a href="#">Privacy Policy</a>
+                <a href="#">Career</a>
+
+                <a href="#">Contact Us</a>
+              </p>
+
+              <p className="footer-company-name">
+                Copyright © Black Spot Studio{" "}
+              </p>
+            </div>
+
+            <div className="footer-center">
+              <div className="desz">
+                <p>
+                  <Link
+                    to="/direction"
+                    style={
+                      currentRoute === "direction"
+                        ? { borderBottom: "2px solid yellow" }
+                        : { borderBottom: "2px solid transparent" }
+                    }
+                  >
+                    <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+                  </Link>
+                </p>
+              </div>
+
+              <div className="desz">
+                <p>
+                  <FaPhone /> +1.555.555.5555
+                </p>
+              </div>
+
+              <div className="desz">
+                <p>
+                  <a href="mailto:support@company.com">
+                    {" "}
+                    <FaEnvelope /> support@company.com
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="footer-right">
+              <p className="footer-company-about">
+                <span>About the company</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
+                euismod convallis velit, eu auctor lacus vehicula sit amet.
+              </p>
+
+              <div className="footer-icons">
                 <ul className="social-media-list">
                   <li>
                     <a
@@ -260,24 +340,10 @@ const HomeComponent = () => {
                     </a>
                   </li>
                 </ul>
-                <hr />
               </div>
             </div>
-          </div>
+          </footer>
         </div>
-        <footer>
-          <div className="footers">
-            <a href="#">Privacy Policy</a>
-            <hr />
-            <div className="lower">
-              <img src={icono} alt="icon" />
-              <div className="text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores repudiandae soluta maiores! </p>
-                <p className="tel"><strong>Tel:</strong> 123-456-7890</p>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   );

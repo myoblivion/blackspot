@@ -3,26 +3,14 @@ import icono from "../images/icons/logo.png";
 import closeIcon from "../images/icons/close.png";
 import openIcon from "../images/icons/more.png";
 import { Link } from "react-router-dom";
-
+import {
+  FaCaretDown
+} from "react-icons/fa";
 const NavbarComponent = ({ currentRoute }) => {
-  const [navbar, setNavbar] = useState(false);
 
-  const changeBackground = () => {
-    console.log(window.scrollY);
-    if (window.scrollY >= 66) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-  useEffect(() => {
-    changeBackground();
-    // adding the event when scroll change background
-    window.addEventListener("scroll", changeBackground);
-  });
 
   return (
-    <header className={navbar ? "navbar active" : "navbar"}>
+    <header className="navbar active">
       <div className="logo">
         <Link
           to="/"
@@ -49,7 +37,7 @@ const NavbarComponent = ({ currentRoute }) => {
         <li>
           <span>
             {" "}
-            <a href="#"> About</a>{" "}
+            <a href="#"> About <FaCaretDown /> </a>{" "}
           </span>
           <ul className="tab">
             <li>

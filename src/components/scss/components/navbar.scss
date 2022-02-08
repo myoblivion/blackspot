@@ -7,10 +7,10 @@ a {
 /* header */
 
 .navbar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 20;
-  backdrop-filter: blur(5px);
+  background-color: #f4f4f4;
 }
 
 
@@ -27,13 +27,13 @@ a {
   padding: 20px 20px;
   text-decoration: none;
   font-weight: 900;
-  color: white;
+  color: black;
 }
 .navbar li p{
   display: block;
   padding: 20px 25px;
   margin: 0;
-  color: white;
+  color: black;
   cursor: pointer;
   font-weight: 900;
 }
@@ -59,11 +59,12 @@ a {
 .tab {
   position: absolute;
   list-style: none;
-  min-width: 200px;
+  min-width: 100px;
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
-  color: rgb(255, 255, 255);
-  background-color: rgb(114, 114, 114);
+  color: black;
+  background-color: #f4f4f4;
+
 }
 .navbar ul.tab li {
   float: none;
@@ -177,12 +178,10 @@ li:hover > .tab {
     img {
       width: 20%;
       height: 5%;
+      &:hover {
+        filter: grayscale(100%);
+      }
     }
   }
 }
 
-.active {
-  background-color: #494949;
-  transition: background-color 0.28s;
-  border-bottom: none;
-}
