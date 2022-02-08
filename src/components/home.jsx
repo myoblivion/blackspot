@@ -64,8 +64,9 @@ const HomeComponent = ({ currentRoute }) => {
     Infinite: true,
     lazyload: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 1,
     centerMode: true,
+    dots: true,
     centerPadding: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -123,7 +124,7 @@ const HomeComponent = ({ currentRoute }) => {
           <div className="container-wrapper"></div>
         </div>
         {/* Game */}
-        <div className="container-2">
+        <div className="container-2" id="game">
           <div className="game-wrapper">
             <div className="game-title">
               <h2>Our Games</h2>
@@ -187,7 +188,7 @@ const HomeComponent = ({ currentRoute }) => {
             <div className="row h-100">
               <div className="col-md-3 section-title">
                 <h2>
-                  Contct Us <span>Stay Connected</span>
+                  Contact Us <span>We'd love to hear from you!</span>
                 </h2>
               </div>
               <div className="col-md-9">
@@ -204,7 +205,7 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email Address : *</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="email" name="email" id="email" required/>
                   </div>
                   <div className="form-group">
                     <label htmlFor="message">Message :</label>

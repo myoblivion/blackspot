@@ -218,6 +218,8 @@ body {
         cursor: pointer;
         z-index: 10;
         color: white;
+        background-color: #000000;
+        border-radius: 50%;
         svg {
           transition: color 300ms;
           font-size: 80px;
@@ -253,7 +255,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
   .contact-us-section {
     background-color: #000;
     width: 800px;
@@ -361,7 +363,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-transform: unset;
-    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0);
     padding: 10px 25px;
     border: 0px;
     background-color: #ffb808;
@@ -371,7 +373,7 @@ body {
   //   Footer
   .footer-distributed {
     background: #666;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
@@ -530,6 +532,25 @@ body {
       margin-left: 0;
     }
   }
-
+  @media (max-width: 880px) {
+    .container-2 {
+      .game-wrapper {
+        width: 100%;
+        .slider-image {
+          height: 100%;
+          width: 1800px;
+          transform: scale(0.7);
+          img {
+            width: 1800px;
+          }
+        }
+        .arrow {
+          svg {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
   // Loading
 }
