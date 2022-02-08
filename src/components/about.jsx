@@ -61,7 +61,7 @@ const AboutComponent = () => {
               </li>
             </ul>
           </div>
-        </section>
+        </section><br /><br />
       </div>
     </div>
   );

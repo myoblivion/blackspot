@@ -51,7 +51,7 @@
     letter-spacing: 6px;
     opacity: 0.9;
     color: #ffb808;
-    margin: 0 26px;
+    margin: 12px 26px;
   }
   .content span {
     height: 0.5px;
@@ -104,9 +104,10 @@
     padding: 5px;
     margin: 5px;
   }
-  .icons li i {
+  .icons li a {
     font-size: 26px;
     opacity: 0.8;
+    color: white;
   }
   .icons li i:hover {
     color: #c850c0;
@@ -117,7 +118,7 @@
 
   @media (max-width: 900px) {
     section {
-      grid-template-columns: 1fr;
+      display: flex;
       width: 100%;
       border-radius: none;
     }
@@ -152,16 +153,6 @@
       font-size: 15px;
     }
   }
-  .credit {
-    text-align: center;
-    color: #000;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-  }
 
-  .credit a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
+
 }
