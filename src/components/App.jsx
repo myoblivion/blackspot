@@ -13,9 +13,7 @@ import LoadingComponent from "./loading";
 // styles
 import "./scss/index.scss";
 
-const PageNotFound = () => (
-  <div>404! PAGE NOT FOUND! - <a href="/"></a></div>
-)
+
 
 const Appcomponent = () => {
   const [loading, setLoading] = useState(true);
@@ -51,7 +49,6 @@ const Appcomponent = () => {
           <Route path="/scion">
             <ScionComponent />
           </Route>
-          <Route component={PageNotFound}/>
         </div>
       )}
     </>

@@ -3,11 +3,10 @@ import icono from "../images/icons/logo.png";
 import closeIcon from "../images/icons/close.png";
 import openIcon from "../images/icons/more.png";
 import { Link } from "react-router-dom";
-import {
-  FaCaretDown
-} from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
+import { FaCaretDown } from "react-icons/fa";
+import { event } from "jquery";
 const NavbarComponent = ({ currentRoute }) => {
-
 
   return (
     <header className="navbar active">
@@ -29,17 +28,32 @@ const NavbarComponent = ({ currentRoute }) => {
       </label>
       <ul className="menu">
         <li>
-          <a href="#">Home</a>
+          <Link
+            to="/"
+            style={
+              currentRoute === "home"
+                ? { borderBottom: "2px solid yellow" }
+                : { borderBottom: "2px solid transparent" }
+            }
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <a href="#">Games</a>
+          <HashLink smooth to="/#game">
+            {" "}
+            Games{" "}
+          </HashLink>
         </li>
         <li>
           <span>
             {" "}
-            <a href="#"> About <FaCaretDown /> </a>{" "}
+            <a href="#">
+              {" "}
+              About <FaCaretDown />{" "}
+            </a>{" "}
           </span>
-          <ul className="tab">
+          <ul className="tab" id="menuz">
             <li>
               <Link
                 to="/about"
@@ -91,7 +105,10 @@ const NavbarComponent = ({ currentRoute }) => {
           </ul>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <HashLink smooth to="/#contact">
+            {" "}
+            Contact{" "}
+          </HashLink>
         </li>
       </ul>
     </header>

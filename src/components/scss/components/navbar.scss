@@ -6,16 +6,19 @@ a {
 
 /* header */
 
+
+
 .navbar {
   position: absolute;
   width: 100%;
   z-index: 20;
   background-color: #f4f4f4;
+  top: 0;
 }
 
 
 .navbar ul {
-  margin: 0 30px;
+  margin: 10px 30px;
   padding: 0;
   list-style: none;
   overflow: hidden;

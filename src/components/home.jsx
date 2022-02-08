@@ -11,6 +11,8 @@ import game4 from "../images/gogow.jpg";
 import icono from "../images/icons/logo.png";
 // Slider
 import Slider from "react-slick";
+import { HashLink } from 'react-router-hash-link';
+
 
 // Icons
 import {
@@ -127,7 +129,9 @@ const HomeComponent = ({ currentRoute }) => {
         <div className="container-2" id="game">
           <div className="game-wrapper">
             <div className="game-title">
-              <h2>Our Games</h2>
+              <h2>Black Spot Studio</h2>
+              <h4>Four <span>PROECTS</span> are currently being developed at Black Spot Studio.</h4>
+              <div className="line"></div>
             </div>
             <div className="sliders">
               <Slider {...settings}>
@@ -183,7 +187,7 @@ const HomeComponent = ({ currentRoute }) => {
           </div>
         </div>
         {/* Contact Us */}
-        <div className="contactforms">
+        <div className="contactforms" id="contact">
           <div className="container contact-us-section">
             <div className="row h-100">
               <div className="col-md-3 section-title">
@@ -246,7 +250,7 @@ const HomeComponent = ({ currentRoute }) => {
                 <a href="#">Privacy Policy</a>
                 <a href="#">Career</a>
 
-                <a href="#">Contact Us</a>
+                <HashLink smooth to='/#contact' > Contact Us</HashLink>
               </p>
 
               <p className="footer-company-name">
