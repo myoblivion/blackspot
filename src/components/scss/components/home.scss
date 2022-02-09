@@ -149,17 +149,14 @@ body {
     .game-wrapper {
       width: 100%;
       user-select: none;
-      backdrop-filter: blur(10px);
       &:before {
         content: "";
         position: relative;
         height: 140px;
-        top: 347px;
       }
       .game-title {
         font-size: 30px;
         text-align: center;
-        margin: 45px auto;
       }
       .slick-center:hover {
         img {
@@ -590,4 +587,37 @@ body {
     }
   }
   // Loading
+}
+
+@media (max-width: 450px) {
+  .container-2 {
+    height: 100vh;
+    .game-title {
+      height: 100px;
+      margin-top: 15px;
+      h2 {
+        font-size: 30px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+.container-2 {
+  .game-title {
+    height: 100px;
+  }
+}
+}
+
+
+@media (max-width: 450px) {
+  .slideshow li:nth-child(1) span {
+    background-image: url("/src/images/folder/scionm.jpg");
+  }
+  .slideshow li:nth-child(2) span {
+    background-image: url("/src/images/folder/gogorcm.jpg");
+  }
 }

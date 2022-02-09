@@ -1,7 +1,21 @@
 import React, { useEffect } from "react";
-import { FaFacebook, FaInstagram, FaReddit, FaTwitter } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaMapMarked,
+  FaPhone,
+  FaReddit,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import character from "../images/characters/Tosuni.png";
-const AboutComponent = () => {
+import icono from "../images/icons/logo.png";
+import { AiFillInstagram } from "react-icons/ai";
+
+const AboutComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | About Us";
@@ -17,7 +31,7 @@ const AboutComponent = () => {
 
           <div className="content">
             <h2>Black Spot Studio</h2>
-        <div className="line2"></div>
+            <div className="line2"></div>
             <span></span>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
@@ -41,27 +55,135 @@ const AboutComponent = () => {
             <ul className="icons">
               <li>
                 <a href="https://twitter.com/BlackSpotPH">
-                <FaTwitter />
+                  <FaTwitter />
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/BlackspotstudioPH">
-                <FaFacebook />
+                  <FaFacebook />
                 </a>
               </li>
               <li>
                 <a href="https://www.reddit.com/r/BlackSpotStudioPH/">
-                <FaReddit />
+                  <FaReddit />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/phblackspotstudio/">
-                <FaInstagram />
+                  <FaInstagram />
                 </a>
               </li>
             </ul>
           </div>
-        </section><br /><br />
+        </section>
+        <br />
+        <br />
+      </div>
+      <div className="section">
+        <footer className="footer-distributed">
+          <div className="footer-left">
+            <img src={icono} alt="" className="logso" />
+            <p className="footer-links">
+              <a href="#">About Us</a>
+
+              <a href="#">Privacy Policy</a>
+              <a href="#">Career</a>
+
+              <HashLink smooth to="/#contact">
+                {" "}
+                Contact Us
+              </HashLink>
+            </p>
+
+            <p className="footer-company-name">
+              Copyright © Black Spot Studio{" "}
+            </p>
+          </div>
+
+          <div className="footer-center">
+            <div className="desz">
+              <p>
+                <Link
+                  to="/direction"
+                  style={
+                    currentRoute === "direction"
+                      ? { borderBottom: "2px solid yellow" }
+                      : { borderBottom: "2px solid transparent" }
+                  }
+                >
+                  <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+                </Link>
+              </p>
+            </div>
+
+            <div className="desz">
+              <p>
+                <a href="mailto:support@company.com">
+                  {" "}
+                  <FaEnvelope /> support@company.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="footer-right">
+            <p className="footer-company-about">
+              <span>About the company</span>
+              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
+              euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+
+            <div className="footer-icons">
+              <ul className="social-media-list">
+                <li>
+                  <a
+                    href="https://www.facebook.com/BlackspotstudioPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/phblackspotstudio/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <AiFillInstagram />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/BlackSpotPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaReddit />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaYoutube />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

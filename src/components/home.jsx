@@ -11,8 +11,7 @@ import game4 from "../images/gogow.jpg";
 import icono from "../images/icons/logo.png";
 // Slider
 import Slider from "react-slick";
-import { HashLink } from 'react-router-hash-link';
-
+import { HashLink } from "react-router-hash-link";
 
 // Icons
 import {
@@ -130,7 +129,10 @@ const HomeComponent = ({ currentRoute }) => {
           <div className="game-wrapper">
             <div className="game-title">
               <h2>Black Spot Studio</h2>
-              <h4>Four <span>PROECTS</span> are currently being developed at Black Spot Studio.</h4>
+              <h4>
+                Four <span>PROECTS</span> are currently being developed at Black
+                Spot Studio.
+              </h4>
               <div className="line"></div>
             </div>
             <div className="sliders">
@@ -209,7 +211,7 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email Address : *</label>
-                    <input type="email" name="email" id="email" required/>
+                    <input type="email" name="email" id="email" required />
                   </div>
                   <div className="form-group">
                     <label htmlFor="message">Message :</label>
@@ -222,7 +224,7 @@ const HomeComponent = ({ currentRoute }) => {
                     ></textarea>
                   </div>
                   <div className="form-group clearfix">
-                  <ReCaptchaV2
+                    <ReCaptchaV2
                       sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
                       onChange={handleToken}
                     />
@@ -250,7 +252,10 @@ const HomeComponent = ({ currentRoute }) => {
                 <a href="#">Privacy Policy</a>
                 <a href="#">Career</a>
 
-                <HashLink smooth to='/#contact' > Contact Us</HashLink>
+                <HashLink smooth to="/#contact">
+                  {" "}
+                  Contact Us
+                </HashLink>
               </p>
 
               <p className="footer-company-name">
@@ -276,12 +281,6 @@ const HomeComponent = ({ currentRoute }) => {
 
               <div className="desz">
                 <p>
-                  <FaPhone /> +1.555.555.5555
-                </p>
-              </div>
-
-              <div className="desz">
-                <p>
                   <a href="mailto:support@company.com">
                     {" "}
                     <FaEnvelope /> support@company.com
@@ -291,12 +290,7 @@ const HomeComponent = ({ currentRoute }) => {
             </div>
 
             <div className="footer-right">
-              <p className="footer-company-about">
-                <span>About the company</span>
-                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-                euismod convallis velit, eu auctor lacus vehicula sit amet.
-              </p>
-
+            
               <div className="footer-icons">
                 <ul className="social-media-list">
                   <li>
