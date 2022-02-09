@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import GifLoader from 'react-gif-loader';
 
 const LoadingComponent = () => {
   return (
     <div id="loader-wrapper">
-      <div id="loader"></div>
-      <div className="loader-section section-left"></div>
-      <div className="loader-section section-right"></div>
+      <div className="loader-logo">
+      <GifLoader
+                loading={true}
+                imageSrc="https://media.giphy.com/media/B3A5HtHihTPFJVzKTp/giphy.gif"
+                overlayBackground="rgba(0,0,0)"
+            />
+            </div>
     </div>
   );
 };

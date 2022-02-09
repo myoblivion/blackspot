@@ -87,7 +87,7 @@ const NavbarComponent = ({ currentRoute }) => {
                     : { borderBottom: "2px solid transparent" }
                 }
               >
-                Job Postings
+                Careers
               </Link>
             </li>
             <li>

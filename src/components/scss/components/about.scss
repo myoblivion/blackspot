@@ -55,7 +55,7 @@
   .content span {
     height: 0.5px;
     width: 80px;
-    background: #777;
+    background: #ffb808;
     margin: 30px 0;
   }
   .content p {
@@ -63,13 +63,14 @@
     font-weight: 300;
     opacity: 0.7;
     width: 60%;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     line-height: 1.7;
     color: #ffffff;
   }
   .linksz {
     margin: 15px 0;
+    display: flex;
   }
   .linksz li {
     border: 2px solid #4158d0;
@@ -78,6 +79,7 @@
     padding: 10px 15px;
     width: 160px;
     text-align: center;
+    margin: 0 8px;
   }
   .linksz li a {
     text-transform: uppercase;
@@ -85,13 +87,13 @@
     text-decoration: none;
   }
   .linksz li:hover {
-    border-color: #c850c0;
+    border-color: #ffb808;
   }
 
   .vertical-line {
     height: 30px;
     width: 3px;
-    background: #c850c0;
+    background: #ffb808;
     margin: 0 auto;
   }
   .icons {
@@ -107,11 +109,12 @@
     font-size: 26px;
     opacity: 0.8;
     color: white;
+    &:hover {
+      color: #ffb808;
+    }
   }
-  .icons li i:hover {
-    color: #c850c0;
-    cursor: pointer;
-  }
+  
+
 
   /*****************/
 
@@ -224,7 +227,7 @@
       line-height: 2;
     }
     a {
-      color: lightseagreen;
+      color: #ffb808;
       text-decoration: none;
     }
     .desz {
@@ -233,7 +236,7 @@
   }
 
   .footer-distributed .footer-center p a {
-    color: lightseagreen;
+    color: #ffb808;
     text-decoration: none;
   }
 
@@ -301,7 +304,7 @@
   @media (max-width: 880px) {
     .footer-distributed {
       font: bold 14px sans-serif;
-      top: 800px;
+      top: 900px;
     }
 
     .footer-distributed .footer-left,

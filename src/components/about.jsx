@@ -14,7 +14,6 @@ import {
 import character from "../images/characters/Tosuni.png";
 import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
-
 const AboutComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
@@ -28,16 +27,22 @@ const AboutComponent = ({ currentRoute }) => {
           <div className="image">
             <img src={character} alt="Tosuni" />
           </div>
-
           <div className="content">
-            <h2>Black Spot Studio</h2>
+            <h2>Black Spot Studio PH</h2>
             <div className="line2"></div>
             <span></span>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
-              aspernatur voluptas inventore ab voluptates nostrum minus illo
-              laborum harum laudantium earum ut, temporibus fugiat sequi
-              explicabo facilis unde quos corporis!
+              {" "}
+              <strong>Black Spot Studio PH</strong>, was formed in December 2021
+              through the collaboration of <strong>Black Spot Studio Co</strong>
+              ., Ltd from South Korea and Dubai. We-{" "}
+              <strong>Black Spot Studio PH</strong> specializes in game
+              developing and publishing which is suitable for all digital
+              platforms. Today, BSS PH is developing a game that is a
+              “non-fungible token” or NFT for its Filipino audience named Scion
+              Fist Philippines. Shortly, BSS PH plans to be one of the biggest
+              game developer companies in the Philippines that cater to the
+              needs of all Filipino gamers.
             </p>
             <ul className="linksz">
               <li>
@@ -49,27 +54,36 @@ const AboutComponent = ({ currentRoute }) => {
               </li>
               <div className="vertical-line"></div>
               <li>
-                <a href="#">contact</a>
+                <a href="#">Partners</a>
               </li>
             </ul>
             <ul className="icons">
               <li>
-                <a href="https://twitter.com/BlackSpotPH">
+                <a href="https://twitter.com/BlackSpotPH" target="_blank">
                   <FaTwitter />
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/BlackspotstudioPH">
+                <a
+                  href="https://www.facebook.com/BlackspotstudioPH"
+                  target="_blank"
+                >
                   <FaFacebook />
                 </a>
               </li>
               <li>
-                <a href="https://www.reddit.com/r/BlackSpotStudioPH/">
+                <a
+                  href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                  target="_blank"
+                >
                   <FaReddit />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/phblackspotstudio/">
+                <a
+                  href="https://www.instagram.com/phblackspotstudio/"
+                  target="_blank"
+                >
                   <FaInstagram />
                 </a>
               </li>
@@ -96,7 +110,7 @@ const AboutComponent = ({ currentRoute }) => {
             </p>
 
             <p className="footer-company-name">
-              Copyright © Black Spot Studio{" "}
+              Copyright © Black Spot Studio PH{" "}
             </p>
           </div>
 

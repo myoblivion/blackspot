@@ -128,10 +128,9 @@ const HomeComponent = ({ currentRoute }) => {
         <div className="container-2" id="game">
           <div className="game-wrapper">
             <div className="game-title">
-              <h2>Black Spot Studio</h2>
+              <h2>Black Spot Studio PH</h2>
               <h4>
-                Four <span>PROECTS</span> are currently being developed at Black
-                Spot Studio.
+                Four exciting games are being developed for your entertainment.
               </h4>
               <div className="line"></div>
             </div>
@@ -259,7 +258,7 @@ const HomeComponent = ({ currentRoute }) => {
               </p>
 
               <p className="footer-company-name">
-                Copyright © Black Spot Studio{" "}
+                Copyright © Black Spot Studio PH{" "}
               </p>
             </div>
 

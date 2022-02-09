@@ -20,7 +20,7 @@ const Appcomponent = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2600);
   }, []);
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];

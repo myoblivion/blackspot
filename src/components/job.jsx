@@ -6,7 +6,7 @@ const JobComponent = () => {
       document.title = "Black Spot Studio | Job Posting"
     }, [])
   return (
-    <div className="Job wrapper">
+    <div className="job wrapper">
     <h1>Job</h1>
     </div>
   );

@@ -51,10 +51,10 @@ a {
   display: block;
   float: left;
   width: 30%;
-  padding: 10px 20px;
+  padding: 2px 20px;
   margin: 10px 25px;
   img {
-    width: 30%;
+    width: 90%;
   }
   
 }
@@ -176,10 +176,10 @@ li:hover > .tab {
   }
   .logo {
     width: 20%;
-    height: 10%;
+    height: 5%;
     padding-left: 20px;
     img {
-      width: 10%;
+      width: 40%;
       height: 5%;
       &:hover {
         filter: grayscale(100%);
@@ -191,7 +191,7 @@ li:hover > .tab {
 @media (min-width: 450px) {
   .logo {
     img {
-      width: 40%;
+      width: 50%;
     }
   }
 }
