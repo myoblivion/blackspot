@@ -141,12 +141,6 @@ const AboutComponent = ({ currentRoute }) => {
           </div>
 
           <div className="footer-right">
-            <p className="footer-company-about">
-              <span>About the company</span>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-              euismod convallis velit, eu auctor lacus vehicula sit amet.
-            </p>
-
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>

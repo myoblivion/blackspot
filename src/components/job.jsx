@@ -7,7 +7,7 @@ const JobComponent = () => {
     }, [])
   return (
     <div className="job wrapper">
-    <h1>Job</h1>
+      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import $ from "jquery";
 import ReCaptchaV2 from "react-google-recaptcha";
 
 // Images
@@ -46,20 +46,7 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ currentRoute }) => {
-  const NextArrow = ({ onClick }) => {
-    return (
-      <div className="arrow next" onClick={onClick} key={NextArrow}>
-        <FaRegArrowAltCircleRight />
-      </div>
-    );
-  };
-  const PrevArrow = ({ onClick }) => {
-    return (
-      <div className="arrow prev" onClick={onClick} key={PrevArrow}>
-        <FaRegArrowAltCircleLeft />
-      </div>
-    );
-  };
+
   const [imageIndex, setImageIndex] = useState(0);
   const settings = {
     Infinite: true,
@@ -69,8 +56,7 @@ const HomeComponent = ({ currentRoute }) => {
     centerMode: true,
     dots: true,
     centerPadding: 0,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    arrows: false,
     beforeChange: (current, next) => setImageIndex(next),
   };
 

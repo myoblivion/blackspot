@@ -9,7 +9,9 @@ body {
   padding: 0;
   box-sizing: 0;
 }
-
+.main {
+  animation: appear 5s ease;
+}
 ul,
 li {
   list-style: none;
@@ -23,7 +25,8 @@ a {
 .desktop {
   display: block;
 }
-Background sample .main {
+.app {
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +39,10 @@ Background sample .main {
 }
 
 .wrapper {
-    @include mixin.displayFlex(row, start, flex-end);
+  @include mixin.displayFlex(row, start, flex-end);
   z-index: 4;
 }
-
+}
 @keyframes appear {
   from {
     opacity: 0;
@@ -65,5 +68,3 @@ Background sample .main {
     margin-top: 0;
   }
 }
-
-
