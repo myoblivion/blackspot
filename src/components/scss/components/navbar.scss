@@ -6,16 +6,14 @@ a {
 
 /* header */
 
-
-
 .navbar {
   position: absolute;
   width: 100%;
   z-index: 20;
-  background-color: #f4f4f4;
+  background-color: transparent;
+  backdrop-filter: blur(1px);
   top: 0;
 }
-
 
 .navbar ul {
   margin: 10px 30px;
@@ -24,27 +22,34 @@ a {
   overflow: hidden;
 }
 
-
 .navbar li a {
   display: block;
-  padding: 20px 20px;
+  padding: 20px 10px;
   text-decoration: none;
   font-weight: 900;
-  color: black;
+  color: white;
+  margin: 0 5px;
+  border-radius: 20px;
 }
-.navbar li p{
+.navbar li p {
   display: block;
   padding: 20px 25px;
   margin: 0;
-  color: black;
+  color: white;
   cursor: pointer;
+  border-radius: 20px;
   font-weight: 900;
 }
 
 .navbar li a:hover,
 .navbar .menu-btn:hover {
-  background-color: #f4f4f4;
-  color: #000;
+  color: black;
+  background-color: white;
+}
+.navbar li p:hover,
+.menu-btn:hover {
+  color: black;
+  background-color: white;
 }
 
 .logo {
@@ -56,7 +61,6 @@ a {
   img {
     width: 90%;
   }
-  
 }
 
 .tab {
@@ -66,12 +70,14 @@ a {
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
-  background-color: #f4f4f4;
-
+  background-color: white;
 }
 .navbar ul.tab li {
   float: none;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  a {
+    color: black;
+  }
 }
 .navbar .tab {
   position: absolute;
@@ -185,6 +191,20 @@ li:hover > .tab {
         filter: grayscale(100%);
       }
     }
+  }
+}
+@media (max-width: 450px) {
+  .menu-icon {
+    border-radius: 50%;
+  }
+  .tab {
+    background-color: white;
+  }
+  .menu {
+    background-color: white;
+  }
+  .navbar {
+    background-color: white;
   }
 }
 

@@ -14,6 +14,8 @@ import {
 import character from "../images/characters/Tosuni.png";
 import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
+import krlogo from "../images/logokor.png";
+import dubai from "../images/dubai.png"
 const AboutComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
@@ -37,12 +39,12 @@ const AboutComponent = ({ currentRoute }) => {
               through the collaboration of <strong>Black Spot Studio Co</strong>
               ., Ltd from South Korea and Dubai. We-{" "}
               <strong>Black Spot Studio PH</strong> specializes in game
-              developing and publishing which is suitable for all digital
+              developing and publishing which is suitable htmlFor all digital
               platforms. Today, BSS PH is developing a game that is a
-              “non-fungible token” or NFT for its Filipino audience named Scion
-              Fist Philippines. Shortly, BSS PH plans to be one of the biggest
-              game developer companies in the Philippines that cater to the
-              needs of all Filipino gamers.
+              “non-fungible token” or NFT htmlFor its Filipino audience named
+              Scion Fist Philippines. Shortly, BSS PH plans to be one of the
+              biggest game developer companies in the Philippines that cater to
+              the needs of all Filipino gamers.
             </p>
             <ul className="linksz">
               <li>
@@ -88,11 +90,30 @@ const AboutComponent = ({ currentRoute }) => {
                 </a>
               </li>
             </ul>
+            {/* <div className="partners">
+        <h1>Our Partners</h1>
+        <div className="links">
+          <ul>
+            <li>
+              <a href="http://blackspotstudio.com/">
+                <img src={krlogo} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="http://blackspotstudio.com/">
+                <img src={dubai} alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div> */}
           </div>
         </section>
         <br />
         <br />
       </div>
+
+      {/* Footer */}
       <div className="section">
         <footer className="footer-distributed">
           <div className="footer-left">

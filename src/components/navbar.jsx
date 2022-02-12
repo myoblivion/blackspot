@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import icono from "../images/icons/logo.png";
-import closeIcon from "../images/icons/close.png";
-import openIcon from "../images/icons/more.png";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
-import { event } from "jquery";
 const NavbarComponent = ({ currentRoute }) => {
 
   return (
@@ -46,13 +43,9 @@ const NavbarComponent = ({ currentRoute }) => {
           </HashLink>
         </li>
         <li>
-          <span>
-            {" "}
-            <a href="#">
-              {" "}
-              About <FaCaretDown />{" "}
-            </a>{" "}
-          </span>
+          <p>
+              About <FaCaretDown />
+          </p>
           <ul className="tab" id="menuz">
             <li>
               <Link

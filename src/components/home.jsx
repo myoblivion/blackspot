@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import $ from "jquery";
 import ReCaptchaV2 from "react-google-recaptcha";
+import GifLoader from "react-gif-loader";
+
+// Devices
+import Phone from "../images/icons/phone.png";
+import Laptop from "../images/icons/laptop.png";
+// Characters
+// Scion Fist
+import Irina from "../images/characters/Irina.png";
+import Risa from "../images/characters/Risa.png";
+
+// Gogo Characters
+import Mongi from "../images/characters/Mongi.png";
+import Pengsuni from "../images/characters/Pengsuni.png";
+import Euik from "../images/characters/Euik.png";
+import Eureungi from "../images/characters/Eureungi.png";
+
+// logo
+import ScionLogo from "../images/scionlogo.png";
+import Gogochain from "../images/icons/gogochain.png";
+import Gogoworld from "../images/icons/gogoworld.png";
+import Gogoracing from "../images/icons/gogoracing.png";
 
 // Images
-import game1 from "../images/cards/scionfist.jpg";
-import game2 from "../images/cards/gogoracing.jpg";
-import game3 from "../images/cards/gogochain.jpg";
-import game4 from "../images/gogow.jpg";
+import game1 from "../images/edit/banner1.png";
+import game2 from "../images/edit/banner2.png";
+import game3 from "../images/edit/banner3.png";
+import game4 from "../images/edit/banner4.png";
 import icono from "../images/icons/logo.png";
 // Slider
 import Slider from "react-slick";
@@ -27,6 +47,9 @@ import {
   FaRegArrowAltCircleRight,
   FaTwitter,
   FaYoutube,
+  FaWindows,
+  FaAppStore,
+  FaGooglePlay,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -46,6 +69,7 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ currentRoute }) => {
+  // :D
 
   const [imageIndex, setImageIndex] = useState(0);
   const settings = {
@@ -91,22 +115,74 @@ const HomeComponent = ({ currentRoute }) => {
     // Home
     <div className="wrapper">
       <div className="home">
-        <div className="slidewrap">
-          <ul className="slideshow">
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span></span>
-            </li>
-          </ul>
+        <div className="slider">
+          <input name="control" id="page1" type="radio" defaultChecked />
+          <input name="control" id="page2" type="radio" />
+          <input name="control" id="page3" type="radio" />
+          <input name="control" id="page4" type="radio" />
+          <div className="slider--el slider--el-1 anim-4parts">
+            <div className="slider--el-bg">
+              <div className="part top left"></div>
+              <div className="part top right"></div>
+              <div className="part bot left"></div>
+              <div className="part bot right"></div>
+            </div>
+            <div className="slider--el-content">
+              <h2 className="slider--el-heading"></h2>
+            </div>
+          </div>
+          <div className="slider--el slider--el-2 anim-9parts">
+            <div className="slider--el-bg">
+              <div className="part left-top"></div>
+              <div className="part mid-top"></div>
+              <div className="part right-top"></div>
+              <div className="part left-mid"></div>
+              <div className="part mid-mid"></div>
+              <div className="part right-mid"></div>
+              <div className="part left-bot"></div>
+              <div className="part mid-bot"></div>
+              <div className="part right-bot"></div>
+            </div>
+            <div className="slider--el-content">
+              <h2 className="slider--el-heading"></h2>
+            </div>
+          </div>
+          <div className="slider--el slider--el-3 anim-5parts">
+            <div className="slider--el-bg">
+              <div className="part part-1"></div>
+              <div className="part part-2"></div>
+              <div className="part part-3"></div>
+              <div className="part part-4"></div>
+              <div className="part part-5"></div>
+            </div>
+            <div className="slider--el-content">
+              <h2 className="slider--el-heading"></h2>
+            </div>
+          </div>
+          <div className="slider--el slider--el-4 anim-3parts">
+            <div className="slider--el-bg">
+              <div className="part left"></div>
+              <div className="part mid"></div>
+              <div className="part right"></div>
+            </div>
+            <div className="slider--el-content">
+              <h2 className="slider--el-heading"></h2>
+            </div>
+          </div>
+          <div className="slider--control left">
+            <label className="page1-left" htmlFor="page1"></label>
+            <label className="page2-left" htmlFor="page2"></label>
+            <label className="page3-left" htmlFor="page3"></label>
+            <label className="page4-left" htmlFor="page4"></label>
+          </div>
+          <div className="slider--control right">
+            <label className="page1-right" htmlFor="page1"></label>
+            <label className="page2-right" htmlFor="page2"></label>
+            <label className="page3-right" htmlFor="page3"></label>
+            <label className="page4-right" htmlFor="page4"></label>
+          </div>
         </div>
+
         <div className="container-1">
           <div className="container-wrapper"></div>
         </div>
@@ -122,13 +198,13 @@ const HomeComponent = ({ currentRoute }) => {
             </div>
             <div className="sliders">
               <Slider {...settings}>
-                <div className="slider-image">
-                  <img src={game1} alt="Game" id="g1" />
-                  <div className="link">
-                    <ul>
-                      <li>
+                <div className="slider-image" id="firstgame">
+                  <img src={game1} alt="" />
+                  <div className="gamedes">
+                    <div className="logoz">
+                      <div className="icons">
+                        <div className="sccionlogo">
                         <Link
-                          id="scion"
                           to="/scion"
                           style={
                             currentRoute === "scion"
@@ -136,38 +212,49 @@ const HomeComponent = ({ currentRoute }) => {
                               : { borderBottom: "2px solid transparent" }
                           }
                         >
-                          <FaGamepad />
+                          <img src={ScionLogo} alt="Scion Fist Logo" />
                         </Link>
-                      </li>
-                      <li>
-                        <a
-                          id="youtube"
-                          href="https://youtu.be/_4EqPiPzc_I"
-                          target="_blank"
-                        >
-                          <FaYoutube />
-                        </a>
-                      </li>
-                    </ul>
+                        </div>
+                      </div>
+                      <ul className="icon-list">
+                        <li>
+                          <a href="#">
+                            <FaGooglePlay />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <FaAppStore />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <FaWindows />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="video">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube-nocookie.com/embed/4yHhsZou5HY"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
                 <div className="slider-image">
                   <img src={game2} alt="Game" />
-                  <div className="link">
-                    <h2>Coming Soon</h2>
-                  </div>
                 </div>
                 <div className="slider-image">
                   <img src={game3} alt="Game" />
-                  <div className="link">
-                    <h2>Coming Soon</h2>
-                  </div>
                 </div>
                 <div className="slider-image">
                   <img src={game4} alt="Game" />
-                  <div className="link">
-                    <h2>Coming Soon</h2>
-                  </div>
                 </div>
               </Slider>
             </div>
@@ -275,8 +362,8 @@ const HomeComponent = ({ currentRoute }) => {
             </div>
 
             <div className="footer-right">
-            
               <div className="footer-icons">
+                <h4>Join Our Community!</h4>
                 <ul className="social-media-list">
                   <li>
                     <a
