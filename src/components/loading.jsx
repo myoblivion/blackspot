@@ -8,7 +8,7 @@ const LoadingComponent = () => {
       <GifLoader
                 loading={true}
                 imageSrc="https://media.giphy.com/media/B3A5HtHihTPFJVzKTp/giphy.gif"
-                overlayBackground="rgba(0,0,0)"
+                overlayBackground="transparent"
             />
             </div>
     </div>

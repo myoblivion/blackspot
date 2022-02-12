@@ -29,7 +29,6 @@ a {
   font-weight: 900;
   color: black;
   margin: 0 5px;
-  border-radius: 20px;
 }
 .navbar li p {
   display: block;
@@ -37,7 +36,6 @@ a {
   margin: 0;
   color: black;
   cursor: pointer;
-  border-radius: 20px;
   font-weight: 900;
 }
 
@@ -49,9 +47,14 @@ a {
 .navbar li p:hover,
 .menu-btn:hover {
   color: black;
+
   background-color: white;
 }
+.navbar li Link:hover,
+.menu-btn:hover {
+  color: black;
 
+}
 .logo {
   display: block;
   float: left;
@@ -72,7 +75,23 @@ a {
   color: black;
   background-color: white;
 }
+.tabs {
+  position: absolute;
+  list-style: none;
+  min-width: 100px;
+  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  color: black;
+  background-color: white;
+}
 .navbar ul.tab li {
+  float: none;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  a {
+    color: black;
+  }
+}
+.navbar ul.tabs li {
   float: none;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   a {
@@ -85,7 +104,18 @@ a {
   display: none;
   margin-top: -5px;
 }
+.navbar .tabs {
+  position: absolute;
+  z-index: 500;
+  display: none;
+  margin-top: -5px;
+  width: 15%;
+}
 li:hover > .tab {
+  display: block;
+  margin-top: 0;
+}
+li:hover > .tabs {
   display: block;
   margin-top: 0;
 }

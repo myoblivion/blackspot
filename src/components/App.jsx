@@ -9,6 +9,9 @@ import DirectionComponent from "./direction";
 import JobComponent from "./job";
 import NewsComponent from "./news";
 import ScionComponent from "./scion";
+import GoGoWorldComponent from "./gogoworld";
+import GoGoChainComponent from "./gogochain";
+import GoGoRacingComponent from "./gogoracing";
 import LoadingComponent from "./loading";
 // styles
 import "./scss/index.scss";
@@ -48,6 +51,15 @@ const Appcomponent = () => {
           </Route>
           <Route path="/scion">
             <ScionComponent />
+          </Route>
+          <Route path="/gogoworld">
+            <GoGoWorldComponent />
+          </Route>
+          <Route path="/gogochain">
+            <GoGoChainComponent />
+          </Route>
+          <Route path="/gogoracing">
+            <GoGoRacingComponent />
           </Route>
         </div>
       )}

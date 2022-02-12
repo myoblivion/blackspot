@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 const NavbarComponent = ({ currentRoute }) => {
-
   return (
     <header className="navbar active">
       <div className="logo">
@@ -26,7 +25,7 @@ const NavbarComponent = ({ currentRoute }) => {
       <ul className="menu">
         <li>
           <Link
-            to="/"
+            to="/" id="homes"
             style={
               currentRoute === "home"
                 ? { borderBottom: "2px solid yellow" }
@@ -39,12 +38,62 @@ const NavbarComponent = ({ currentRoute }) => {
         <li>
           <HashLink smooth to="/#game">
             {" "}
-            Games{" "}
+            Games <FaCaretDown />
           </HashLink>
+          <ul className="tabs" id="menuz">
+            <li>
+              <Link
+                to="/scion"
+                style={
+                  currentRoute === "scion"
+                    ? { borderBottom: "2px solid yellow" }
+                    : { borderBottom: "2px solid transparent" }
+                }
+              >
+                Scion Fist
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/gogoworld"
+                style={
+                  currentRoute === "gogoworld"
+                    ? { borderBottom: "2px solid yellow" }
+                    : { borderBottom: "2px solid transparent" }
+                }
+              >
+                GoGo World
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/gogochain"
+                style={
+                  currentRoute === "gogochain"
+                    ? { borderBottom: "2px solid yellow" }
+                    : { borderBottom: "2px solid transparent" }
+                }
+              >
+                GoGo Chain
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/gogoracing"
+                style={
+                  currentRoute === "gogoracing"
+                    ? { borderBottom: "2px solid yellow" }
+                    : { borderBottom: "2px solid transparent" }
+                }
+              >
+                GoGo Racing
+              </Link>
+            </li>
+          </ul>
         </li>
         <li>
           <p>
-              About <FaCaretDown />
+            About <FaCaretDown />
           </p>
           <ul className="tab" id="menuz">
             <li>
