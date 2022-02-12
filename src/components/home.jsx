@@ -204,16 +204,16 @@ const HomeComponent = ({ currentRoute }) => {
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
-                        <Link
-                          to="/scion"
-                          style={
-                            currentRoute === "scion"
-                              ? { borderBottom: "2px solid yellow" }
-                              : { borderBottom: "2px solid transparent" }
-                          }
-                        >
-                          <img src={ScionLogo} alt="Scion Fist Logo" />
-                        </Link>
+                          <Link
+                            to="/scion"
+                            style={
+                              currentRoute === "scion"
+                                ? { borderBottom: "2px solid yellow" }
+                                : { borderBottom: "2px solid transparent" }
+                            }
+                          >
+                            <img src={ScionLogo} alt="Scion Fist Logo" />
+                          </Link>
                         </div>
                       </div>
                       <ul className="icon-list">
@@ -238,7 +238,7 @@ const HomeComponent = ({ currentRoute }) => {
                       <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube-nocookie.com/embed/4yHhsZou5HY"
+                        src="https://www.youtube-nocookie.com/embed/3uAqBci_Yog"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
