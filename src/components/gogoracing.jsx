@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import image from "../images/gogoracing.jpg";
 const GoGoRacingComponent = () => {
   // Title
   useEffect(() => {
@@ -7,7 +7,10 @@ const GoGoRacingComponent = () => {
   }, []);
   return (
     <div className="gogoracing wrapper">
-      <h1>GoGo Racing</h1>
+      <section className="wrapper">
+        <img src={image} alt="" />
+        <h1>Coming Soon</h1>
+      </section>
     </div>
   );
 };

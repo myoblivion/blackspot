@@ -8,8 +8,8 @@ import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
 // Characters
 // Scion Fist
-import Irina from "../images/characters/Irina.png";
-import Risa from "../images/characters/Risa.png";
+import Irina from "../images/characters/ch16.png";
+import Risa from "../images/characters/ch11.png";
 
 // Gogo Characters
 import Mongi from "../images/characters/Mongi.png";
@@ -191,7 +191,7 @@ const HomeComponent = ({ currentRoute }) => {
           <div className="game-wrapper">
             <div className="game-title">
               <h2>Black Spot Studio PH</h2>
-              <h4>
+              <h4 className="fourz">
                 Four exciting games are being developed for your entertainment.
               </h4>
               <div className="line"></div>

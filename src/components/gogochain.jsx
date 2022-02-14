@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import image from "../images/banner4.png";
 
 const GoGoChainComponent = () => {
   // Title
@@ -7,7 +8,10 @@ const GoGoChainComponent = () => {
   }, []);
   return (
     <div className="gogochain wrapper">
-        <h1>Gogo Chain</h1>
+      <section className="wrapper">
+        <h1>Coming Soon</h1>
+        <img src={image} alt="" />
+      </section>
     </div>
   );
 };
