@@ -2,12 +2,21 @@ import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import {
+  FaChartLine,
+  FaDatabase,
   FaEnvelope,
   FaFacebook,
+  FaGamepad,
+  FaHandHolding,
+  FaHeadset,
   FaInstagram,
+  FaLaptopCode,
   FaMapMarked,
+  FaPen,
   FaPhone,
   FaReddit,
+  FaSketch,
+  FaTasks,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
@@ -15,7 +24,11 @@ import character from "../images/characters/Tosuni.png";
 import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
 import krlogo from "../images/logokor.png";
-import dubai from "../images/dubai.png"
+import dubai from "../images/dubai.png";
+import ggc from "../images/icons/gogochain.png";
+import ggw from "../images/icons/gogoworld.png";
+import ggr from "../images/icons/gogoracing.png";
+import sf from "../images/scionlogo.png";
 const AboutComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
@@ -25,7 +38,7 @@ const AboutComponent = ({ currentRoute }) => {
     <div className="about wrapper">
       <div className="container-about">
         <div className="title-about"></div>
-        <section>
+        <section className="wrappersk">
           <div className="image">
             <img src={character} alt="Tosuni" />
           </div>
@@ -48,15 +61,21 @@ const AboutComponent = ({ currentRoute }) => {
             </p>
             <ul className="linksz">
               <li>
-                <a href="#">work</a>
+                <HashLink smooth to="/about#work">
+                  Work
+                </HashLink>
               </li>
               <div className="vertical-line"></div>
               <li>
-                <a href="#">service</a>
+                <HashLink smooth to="/about#services">
+                  Services
+                </HashLink>
               </li>
               <div className="vertical-line"></div>
               <li>
-                <a href="#">Partners</a>
+              <HashLink smooth to="/about#partners">
+                  Partners
+                </HashLink>
               </li>
             </ul>
             <ul className="icons">
@@ -90,28 +109,124 @@ const AboutComponent = ({ currentRoute }) => {
                 </a>
               </li>
             </ul>
-            {/* <div className="partners">
-        <h1>Our Partners</h1>
-        <div className="links">
-          <ul>
-            <li>
-              <a href="http://blackspotstudio.com/">
-                <img src={krlogo} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="http://blackspotstudio.com/">
-                <img src={dubai} alt="" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div> */}
           </div>
         </section>
         <br />
         <br />
       </div>
+      <section className="work" id="work">
+        <div className="section-title-work">
+          <h1>Works</h1>
+        </div>
+        <div className="box-wrapper">
+          <div className="baks box1">
+            <div className="logo-game" id="g1">
+              <Link to="/scion">
+                <img src={sf} alt="" />
+              </Link>
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              perferendis iste reprehenderit.
+            </p>
+          </div>
+          <div className="baks box2">
+            <div className="logo-game">
+              <Link to="/gogoworld">
+                <img src={ggw} alt="" />
+              </Link>
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              perferendis iste reprehenderit.
+            </p>
+          </div>
+          <div className="baks box3">
+            <div className="logo-game" id="g2">
+              <Link to="/gogochain">
+                <img src={ggc} alt="" />
+              </Link>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              perferendis iste reprehenderit.
+            </p>
+          </div>
+          <div className="baks box4">
+            <div className="logo-game">
+              <Link to="/gogoracing">
+                <img src={ggr} alt="" />
+              </Link>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              perferendis iste reprehenderit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="services" id="services">
+        <div className="section-title-work">
+          <h1>Services</h1>
+        </div>
+        <div className="row">
+          <div className="service">
+            <FaLaptopCode className="i" />
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, quae?
+            </p>
+          </div>
+          <div className="service">
+            <FaChartLine className="i" />
+            <h2>Marketing</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, quae?
+            </p>
+          </div>
+          <div className="service">
+            <FaSketch className="i" />
+            <h2>Graphics</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, quae?
+            </p>
+          </div>
+          <div className="service">
+            <FaDatabase className="i" />
+            <h2>Data Analysis</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, quae?
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="partners" id="partners">
+        <div className="partnerz">
+        <div className="section-title-work">
+          <h1>Services</h1>
+        </div>
+          <div className="links">
+            <ul>
+              <li>
+                <a href="http://blackspotstudio.com/">
+                  <img src={krlogo} alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="http://blackspotstudio.com/">
+                  <img src={dubai} alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <div className="section">
@@ -121,8 +236,8 @@ const AboutComponent = ({ currentRoute }) => {
             <p className="footer-links">
               <a href="#">About Us</a>
 
-              <a href="#">Privacy Policy</a>
-              <a href="#">Career</a>
+              <Link to="/privacy">Privacy & Policy</Link>
+              <Link to="/job">Career</Link>
 
               <HashLink smooth to="/#contact">
                 {" "}

@@ -1,28 +1,211 @@
 
+.map-wrapper {
+    width: 100%;
+  height: 100%;
+}
 
 .direction {
-  .directions-wrapper {
-    background-color: white;
-    display: flex;
-    .map {
-      display: flex;
-      width: 50%;
-      background-color: white;
-      z-index: 0;
-      flex-wrap: wrap;
-      h2 {
-        color: black;
-      }
-      p {
-        color: black;
-      }
-      img {
-        width: 30%;
-        height: 50%;
-        top: 3px;
-        right: 0;
-        background-color: white;
-      }
+  width: 100%;
+  height: 100%;
+  .map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    right: 20%;
+    top: 50%;
+    z-index: -1;
+    img {
+      width: 30.2%;
+      position: absolute;
+      z-index: -1;
+      left: 35%;
+      bottom: 14%;
+      box-shadow: -4px 10px 21px 0px rgba(0,0,0,0.75);
+      -webkit-box-shadow: -4px 10px 21px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: -4px 10px 21px 0px rgba(0,0,0,0.75);
+
     }
   }
+  .description-map {
+    position: absolute;
+    background-color: #ffb808;
+    width: 50%;
+    height: 66%;
+    top: 20%;
+    right: 5%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  box-shadow: 1px 1px 11px 1px gray;
+
+  }
 }
+
+  //   Footer
+  .footer-distributed-direction {
+    background: rgb(68, 68, 68);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    top: 100vh;
+    position: relative;
+  }
+  .footer-left {
+    display: flex;
+  }
+  .footer-distributed-direction .footer-left,
+  .footer-distributed-direction .footer-center,
+  .footer-distributed-direction .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Footer left */
+
+  .footer-distributed-direction .footer-left {
+    width: 40%;
+    display: inline-block;
+  }
+
+  /* The company logo */
+  .footer-left {
+    display: flex;
+  }
+  .logso {
+    margin: 0;
+    width: 27%;
+    filter: grayscale(100%);
+  }
+
+  /* Footer links */
+
+  .footer-distributed-direction .footer-links {
+    color: #ffffff;
+    padding: 0;
+  }
+
+  .footer-distributed-direction .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer-distributed-direction .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  /* Footer Center */
+
+  .footer-center {
+    width: 40%;
+    p span {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 2;
+    }
+    a {
+      color: #ffb808;
+      text-decoration: none;
+    }
+    .desz {
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-distributed-direction .footer-center p a {
+    color: #ffb808;
+    text-decoration: none;
+  }
+
+  .footer-distributed-direction .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: 5px;
+  }
+
+  .footer-distributed-direction .footer-links .link-1:before {
+    content: none;
+  }
+
+  /* Footer Right */
+
+  .footer-distributed-direction .footer-right {
+    width: 20%;
+  }
+
+  .footer-distributed-direction .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .footer-distributed-direction .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .footer-distributed-direction .footer-icons ul {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-distributed-direction .footer-icons li a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+  }
+
+  /* If you don't want the footer to be responsive, remove these media queries */
+
+  @media (max-width: 880px) {
+    .footer-distributed-direction {
+      font: bold 14px sans-serif;
+      top: 1000px;
+    }
+
+    .footer-distributed-direction .footer-left,
+    .footer-distributed-direction .footer-center,
+    .footer-distributed-direction .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .footer-distributed-direction .footer-center i {
+      margin-left: 0;
+    }
+  }

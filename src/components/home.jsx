@@ -321,7 +321,9 @@ const HomeComponent = ({ currentRoute }) => {
               <p className="footer-links">
                 <a href="#">About Us</a>
 
-                <a href="#">Privacy Policy</a>
+                <Link to="/privacy">
+                Privacy & Policy
+              </Link>
                 <a href="#">Career</a>
 
                 <HashLink smooth to="/#contact">
@@ -363,7 +365,6 @@ const HomeComponent = ({ currentRoute }) => {
 
             <div className="footer-right">
               <div className="footer-icons">
-                <h4>Join Our Community!</h4>
                 <ul className="social-media-list">
                   <li>
                     <a

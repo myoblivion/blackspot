@@ -32,8 +32,35 @@ const JobComponent = ({ currentRoute }) => {
               </Link>
             </div>
           </div>
+          <div className="box22">
+            <div className="box-col box-80">
+              <h4>Business Development Manager</h4>
+              <span className="function">Something</span>
+              <span className="function">Something</span>
+              <span className="function">Something</span>
+            </div>
 
-          <div className="box">
+            <div className="box-col box-20 text-right">
+              <Link to="/applyform" className="button">
+                Apply
+              </Link>
+            </div>
+          </div>
+          <div className="box33">
+            <div className="box-col box-80">
+              <h4>Business Development Manager</h4>
+              <span className="function">Something</span>
+              <span className="function">Something</span>
+              <span className="function">Something</span>
+            </div>
+
+            <div className="box-col box-20 text-right">
+              <Link to="/applyform" className="button">
+                Apply
+              </Link>
+            </div>
+          </div>
+          <div className="box44">
             <div className="box-col box-80">
               <h4>Customer Support</h4>
               <span className="function">Something</span>
