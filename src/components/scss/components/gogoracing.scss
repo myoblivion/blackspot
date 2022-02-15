@@ -1,34 +1,34 @@
 .gogoracing {
-    .wrapper {
-      height: 100vh;
-      width: 100%;
+  .wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    h1 {
+      color: white;
+      font-size: 90px;
+      background-color: #ffb808;
+      width: 50%;
+      height: 50%;
       display: flex;
+      justify-content: center;
       align-items: center;
-      h1 {
-        color: white;
-        font-size: 90px;
-        background-color: #ffb808;
-        width: 50%;
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: 49%;
-        z-index: 2;
-        box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
-      }
-      img {
-        width: 80%;
-        height: 70%;
-        position: absolute;
-        right: 19%;
-        box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
-      }
+      position: relative;
+      left: 49%;
+      z-index: 2;
+      box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
+    }
+    img {
+      width: 80%;
+      height: 70%;
+      position: absolute;
+      right: 19%;
+      box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
     }
   }
-  
+}
+

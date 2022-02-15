@@ -355,9 +355,9 @@ const HomeComponent = ({ currentRoute }) => {
 
               <div className="desz">
                 <p>
-                  <a href="mailto:support@company.com">
+                  <a href="play@blackspotstudio.ph">
                     {" "}
-                    <FaEnvelope /> support@company.com
+                    <FaEnvelope /> play@blackspotstudio.ph
                   </a>
                 </p>
               </div>

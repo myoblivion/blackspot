@@ -209,7 +209,7 @@ const AboutComponent = ({ currentRoute }) => {
       <section className="partners" id="partners">
         <div className="partnerz">
         <div className="section-title-work">
-          <h1>Services</h1>
+          <h1>Partners</h1>
         </div>
           <div className="links">
             <ul>
@@ -268,9 +268,9 @@ const AboutComponent = ({ currentRoute }) => {
 
             <div className="desz">
               <p>
-                <a href="mailto:support@company.com">
+                <a href="play@blackspotstudio.ph">
                   {" "}
-                  <FaEnvelope /> support@company.com
+                  <FaEnvelope /> play@blackspotstudio.ph
                 </a>
               </p>
             </div>
