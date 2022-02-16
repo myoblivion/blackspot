@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
 import GifLoader from "react-gif-loader";
@@ -70,6 +70,15 @@ const handleExpire = () => {
 
 const HomeComponent = ({ currentRoute }) => {
   // :D
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+      const intervalId = setInterval(() => {
+          setCount((c) => ++c % 4);
+      }, 15000);
+      
+      return () => clearInterval(intervalId);
+  }, []);
 
   const [imageIndex, setImageIndex] = useState(0);
   const settings = {
@@ -116,10 +125,10 @@ const HomeComponent = ({ currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         <div className="slider">
-          <input name="control" id="page1" type="radio" defaultChecked />
-          <input name="control" id="page2" type="radio" />
-          <input name="control" id="page3" type="radio" />
-          <input name="control" id="page4" type="radio" />
+          <input name="control" id="page1" type="radio" checked={count === 0} readOnly />
+          <input name="control" id="page2" type="radio" checked={count === 1} readOnly />
+          <input name="control" id="page3" type="radio" checked={count === 2} readOnly/>
+          <input name="control" id="page4" type="radio" checked={count === 3} readOnly/>
           <div className="slider--el slider--el-1 anim-4parts">
             <div className="slider--el-bg">
               <div className="part top left"></div>
@@ -321,9 +330,7 @@ const HomeComponent = ({ currentRoute }) => {
               <p className="footer-links">
                 <a href="#">About Us</a>
 
-                <Link to="/privacy">
-                Privacy & Policy
-              </Link>
+                <Link to="/privacy">Privacy & Policy</Link>
                 <a href="#">Career</a>
 
                 <HashLink smooth to="/#contact">

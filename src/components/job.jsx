@@ -1,12 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const JobComponent = ({ currentRoute }) => {
+  // Email Js
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nh3pwyh",
+        "template_xyvndrx",
+        e.target,
+        "user_DhVbKvTWQOQX3lDfGjGAj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
+  const Results = () => (
+    <div id="results">
+      <form className="contact-us-form" onSubmit={sendEmail}></form>
+      <input type="text" id="name" name="name"  placeholder="Name" required/>
+      <input type="text" id="email" name="email" placeholder="Email" required />
+      <input type="number" name="number" id="number" placeholder="Phone number" required/>
+      <input type="number" name="salary" id="salary" placeholder="Expected Salary"/>
+      <input type="file" name="file" id="file" />
+      <button type="submit" className="submit">Submit</button>
+    </div>
+  );
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Job Posting";
   }, []);
-
+  const [showResults, setShowResults] = React.useState(false);
+  const onClick = () => setShowResults(true);
   return (
     <div className="job wrapper">
       <section className="wrappers1">
@@ -27,9 +61,10 @@ const JobComponent = ({ currentRoute }) => {
             </div>
 
             <div className="box-col box-20 text-right">
-              <Link to="/applyform" className="button">
-                Apply
-              </Link>
+              <div className="show">
+                <input type="button" value="Apply Now" onClick={onClick} />
+                {showResults ? <Results /> : null}
+              </div>
             </div>
           </div>
           <div className="box22">
@@ -41,9 +76,10 @@ const JobComponent = ({ currentRoute }) => {
             </div>
 
             <div className="box-col box-20 text-right">
-              <Link to="/applyform" className="button">
-                Apply
-              </Link>
+            <div className="show">
+                <input type="button" value="Apply Now" onClick={onClick} />
+                {showResults && <Results />}
+              </div>
             </div>
           </div>
           <div className="box33">
@@ -55,9 +91,10 @@ const JobComponent = ({ currentRoute }) => {
             </div>
 
             <div className="box-col box-20 text-right">
-              <Link to="/applyform" className="button">
-                Apply
-              </Link>
+            <div className="show">
+                <input type="button" value="Apply Now" onClick={onClick} />
+                {showResults ? <Results /> : null}
+              </div>
             </div>
           </div>
           <div className="box44">
@@ -69,9 +106,10 @@ const JobComponent = ({ currentRoute }) => {
             </div>
 
             <div className="box-col box-20 text-right">
-              <Link to="/applyform" className="button">
-                Apply
-              </Link>
+            <div className="show">
+                <input type="button" value="Apply Now" onClick={onClick} />
+                {showResults ? <Results /> : null}
+              </div>
             </div>
           </div>
         </section>

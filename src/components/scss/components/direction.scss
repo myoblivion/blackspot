@@ -14,11 +14,11 @@
     background-color: black;
     right: 20%;
     top: 50%;
-    z-index: -1;
+    z-index: 1;
     img {
-      width: 30.2%;
+      width: 45.2%;
+      height: 66%;
       position: absolute;
-      z-index: -1;
       left: 35%;
       bottom: 14%;
       box-shadow: -4px 10px 21px 0px rgba(0,0,0,0.75);
@@ -30,7 +30,7 @@
   .description-map {
     position: absolute;
     background-color: #ffb808;
-    width: 50%;
+    width: 35%;
     height: 66%;
     top: 20%;
     right: 5%;
@@ -40,7 +40,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  box-shadow: 1px 1px 11px 1px gray;
+    box-shadow: 1px 1px 11px 1px gray;
+    z-index: -1;
 
   }
 }

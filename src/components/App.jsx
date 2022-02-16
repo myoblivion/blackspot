@@ -13,7 +13,6 @@ import GoGoWorldComponent from "./gogoworld";
 import GoGoChainComponent from "./gogochain";
 import GoGoRacingComponent from "./gogoracing";
 import LoadingComponent from "./loading";
-import ApplyFormComponent from "./applyform";
 import PrivacyComponent from "./privacy"
 // styles
 import "./scss/index.scss";
@@ -62,9 +61,6 @@ const Appcomponent = () => {
           </Route>
           <Route path="/gogoracing">
             <GoGoRacingComponent />
-          </Route>
-          <Route path="/applyform">
-            <ApplyFormComponent />
           </Route>
           <Route path="/privacy">
             <PrivacyComponent />

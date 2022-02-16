@@ -15,7 +15,7 @@ const NavbarComponent = ({ currentRoute }) => {
               : { borderBottom: "2px solid transparent" }
           }
         >
-          <img src={icono} alt="Black Spot Studio" />
+          <img src={icono} alt="Black Spot Studio" className="main-logo"/>
         </Link>
       </div>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
