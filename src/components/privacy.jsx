@@ -7,7 +7,7 @@ const DirectionComponent = ({ currentRoute }) => {
   }, []);
   return (
     <div className="privacy wrapper">
-      <section className="privacy">
+      <section className="privacy-section">
         <h2>Privacy Policy</h2>{" "}
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias,

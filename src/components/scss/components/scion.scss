@@ -432,3 +432,27 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 450px) {
+  .wrapper1 {
+    margin-top: 12%;
+    background-image: url("/src/images/folder/bannerm.jpg");
+    
+  }
+  .wrapper2 {
+    .story {
+      font-size: 18px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+.wrapper5 {
+  padding-top: 20%;
+  .characters {
+    img {
+      width: 20%;
+      height: 30%;
+    }
+  }
+}
+}
