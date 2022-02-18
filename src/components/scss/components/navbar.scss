@@ -27,14 +27,14 @@ a {
   padding: 20px 10px;
   text-decoration: none;
   font-weight: 900;
-  color: black;
+  color: #ffb808;
   margin: 0 5px;
 }
 .navbar li p {
   display: block;
   padding: 20px 25px;
   margin: 0;
-  color: black;
+  color: #ffb808;
   cursor: pointer;
   font-weight: 900;
 }
@@ -42,13 +42,11 @@ a {
 .navbar li a:hover,
 .navbar .menu-btn:hover {
   color: black;
-  background-color: white;
 }
 .navbar li p:hover,
 .menu-btn:hover {
   color: black;
 
-  background-color: white;
 }
 .navbar li Link:hover,
 .menu-btn:hover {
@@ -103,12 +101,14 @@ a {
   z-index: 500;
   display: none;
   margin-top: -5px;
+
 }
 .navbar .tabs {
   position: absolute;
   z-index: 500;
   display: none;
   margin-top: -5px;
+  color: #ffb808;
   width: 15%;
 }
 li:hover > .tab {

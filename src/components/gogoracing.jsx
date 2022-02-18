@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import image from "../images/gogoracing.jpg";
+import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import {
