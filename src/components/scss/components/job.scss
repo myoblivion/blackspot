@@ -125,7 +125,8 @@ ul.job-list > li.job-preview:hover {
 }
 
 .form {
-  form {
+  margin: 5em 0;
+  .apply-form {
     border-radius: 4px;
     width: 75%;
     max-width: 900px;

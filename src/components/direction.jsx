@@ -22,7 +22,10 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import icono from "../images/icons/logo.png";
-
+import bus from "../images/icons/Bus.png";
+import walk from "../images/icons/walk.png";
+import jeep from "../images/icons/Jeep.png";
+import train from "../images/icons/Train.png";
 import { AiFillInstagram } from "react-icons/ai";
 
 const DirectionComponent = ({currentRoute}) => {
@@ -44,6 +47,16 @@ const DirectionComponent = ({currentRoute}) => {
           <h2> 26th St, Taguig, 1634 Metro Manila</h2>
         </section>
       </section>
+
+
+
+
+
+
+
+
+
+      {/* Footer */}
       <div className="section">
         <footer className="footer-distributed-direction">
           <div className="footer-left">

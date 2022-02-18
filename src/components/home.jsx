@@ -75,7 +75,7 @@ const HomeComponent = ({ currentRoute }) => {
   useEffect(() => {
       const intervalId = setInterval(() => {
           setCount((c) => ++c % 4);
-      }, 15000);
+      }, 10000);
       
       return () => clearInterval(intervalId);
   }, []);
@@ -125,10 +125,10 @@ const HomeComponent = ({ currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         <div className="slider">
-          <input name="control" id="page1" type="radio" checked={count === 0} readOnly />
-          <input name="control" id="page2" type="radio" checked={count === 1} readOnly />
-          <input name="control" id="page3" type="radio" checked={count === 2} readOnly/>
-          <input name="control" id="page4" type="radio" checked={count === 3} readOnly/>
+          <input name="control" id="page1" type="radio" checked={count === 0} />
+          <input name="control" id="page2" type="radio" checked={count === 1} />
+          <input name="control" id="page3" type="radio" checked={count === 2} />
+          <input name="control" id="page4" type="radio" checked={count === 3} />
           <div className="slider--el slider--el-1 anim-4parts">
             <div className="slider--el-bg">
               <div className="part top left"></div>

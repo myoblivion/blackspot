@@ -1,180 +1,158 @@
-// font stuff
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
-
-
-// colour stuff
-$white: #000000;
-$lightBG: #dce1df;
-$salmon: #ff6666;
-
-$teal: #0096a0;
-$tealMid: #0ebac7;
-$tealContrast: #33ffff;
-$tealShade: #007c85;
-
-$darkGrey: #4f585e;
-
-a.btn {
-  background: $teal;
-  border-radius: 4px;
-  box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-  color: white;
-  display: inline-block;
-  padding: 6px 30px 8px;
-  position: relative;
-  text-decoration: none;
-  transition: all 0.1s 0s ease-out;
+.news {
+  background-image: url("/src/images/banner1.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.accordion {
+  background-color: white;
+  height: 90%;
+  width: 90%;
+  margin: 5em auto;
+  border: 2px solid black;
+}
+label {
+  cursor: pointer;
+}
+ul.contentlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.no-touch a.btn:hover {
-  background: lighten($teal,2.5);
-  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
-  transform: translateY(-2px);
-  transition: all 0.25s 0s ease-out;
+ul.contentlist > li.job-preview {
+  background: #fff;
+  border-bottom: 1px solid #d7e2e9;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  float: left;
+  width: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.no-touch a.btn:active,
-a.btn:active {
-  background: darken($teal,2.5);
-  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
-  transform: translate3d(0,1px,0);
-  transition: all 0.025s 0s ease-out;
-}
-
-
-div.cards {
-  margin: 80px auto;
-  max-width: 100%;
-  text-align: center;
-
-}
-
-.card {
-  background: $white;
-  display: inline-block;
-  margin: 8px;
-  max-width: 400px;
-  position: relative;
-  text-align: left;
-  transition: all 0.3s 0s ease-in;
-  width: 400px;
-  z-index: 1;
-  box-shadow: 1px 1px 11px 1px gray;
-  img {
-    max-width: 400px;
-    width: 400px;
-    height: 300px;
+.contentlist-announcement {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  .title-content::after {
+    content: " 📣";
   }
-  
-  .card__image-holder {
-    background: rgba(0,0,0,0.1);
-    height: 0;
-    padding-bottom: 75%;
-  }
-
-  div.card-title {
-    background: white;
-    padding: 6px 15px 10px;
-    position: relative;
-    z-index: 0;
-    
-    .toggle-info {
-      border-radius: 15px;
-      height: 32px;
-      position: absolute;
-      right: 15px;
-      top: 5px;
-      width: 50px;
-      text-align: center;
-    }
-    
-    h2 {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.05em;
-      margin: 0;
-      padding: 0;
-      color: black;
-      small {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: -0.025em;
-      }
-    }
-  }
-
-  div.card-description {
-    padding: 0 15px 10px;
-    position: relative;
-    font-size: 14px;
-  }
-
-  div.card-actions {
-    box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
-    padding: 10px 15px 20px;
-    text-align: center;
-  }
-  
-  div.card-flap {
-    background: darken($white,15);
-    position: absolute;
+  li.job-preview {
+    background: #fff;
+    border-bottom: 1px solid #d7e2e9;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    float: left;
     width: 100%;
-    transform-origin: top;
-    transform: rotateX(-90deg);
-  }
-  div.flap1 {
-    transition: all 0.3s 0.3s ease-out;
-    z-index: -1;
-  }
-  div.flap2 {
-    transition: all 0.3s 0s ease-out;
-    z-index: -2;
-  }
-
-}
-
-div.cards.showing {
-  div.card {
-    cursor: pointer;
-    opacity: 0.6;
-    transform: scale(0.88);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-
-.no-touch  div.cards.showing {
-  div.card:hover {
-    opacity: 0.94;
-    transform: scale(0.92);
+.contentlist-news {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  .title-content::after {
+    content: " 📰";
+  }
+  li.job-preview {
+    background: #fff;
+    border-bottom: 1px solid #d7e2e9;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    float: left;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.expand-label {
+  display: block;
+  color: rgb(247, 190, 34);
+  font-size: 1.5em;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+.btnzl {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: #e98363;
+  border: 2px solid #393a5f;
+  padding: 0.6rem 3rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  &:after {
+    content: "👀";
+  }
+}
+.news-title {
+  h1 {
+    margin: 1% 2%;
   }
 }
 
-div.card.show {
-  opacity: 1 !important;
-  transform: scale(1) !important;
+.btn-stuff {
+  margin-right: 5%;
+}
 
-  div.card-title {
-    a.toggle-info {
-      background: $salmon !important;
-      span {
-        top: 15px;
-      }
-      span.left {
-        right: 10px;
-      }
-      span.right {
-        left: 10px;
-      }
-    }
-  }
-  div.card-flap {
-    background: $white;
-    transform: rotateX(0deg);
-  }
-  div.flap1 {
-    transition: all 0.3s 0s ease-out;
-  }
-  div.flap2 {
-    transition: all 0.3s 0.2s ease-out;
-  }
+.btnzl:hover {
+  background-color: #ffb808;
+  color: #fff;
+  border: 2px solid #ffb808;
+}
+.expand-label:hover {
+  background: #e9e9e9;
+}
+.expand-label::before {
+  display: inline-block;
+  content: "▶";
+  font-size: 1.2em;
+  margin-right: 3px;
+  transition: transform 0.1s;
+  transform-origin: 50% 50%;
+}
+.expand-input {
+  display: none;
+}
+.expand-content {
+  max-height: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: max-height 0.2s;
+}
+
+.expand-input:checked + .expand-label::before {
+  transform: rotate(90deg);
+  transition: transform 0.1s;
+}
+.expand-input:checked ~ .expand-content {
+  max-height: 200px;
 }

@@ -1,150 +1,122 @@
 import React, { useEffect } from "react";
-
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 // banners
 import Banner1 from "../images/banner4.jpg";
 import Banner2 from "../images/gogoraces.jpg";
 import Banner3 from "../images/gogoch.jpg";
 import Banner4 from "../images/game3.jpg";
 
-
-const NewsComponent = () => {
+const NewsComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | News & Announcement";
   }, []);
   return (
     <div className="news wrapper">
-      <div className="cards">
-        <div className="card">
-          <div className="card__image-holder">
-            <img
-              className="card__image"
-              src={Banner4}
-              alt="wave"
-            />
+      <div className="accordion">
+        <div className="news-title">
+          <h1>News & Announcements</h1>
+        </div>
+        <div className="expand-wrapp">
+          <input type="checkbox" id="announcement" className="expand-input" />
+          <label htmlFor="announcement" className="expand-label">
+            Announcement
+          </label>
+          <div className="expand-content">
+            <ul className="contentlist-announcement">
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">Announcements</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="custsuppspec">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">Announcements</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="custsuppspec">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+            </ul>
           </div>
-          <div className="card-title">
-            <a href="#" className="toggle-info btn">
-              Read More
-            </a>
-            <h2>
-              News Title
-              <small>Description</small>
-            </h2>
+        </div>
+        {/* 2 */}
+        <div className="expand-wrapp">
+          <input type="checkbox" id="updates" className="expand-input" />
+          <label htmlFor="updates" className="expand-label">
+            Update News
+          </label>
+          <div className="expand-content">
+            <ul className="contentlist-news">
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">News</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="newsz">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">News</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="newsz">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+            </ul>
           </div>
-          <div className="card-flap flap1">
-            <div className="card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              cum, eligendi aperiam, qui praesentium nostrum dolorem maiores
-              cumque quisquam eum possimus illum vitae ipsum nisi neque
-              voluptatem vel, natus earum!
-            </div>
-            <div className="card-flap flap2">
-              <div className="card-actions">
+        </div>
 
-              </div>
+        {/* Contents */}
+        <div className="modal-container">
+          <input type="checkbox" className="modal-checkbox" id="custsuppspec" />
+          <label for="custsuppspec" className="modal-overlay"></label>
+          <div className="modal-content">
+            <div className="content-modal">
+              <label for="custsuppspec" className="modal-close">
+                &times;
+              </label>
+              <h3 className="modal-title">Announcements</h3>
+              <h4>Description</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                dolorum distinctio ullam voluptatibus optio neque, sunt sint
+                recusandae sapiente non, nam est cumque amet tenetur,
+                repudiandae voluptates explicabo at repellat.
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="card">
-          <div className="card__image-holder">
-            <img
-              className="card__image"
-              src={Banner1}
-              alt="beach"
-            />
-          </div>
-          <div className="card-title">
-            <a href="#" className="toggle-info btn">
-              Read More
-            </a>
-            <h2>
-              News Title
-              <small>Description</small>
-            </h2>
-          </div>
-          <div className="card-flap flap1">
-            <div className="card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              cum, eligendi aperiam, qui praesentium nostrum dolorem maiores
-              cumque quisquam eum possimus illum vitae ipsum nisi neque
-              voluptatem vel, natus earum!
-            </div>
-            <div className="card-flap flap2">
-              <div className="card-actions">
-
-              </div>
+        <div className="modal-container">
+          <input type="checkbox" className="modal-checkbox" id="newsz" />
+          <label for="newsz" className="modal-overlay"></label>
+          <div className="modal-content">
+            <div className="content-modal">
+              <label for="newsz" className="modal-close">
+                &times;
+              </label>
+              <h3 className="modal-title">BIG NEWS</h3>
+              <h4>Description</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                qui vitae, pariatur maiores incidunt nobis nulla! Sit
+                praesentium debitis, quae recusandae ipsa optio quos possimus
+                unde dignissimos quam hic perspiciatis.
+              </p>
             </div>
           </div>
         </div>
-
-        <div className="card">
-          <div className="card__image-holder">
-            <img
-              className="card__image"
-              src={Banner4}
-              alt="mountain"
-            />
-          </div>
-          <div className="card-title">
-            <a href="#" className="toggle-info btn">
-              Read More
-            </a>
-            <h2>
-              News Title
-              <small>Description</small>
-            </h2>
-          </div>
-          <div className="card-flap flap1">
-            <div className="card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              cum, eligendi aperiam, qui praesentium nostrum dolorem maiores
-              cumque quisquam eum possimus illum vitae ipsum nisi neque
-              voluptatem vel, natus earum!
-            </div>
-            <div className="card-flap flap2">
-              <div className="card-actions">
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="card__image-holder">
-            <img
-              className="card__image"
-              src={Banner2}
-              alt="field"
-            />
-          </div>
-          <div className="card-title">
-            <a href="#" className="toggle-info btn">
-              Read More
-            </a>
-            <h2>
-              News Title
-              <small>Description</small>
-            </h2>
-          </div>
-          <div className="card-flap flap1">
-            <div className="card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              cum, eligendi aperiam, qui praesentium nostrum dolorem maiores
-              cumque quisquam eum possimus illum vitae ipsum nisi neque
-              voluptatem vel, natus earum!
-            </div>
-            <div className="card-flap flap2">
-              <div className="card-actions">
-
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <hr />
     </div>
   );
 };

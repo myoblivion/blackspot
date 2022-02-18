@@ -101,7 +101,7 @@ const ScionComponent = ({ currentRoute }) => {
         <div className="titles">
           <h2>Prologue</h2>
         </div>
-        <p>
+        <p className="story">
           The world has been devastated by nuclear war in the near future. The
           ruined world began to divide into two factions. As the struggle for
           resources for survival intensifies, War has become commonplace, and

@@ -191,13 +191,12 @@
   .logso {
     margin: 0;
     width: 27%;
-    filter: grayscale(100%);
   }
 
   /* Footer links */
 
   .footer-distributed .footer-links {
-    color: #ffffff;
+    color: #ffb808;
     padding: 0;
   }
 
@@ -245,7 +244,7 @@
     font-weight: 300;
     font-size: 20px;
     left: 0;
-    color: #fff;
+    color: #ffb808;
     display: inline-block;
     padding-right: 5px;
     margin-left: 5px;
@@ -289,7 +288,7 @@
     width: 35px;
     height: 35px;
     cursor: pointer;
-    background-color: #33383b;
+    background-color: #ffb808;
     border-radius: 2px;
     font-size: 20px;
     color: #ffffff;
@@ -446,7 +445,7 @@
     margin: 20px auto;
   }
 }
-.row {
+.row-about {
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-gap: 30px;

@@ -53,11 +53,11 @@ const AboutComponent = ({ currentRoute }) => {
               ., Ltd from South Korea and Dubai. We-{" "}
               <strong>Black Spot Studio PH</strong> specializes in game
               developing and publishing which is suitable for all digital
-              platforms. Today, BLACK SPOT STUDIO PH is developing a game that is a
-              “non-fungible token” or NFT for its Filipino audience named
-              Scion Fist Philippines. Shortly, BSS PH plans to be one of the
+              platforms. Today, BLACK SPOT STUDIO PH is developing a game that
+              is a “non-fungible token” or NFT for its Filipino audience named
+              Scion Fist Philippines. Shortly, our mission is to be one of the
               biggest game developer companies in the Philippines that cater to
-              the needs of all Filipino gamers.
+              the needs of all Filipino Gamers.
             </p>
             <ul className="linksz">
               <li>
@@ -171,7 +171,7 @@ const AboutComponent = ({ currentRoute }) => {
         <div className="section-title-work">
           <h1>Services</h1>
         </div>
-        <div className="row">
+        <div className="row-about">
           <div className="service">
             <FaLaptopCode className="i" />
             <h2>Web Design</h2>
