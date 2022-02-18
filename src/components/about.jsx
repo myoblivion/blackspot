@@ -2,13 +2,17 @@ import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import {
+  FaAssistiveListeningSystems,
+  FaBrain,
   FaChartLine,
   FaDatabase,
   FaEnvelope,
+  FaEye,
   FaFacebook,
   FaGamepad,
   FaHandHolding,
   FaHeadset,
+  FaHeart,
   FaInstagram,
   FaLaptopCode,
   FaMapMarked,
@@ -18,6 +22,7 @@ import {
   FaSketch,
   FaTasks,
   FaTwitter,
+  FaUsers,
   FaYoutube,
 } from "react-icons/fa";
 import character from "../images/characters/Tosuni.png";
@@ -25,7 +30,8 @@ import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
 import krlogo from "../images/logokor.png";
 import dubai from "../images/dubai.png";
-import ggc from "../images/icons/gogochain.png";
+import ggc from "../images/icons/gogoc.png";
+import ggnft from "../images/icons/gogochain.png";
 import ggw from "../images/icons/gogoworld.png";
 import ggr from "../images/icons/gogoracing.png";
 import sf from "../images/scionlogo.png";
@@ -165,6 +171,15 @@ const AboutComponent = ({ currentRoute }) => {
               perferendis iste reprehenderit.
             </p>
           </div>
+          <div className="baks box5" id="g5">
+            <div className="logo-game" >
+                <img src={ggnft} alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              perferendis iste reprehenderit.
+            </p>
+          </div>
         </div>
       </section>
       <section className="services" id="services">
@@ -173,38 +188,47 @@ const AboutComponent = ({ currentRoute }) => {
         </div>
         <div className="row-about">
           <div className="service">
-            <FaLaptopCode className="i" />
-            <h2>Web Design</h2>
+            <FaBrain className="i" />
+            <h2>The Brain of the Game</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Excepturi, quae?
             </p>
           </div>
           <div className="service">
-            <FaChartLine className="i" />
-            <h2>Marketing</h2>
+            <FaEye className="i" />
+            <h2>An Eye for the life of Games</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Excepturi, quae?
             </p>
           </div>
           <div className="service">
-            <FaSketch className="i" />
-            <h2>Graphics</h2>
+            <FaHeart className="i" />
+            <h2>The Heart of the Perfect Game</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Excepturi, quae?
             </p>
           </div>
           <div className="service">
-            <FaDatabase className="i" />
-            <h2>Data Analysis</h2>
+            <FaUsers className="i" />
+            <h2>Community Management</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Excepturi, quae?
             </p>
           </div>
+
         </div>
+        <div className="service" id="middle-spot">
+            <FaAssistiveListeningSystems className="i" />
+            <h2>The Ear for the Gamers</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, quae?
+            </p>
+          </div>
       </section>
       <section className="partners" id="partners">
         <div className="partnerz">

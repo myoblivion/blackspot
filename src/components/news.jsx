@@ -19,9 +19,37 @@ const NewsComponent = ({ currentRoute }) => {
           <h1>News & Announcements</h1>
         </div>
         <div className="expand-wrapp">
+          <input type="checkbox" id="developer" className="expand-input" />
+          <label htmlFor="developer" className="expand-label">
+          Developer Insights
+          </label>
+          <div className="expand-content">
+            <ul className="contentlist-announcement">
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">Announcements</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="custsuppspec">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">Announcements</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="custsuppspec">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="expand-wrapp">
           <input type="checkbox" id="announcement" className="expand-input" />
           <label htmlFor="announcement" className="expand-label">
-            Announcement
+            Scion Fist
           </label>
           <div className="expand-content">
             <ul className="contentlist-announcement">
@@ -50,7 +78,7 @@ const NewsComponent = ({ currentRoute }) => {
         <div className="expand-wrapp">
           <input type="checkbox" id="updates" className="expand-input" />
           <label htmlFor="updates" className="expand-label">
-            Update News
+            GoGo Chain
           </label>
           <div className="expand-content">
             <ul className="contentlist-news">
@@ -75,6 +103,65 @@ const NewsComponent = ({ currentRoute }) => {
             </ul>
           </div>
         </div>
+        {/* 3 */}
+        <div className="expand-wrapp">
+          <input type="checkbox" id="gogoworld" className="expand-input" />
+          <label htmlFor="gogoworld" className="expand-label">
+            GoGo World
+          </label>
+          <div className="expand-content">
+            <ul className="contentlist-news">
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">News</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="newsz">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">News</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="newsz">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* 4 */}
+        <div className="expand-wrapp">
+          <input type="checkbox" id="gogoracing" className="expand-input" />
+          <label htmlFor="gogoracing" className="expand-label">
+             GoGo Racing
+          </label>
+          <div className="expand-content">
+            <ul className="contentlist-news">
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">News</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="newsz">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+              <li className="job-preview">
+                <div className="contents">
+                  <h4 className="title-content">News</h4>
+                  <h5 className="company">Date</h5>
+                </div>
+                <label className="btn-stuff" htmlFor="newsz">
+                  <p className="btnzl">See more</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
 
         {/* Contents */}
         <div className="modal-container">

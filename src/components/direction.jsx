@@ -28,7 +28,7 @@ import jeep from "../images/icons/Jeep.png";
 import train from "../images/icons/Train.png";
 import { AiFillInstagram } from "react-icons/ai";
 
-const DirectionComponent = ({currentRoute}) => {
+const DirectionComponent = ({ currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Direction";
   }, []);
@@ -47,14 +47,49 @@ const DirectionComponent = ({currentRoute}) => {
           <h2> 26th St, Taguig, 1634 Metro Manila</h2>
         </section>
       </section>
-
-
-
-
-
-
-
-
+      <section className="for-direction">
+        <div className="title-direction">
+          <h1>For Direction </h1>
+        </div>
+        <div className="wrapper-directions">
+          <div className="box-direction">
+            <div className="image-direction">
+              <img src={bus} alt="BUS" />
+            </div>
+            <h2>
+              <strong>From NAIA Terminal 1,2, and 3</strong>
+            </h2>
+            <p>
+              Travel time from NAIA Terminal 1, 2 and 3 to Black Spot Studio
+              Philippines is about 1 hr 30 minutes to 2hrs depending on traffic.{" "}
+            </p>
+            <ul>
+              <li>
+                <strong>NAIA Terminal 1, 2, and 3</strong> <br />
+                Ride airport bus from the terminal to PITX (Paranaque Integrated
+                Terminal Exchange)
+              </li>
+              <li>
+                Paranaque Integrated Terminal Exchange Ride an EDSA BUS CAROUSEL
+                from PITX to Ayala Station
+              </li>
+              <li>
+                Ayala Station From Ayala Station, just walk to BGC Bus Station
+                and ride a bus going to West or North Route
+              </li>
+              <li>
+                BGC Bus Station From BGC Bus Station, get off to 25th St. or
+                Finance Corporation Building/ Infinity Building
+              </li>
+              <li>
+                {" "}
+                25th Street (The Finance Corporation) From 25th Street its just
+                2 minute walk to Infinity Building or <strong>Black Spot Studio</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <div className="section">

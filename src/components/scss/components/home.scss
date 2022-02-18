@@ -355,7 +355,7 @@ body {
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
-    padding: 55px 50px;
+    padding: 2% 50px;
   }
   .footer-left {
     display: flex;
@@ -379,7 +379,7 @@ body {
     display: flex;
 
     img {
-      margin: 0;
+      margin: 0 2%;
       width: 27%;
     }
   }
@@ -392,7 +392,7 @@ body {
 
   .footer-distributed .footer-links a {
     display: inline-block;
-    line-height: 1.8;
+    line-height: 1;
     font-weight: 400;
     text-decoration: none;
     color: inherit;
@@ -441,6 +441,16 @@ body {
     padding-right: 5px;
     margin-left: 5px;
   }
+  .footer-distributed .footer-links a:after {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #ffb808;
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: 5px;
+  }
 
   .footer-distributed .footer-links .link-1:before {
     content: none;
@@ -469,7 +479,7 @@ body {
   }
   .footer-icons h4 {
     text-align: center;
-    font-size: 23px;
+    font-size: 12px;
     width: 100%;
     text-transform: uppercase;
   }

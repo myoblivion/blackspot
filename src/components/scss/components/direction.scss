@@ -1,7 +1,7 @@
 
 .map-wrapper {
     width: 100%;
-  height: 100%;
+    height: 100%;
 }
 
 .direction {
@@ -12,7 +12,7 @@
     width: 100%;
     height: 100%;
     background-color: black;
-    right: 20%;
+    right: 30%;
     top: 50%;
     z-index: 1;
     img {
@@ -30,7 +30,7 @@
   .description-map {
     position: absolute;
     background-color: #ffb808;
-    width: 35%;
+    width: 45%;
     height: 66%;
     top: 20%;
     right: 5%;
@@ -53,9 +53,9 @@
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
-    padding: 55px 50px;
-    top: 100vh;
-    position: relative;
+    padding: 2% 50px;
+    top: 200%;    
+    position: absolute;
   }
   .footer-left {
     display: flex;
@@ -93,7 +93,7 @@
 
   .footer-distributed-direction .footer-links a {
     display: inline-block;
-    line-height: 1.8;
+    line-height: 1;
     font-weight: 400;
     text-decoration: none;
     color: inherit;
@@ -210,5 +210,28 @@
 
     .footer-distributed-direction .footer-center i {
       margin-left: 0;
+    }
+  }
+  .footer-distributed-direction .footer-links a:after {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #ffb808;
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: 5px;
+  }
+
+  .for-direction {
+    height: 100vh;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    img{
+     width: 10%;
+    }
+    .title-direction {
+      margin: 3% 0;
     }
   }

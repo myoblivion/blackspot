@@ -11,6 +11,8 @@
   width: 90%;
   margin: 5em auto;
   border: 2px solid black;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 label {
   cursor: pointer;
@@ -20,7 +22,10 @@ ul.contentlist {
   padding: 0;
   list-style: none;
 }
-
+.modal-content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 ul.contentlist > li.job-preview {
   background: #fff;
   border-bottom: 1px solid #d7e2e9;
