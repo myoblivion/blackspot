@@ -53,6 +53,9 @@ const DirectionComponent = ({ currentRoute }) => {
         </div>
         <div className="wrapper-directions">
           <div className="box-direction">
+          <div className="image-direction">
+              <img src={bus} alt="BUS" />
+            </div>
             <div className="direction-content">
               <h2>
                 Via Bus <br />
@@ -96,9 +99,7 @@ const DirectionComponent = ({ currentRoute }) => {
                 </li>
               </ul>
             </div>
-            <div className="image-direction">
-              <img src={bus} alt="BUS" />
-            </div>
+
           </div>
         </div>
       </section>
