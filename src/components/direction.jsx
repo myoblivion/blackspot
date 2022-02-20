@@ -46,6 +46,9 @@ const DirectionComponent = ({ currentRoute }) => {
           <h1>Come Visit Us!</h1>
           <h2> 26th St, Taguig, 1634 Metro Manila</h2>
         </section>
+        <section className="buttons-nav">
+          
+        </section>
       </section>
       <section className="for-direction">
         <div className="title-direction">
@@ -53,7 +56,7 @@ const DirectionComponent = ({ currentRoute }) => {
         </div>
         <div className="wrapper-directions">
           <div className="box-direction">
-          <div className="image-direction">
+            <div className="image-direction">
               <img src={bus} alt="BUS" />
             </div>
             <div className="direction-content">
@@ -99,7 +102,6 @@ const DirectionComponent = ({ currentRoute }) => {
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </section>

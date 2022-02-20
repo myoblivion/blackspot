@@ -131,19 +131,20 @@ body {
     }
     .slick-dots {
       position: absolute;
-      top: 103%; 
+      top: 103%;
       li {
-      color: white;
-      background-color: rgb(255, 254, 254);
-      margin: 0 10px;
-      height: 20%;
-      width: 5%;
+        color: white;
+        background-color: rgb(255, 254, 254);
+        padding: 2px;
+        margin: 2% 10px;
+        height: 30%;
+        width: 5%;
+      }
+      button {
+        width: 100%;
+        margin: 0 auto;
+      }
     }
-    button {
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
 
     .slick-center:focus {
       outline: none;
@@ -262,7 +263,6 @@ body {
   }
   .contact-us-section .section-title {
     display: flex;
-
   }
   .contact-us-form {
     margin: 35px 25px;
@@ -399,7 +399,7 @@ body {
   }
 
   .footer-distributed .footer-company-name {
-    color: #222;
+    color: #ffb808;
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -412,7 +412,7 @@ body {
     p span {
       display: block;
       font-weight: normal;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 2;
     }
     a {
@@ -422,19 +422,19 @@ body {
     }
     .desz {
       margin-bottom: 10px;
+      font-size: 20px;
     }
   }
 
   .footer-distributed .footer-center p a {
     color: #ffb808;
-
     text-decoration: none;
   }
 
   .footer-distributed .footer-links a:before {
     content: "|";
     font-weight: 300;
-    font-size: 20px;
+    font-size: 22px;
     left: 0;
     color: #ffb808;
     display: inline-block;
@@ -444,7 +444,7 @@ body {
   .footer-distributed .footer-links a:after {
     content: "|";
     font-weight: 300;
-    font-size: 20px;
+    font-size: 22px;
     left: 0;
     color: #ffb808;
     display: inline-block;
@@ -493,15 +493,15 @@ body {
 
   .footer-distributed .footer-icons li a {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
     background-color: #ffb808;
     border-radius: 2px;
-    font-size: 20px;
+    font-size: 25px;
     color: #ffffff;
     text-align: center;
-    line-height: 40px;
+    line-height: 1.9;
     margin: 0 10px;
     border-radius: 50%;
   }
