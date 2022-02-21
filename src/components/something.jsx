@@ -14,47 +14,47 @@ const SomethingComponent = ({ currentRoute }) => {
           <h2 className="something-title">Game Title</h2>
         </div>
         <div className="something-news-wrapper">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <ul class="job-list">
-                  <li class="job-preview">
-                    <div class="content float-left">
-                      <label class="col-md-6 col-sm-6 col-xs-12" for="fullship">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-10 offset-md-1">
+                <ul className="job-list">
+                  <li className="job-preview">
+                    <div className="content float-left">
+                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
                         <h4>Announcement</h4>
                       </label>
-                      <h5 class="company">
+                      <h5 className="company">
                         Lorem, ipsum dolor sit amet consectetur.
                       </h5>
                     </div>
                   </li>
-                  <li class="job-preview">
-                    <div class="content float-left">
-                      <label class="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                  <li className="job-preview">
+                    <div className="content float-left">
+                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
                         <h4>Updates</h4>
                       </label>
 
-                      <h5 class="company">
+                      <h5 className="company">
                         Lorem, ipsum dolor sit amet consectetur.
                       </h5>
                     </div>
                   </li>
-                  <li class="job-preview">
-                    <div class="content float-left">
-                      <label class="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                  <li className="job-preview">
+                    <div className="content float-left">
+                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
                         <h4>Game Guide</h4>
                       </label>
-                      <h5 class="company">
+                      <h5 className="company">
                         Lorem, ipsum dolor sit amet consectetur.
                       </h5>
                     </div>
                   </li>
-                  <li class="job-preview">
-                    <div class="content float-left">
-                      <label class="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                  <li className="job-preview">
+                    <div className="content float-left">
+                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
                         <h4>Markets</h4>
                       </label>
-                      <h5 class="company">
+                      <h5 className="company">
                         Lorem, ipsum dolor sit amet consectetur.
                       </h5>
                     </div>
@@ -65,14 +65,14 @@ const SomethingComponent = ({ currentRoute }) => {
           </div>
         </div>
       </section>
-      <div class="modal-container">
-        <input type="checkbox" class="modal-checkbox" id="fullship" />
-        <label for="fullship" class="modal-overlay"></label>
-        <div class="modal-content">
-          <label for="fullship" class="modal-close">
+      <div className="modal-container">
+        <input type="checkbox" className="modal-checkbox" id="fullship" />
+        <label for="fullship" className="modal-overlay"></label>
+        <div className="modal-content">
+          <label for="fullship" className="modal-close">
             &times;
           </label>
-          <h3 class="modal-title">Announcements</h3>
+          <h3 className="modal-title">Announcements</h3>
           <h4>Description</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
