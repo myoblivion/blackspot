@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import logo from "../images/icons/logo.png";
+import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
+
 const JobComponent = ({ currentRoute }) => {
   // Email Js
   function sendEmail(e) {
@@ -35,7 +38,7 @@ const JobComponent = ({ currentRoute }) => {
       <section className="joblist">
         <div className="joblist-wrapper">
           <center>
-            <img src={logo} alt="" />
+            <img src={logo} alt="" id="top1" />
           </center>
           <br />
           <center>
@@ -246,6 +249,7 @@ const JobComponent = ({ currentRoute }) => {
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </div>

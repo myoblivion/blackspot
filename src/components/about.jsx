@@ -19,6 +19,7 @@ import {
   FaPen,
   FaPhone,
   FaReddit,
+  FaRegArrowAltCircleUp,
   FaSketch,
   FaTasks,
   FaTwitter,
@@ -171,15 +172,15 @@ const AboutComponent = ({ currentRoute }) => {
               perferendis iste reprehenderit.
             </p>
           </div>
-          <div className="baks box5" id="g5">
-            <div className="logo-game" >
-                <img src={ggnft} alt="" />
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              perferendis iste reprehenderit.
-            </p>
+        </div>
+        <div className="baks box5" id="should">
+          <div className="logo-game">
+            <img src={ggnft} alt="" />
           </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            perferendis iste reprehenderit.
+          </p>
         </div>
       </section>
       <section className="services" id="services">
@@ -219,16 +220,15 @@ const AboutComponent = ({ currentRoute }) => {
               Excepturi, quae?
             </p>
           </div>
-
         </div>
         <div className="service" id="middle-spot">
-            <FaAssistiveListeningSystems className="i" />
-            <h2>The Ear for the Gamers</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, quae?
-            </p>
-          </div>
+          <FaAssistiveListeningSystems className="i" />
+          <h2>The Ear for the Gamers</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+            quae?
+          </p>
+        </div>
       </section>
       <section className="partners" id="partners">
         <div className="partnerz">
@@ -352,6 +352,11 @@ const AboutComponent = ({ currentRoute }) => {
             </div>
           </div>
         </footer>
+        <div className="bootons">
+          <HashLink smooth to="/about#" id="up">
+            <FaRegArrowAltCircleUp />
+          </HashLink>
+        </div>
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ import {
   FaPen,
   FaPhone,
   FaReddit,
+  FaRegArrowAltCircleUp,
   FaSketch,
   FaTasks,
   FaTwitter,
@@ -23,6 +24,7 @@ import {
 } from "react-icons/fa";
 import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
+
 
 const GoGoRacingComponent = ({ currentRoute }) => {
   // Title
@@ -35,7 +37,12 @@ const GoGoRacingComponent = ({ currentRoute }) => {
         <img src={image} alt="" />
         <h1>Coming Soon</h1>
       </section>
+      <div className="bootons">
+            <HashLink smooth to="/gogoracing#" id="up">
+            <FaRegArrowAltCircleUp />
 
+            </HashLink>
+        </div>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const NavbarComponent = ({ currentRoute }) => {
               : { borderBottom: "2px solid transparent" }
           }
         >
-          <img src={icono} alt="Black Spot Studio" className="main-logo"/>
+          <img src={icono} alt="Black Spot Studio" className="main-logo" />
         </Link>
       </div>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -25,7 +25,8 @@ const NavbarComponent = ({ currentRoute }) => {
       <ul className="menu">
         <li>
           <Link
-            to="/" id="homes"
+            to="/"
+            id="homes"
             style={
               currentRoute === "home"
                 ? { borderBottom: "2px solid yellow" }
@@ -36,10 +37,9 @@ const NavbarComponent = ({ currentRoute }) => {
           </Link>
         </li>
         <li>
-          <HashLink smooth to="/#game">
-            {" "}
+          <p>
             Games <FaCaretDown />
-          </HashLink>
+          </p>
           <ul className="tabs" id="menuz">
             <li>
               <Link

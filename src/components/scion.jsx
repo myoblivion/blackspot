@@ -56,6 +56,7 @@ import {
   FaMapMarked,
   FaPhone,
   FaReddit,
+  FaRegArrowAltCircleUp,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
@@ -542,6 +543,12 @@ const ScionComponent = ({ currentRoute }) => {
             </div>
           </div>
         </footer>
+        <div className="bootons">
+          <HashLink smooth to="/scion#" id="up">
+            {" "}
+            <FaRegArrowAltCircleUp />
+          </HashLink>
+        </div>
       </div>
     </div>
   );

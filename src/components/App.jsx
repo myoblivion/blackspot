@@ -14,6 +14,7 @@ import GoGoChainComponent from "./gogochain";
 import GoGoRacingComponent from "./gogoracing";
 import LoadingComponent from "./loading";
 import PrivacyComponent from "./privacy"
+import SomethingComponent from "./something";
 // styles
 import "./scss/index.scss";
 
@@ -64,6 +65,9 @@ const Appcomponent = () => {
           </Route>
           <Route path="/privacy">
             <PrivacyComponent />
+          </Route>
+          <Route path="/something">
+            <SomethingComponent />
           </Route>
         </div>
       )}

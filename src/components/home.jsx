@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
-import GifLoader from "react-gif-loader";
 
 // Devices
 import Phone from "../images/icons/phone.png";
@@ -50,6 +49,7 @@ import {
   FaWindows,
   FaAppStore,
   FaGooglePlay,
+  FaRegArrowAltCircleUp,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -73,11 +73,11 @@ const HomeComponent = ({ currentRoute }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-      const intervalId = setInterval(() => {
-          setCount((c) => ++c % 4);
-      }, 9000);
-      
-      return () => clearInterval(intervalId);
+    const intervalId = setInterval(() => {
+      setCount((c) => ++c % 4);
+    }, 9000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   const [imageIndex, setImageIndex] = useState(0);
@@ -125,7 +125,13 @@ const HomeComponent = ({ currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         <div className="slider">
-          <input name="control" id="page1" type="radio" checked={count === 0} />
+          <input
+            name="control"
+            id="page1"
+            type="radio"
+            checked={count === 0}
+            defaultChecked
+          />
           <input name="control" id="page2" type="radio" checked={count === 1} />
           <input name="control" id="page3" type="radio" checked={count === 2} />
           <input name="control" id="page4" type="radio" checked={count === 3} />
@@ -257,13 +263,40 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                 </div>
                 <div className="slider-image">
-                  <img src={game2} alt="Game" />
+                  <Link
+                    to="/gogoworld"
+                    style={
+                      currentRoute === "gogoworld"
+                        ? { borderBottom: "2px solid yellow" }
+                        : { borderBottom: "2px solid transparent" }
+                    }
+                  >
+                    <img src={game2} alt="Game" />
+                  </Link>
                 </div>
                 <div className="slider-image">
-                  <img src={game3} alt="Game" />
+                  <Link
+                    to="/gogochain"
+                    style={
+                      currentRoute === "gogochain"
+                        ? { borderBottom: "2px solid yellow" }
+                        : { borderBottom: "2px solid transparent" }
+                    }
+                  >
+                    <img src={game3} alt="Game" />
+                  </Link>
                 </div>
                 <div className="slider-image">
-                  <img src={game4} alt="Game" />
+                  <Link
+                    to="/gogoracing"
+                    style={
+                      currentRoute === "gogoracing"
+                        ? { borderBottom: "2px solid yellow" }
+                        : { borderBottom: "2px solid transparent" }
+                    }
+                  >
+                    <img src={game4} alt="Game" />
+                  </Link>
                 </div>
               </Slider>
             </div>
@@ -328,10 +361,30 @@ const HomeComponent = ({ currentRoute }) => {
             <div className="footer-left">
               <img src={icono} alt="" />
               <p className="footer-links">
-                <a href="#">About Us</a>
+                <Link
+                  to="/about"
+                  style={
+                    currentRoute === "about"
+                      ? { borderBottom: "2px solid yellow" }
+                      : { borderBottom: "2px solid transparent" }
+                  }
+                >
+                  About Us
+                </Link>
 
                 <Link to="/privacy">Privacy & Policy</Link>
-                <a href="#">Career</a>
+                <Link
+                  to="/job"
+                  style={
+                    currentRoute === "job"
+                      ? { borderBottom: "2px solid yellow" }
+                      : { borderBottom: "2px solid transparent" }
+                  }
+                >
+                  Career
+                </Link>
+
+                
 
                 <HashLink smooth to="/#contact">
                   {" "}
@@ -422,6 +475,11 @@ const HomeComponent = ({ currentRoute }) => {
               </div>
             </div>
           </footer>
+          <div className="bootons">
+            <HashLink smooth to="/#" id="up">
+              <FaRegArrowAltCircleUp />
+            </HashLink>
+          </div>
         </div>
       </div>
     </div>
