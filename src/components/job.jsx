@@ -80,6 +80,17 @@ const JobComponent = ({ currentRoute }) => {
                         </p>
                       </label>
                     </li>
+                    <li className="job-preview">
+                      <div className="content float-left">
+                        <h4 className="job-title">Customer Service Support</h4>
+                        <h5 className="company">Full Time</h5>
+                      </div>
+                      <label htmlFor="costumah">
+                        <p className="btn btn-apply float-sm-right float-xs-left">
+                          Apply
+                        </p>
+                      </label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -249,7 +260,182 @@ const JobComponent = ({ currentRoute }) => {
               </div>
             </div>
           </div>
-
+          <div className="modal-container">
+            <input type="checkbox" className="modal-checkbox" id="costumah" />
+            <label for="ccostumah" className="modal-overlay"></label>
+            <div className="modal-content">
+              <div className="content-modal">
+                <label for="costumah" className="modal-close">
+                  &times;
+                </label>
+                <h3 className="modal-title"> CUSTOMER SERVICE SUPPORT</h3>
+                <h4>Description</h4>
+                <p>
+                  As our team is getting bigger, BSS PH is now looking for
+                  CUSTOMER SERVICE SUPPORT.
+                </p>
+                <h4>Requirements</h4>
+                <ul>
+                  <li>
+                    Fresh Graduates are welcome to apply, applicant with at
+                    least 6 months of experience is a plus
+                  </li>
+                  <li>
+                    Proficiency in Microsoft Office and customer service
+                    software.
+                  </li>
+                  <li>Outstanding written and verbal communication.</li>
+                  <li>Excellent and interpersonal skills</li>
+                  <li>With excellent knowledge in gaming industry.</li>
+                  <li>Ability to understand and follow instructions.</li>
+                  <li>
+                    Ensuring that customers are satisfied with products or
+                    services.
+                  </li>
+                  <li>
+                    Following up with clients or customers to check that they’re
+                    still satisfied with any purchases.
+                  </li>
+                  <li>Escalating queries and concerns</li>
+                  <li>
+                    Determining the quickest, most effective ways to answer a
+                    client’s or customer’s questions
+                  </li>
+                  <li>
+                    Determining the quickest, most effective ways to answer a
+                    client’s or customer’s questions
+                  </li>
+                  <li>
+                    Working with a team of CSRs and other departments to find
+                    appropriate solutions
+                  </li>
+                  <li>Willing to work in BGC, Taguig</li>
+                  <li>
+                    Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                  </li>
+                  <li>Must be FULLY VACINATED</li>
+                </ul>
+                <h4>Perks</h4>
+                <ul>
+                  <li>All Government Mandated Benefits</li>
+                  <li>13th Month Pay</li>
+                  <li>FREE LUNCH & SNACKS</li>
+                </ul>
+                <div className="form">
+                  <h2>Application Form</h2>
+                  <form className="apply-form" onSubmit={sendEmail}>
+                    <label htmlFor="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your aweseome name..."
+                      required
+                    />
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your Email..."
+                      required
+                    />
+                    <label htmlFor="number">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="number"
+                      name="number"
+                      placeholder="+63 912 345 6789"
+                      required
+                    />
+                    <label htmlFor="file">Upload your CV</label>
+                    <input type="file" name="file" id="file" />
+                    <button type="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="modal-container">
+            <input type="checkbox" className="modal-checkbox" id="costumah" />
+            <label for="photosupp" className="modal-overlay"></label>
+            <div className="modal-content">
+              <label for="photosupp" className="modal-close">
+                &times;
+              </label>
+              <h3 className="modal-title">QUALITY ASSURANCE MANAGER </h3>
+              <h4>Description</h4>
+              <p>
+                As we are getting bigger, our company is now looking for
+                ASSISTANT QUALITY ASSURANCE MANAGER who’s fun and enjoy online
+                games.
+              </p>
+              <h4>Requirements</h4>
+              <ul>
+                <li>
+                  Must be knowledgeable in online video games. (Not related to
+                  e-casino or POGO games)
+                </li>
+                <li>
+                  Must be knowledgeable in different game genres such as FPS,
+                  MMORPG, and Others
+                </li>
+                <li>Must be knowledgeable in NFT games.</li>
+                <li>
+                  Knowledgeable with PCs and mobile devices [Hardware &
+                  Components]
+                </li>
+                <li>Can work ASAP.</li>
+                <li>With intermediate to advanced English proficiency.</li>
+                <li>Computer literate and tech savvy.</li>
+                <li>Bachelor's Degree (Any Field)</li>
+                <li>Proficient in using MS office applications</li>
+                <li>Willing to work in BGC, Taguig</li>
+                <li>
+                  Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                </li>
+                <li>Must be FULLY VACINATED</li>
+              </ul>
+              <h4>Perks</h4>
+              <ul>
+                <li> All Government Mandated Benefits</li>
+                <li>13th Month Pay</li>
+                <li>FREE LUNCH & SNACKS</li>
+              </ul>
+              <div className="form">
+                <h2>Application Form</h2>
+                <form className="apply-form" onSubmit={sendEmail}>
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your aweseome name..."
+                    required
+                  />
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your Email..."
+                    required
+                  />
+                  <label htmlFor="number">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="number"
+                    name="number"
+                    placeholder="+63 912 345 6789"
+                    required
+                  />
+                  <label htmlFor="file">Upload your CV</label>
+                  <input type="file" name="file" id="file" />
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
