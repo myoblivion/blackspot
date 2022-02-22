@@ -132,7 +132,7 @@
   font: bold 16px sans-serif;
   padding: 2% 50px;
   position: absolute;
-  top: 510%;
+  top: 390%;
 }
 .footer-left {
   display: flex;
@@ -176,7 +176,7 @@
 }
 
 .footer-distributed-direction .footer-company-name {
-  color: #222;
+  color: #ffb808;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
@@ -309,17 +309,16 @@
     h1 {
       margin: 5% auto;
       text-align: center;
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 }
 .box-direction {
   display: flex;
   justify-content: space-around;
-  img {
-    margin: 0 15%;
-    border-radius: 15px;
-  }
+  align-items: center;
+  width: 100%;
+
 }
 .direction-content {
   margin-top: 2%;
@@ -329,18 +328,38 @@
       flex-direction: column;
       justify-content: space-between;
       margin: 1% auto;
+      width: 80%;
+      text-align: left;
     }
+  }
+  h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1% auto;
+    text-align: center;
   }
   p {
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1% auto;
+    text-align: left;
   }
   h2 {
     display: flex;
-    margin: 0 auto 1%;
+    justify-content: space-between;
+    margin: 1% auto;
+    text-align: center;
   }
 
   span {
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -385,6 +404,9 @@
 #walk {
   h2:after {
     content: " 🚶";
+  }
+  p {
+    text-align: left;
   }
 }
 #grabe {

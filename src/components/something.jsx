@@ -18,47 +18,48 @@ const SomethingComponent = ({ currentRoute }) => {
             <div className="row">
               <div className="col-md-10 offset-md-1">
                 <ul className="job-list">
-                  <li className="job-preview">
-                    <div className="content float-left">
-                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                    <li className="job-preview">
+                      <div className="content float-left">
                         <h4>Announcement</h4>
-                      </label>
-                      <h5 className="company">
-                        Lorem, ipsum dolor sit amet consectetur.
-                      </h5>
-                    </div>
-                  </li>
-                  <li className="job-preview">
-                    <div className="content float-left">
-                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                        <h5 className="company">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </h5>
+                      </div>
+                    </li>
+                  </label>
+                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                    <li className="job-preview">
+                      <div className="content float-left">
                         <h4>Updates</h4>
-                      </label>
 
-                      <h5 className="company">
-                        Lorem, ipsum dolor sit amet consectetur.
-                      </h5>
-                    </div>
-                  </li>
-                  <li className="job-preview">
-                    <div className="content float-left">
-                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                        <h5 className="company">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </h5>
+                      </div>
+                    </li>
+                  </label>
+                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                    <li className="job-preview">
+                      <div className="content float-left">
                         <h4>Game Guide</h4>
-                      </label>
-                      <h5 className="company">
-                        Lorem, ipsum dolor sit amet consectetur.
-                      </h5>
-                    </div>
-                  </li>
-                  <li className="job-preview">
-                    <div className="content float-left">
-                      <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                        <h5 className="company">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </h5>
+                      </div>
+                    </li>
+                  </label>
+                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
+                    <li className="job-preview">
+                      <div className="content float-left">
                         <h4>Markets</h4>
-                      </label>
-                      <h5 className="company">
-                        Lorem, ipsum dolor sit amet consectetur.
-                      </h5>
-                    </div>
-                  </li>
+
+                        <h5 className="company">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </h5>
+                      </div>
+                    </li>
+                  </label>
                 </ul>
               </div>
             </div>

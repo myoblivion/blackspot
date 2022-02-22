@@ -10,9 +10,9 @@ $text-color: #363738;
 }
 .accordion {
   background-color: white;
-  height: 70%;
+  height: 90%;
   width: 90%;
-  margin: 5em auto;
+  margin: 8em auto;
   border: 2px solid black;
   .news-title {
     text-align: center;
@@ -127,8 +127,10 @@ $text-color: #363738;
   margin-bottom: 2%;
 }
 .wrapper-bg {
-  width: 100%;
-  margin: 0 auto;
+  margin: 5% auto;
+  width: 75%;
+  height: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 5em;
 }
