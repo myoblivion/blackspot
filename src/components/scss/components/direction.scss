@@ -45,7 +45,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
       margin-right: 4%;
       ul {
         display: flex;
@@ -54,9 +53,9 @@
           a {
             color: white;
             border-radius: 14px;
-            padding: 10px 11px;
-            background-color: black;
-            font-size: 19px;
+            padding: 15px 14px;
+            background: rgb(68, 68, 68);
+            font-size: 25px;
           }
         }
       }
@@ -395,4 +394,14 @@
 }
 #grab::after {
 content: "🚕";
+}
+.come-address {
+  h1 {
+    font-size: 34px;
+    text-transform: uppercase;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+  }
 }
