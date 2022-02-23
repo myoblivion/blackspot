@@ -29,7 +29,6 @@
   .something-news-wrapper {
     width: 100%;
     height: 100%;
-    background-color: white;
     display: flex;
     flex-direction: column;
     ul.job-list {
@@ -47,9 +46,12 @@
         justify-content: center;
       }
     }
+    li.job-preview {
+      background-color: white;
+    }
 
     ul.job-list > li.job-preview {
-      background: #fff;
+      background-color: #fff;
       border: 1px solid #d7e2e9;
       -webkit-border-radius: 0.4rem;
       -moz-border-radius: 0.4rem;

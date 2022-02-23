@@ -25,9 +25,7 @@ const NewsComponent = ({ currentRoute }) => {
               <div className="text-overlay">
                 <h2>Scion Fist</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus sodales posuere felis non efficitur. Mauris mollis
-                  elit urna, id tempus...
+                  Read News, Game Updates, Announcements, and Guides..
                   <Link
                     to="/something"
                     style={
@@ -36,7 +34,7 @@ const NewsComponent = ({ currentRoute }) => {
                         : { borderBottom: "2px solid transparent" }
                     }
                   >
-                    Read more
+                    View all
                   </Link>
                 </p>
               </div>
@@ -48,9 +46,7 @@ const NewsComponent = ({ currentRoute }) => {
               <div className="text-overlay">
                 <h2>GoGO Racing</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus sodales posuere felis non efficitur. Mauris mollis
-                  elit urna, id tempus...
+                  Read News, Game Updates, Announcements, and Guides..
                   <Link
                     to="/something"
                     style={
@@ -59,7 +55,7 @@ const NewsComponent = ({ currentRoute }) => {
                         : { borderBottom: "2px solid transparent" }
                     }
                   >
-                    Read more
+                    View all
                   </Link>
                 </p>
               </div>
@@ -71,9 +67,8 @@ const NewsComponent = ({ currentRoute }) => {
               <div className="text-overlay">
                 <h2>GoGo World</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus sodales posuere felis non efficitur. Mauris mollis
-                  elit urna, id tempus...
+                  Read News, Game Updates, Announcements, and Guides..
+
                   <Link
                     to="/something"
                     style={
@@ -82,7 +77,7 @@ const NewsComponent = ({ currentRoute }) => {
                         : { borderBottom: "2px solid transparent" }
                     }
                   >
-                    Read more
+                    View all
                   </Link>
                 </p>
               </div>
@@ -94,9 +89,8 @@ const NewsComponent = ({ currentRoute }) => {
               <div className="text-overlay">
                 <h2>GoGo Chain</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus sodales posuere felis non efficitur. Mauris mollis
-                  elit urna, id tempus...
+                  Read News, Game Updates, Announcements, and Guides..
+
                   <Link
                     to="/something"
                     style={
@@ -105,7 +99,7 @@ const NewsComponent = ({ currentRoute }) => {
                         : { borderBottom: "2px solid transparent" }
                     }
                   >
-                    Read more
+                    View all
                   </Link>
                 </p>
               </div>
