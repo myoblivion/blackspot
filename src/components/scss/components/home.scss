@@ -815,6 +815,7 @@ input[type="radio"] {
       width: 120%;
       height: 120%;
       background-size: cover;
+      background-position: center;
       transition: transform $BG-T $RT;
       will-change: transform;
 
@@ -994,15 +995,16 @@ input[type="radio"] {
         background-color: #ffb90877;
         border-radius: 50%;
         &:hover {
-          
           background-color: #ffb808;
         }
       }
     }
   }
   .slider {
-    margin-top: 5%;
-    height: 80vh;
+    margin-top: 10%;
+    height: 50vh;
+    width: 100%;
+    background-color: black;
     &--control {
       width: 3em;
     }
