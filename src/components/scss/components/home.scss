@@ -129,15 +129,21 @@ body {
       top: 103%;
       li {
         color: white;
-        background-color: rgb(255, 254, 254);
+        background-color: rgba(0, 0, 0, 0);
         padding: 2px;
         margin: 2% 10px;
         height: 30%;
         width: 5%;
       }
       button {
-        width: 100%;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
         margin: 0 auto;
+        background-color: #ffb90877;
+        &:hover {
+          background-color: #ffb808;
+        }
       }
     }
 
