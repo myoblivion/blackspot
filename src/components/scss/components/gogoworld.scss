@@ -36,3 +36,19 @@
     }
   }
 }
+@media only screen and (max-width: 500px) {
+  .gogoworld {
+    .wrapper {
+      height: 90vh;
+      h1 {
+        width: 50%;
+        height: 30%;
+        font-size: 25px;
+      }
+      img {
+        width: 60%;
+        height: 40%;
+      }
+    }
+  }
+}
