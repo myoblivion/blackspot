@@ -171,7 +171,7 @@
   }
   .ch-description {
     position: absolute;
-    width: 100%;
+    width: 50%;
     top: 10%;
     left: 60%;
     .name {
@@ -479,7 +479,7 @@
 }
 @media only screen and (max-width: 500px) {
   .wrapper1 {
-    margin-top: 15%;
+    margin-top: 12%;
     height: 50vh;
   }
   .wrapper2 {
@@ -504,25 +504,72 @@
     background-repeat: no-repeat;
   }
   .wrapper5 {
-    height: 50vh;
+    height: 70vh;
     background-position: center;
     .characters {
       .character {
+        width: 100%;
+        height: 100%;
         img {
           width: 50%;
           height: 50%;
         }
+        display: flex;
+        justify-content: space-between;
       }
       .ch-description {
+        height: 100%;
+        width: 100%;
+        top: 67%;
+        left: 5%;
         .name {
-          font-size: 19px;
-          left: 0;
+          font-size: 15px;
         }
         .story {
-          width: 50%;
+          width: 100%;
           font-size: 15px;
         }
       }
+      #small {
+        width: 70%;
+      }
+      .next,
+      .prev {
+        img {
+          width: 100%;
+        }
+      }
+      .arrow {
+        position: absolute;
+        cursor: pointer;
+        z-index: 10;
+        color: white;
+      }
     }
   }
+  .footer-distributed {
+    font: bold 10px sans-serif;
+  }
+  .footer-distributed .footer-icons li a {
+    font-size: 24px;
+    line-height: 1.6;
+    width: 32px;
+    height: 32px;
+  }
+  .footer-icons h4 {
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .footer-distributed .footer-center p a {
+    font-size: 15px;
+  }
+  .bootons {
+    font-size: 25px;
+    #up {
+      padding: 17px 15px;
+    }
+  }
+
 }
