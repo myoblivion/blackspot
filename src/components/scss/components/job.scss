@@ -216,7 +216,7 @@ ul.job-list > li.job-preview:hover {
 }
 @media (min-width: 600px) {
   .modal-content {
-    max-width: 600px;
+    min-width: 600px;
     top: 0;
     right: 0;
     margin: 0 auto;
@@ -316,5 +316,14 @@ ul.job-list > li.job-preview:hover {
       letter-spacing: 1px;
       padding: 0.2rem 1rem;
     }
+  }
+  .modal-content {
+    max-height: 50%;
+    max-width: 60%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 25% auto;
   }
 }
