@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // banners
 import Banner1 from "../images/banner4l.png";
 import Banner2 from "../images/gogoraces.jpg";
-import Banner3 from "../images/gogoch.jpg";
+import Banner3 from "../images/gogoworlds.jpg";
 import Banner4 from "../images/game3.jpg";
 
 const NewsComponent = ({ currentRoute }) => {

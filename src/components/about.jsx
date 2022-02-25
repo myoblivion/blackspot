@@ -134,8 +134,8 @@ const AboutComponent = ({ currentRoute }) => {
             </div>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              perferendis iste reprehenderit.
+              An Automatic First-Person Shooting game! The higher the rank, the
+              better performance. The battle is ready for you.
             </p>
           </div>
           <div className="baks box2">
@@ -146,8 +146,8 @@ const AboutComponent = ({ currentRoute }) => {
             </div>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              perferendis iste reprehenderit.
+              Adorable characters living in their own world. Check out how they
+              make your world more entertaining.
             </p>
           </div>
           <div className="baks box3">
@@ -157,8 +157,8 @@ const AboutComponent = ({ currentRoute }) => {
               </Link>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              perferendis iste reprehenderit.
+              Are you ready to explore the dimension of these cute characters?
+              They are coming soon to play with you.
             </p>
           </div>
           <div className="baks box4">
@@ -168,8 +168,9 @@ const AboutComponent = ({ currentRoute }) => {
               </Link>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              perferendis iste reprehenderit.
+              A racing game where you compete with other users using your
+              purchased and unique cars. Ready your car, finish the line and win
+              a coin and be incentivized. Play to Earn? It’s a surprise.
             </p>
           </div>
         </div>
@@ -178,8 +179,8 @@ const AboutComponent = ({ currentRoute }) => {
             <img src={ggnft} alt="" />
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            perferendis iste reprehenderit.
+            Because all Black Spot Studio Philippine games have gogo coins, save
+            it and it may turn into a real one!
           </p>
         </div>
       </section>
@@ -192,32 +193,34 @@ const AboutComponent = ({ currentRoute }) => {
             <FaBrain className="i" />
             <h2>The Brain of the Game</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, quae?
+              Our Game developers, the people behind the magic of all games.
+              From making the theme to winning the game.
             </p>
           </div>
           <div className="service">
             <FaEye className="i" />
             <h2>An Eye for the life of Games</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, quae?
+              The Marketing team, the creative people who have the eye to
+              connect the game to its audience. From conceptualizing the brand
+              to making art for the game.
             </p>
           </div>
           <div className="service">
             <FaHeart className="i" />
             <h2>The Heart of the Perfect Game</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, quae?
+              The Quality Assurance team, the perfectionist gamers of the
+              company. Has love for the game, and checking it to give the player
+              the best quality of entertainment.
             </p>
           </div>
           <div className="service">
             <FaUsers className="i" />
-            <h2>Community Management</h2>
+            <h2>The Lending Hands of the Game</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, quae?
+              They grow with the players all around the gaming community. They
+              help and give advice to all our players.
             </p>
           </div>
         </div>
@@ -225,8 +228,8 @@ const AboutComponent = ({ currentRoute }) => {
           <FaAssistiveListeningSystems className="i" />
           <h2>The Ear for the Gamers</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            quae?
+            They can hear you gamers! Our Customer Service team is here ready to
+            listen and give you updates on all your inquiries.
           </p>
         </div>
       </section>

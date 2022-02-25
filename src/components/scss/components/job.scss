@@ -13,6 +13,10 @@
     font-size: 30px;
     margin: 1em auto;
   }
+  p:hover,
+  p:focus {
+    color: #73a5fc;
+  }
 }
 .list-jobz {
   padding: 30px 0;
@@ -43,11 +47,6 @@ a {
 hr {
   width: 20%;
   margin: 0 auto;
-}
-
-p:hover,
-p:focus {
-  color: #73a5fc;
 }
 
 ul.job-list {
@@ -304,14 +303,14 @@ ul.job-list > li.job-preview:hover {
     ul.job-list {
       margin-left: 5%;
     }
-    ul.job-list > li.job-preview{
+    ul.job-list > li.job-preview {
       width: 80%;
       height: 50%;
       display: flex;
       font-size: 15px;
     }
     .btn-apply {
-      font-size:  10px;
+      font-size: 10px;
       font-weight: 800;
       letter-spacing: 1px;
       padding: 0.2rem 1rem;

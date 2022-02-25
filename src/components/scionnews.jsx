@@ -18,7 +18,7 @@ const ScionNewsComponent   = ({ currentRoute }) => {
             <div className="row">
               <div className="col-md-10 offset-md-1">
                 <ul className="newsz-list">
-                  <label className="labels" for="fullship">
+                  <label className="labels" htmlFor="fullship">
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Announcement</h4>
@@ -28,7 +28,7 @@ const ScionNewsComponent   = ({ currentRoute }) => {
                       </div>
                     </li>
                   </label>
-                  <label className="labels" for="fullship">
+                  <label className="labels" htmlFor="fullship">
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Updates</h4>
@@ -39,7 +39,7 @@ const ScionNewsComponent   = ({ currentRoute }) => {
                       </div>
                     </li>
                   </label>
-                  <label className="labels" for="fullship">
+                  <label className="labels" htmlFor="fullship">
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Game Guide</h4>
@@ -49,7 +49,7 @@ const ScionNewsComponent   = ({ currentRoute }) => {
                       </div>
                     </li>
                   </label>
-                  <label className="labels" for="fullship">
+                  <label className="labels" htmlFor="fullship">
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Markets</h4>
@@ -68,9 +68,9 @@ const ScionNewsComponent   = ({ currentRoute }) => {
       </section>
       <div className="modal-container">
         <input type="checkbox" className="modal-checkbox" id="fullship" />
-        <label for="fullship" className="modal-overlay"></label>
+        <label htmlFor="fullship" className="modal-overlay"></label>
         <div className="modal-content">
-          <label for="fullship" className="modal-close">
+          <label htmlFor="fullship" className="modal-close">
             &times;
           </label>
           <h3 className="modal-title">Announcements</h3>

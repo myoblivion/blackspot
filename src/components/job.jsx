@@ -13,7 +13,7 @@ const JobComponent = ({ currentRoute }) => {
     emailjs
       .sendForm(
         "service_nh3pwyh",
-        "template_xyvndrx",
+        "template_kei217q",
         e.target,
         "user_DhVbKvTWQOQX3lDfGjGAj"
       )
