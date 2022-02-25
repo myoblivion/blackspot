@@ -27,7 +27,7 @@ const NewsComponent = ({ currentRoute }) => {
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
                   <Link
-                    to="/something"
+                    to="/scionnews"
                     style={
                       currentRoute === "scion"
                         ? { borderBottom: "2px solid yellow" }
@@ -47,16 +47,7 @@ const NewsComponent = ({ currentRoute }) => {
                 <h2>GoGO Racing</h2>
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
-                  <Link
-                    to="/something"
-                    style={
-                      currentRoute === "scion"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    View all
-                  </Link>
+                  <Link to="/gogoracingnews">View all</Link>
                 </p>
               </div>
             </div>
@@ -68,17 +59,7 @@ const NewsComponent = ({ currentRoute }) => {
                 <h2>GoGo World</h2>
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
-
-                  <Link
-                    to="/something"
-                    style={
-                      currentRoute === "scion"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    View all
-                  </Link>
+                  <Link to="/gogoworldnews">View all</Link>
                 </p>
               </div>
             </div>
@@ -90,17 +71,7 @@ const NewsComponent = ({ currentRoute }) => {
                 <h2>GoGo Chain</h2>
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
-
-                  <Link
-                    to="/something"
-                    style={
-                      currentRoute === "scion"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    View all
-                  </Link>
+                  <Link to="/gogochainnews">View all</Link>
                 </p>
               </div>
             </div>

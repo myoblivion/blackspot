@@ -5,7 +5,7 @@ $text-color: #363738;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
 }
 .accordion {
@@ -135,3 +135,9 @@ $text-color: #363738;
   grid-template-columns: 2fr 2fr;
   grid-gap: 5em;
 }
+@media only screen and (max-width: 1366px) {
+  .wrapper-bg {
+    height: 5%;
+  }
+}
+

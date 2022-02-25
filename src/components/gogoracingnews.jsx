@@ -1,26 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
-const SomethingComponent = ({ currentRoute }) => {
+const GoGoRacingNewsComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
-    document.title = "Black Spot Studio | News ";
+    document.title = "Black Spot Studio | GoGo Racing News";
   }, []);
   return (
-    <div className="something wrapper">
+    <div className="gogoracingnews wrapper">
       <section className="something-wrapper">
         <div className="something-news">
-          <h2 className="something-title">Game Title</h2>
+          <h2 className="something-title">Gogo Racing News & Updates</h2>
         </div>
         <div className="something-news-wrapper">
           <div className="container">
             <div className="row">
               <div className="col-md-10 offset-md-1">
-                <ul className="job-list">
-                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
-                    <li className="job-preview">
-                      <div className="content float-left">
+                <ul className="newsz-list">
+                  <label className="labels" for="fullship">
+                    <li className="news-preview">
+                      <div className="newscontent float-left">
                         <h4>Announcement</h4>
                         <h5 className="company">
                           Lorem, ipsum dolor sit amet consectetur.
@@ -28,9 +29,9 @@ const SomethingComponent = ({ currentRoute }) => {
                       </div>
                     </li>
                   </label>
-                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
-                    <li className="job-preview">
-                      <div className="content float-left">
+                  <label className="labels" for="fullship">
+                    <li className="news-preview">
+                      <div className="newscontent float-left">
                         <h4>Updates</h4>
 
                         <h5 className="company">
@@ -39,9 +40,9 @@ const SomethingComponent = ({ currentRoute }) => {
                       </div>
                     </li>
                   </label>
-                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
-                    <li className="job-preview">
-                      <div className="content float-left">
+                  <label className="labels" for="fullship">
+                    <li className="news-preview">
+                      <div className="newscontent float-left">
                         <h4>Game Guide</h4>
                         <h5 className="company">
                           Lorem, ipsum dolor sit amet consectetur.
@@ -49,9 +50,9 @@ const SomethingComponent = ({ currentRoute }) => {
                       </div>
                     </li>
                   </label>
-                  <label className="col-md-6 col-sm-6 col-xs-12" for="fullship">
-                    <li className="job-preview">
-                      <div className="content float-left">
+                  <label className="labels" for="fullship">
+                    <li className="news-preview">
+                      <div className="newscontent float-left">
                         <h4>Markets</h4>
 
                         <h5 className="company">
@@ -86,5 +87,5 @@ const SomethingComponent = ({ currentRoute }) => {
     </div>
   );
 };
-// Hope this works
-export default SomethingComponent;
+
+export default GoGoRacingNewsComponent;

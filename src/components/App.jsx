@@ -14,7 +14,10 @@ import GoGoChainComponent from "./gogochain";
 import GoGoRacingComponent from "./gogoracing";
 import LoadingComponent from "./loading";
 import PrivacyComponent from "./privacy"
-import SomethingComponent from "./something";
+import ScionNewsComponent from "./scionnews";
+import GogoWorldNewsComponent from "./gogoworldnews";
+import GogoChainNewsComponent from "./gogochainnews";
+import GogoRacingNewsComponent from "./gogoracingnews";
 // styles
 import "./scss/index.scss";
 
@@ -66,8 +69,17 @@ const Appcomponent = () => {
           <Route path="/privacy">
             <PrivacyComponent />
           </Route>
-          <Route path="/something">
-            <SomethingComponent />
+          <Route path="/scionnews">
+            <ScionNewsComponent />
+          </Route>
+          <Route path="/gogoworldnews">
+            <GogoWorldNewsComponent />
+          </Route>
+          <Route path="/gogochainnews">
+            <GogoChainNewsComponent />
+          </Route>
+          <Route path="/gogoracingnews">
+            <GogoRacingNewsComponent />
           </Route>
         </div>
       )}

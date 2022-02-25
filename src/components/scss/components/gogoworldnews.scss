@@ -1,10 +1,10 @@
-.something {
+.gogoworldnews {
   width: 100%;
   height: 100vh;
-  background-image: url("/src/images/scionnews.png");
+  background-image: url("/src/images/gogoworldnews.png");
+  margin-top: 2%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin-top: 2%;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -234,15 +234,14 @@ label {
   display: block;
 }
 @media only screen and (max-width: 500px) {
-  .something {
+  .gogoworldnews {
+    background-image: url("/src/images/gogoworldnm.png");
+    background-position: center;
+    height: 100vh;
     overflow-x: hidden;
-
     .something-wrapper {
       margin-top: 15%;
       width: 100%;
-      ul {
-        background-color: white;
-      }
       .labels {
         height: 100px;
         width: 50%;
