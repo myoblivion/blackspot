@@ -165,7 +165,7 @@ const JobComponent = ({ currentRoute }) => {
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Enter your aweseome name..."
+                      placeholder="Enter your awesome name..."
                       required
                     />
                     <label htmlFor="email">Email</label>
@@ -250,7 +250,7 @@ const JobComponent = ({ currentRoute }) => {
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Enter your aweseome name..."
+                    placeholder="Enter your awesome name..."
                     required
                   />
                   <label htmlFor="email">Email</label>
@@ -349,7 +349,7 @@ const JobComponent = ({ currentRoute }) => {
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Enter your aweseome name..."
+                      placeholder="Enter your awesome name..."
                       required
                     />
                     <label htmlFor="email">Email</label>
@@ -434,7 +434,7 @@ const JobComponent = ({ currentRoute }) => {
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Enter your aweseome name..."
+                    placeholder="Enter your awesome name..."
                     required
                   />
                   <label htmlFor="email">Email</label>
