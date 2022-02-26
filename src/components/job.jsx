@@ -2,8 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import logo from "../images/icons/logo.png";
-import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaMapMarked,
+  FaReddit,
+  FaRegArrowAltCircleUp,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
+import { AiFillInstagram } from "react-icons/ai";
+import icono from "../images/icons/logo.png";
 
 const JobComponent = ({ currentRoute }) => {
   // Email Js
@@ -102,16 +112,16 @@ const JobComponent = ({ currentRoute }) => {
               className="modal-checkbox"
               id="custsuppspec"
             />
-            <label for="custsuppspec" className="modal-overlay"></label>
+            <label htmlFor="custsuppspec" className="modal-overlay"></label>
             <div className="modal-content">
               <div className="content-modal">
-                <label for="custsuppspec" className="modal-close">
+                <label htmlFor="custsuppspec" className="modal-close">
                   &times;
                 </label>
                 <h3 className="modal-title">MARKETING STAFF/ GRAPHIC ARTIST</h3>
                 <h4>Description</h4>
                 <p>
-                  As we are getting bigger, our company is now looking for the
+                  As we are getting bigger, our company is now looking htmlFor the
                   MARKETING STAFF/ GRAPHIC ARTIST who’s fun and enjoy online
                   games.
                 </p>
@@ -182,15 +192,15 @@ const JobComponent = ({ currentRoute }) => {
           </div>
           <div className="modal-container">
             <input type="checkbox" className="modal-checkbox" id="photosupp" />
-            <label for="photosupp" className="modal-overlay"></label>
+            <label htmlFor="photosupp" className="modal-overlay"></label>
             <div className="modal-content">
-              <label for="photosupp" className="modal-close">
+              <label htmlFor="photosupp" className="modal-close">
                 &times;
               </label>
               <h3 className="modal-title">QUALITY ASSURANCE MANAGER </h3>
               <h4>Description</h4>
               <p>
-                As we are getting bigger, our company is now looking for
+                As we are getting bigger, our company is now looking htmlFor
                 ASSISTANT QUALITY ASSURANCE MANAGER who’s fun and enjoy online
                 games.
               </p>
@@ -262,16 +272,16 @@ const JobComponent = ({ currentRoute }) => {
           </div>
           <div className="modal-container">
             <input type="checkbox" className="modal-checkbox" id="costumah" />
-            <label for="ccostumah" className="modal-overlay"></label>
+            <label htmlFor="ccostumah" className="modal-overlay"></label>
             <div className="modal-content">
               <div className="content-modal">
-                <label for="costumah" className="modal-close">
+                <label htmlFor="costumah" className="modal-close">
                   &times;
                 </label>
                 <h3 className="modal-title"> CUSTOMER SERVICE SUPPORT</h3>
                 <h4>Description</h4>
                 <p>
-                  As our team is getting bigger, BSS PH is now looking for
+                  As our team is getting bigger, BSS PH is now looking htmlFor
                   CUSTOMER SERVICE SUPPORT.
                 </p>
                 <h4>Requirements</h4>
@@ -358,15 +368,15 @@ const JobComponent = ({ currentRoute }) => {
           </div>
           <div className="modal-container">
             <input type="checkbox" className="modal-checkbox" id="costumah" />
-            <label for="photosupp" className="modal-overlay"></label>
+            <label htmlFor="photosupp" className="modal-overlay"></label>
             <div className="modal-content">
-              <label for="photosupp" className="modal-close">
+              <label htmlFor="photosupp" className="modal-close">
                 &times;
               </label>
               <h3 className="modal-title">QUALITY ASSURANCE MANAGER </h3>
               <h4>Description</h4>
               <p>
-                As we are getting bigger, our company is now looking for
+                As we are getting bigger, our company is now looking htmlFor
                 ASSISTANT QUALITY ASSURANCE MANAGER who’s fun and enjoy online
                 games.
               </p>
@@ -438,6 +448,112 @@ const JobComponent = ({ currentRoute }) => {
           </div>
         </div>
       </section>
+      <div className="section">
+        <footer className="footer-distributed">
+          <div className="footer-left">
+            <img src={icono} alt="" className="logso" />
+            <p className="footer-links">
+              <a href="#">About Us</a>
+
+              <a href="#">Privacy Policy</a>
+              <a href="#">Career</a>
+
+              <HashLink smooth to="/#contact">
+                {" "}
+                Contact Us
+              </HashLink>
+            </p>
+
+            <p className="footer-company-name">
+              Copyright © Black Spot Studio PH{" "}
+            </p>
+          </div>
+
+          <div className="footer-center">
+            <div className="desz">
+              <p>
+                <Link
+                  to="/direction"
+                  style={
+                    currentRoute === "direction"
+                      ? { borderBottom: "2px solid yellow" }
+                      : { borderBottom: "2px solid transparent" }
+                  }
+                >
+                  <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+                </Link>
+              </p>
+            </div>
+
+            <div className="desz">
+              <p>
+                <a href="mailto:support@company.com">
+                  {" "}
+                  <FaEnvelope /> support@company.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="footer-right">
+            <div className="footer-icons">
+              <ul className="social-media-list">
+                <li>
+                  <a
+                    href="https://www.facebook.com/BlackspotstudioPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/phblackspotstudio/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <AiFillInstagram />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/BlackSpotPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaReddit />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaYoutube />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <div className="bootons">
+          <HashLink smooth to="/job#" id="up">
+            {" "}
+            <FaRegArrowAltCircleUp />
+          </HashLink>
+        </div>
+      </div>
     </div>
   );
 };

@@ -48,6 +48,7 @@
       margin-right: 4%;
       ul {
         display: flex;
+        list-style: none;
         li {
           width: 100%;
           a {
@@ -122,6 +123,7 @@
   }
 }
 //   Footer
+
 .footer-distributed-direction {
   background: rgb(68, 68, 68);
   box-sizing: border-box;
@@ -130,8 +132,11 @@
   font: bold 16px sans-serif;
   padding: 2% 50px;
   position: absolute;
-  top: 390%;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+
 .footer-left {
   display: flex;
 }
@@ -247,6 +252,7 @@
   margin-top: 25px;
   justify-content: center;
   align-items: center;
+  list-style: none;
 }
 
 .footer-distributed-direction .footer-icons li a {
@@ -334,29 +340,21 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 1% auto;
-    text-align: center;
   }
   p {
     font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1% auto;
+    width: 80%;
     text-align: left;
   }
   h2 {
     display: flex;
-    justify-content: space-between;
-    margin: 1% auto;
-    text-align: center;
   }
 
   span {
     font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    text-align: center;
   }
 }
 
@@ -382,36 +380,34 @@
 }
 
 #bus {
-  h2:after {
+  h2:before {
     content: " 🚌";
   }
 }
 #train {
-  h2:after {
+  h2:before {
     content: " 🚆";
   }
 }
 
 #jeep {
-  h2:after {
+  h2:before {
     content: " 🚙";
   }
 }
 
 #walk {
-  h2:after {
-    content: " 🚶";
-  }
   p {
     text-align: left;
   }
 }
-#grabe {
-  display: flex;
-  margin: 0 auto 1%;
-  text-align: center;
+#walks:before {
+  content: " 🚶";
 }
-#grab::after {
+#grab {
+  text-align: left;
+}
+#grab::before {
   content: "🚕";
 }
 .come-address {
@@ -429,7 +425,7 @@
     .map {
       display: block;
       img {
-        width: 100%; 
+        width: 100%;
         height: 40%;
         left: 30%;
         top: 16%;
@@ -447,7 +443,7 @@
             width: 50%;
             a {
               font-size: 12px;
-              padding: 8px 9px ;
+              padding: 8px 9px;
             }
           }
         }
@@ -484,4 +480,20 @@
   .footer-distributed-direction {
     top: 1000%;
   }
+}
+@media screen and (min-device-width: 900px) and (max-device-width: 1400px) {
+  .direction {
+    .description-map {
+      .direction-navigation {
+        ul {
+          li {
+            a {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

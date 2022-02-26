@@ -179,7 +179,7 @@ const AboutComponent = ({ currentRoute }) => {
             <img src={ggnft} alt="" />
           </div>
           <p>
-            Because all Black Spot Studio Philippine games have gogo coins, save
+            Because all Black Spot Studio Philippines games have gogo coins, save
             it and it may turn into a real one!
           </p>
         </div>
