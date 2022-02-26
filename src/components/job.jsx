@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
-import logo from "../images/icons/logo.png";
+import join from "../images/join.png";
+import ReCaptchaV2 from "react-google-recaptcha";
+
 import {
   FaEnvelope,
   FaFacebook,
@@ -14,7 +16,11 @@ import {
 import { HashLink } from "react-router-hash-link";
 import { AiFillInstagram } from "react-icons/ai";
 import icono from "../images/icons/logo.png";
-
+const handleToken = (token) => {
+  setForm((currentForm) => {
+    return { ...currentForm, token };
+  });
+};
 const JobComponent = ({ currentRoute }) => {
   // Email Js
   function sendEmail(e) {
@@ -48,13 +54,9 @@ const JobComponent = ({ currentRoute }) => {
       <section className="joblist">
         <div className="joblist-wrapper">
           <center>
-            <img src={logo} alt="" id="top1" />
+            <img src={join} alt="" id="top1" />
           </center>
           <br />
-          <center>
-            <h1>Join our growing team!</h1>
-          </center>
-
           <br />
           <br />
           <h3>Open Positions</h3>
@@ -121,8 +123,8 @@ const JobComponent = ({ currentRoute }) => {
                 <h3 className="modal-title">MARKETING STAFF/ GRAPHIC ARTIST</h3>
                 <h4>Description</h4>
                 <p>
-                  As we are getting bigger, our company is now looking htmlFor the
-                  MARKETING STAFF/ GRAPHIC ARTIST who’s fun and enjoy online
+                  As we are getting bigger, our company is now looking htmlFor
+                  the MARKETING STAFF/ GRAPHIC ARTIST who’s fun and enjoy online
                   games.
                 </p>
                 <h4>Requirements</h4>
@@ -184,6 +186,10 @@ const JobComponent = ({ currentRoute }) => {
                     />
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
+                    <ReCaptchaV2
+                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      onChange={handleToken}
+                    />
                     <button type="submit">Submit</button>
                   </form>
                 </div>
@@ -265,6 +271,10 @@ const JobComponent = ({ currentRoute }) => {
                   />
                   <label htmlFor="file">Upload your CV</label>
                   <input type="file" name="file" id="file" />
+                  <ReCaptchaV2
+                    sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                    onChange={handleToken}
+                  />
                   <button type="submit">Submit</button>
                 </form>
               </div>
@@ -360,6 +370,10 @@ const JobComponent = ({ currentRoute }) => {
                     />
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
+                    <ReCaptchaV2
+                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      onChange={handleToken}
+                    />
                     <button type="submit">Submit</button>
                   </form>
                 </div>
@@ -441,6 +455,10 @@ const JobComponent = ({ currentRoute }) => {
                   />
                   <label htmlFor="file">Upload your CV</label>
                   <input type="file" name="file" id="file" />
+                  <ReCaptchaV2
+                    sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                    onChange={handleToken}
+                  />
                   <button type="submit">Submit</button>
                 </form>
               </div>
