@@ -123,26 +123,23 @@
   @media (max-width: 900px) {
     .about {
       width: 100%;
+      .wrappersk {
+        display: flex;
+        flex-direction: column;
+      }
       .image {
         border-radius: 0;
+        position: static;
       }
       .content {
         border-radius: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        p {
-          width: 100%;
-        }
       }
       .container-about {
         width: 100%;
         display: flex;
       }
     }
-  
+
     .footer-distributed {
       font: bold 10px sans-serif;
     }
@@ -166,7 +163,6 @@
       justify-content: space-around;
       border-radius: none;
       flex-direction: column;
-
     }
     .image {
       height: 30vh;
@@ -175,21 +171,21 @@
       align-items: center;
       img {
         margin: auto;
-        width: 100%;
+        width: 50%;
         height: 80%;
       }
     }
     .content {
-      height: 100vh;
+      height: 100%;
       width: 100%;
       border-radius: none;
       align-items: center;
     }
     .content h2 {
-      font-size: 15px;
+      font-size: 16px;
       text-align: center;
       width: 100%;
-      margin-top: 50px;
+      margin-top: 10%;
     }
     .content span {
       margin: 20px 0;
@@ -203,7 +199,7 @@
       font-size: 14px;
     }
     .linksz {
-      flex-direction: column  ;      
+      flex-direction: column;
       margin: 5px 0;
     }
     .linksz li {
@@ -233,7 +229,12 @@
         width: 50%;
         position: inherit;
       }
-
+    }
+    #services {
+      .row-about {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -606,6 +607,13 @@
 
 @media only screen and (max-width: 500px) {
   .about {
+    section {
+      box-shadow: none;
+    }
+
+    .image {
+      margin-top: 20%;
+    }
     .footer-distributed {
       font: bold 10px sans-serif;
     }
@@ -626,7 +634,7 @@
     }
     .bootons {
       font-size: 25px;
-    background-color: #ffb808;
+      background-color: #ffb808;
       #up {
         padding: 17px 15px;
       }
