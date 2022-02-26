@@ -133,6 +133,9 @@
       }
       .content {
         border-radius: 0;
+        p {
+          min-width: 95%;
+        }
       }
       .container-about {
         width: 100%;
