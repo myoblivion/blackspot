@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import Mongi from "../images/characters/Mongi.png";
+import Nyangi from "../images/characters/Nyangi.png"
 
 const GoGoChainNewsComponent = ({ currentRoute }) => {
   // Title
@@ -12,7 +14,7 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
     <div className="gogochainnews wrapper">
       <section className="something-wrapper">
         <div className="something-news">
-          <h2 className="something-title">Scion Fist News & Updates</h2>
+          <h2 className="something-title">Gogo Chain News & Updates</h2>
         </div>
         <div className="something-news-wrapper">
           <div className="container">
@@ -66,6 +68,8 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
             </div>
           </div>
         </div>
+        <img src={Mongi} alt="pew pew" id="mongis"/>
+        <img src={Nyangi} alt="pewpew" id="nyangi"/>
       </section>
       <div className="modal-container">
         <input type="checkbox" className="modal-checkbox" id="fullship" />
