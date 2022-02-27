@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import risa from "../images/risa.png";
+import grace from "../images/grace.png";
 
-const ScionNewsComponent   = ({ currentRoute }) => {
+const ScionNewsComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Scion Fist News ";
@@ -65,7 +67,14 @@ const ScionNewsComponent   = ({ currentRoute }) => {
             </div>
           </div>
         </div>
+        <div className="girl-1">
+          <img src={risa} alt="aa" />
+        </div>
+        <div className="girl-2">
+          <img src={grace} alt="aa" />
+        </div>
       </section>
+
       <div className="modal-container">
         <input type="checkbox" className="modal-checkbox" id="fullship" />
         <label htmlFor="fullship" className="modal-overlay"></label>

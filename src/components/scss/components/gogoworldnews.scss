@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 .something-wrapper {
   margin-top: 5%;
@@ -16,6 +17,25 @@
   flex-direction: column;
   height: 50%;
   justify-content: center;
+  position: relative;
+  #mongi,
+  #jays {
+    position: absolute;
+    padding: 0;
+    display: flex;
+  }
+  #mongi {
+    left: -14%;
+    padding: 0;
+    top: 65%;
+    width: 30%;
+  }
+  #jays {
+    right: -15%;
+    padding: 0;
+    top: 65%;
+    width: 30%;
+  }
   .something-title {
     text-align: center;
     background-color: black;

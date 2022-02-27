@@ -3,6 +3,7 @@ import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import somedog from "../images/somedog.png";
+
 const GoGoRacingNewsComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {

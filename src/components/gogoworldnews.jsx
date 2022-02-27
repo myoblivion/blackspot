@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
-
+import Mongi from "../images/characters/Mongi.png";
+import Jjiljjil from "../images/Jjiljjil.png";
 const GogoWorldNewsComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
@@ -66,6 +67,8 @@ const GogoWorldNewsComponent = ({ currentRoute }) => {
             </div>
           </div>
         </div>
+        <img src={Mongi} alt="aa" id="mongi"/>
+        <img src={Jjiljjil} alt="aa" id="jays"/>
       </section>
       <div className="modal-container">
         <input type="checkbox" className="modal-checkbox" id="fullship" />
