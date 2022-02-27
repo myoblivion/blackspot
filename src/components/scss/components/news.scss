@@ -138,7 +138,12 @@ $text-color: #363738;
     height: 5%;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
+  .news {
+    background-image: url("/src/images/gogoworlds.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+  }
   .wrapper-bg {
     height: 5%;
     width: 100%;
@@ -153,6 +158,8 @@ $text-color: #363738;
   .accordion {
     .blog-card {
       p {
+        width: 70%;
+        text-align: left  ;
         a {
           right: 10%;
         }
