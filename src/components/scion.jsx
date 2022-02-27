@@ -97,7 +97,24 @@ const ScionComponent = ({ currentRoute }) => {
   }, []);
   return (
     <div className="scion wrapper">
-      <section className="wrapper1"></section>
+      <section className="wrapper1">
+        <div className="scion-links">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/ScionFistPhilippines/"><FaFacebook /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/scionfistphilippinesofficial/?hl=en"><FaInstagram /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ScionFistPH"><FaTwitter /></a>
+            </li>
+            <li>
+              <a href="https://www.reddit.com/r/ScionFistPHofficial/"><FaReddit /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section className="wrapper2">
         <div className="titles">
           <h2>Prologue</h2>
