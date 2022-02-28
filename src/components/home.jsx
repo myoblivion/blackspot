@@ -75,7 +75,7 @@ const HomeComponent = ({ currentRoute }) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCount((c) => ++c % 4);
-    }, 5000);
+    }, 9000);
 
     return () => clearInterval(intervalId);
   }, []);
