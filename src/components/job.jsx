@@ -103,6 +103,17 @@ const JobComponent = ({ currentRoute }) => {
                         </p>
                       </label>
                     </li>
+                    <li className="job-preview">
+                      <div className="content float-left">
+                        <h4 className="job-title">Custumer Service Manager</h4>
+                        <h5 className="company">Full Time</h5>
+                      </div>
+                      <label htmlFor="manager">
+                        <p className="btn btn-apply float-sm-right float-xs-left">
+                          Apply
+                        </p>
+                      </label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -123,39 +134,39 @@ const JobComponent = ({ currentRoute }) => {
                 <h3 className="modal-title">MARKETING STAFF/ GRAPHIC ARTIST</h3>
                 <h4>Description</h4>
                 <p>
-                  As we are getting bigger, our company is now looking htmlFor
-                  the MARKETING STAFF/ GRAPHIC ARTIST who’s fun and enjoy online
+                  As we are getting bigger, our company is now looking for the
+                  MARKETING STAFF/ GRAPHIC ARTIST who’s fun and enjoy online
                   games.
                 </p>
                 <h4>Requirements</h4>
                 <ul>
-                  <li>Translates marketing strategy into visual content</li>
+                  <li>- Translates marketing strategy into visual content</li>
                   <li>
-                    Conceptualize over all look and feel of marketing
+                    - Conceptualize over all look and feel of marketing
                     collaterals
                   </li>
-                  <li>Develops and edits graphics, videos and other format</li>
+                  <li>- Develops and edits graphics, videos and other format</li>
                   <li>
-                    Work Closely with and offers variety of designs solutions to
+                    - Work Closely with and offers variety of designs solutions to
                     the Marketing Department.
                   </li>
                   <li>
-                    Pro-active with deliverables and keeps up with timelines
+                    - Pro-active with deliverables and keeps up with timelines
                   </li>
-                  <li>Must be knowledgeable in any editing tools</li>
-                  <li>With experience in 2D art</li>
-                  <li>With experience in 3D art is a plus</li>
-                  <li>Willing to work in BGC, Taguig</li>
+                  <li>- Must be knowledgeable in any editing tools</li>
+                  <li>- With experience in 2D art</li>
+                  <li>- With experience in 3D art is a plus</li>
+                  <li>- Willing to work in BGC, Taguig</li>
                   <li>
-                    Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                    - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
                   </li>
-                  <li>Must be FULLY VACINATED</li>
+                  <li>- Must be FULLY VACINATED</li>
                 </ul>
                 <h4>Perks</h4>
                 <ul>
-                  <li>All Government Mandated Benefits</li>
-                  <li>13th Month Pay</li>
-                  <li>FREE LUNCH & SNACKS</li>
+                  <li>- All Government Mandated Benefits</li>
+                  <li>- 13th Month Pay</li>
+                  <li>- FREE LUNCH & SNACKS</li>
                 </ul>
                 <div className="form">
                   <h2>Application Form</h2>
@@ -206,41 +217,41 @@ const JobComponent = ({ currentRoute }) => {
               <h3 className="modal-title">QUALITY ASSURANCE MANAGER </h3>
               <h4>Description</h4>
               <p>
-                As we are getting bigger, our company is now looking htmlFor
+                As we are getting bigger, our company is now looking for
                 ASSISTANT QUALITY ASSURANCE MANAGER who’s fun and enjoy online
                 games.
               </p>
               <h4>Requirements</h4>
               <ul>
                 <li>
-                  Must be knowledgeable in online video games. (Not related to
+                  - Must be knowledgeable in online video games. (Not related to
                   e-casino or POGO games)
                 </li>
                 <li>
-                  Must be knowledgeable in different game genres such as FPS,
+                  - Must be knowledgeable in different game genres such as FPS,
                   MMORPG, and Others
                 </li>
-                <li>Must be knowledgeable in NFT games.</li>
+                <li>- Must be knowledgeable in NFT games.</li>
                 <li>
-                  Knowledgeable with PCs and mobile devices [Hardware &
+                  - Knowledgeable with PCs and mobile devices [Hardware &
                   Components]
                 </li>
-                <li>Can work ASAP.</li>
-                <li>With intermediate to advanced English proficiency.</li>
-                <li>Computer literate and tech savvy.</li>
-                <li>Bachelor's Degree (Any Field)</li>
-                <li>Proficient in using MS office applications</li>
-                <li>Willing to work in BGC, Taguig</li>
+                <li>- Can work ASAP.</li>
+                <li>- With intermediate to advanced English proficiency.</li>
+                <li>- Computer literate and tech savvy.</li>
+                <li>- Bachelor's Degree (Any Field)</li>
+                <li>- Proficient in using MS office applications</li>
+                <li>- Willing to work in BGC, Taguig</li>
                 <li>
-                  Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                  - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
                 </li>
-                <li>Must be FULLY VACINATED</li>
+                <li>- Must be FULLY VACINATED</li>
               </ul>
               <h4>Perks</h4>
               <ul>
-                <li> All Government Mandated Benefits</li>
-                <li>13th Month Pay</li>
-                <li>FREE LUNCH & SNACKS</li>
+                <li> - All Government Mandated Benefits</li>
+                <li>- 13th Month Pay</li>
+                <li>- FREE LUNCH & SNACKS</li>
               </ul>
               <div className="form">
                 <h2>Application Form</h2>
@@ -282,7 +293,7 @@ const JobComponent = ({ currentRoute }) => {
           </div>
           <div className="modal-container">
             <input type="checkbox" className="modal-checkbox" id="costumah" />
-            <label htmlFor="ccostumah" className="modal-overlay"></label>
+            <label htmlFor="costumah" className="modal-overlay"></label>
             <div className="modal-content">
               <div className="content-modal">
                 <label htmlFor="costumah" className="modal-close">
@@ -291,8 +302,108 @@ const JobComponent = ({ currentRoute }) => {
                 <h3 className="modal-title"> CUSTOMER SERVICE SUPPORT</h3>
                 <h4>Description</h4>
                 <p>
-                  As our team is getting bigger, BSS PH is now looking htmlFor
+                  As our team is getting bigger, BSS PH is now looking for
                   CUSTOMER SERVICE SUPPORT.
+                </p>
+                <h4>Requirements</h4>
+                <ul>
+                  <li>
+                    - Fresh Graduates are welcome to apply, applicant with at
+                    least 6 months of experience is a plus
+                  </li>
+                  <li>
+                    - Proficiency in Microsoft Office and customer service
+                    software.
+                  </li>
+                  <li>- Outstanding written and verbal communication.</li>
+                  <li>- Excellent and interpersonal skills</li>
+                  <li>- With excellent knowledge in gaming industry.</li>
+                  <li>- Ability to understand and follow instructions.</li>
+                  <li>
+                    - Ensuring that customers are satisfied with products or
+                    services.
+                  </li>
+                  <li>
+                    - Following up with clients or customers to check that
+                    they’re still satisfied with any purchases.
+                  </li>
+                  <li>- Escalating queries and concerns</li>
+                  <li>
+                    - Determining the quickest, most effective ways to answer a
+                    client’s or customer’s questions
+                  </li>
+                  <li>
+                    - Determining the quickest, most effective ways to answer a
+                    client’s or customer’s questions
+                  </li>
+                  <li>
+                    - Working with a team of CSRs and other departments to find
+                    appropriate solutions
+                  </li>
+                  <li>- Willing to work in BGC, Taguig</li>
+                  <li>
+                    - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                  </li>
+                  <li>- Must be FULLY VACINATED</li>
+                </ul>
+                <h4>Perks</h4>
+                <ul>
+                  <li>- All Government Mandated Benefits</li>
+                  <li>- 13th Month Pay</li>
+                  <li>- FREE LUNCH & SNACKS</li>
+                </ul>
+                <div className="form">
+                  <h2>Application Form</h2>
+                  <form className="apply-form" onSubmit={sendEmail}>
+                    <label htmlFor="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your awesome name..."
+                      required
+                    />
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your Email..."
+                      required
+                    />
+                    <label htmlFor="number">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="number"
+                      name="number"
+                      placeholder="+63 912 345 6789"
+                      required
+                    />
+                    <label htmlFor="file">Upload your CV</label>
+                    <input type="file" name="file" id="file" />
+                    <ReCaptchaV2
+                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      onChange={handleToken}
+                    />
+                    <button type="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="modal-container">
+            <input type="checkbox" className="modal-checkbox" id="manager" />
+            <label htmlFor="manager" className="modal-overlay"></label>
+            <div className="modal-content">
+              <div className="content-modal">
+                <label htmlFor="manager" className="modal-close">
+                  &times;
+                </label>
+                <h3 className="modal-title"> CUSTOMER SERVICE MANAGER.</h3>
+                <h4>Description</h4>
+                <p>
+                  As our team is getting bigger, BSS PH is now looking for
+                  CUSTOMER SERVICE MANAGER.
                 </p>
                 <h4>Requirements</h4>
                 <ul>
@@ -301,45 +412,50 @@ const JobComponent = ({ currentRoute }) => {
                     least 6 months of experience is a plus
                   </li>
                   <li>
-                    Proficiency in Microsoft Office and customer service
+                    - Must have a customer service skill for at least 3 years.
+                  </li>
+                  <li>
+                    - Proficiency in Microsoft Office and customer service
                     software.
                   </li>
-                  <li>Outstanding written and verbal communication.</li>
-                  <li>Excellent and interpersonal skills</li>
-                  <li>With excellent knowledge in gaming industry.</li>
-                  <li>Ability to understand and follow instructions.</li>
                   <li>
-                    Ensuring that customers are satisfied with products or
-                    services.
+                    - Proficiency in Microsoft Office and customer service
+                    software.
+                  </li>
+                  <li>- Outstanding written and verbal communication.</li>
+                  <li>- Good understanding of management practices.</li>
+                  <li>- Excellent and interpersonal skills.</li>
+                  <li>- With excellent knowledge in gaming industry.</li>
+                  <li>
+                    - Supervising the daily operations of the customer service
+                    department
+                  </li>
+                  <li>- Creating a reliable customer loyalty program</li>
+                  <li>
+                    - Setting customer service goals for team members and
+                    helping them reach those goals
                   </li>
                   <li>
-                    Following up with clients or customers to check that they’re
-                    still satisfied with any purchases.
+                    - Interacting with customers and handling customer queries
+                    and complaints in a timely manner
                   </li>
-                  <li>Escalating queries and concerns</li>
+                  <li>- Maintaining relationships with profitable customers</li>
+                  <li>- Making weekly and monthly reports and surveys</li>
                   <li>
-                    Determining the quickest, most effective ways to answer a
-                    client’s or customer’s questions
+                    - Staying current on the latest industry trends and
+                    techniques
                   </li>
+                  <li>- Willing to work in BGC, Taguig</li>
                   <li>
-                    Determining the quickest, most effective ways to answer a
-                    client’s or customer’s questions
+                    - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
                   </li>
-                  <li>
-                    Working with a team of CSRs and other departments to find
-                    appropriate solutions
-                  </li>
-                  <li>Willing to work in BGC, Taguig</li>
-                  <li>
-                    Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
-                  </li>
-                  <li>Must be FULLY VACINATED</li>
+                  <li>- Must be FULLY VACINATED</li>
                 </ul>
                 <h4>Perks</h4>
                 <ul>
-                  <li>All Government Mandated Benefits</li>
-                  <li>13th Month Pay</li>
-                  <li>FREE LUNCH & SNACKS</li>
+                  <li>- All Government Mandated Benefits</li>
+                  <li>- 13th Month Pay</li>
+                  <li>- FREE LUNCH & SNACKS</li>
                 </ul>
                 <div className="form">
                   <h2>Application Form</h2>
@@ -397,34 +513,34 @@ const JobComponent = ({ currentRoute }) => {
               <h4>Requirements</h4>
               <ul>
                 <li>
-                  Must be knowledgeable in online video games. (Not related to
+                 - Must be knowledgeable in online video games. (Not related to
                   e-casino or POGO games)
                 </li>
                 <li>
-                  Must be knowledgeable in different game genres such as FPS,
+                  - Must be knowledgeable in different game genres such as FPS,
                   MMORPG, and Others
                 </li>
-                <li>Must be knowledgeable in NFT games.</li>
+                <li>- Must be knowledgeable in NFT games.</li>
                 <li>
-                  Knowledgeable with PCs and mobile devices [Hardware &
+                  - Knowledgeable with PCs and mobile devices [Hardware &
                   Components]
                 </li>
-                <li>Can work ASAP.</li>
-                <li>With intermediate to advanced English proficiency.</li>
-                <li>Computer literate and tech savvy.</li>
-                <li>Bachelor's Degree (Any Field)</li>
-                <li>Proficient in using MS office applications</li>
-                <li>Willing to work in BGC, Taguig</li>
+                <li>- Can work ASAP.</li>
+                <li>- With intermediate to advanced English proficiency.</li>
+                <li>- Computer literate and tech savvy.</li>
+                <li>- Bachelor's Degree (Any Field)</li>
+                <li>- Proficient in using MS office applications</li>
+                <li>- Willing to work in BGC, Taguig</li>
                 <li>
-                  Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                 - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
                 </li>
-                <li>Must be FULLY VACINATED</li>
+                <li>- Must be FULLY VACINATED</li>
               </ul>
               <h4>Perks</h4>
               <ul>
-                <li> All Government Mandated Benefits</li>
-                <li>13th Month Pay</li>
-                <li>FREE LUNCH & SNACKS</li>
+                <li>- All Government Mandated Benefits</li>
+                <li>- 13th Month Pay</li>
+                <li>- FREE LUNCH & SNACKS</li>
               </ul>
               <div className="form">
                 <h2>Application Form</h2>

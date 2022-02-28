@@ -46,13 +46,16 @@ hr {
   width: 20%;
   margin: 0 auto;
 }
-
+.col-md-10 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
 ul.job-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 ul.job-list > li.job-preview {
   background: #fff;
   border: 1px solid #d7e2e9;
@@ -62,7 +65,7 @@ ul.job-list > li.job-preview {
   padding: 1.5rem 2rem;
   margin-bottom: 1rem;
   float: left;
-  width: 100%;
+  width: 90%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
