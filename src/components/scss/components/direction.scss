@@ -51,7 +51,8 @@
       position: absolute;
       z-index: -1;
     }
-    h1, h2 {
+    h1,
+    h2 {
       margin: 10% auto;
     }
     .direction-navigation {
@@ -136,7 +137,6 @@
   }
 }
 //   Footer
-
 
 .footer-distributed-direction {
   background: rgb(68, 68, 68);
@@ -436,26 +436,33 @@
   .direction {
     .map {
       display: block;
+      top: 15em;
+      left: 0;
+      width: 100%;
+      z-index: 0;
       img {
         width: 100%;
         height: 40%;
-        left: 30%;
-        top: 16%;
       }
     }
     .description-map {
-      top: 10%;
+      top: 5em;
       left: 0;
       right: 0;
       height: 17%;
       width: 100%;
+      &::before {
+        width: 78%;
+      }
       .direction-navigation {
         ul {
+          width: 100%;
           li {
-            width: 50%;
+            width: 100%;
             a {
+              width: 100%;
               font-size: 12px;
-              padding: 8px 9px;
+              padding: 8px 6px;
             }
           }
         }
@@ -470,21 +477,53 @@
       }
     }
     .for-direction {
-      width: 90%;
+      margin-top: 170%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
       .box-direction {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        .direction-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+        ul {
+          li {
+            width: 100%;
+          }
+        }
         h3 {
           width: 100%;
+          text-align: center;
         }
         p {
           width: 100%;
+          text-align: center;
         }
         span {
           width: 100%;
+          text-align: center;
         }
         ul li {
           width: 100%;
+          text-align: center;
+        }
+        h2 {
+          width: 100%;
+        }
+        img {
+          width: 50%;
         }
       }
     }
@@ -507,5 +546,4 @@
       }
     }
   }
-
 }
