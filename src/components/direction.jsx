@@ -93,7 +93,7 @@ const DirectionComponent = ({ currentRoute }) => {
                 {" "}
                 <strong>From NAIA Terminal 1,2, and 3</strong>
               </span>
-              <p>
+              <p className="direction-stuff">
                 Travel time from NAIA Terminal 1, 2 and 3 to Black Spot Studio
                 Philippines is about 1 hr 30 minutes to 2hrs depending on
                 traffic.{" "}
@@ -143,7 +143,7 @@ const DirectionComponent = ({ currentRoute }) => {
                 {" "}
                 <strong>From Ayala MRT Station</strong>
               </span>
-              <p>
+              <p className="direction-stuff">
                 Travel time from Ayala MRT Station to Black Spot Studio
                 Philippines is about 15 to 20 minutes.{" "}
               </p>
@@ -208,7 +208,7 @@ const DirectionComponent = ({ currentRoute }) => {
               <h2>
                 VIA JEEP <br />
               </h2>
-              <p>
+              <p className="direction-stuff">
                 Travel time from Starmall Alabang to Black Spot Studio
                 Philippines is about 1 hr to 1 hr and 20 minutes
               </p>
@@ -244,14 +244,14 @@ const DirectionComponent = ({ currentRoute }) => {
                 {" "}
                 <strong>From SM Aura</strong>
               </span>
-              <p>
+              <p className="direction-stuff">
                 Head on Mckinley Parkway and walk ahead thru 26th Street corner
                 11th Street.
               </p>
               <h2 id="grab">
                 <strong>Via Grab</strong>
               </h2>
-              <p>
+              <p className="direction-stuff">
                 Just pin “THE FINANCE CENTER” and just walk ahead to Infinity
                 Corporate Building.
               </p>
