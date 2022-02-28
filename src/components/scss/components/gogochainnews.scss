@@ -1,274 +1,286 @@
 .gogochainnews {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/src/images/Gogo Chain Desktop 3.png");
+  margin-top: 2%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.something-wrapper {
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  #mongis,
+  #nyangi {
+    position: absolute;
+  }
+  #mongis {
+    width: 30%;
+    top: 70%;
+    right: -15%;
+  }
+  #nyangi {
+    top: 0;
+    left: -15%;
+    width: 30%;
+  }
+  .something-title {
+    text-align: center;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.925);
+    height: 100%;
+    padding-bottom: 2%;
     width: 100%;
-    height: 100vh;
-    background-image: url("/src/images/Gogo Chain Desktop 3.png");
-    margin-top: 2%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%; 
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .something-wrapper {
-    position: relative;
-    margin-top: 5%;
+  .something-news-wrapper {
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    height: 50%;
-    justify-content: center;
-    #mongis,
-    #nyangi {
-      position: absolute;
-    }
-    #mongis {
-      width: 30%;
-      top: 70%;
-      right: -15%;
-    }
-    #nyangi {
-      top: 0;
-      left: -15%;
-      width: 30%;
-    }
-    .something-title {
-      text-align: center;
-      background-color: black;
-      color: rgba(255, 255, 255, 0.925);
+    ul.newsz-list {
+      margin: 0;
+      list-style: none;
       height: 100%;
-      padding-bottom: 2%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .something-news-wrapper {
-      width: 100%;
-      height: 50%;
-      display: flex;
-      flex-direction: column;
-      ul.newsz-list {
-        margin: 0;
-        list-style: none;
-        height: 100%;
-        max-height: 100%;
-        width: 1000px;
-        label li {
-          height: 100px;
-          border-bottom: 1px solid black;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-      }
-      li.news-preview {
-        background-color: white;
-      }
-  
-      ul.newsz-list > li.news-preview {
-        background-color: white;
-        border: 1px solid #d7e2e9;
-        -webkit-border-radius: 0.4rem;
-        -moz-border-radius: 0.4rem;
-        border-radius: 0.4rem;
-        float: left;
-        width: 100%;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
-        margin: 0 auto;
-        height: 100%;
-      }
-  
-      ul.newsz-list > li.news-preview:hover {
-        cursor: pointer;
-        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-        -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-      }
-  
-      .company {
-        color: #96a4b1;
-      }
-  
-      .news-preview .btn {
-        margin-top: 1.1rem;
-      }
-  
-      .btn-apply {
-        text-transform: uppercase;
-        font-size: 0.875rem;
-        font-weight: 800;
-        letter-spacing: 1px;
-        background-color: transparent;
-        color: #393a5f;
-        border: 2px solid #393a5f;
-        padding: 0.6rem 2rem;
-        -webkit-border-radius: 2rem;
-        -moz-border-radius: 2rem;
-        border-radius: 2rem;
-      }
-  
-      .btn-apply:hover {
-        background-color: #393a5f;
-        color: #fff;
-        border: 2px solid #393a5f;
-      }
-  
-      @media (max-width: 575px) {
-        .job-preview .content {
-          width: 100%;
-        }
-      }
-  
-      @media only screen and (min-width: 992px) {
-        #navbar-main {
-          background: transparent;
-          border-bottom: 1px solid transparent;
-        }
-  
-        #navbar-main .navbar-brand {
-          color: #fff;
-          opacity: 0.8;
-          padding: 0.95rem 1.2rem;
-        }
-  
-        #navbar-main .navbar-brand:hover,
-        #navbar-main .navbar-brand:focus {
-          opacity: 1;
-        }
-  
-        #navbar-main .navbar-nav > li.nav-item > a {
-          color: #fff;
-          opacity: 0.8;
-          padding: 0.95rem 1.2rem;
-        }
-  
-        #navbar-main .navbar-nav > li.nav-item > a:hover,
-        #navbar-main .navbar-nav > li.nav-item > a:focus {
-          opacity: 1;
-        }
+      max-height: 100%;
+      width: 1000px;
+      label li {
+        height: 100px;
+        border-bottom: 1px solid black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
-  }
-  .modal-checkbox {
-    display: none;
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    border-radius: 0px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    position: fixed;
-    display: none;
-    top: 0;
-    left: 0;
-    border-radius: 0;
-    box-shadow: none;
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    padding: 5em 5em 5em 5em;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  
-  .modal-close {
-    position: absolute;
-    top: 0.25em;
-    right: 0.5em;
-    font-size: 2em;
-    line-height: 1;
-    font-weight: 300;
-    color: #666;
-    cursor: pointer;
-  }
-  
-  .modal-title {
-    font-weight: 700;
-    margin: 0 0 0.75em 0;
-  }
-  
-  .modal-checkbox:checked ~ .modal-overlay,
-  .modal-checkbox:checked ~ .modal-content {
-    display: block;
-    z-index: 1000;
-  }
-  
-  @media (min-width: 600px) {
-    .modal-content {
-      max-width: 600px;
-      top: 10%;
-      right: 0;
+    li.news-preview {
+      background-color: white;
+    }
+
+    ul.newsz-list > li.news-preview {
+      background-color: white;
+      border: 1px solid #d7e2e9;
+      -webkit-border-radius: 0.4rem;
+      -moz-border-radius: 0.4rem;
+      border-radius: 0.4rem;
+      float: left;
+      width: 100%;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
       margin: 0 auto;
-      height: auto;
-      width: auto;
-      max-height: 80%;
+      height: 100%;
+    }
+
+    ul.newsz-list > li.news-preview:hover {
+      cursor: pointer;
+      -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .company {
+      color: #96a4b1;
+    }
+
+    .news-preview .btn {
+      margin-top: 1.1rem;
+    }
+
+    .btn-apply {
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background-color: transparent;
+      color: #393a5f;
+      border: 2px solid #393a5f;
+      padding: 0.6rem 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      border-radius: 2rem;
+    }
+
+    .btn-apply:hover {
+      background-color: #393a5f;
+      color: #fff;
+      border: 2px solid #393a5f;
+    }
+
+    @media (max-width: 575px) {
+      .job-preview .content {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      #navbar-main {
+        background: transparent;
+        border-bottom: 1px solid transparent;
+      }
+
+      #navbar-main .navbar-brand {
+        color: #fff;
+        opacity: 0.8;
+        padding: 0.95rem 1.2rem;
+      }
+
+      #navbar-main .navbar-brand:hover,
+      #navbar-main .navbar-brand:focus {
+        opacity: 1;
+      }
+
+      #navbar-main .navbar-nav > li.nav-item > a {
+        color: #fff;
+        opacity: 0.8;
+        padding: 0.95rem 1.2rem;
+      }
+
+      #navbar-main .navbar-nav > li.nav-item > a:hover,
+      #navbar-main .navbar-nav > li.nav-item > a:focus {
+        opacity: 1;
+      }
     }
   }
-  
-  label {
-    cursor: pointer;
+}
+.modal-checkbox {
+  display: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 0px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  box-shadow: none;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 5em 5em 5em 5em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.25em;
+  right: 0.5em;
+  font-size: 2em;
+  line-height: 1;
+  font-weight: 300;
+  color: #666;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-weight: 700;
+  margin: 0 0 0.75em 0;
+}
+
+.modal-checkbox:checked ~ .modal-overlay,
+.modal-checkbox:checked ~ .modal-content {
+  display: block;
+  z-index: 1000;
+}
+
+@media (min-width: 600px) {
+  .modal-content {
+    max-width: 600px;
+    top: 10%;
+    right: 0;
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+    max-height: 80%;
   }
-  
-  [data-tooltip][tabindex="0"] {
-    display: inline-block;
-    position: relative;
-    color: #1c1d1d;
-    cursor: text;
-  }
-  [data-tooltip][tabindex="0"]::after {
-    display: none;
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    padding: 2px 6px;
-    transform: translate(-50%, 100%);
-    border: 1px solid #fff;
-    border-radius: 2px;
-    white-space: pre-line;
-    color: #1c1d1d;
-    white-space: nowrap;
-    background-color: #fff;
-    pointer-events: none;
-    content: attr(data-tooltip);
-  }
-  [data-tooltip][tabindex="0"]:focus::after,
-  [data-tooltip][tabindex="0"]:focus::before,
-  [data-tooltip][tabindex="0"]:hover::after,
-  [data-tooltip][tabindex="0"]:hover::before {
-    display: block;
-  }
-  @media only screen and (max-width: 500px) {
-    .gogochainnews {
-      background-image: url("/src/images/Gogo Chain CP 3.png");
-      background-position: center;
-      height: 120vh;
-      overflow-x: hidden;
-      .something-wrapper {
-        margin-top: 15%;
+}
+
+label {
+  cursor: pointer;
+}
+
+[data-tooltip][tabindex="0"] {
+  display: inline-block;
+  position: relative;
+  color: #1c1d1d;
+  cursor: text;
+}
+[data-tooltip][tabindex="0"]::after {
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  padding: 2px 6px;
+  transform: translate(-50%, 100%);
+  border: 1px solid #fff;
+  border-radius: 2px;
+  white-space: pre-line;
+  color: #1c1d1d;
+  white-space: nowrap;
+  background-color: #fff;
+  pointer-events: none;
+  content: attr(data-tooltip);
+}
+[data-tooltip][tabindex="0"]:focus::after,
+[data-tooltip][tabindex="0"]:focus::before,
+[data-tooltip][tabindex="0"]:hover::after,
+[data-tooltip][tabindex="0"]:hover::before {
+  display: block;
+}
+@media only screen and (max-width: 500px) {
+  .gogochainnews {
+    background-image: url("/src/images/Gogo Chain CP 3.png");
+    background-position: center;
+    height: 120vh;
+    overflow-x: hidden;
+    .something-wrapper {
+      margin-top: 55%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .something-news-wrapper {
+        position: relative;
+        left: -15%;
+        #mongis {
+          top: 70%;
+          right: -20%;
+        }
+        #nyangi {
+          top: 0;
+          left: -20%;
+        }
+      }
+      .labels {
+        height: 100px;
         width: 100%;
-        .labels {
-          height: 100px;
+        border-bottom: 1px solid black;
+        text-align: center;
+        li {
           width: 50%;
-          margin: 0 auto;
-          border-bottom: 1px solid black;
-          text-align: center;
-          li {
-            width: 50%;
-            margin: 0 auto;
-          }
+          left: 0;
         }
       }
     }
   }
-  
+}

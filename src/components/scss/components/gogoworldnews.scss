@@ -260,17 +260,30 @@ label {
     height: 120vh;
     overflow-x: hidden;
     .something-wrapper {
-      margin-top: 15%;
+      margin-top: 50%;
+      top: 0;
+      left: 0;
       width: 100%;
+      .something-news-wrapper {
+        position: relative;
+        left: -15%;
+        #mongis {
+          top: 70%;
+          right: -20%;
+        }
+        #nyangi {
+          top: 0;
+          left: -20%;
+        }
+      }
       .labels {
         height: 100px;
-        width: 50%;
-        margin: 0 auto;
+        width: 100%;
         border-bottom: 1px solid black;
         text-align: center;
         li {
           width: 50%;
-          margin: 0 auto;
+          left: 0;
         }
       }
     }

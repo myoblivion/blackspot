@@ -250,13 +250,22 @@ label {
     height: 120vh;
     overflow-x: hidden;
     .something-wrapper {
-      margin-top: 15%;
+      margin-top: 20%;
       top: 0;
       left: 0;
       width: 100%;
       .something-news-wrapper {
-      position: relative;
+        position: relative;
         left: -15%;
+        .adoginacar {
+          position: absolute;
+          top: 170%;
+          right: -60%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
       .labels {
         height: 100px;
