@@ -257,21 +257,22 @@ label {
     background-position: center;
     height: 120vh;
     overflow-x: hidden;
+    margin-top: 9%;
     .something-wrapper {
-      margin-top: 50%;
+      margin-top: 35%;
       top: 0;
       left: 0;
       width: 100%;
       .something-news-wrapper {
         position: relative;
         left: -15%;
-        #mongis {
+        #mongi {
           top: 70%;
           right: -20%;
         }
-        #nyangi {
+        #jays {
           top: 0;
-          left: -20%;
+          left: -25%;
         }
       }
       .labels {
