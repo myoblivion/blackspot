@@ -77,7 +77,6 @@ const DirectionComponent = ({ currentRoute }) => {
             </ul>
           </div>
         </section>
-        <section className="buttons-nav"></section>
       </section>
       <section className="for-direction">
         <div className="wrapper-directions" id="bus">

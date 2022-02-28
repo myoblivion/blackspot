@@ -3,7 +3,7 @@ import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import Mongi from "../images/characters/Mongi.png";
-import Nyangi from "../images/characters/Nyangi.png"
+import Nyangi from "../images/characters/Nyangi.png";
 
 const GoGoChainNewsComponent = ({ currentRoute }) => {
   // Title
@@ -25,9 +25,7 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Announcement</h4>
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -36,9 +34,7 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Updates</h4>
 
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -46,9 +42,7 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Game Guide</h4>
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -57,9 +51,7 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Markets</h4>
 
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -68,11 +60,16 @@ const GoGoChainNewsComponent = ({ currentRoute }) => {
             </div>
           </div>
         </div>
-        <img src={Mongi} alt="pew pew" id="mongis"/>
-        <img src={Nyangi} alt="pewpew" id="nyangi"/>
+        <img src={Mongi} alt="pew pew" id="mongis" />
+        <img src={Nyangi} alt="pewpew" id="nyangi" />
       </section>
       <div className="modal-container">
-        <input type="checkbox" className="modal-checkbox" id="fullship" />
+        <input
+          type="checkbox"
+          className="modal-checkbox"
+          id="fullship"
+          disabled
+        />
         <label htmlFor="fullship" className="modal-overlay"></label>
         <div className="modal-content">
           <label htmlFor="fullship" className="modal-close">

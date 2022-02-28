@@ -25,7 +25,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Announcement</h4>
                         <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
+                          Updating Soon
                         </h5>
                       </div>
                     </li>
@@ -36,7 +36,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                         <h4>Updates</h4>
 
                         <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
+                          Updating Soon
                         </h5>
                       </div>
                     </li>
@@ -46,7 +46,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Game Guide</h4>
                         <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
+                          Updating Soon
                         </h5>
                       </div>
                     </li>
@@ -57,7 +57,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                         <h4>Markets</h4>
 
                         <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
+                          Updating Soon
                         </h5>
                       </div>
                     </li>
@@ -67,16 +67,12 @@ const ScionNewsComponent = ({ currentRoute }) => {
             </div>
           </div>
         </div>
-        <div className="girl-1">
-          <img src={risa} alt="aa" />
-        </div>
-        <div className="girl-2">
-          <img src={grace} alt="aa" />
-        </div>
+          <img src={risa} alt="aa" id="girl-1" />
+          <img src={grace} alt="aa" id="girl-2" />
       </section>
 
       <div className="modal-container">
-        <input type="checkbox" className="modal-checkbox" id="fullship" />
+        <input type="checkbox" className="modal-checkbox" id="fullship" disabled/>
         <label htmlFor="fullship" className="modal-overlay"></label>
         <div className="modal-content">
           <label htmlFor="fullship" className="modal-close">

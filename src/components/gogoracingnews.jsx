@@ -24,9 +24,7 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Announcement</h4>
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -35,9 +33,7 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Updates</h4>
 
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -45,9 +41,7 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Game Guide</h4>
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -56,9 +50,7 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Markets</h4>
 
-                        <h5 className="company">
-                          Lorem, ipsum dolor sit amet consectetur.
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -72,7 +64,12 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
         </div>
       </section>
       <div className="modal-container">
-        <input type="checkbox" className="modal-checkbox" id="fullship" />
+        <input
+          type="checkbox"
+          className="modal-checkbox"
+          id="fullship"
+          disabled
+        />
         <label htmlFor="fullship" className="modal-overlay"></label>
         <div className="modal-content">
           <label htmlFor="fullship" className="modal-close">

@@ -1,42 +1,36 @@
 .something {
   width: 100%;
   height: 100vh;
-  background-image: url("/src/images/scionnews.png");
+  background-image: url("/src/images/SF desktop 3.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-top: 2%;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  margin-top: 3%;
 }
 
 .something-wrapper {
-  margin-top: 5%;
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 100%;
   justify-content: center;
   position: relative;
-  .girl-1,
-  .girl-2 {
+  #girl-1,
+  #girl-2 {
     position: absolute;
   }
-  .girl-1 {
+  #girl-1 {
     left: -5%;
-    top: 60%;
-    img {
-      width: 30%;
-    }
+    top: 40%;
+    width: 20%;
   }
-  .girl-2 {
-    right: -45%;
-    top: 60%;
-    img {
-      width: 30%;
-    }
-}
+  #girl-2 {
+    right: -5%;
+    top: 40%;
+    width: 20%;
+  }
   .something-title {
     text-align: center;
     background-color: black;
@@ -66,6 +60,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        cursor: not-allowed;
       }
     }
     li.news-preview {
@@ -222,9 +217,7 @@
   }
 }
 
-label {
-  cursor: pointer;
-}
+
 
 [data-tooltip][tabindex="0"] {
   display: inline-block;
