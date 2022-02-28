@@ -259,8 +259,8 @@ const DirectionComponent = ({ currentRoute }) => {
           </div>
         </div>
       </section>
-      <div className="section">
-        <footer className="footer-distributed">
+      <div className="footer-section">
+        <footer className="footer-distributed-direction">
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
