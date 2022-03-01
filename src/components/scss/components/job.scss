@@ -328,4 +328,12 @@ ul.job-list > li.job-preview:hover {
     bottom: 0;
     margin: 25% auto;
   }
+  .job {
+    .bootons {
+      #up {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
 }

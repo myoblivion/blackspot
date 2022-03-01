@@ -86,10 +86,9 @@ const NewsComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <a href="#">About Us</a>
-
-              <a href="#">Privacy Policy</a>
-              <a href="#">Career</a>
+            <Link to="/about">About Us</Link>
+              <Link to="/privacy">Privacy & Policy</Link>
+              <Link to="/job">Career</Link>
 
               <HashLink smooth to="/#contact">
                 {" "}

@@ -145,10 +145,12 @@ const JobComponent = ({ currentRoute }) => {
                     - Conceptualize over all look and feel of marketing
                     collaterals
                   </li>
-                  <li>- Develops and edits graphics, videos and other format</li>
                   <li>
-                    - Work Closely with and offers variety of designs solutions to
-                    the Marketing Department.
+                    - Develops and edits graphics, videos and other format
+                  </li>
+                  <li>
+                    - Work Closely with and offers variety of designs solutions
+                    to the Marketing Department.
                   </li>
                   <li>
                     - Pro-active with deliverables and keeps up with timelines
@@ -513,7 +515,7 @@ const JobComponent = ({ currentRoute }) => {
               <h4>Requirements</h4>
               <ul>
                 <li>
-                 - Must be knowledgeable in online video games. (Not related to
+                  - Must be knowledgeable in online video games. (Not related to
                   e-casino or POGO games)
                 </li>
                 <li>
@@ -532,7 +534,7 @@ const JobComponent = ({ currentRoute }) => {
                 <li>- Proficient in using MS office applications</li>
                 <li>- Willing to work in BGC, Taguig</li>
                 <li>
-                 - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
+                  - Willing to work from Monday to Saturday [8:00 AM - 5:00PM]
                 </li>
                 <li>- Must be FULLY VACINATED</li>
               </ul>
@@ -587,10 +589,9 @@ const JobComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <a href="#">About Us</a>
-
-              <a href="#">Privacy Policy</a>
-              <a href="#">Career</a>
+              <Link to="/about">About Us</Link>
+              <Link to="/privacy">Privacy & Policy</Link>
+              <Link to="/job">Career</Link>
 
               <HashLink smooth to="/#contact">
                 {" "}

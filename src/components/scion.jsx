@@ -101,16 +101,24 @@ const ScionComponent = ({ currentRoute }) => {
         <div className="scion-links">
           <ul>
             <li>
-              <a href="https://www.facebook.com/ScionFistPhilippines/"><FaFacebook /></a>
+              <a href="https://www.facebook.com/ScionFistPhilippines/">
+                <FaFacebook />
+              </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/scionfistphilippinesofficial/?hl=en"><FaInstagram /></a>
+              <a href="https://www.instagram.com/scionfistphilippinesofficial/?hl=en">
+                <FaInstagram />
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/ScionFistPH"><FaTwitter /></a>
+              <a href="https://twitter.com/ScionFistPH">
+                <FaTwitter />
+              </a>
             </li>
             <li>
-              <a href="https://www.reddit.com/r/ScionFistPHofficial/"><FaReddit /></a>
+              <a href="https://www.reddit.com/r/ScionFistPHofficial/">
+                <FaReddit />
+              </a>
             </li>
           </ul>
         </div>
@@ -466,10 +474,9 @@ const ScionComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <a href="#">About Us</a>
-
-              <a href="#">Privacy Policy</a>
-              <a href="#">Career</a>
+              <Link to="/about">About Us</Link>
+              <Link to="/privacy">Privacy & Policy</Link>
+              <Link to="/job">Career</Link>
 
               <HashLink smooth to="/#contact">
                 {" "}

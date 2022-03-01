@@ -403,28 +403,9 @@ const HomeComponent = ({ currentRoute }) => {
             <div className="footer-left">
               <img src={icono} alt="" />
               <p className="footer-links">
-                <Link
-                  to="/about"
-                  style={
-                    currentRoute === "about"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
-                >
-                  About Us
-                </Link>
-
+                <Link to="/about">About Us</Link>
                 <Link to="/privacy">Privacy & Policy</Link>
-                <Link
-                  to="/job"
-                  style={
-                    currentRoute === "job"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
-                >
-                  Career
-                </Link>
+                <Link to="/job">Career</Link>
 
                 <HashLink smooth to="/#contact">
                   {" "}

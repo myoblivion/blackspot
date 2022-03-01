@@ -179,8 +179,8 @@ const AboutComponent = ({ currentRoute }) => {
             <img src={ggnft} alt="" />
           </div>
           <p>
-            Because all Black Spot Studio Philippines games have gogo coins, save
-            it and it may turn into a real one!
+            Because all Black Spot Studio Philippines games have gogo coins,
+            save it and it may turn into a real one!
           </p>
         </div>
       </section>
@@ -261,8 +261,7 @@ const AboutComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <a href="#">About Us</a>
-
+              <Link to="/about">About Us</Link>
               <Link to="/privacy">Privacy & Policy</Link>
               <Link to="/job">Career</Link>
 

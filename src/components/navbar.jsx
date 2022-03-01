@@ -5,8 +5,17 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
-const NavbarComponent = ({ currentRoute }) => {
+const NavbarComponent = ({ currentRoute, events }) => {
+  let [myCheckbox, setMyCheckbox] = useState(false);
 
+  let menuRef = useRef();
+  useEffect(() => {
+    document.addEventListener("mousedown", (handleClick) => {
+      if (!menuRef.current.contains(handleClick.target)) {
+        setMyCheckbox(false);
+      }
+    });
+  });
 
   return (
     <header className="navbar active">
@@ -16,11 +25,18 @@ const NavbarComponent = ({ currentRoute }) => {
         </Link>
       </div>
 
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <input
+        className="menu-btn"
+        type="checkbox"
+        id="menu-btn"
+        value={myCheckbox}
+        checked={myCheckbox}
+        onChange={(_e) => setMyCheckbox((prev) => !prev)}
+      />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
-      <ul className="menu">
+      <ul ref={menuRef} className="menu">
         <li>
           <Link to="/" className="nav-item a">
             Home

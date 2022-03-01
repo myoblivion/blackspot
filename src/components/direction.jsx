@@ -214,7 +214,7 @@ const DirectionComponent = ({ currentRoute }) => {
               <ul>
                 <li>
                   <strong>From Starmall Alabang</strong> <br />
-                   Take a jeepney going to Tenement.
+                  Take a jeepney going to Tenement.
                 </li>
                 <li>
                   <strong>Tenement</strong> <br />
@@ -263,10 +263,9 @@ const DirectionComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <a href="#">About Us</a>
-
-              <a href="#">Privacy Policy</a>
-              <a href="#">Career</a>
+              <Link to="/about">About Us</Link>
+              <Link to="/privacy">Privacy & Policy</Link>
+              <Link to="/job">Career</Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
