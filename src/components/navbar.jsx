@@ -1,38 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
 import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
+
 const NavbarComponent = ({ currentRoute }) => {
+  
   return (
     <header className="navbar active">
       <div className="logo">
-        <Link
-          to="/"
-          style={
-            currentRoute === "home"
-              ? { borderBottom: "2px solid yellow" }
-              : { borderBottom: "2px solid transparent" }
-          }
-        >
+        <Link to="/">
           <img src={icono} alt="Black Spot Studio" className="main-logo" />
         </Link>
       </div>
+
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
       <ul className="menu">
         <li>
-          <Link
-            to="/"
-            id="homes"
-            style={
-              currentRoute === "home"
-                ? { borderBottom: "2px solid yellow" }
-                : { borderBottom: "2px solid transparent" }
-            }
-          >
+          <Link to="/" className="nav-item a">
             Home
           </Link>
         </li>
@@ -42,50 +31,22 @@ const NavbarComponent = ({ currentRoute }) => {
           </p>
           <ul className="tabs" id="menuz">
             <li>
-              <Link
-                to="/scion"
-                style={
-                  currentRoute === "scion"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/scion" className="nav-item a">
                 Scion Fist
               </Link>
             </li>
             <li>
-              <Link
-                to="/gogoworld"
-                style={
-                  currentRoute === "gogoworld"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/gogoworld" className="nav-item a">
                 GoGo World
               </Link>
             </li>
             <li>
-              <Link
-                to="/gogochain"
-                style={
-                  currentRoute === "gogochain"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/gogochain" className="nav-item a">
                 GoGo Chain
               </Link>
             </li>
             <li>
-              <Link
-                to="/gogoracing"
-                style={
-                  currentRoute === "gogoracing"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/gogoracing" className="nav-item a">
                 GoGo Racing
               </Link>
             </li>
@@ -97,50 +58,22 @@ const NavbarComponent = ({ currentRoute }) => {
           </p>
           <ul className="tab" id="menuz">
             <li>
-              <Link
-                to="/about"
-                style={
-                  currentRoute === "about"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/about" className="nav-item a">
                 About Us
               </Link>
             </li>
             <li>
-              <Link
-                to="/direction"
-                style={
-                  currentRoute === "direction"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/direction" className="nav-item a">
                 Directions
               </Link>
             </li>
             <li>
-              <Link
-                to="/job"
-                style={
-                  currentRoute === "job"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/job" className="nav-item a">
                 Careers
               </Link>
             </li>
             <li>
-              <Link
-                to="/news"
-                style={
-                  currentRoute === "news"
-                    ? { borderBottom: "2px solid yellow" }
-                    : { borderBottom: "2px solid transparent" }
-                }
-              >
+              <Link to="/news" className="nav-item a">
                 News & Announcements
               </Link>
             </li>

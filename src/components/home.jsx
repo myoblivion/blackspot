@@ -253,7 +253,7 @@ const HomeComponent = ({ currentRoute }) => {
                       <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube-nocookie.com/embed/3uAqBci_Yog"
+                        src="https://www.youtube.com/embed/pxSzRmCFqL0"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -287,16 +287,58 @@ const HomeComponent = ({ currentRoute }) => {
                   </Link>
                 </div>
                 <div className="slider-image">
-                  <Link
-                    to="/gogoracing"
-                    style={
-                      currentRoute === "gogoracing"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    <img src={game4} alt="Game" />
-                  </Link>
+                  <img src={game4} alt="Game" />
+                  <div className="gamedes">
+                    <div className="logoz">
+                      <div className="icons">
+                        <div className="sccionlogo">
+                          <Link
+                            to="/gogoracing"
+                            style={
+                              currentRoute === "gogoracing"
+                                ? { borderBottom: "2px solid yellow" }
+                                : { borderBottom: "2px solid transparent" }
+                            }
+                          >
+                            <img
+                              src={Gogoracing}
+                              alt="Gogo Racing Logo"
+                              id="gogoracingsz"
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                      <ul className="icon-list">
+                        <li>
+                          <a href="#">
+                            <FaGooglePlay />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <FaAppStore />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <FaWindows />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="video" id="gogoracevid">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/uwW4wjSUgSM"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
                 </div>
               </Slider>
             </div>
@@ -383,8 +425,6 @@ const HomeComponent = ({ currentRoute }) => {
                 >
                   Career
                 </Link>
-
-                
 
                 <HashLink smooth to="/#contact">
                   {" "}

@@ -213,8 +213,8 @@ const DirectionComponent = ({ currentRoute }) => {
               </p>
               <ul>
                 <li>
-                  <strong>Starmall Alabang</strong> <br />
-                  From North Edsa Station, take a jeepney going to Tenement.
+                  <strong>From Starmall Alabang</strong> <br />
+                   Take a jeepney going to Tenement.
                 </li>
                 <li>
                   <strong>Tenement</strong> <br />

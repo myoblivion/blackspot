@@ -156,6 +156,10 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      #gogoracingsz {
+        margin-top: -14px;
+        width: 50%;
+      }
       img {
         margin-top: 20px;
         margin: 0 auto;
@@ -164,6 +168,7 @@ body {
       }
       .gamedes {
         display: block;
+     
         .icon-list {
           display: flex;
           position: absolute;
@@ -197,7 +202,7 @@ body {
           left: 0;
           position: absolute;
         }
-
+        
         .video {
           display: block;
           height: 100%;
@@ -215,7 +220,7 @@ body {
         }
       }
     }
-    #firstgame {
+    .slider-image{
       position: relative;
     }
   }
@@ -1014,7 +1019,8 @@ input[type="radio"] {
     width: 100%;
     margin-bottom: 0;
     &--control {
-      width: 3em;
+      width: 2em;
+      height: 2px;
     }
     &--el {
       &.anim-4parts {

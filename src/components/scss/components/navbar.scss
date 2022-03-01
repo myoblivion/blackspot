@@ -33,7 +33,7 @@ a {
 }
 .navbar li p {
   display: block;
-  padding: 20px 25px;
+  padding: 20px 14px;
   margin: 0;
   color: #ffb808;
   cursor: pointer;
@@ -77,7 +77,7 @@ a {
 .tabs {
   position: absolute;
   list-style: none;
-  min-width: 100px;
+  min-width: 200px;
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
@@ -110,7 +110,6 @@ a {
   display: none;
   margin-top: -5px;
   color: #ffb808;
-  width: 15%;
 }
 li:hover > .tab {
   display: block;
@@ -200,10 +199,18 @@ li:hover > .tabs {
   .navbar li {
     float: left;
   }
+  .navbar li p{
+    padding: 20px 30px;
+  }
   .navbar li a {
     padding: 20px 30px;
   }
   .navbar .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .navbar .menuz {
     clear: none;
     float: right;
     max-height: none;
