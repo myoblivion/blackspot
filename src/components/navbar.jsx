@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
 const NavbarComponent = ({ currentRoute }) => {
-  
+  let [myCheckbox, setMyCheckbox] = useState(false);
   return (
     <header className="navbar active">
       <div className="logo">
@@ -15,7 +15,7 @@ const NavbarComponent = ({ currentRoute }) => {
         </Link>
       </div>
 
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <input className="menu-btn" type="checkbox" id="menu-btn" value={myCheckbox} onChange={(_e) => setMyCheckbox(prev => !prev)} />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
