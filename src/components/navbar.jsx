@@ -36,7 +36,7 @@ const NavbarComponent = ({ currentRoute, events }) => {
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
-      <ul ref={menuRef} className="menu">
+      <ul className="menu">
         <li>
           <Link to="/" className="nav-item a">
             Home
@@ -46,10 +46,15 @@ const NavbarComponent = ({ currentRoute, events }) => {
           <p>
             Games <FaCaretDown />
           </p>
-          <ul className="tabs" id="menuz">
+          <ul className="tabs" id="menuz"  ref={menuRef}>
             <li>
               <Link to="/scion" className="nav-item a">
                 Scion Fist
+              </Link>
+            </li>
+            <li>
+              <Link to="/gogoracing" className="nav-item a">
+                GoGo Racing
               </Link>
             </li>
             <li>
@@ -60,11 +65,6 @@ const NavbarComponent = ({ currentRoute, events }) => {
             <li>
               <Link to="/gogochain" className="nav-item a">
                 GoGo Chain
-              </Link>
-            </li>
-            <li>
-              <Link to="/gogoracing" className="nav-item a">
-                GoGo Racing
               </Link>
             </li>
           </ul>

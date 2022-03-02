@@ -1,6 +1,7 @@
 .joblist-wrapper {
-  position: relative;
   margin-top: 7%;
+  height: 100%;
+  width: 100%;
   img {
     width: 80%;
     box-shadow: 2px 2px 12px 2px black;
@@ -14,7 +15,6 @@
     font-size: 30px;
     margin: 1em auto;
   }
-
 }
 .list-jobz {
   padding: 30px 0;
@@ -50,6 +50,10 @@ hr {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+}
+.job-list {
+  height: 100%;
+  width: 100%;
 }
 ul.job-list {
   margin: 0;
@@ -219,7 +223,7 @@ ul.job-list > li.job-preview:hover {
 @media (min-width: 600px) {
   .modal-content {
     min-width: 600px;
-    top: 0;
+    top: 10px;
     right: 0;
     margin: 0 auto;
     height: auto;
@@ -243,34 +247,7 @@ ul.job-list > li.job-preview:hover {
   display: block;
   z-index: 1000;
 }
-[data-tooltip][tabindex="0"] {
-  display: inline-block;
-  position: relative;
-  color: #1c1d1d;
-  cursor: text;
-}
-[data-tooltip][tabindex="0"]::after {
-  display: none;
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  padding: 2px 6px;
-  transform: translate(-50%, 100%);
-  border: 1px solid #fff;
-  border-radius: 2px;
-  white-space: pre-line;
-  color: #1c1d1d;
-  white-space: nowrap;
-  background-color: #fff;
-  pointer-events: none;
-  content: attr(data-tooltip);
-}
-[data-tooltip][tabindex="0"]:focus::after,
-[data-tooltip][tabindex="0"]:focus::before,
-[data-tooltip][tabindex="0"]:hover::after,
-[data-tooltip][tabindex="0"]:hover::before {
-  display: block;
-}
+
 .job {
   margin: 5% auto;
   .bootons {
@@ -337,3 +314,180 @@ ul.job-list > li.job-preview:hover {
     }
   }
 }
+
+.footer-distributed-direction {
+  background: rgb(68, 68, 68);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 2% 50px;
+  height: 50%;
+  bottom: 0;
+}
+
+.footer-left {
+  display: flex;
+}
+.footer-distributed-direction .footer-left,
+.footer-distributed-direction .footer-center,
+.footer-distributed-direction .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed-direction .footer-left {
+  width: 40%;
+  display: inline-block;
+}
+
+/* The company logo */
+.footer-left {
+  display: flex;
+}
+.logso {
+  margin: 0;
+  width: 27%;
+}
+
+/* Footer links */
+
+.footer-distributed-direction .footer-links {
+  color: #ffb808;
+  padding: 0;
+}
+
+.footer-distributed-direction .footer-links a {
+  display: inline-block;
+  line-height: 1;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed-direction .footer-company-name {
+  color: #ffb808;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-center {
+  width: 40%;
+  p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+  a {
+    color: #ffb808;
+    text-decoration: none;
+  }
+  .desz {
+    margin-bottom: 10px;
+  }
+}
+
+.footer-distributed-direction .footer-center p a {
+  color: #ffb808;
+  text-decoration: none;
+}
+
+.footer-distributed-direction .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #ffb808;
+
+  display: inline-block;
+  padding-right: 5px;
+  margin-left: 5px;
+}
+
+.footer-distributed-direction .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed-direction .footer-right {
+  width: 20%;
+}
+
+.footer-distributed-direction .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed-direction .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed-direction .footer-icons ul {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.footer-distributed-direction .footer-icons li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffb808;
+
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed-direction {
+    font: bold 14px sans-serif;
+    top: 1000px;
+  }
+
+  .footer-distributed-direction .footer-left,
+  .footer-distributed-direction .footer-center,
+  .footer-distributed-direction .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed-direction .footer-center i {
+    margin-left: 0;
+  }
+}
+.footer-distributed-direction .footer-links a:after {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #ffb808;
+  display: inline-block;
+  padding-right: 5px;
+  margin-left: 5px;
+}
+

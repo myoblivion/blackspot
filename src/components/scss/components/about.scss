@@ -550,6 +550,7 @@
   cursor: pointer;
   background: transparent;
   transition: transform 0.5s, background 0.5s;
+  margin-top: 10%;
 }
 
 .service .i {
@@ -641,6 +642,9 @@
       #up {
         padding: 17px 15px;
       }
+    }
+    #middle-spot {
+      margin: 15% auto;
     }
   }
 }

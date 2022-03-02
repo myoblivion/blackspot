@@ -162,9 +162,6 @@ const DirectionComponent = ({ currentRoute }) => {
                   Building or Black Spot Studio
                 </li>
                 <li>
-                  <strong>Black Spot Studio</strong>
-                </li>
-                <li>
                   <strong>From SM North Edsa/ North Edsa MRT Station</strong>
                 </li>
                 <li>
@@ -190,9 +187,6 @@ const DirectionComponent = ({ currentRoute }) => {
                   <strong>25th Street (The Finance Corporation) </strong> <br />
                   From 25th Street its just 2 minute walk to Infinity Building
                   or Black Spot Studio
-                </li>
-                <li>
-                  <strong>Black Spot Studio</strong>
                 </li>
               </ul>
             </div>

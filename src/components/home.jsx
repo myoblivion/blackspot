@@ -263,30 +263,6 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                 </div>
                 <div className="slider-image">
-                  <Link
-                    to="/gogoworld"
-                    style={
-                      currentRoute === "gogoworld"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    <img src={game2} alt="Game" />
-                  </Link>
-                </div>
-                <div className="slider-image">
-                  <Link
-                    to="/gogochain"
-                    style={
-                      currentRoute === "gogochain"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    <img src={game3} alt="Game" />
-                  </Link>
-                </div>
-                <div className="slider-image">
                   <img src={game4} alt="Game" />
                   <div className="gamedes">
                     <div className="logoz">
@@ -339,6 +315,30 @@ const HomeComponent = ({ currentRoute }) => {
                       ></iframe>
                     </div>
                   </div>
+                </div>
+                <div className="slider-image">
+                  <Link
+                    to="/gogoworld"
+                    style={
+                      currentRoute === "gogoworld"
+                        ? { borderBottom: "2px solid yellow" }
+                        : { borderBottom: "2px solid transparent" }
+                    }
+                  >
+                    <img src={game2} alt="Game" />
+                  </Link>
+                </div>
+                <div className="slider-image">
+                  <Link
+                    to="/gogochain"
+                    style={
+                      currentRoute === "gogochain"
+                        ? { borderBottom: "2px solid yellow" }
+                        : { borderBottom: "2px solid transparent" }
+                    }
+                  >
+                    <img src={game3} alt="Game" />
+                  </Link>
                 </div>
               </Slider>
             </div>
