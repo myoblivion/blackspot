@@ -85,9 +85,9 @@ const DirectionComponent = ({ currentRoute }) => {
               <img src={bus} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h2>
+              <h4>
                 Via Bus <br />
-              </h2>
+              </h4>
               <span>
                 {" "}
                 <strong>From NAIA Terminal 1,2, and 3</strong>
@@ -135,9 +135,9 @@ const DirectionComponent = ({ currentRoute }) => {
               <img src={train} alt="Train" />
             </div>
             <div className="direction-content">
-              <h2>
+              <h4>
                 Via Train <br />
-              </h2>
+              </h4>
               <span>
                 {" "}
                 <strong>From Ayala MRT Station</strong>
@@ -198,9 +198,9 @@ const DirectionComponent = ({ currentRoute }) => {
               <img src={jeep} alt="Jeep" />
             </div>
             <div className="direction-content">
-              <h2>
+              <h4>
                 VIA JEEP <br />
-              </h2>
+              </h4>
               <p className="direction-stuff">
                 Travel time from Starmall Alabang to Black Spot Studio
                 Philippines is about 1 hr to 1 hr and 20 minutes
@@ -230,9 +230,9 @@ const DirectionComponent = ({ currentRoute }) => {
               <img src={walk} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h2 id="walks">
+              <h4 id="walks">
                 Via Walk / Grab <br />
-              </h2>
+              </h4>
               <span>
                 {" "}
                 <strong>From SM Aura</strong>
@@ -241,9 +241,7 @@ const DirectionComponent = ({ currentRoute }) => {
                 Head on Mckinley Parkway and walk ahead thru 26th Street corner
                 11th Street.
               </p>
-              <h2 id="grab">
-                <strong>Via Grab</strong>
-              </h2>
+              <h4 id="grab">Via Grab</h4>
               <p className="direction-stuff">
                 Just pin “THE FINANCE CENTER” and just walk ahead to Infinity
                 Corporate Building.
