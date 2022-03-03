@@ -425,6 +425,19 @@
 }
 @media only screen and (max-width: 500px) {
   .direction {
+    #bus {
+      text-align: center;
+      margin-top: 7%;
+      .direction-content {
+        width: 70%;
+        height: 50%;
+
+        p {
+          width: 100%;
+        }
+
+      }
+    }
     #walk {
       .direction-content {
         width: 60%;
@@ -432,38 +445,29 @@
         p {
           width: 100%;
         }
-        li {
-          width: 70%;
-        }
+
       }
     }
     #jeep {
       .direction-content {
         width: 70%;
         height: 50%;
-        h2 
-        {
-        text-align: center;
-        &::before {
-          text-align: center;
-        }
-        }
+
         p {
           width: 100%;
         }
-        li {
-          width: 70%;
-        }
+
       }
     }
-    #bus {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin: 50px auto;
-      h2 {
-        text-align: center;
+    #train {
+      .direction-content {
+        width: 70%;
+        height: 50%;
+
+        p {
+          width: 100%;
+        }
+
       }
     }
     #grab {
@@ -519,6 +523,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       .wrapper-directions {
         width: 100%;
         .box-direction {

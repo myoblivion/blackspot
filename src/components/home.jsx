@@ -130,7 +130,6 @@ const HomeComponent = ({ currentRoute }) => {
             id="page1"
             type="radio"
             checked={count === 0}
-            defaultChecked
           />
           <input name="control" id="page2" type="radio" checked={count === 1} />
           <input name="control" id="page3" type="radio" checked={count === 2} />
