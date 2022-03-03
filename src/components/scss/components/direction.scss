@@ -357,7 +357,7 @@
 
   span {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -384,18 +384,18 @@
 
 #bus {
   h2:before {
-    content: " 🚌";
+    content: "🚌 ";
   }
 }
 #train {
   h2:before {
-    content: " 🚆";
+    content: "🚆 ";
   }
 }
 
 #jeep {
   h2:before {
-    content: " 🚙";
+    content: "🚙 ";
   }
 }
 
@@ -405,13 +405,13 @@
   }
 }
 #walks:before {
-  content: " 🚶";
+  content: "🚶 ";
 }
 #grab {
   text-align: left;
 }
 #grab::before {
-  content: "🚕";
+  content: "🚕 ";
 }
 .come-address {
   h1 {
@@ -425,6 +425,51 @@
 }
 @media only screen and (max-width: 500px) {
   .direction {
+    #walk {
+      .direction-content {
+        width: 60%;
+        height: 50%;
+        p {
+          width: 100%;
+        }
+        li {
+          width: 70%;
+        }
+      }
+    }
+    #jeep {
+      .direction-content {
+        width: 70%;
+        height: 50%;
+        h2 
+        {
+        text-align: center;
+        &::before {
+          text-align: center;
+        }
+        }
+        p {
+          width: 100%;
+        }
+        li {
+          width: 70%;
+        }
+      }
+    }
+    #bus {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 50px auto;
+      h2 {
+        text-align: center;
+      }
+    }
+    #grab {
+      text-align: center;
+      font-weight: 1000;
+    }
     .map-wrapper {
       .map {
         display: block;
@@ -475,51 +520,45 @@
       justify-content: center;
       align-items: center;
       .wrapper-directions {
-        
         width: 100%;
         .box-direction {
           display: flex;
           flex-direction: column;
           width: 100%;
           text-align: center;
-          
-          .direction-content {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            p {
-              text-align: center;
-            }
-            h3 {
+
+          p {
+            text-align: center;
+          }
+          h3 {
             text-align: center;
             width: 100%;
-            }
-            h2:before {
-              text-align: center;
-            }
+          }
+          h2:before {
+            text-align: center;
+          }
 
-            span {
-          text-align: center;
-          width: 100%;
-            }
-            ul li {
-          text-align: center;
-          width: 100%;
-          margin: 5% auto;
-            }
-            h2 {
-              text-align: center;
-              width: 100%;
-            }
+          span {
+            text-align: center;
+            width: 100%;
           }
-          img {
-            width: 50%;
+          ul li {
+            text-align: center;
+            width: 100%;
+            margin: 5% auto;
           }
+          h2 {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        img {
+          width: 50%;
         }
       }
     }
     #bus {
-     text-align: center;
+      text-align: center;
     }
   }
 

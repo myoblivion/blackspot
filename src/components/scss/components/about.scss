@@ -647,4 +647,19 @@
       margin: 15% auto;
     }
   }
+  #partners {
+    .partnerz {
+      .links {
+        ul {
+          display: flex;
+          flex-direction: column;
+          li {
+            display: flex;
+            flex-direction: column;
+            margin-left: 17%;
+          }
+        }
+      }
+    }
+  }
 }
