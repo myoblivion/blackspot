@@ -1,5 +1,6 @@
 .gogoworld {
-  .wrapper {
+  width: 100%;
+  .gogoworld-wrapper {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -25,7 +26,7 @@
       -webkit-box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: -29px 11px 65px -20px rgba(0, 0, 0, 0.75);
     }
-    img {
+    #first-image {
       width: 80%;
       height: 70%;
       position: absolute;
@@ -34,20 +35,96 @@
       -webkit-box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 22px 28px 65px -20px rgba(0, 0, 0, 0.75);
     }
+    #second-image {
+      display: none;
+    }
+  }
+  .gogoworld-features {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    .gogoworld-collection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        li {
+          img {
+            width: 100%;
+          }
+        }
+        li:nth-child(7) { 
+          img {
+          width: 100%;
+          margin-left: 100%;
+          }
+        }
+      }
+    }
   }
 }
+
+// Mobile
 @media only screen and (max-width: 500px) {
   .gogoworld {
-    .wrapper {
-      height: 90vh;
+    .gogoworld-wrapper {
+      height: 100vh;
       h1 {
-        width: 50%;
-        height: 30%;
+        width: 90%;
+        height: 10%;
         font-size: 25px;
+        background-color: #ffb808;
+        bottom: 30%;
+        left: 0;
+        margin: 0 auto;
       }
-      img {
-        width: 60%;
-        height: 40%;
+      #first-image {
+        display: none;
+      }
+      #second-image {
+        display: block;
+        width: 90%;
+        height: 50%;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+    }
+    .gogoworld-features {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 80%;      
+      .gogoworld-collection {
+        height: 100vh;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          li {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            height: 100%;
+            img {
+              width: 90%;
+              height: 100%;
+            }
+          }
+        li:nth-child(7) { 
+          img {
+          width: 90%;
+          margin-left: 0;
+          }
+        }
+        }
       }
     }
   }

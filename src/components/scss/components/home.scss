@@ -584,6 +584,7 @@ input[type="radio"] {
     height: 4px;
     background-color: white;
     cursor: pointer;
+    display: none;
     &.left {
       top: 43%;
       right: 4rem;
@@ -1044,6 +1045,7 @@ input[type="radio"] {
     &--control {
       width: 2em;
       height: 2px;
+      display: none;
     }
     &--el {
       &.anim-4parts {

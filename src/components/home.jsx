@@ -125,12 +125,7 @@ const HomeComponent = ({ currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         <div className="slider">
-          <input
-            name="control"
-            id="page1"
-            type="radio"
-            checked={count === 0}
-          />
+          <input name="control" id="page1" type="radio" checked={count === 0} />
           <input name="control" id="page2" type="radio" checked={count === 1} />
           <input name="control" id="page3" type="radio" checked={count === 2} />
           <input name="control" id="page4" type="radio" checked={count === 3} />
@@ -218,14 +213,7 @@ const HomeComponent = ({ currentRoute }) => {
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
-                          <Link
-                            to="/scion"
-                            style={
-                              currentRoute === "scion"
-                                ? { borderBottom: "2px solid yellow" }
-                                : { borderBottom: "2px solid transparent" }
-                            }
-                          >
+                          <Link to="/scion">
                             <img src={ScionLogo} alt="Scion Fist Logo" />
                           </Link>
                         </div>
@@ -316,16 +304,48 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                 </div>
                 <div className="slider-image">
-                  <Link
-                    to="/gogoworld"
-                    style={
-                      currentRoute === "gogoworld"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    <img src={game2} alt="Game" />
-                  </Link>
+                  <div className="slider-image" id="firstgame">
+                  <img src={game2} alt="Game" />
+                    <div className="gamedes">
+                      <div className="logoz">
+                        <div className="icons">
+                          <div className="sccionlogo">
+                          <Link to="/gogoworld">
+                              <img src={Gogoworld} alt="Scion Fist Logo" />
+                            </Link>
+                          </div>
+                        </div>
+                        <ul className="icon-list" id="hidden">
+                          <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
+                              <FaGooglePlay />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <FaAppStore />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <FaWindows />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="video">
+                        <iframe
+                          width="560"
+                          height="315"
+                          src="https://www.youtube.com/embed/pxSzRmCFqL0"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="slider-image">
                   <Link
