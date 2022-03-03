@@ -954,7 +954,7 @@ input[type="radio"] {
       background-color: black;
       padding: 0;
       margin: 0;
-      height: 70vh;
+      height: 90vh;
       h2 {
         font-size: 28px;
         padding-top: 10%;
@@ -983,7 +983,9 @@ input[type="radio"] {
           .video {
             iframe {
               border-radius: 0;
-              left: 5%;
+              left: 0%;
+              width: 200px;
+              height: 200px;
             }
           }
         }
