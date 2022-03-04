@@ -100,41 +100,55 @@ const DirectionComponent = ({ currentRoute }) => {
               <ul>
                 <li>
                   <span>
-                    <strong>NAIA Terminal 1, 2, and 3</strong>
+                    <strong> NAIA Terminal 1, 2, and 3</strong>
                   </span>{" "}
                   <br />
-                  Ride airport bus from the terminal to PITX (Paranaque
-                  Integrated Terminal Exchange)
+                  <p>
+                    {" "}
+                    Ride airport bus from the terminal to PITX (Paranaque
+                    Integrated Terminal Exchange)
+                  </p>
                 </li>
                 <li>
                   <span>
                     <strong> Paranaque Integrated Terminal Exchange</strong>
                   </span>{" "}
                   <br />
-                  Ride an EDSA BUS CAROUSEL from PITX to Ayala Station
+                  <p> Ride an EDSA BUS CAROUSEL from PITX to Ayala Station</p>
                 </li>
                 <li>
                   <span>
                     <strong> Ayala Station</strong>
                   </span>{" "}
-                  <br /> From Ayala Station, just walk to BGC Bus Station and
-                  ride a bus going to West or North Route
+                  <br />
+                  <p>
+                    {" "}
+                    From Ayala Station, just walk to BGC Bus Station and ride a
+                    bus going to West or North Route
+                  </p>
                 </li>
                 <li>
                   <span>
-                    <strong>BGC Bus Station</strong>
+                    <strong> BGC Bus Station</strong>
                   </span>{" "}
-                  <br /> From BGC Bus Station, get off to 25th St. or Finance
-                  Corporation Building/ Infinity Building
+                  <br />
+                  <p>
+                    {" "}
+                    From BGC Bus Station, get off to 25th St. or Finance
+                    Corporation Building/ Infinity Building
+                  </p>
                 </li>
                 <li>
                   {" "}
                   <span>
-                    <strong>25th Street (The Finance Corporation)</strong>
+                    <strong> 25th Street (The Finance Corporation)</strong>
                   </span>{" "}
                   <br />
-                  From 25th Street its just 2 minute walk to Infinity Building
-                  or Black Spot Studio
+                  <p>
+                    {" "}
+                    From 25th Street its just 2 minute walk to Infinity Building
+                    or Black Spot Studio
+                  </p>
                 </li>
               </ul>
             </div>
@@ -163,17 +177,26 @@ const DirectionComponent = ({ currentRoute }) => {
                     <strong>Ayala MRT Station</strong>
                   </span>{" "}
                   <br />
-                  From Ayala Station, just walk to BGC Bus Station and ride a
-                  bus going to West or North Route
+                  <p>
+                    {" "}
+                    From Ayala Station, just walk to BGC Bus Station and ride a
+                    bus going to West or North Route
+                  </p>
                 </li>
                 <li>
-                  BGC Bus Station From BGC Bus Station, get off to 25th St. or
-                  Finance Corporation Building/ Infinity Building
+                  <p>
+                    {" "}
+                    BGC Bus Station From BGC Bus Station, get off to 25th St. or
+                    Finance Corporation Building/ Infinity Building
+                  </p>
                 </li>
                 <li>
-                  25th Street (The Finance Corporation) From 25th Street (The
-                  Finance Corporation) its just 2 minute walk to Infinity
-                  Building or Black Spot Studio
+                  <p>
+                    {" "}
+                    25th Street (The Finance Corporation) From 25th Street (The
+                    Finance Corporation) its just 2 minute walk to Infinity
+                    Building or Black Spot Studio
+                  </p>
                 </li>
                 <li>
                   <span>
@@ -181,31 +204,42 @@ const DirectionComponent = ({ currentRoute }) => {
                   </span>
                 </li>
                 <li>
-                  Travel time from SM North EDSA to Black Spot Studio
-                  Philippines is about 1 hr to 1 hr and 20 minutes
+                  <p>
+                    {" "}
+                    Travel time from SM North EDSA to Black Spot Studio
+                    Philippines is about 1 hr to 1 hr and 20 minutes
+                  </p>
                 </li>
                 <li>
                   <span>
                     <strong>SM North Edsa/ North Edsa MRT Station</strong>{" "}
                   </span>
                   <br />
-                  From North Edsa Station, take the MRT going to Ayala MRT
-                  Station.
+                  <p>
+                    {" "}
+                    From North Edsa Station, take the MRT going to Ayala MRT
+                    Station.
+                  </p>
                 </li>
                 <li>
                   <span>
                     <strong>Ayala MRT Station</strong>
                   </span>{" "}
                   <br />
-                  From Ayala Station, just walk to BGC Bus Station and ride a
-                  bus going to West or North Route
+                  <p>
+                    From Ayala Station, just walk to BGC Bus Station and ride a
+                    bus going to West or North Route
+                  </p>
                 </li>
                 <li>
                   <span>
                     <strong>BGC Bus Station</strong> <br />
                   </span>
-                  From BGC Bus Station, get off to 25th St. or Finance
-                  Corporation Building/ Infinity Building
+                  <p>
+                    {" "}
+                    From BGC Bus Station, get off to 25th St. or Finance
+                    Corporation Building/ Infinity Building
+                  </p>
                 </li>
                 <li>
                   <span>
@@ -213,8 +247,11 @@ const DirectionComponent = ({ currentRoute }) => {
                     <strong>25th Street (The Finance Corporation) </strong>{" "}
                   </span>
                   <br />
-                  From 25th Street its just 2 minute walk to Infinity Building
-                  or Black Spot Studio
+                  <p>
+                    {" "}
+                    From 25th Street its just 2 minute walk to Infinity Building
+                    or Black Spot Studio
+                  </p>
                 </li>
               </ul>
             </div>
@@ -240,19 +277,22 @@ const DirectionComponent = ({ currentRoute }) => {
                     <strong>From Starmall Alabang</strong>{" "}
                   </span>
                   <br />
-                  Take a jeepney going to Tenement.
+                  <p> Take a jeepney going to Tenement.</p>
                 </li>
                 <li>
                   <strong>Tenement</strong> <br />
-                  From Tenement ride a jeepney going to market market
+                  <p> From Tenement ride a jeepney going to market market</p>
                 </li>
                 <li>
                   <span>
                     <strong> Market Market</strong>
                   </span>{" "}
                   <br />
-                  From Market market walk going to SM Aura and walk ahead going
-                  to 26th Street corner 11th Street.
+                  <p>
+                    {" "}
+                    From Market market walk going to SM Aura and walk ahead
+                    going to 26th Street corner 11th Street.
+                  </p>
                 </li>
               </ul>
             </div>
