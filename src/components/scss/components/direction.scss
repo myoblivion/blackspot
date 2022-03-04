@@ -479,6 +479,11 @@
       .direction-content {
         width: 70%;
         height: 50%;
+        span {
+          strong {
+            font-weight: 900;
+          }
+        }
         p {
           width: 100%;
           text-align: justify;
