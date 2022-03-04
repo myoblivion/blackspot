@@ -30,10 +30,10 @@ import game4 from "../images/edit/banner4.png";
 import icono from "../images/icons/logo.png";
 
 // Game section mobile
-import mobile1 from "../images/game_mobile/phone4.png";
-import mobile2 from "../images/game_mobile/phone1.png";
-import mobile3 from "../images/game_mobile/phone2.png";
-import mobile4 from "../images/game_mobile/phone3.png";
+import mobile1 from "../images/game_mobile/phone1.png";
+import mobile2 from "../images/game_mobile/phone2.png";
+import mobile3 from "../images/game_mobile/phone3.png";
+import mobile4 from "../images/game_mobile/phone4.png";
 // Slider
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";

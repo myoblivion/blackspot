@@ -81,18 +81,27 @@
     p {
       width: 100%;
     }
+    li {
+      text-align: justify;
+    }
   }
 }
 #train {
   margin-bottom: 5%;
   .direction-content {
     width: 50%;
-    height: 50%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     p {
       width: 100%;
+    }
+    li {
+      text-align: justify;
+      letter-spacing: -1;
+      word-spacing: 1px;
+
     }
   }
 }
@@ -107,6 +116,7 @@
     p {
       width: 100%;
     }
+
   }
 }
 
@@ -123,6 +133,9 @@
     }
     li {
       width: 70%;
+      text-align: justify;
+      word-spacing: 1px;
+      letter-spacing: -1px;
     }
   }
 }
@@ -383,36 +396,52 @@
 }
 
 #bus {
-  h4:before {
-    content: "🚌 ";
+  h4 {
+    font-size: 30px;
+    &:before {
+      content: "🚌 ";
+    }
   }
 }
 #train {
-  h4:before {
-    content: "🚆 ";
+  h4 {
+    font-size: 30px;
+    &:before {
+      content: "🚆 ";
+    }
   }
 }
 
 #jeep {
-  h4:before {
-    content: "🚙 ";
+  h4 {
+    font-size: 30px;
+    &:before {
+      content: "🚙 ";
+    }
   }
 }
-
 #walk {
   p {
     text-align: left;
   }
 }
-#walks:before {
-  content: "🚶 ";
+#walks {
+  font-size: 30px;
+  &:before {
+    content: "🚶 ";
+  }
 }
 #grab {
   text-align: left;
 }
-#grab::before {
-  content: "🚕 ";
+#grab {
+  font-size: 30px;
+
+  &::before {
+    content: "🚕 ";
+  }
 }
+
 .come-address {
   h1 {
     font-size: 34px;
@@ -431,13 +460,18 @@
       .direction-content {
         width: 70%;
         height: 50%;
- 
+
         p {
           width: 100%;
+          text-align: justify;
+          word-spacing: 1px;
+          letter-spacing: -1px;
+          margin: 10px auto;
         }
         h4 {
-          font-size: 22px;
+          font-size: 30px;
           font-weight: 900;
+          margin-bottom: 6%;
         }
       }
     }
@@ -447,11 +481,15 @@
         height: 50%;
         p {
           width: 100%;
-          text-align: center;
+          text-align: justify;
+          word-spacing: 1px;
+          letter-spacing: -1px;
+          margin: 10px auto;
         }
         h4 {
-          font-size: 22px;
+          font-size: 30px;
           font-weight: 900;
+          margin-bottom: 6%;
         }
       }
     }
@@ -462,9 +500,14 @@
 
         p {
           width: 100%;
+          text-align: justify;
+          word-spacing: 1px;
+          letter-spacing: -1px;
+          margin: 10px auto;
         }
         h4 {
-          font-size: 22px;
+          font-size: 30px;
+          margin-bottom: 6%;
           font-weight: 900;
         }
       }
@@ -476,10 +519,15 @@
 
         p {
           width: 100%;
+          text-align: justify;
+          word-spacing: 1px;
+          letter-spacing: -1px;
+          margin: 10px auto;
         }
         h4 {
-          font-size: 22px;
+          font-size: 30px;
           font-weight: 900;
+          margin-bottom: 6%;
         }
       }
     }
@@ -547,6 +595,9 @@
 
           p {
             text-align: center;
+            text-align: justify;
+            word-spacing: 1px;
+            letter-spacing: -1px;
           }
           h3 {
             text-align: center;
@@ -561,9 +612,19 @@
             width: 100%;
           }
           ul li {
-            text-align: center;
+            text-align: justify;
+            word-spacing: 1px;
+            letter-spacing: -1px;
+            font-size: 17px;
             width: 100%;
             margin: 5% auto;
+            span {
+              text-align: center;
+              width: 100%;
+              strong {
+              font-weight: 900;
+              }
+            }
           }
           h2 {
             text-align: center;

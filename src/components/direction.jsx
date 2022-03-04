@@ -99,31 +99,42 @@ const DirectionComponent = ({ currentRoute }) => {
               </p>
               <ul>
                 <li>
-                  <strong>NAIA Terminal 1, 2, and 3</strong> <br />
+                  <span>
+                    <strong>NAIA Terminal 1, 2, and 3</strong>
+                  </span>{" "}
+                  <br />
                   Ride airport bus from the terminal to PITX (Paranaque
                   Integrated Terminal Exchange)
                 </li>
                 <li>
-                  <strong> Paranaque Integrated Terminal Exchange</strong>{" "}
+                  <span>
+                    <strong> Paranaque Integrated Terminal Exchange</strong>
+                  </span>{" "}
                   <br />
                   Ride an EDSA BUS CAROUSEL from PITX to Ayala Station
                 </li>
                 <li>
-                  <strong> Ayala Station</strong> <br /> From Ayala Station,
-                  just walk to BGC Bus Station and ride a bus going to West or
-                  North Route
+                  <span>
+                    <strong> Ayala Station</strong>
+                  </span>{" "}
+                  <br /> From Ayala Station, just walk to BGC Bus Station and
+                  ride a bus going to West or North Route
                 </li>
                 <li>
-                  <strong>BGC Bus Station</strong> <br /> From BGC Bus Station,
-                  get off to 25th St. or Finance Corporation Building/ Infinity
-                  Building
+                  <span>
+                    <strong>BGC Bus Station</strong>
+                  </span>{" "}
+                  <br /> From BGC Bus Station, get off to 25th St. or Finance
+                  Corporation Building/ Infinity Building
                 </li>
                 <li>
                   {" "}
-                  <strong>
-                    25th Street (The Finance Corporation)
-                  </strong> <br /> From 25th Street its just 2 minute walk to
-                  Infinity Building or Black Spot Studio
+                  <span>
+                    <strong>25th Street (The Finance Corporation)</strong>
+                  </span>{" "}
+                  <br />
+                  From 25th Street its just 2 minute walk to Infinity Building
+                  or Black Spot Studio
                 </li>
               </ul>
             </div>
@@ -148,7 +159,10 @@ const DirectionComponent = ({ currentRoute }) => {
               </p>
               <ul>
                 <li>
-                  <strong>Ayala MRT Station</strong> <br />
+                  <span>
+                    <strong>Ayala MRT Station</strong>
+                  </span>{" "}
+                  <br />
                   From Ayala Station, just walk to BGC Bus Station and ride a
                   bus going to West or North Route
                 </li>
@@ -162,29 +176,43 @@ const DirectionComponent = ({ currentRoute }) => {
                   Building or Black Spot Studio
                 </li>
                 <li>
-                  <strong>From SM North Edsa/ North Edsa MRT Station</strong>
+                  <span>
+                    <strong>From SM North Edsa/ North Edsa MRT Station</strong>
+                  </span>
                 </li>
                 <li>
                   Travel time from SM North EDSA to Black Spot Studio
                   Philippines is about 1 hr to 1 hr and 20 minutes
                 </li>
                 <li>
-                  <strong>SM North Edsa/ North Edsa MRT Station</strong> <br />
+                  <span>
+                    <strong>SM North Edsa/ North Edsa MRT Station</strong>{" "}
+                  </span>
+                  <br />
                   From North Edsa Station, take the MRT going to Ayala MRT
                   Station.
                 </li>
                 <li>
-                  <strong>Ayala MRT Station</strong> <br />
+                  <span>
+                    <strong>Ayala MRT Station</strong>
+                  </span>{" "}
+                  <br />
                   From Ayala Station, just walk to BGC Bus Station and ride a
                   bus going to West or North Route
                 </li>
                 <li>
-                  <strong>BGC Bus Station</strong> <br />
+                  <span>
+                    <strong>BGC Bus Station</strong> <br />
+                  </span>
                   From BGC Bus Station, get off to 25th St. or Finance
                   Corporation Building/ Infinity Building
                 </li>
                 <li>
-                  <strong>25th Street (The Finance Corporation) </strong> <br />
+                  <span>
+                    {" "}
+                    <strong>25th Street (The Finance Corporation) </strong>{" "}
+                  </span>
+                  <br />
                   From 25th Street its just 2 minute walk to Infinity Building
                   or Black Spot Studio
                 </li>
@@ -207,7 +235,11 @@ const DirectionComponent = ({ currentRoute }) => {
               </p>
               <ul>
                 <li>
-                  <strong>From Starmall Alabang</strong> <br />
+                  <span>
+                    {" "}
+                    <strong>From Starmall Alabang</strong>{" "}
+                  </span>
+                  <br />
                   Take a jeepney going to Tenement.
                 </li>
                 <li>
@@ -215,11 +247,13 @@ const DirectionComponent = ({ currentRoute }) => {
                   From Tenement ride a jeepney going to market market
                 </li>
                 <li>
-                  <strong> Market Market</strong> <br /> From Market market walk
-                  going to SM Aura and walk ahead going to 26th Street corner
-                  11th Street.
+                  <span>
+                    <strong> Market Market</strong>
+                  </span>{" "}
+                  <br />
+                  From Market market walk going to SM Aura and walk ahead going
+                  to 26th Street corner 11th Street.
                 </li>
-                <li>Black Spot Studio</li>
               </ul>
             </div>
           </div>
