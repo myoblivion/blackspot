@@ -28,6 +28,12 @@ import game2 from "../images/edit/banner2.png";
 import game3 from "../images/edit/banner3.png";
 import game4 from "../images/edit/banner4.png";
 import icono from "../images/icons/logo.png";
+
+// Game section mobile
+import mobile1 from "../images/game_mobile/phone4.png";
+import mobile2 from "../images/game_mobile/phone1.png";
+import mobile3 from "../images/game_mobile/phone2.png";
+import mobile4 from "../images/game_mobile/phone3.png";
 // Slider
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
@@ -208,13 +214,14 @@ const HomeComponent = ({ currentRoute }) => {
             <div className="sliders">
               <Slider {...settings}>
                 <div className="slider-image" id="firstgame">
-                  <img src={game1} alt="" />
+                  <img src={game1} alt="" id="desktop1" />
+                  <img src={mobile1} alt="" id="mobile1" />
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
                           <Link to="/scion">
-                            <img src={ScionLogo} alt="Scion Fist Logo" />
+                            <img src={ScionLogo} alt="Scion Fist Logo" id="logo1"/>
                           </Link>
                         </div>
                       </div>
@@ -250,19 +257,13 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                 </div>
                 <div className="slider-image">
-                  <img src={game4} alt="Game" />
+                  <img src={game4} alt="Game" id="desktop2" />
+                  <img src={mobile2} alt="" id="mobile2" />
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
-                          <Link
-                            to="/gogoracing"
-                            style={
-                              currentRoute === "gogoracing"
-                                ? { borderBottom: "2px solid yellow" }
-                                : { borderBottom: "2px solid transparent" }
-                            }
-                          >
+                          <Link to="/gogoracing">
                             <img
                               src={Gogoracing}
                               alt="Gogo Racing Logo"
@@ -305,13 +306,14 @@ const HomeComponent = ({ currentRoute }) => {
                 </div>
                 <div className="slider-image">
                   <div className="slider-image" id="firstgame">
-                  <img src={game2} alt="Game" />
+                    <img src={game2} alt="Game" id="desktop3" />
+                    <img src={mobile3} alt="" id="mobile3"/>
                     <div className="gamedes">
                       <div className="logoz">
                         <div className="icons">
                           <div className="sccionlogo">
-                          <Link to="/gogoworld">
-                              <img src={Gogoworld} alt="Scion Fist Logo" />
+                            <Link to="/gogoworld">
+                              <img src={Gogoworld} alt="Scion Fist Logo" id="gogoworld-logo"/>
                             </Link>
                           </div>
                         </div>
@@ -333,7 +335,7 @@ const HomeComponent = ({ currentRoute }) => {
                           </li>
                         </ul>
                       </div>
-                      <div className="video">
+                      <div className="video" id="hidden-video">
                         <iframe
                           width="560"
                           height="315"
@@ -348,16 +350,49 @@ const HomeComponent = ({ currentRoute }) => {
                   </div>
                 </div>
                 <div className="slider-image">
-                  <Link
-                    to="/gogochain"
-                    style={
-                      currentRoute === "gogochain"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
-                  >
-                    <img src={game3} alt="Game" />
-                  </Link>
+                  <div className="slider-image" id="firstgame">
+                  <img src={game3} alt="Game" id="desktop4" />
+                    <img src={mobile4} alt="" id="mobile4"/>
+                    <div className="gamedes">
+                      <div className="logoz">
+                        <div className="icons">
+                          <div className="sccionlogo">
+                            <Link to="/gogochain">
+                              <img src={Gogochain} alt="Scion Fist Logo" id="gogochain-logo"/>
+                            </Link>
+                          </div>
+                        </div>
+                        <ul className="icon-list" id="hidden">
+                          <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
+                              <FaGooglePlay />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <FaAppStore />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <FaWindows />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="video" id="hidden-video">
+                        <iframe
+                          width="560"
+                          height="315"
+                          src="https://www.youtube.com/embed/pxSzRmCFqL0"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Slider>
             </div>
@@ -420,7 +455,7 @@ const HomeComponent = ({ currentRoute }) => {
         <div className="section">
           <footer className="footer-distributed">
             <div className="footer-left">
-              <img src={icono} alt="" />
+              <img src={icono} alt="" id="footer-logo"/>
               <p className="footer-links">
                 <Link to="/about">About Us</Link>
                 <Link to="/privacy">Privacy & Policy</Link>

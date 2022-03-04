@@ -96,7 +96,26 @@ body {
     margin: 0;
     left: 0;
     padding: 0;
+    .sccionlogo {
+
+      #gogochain-logo {
+        height: 150px;
+        width: 200px;
+        position: absolute;
+        bottom: -90px;
+        left: 40px;
+      }
+    }
     // Wraps games
+    #mobile1,
+    #mobile2,
+    #mobile3,
+    #mobile4 {
+      display: none;
+    }
+    #hidden-video {
+      display: none;
+    }
     h2 {
       font-family: Verdana, Geneva, sans-serif;
       text-transform: uppercase;
@@ -159,7 +178,6 @@ body {
       #gogoracingsz {
         margin-top: -14px;
         width: 50%;
-      
       }
       img {
         margin-top: 20px;
@@ -170,7 +188,7 @@ body {
       .gamedes {
         display: block;
         #gogoracevid {
-          top: 25%;
+          top: 26%;
           left: 43%;
         }
         .icon-list {
@@ -206,7 +224,7 @@ body {
           left: 0;
           position: absolute;
         }
-        
+
         .video {
           display: block;
           height: 100%;
@@ -220,12 +238,11 @@ body {
           iframe {
             height: 50%;
             width: 35%;
-            border-radius: 55px;
           }
         }
       }
     }
-    .slider-image{
+    .slider-image {
       position: relative;
     }
   }
@@ -356,186 +373,194 @@ body {
     margin-bottom: 20px;
     cursor: pointer;
   }
-  //   Footer
-  .footer-distributed {
-    background: rgb(68, 68, 68);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: bold 16px sans-serif;
-    padding: 2% 50px;
-  }
-  .footer-left {
-    display: flex;
-  }
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  /* Footer left */
-
-  .footer-distributed .footer-left {
-    width: 40%;
-    display: inline-block;
-  }
-
-  /* The company logo */
-  .footer-left {
-    display: flex;
-
-    img {
-      margin: 0 2%;
-      width: 27%;
+    //   Footer
+    .footer-distributed {
+      background: rgb(68, 68, 68);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 2% 50px;
+      img {
+        width: 27%;
+      }
     }
-  }
-  /* Footer links */
-
-  .footer-distributed .footer-links {
-    color: #ffb808;
-    padding: 0;
-  }
-
-  .footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1;
-    font-weight: 400;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .footer-distributed .footer-company-name {
-    color: #ffb808;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-  }
-
-  /* Footer Center */
-
-  .footer-center {
-    width: 40%;
-    p span {
-      display: block;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 2;
+    .footer-left {
+      display: flex;
     }
-    a {
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left {
+      width: 40%;
+      display: inline-block;
+    }
+
+    /* The company logo */
+    .footer-left {
+      display: flex;
+
+      img {
+        margin: 0 2%;
+        width: 27%;
+      }
+    }
+    /* Footer links */
+
+    .footer-distributed .footer-links {
       color: #ffb808;
+      padding: 0;
+    }
 
+    .footer-distributed .footer-links a {
+      display: inline-block;
+      line-height: 1;
+      font-weight: 400;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .footer-distributed .footer-company-name {
+      color: #ffb808;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-center {
+      width: 40%;
+      p span {
+        display: block;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 2;
+      }
+      a {
+        color: #ffb808;
+
+        text-decoration: none;
+      }
+      .desz {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+
+    .footer-distributed .footer-center p a {
+      color: #ffb808;
       text-decoration: none;
     }
-    .desz {
-      margin-bottom: 10px;
-      font-size: 20px;
+
+    .footer-distributed .footer-links a:before {
+      content: "|";
+      font-weight: 300;
+      font-size: 22px;
+      left: 0;
+      color: #ffb808;
+      display: inline-block;
+      padding-right: 5px;
+      margin-left: 5px;
     }
-  }
+    .footer-distributed .footer-links a:after {
+      content: "|";
+      font-weight: 300;
+      font-size: 22px;
+      left: 0;
+      color: #ffb808;
+      display: inline-block;
+      padding-right: 5px;
+      margin-left: 5px;
+    }
 
-  .footer-distributed .footer-center p a {
-    color: #ffb808;
-    text-decoration: none;
-  }
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
 
-  .footer-distributed .footer-links a:before {
-    content: "|";
-    font-weight: 300;
-    font-size: 22px;
-    left: 0;
-    color: #ffb808;
-    display: inline-block;
-    padding-right: 5px;
-    margin-left: 5px;
-  }
-  .footer-distributed .footer-links a:after {
-    content: "|";
-    font-weight: 300;
-    font-size: 22px;
-    left: 0;
-    color: #ffb808;
-    display: inline-block;
-    padding-right: 5px;
-    margin-left: 5px;
-  }
+    /* Footer Right */
 
-  .footer-distributed .footer-links .link-1:before {
-    content: none;
-  }
+    .footer-distributed .footer-right {
+      width: 20%;
+    }
 
-  /* Footer Right */
+    .footer-distributed .footer-company-about {
+      line-height: 20px;
+      color: #92999f;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
 
-  .footer-distributed .footer-right {
-    width: 20%;
-  }
+    .footer-distributed .footer-company-about span {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .footer-icons h4 {
+      text-align: center;
+      font-size: 12px;
+      width: 100%;
+      text-transform: uppercase;
+    }
 
-  .footer-distributed .footer-company-about {
-    line-height: 20px;
-    color: #92999f;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-  }
+    .footer-distributed .footer-icons ul {
+      display: flex;
+      margin-top: 25px;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .footer-distributed .footer-company-about span {
-    display: block;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  .footer-icons h4 {
-    text-align: center;
-    font-size: 12px;
-    width: 100%;
-    text-transform: uppercase;
-  }
-
-  .footer-distributed .footer-icons ul {
-    display: flex;
-    margin-top: 25px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-distributed .footer-icons li a {
-    display: inline-block;
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
-    background-color: #ffb808;
-    border-radius: 2px;
-    font-size: 25px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 1.9;
-    margin: 0 10px;
-    border-radius: 50%;
-  }
+    .footer-distributed .footer-icons li a {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      background-color: #ffb808;
+      border-radius: 2px;
+      font-size: 25px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 1.9;
+      margin: 0 10px;
+      border-radius: 50%;
+    }
 
   /* If you don't want the footer to be responsive, remove these media queries */
 
   @media (max-width: 880px) {
-    .footer-distributed {
-      font: bold 10px sans-serif;
-    }
+      .footer-distributed {
+        font: bold 10px sans-serif;
+        top: 0;
+      }
+      .footer-left {
+        img {
+          margin: 0 2%;
+          width: 37%;
+        }
+      }
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
 
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-      display: block;
-      width: 100%;
-      margin-bottom: 40px;
-      text-align: center;
+      .footer-distributed .footer-center i {
+        margin-left: 0;
+      }
     }
-
-    .footer-distributed .footer-center i {
-      margin-left: 0;
-    }
-  }
 }
-
 @media (max-width: 450px) {
   .container-2 {
     height: 100vh;
@@ -955,7 +980,56 @@ input[type="radio"] {
       background-color: black;
       padding: 0;
       margin: 0;
-      height: 90vh;
+      height: 100vh;
+
+      .sccionlogo {
+        opacity: 0;
+        #gogoworld-logo {
+          height: 100px;
+          width: 150px;
+          position: absolute;
+          bottom: -50px;
+          left: 90px;
+        }
+        #gogochain-logo {
+          height: 100px;
+          width: 150px;
+          position: absolute;
+          bottom: -50px;
+          left: 90px;
+        }
+        #logo1 {
+          height: 100px;
+          width: 150px;
+          position: absolute;
+          bottom: -50px;
+          left: 90px;
+        }
+        #gogoracingsz {
+          height: 100px;
+          width: 150px;
+          position: absolute;
+          bottom: -50px;
+          left: 100px;
+        }
+      }
+      #desktop1,
+      #desktop2,
+      #desktop3,
+      #desktop4 {
+        display: none;
+      }
+      #mobile1,
+      #mobile2,
+      #mobile3,
+      #mobile4 {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        bottom: 80px;
+      }
+
       h2 {
         font-size: 28px;
         padding-top: 10%;
@@ -981,12 +1055,17 @@ input[type="radio"] {
       }
       .slider-image {
         .gamedes {
+          #gogoracevid {
+            top: 10.5%;
+            left: 15%;
+          }
           .video {
+            top: 10.5%;
+            left: 17%;
             iframe {
               border-radius: 0;
-              left: 0%;
-              width: 200px;
-              height: 200px;
+              width: 270px;
+              height: 150px;
             }
           }
         }
