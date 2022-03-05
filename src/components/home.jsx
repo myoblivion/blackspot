@@ -15,7 +15,8 @@ import Mongi from "../images/characters/Mongi.png";
 import Pengsuni from "../images/characters/Pengsuni.png";
 import Euik from "../images/characters/Euik.png";
 import Eureungi from "../images/characters/Eureungi.png";
-
+import ggrc1 from "../images/edit/ggrc-1.png";
+import ggrc2 from "../images/edit/ggrc-2.png"
 // logo
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
@@ -243,7 +244,7 @@ const HomeComponent = ({ currentRoute }) => {
                         </li>
                       </ul>
                     </div>
-                    <div className="video">
+                    <div className="video" id="scionvid">
                       <iframe
                         width="560"
                         height="315"
@@ -256,8 +257,10 @@ const HomeComponent = ({ currentRoute }) => {
                     </div>
                   </div>
                 </div>
-                <div className="slider-image">
+                <div className="slider-image" >
                   <img src={game4} alt="Game" id="desktop2" />
+                  <img src={ggrc1} alt="" id="ggrc1"/>
+                  <img src={ggrc2} alt="" id="ggrc2"/>
                   <img src={mobile2} alt="" id="mobile2" />
                   <div className="gamedes">
                     <div className="logoz">

@@ -128,7 +128,7 @@
     }
   }
 }
-.footer-distributed {
+.gogoworld-footer-distributed {
   background: rgb(68, 68, 68);
   box-sizing: border-box;
   width: 100%;
@@ -140,16 +140,16 @@
 .footer-left {
   display: flex;
 }
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
+.gogoworld-footer-distributed .footer-left,
+.gogoworld-footer-distributed .footer-center,
+.gogoworld-footer-distributed .footer-right {
   display: inline-block;
   vertical-align: top;
 }
 
 /* Footer left */
 
-.footer-distributed .footer-left {
+.gogoworld-footer-distributed .footer-left {
   width: 40%;
   display: inline-block;
 }
@@ -165,12 +165,12 @@
 
 /* Footer links */
 
-.footer-distributed .footer-links {
+.gogoworld-footer-distributed .footer-links {
   color: #ffb808;
   padding: 0;
 }
 
-.footer-distributed .footer-links a {
+.gogoworld-footer-distributed .footer-links a {
   display: inline-block;
   line-height: 1.8;
   font-weight: 400;
@@ -178,7 +178,7 @@
   color: inherit;
 }
 
-.footer-distributed .footer-company-name {
+.gogoworld-footer-distributed .footer-company-name {
   color: #ffb808;
   font-size: 14px;
   font-weight: normal;
@@ -204,12 +204,12 @@
   }
 }
 
-.footer-distributed .footer-center p a {
+.gogoworld-footer-distributed .footer-center p a {
   color: #ffb808;
   text-decoration: none;
 }
 
-.footer-distributed .footer-links a:before {
+.gogoworld-footer-distributed .footer-links a:before {
   content: "|";
   font-weight: 300;
   font-size: 20px;
@@ -220,17 +220,17 @@
   margin-left: 5px;
 }
 
-.footer-distributed .footer-links .link-1:before {
+.gogoworld-footer-distributed .footer-links .link-1:before {
   content: none;
 }
 
 /* Footer Right */
 
-.footer-distributed .footer-right {
+.gogoworld-footer-distributed .footer-right {
   width: 20%;
 }
 
-.footer-distributed .footer-company-about {
+.gogoworld-footer-distributed .footer-company-about {
   line-height: 20px;
   color: #92999f;
   font-size: 13px;
@@ -238,7 +238,7 @@
   margin: 0;
 }
 
-.footer-distributed .footer-company-about span {
+.gogoworld-footer-distributed .footer-company-about span {
   display: block;
   color: #ffffff;
   font-size: 14px;
@@ -246,14 +246,14 @@
   margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons ul {
+.gogoworld-footer-distributed .footer-icons ul {
   display: flex;
   margin-top: 25px;
   justify-content: center;
   align-items: center;
 }
 
-.footer-distributed .footer-icons li a {
+.gogoworld-footer-distributed .footer-icons li a {
   display: inline-block;
   width: 35px;
   height: 35px;
@@ -271,21 +271,21 @@
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
-  .footer-distributed {
+  .gogoworld-footer-distributed {
     font: bold 14px sans-serif;
     top: 850px;
   }
 
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
+  .gogoworld-footer-distributed .footer-left,
+  .gogoworld-footer-distributed .footer-center,
+  .gogoworld-footer-distributed .footer-right {
     display: block;
     width: 100%;
     margin-bottom: 40px;
     text-align: center;
   }
 
-  .footer-distributed .footer-center i {
+  .gogoworld-footer-distributed .footer-center i {
     margin-left: 0;
   }
 }

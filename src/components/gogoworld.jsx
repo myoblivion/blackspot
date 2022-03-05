@@ -66,7 +66,7 @@ const GoGoWorldComponent = ({ currentRoute }) => {
         </div>
       </section>
       <div className="section">
-        <footer className="footer-distributed">
+        <footer className="gogoworld-footer-distributed">
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">

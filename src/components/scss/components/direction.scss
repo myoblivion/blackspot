@@ -190,8 +190,10 @@
     }
     span {
       margin-bottom: 2%;
+      letter-spacing: 1px;
+      margin-left: 5%;
       ::before {
-        content: "•";
+        content: "• ";
       }
     }
     p {
@@ -424,8 +426,8 @@
       flex-direction: column;
       justify-content: space-between;
       margin: 1% auto;
-      width: 80%;
-      text-align: left;
+      width: 90%;
+      text-align: justify;
     }
   }
   h3 {
@@ -538,7 +540,6 @@
       .direction-content {
         width: 70%;
         height: 50%;
-
         p {
           width: 100%;
           text-align: justify;
@@ -596,7 +597,6 @@
           margin-bottom: 6%;
         }
       }
-
     }
     #jeep {
       .direction-content {
