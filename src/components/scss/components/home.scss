@@ -1120,7 +1120,7 @@ input[type="radio"] {
     }
   }
   .slider {
-    height: 115vh;
+    height: 130vh;
     width: 100%;
     margin-bottom: 0;
     &--control {
@@ -1160,10 +1160,10 @@ input[type="radio"] {
       }
       &-bg {
         position: absolute;
-        top: -5%;
+        top: -2.5%;
         left: -10%;
         width: 120%;
-        height: 120%;
+        height: 110%;
 
         background-position: center center;
       }
