@@ -96,12 +96,45 @@ body {
     margin: 0;
     left: 0;
     padding: 0;
+    #desktop2 {
+      position: relative;
+      display: flex;
+      right: -10%;
+      width: 90%;
+      height: 90%;
+    }
     .sccionlogo {
       opacity: 0;
-      position: absolute;
-      left: 60%;
       width: 202%;
       height: 300px;
+      #gogoracingsz {
+        width: 250%;
+        height: 200%;
+        left: 15%;
+        bottom: 67%;
+        position: absolute;
+      }
+      #logo1 {
+        width: 200%;
+        height: 70%;
+        left: 65%;
+        bottom: 50%;
+        position: absolute;
+      }
+      #gogoworld-logo {
+        width: 200%;
+        height: 90%;
+        left: 65%;
+        bottom: 30%;
+        position: absolute;
+      }
+      #gogochain-logo {
+        width:250%;
+        height: 50%;
+        left: 35%;
+        bottom: 67%;
+        position: absolute;
+      }
     }
     // Wraps games
     #mobile1,
@@ -142,7 +175,7 @@ body {
     }
     .slick-dots {
       position: absolute;
-      top: 103%;
+      top: 90%;
       li {
         color: white;
         background-color: rgba(0, 0, 0, 0);
@@ -175,19 +208,16 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 2%;
-      #gogoracingsz {
-        margin-top: -14px;
-        width: 50%;
-      }
+      margin-top: 1%;
 
       #ggrc1 {
-        top: 15%;
-        right: 8%;
-        height: 40%;
-        width: 20%;
-        z-index: 1;
+        top: 34%;
+        left: 9%;
+        height: 60%;
+        width: 30%;
+        z-index: 0;
         position: absolute;
+        transform: rotate(13deg);
       }
 
       #irina,
@@ -197,7 +227,7 @@ body {
       }
       #irina {
         top: 7%;
-        right: 8%;
+        right: 5%;
         height: 100%;
         width: 14%;
         z-index: 1;
@@ -218,11 +248,16 @@ body {
       #display-nones {
         display: none;
       }
+      #gogoracing {
+        opacity: 1;
+      }
       .gamedes {
         display: block;
         #gogoracevid {
-          top: 16%;
-          left: 39.5%;
+          top: 15%;
+          right: -5%;
+          width: 48%;
+          height: 69%;
         }
         #scionvid {
           top: 16%;
@@ -1045,33 +1080,35 @@ input[type="radio"] {
       }
       .sccionlogo {
         opacity: 0;
+        width: 100%;
+        height: 100%;
         #gogoworld-logo {
           height: 100px;
           width: 150px;
           position: absolute;
-          bottom: -50px;
-          left: 90px;
+          bottom: -34px;
+          left: 140px;
         }
         #gogochain-logo {
           height: 100px;
           width: 150px;
           position: absolute;
-          bottom: -50px;
-          left: 90px;
+          bottom: -34px;
+          left: 142px;
         }
         #logo1 {
           height: 100px;
           width: 150px;
           position: absolute;
-          bottom: -50px;
-          left: 90px;
+          bottom: -34px;
+          left: 122px;
         }
         #gogoracingsz {
-          height: 100px;
-          width: 150px;
+          height: 200px;
+          width: 190px;
           position: absolute;
-          bottom: -50px;
-          left: 100px;
+          bottom: -74px;
+          left: 122px;
         }
       }
       #desktop1,
@@ -1090,7 +1127,6 @@ input[type="radio"] {
         position: relative;
         bottom: 80px;
       }
-
 
       h2 {
         font-size: 28px;
@@ -1119,7 +1155,9 @@ input[type="radio"] {
         .gamedes {
           #gogoracevid {
             top: 5%;
-            left: 5.4%;
+            left: -4%;
+            width: 88%;
+            height: 25%;
           }
           #scionvid {
             top: 5%;
@@ -1247,12 +1285,12 @@ input[type="radio"] {
       }
       &-bg {
         position: absolute;
-        top: -1.7%;
+        top: -1%;
         left: -10%;
-        width: 120%;
+        width: 115%;
         height: 120%;
-        background-size: contain; 
-
+        background-size: cover;
+        background-position: center;
       }
     }
   }

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
+
 import Slider from "react-slick";
 import ScionLogo from "../images/scionlogo.png";
 import { HashLink } from "react-router-hash-link";
@@ -77,7 +78,7 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const ScionComponent = ({ currentRoute }) => {
+const ScionComponent = ({ props, ref, currentRoute }) => {
   const settings = {
     Infinite: true,
     lazyload: true,
@@ -474,9 +475,30 @@ const ScionComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -494,11 +516,9 @@ const ScionComponent = ({ currentRoute }) => {
               <p>
                 <Link
                   to="/direction"
-                  style={
-                    currentRoute === "direction"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>

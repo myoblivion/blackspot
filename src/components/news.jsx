@@ -6,11 +6,19 @@ import Banner1 from "../images/banner4l.png";
 import Banner2 from "../images/gogoraces.jpg";
 import Banner3 from "../images/gogoworlds.jpg";
 import Banner4 from "../images/game3.jpg";
-import { FaEnvelope, FaFacebook, FaMapMarked, FaReddit, FaRegArrowAltCircleUp, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaMapMarked,
+  FaReddit,
+  FaRegArrowAltCircleUp,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import icono from "../images/icons/logo.png";
 
-const NewsComponent = ({ currentRoute }) => {
+const NewsComponent = ({props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | News & Announcement";
@@ -31,11 +39,9 @@ const NewsComponent = ({ currentRoute }) => {
                   Read News, Game Updates, Announcements, and Guides..
                   <Link
                     to="/scionnews"
-                    style={
-                      currentRoute === "scion"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     View all
                   </Link>
@@ -50,7 +56,14 @@ const NewsComponent = ({ currentRoute }) => {
                 <h2>GoGO Racing</h2>
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
-                  <Link to="/gogoracingnews">View all</Link>
+                  <Link
+                    to="/gogoracingnews"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    View all
+                  </Link>
                 </p>
               </div>
             </div>
@@ -62,7 +75,14 @@ const NewsComponent = ({ currentRoute }) => {
                 <h2>GoGo World</h2>
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
-                  <Link to="/gogoworldnews">View all</Link>
+                  <Link
+                    to="/gogoworldnews"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    View all
+                  </Link>
                 </p>
               </div>
             </div>
@@ -74,7 +94,14 @@ const NewsComponent = ({ currentRoute }) => {
                 <h2>GoGo Chain</h2>
                 <p>
                   Read News, Game Updates, Announcements, and Guides..
-                  <Link to="/gogochainnews">View all</Link>
+                  <Link
+                    to="/gogochainnews"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    View all
+                  </Link>
                 </p>
               </div>
             </div>
@@ -86,9 +113,30 @@ const NewsComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-            <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -106,11 +154,9 @@ const NewsComponent = ({ currentRoute }) => {
               <p>
                 <Link
                   to="/direction"
-                  style={
-                    currentRoute === "direction"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>

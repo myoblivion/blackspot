@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
+
 import image from "../images/goracing.png";
 import image2 from "../images/gogorc.jpg";
 import { HashLink } from "react-router-hash-link";
@@ -34,7 +35,7 @@ import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
 
 
-const GoGoRacingComponent = ({ currentRoute }) => {
+const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Racing";
@@ -79,9 +80,15 @@ const GoGoRacingComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link to="/about"                   {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}>About Us</Link>
+              <Link to="/privacy"                   {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}>Privacy & Policy</Link>
+              <Link to="/job"                   {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}>Career</Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -97,7 +104,9 @@ const GoGoRacingComponent = ({ currentRoute }) => {
           <div className="footer-center">
             <div className="desz">
               <p>
-                <Link to="/direction">
+                <Link to="/direction"                   {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}>
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>
               </p>

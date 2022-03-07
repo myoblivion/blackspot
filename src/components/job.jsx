@@ -21,7 +21,7 @@ const handleToken = (token) => {
     return { ...currentForm, token };
   });
 };
-const JobComponent = ({ currentRoute }) => {
+const JobComponent = ({ props, ref, currentRoute }) => {
   // Email Js
   function sendEmail(e) {
     e.preventDefault();
@@ -589,9 +589,30 @@ const JobComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -609,11 +630,9 @@ const JobComponent = ({ currentRoute }) => {
               <p>
                 <Link
                   to="/direction"
-                  style={
-                    currentRoute === "direction"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>

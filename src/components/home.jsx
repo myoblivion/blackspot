@@ -21,7 +21,7 @@ import ggrc2 from "../images/edit/ggrc-2.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
-import Gogoracing from "../images/icons/gogoracing.png";
+import Gogoracing from "../images/edit/Gogo_Racing_Logo.png";
 
 // Images
 import game1 from "../images/edit/banner1.png";
@@ -223,7 +223,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
-                          <Link to="/scion">
+                          <Link
+                            to="/scion"
+                            {...props}
+                            ref={ref}
+                            onClick={() => window.scrollTo(0, 0)}
+                          >
                             <img
                               src={ScionLogo}
                               alt="Scion Fist Logo"
@@ -271,7 +276,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
-                          <Link to="/gogoracing">
+                          <Link
+                            to="/gogoracing"
+                            {...props}
+                            ref={ref}
+                            onClick={() => window.scrollTo(0, 0)}
+                          >
                             <img
                               src={Gogoracing}
                               alt="Gogo Racing Logo"
@@ -320,7 +330,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       <div className="logoz">
                         <div className="icons">
                           <div className="sccionlogo">
-                            <Link to="/gogoworld">
+                            <Link
+                              to="/gogoworld"
+                              {...props}
+                              ref={ref}
+                              onClick={() => window.scrollTo(0, 0)}
+                            >
                               <img
                                 src={Gogoworld}
                                 alt="Scion Fist Logo"
@@ -369,7 +384,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       <div className="logoz">
                         <div className="icons">
                           <div className="sccionlogo">
-                            <Link to="/gogochain">
+                            <Link
+                              to="/gogochain"
+                              {...props}
+                              ref={ref}
+                              onClick={() => window.scrollTo(0, 0)}
+                            >
                               <img
                                 src={Gogochain}
                                 alt="Scion Fist Logo"
