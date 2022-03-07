@@ -112,7 +112,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/ScionFistPH">
+              <a href="https://twitter.com/ScionFist_PH">
                 <FaTwitter />
               </a>
             </li>
