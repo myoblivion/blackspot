@@ -24,7 +24,6 @@ import {
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
-
 const GoGoWorldComponent = ({ currentRoute }) => {
   // Title
   useEffect(() => {
@@ -88,14 +87,7 @@ const GoGoWorldComponent = ({ currentRoute }) => {
           <div className="footer-center">
             <div className="desz">
               <p>
-                <Link
-                  to="/direction"
-                  style={
-                    currentRoute === "direction"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
-                >
+                <Link to="/direction">
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>
               </p>

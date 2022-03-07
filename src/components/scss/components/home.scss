@@ -198,15 +198,28 @@ body {
         left: 25%;
         height: 50%;
         width: 20%;
-        background-color: white;
+        z-index: 1;
+        transition: .2s ease-in;
+      }
+      #irina,
+      #risa {
+        position: absolute;
+        border-radius: 50%;
+        padding: 0 !important;
+      }
+      #irina {
+        top: 10%;
+        right: 3%;
+        height: 90%;
+        width: 20%;
         z-index: 1;
       }
-      #gogoracevid:hover {
-        #ggrc1 {
-          transition: all ease-in .5s;
-          right: 0;
-
-        }
+      #risa {
+        top: 10%;
+        left: 25%;
+        height: 90%;
+        width: 20%;
+        z-index: 1;
       }
       img {
         margin-top: 20px;
@@ -217,12 +230,12 @@ body {
       .gamedes {
         display: block;
         #gogoracevid {
-          top: 20%;
-          left: 39%;
+          top: 16%;
+          left: 40%;
         }
         #scionvid {
-          top: 20%;
-          left: 39%;
+          top: 16%;
+          left: 36.5%;
         }
         .icon-list {
           display: flex;
@@ -258,12 +271,17 @@ body {
           position: absolute;
         }
 
+        #scionvid:hover {
+          #irina {
+            left: 0;
+          }
+        }
         .video {
           display: block;
-          height: 65%;
+          height: 70%;
           max-width: 100%;
           max-height: 100%;
-          width: 43%;
+          width: 42%;
           position: absolute;
           margin: 0 auto;
           top: 0%;
@@ -271,6 +289,7 @@ body {
           iframe {
             height: 100%;
             width: 100%;
+            border-radius: 17px;
           }
         }
       }
@@ -1015,7 +1034,9 @@ input[type="radio"] {
       margin: 0;
       height: 100vh;
       #ggrc1,
-      #ggrc2 {
+      #ggrc2,
+      #irina,
+      #risa {
         display: none;
         opacity: 0;
         height: 0;
@@ -1094,7 +1115,11 @@ input[type="radio"] {
       .slider-image {
         .gamedes {
           #gogoracevid {
-            top: 4.5%;
+            top: 5%;
+            left: 5.4%;
+          }
+          #scionvid {
+            top: 5%;
             left: 5.4%;
           }
           .video {
@@ -1103,7 +1128,7 @@ input[type="radio"] {
             width: 90%;
             height: 25%;
             iframe {
-              border-radius: 0;
+              border-radius: 10px;
               height: 100%;
               width: 100%;
             }
@@ -1158,7 +1183,7 @@ input[type="radio"] {
     }
   }
   .slider {
-    height: 130vh;
+    height: 120vh;
     width: 100%;
     margin-bottom: 0;
     &--control {
@@ -1198,12 +1223,11 @@ input[type="radio"] {
       }
       &-bg {
         position: absolute;
-        top: -2.5%;
-        left: -10%;
+        top: -5%;
+        left: -15%;
         width: 120%;
-        height: 110%;
-
-        background-position: center center;
+        height: 130%;
+        background-size: contain;
       }
     }
   }

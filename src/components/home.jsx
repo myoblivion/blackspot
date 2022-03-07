@@ -7,7 +7,7 @@ import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
 // Characters
 // Scion Fist
-import Irina from "../images/characters/ch16.png";
+import Irina from "../images/characters/ch6.png";
 import Risa from "../images/characters/ch11.png";
 
 // Gogo Characters
@@ -216,6 +216,8 @@ const HomeComponent = ({ currentRoute }) => {
               <Slider {...settings}>
                 <div className="slider-image" id="firstgame">
                   <img src={game1} alt="" id="desktop1" />
+                  <img src={Irina} alt="" id="irina"/>
+                  <img src={Risa} alt="" id="risa"/>
                   <img src={mobile1} alt="" id="mobile1" />
                   <div className="gamedes">
                     <div className="logoz">
