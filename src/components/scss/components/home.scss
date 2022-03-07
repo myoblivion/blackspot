@@ -185,8 +185,8 @@ body {
       }
 
       #ggrc1 {
-        top: 5%;
-        left: 5%;
+        top: 15%;
+        right: 8%;
         height: 40%;
         width: 20%;
         z-index: 1;
@@ -200,9 +200,9 @@ body {
       }
       #irina {
         top: 7%;
-        right: 4%;
+        right: 8%;
         height: 100%;
-        width: 15%;
+        width: 14%;
         z-index: 1;
       }
       #risa {
@@ -260,7 +260,7 @@ body {
           left: 8%;
         }
         .icons {
-          width: 30%;
+          width: 10%;
           top: -25%;
           left: 0;
           position: absolute;
@@ -1038,6 +1038,9 @@ input[type="radio"] {
       .slick-dots {
         top: 65%;
         width: 100%;
+        button {
+          height: 9px;
+        }
         li {
           width: 10%;
           height: 5%;
