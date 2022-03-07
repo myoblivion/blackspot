@@ -98,13 +98,10 @@ body {
     padding: 0;
     .sccionlogo {
       opacity: 0;
-      #gogochain-logo {
-        height: 150px;
-        width: 200px;
-        position: absolute;
-        bottom: -90px;
-        left: 40px;
-      }
+      position: absolute;
+      left: 60%;
+      width: 202%;
+      height: 300px;
     }
     // Wraps games
     #mobile1,
