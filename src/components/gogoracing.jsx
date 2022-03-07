@@ -166,7 +166,7 @@ const GoGoRacingComponent = ({ currentRoute }) => {
           </div>
         </footer>
         <div className="bootons">
-          <HashLink smooth to="/gogoworld#" id="up">
+          <HashLink smooth to="/gogoracing#" id="up">
             <FaRegArrowAltCircleUp />
           </HashLink>
         </div>

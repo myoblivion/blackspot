@@ -15,8 +15,8 @@ import Mongi from "../images/characters/Mongi.png";
 import Pengsuni from "../images/characters/Pengsuni.png";
 import Euik from "../images/characters/Euik.png";
 import Eureungi from "../images/characters/Eureungi.png";
-import ggrc1 from "../images/edit/ggrc-1.png";
-import ggrc2 from "../images/edit/ggrc-2.png"
+import ggrc1 from "../images/edit/nf-tcharacter.png";
+import ggrc2 from "../images/edit/ggrc-2.png";
 // logo
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
@@ -216,15 +216,19 @@ const HomeComponent = ({ currentRoute }) => {
               <Slider {...settings}>
                 <div className="slider-image" id="firstgame">
                   <img src={game1} alt="" id="desktop1" />
-                  <img src={Irina} alt="" id="irina"/>
-                  <img src={Risa} alt="" id="risa"/>
+                  <img src={Irina} alt="" id="irina" />
+                  <img src={Risa} alt="" id="risa" />
                   <img src={mobile1} alt="" id="mobile1" />
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
                         <div className="sccionlogo">
                           <Link to="/scion">
-                            <img src={ScionLogo} alt="Scion Fist Logo" id="logo1"/>
+                            <img
+                              src={ScionLogo}
+                              alt="Scion Fist Logo"
+                              id="logo1"
+                            />
                           </Link>
                         </div>
                       </div>
@@ -259,10 +263,9 @@ const HomeComponent = ({ currentRoute }) => {
                     </div>
                   </div>
                 </div>
-                <div className="slider-image" >
+                <div className="slider-image">
                   <img src={game4} alt="Game" id="desktop2" />
-                  <img src={ggrc1} alt="" id="ggrc1"/>
-                  <img src={ggrc2} alt="" id="ggrc2"/>
+                  <img src={ggrc1} alt="" id="ggrc1" />
                   <img src={mobile2} alt="" id="mobile2" />
                   <div className="gamedes">
                     <div className="logoz">
@@ -277,7 +280,7 @@ const HomeComponent = ({ currentRoute }) => {
                           </Link>
                         </div>
                       </div>
-                      <ul className="icon-list">
+                      <ul className="icon-list" id="display-nones">
                         <li>
                           <a href="#">
                             <FaGooglePlay />
@@ -312,17 +315,21 @@ const HomeComponent = ({ currentRoute }) => {
                 <div className="slider-image">
                   <div className="slider-image" id="firstgame">
                     <img src={game2} alt="Game" id="desktop3" />
-                    <img src={mobile3} alt="" id="mobile3"/>
+                    <img src={mobile3} alt="" id="mobile3" />
                     <div className="gamedes">
                       <div className="logoz">
                         <div className="icons">
                           <div className="sccionlogo">
                             <Link to="/gogoworld">
-                              <img src={Gogoworld} alt="Scion Fist Logo" id="gogoworld-logo"/>
+                              <img
+                                src={Gogoworld}
+                                alt="Scion Fist Logo"
+                                id="gogoworld-logo"
+                              />
                             </Link>
                           </div>
                         </div>
-                        <ul className="icon-list" id="hidden">
+                        <ul className="icon-list" id="display-nones">
                           <li>
                             <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
                               <FaGooglePlay />
@@ -356,18 +363,22 @@ const HomeComponent = ({ currentRoute }) => {
                 </div>
                 <div className="slider-image">
                   <div className="slider-image" id="firstgame">
-                  <img src={game3} alt="Game" id="desktop4" />
-                    <img src={mobile4} alt="" id="mobile4"/>
+                    <img src={game3} alt="Game" id="desktop4" />
+                    <img src={mobile4} alt="" id="mobile4" />
                     <div className="gamedes">
                       <div className="logoz">
                         <div className="icons">
                           <div className="sccionlogo">
                             <Link to="/gogochain">
-                              <img src={Gogochain} alt="Scion Fist Logo" id="gogochain-logo"/>
+                              <img
+                                src={Gogochain}
+                                alt="Scion Fist Logo"
+                                id="gogochain-logo"
+                              />
                             </Link>
                           </div>
                         </div>
-                        <ul className="icon-list" id="hidden">
+                        <ul className="icon-list" id="display-nones">
                           <li>
                             <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
                               <FaGooglePlay />
@@ -460,7 +471,7 @@ const HomeComponent = ({ currentRoute }) => {
         <div className="section">
           <footer className="footer-distributed">
             <div className="footer-left">
-              <img src={icono} alt="" id="footer-logo"/>
+              <img src={icono} alt="" id="footer-logo" />
               <p className="footer-links">
                 <Link to="/about">About Us</Link>
                 <Link to="/privacy">Privacy & Policy</Link>

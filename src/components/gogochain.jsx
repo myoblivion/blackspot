@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from "react";
 import image from "../images/banner4.png";
+import image2 from "../images/gogochain-mobile.png";
 import { HashLink } from "react-router-hash-link";
-import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import icono from "../images/icons/logo.png";
+import { Link } from "react-router-dom";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaMapMarked,
+  FaReddit,
+  FaRegArrowAltCircleUp,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 const GoGoChainComponent = ({ currentRoute }) => {
   // Title
@@ -10,15 +22,107 @@ const GoGoChainComponent = ({ currentRoute }) => {
   }, []);
   return (
     <div className="gogochain wrapper">
-      <section className="wrapper">
+      <section className="gogochain-wrapper">
         <h1>Coming Soon</h1>
-        <img src={image} alt="" />
+        <img src={image} alt="" id="first-image"/>
+        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" />
       </section>
-      <div className="bootons">
-        <HashLink smooth to="/gogochain#" id="up">
-        <FaRegArrowAltCircleUp />
+      <div className="section">
+        <footer className="gogochain-footer-distributed">
+          <div className="footer-left">
+            <img src={icono} alt="" className="logso" />
+            <p className="footer-links">
+              <Link to="/about">About Us</Link>
+              <Link to="/privacy">Privacy & Policy</Link>
+              <Link to="/job">Career</Link>
 
-        </HashLink>
+              <HashLink smooth to="/#contact">
+                {" "}
+                Contact Us
+              </HashLink>
+            </p>
+
+            <p className="footer-company-name">
+              Copyright © Black Spot Studio PH{" "}
+            </p>
+          </div>
+
+          <div className="footer-center">
+            <div className="desz">
+              <p>
+                <Link to="/direction">
+                  <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+                </Link>
+              </p>
+            </div>
+
+            <div className="desz">
+              <p>
+                <a href="mailto:support@company.com">
+                  {" "}
+                  <FaEnvelope /> support@company.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="footer-right">
+            <div className="footer-icons">
+              <ul className="social-media-list">
+                <li>
+                  <a
+                    href="https://www.facebook.com/BlackspotstudioPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/phblackspotstudio/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <AiFillInstagram />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/BlackSpotPH"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaReddit />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                    target="_blank"
+                    className="contact-icon"
+                  >
+                    <FaYoutube />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <div className="bootons">
+          <HashLink smooth to="/gogochain#" id="up">
+            <FaRegArrowAltCircleUp />
+          </HashLink>
+        </div>
       </div>
     </div>
   );
