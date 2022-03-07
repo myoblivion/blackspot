@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
 
 import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
-const NavbarComponent = ({ currentRoute, events }) => {
+const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
   let [myCheckbox, setMyCheckbox] = useState(false);
 
   let menuRef = useRef();
@@ -38,7 +38,13 @@ const NavbarComponent = ({ currentRoute, events }) => {
       </label>
       <ul className="menu" ref={menuRef}>
         <li>
-          <Link to="/" className="nav-item a">
+          <Link
+            to="/"
+            className="nav-item a"
+            {...props}
+            ref={ref}
+            onClick={() => window.scrollTo(0, 0)}
+          >
             Home
           </Link>
         </li>
@@ -48,22 +54,46 @@ const NavbarComponent = ({ currentRoute, events }) => {
           </p>
           <ul className="tabs" id="menuz">
             <li>
-              <Link to="/scion" className="nav-item a">
+              <Link
+                to="/scion"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Scion Fist
               </Link>
             </li>
             <li>
-              <Link to="/gogoracing" className="nav-item a">
+              <Link
+                to="/gogoracing"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 GoGo Racing
               </Link>
             </li>
             <li>
-              <Link to="/gogoworld" className="nav-item a">
+              <Link
+                to="/gogoworld"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 GoGo World
               </Link>
             </li>
             <li>
-              <Link to="/gogochain" className="nav-item a">
+              <Link
+                to="/gogochain"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 GoGo Chain
               </Link>
             </li>
@@ -75,22 +105,46 @@ const NavbarComponent = ({ currentRoute, events }) => {
           </p>
           <ul className="tab" id="menuz">
             <li>
-              <Link to="/about" className="nav-item a">
+              <Link
+                to="/about"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/direction" className="nav-item a">
+              <Link
+                to="/direction"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Directions
               </Link>
             </li>
             <li>
-              <Link to="/job" className="nav-item a">
+              <Link
+                to="/job"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Careers
               </Link>
             </li>
             <li>
-              <Link to="/news" className="nav-item a">
+              <Link
+                to="/news"
+                className="nav-item a"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 News & Announcements
               </Link>
             </li>

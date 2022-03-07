@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
 
@@ -75,7 +75,7 @@ const handleExpire = () => {
   });
 };
 
-const HomeComponent = ({ currentRoute }) => {
+const HomeComponent = ({ props, ref, currentRoute }) => {
   // :D
   const [count, setCount] = useState(0);
 
@@ -473,9 +473,30 @@ const HomeComponent = ({ currentRoute }) => {
             <div className="footer-left">
               <img src={icono} alt="" id="footer-logo" />
               <p className="footer-links">
-                <Link to="/about">About Us</Link>
-                <Link to="/privacy">Privacy & Policy</Link>
-                <Link to="/job">Career</Link>
+                <Link
+                  to="/about"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/privacy"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Privacy & Policy
+                </Link>
+                <Link
+                  to="/job"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Career
+                </Link>
 
                 <HashLink smooth to="/#contact">
                   {" "}
@@ -493,11 +514,9 @@ const HomeComponent = ({ currentRoute }) => {
                 <p>
                   <Link
                     to="/direction"
-                    style={
-                      currentRoute === "direction"
-                        ? { borderBottom: "2px solid yellow" }
-                        : { borderBottom: "2px solid transparent" }
-                    }
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                   </Link>

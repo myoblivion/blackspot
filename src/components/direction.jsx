@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
 import GifLoader from "react-gif-loader";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ import jeep from "../images/icons/Jeep.png";
 import train from "../images/icons/Train.png";
 import { AiFillInstagram } from "react-icons/ai";
 
-const DirectionComponent = ({ currentRoute }) => {
+const DirectionComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Direction";
   }, []);
@@ -329,9 +329,30 @@ const DirectionComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -349,11 +370,9 @@ const DirectionComponent = ({ currentRoute }) => {
               <p>
                 <Link
                   to="/direction"
-                  style={
-                    currentRoute === "direction"
-                      ? { borderBottom: "2px solid yellow" }
-                      : { borderBottom: "2px solid transparent" }
-                  }
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>

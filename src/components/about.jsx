@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import {
@@ -36,7 +36,7 @@ import ggnft from "../images/icons/gogochain.png";
 import ggw from "../images/icons/gogoworld.png";
 import ggr from "../images/icons/gogoracing.png";
 import sf from "../images/scionlogo.png";
-const AboutComponent = ({ currentRoute }) => {
+const AboutComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | About Us";
@@ -128,7 +128,12 @@ const AboutComponent = ({ currentRoute }) => {
         <div className="box-wrapper">
           <div className="baks box1">
             <div className="logo-game" id="g1">
-              <Link to="/scion">
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <img src={sf} alt="" />
               </Link>
             </div>
@@ -140,7 +145,12 @@ const AboutComponent = ({ currentRoute }) => {
           </div>
           <div className="baks box2">
             <div className="logo-game">
-              <Link to="/gogoworld">
+              <Link
+                to="/gogoworld"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <img src={ggw} alt="" />
               </Link>
             </div>
@@ -152,7 +162,12 @@ const AboutComponent = ({ currentRoute }) => {
           </div>
           <div className="baks box3">
             <div className="logo-game" id="g2">
-              <Link to="/gogochain">
+              <Link
+                to="/gogochain"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <img src={ggc} alt="" />
               </Link>
             </div>
@@ -163,7 +178,12 @@ const AboutComponent = ({ currentRoute }) => {
           </div>
           <div className="baks box4">
             <div className="logo-game">
-              <Link to="/gogoracing">
+              <Link
+                to="/gogoracing"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <img src={ggr} alt="" />
               </Link>
             </div>
@@ -261,9 +281,30 @@ const AboutComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
