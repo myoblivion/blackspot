@@ -130,6 +130,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       );
     e.target.reset();
   }
+  
 
   return (
     // Home
