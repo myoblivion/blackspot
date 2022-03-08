@@ -344,7 +344,7 @@ body {
 
   .contact-us-section {
     background-color: rgba(0, 0, 0, 0.849);
-    width: 60%;
+    width: 70%;
     min-height: 500px;
     height: 700px;
     position: relative;
@@ -354,7 +354,6 @@ body {
     margin-left: 15%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     border-radius: 15px;
   }
@@ -378,7 +377,8 @@ body {
     display: flex;
   }
   .contact-us-form {
-    margin: 35px 25px;
+    margin: 35px 15px;
+    width: 100%;
   }
   .contact-us-form .form-group {
     margin-bottom: 30px;
@@ -391,7 +391,7 @@ body {
   .contact-us-form input,
   .contact-us-form textarea {
     margin: 0px 0px 10px 0px;
-    width: 100%;
+    width: 110%;
     display: block;
     border: none;
     padding: 10px 0;
@@ -418,6 +418,9 @@ body {
     color: #ffffff;
     font-size: 18px;
     resize: none;
+  }
+  .contact-us-form textarea {
+    height: 100px;
   }
 
   .contact-us-form input:focus,
@@ -453,11 +456,12 @@ body {
     font-weight: bold;
     text-transform: unset;
     box-shadow: 0px 0px 27px 0px rgba(0, 0, 0);
-    padding: 10px 25px;
+    padding: 10px 30px;
     border: 0px;
     background-color: #ffb808;
     text-transform: uppercase;
     border-radius: 15px;
+    margin-top: 15px;
     margin-bottom: 20px;
     margin-left: 20%;
     cursor: pointer;
@@ -468,28 +472,40 @@ body {
     width: 100%;
     position: relative;
     height: 100%;
+    .dubai:hover ~ .korea {
+      background-color: white;
+    }
     .korea {
-      position: absolute;
-      right: 4%;
-      top: 33%;
       width: 100%;
       img {
-        filter: contrast(100%);
-        transition: all .3s ease-in-out;
-        width: 60%;
+        width: 80%;
+        position: absolute;
+        right: 40.8%;
+        top: 33%;
+        clip: rect(0px,360px,500px,0px);
+        transition: all .2s ease-in-out;
+        &:hover {
+          clip: rect(0px, 900px, 800px, 0px);
 
         }
-    }
-    .dubai {
-      position: absolute;
-      top: 37%;
-      right: 1%;
-      width: 100%;
-      img {
-        width: 60%;
-        filter: grayscale(100%);
       }
     }
+    .dubai {
+      width: 100%;
+      img {
+        width: 80%;
+        filter: grayscale(100%);
+        position: absolute;
+        top: 37.3%;
+        right: 40.8%;
+        clip: rect(0px, 905px, 529px, 360px);
+        transition: all .2s ease-in-out;
+        &:hover {
+          clip: rect(0px, 900px, 800px, 0px);
+        }
+      }
+    }
+
   }
 
   //   Footer

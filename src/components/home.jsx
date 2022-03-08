@@ -86,7 +86,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCount((c) => ++c % 4);
-    }, 9000);
+    }, 6000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -130,7 +130,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       );
     e.target.reset();
   }
-  
 
   return (
     // Home
@@ -473,6 +472,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       id="message"
                       rows="2"
                       name="message"
+                      maxLength={600}
                     ></textarea>
                   </div>
                   <div className="form-group clearfix">
@@ -494,13 +494,19 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           </div>
           <div className="partners-logo">
             <div className="korea">
-              <a href="http://blackspotstudio.com/final/main/main.asp" target="_blank">
-              <img src={Korealogo} alt="" />
+              <a
+                href="http://blackspotstudio.com/final/main/main.asp"
+                target="_blank"
+              >
+                <img src={Korealogo} alt="" />
               </a>
             </div>
             <div className="dubai">
-            <a href="http://blackspotstudio.com/final/main/main.asp" target="_blank">
-              <img src={Dubailogo} alt="" />
+              <a
+                href="http://blackspotstudio.com/final/main/main.asp"
+                target="_blank"
+              >
+                <img src={Dubailogo} alt="" />
               </a>
             </div>
           </div>
