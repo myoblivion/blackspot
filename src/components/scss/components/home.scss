@@ -356,6 +356,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 15px;
   }
   .contact-us-section h2 {
     color: #ffb808;
@@ -469,22 +470,20 @@ body {
     height: 100%;
     .korea {
       position: absolute;
-      right: 38%;
-      top: 50%;
+      right: 4%;
+      top: 33%;
       width: 100%;
       img {
         filter: contrast(100%);
         transition: all .3s ease-in-out;
         width: 60%;
-        &:hover {
-          background-color: #cc0001;
+
         }
-      }
     }
     .dubai {
       position: absolute;
-      top: 50%;
-      right: 37.5%;
+      top: 37%;
+      right: 1%;
       width: 100%;
       img {
         width: 60%;
@@ -1256,6 +1255,16 @@ input[type="radio"] {
       width: 100%;
       background-size: cover;
       background-position: center;
+      background-image: url("/src/images/Contact\ Us\ BG\ \(Mobile\ Size\).png");
+      background-repeat: no-repeat;
+      .contact-us-form {
+        margin: 0 auto;
+        width: 90%;
+        .form-group {
+          margin: 0 auto;
+          padding: 20px 20px;
+        }
+      }
     }
     .footer-distributed {
       font: bold 10px sans-serif;
@@ -1322,7 +1331,7 @@ input[type="radio"] {
       &.anim-3parts {
         .part {
           &:before {
-            background-image: url("/src/images/Scion Fist Banner (Mobile) 350 px 800 px.png");
+            background-image: url("/src/images/SF 350 x 600 px.png");
           }
         }
       }
@@ -1330,7 +1339,7 @@ input[type="radio"] {
       &.anim-9parts {
         .part {
           &:before {
-            background-image: url("/src/images/Gogo\ Racing\ Banner\ \(Mobile\)\ 350px\ 800\ px.png");
+            background-image: url("/src/images/Gogo\ Racing\ Banner\ \(Mobile\)\ 350px\ 800\ pxx.png");
           }
         }
       }
@@ -1338,9 +1347,9 @@ input[type="radio"] {
         position: absolute;
         top: -1%;
         left: -10%;
-        width: 115%;
+        width: 120%;
         height: 120%;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
       }
     }

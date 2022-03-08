@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
-const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
+const NavbarComponent = ({ props, ref, currentRoute, events }) => {
   let [myCheckbox, setMyCheckbox] = useState(false);
 
   let menuRef = useRef();
@@ -16,6 +16,7 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
       }
     });
   });
+  const [click, seClick] = useState(false);
   return (
     <header className="navbar active">
       <div className="logo">
@@ -36,7 +37,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
         <span className="navicon"></span>
       </label>
       <ul className="menu" ref={menuRef}>
-        <li>
+        <li
+          className={click ? "nav-menu active" : "nav-menu"}
+          onClick={() => setMyCheckbox((prev) => !prev)}
+          ref={menuRef}
+        >
           <Link
             to="/"
             className="nav-item a"
@@ -52,7 +57,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
             Games <FaCaretDown />
           </p>
           <ul className="tabs" id="menuz">
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/scion"
                 className="nav-item a"
@@ -63,7 +72,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
                 Scion Fist
               </Link>
             </li>
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/gogoracing"
                 className="nav-item a"
@@ -74,7 +87,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
                 GoGo Racing
               </Link>
             </li>
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/gogoworld"
                 className="nav-item a"
@@ -85,7 +102,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
                 GoGo World
               </Link>
             </li>
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/gogochain"
                 className="nav-item a"
@@ -103,7 +124,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
             About <FaCaretDown />
           </p>
           <ul className="tab" id="menuz">
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/about"
                 className="nav-item a"
@@ -114,7 +139,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
                 About Us
               </Link>
             </li>
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/direction"
                 className="nav-item a"
@@ -125,7 +154,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
                 Directions
               </Link>
             </li>
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/job"
                 className="nav-item a"
@@ -136,7 +169,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
                 Careers
               </Link>
             </li>
-            <li>
+            <li
+              className={click ? "nav-menu active" : "nav-menu"}
+              onClick={() => setMyCheckbox((prev) => !prev)}
+              ref={menuRef}
+            >
               <Link
                 to="/news"
                 className="nav-item a"
@@ -149,7 +186,11 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
             </li>
           </ul>
         </li>
-        <li>
+        <li
+          className={click ? "nav-menu active" : "nav-menu"}
+          onClick={() => setMyCheckbox((prev) => !prev)}
+          ref={menuRef}
+        >
           <HashLink smooth to="/#contact">
             {" "}
             Contact{" "}

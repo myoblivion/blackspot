@@ -24,8 +24,8 @@ import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/edit/Gogo_Racing_Logo.png";
 
 // Black Spot Studio Logos
-import Korealogo from "../images/logokor.png";
-import Dubailogo from "../images/dubai.png";
+import Korealogo from "../images/icons/Black_Spot_KR.png";
+import Dubailogo from "../images/icons/Black_Spot_DB.png";
 
 // Images
 import game1 from "../images/edit/banner1.png";
