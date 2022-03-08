@@ -475,7 +475,7 @@ body {
     position: relative;
     height: 100%;
     .korea:hover ~ .dubai img {
-      opacity: 0;
+      z-index: 0;
     }
 
     .korea {
@@ -490,6 +490,7 @@ body {
         &:hover {
           clip: rect(0px, 1000px, 500px, 0px);
         }
+        z-index: 1;
       }
     }
     .dubai {
@@ -505,6 +506,7 @@ body {
         &:hover {
           clip: rect(0px, 1005px, 9000px, 0px);
         }
+        z-index: 1;
       }
     }
     .dubai:hover ~ .korea img {
