@@ -479,29 +479,29 @@ body {
     .korea {
       width: 100%;
       img {
-        width: 80%;
+        width: 90%;
         position: absolute;
-        right: 40.8%;
+        right: 25.8%;
         top: 33%;
-        clip: rect(0px, 360px, 500px, 0px);
+        clip: rect(0px, 500px, 500px, 0px);
         transition: all 0.5s ease-in-out;
         &:hover {
-          clip: rect(0px, 900px, 800px, 0px);
+          clip: rect(0px, 1000px, 500px, 0px);
         }
       }
     }
     .dubai {
       width: 100%;
       img {
-        width: 79.5%;
+        width: 89.5%;
         filter: grayscale(100%);
         position: absolute;
-        top: 37.4%;
-        right: 40.8%;
-        clip: rect(0px, 905px, 519px, 350px);
+        top: 38%;
+        right: 25.8%;
+        clip: rect(0px, 1005px, 519px, 350px);
         transition: all 0.5s ease-in-out;
         &:hover {
-          clip: rect(0px, 900px, 800px, 0px);
+          clip: rect(0px, 1005px, 9000px, 0px);
         }
       }
     }
