@@ -333,18 +333,20 @@ body {
     height: 100vh;
     min-height: 100%;
     max-height: 100vh;
-    background-image: url("/src/images/banner4.jpg");
+    background-image: url("/src/images/contact.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
 
   .contact-us-section {
     background-color: rgba(0, 0, 0, 0.849);
     width: 30%;
-    min-height: 400px;
+    min-height: 500px;
+    height: 500px;
     position: relative;
     margin-bottom: 50px;
     box-shadow: 0 10px 8px -7px rgba(0, 0, 0, 0.5);
@@ -453,6 +455,34 @@ body {
     margin-bottom: 20px;
     cursor: pointer;
   }
+  .partners-logo {
+    margin: 0 auto;
+    margin-left: 10%;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    .korea {
+      position: absolute;
+      right: 38%;
+      top: 50%;
+      img {
+        filter: contrast(100%);
+        transition: all .3s ease-in-out;
+        &:hover {
+          background-color: #cc0001;
+        }
+      }
+    }
+    .dubai {
+      position: absolute;
+      top: 50%;
+      right: 37.5%;
+      img {
+        filter: grayscale(100%);
+      }
+    }
+  }
+
   //   Footer
   .footer-distributed {
     background: rgb(68, 68, 68);
@@ -687,7 +717,7 @@ input[type="radio"] {
 }
 .slider {
   position: relative;
-  margin-top: 5%;
+  margin-top: 1%;
   height: 100vh;
   &--control {
     z-index: 50;
@@ -848,7 +878,7 @@ input[type="radio"] {
           @include bgPart;
           width: 300%;
           height: 100%;
-          background-image: url("/src/images/ScionFist.png");
+          background-image: url("/src/images/Banner SF.png");
         }
 
         &.left {

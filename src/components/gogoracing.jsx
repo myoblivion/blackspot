@@ -90,8 +90,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               {/* <Link to="/privacy"                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}>Privacy & Policy</Link> */}
-              <p>Privacy & Policy</p>
-
+                <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}

@@ -23,6 +23,10 @@ import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/edit/Gogo_Racing_Logo.png";
 
+// Black Spot Studio Logos
+import Korealogo from "../images/logokor.png";
+import Dubailogo from "../images/dubai.png";
+
 // Images
 import game1 from "../images/edit/banner1.png";
 import game2 from "../images/edit/banner2.png";
@@ -485,6 +489,18 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+          <div className="partners-logo">
+            <div className="korea">
+              <a href="http://blackspotstudio.com/final/main/main.asp" target="_blank">
+              <img src={Korealogo} alt="" />
+              </a>
+            </div>
+            <div className="dubai">
+            <a href="http://blackspotstudio.com/final/main/main.asp" target="_blank">
+              <img src={Dubailogo} alt="" />
+              </a>
             </div>
           </div>
         </div>

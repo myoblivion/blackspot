@@ -7,7 +7,7 @@ import { FaCaretDown } from "react-icons/fa";
 
 const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
   let [myCheckbox, setMyCheckbox] = useState(false);
-  let handleClick = useState (false)
+
   let menuRef = useRef();
   useEffect(() => {
     document.addEventListener("mousedown", (handleClick) => {
@@ -16,9 +16,6 @@ const NavbarComponent = ({ props, ref, currentRoute ,events }) => {
       }
     });
   });
-  handleClick = () => {
-    myCheckbox.setState({clicked:!myCheckbox.state.clicked})
-  };
   return (
     <header className="navbar active">
       <div className="logo">
