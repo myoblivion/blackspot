@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { FaRegArrowAltCircleUp } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
@@ -24,7 +24,7 @@ import {
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
-const GoGoWorldComponent = ({ currentRoute }) => {
+const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo World";
@@ -69,9 +69,24 @@ const GoGoWorldComponent = ({ currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/privacy">Privacy & Policy</Link>
-              <Link to="/job">Career</Link>
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              {/* <Link to="/privacy">Privacy & Policy</Link> */}
+              <p>Privacy & Policy</p>
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -87,7 +102,12 @@ const GoGoWorldComponent = ({ currentRoute }) => {
           <div className="footer-center">
             <div className="desz">
               <p>
-                <Link to="/direction">
+                <Link
+                  to="/direction"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>
               </p>

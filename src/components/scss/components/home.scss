@@ -505,6 +505,14 @@ body {
     text-decoration: none;
     color: inherit;
   }
+  .footer-distributed .footer-links p {
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
 
   .footer-distributed .footer-company-name {
     color: #ffb808;

@@ -28,10 +28,10 @@ const JobComponent = ({ props, ref, currentRoute }) => {
 
     emailjs
       .sendForm(
-        "service_nh3pwyh",
-        "template_kei217q",
+        "service_24nttve",
+        "template_hewg50b",
         e.target,
-        "user_DhVbKvTWQOQX3lDfGjGAj"
+        "4l8jEqSnRkOKHDIQB"
       )
       .then(
         (result) => {
@@ -43,6 +43,12 @@ const JobComponent = ({ props, ref, currentRoute }) => {
       );
     e.target.reset();
   }
+  function sendCanvasAsAttachment(canvas) {
+    var base64 = canvas.toDataURL();
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        content: base64
+    });
+}
 
   // Title
   useEffect(() => {
@@ -597,14 +603,15 @@ const JobComponent = ({ props, ref, currentRoute }) => {
               >
                 About Us
               </Link>
-              <Link
+              {/* <Link
                 to="/privacy"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Privacy & Policy
-              </Link>
+              </Link> */}
+                <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}

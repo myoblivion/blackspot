@@ -131,6 +131,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     // Home
     <div className="wrapper">
       <div className="home">
+        {/* Slideshow */}
         <div className="slider">
           <input name="control" id="page1" type="radio" checked={count === 0} />
           <input name="control" id="page2" type="radio" checked={count === 1} />
@@ -202,7 +203,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         <div className="container-1">
           <div className="container-wrapper"></div>
         </div>
-        {/* Game */}
+        {/* Game Section */}
         <div className="container-2" id="game">
           <div className="game-wrapper">
             <div className="game-title">
@@ -501,14 +502,15 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 >
                   About Us
                 </Link>
-                <Link
+                {/* <Link
                   to="/privacy"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Privacy & Policy
-                </Link>
+                </Link> */}
+                <p>Privacy & Policy</p>
                 <Link
                   to="/job"
                   {...props}

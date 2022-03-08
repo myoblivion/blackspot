@@ -40,14 +40,15 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
               >
                 About Us
               </Link>
-              <Link
+              {/* <Link
                 to="/privacy"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Privacy & Policy
-              </Link>
+              </Link> */}
+                <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}

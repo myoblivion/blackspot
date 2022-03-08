@@ -277,6 +277,14 @@
   text-decoration: none;
   color: inherit;
 }
+.footer-distributed-direction .footer-links p {
+  display: inline-block;
+  line-height: 1;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 
 .footer-distributed-direction .footer-company-name {
   color: #ffb808;

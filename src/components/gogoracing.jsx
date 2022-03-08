@@ -34,7 +34,6 @@ import {
 import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
 
-
 const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -43,7 +42,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing wrapper">
       <section className="gogoracing-wrapper">
-        <img src={image} alt="" id="first-image"/>
+        <img src={image} alt="" id="first-image" />
         <img src={image2} alt="Gogo Racing Mobile image" id="second-image" />
         <h1>Coming Soon</h1>
       </section>
@@ -80,15 +79,27 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
-              <Link to="/about"                   {...props}
+              <Link
+                to="/about"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                About Us
+              </Link>
+              {/* <Link to="/privacy"                   {...props}
                   ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}>About Us</Link>
-              <Link to="/privacy"                   {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}>Privacy & Policy</Link>
-              <Link to="/job"                   {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}>Career</Link>
+                  onClick={() => window.scrollTo(0, 0)}>Privacy & Policy</Link> */}
+              <p>Privacy & Policy</p>
+
+              <Link
+                to="/job"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Career
+              </Link>
 
               <HashLink smooth to="/#contact">
                 {" "}
@@ -104,9 +115,12 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
           <div className="footer-center">
             <div className="desz">
               <p>
-                <Link to="/direction"                   {...props}
+                <Link
+                  to="/direction"
+                  {...props}
                   ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}>
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
                 </Link>
               </p>
