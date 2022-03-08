@@ -472,9 +472,10 @@ body {
     width: 100%;
     position: relative;
     height: 100%;
-    .dubai:hover ~ .korea {
-      background-color: white;
+    .korea:hover ~ .dubai img {
+      opacity: 0;
     }
+
     .korea {
       width: 100%;
       img {
@@ -482,30 +483,31 @@ body {
         position: absolute;
         right: 40.8%;
         top: 33%;
-        clip: rect(0px,360px,500px,0px);
-        transition: all .2s ease-in-out;
+        clip: rect(0px, 360px, 500px, 0px);
+        transition: all 0.5s ease-in-out;
         &:hover {
           clip: rect(0px, 900px, 800px, 0px);
-
         }
       }
     }
     .dubai {
       width: 100%;
       img {
-        width: 80%;
+        width: 79.5%;
         filter: grayscale(100%);
         position: absolute;
-        top: 37.3%;
+        top: 37.4%;
         right: 40.8%;
-        clip: rect(0px, 905px, 529px, 360px);
-        transition: all .2s ease-in-out;
+        clip: rect(0px, 905px, 519px, 350px);
+        transition: all 0.5s ease-in-out;
         &:hover {
           clip: rect(0px, 900px, 800px, 0px);
         }
       }
     }
-
+    .dubai:hover ~ .korea img {
+      opacity: 0;
+    }
   }
 
   //   Footer
