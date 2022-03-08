@@ -94,7 +94,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
 
   // Title
   useEffect(() => {
-    document.title = "Scion Fist";
+    document.title = "Black Spot Studio PH | Scion Fist";
   }, []);
   return (
     <div className="scion wrapper">
