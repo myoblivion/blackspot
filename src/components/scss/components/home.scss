@@ -375,9 +375,11 @@ body {
   }
   .contact-us-section .section-title {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .contact-us-form {
-    margin: 35px 15px;
+    margin: 35px 55px;
     width: 100%;
   }
   .contact-us-form .form-group {
@@ -391,7 +393,7 @@ body {
   .contact-us-form input,
   .contact-us-form textarea {
     margin: 0px 0px 10px 0px;
-    width: 110%;
+    width: 80%;
     display: block;
     border: none;
     padding: 10px 0;

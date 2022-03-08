@@ -442,7 +442,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div className="container contact-us-section">
-            <div className="row h-100">
+            <div className="contact-row h-100">
               <div className="col-md-3 section-title">
                 <h2>
                   Contact Us <span>We'd love to hear from you!</span>
