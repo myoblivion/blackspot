@@ -754,15 +754,17 @@ body {
     }
   }
 }
-@media only screen and (max-width: 1200px), (max-width: 900px) {
-  .logoz {
-    .icon-list {
-      left: 8%;
-      li {
-        padding: 2px 16px;
-        a {
-          padding: 2px -6px;
-          font-size: 20px;
+@media only screen and (max-width: 1200px) {
+  .container-2 {
+    .logoz {
+      .icon-list {
+        left: 8%;
+        li {
+          padding: 2px 16px;
+          .container-2 .slider-image .gamedes .icon-list li a {
+            padding: 2px -6px;
+            font-size: 20px;
+          }
         }
       }
     }
