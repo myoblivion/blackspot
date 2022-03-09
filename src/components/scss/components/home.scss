@@ -474,6 +474,17 @@ body {
     width: 100%;
     position: relative;
     height: 100%;
+    .ourpartners-title {
+      position: absolute;
+      top: 25%;
+      right: 55%;
+      h1 {
+        text-transform: uppercase;
+        color: white;
+        font-size: 60px;
+        cursor: default;
+      }
+    }
     .korea:hover ~ .dubai img {
       z-index: 0;
     }
@@ -505,7 +516,6 @@ body {
         transition: all 0.5s ease-in-out;
         &:hover {
           clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
-
         }
         z-index: 1;
       }
@@ -610,7 +620,7 @@ body {
   }
 
   .footer-distributed .footer-links a:before {
-    content: "|";
+    content: "";
     font-weight: 300;
     font-size: 22px;
     left: 0;
@@ -619,7 +629,7 @@ body {
     padding-right: 5px;
     margin-left: 5px;
   }
-  .footer-distributed .footer-links a:after {
+  .footer-distributed .footer-links p:after {
     content: "|";
     font-weight: 300;
     font-size: 22px;
@@ -1130,8 +1140,7 @@ input[type="radio"] {
       background-color: black;
       padding: 0;
       margin: 0;
-      height: 100vh;
-
+      height: 50%;
       #ggrc1,
       #ggrc2,
       #irina,
@@ -1141,7 +1150,7 @@ input[type="radio"] {
         height: 0;
       }
       .slick-dots {
-        top: 65%;
+        top: 70%;
         width: 100%;
         button {
           height: 9px;
@@ -1216,7 +1225,7 @@ input[type="radio"] {
       .sliders {
         margin-top: 20%;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         .slider-image {
           img {
             width: 100%;
@@ -1273,21 +1282,48 @@ input[type="radio"] {
     }
     .contact-us-section {
       width: 100%;
-      margin-left: 10%;
+      margin-left: 0;
       border-radius: 0;
+      margin-top: 20%;
     }
+
     .contactforms {
       width: 100%;
       background-size: cover;
       background-position: center;
       background-image: url("/src/images/Contact\ Us\ BG\ \(Mobile\ Size\).png");
       background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 70%;
       .contact-us-form {
         margin: 0 auto;
         width: 90%;
         .form-group {
           margin: 0 auto;
-          padding: 20px 20px;
+          padding: 20px 6px;
+          width: 100%;
+        }
+      }
+      .partners-logo {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 60%;
+        margin-left: 5%;
+        .korea {
+          img {
+            position: static;
+          }
+        }
+        .india {
+          img {
+            position: static;
+          }
         }
       }
     }
@@ -1330,33 +1366,52 @@ input[type="radio"] {
     }
   }
   .slider {
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     margin-bottom: 0;
-    &--control {
-      width: 2em;
-      height: 2px;
-      display: none;
-    }
+    // &--control {
+    //   width: 2em;
+    //   height: 2px;
+    //   display: none;
+    // }
     &--el {
       &.anim-4parts {
         .part {
           &:before {
-            background-image: url("/src/images/Gogo World Banner (Mobile) 350px 800px.png");
+            background-image: url("/src/images/GGW_-_1.png");
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+            /*background-size: cover;*/
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
           }
         }
       }
       &.anim-5parts {
         .part {
           &:before {
-            background-image: url("/src/images/Gogo Chain Banner (Mobile) 350px 800 px.png");
+            background-image: url("/src/images/GGC_1.png");
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+            /*background-size: cover;*/
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
           }
         }
       }
       &.anim-3parts {
         .part {
           &:before {
-            background-image: url("/src/images/SF 350 x 600 px.png");
+            background-image: url("/src/images/SF_-_1.png");
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+            /*background-size: cover;*/
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+
           }
         }
       }
@@ -1364,18 +1419,23 @@ input[type="radio"] {
       &.anim-9parts {
         .part {
           &:before {
-            background-image: url("/src/images/Gogo\ Racing\ Banner\ \(Mobile\)\ 350px\ 800\ pxx.png");
+            background-image: url("/src/images/GGR_-_1.png");
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+            /*background-size: cover;*/
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+
           }
         }
       }
       &-bg {
         position: absolute;
-        top: -1%;
+        top:  0%;
         left: -10%;
         width: 120%;
-        height: 120%;
-        background-size: contain;
-        background-position: center;
+        height: 110%;
       }
     }
   }

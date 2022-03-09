@@ -37,8 +37,8 @@ import icono from "../images/icons/logo.png";
 // Game section mobile
 import mobile1 from "../images/game_mobile/phone1.png";
 import mobile2 from "../images/game_mobile/phone2.png";
-import mobile3 from "../images/game_mobile/phone3.png";
-import mobile4 from "../images/game_mobile/phone4.png";
+import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
+import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
 // Slider
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
@@ -493,6 +493,11 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
           <div className="partners-logo">
+            <div className="ourpartners-title">
+              <h1>
+                Partners
+              </h1>
+            </div>
             <div className="korea">
               <a
                 href="http://blackspotstudio.com/final/main/main.asp"
