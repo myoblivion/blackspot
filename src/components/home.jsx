@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
 
+// Animate on Scroll
+import Aos from "aos";
+// Animate on scroll css
+import "aos/dist/aos.css";
+
 // Devices
 import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
@@ -80,7 +85,11 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
-  // :D
+  // Aos (Animation On Scroll)
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+  // slide show (banner)
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -273,28 +282,27 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     </div>
                   </div>
                 </div>
-                <div className="slider-image">
+                <div className="slider-image" >
                   <img src={game4} alt="Game" id="desktop2" />
                   <img src={ggrc1} alt="" id="ggrc1" />
                   <img src={ggrc2} alt="" id="ggrc2" />
                   <img src={mobile2} alt="" id="mobile2" />
                   <Link
-                            to="/gogoracing"
-                            {...props}
-                            ref={ref}
-                            onClick={() => window.scrollTo(0, 0)}
-                          >
-                            <img
-                              src={Gogoracing}
-                              alt="Gogo Racing Logo"
-                              id="gogoracingsz"
-                            />
-                          </Link>
+                    to="/gogoracing"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <img
+                      src={Gogoracing}
+                      alt="Gogo Racing Logo"
+                      id="gogoracingsz"
+                    />
+                  </Link>
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
-                        <div className="sccionlogo">
-                        </div>
+                        <div className="sccionlogo"></div>
                       </div>
                       <ul className="icon-list" id="display-nones">
                         <li>
@@ -442,7 +450,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         </div>
         {/* Contact Us */}
         <div className="contactforms" id="contact">
-          <div className="container contact-us-section">
+          <div className="container contact-us-section" data-aos="fade-right">
             <div className="contact-row h-100">
               <div className="col-md-3 section-title">
                 <h2>
@@ -493,11 +501,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </div>
-          <div className="partners-logo">
+          <div className="partners-logo" data-aos="fade-left">
             <div className="ourpartners-title">
-              <h1>
-                Partners
-              </h1>
+              <h1>Partners</h1>
             </div>
             <div className="korea">
               <a
@@ -520,7 +526,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         {/* Footer */}
         <div className="section">
           <footer className="footer-distributed">
-            <div className="footer-left">
+            <div className="footer-left" data-aos="fade-up">
               <img src={icono} alt="" id="footer-logo" />
               <p className="footer-links">
                 <Link
@@ -560,7 +566,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </p>
             </div>
 
-            <div className="footer-center">
+            <div className="footer-center" data-aos="fade-up">
               <div className="desz">
                 <p>
                   <Link
@@ -584,7 +590,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
 
-            <div className="footer-right">
+            <div className="footer-right" data-aos="fade-up">
               <div className="footer-icons">
                 <ul className="social-media-list">
                   <li>

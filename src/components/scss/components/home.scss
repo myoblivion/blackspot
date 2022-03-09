@@ -48,7 +48,8 @@ body {
 
 .home {
   width: 100%;
-
+  overflow-x: hidden;
+  overflow-y: hidden;
   @keyframes imageAnimation {
     0% {
       left: 100%;
@@ -231,7 +232,6 @@ body {
         z-index: 0;
         position: absolute;
         animation: broom2 2s infinite 10s;
-
       }
 
       #irina,
@@ -245,6 +245,7 @@ body {
         height: 100%;
         width: 14%;
         z-index: 1;
+        animation: right 2s ease-in;
       }
       #risa {
         top: 7%;
@@ -252,7 +253,9 @@ body {
         height: 100%;
         width: 15%;
         z-index: 1;
+        animation: left 2s ease-in;
       }
+
       img {
         margin-top: 20px;
         margin: 0 auto;
@@ -276,6 +279,7 @@ body {
         #scionvid {
           top: 16%;
           left: 36.5%;
+          animation: appear 1s ease-in;
         }
         .icon-list {
           display: flex;
@@ -428,7 +432,7 @@ body {
     background-position: 0 0;
     background-size: 0px 100%;
     background-repeat: no-repeat;
-    color: #ffb808; 
+    color: #ffb808;
     font-size: 18px;
     resize: none;
   }
@@ -500,7 +504,7 @@ body {
 
     .korea {
       width: 100%;
-      
+
       img {
         width: 90.5%;
         position: absolute;
@@ -513,7 +517,6 @@ body {
           clip-path: polygon(0% 100%, 0 0%, 100% 0%, 100% 100%);
         }
       }
-      
     }
     .korea:hover ~ .dubai img {
       z-index: 0;
@@ -536,7 +539,7 @@ body {
         z-index: 1;
       }
     }
-    .dubai:hover ~ .korea img {
+    .dubai ~ .korea img:hover {
       opacity: 0;
     }
   }
@@ -742,7 +745,7 @@ body {
     height: 100vh;
     .game-title {
       height: 100px;
-        h2 {
+      h2 {
         font-size: 30px;
       }
       h4 {
@@ -1303,7 +1306,6 @@ input[type="radio"] {
       margin-left: 0;
       border-radius: 0;
       margin-top: 20%;
-      
     }
 
     .contactforms {
@@ -1321,14 +1323,12 @@ input[type="radio"] {
       .contact-us-form {
         margin: 0 auto;
         width: 90%;
-        
+
         .form-group {
           margin: 0 auto;
           padding: 20px 6px;
           width: 100%;
-          
         }
-
       }
       .partners-logo {
         position: static;
@@ -1435,7 +1435,6 @@ input[type="radio"] {
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: center;
-
           }
         }
       }
@@ -1450,13 +1449,12 @@ input[type="radio"] {
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: center;
-
           }
         }
       }
       &-bg {
         position: absolute;
-        top:  0.8%;
+        top: 0.8%;
         left: -10%;
         width: 120%;
         height: 110%;
@@ -1465,10 +1463,29 @@ input[type="radio"] {
   }
 }
 
+// Animations
 
-// Animations 
-
-@keyframes broom {
+// @keyframes broom {
+//   from {
+//     transform: translate(-300px, 0);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translate(0, 0);
+//     opacity: 1;
+//   }
+// }
+// @keyframes broom2 {
+//   from {
+//     transform: translate(300px, 0);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translate(0, 0);
+//     opacity: 1;
+//   }
+// }
+@keyframes left {
   from {
     transform: translate(-300px, 0);
     opacity: 0;
@@ -1476,15 +1493,19 @@ input[type="radio"] {
   to {
     transform: translate(0, 0);
     opacity: 1;
+
   }
 }
-@keyframes broom2 {
+@keyframes right {
   from {
     transform: translate(300px, 0);
     opacity: 0;
+
   }
   to {
     transform: translate(0, 0);
     opacity: 1;
+
   }
 }
+
