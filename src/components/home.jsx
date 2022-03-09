@@ -16,12 +16,12 @@ import Pengsuni from "../images/characters/Pengsuni.png";
 import Euik from "../images/characters/Euik.png";
 import Eureungi from "../images/characters/Eureungi.png";
 import ggrc1 from "../images/edit/nf-tcharacter.png";
-import ggrc2 from "../images/edit/ggrc-2.png";
+import ggrc2 from "../images/edit/2.png";
 // logo
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
-import Gogoracing from "../images/edit/Gogo_Racing_Logo.png";
+import Gogoracing from "../images/edit/4.png";
 
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
@@ -276,12 +276,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 <div className="slider-image">
                   <img src={game4} alt="Game" id="desktop2" />
                   <img src={ggrc1} alt="" id="ggrc1" />
+                  <img src={ggrc2} alt="" id="ggrc2" />
                   <img src={mobile2} alt="" id="mobile2" />
-                  <div className="gamedes">
-                    <div className="logoz">
-                      <div className="icons">
-                        <div className="sccionlogo">
-                          <Link
+                  <Link
                             to="/gogoracing"
                             {...props}
                             ref={ref}
@@ -293,6 +290,10 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                               id="gogoracingsz"
                             />
                           </Link>
+                  <div className="gamedes">
+                    <div className="logoz">
+                      <div className="icons">
+                        <div className="sccionlogo">
                         </div>
                       </div>
                       <ul className="icon-list" id="display-nones">

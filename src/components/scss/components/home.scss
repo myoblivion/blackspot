@@ -103,17 +103,18 @@ body {
       width: 90%;
       height: 90%;
     }
+    #gogoracingsz {
+      width: 13%;
+      height: 30%;
+      right: 2%;
+      bottom: 55%;
+      position: absolute;
+    }
     .sccionlogo {
       opacity: 1;
       width: 202%;
       height: 300px;
-      #gogoracingsz {
-        width: 250%;
-        height: 200%;
-        left: 15%;
-        bottom: 67%;
-        position: absolute;
-      }
+
       #logo1 {
         width: 200%;
         height: 70%;
@@ -215,12 +216,22 @@ body {
 
       #ggrc1 {
         top: 34%;
-        left: 9%;
-        height: 60%;
-        width: 30%;
+        left: 3%;
+        height: 70%;
+        width: 40%;
         z-index: 0;
         position: absolute;
-        transform: rotate(13deg);
+        animation: broom 2s ease-in;
+      }
+      #ggrc2 {
+        top: 0%;
+        left: 8%;
+        height: 45%;
+        width: 25%;
+        z-index: 0;
+        position: absolute;
+        animation: broom2 2s ease-in;
+
       }
 
       #irina,
@@ -474,6 +485,7 @@ body {
     width: 100%;
     position: relative;
     height: 100%;
+    transition: all 0.5s ease-in-out;
     .ourpartners-title {
       position: absolute;
       top: 25%;
@@ -485,9 +497,6 @@ body {
         cursor: default;
       }
     }
-    .korea:hover ~ .dubai img {
-      z-index: 0;
-    }
 
     .korea {
       width: 100%;
@@ -496,14 +505,19 @@ body {
         position: absolute;
         right: 25.8%;
         top: 33.1%;
+        clip-path: polygon(0% 100, 100% 0%, 100% 0%, 0 100%);
         transition: all 0.5s ease-in-out;
-        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
-        &:hover {
-          clip: rect(0px, 1000px, 500px, 0px);
-        }
         z-index: 1;
+        &:hover {
+        clip-path: polygon(0% 100, 100% 0%, 100% 100%, 0% 100%);
+        }
       }
+      
     }
+    .korea:hover ~ .dubai img {
+      z-index: 0;
+    }
+
     .dubai {
       width: 100%;
       img {
@@ -512,8 +526,8 @@ body {
         position: absolute;
         top: 38%;
         right: 25.8%;
-        clip-path: polygon(80% 0, 100% 0%, 100% 100%, 0 100%);
         transition: all 0.5s ease-in-out;
+        clip-path: polygon(80% 0, 100% 0%, 100% 100%, 0 100%);
         &:hover {
           clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
         }
@@ -726,8 +740,7 @@ body {
     height: 100vh;
     .game-title {
       height: 100px;
-      margin-top: 15px;
-      h2 {
+        h2 {
         font-size: 30px;
       }
       h4 {
@@ -1280,11 +1293,15 @@ input[type="radio"] {
         }
       }
     }
+    button.btn-send-message {
+      margin-left: 25%;
+    }
     .contact-us-section {
       width: 100%;
       margin-left: 0;
       border-radius: 0;
       margin-top: 20%;
+      
     }
 
     .contactforms {
@@ -1298,14 +1315,18 @@ input[type="radio"] {
       justify-content: center;
       align-items: center;
       height: 70%;
+
       .contact-us-form {
         margin: 0 auto;
         width: 90%;
+        
         .form-group {
           margin: 0 auto;
           padding: 20px 6px;
           width: 100%;
+          
         }
+
       }
       .partners-logo {
         position: static;
@@ -1441,4 +1462,27 @@ input[type="radio"] {
     }
   }
 }
-// I wanna die man
+
+
+// Animations 
+
+// @keyframes broom {
+//   from {
+//     transform: translate(-300px, 0);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translate(0, 0);
+//     opacity: 1;
+//   }
+// }
+// @keyframes broom2 {
+//   from {
+//     transform: translate(300px, 0);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translate(0, 0);
+//     opacity: 1;
+//   }
+// }
