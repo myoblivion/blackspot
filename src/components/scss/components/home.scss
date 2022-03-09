@@ -221,7 +221,7 @@ body {
         width: 40%;
         z-index: 0;
         position: absolute;
-        animation: broom 2s ease-in;
+        animation: broom 2s infinite 10s;
       }
       #ggrc2 {
         top: 0%;
@@ -230,7 +230,7 @@ body {
         width: 25%;
         z-index: 0;
         position: absolute;
-        animation: broom2 2s ease-in;
+        animation: broom2 2s infinite 10s;
 
       }
 
@@ -1466,23 +1466,23 @@ input[type="radio"] {
 
 // Animations 
 
-// @keyframes broom {
-//   from {
-//     transform: translate(-300px, 0);
-//     opacity: 0;
-//   }
-//   to {
-//     transform: translate(0, 0);
-//     opacity: 1;
-//   }
-// }
-// @keyframes broom2 {
-//   from {
-//     transform: translate(300px, 0);
-//     opacity: 0;
-//   }
-//   to {
-//     transform: translate(0, 0);
-//     opacity: 1;
-//   }
-// }
+@keyframes broom {
+  from {
+    transform: translate(-300px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes broom2 {
+  from {
+    transform: translate(300px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
