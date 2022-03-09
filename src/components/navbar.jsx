@@ -1,11 +1,23 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 
+// Aos Animate on Scroll
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+
 import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
 const NavbarComponent = ({ props, ref, currentRoute, events }) => {
+
+  // Aos Init 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+
+  }, []);
+
   let [myCheckbox, setMyCheckbox] = useState(false);
 
   let menuRef = useRef();
@@ -21,7 +33,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
     <header className="navbar active">
       <div className="logo">
         <Link to="/">
-          <img src={icono} alt="Black Spot Studio" className="main-logo" />
+          <img src={icono} alt="Black Spot Studio" className="main-logo" data-aos="fade-right" />
         </Link>
       </div>
 
@@ -36,7 +48,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
-      <ul className="menu" ref={menuRef}>
+      <ul className="menu"   ref={menuRef}>
         <li
           className={click ? "nav-menu active" : "nav-menu"}
           onClick={() => setMyCheckbox((prev) => !prev)}

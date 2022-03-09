@@ -27,6 +27,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
         <img src={image} alt="" id="first-image" />
         <img src={image2} alt="Gogo Racing Mobile image" id="second-image" />
       </section>
+      
       <div className="section">
         <footer className="gogochain-footer-distributed">
           <div className="footer-left">

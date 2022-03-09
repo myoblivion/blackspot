@@ -20,8 +20,10 @@ a {
   margin: 20px 30px;
   padding: 0;
   list-style: none;
-  overflow: hidden;
+
   animation: surprise 3s ease;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .navbar li a {

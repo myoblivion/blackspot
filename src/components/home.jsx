@@ -219,7 +219,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         {/* Game Section */}
         <div className="container-2" id="game">
           <div className="game-wrapper">
-            <div className="game-title">
+            <div className="game-title" data-aos="fade-down">
               <h2>Black Spot Studio PH</h2>
               <h4 className="fourz">
                 Four exciting games are being developed for your entertainment.
@@ -229,10 +229,10 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="sliders">
               <Slider {...settings}>
                 <div className="slider-image" id="firstgame">
-                  <img src={game1} alt="" id="desktop1" data-aos="fade-up"/>
-                  <img src={Irina} alt="" id="irina" data-aos="fade-left"/>
-                  <img src={Risa} alt="" id="risa" data-aos="fade-right"/>
-                  <img src={mobile1} alt="" id="mobile1" />
+                  <img src={game1} alt="" id="desktop1" data-aos="fade-up" />
+                  <img src={Irina} alt="" id="irina" data-aos="fade-left" />
+                  <img src={Risa} alt="" id="risa" data-aos="fade-right" />
+                  <img src={mobile1} alt="" id="mobile1" data-aos="fade-up" />
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
@@ -282,11 +282,16 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     </div>
                   </div>
                 </div>
-                <div className="slider-image" >
-                  <img src={game4} alt="Game" id="desktop2" data-aos="fade-up"/>
+                <div className="slider-image">
+                  <img
+                    src={game4}
+                    alt="Game"
+                    id="desktop2"
+                    data-aos="fade-up"
+                  />
                   <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-left" />
                   <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-right" />
-                  <img src={mobile2} alt="" id="mobile2" />
+                  <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
                   <Link
                     to="/gogoracing"
                     {...props}

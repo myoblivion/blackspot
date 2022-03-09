@@ -180,7 +180,12 @@ body {
     }
     .slick-dots {
       position: absolute;
-      top: 90%;
+      top: 95%;
+      .slick-active {
+        button {
+          background-color: #ffb908;
+        }
+      }
       li {
         color: white;
         background-color: rgba(0, 0, 0, 0);
@@ -222,7 +227,6 @@ body {
         width: 40%;
         z-index: 0;
         position: absolute;
-        animation: broom 2s infinite 10s;
       }
       #ggrc2 {
         top: 0%;
@@ -231,7 +235,6 @@ body {
         width: 25%;
         z-index: 0;
         position: absolute;
-        animation: broom2 2s infinite 10s;
       }
 
       #irina,
@@ -245,7 +248,6 @@ body {
         height: 100%;
         width: 14%;
         z-index: 1;
-        animation: right 2s ease-in;
       }
       #risa {
         top: 7%;
@@ -253,7 +255,6 @@ body {
         height: 100%;
         width: 15%;
         z-index: 1;
-        animation: left 2s ease-in;
       }
 
       img {
@@ -279,7 +280,6 @@ body {
         #scionvid {
           top: 16%;
           left: 36.5%;
-          animation: appear 1s ease-in;
         }
         .icon-list {
           display: flex;
@@ -750,6 +750,20 @@ body {
       }
       h4 {
         font-size: 20px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px), (max-width: 900px) {
+  .logoz {
+    .icon-list {
+      left: 8%;
+      li {
+        padding: 2px 16px;
+        a {
+          padding: 2px -6px;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -1485,27 +1499,3 @@ input[type="radio"] {
 //     opacity: 1;
 //   }
 // }
-@keyframes left {
-  from {
-    transform: translate(-300px, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-
-  }
-}
-@keyframes right {
-  from {
-    transform: translate(300px, 0);
-    opacity: 0;
-
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-
-  }
-}
-
