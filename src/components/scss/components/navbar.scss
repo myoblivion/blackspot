@@ -21,7 +21,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
- animation: surprise 3s ease;
+  animation: surprise 3s ease;
 }
 
 .navbar li a {
@@ -73,6 +73,7 @@ a {
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
   background-color: white;
+  animation: bruh .3s ease;
 }
 .tabs {
   position: absolute;
@@ -82,6 +83,7 @@ a {
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
   background-color: white;
+
 }
 .navbar ul.tab li {
   float: none;
@@ -102,6 +104,7 @@ a {
   z-index: 500;
   display: none;
   margin-top: -5px;
+  animation: bruh .3s ease;
 }
 .navbar .tabs {
   position: absolute;
@@ -109,6 +112,7 @@ a {
   display: none;
   margin-top: -5px;
   color: #ffb808;
+  animation: bruh .3s ease;
 }
 li:hover > .tab {
   display: block;
@@ -263,6 +267,16 @@ li:hover > .tabs {
   }
 }
 @keyframes surprise-logo {
+  from {
+    transform: translate(-300px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes bruh {
   from {
     transform: translate(-300px, 0);
     opacity: 0;
