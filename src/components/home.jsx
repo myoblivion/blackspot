@@ -229,9 +229,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="sliders">
               <Slider {...settings}>
                 <div className="slider-image" id="firstgame">
-                  <img src={game1} alt="" id="desktop1" />
-                  <img src={Irina} alt="" id="irina" />
-                  <img src={Risa} alt="" id="risa" />
+                  <img src={game1} alt="" id="desktop1" data-aos="fade-up"/>
+                  <img src={Irina} alt="" id="irina" data-aos="fade-left"/>
+                  <img src={Risa} alt="" id="risa" data-aos="fade-right"/>
                   <img src={mobile1} alt="" id="mobile1" />
                   <div className="gamedes">
                     <div className="logoz">
@@ -269,7 +269,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                         </li>
                       </ul>
                     </div>
-                    <div className="video" id="scionvid">
+                    <div className="video" id="scionvid" data-aos="fade-up">
                       <iframe
                         width="560"
                         height="315"
