@@ -283,9 +283,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   </div>
                 </div>
                 <div className="slider-image" >
-                  <img src={game4} alt="Game" id="desktop2" />
-                  <img src={ggrc1} alt="" id="ggrc1" />
-                  <img src={ggrc2} alt="" id="ggrc2" />
+                  <img src={game4} alt="Game" id="desktop2" data-aos="fade-up"/>
+                  <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-left" />
+                  <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-right" />
                   <img src={mobile2} alt="" id="mobile2" />
                   <Link
                     to="/gogoracing"
@@ -297,6 +297,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       src={Gogoracing}
                       alt="Gogo Racing Logo"
                       id="gogoracingsz"
+                      data-aos="fade-left"
                     />
                   </Link>
                   <div className="gamedes">
@@ -323,7 +324,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       </ul>
                     </div>
 
-                    <div className="video" id="gogoracevid">
+                    <div className="video" id="gogoracevid" data-aos="fade-up">
                       <iframe
                         width="560"
                         height="315"
