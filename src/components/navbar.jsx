@@ -10,7 +10,7 @@ import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
 const NavbarComponent = ({ props, ref, currentRoute, events }) => {
-  const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [isShowing, setIsShowing] = useState(false);
   // Aos Init
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -71,7 +71,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
           <span>
             Games <FaCaretDown />
           </span>
-          <ul className="tabs" id="menuz">
+          <ul className="tabs" id="menuz" >
             <li
               className={click ? "nav-menu active" : "nav-menu"}
               onClick={() => setMyCheckbox((prev) => !prev)}
@@ -81,7 +81,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/scion"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Scion Fist
@@ -96,7 +95,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/gogoracing"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 GoGo Racing
@@ -111,7 +109,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/gogoworld"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 GoGo World
@@ -126,7 +123,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/gogochain"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 GoGo Chain
@@ -148,7 +144,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/about"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 About Us
@@ -163,7 +158,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/direction"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Directions
@@ -178,7 +172,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 to="/job"
                 className="nav-item a"
                 {...props}
-                ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Careers
