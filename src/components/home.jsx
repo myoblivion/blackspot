@@ -85,6 +85,7 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
+  const [isShown, setIsShown] = useState(false);
   // Aos (Animation On Scroll)
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -511,20 +512,28 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="ourpartners-title">
               <h1>Partners</h1>
             </div>
+            <div className="hidden-ninja"></div>
             <div className="korea">
-              <a
-                href="http://blackspotstudio.com/final/main/main.asp"
-                target="_blank"
-              >
-                <img src={Korealogo} alt="" />
-              </a>
+              {isShown && (
+                <a
+                  href="http://blackspotstudio.com/final/main/main.asp"
+                  target="_blank"
+                >
+                  <img src={Korealogo} alt="" />
+                </a>
+              )}
             </div>
             <div className="dubai">
               <a
                 href="http://blackspotstudio.com/final/main/main.asp"
                 target="_blank"
               >
-                <img src={Dubailogo} alt="" />
+                <img
+                  src={Dubailogo}
+                  alt=""
+                  onMouseEnter={() => setIsShown(false)}
+                  onMouseLeave={() => setIsShown(true)}
+                />
               </a>
             </div>
           </div>
