@@ -4,11 +4,8 @@ import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import f1 from "../images/collection1.png";
 import f2 from "../images/collection2.jpg";
-import f3 from "../images/collection3.png";
 import f4 from "../images/collection4.png";
-import f5 from "../images/collection5.png";
 import f6 from "../images/collection6.png";
-import f7 from "../images/collection7.png";
 import image from "../images/banner1.png";
 import image2 from "../images/gogoworlds.jpg";
 import icono from "../images/icons/logo.png";
@@ -47,19 +44,10 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
               <img src={f2} alt="" />
             </li>
             <li>
-              <img src={f3} alt="" />
-            </li>
-            <li>
               <img src={f4} alt="" />
             </li>
             <li>
-              <img src={f5} alt="" />
-            </li>
-            <li>
               <img src={f6} alt="" />
-            </li>
-            <li>
-              <img src={f7} alt="" />
             </li>
           </ul>
         </div>
