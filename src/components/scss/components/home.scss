@@ -504,8 +504,6 @@ body {
       }
     }
 
-
-
     .korea {
       width: 100%;
 
@@ -546,7 +544,6 @@ body {
     .dubai ~ .korea img:hover {
       opacity: 0;
       z-index: 0;
-
     }
   }
 
@@ -1368,6 +1365,7 @@ input[type="radio"] {
         margin-bottom: 20%;
         width: 60%;
         margin-left: 5%;
+        display: none;
         .ourpartners-title {
           position: static;
           width: 100%;
@@ -1385,7 +1383,8 @@ input[type="radio"] {
         .india {
           img {
             position: static;
-            clip-path: polygon(0);
+            clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+            margin: 25% auto;
           }
         }
       }
@@ -1407,6 +1406,12 @@ input[type="radio"] {
     }
     .footer-distributed .footer-center p a {
       font-size: 15px;
+    }
+    .footer-distributed  .footer-links a {
+      font-size: 12px;
+    }
+    .footer-distributed  .footer-links p {
+      font-size: 12px;
     }
     .bootons {
       font-size: 25px;

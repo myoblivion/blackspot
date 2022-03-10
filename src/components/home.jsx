@@ -512,7 +512,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="ourpartners-title">
               <h1>Partners</h1>
             </div>
-            <div className="hidden-ninja"></div>
             <div className="korea">
               {isShown && (
                 <a
