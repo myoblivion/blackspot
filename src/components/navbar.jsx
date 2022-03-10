@@ -10,6 +10,7 @@ import { HashLink } from "react-router-hash-link";
 import { FaCaretDown } from "react-icons/fa";
 
 const NavbarComponent = ({ props, ref, currentRoute, events }) => {
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
   // Aos Init
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -50,7 +51,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
-      <ul className="menu" ref={menuRef}>
+      <ul className="menu" ref={menuRef} >
         <li
           className={click ? "nav-menu active" : "nav-menu"}
           onClick={() => setMyCheckbox((prev) => !prev)}
@@ -67,9 +68,9 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
           </Link>
         </li>
         <li>
-          <p>
+          <span>
             Games <FaCaretDown />
-          </p>
+          </span>
           <ul className="tabs" id="menuz">
             <li
               className={click ? "nav-menu active" : "nav-menu"}
@@ -134,9 +135,9 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
           </ul>
         </li>
         <li>
-          <p>
+          <span>
             About <FaCaretDown />
-          </p>
+          </span>
           <ul className="tab" id="menuz">
             <li
               className={click ? "nav-menu active" : "nav-menu"}

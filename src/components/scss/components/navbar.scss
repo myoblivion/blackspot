@@ -34,7 +34,7 @@ a {
   color: #ffb808;
   margin: 0 5px;
 }
-.navbar li p {
+.navbar li span {
   display: block;
   padding: 20px 14px;
   margin: 0;
@@ -47,7 +47,7 @@ a {
 .navbar .menu-btn:hover {
   color: black;
 }
-.navbar li p:hover,
+.navbar li span:hover,
 .menu-btn:hover {
   color: black;
 }
@@ -204,7 +204,7 @@ li:hover > .tabs {
   .navbar li {
     float: left;
   }
-  .navbar li p {
+  .navbar li span {
     padding: 20px 30px;
   }
   .navbar li a {
