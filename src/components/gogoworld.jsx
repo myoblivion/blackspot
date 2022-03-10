@@ -150,7 +150,7 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
                     <FaReddit />
                   </a>
                 </li>
-                <li>
+                <li id="last-image">
                   <a
                     href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
                     target="_blank"
