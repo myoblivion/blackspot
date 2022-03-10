@@ -408,7 +408,7 @@ body {
   .contact-us-form input,
   .contact-us-form textarea {
     margin: 0px 0px 10px 0px;
-    width: 80%;
+    width: 70%;
     display: block;
     border: none;
     padding: 10px 0;
@@ -1348,6 +1348,10 @@ input[type="radio"] {
           margin: 0 auto;
           padding: 20px 6px;
           width: 100%;
+        }
+        .contact-us-form input,
+        .contact-us-form textarea {
+          width: 90%;
         }
       }
       .partners-logo {
