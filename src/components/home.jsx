@@ -512,30 +512,50 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="ourpartners-title">
               <h1>Partners</h1>
             </div>
-            <div className="korea">
+            <div className="desktop-partners">
               {isShown && (
+                <div className="korea">
+                  <a
+                    href="http://blackspotstudio.com/final/main/main.asp"
+                    target="_blank"
+                  >
+                    <img src={Korealogo} alt="" />
+                  </a>
+                </div>
+              )}
+              <div className="dubai">
+                <a
+                  href="http://blackspotstudio.com/final/main/main.asp"
+                  target="_blank"
+                  onMouseEnter={() => setIsShown(false)}
+                  onMouseLeave={() => setIsShown(true)}
+                >
+                  <img src={Dubailogo} alt="dubaidesktop" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="mobile-partners">
+          <div className="ourpartners-mobile-title">
+              <h1 data-aos="fade-up">Partners</h1>
+            </div>
+              <div className="dubai-mobile">
                 <a
                   href="http://blackspotstudio.com/final/main/main.asp"
                   target="_blank"
                 >
-                  <img src={Korealogo} alt="" />
+                  <img src={Dubailogo} alt="" id="dubaimobile" data-aos="fade-up"/>
                 </a>
-              )}
+              </div>
+              <div className="korea-mobile">
+                <a
+                  href="http://blackspotstudio.com/final/main/main.asp"
+                  target="_blank"
+                >
+                  <img src={Korealogo} alt="" id="dubaimobile" data-aos="fade-up"/>
+                </a>
+              </div>
             </div>
-            <div className="dubai">
-              <a
-                href="http://blackspotstudio.com/final/main/main.asp"
-                target="_blank"
-              >
-                <img
-                  src={Dubailogo}
-                  alt=""
-                  onMouseEnter={() => setIsShown(false)}
-                  onMouseLeave={() => setIsShown(true)}
-                />
-              </a>
-            </div>
-          </div>
         </div>
         {/* Footer */}
         <div className="section">
