@@ -1219,13 +1219,15 @@ input[type="radio"] {
           bottom: -34px;
           left: 122px;
         }
-        #gogoracingsz {
-          height: 200px;
-          width: 190px;
-          position: absolute;
-          bottom: -74px;
-          left: 122px;
-        }
+
+      }
+      #gogoracingsz {
+        height: 15%;
+        width: 50%;
+        position: absolute;
+        bottom: 50%;
+        right: 10%;
+        opacity: 0;
       }
       #desktop1,
       #desktop2,
