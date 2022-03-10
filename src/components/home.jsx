@@ -252,17 +252,17 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                         </div>
                       </div>
                       <ul className="icon-list">
-                        <li>
+                        <li data-aos="fade-up">
                           <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
                             <FaGooglePlay />
                           </a>
                         </li>
-                        <li>
+                        <li data-aos="fade-up">
                           <a href="#">
                             <FaAppStore />
                           </a>
                         </li>
-                        <li>
+                        <li data-aos="fade-up">
                           <a href="#">
                             <FaWindows />
                           </a>
