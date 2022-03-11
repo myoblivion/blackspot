@@ -234,15 +234,14 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="sliders">
               <Slider {...settings}>
-                <div className="slider-image" id="firstgame">
-                  <img
-                    src={game1}
-                    alt=""
-                    id="desktop1"
-                    data-aos="fade-up"
-                    data-aos-offset="700"
-                    data-aos-duration="700"
-                  />
+                <div
+                  className="slider-image"
+                  id="firstgame"
+                  data-aos="fade-up"
+                  data-aos-offset="700"
+                  data-aos-duration="700"
+                >
+                  <img src={game1} alt="" id="desktop1" />
                   <img
                     src={Irina}
                     alt=""
@@ -259,14 +258,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     data-aos-offset="700"
                     data-aos-duration="700"
                   />
-                  <img
-                    src={mobile1}
-                    alt=""
-                    id="mobile1"
-                    data-aos="fade-up"
-                    data-aos-offset="700"
-                    data-aos-duration="700"
-                  />
+                  <img src={mobile1} alt="" id="mobile1" />
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
@@ -286,42 +278,24 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                         </div>
                       </div>
                       <ul className="icon-list">
-                        <li
-                          data-aos="fade-up"
-                          data-aos-offset="700"
-                          data-aos-duration="700"
-                        >
+                        <li>
                           <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
                             <FaGooglePlay />
                           </a>
                         </li>
-                        <li
-                          data-aos="fade-up"
-                          data-aos-offset="700"
-                          data-aos-duration="700"
-                        >
+                        <li>
                           <a href="#">
                             <FaAppStore />
                           </a>
                         </li>
-                        <li
-                          data-aos="fade-up"
-                          data-aos-offset="700"
-                          data-aos-duration="700"
-                        >
+                        <li>
                           <a href="#">
                             <FaWindows />
                           </a>
                         </li>
                       </ul>
                     </div>
-                    <div
-                      className="video"
-                      id="scionvid"
-                      data-aos="fade-up"
-                      data-aos-offset="700"
-                      data-aos-duration="700"
-                    >
+                    <div className="video" id="scionvid">
                       <iframe
                         width="560"
                         height="315"
@@ -508,8 +482,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         </div>
         {/* Contact Us */}
         <div className="contactforms" id="contact">
-          <div className="container contact-us-section" data-aos="fade-right"           data-aos-offset="700"
-          data-aos-duration="700">
+          <div
+            className="container contact-us-section"
+            data-aos="fade-right"
+            data-aos-offset="700"
+            data-aos-duration="700"
+          >
             <div className="contact-row h-100">
               <div className="col-md-3 section-title">
                 <h2>
@@ -560,8 +538,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </div>
-          <div className="partners-logo" data-aos="fade-left"           data-aos-offset="700"
-          data-aos-duration="700">
+          <div
+            className="partners-logo"
+            data-aos="fade-left"
+            data-aos-offset="700"
+            data-aos-duration="700"
+          >
             <div className="ourpartners-title">
               <h1>Partners</h1>
             </div>
@@ -590,8 +572,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           </div>
           <div className="mobile-partners">
             <div className="ourpartners-mobile-title">
-              <h1 data-aos="fade-up"           data-aos-offset="700"
-          data-aos-duration="700">Partners</h1>
+              <h1
+                data-aos="fade-up"
+                data-aos-offset="700"
+                data-aos-duration="700"
+              >
+                Partners
+              </h1>
             </div>
             <div className="dubai-mobile">
               <a

@@ -26,6 +26,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
       }
     });
   });
+
   const [click, seClick] = useState(false);
   return (
     <header className="navbar active">
@@ -51,7 +52,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
-      <ul className="menu" ref={menuRef} >
+      <ul className="menu" ref={menuRef}>
         <li
           className={click ? "nav-menu active" : "nav-menu"}
           onClick={() => setMyCheckbox((prev) => !prev)}
@@ -71,7 +72,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
           <span>
             Games <FaCaretDown />
           </span>
-          <ul className="tabs" id="menuz" >
+          <ul className="tabs" id="menuz">
             <li
               className={click ? "nav-menu active" : "nav-menu"}
               onClick={() => setMyCheckbox((prev) => !prev)}

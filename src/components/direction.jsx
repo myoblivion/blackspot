@@ -35,25 +35,19 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
   }, []);
   return (
     <div className="direction wrapper">
-      <section className="map-wrapper" id="map-wrapper">
-        <section
-          className="map"
-          data-aos="zoom-in"
-          data-aos-offset="500"
-          data-aos-duration="500"
-        >
+      <section
+        className="map-wrapper"
+        id="map-wrapper"
+
+      >
+        <section className="map">
           <GifLoader
             loading={true}
             imageSrc="https://media.giphy.com/media/XYHRwxYXXA68DhcAmF/giphy.gif"
             overlayBackground="transparent"
           />
         </section>
-        <section
-          className="description-map"
-          data-aos="zoom-in"
-          data-aos-offset="500"
-          data-aos-duration="500"
-        >
+        <section className="description-map">
           <div className="come-address">
             <h1>Come Visit Us!</h1>
             <h2> 26th St, Taguig, 1634 Metro Manila</h2>
@@ -429,12 +423,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <div className="footer-section">
         <footer className="footer-distributed-direction">
-          <div
-            className="footer-left"
-            data-aos="fade-up"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -474,12 +463,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div
-            className="footer-center"
-            data-aos="fade-up"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <div className="footer-center">
             <div className="desz">
               <p>
                 <Link
@@ -503,12 +487,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div
-            className="footer-right"
-            data-aos="fade-up"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <div className="footer-right">
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>
