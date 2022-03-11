@@ -1,5 +1,9 @@
 @import url("https://www.dafontfree.net/embed/cHJlc3RpZ2UtZWxpdGUtc3RkLXJlZ3VsYXImZGF0YS80OC9wLzQ3OTE1L1ByZXN0aWdlRWxpdGVTdGQub3Rm");
 
+.scion {
+  overflow-x: hidden;
+
+}
 .wrapper1 {
   position: relative;
   display: flex;
@@ -169,7 +173,7 @@
   background-color: black;
   .titles {
     width: 100%;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
     color: #ffffff;
     padding-top: 20px;

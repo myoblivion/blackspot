@@ -99,7 +99,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="scion wrapper">
       <section className="wrapper1">
-        <div className="scion-links">
+        <div className="scion-links" data-aos="fade-up">
           <ul>
             <li>
               <a href="https://www.facebook.com/ScionFistPhilippines/">
@@ -125,10 +125,10 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
         </div>
       </section>
       <section className="wrapper2">
-        <div className="titles">
+        <div className="titles" data-aos="fade-right">
           <h2>Prologue</h2>
         </div>
-        <p className="story">
+        <p className="story" data-aos="fade-left">
           The world has been devastated by nuclear war in the near future. The
           ruined world began to divide into two factions. As the struggle for
           resources for survival intensifies, War has become commonplace, and
@@ -140,36 +140,36 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="wrapper3">
         <div className="titles">
-          <h2>Game Intro</h2>
+          <h2 data-aos="fade-up">Game Intro</h2>
         </div>
         <div className="promotes">
           <div className="intro-wrap">
             <div className="intro-img">
-              <img src={promote1} alt="" />
+              <img src={promote1} alt="" data-aos="zoom-in" />
             </div>
             <div className="intro-img">
-              <img src={promote2} alt="" />
+              <img src={promote2} alt="" data-aos="zoom-in" />
             </div>
             <div className="intro-img">
-              <img src={promote3} alt="" />
+              <img src={promote3} alt="" data-aos="zoom-in" />
             </div>
             <div className="intro-img">
-              <img src={promote4} alt="" />
+              <img src={promote4} alt="" data-aos="zoom-in" />
             </div>
             <div className="intro-img">
-              <img src={promote5} alt="" />
+              <img src={promote5} alt="" data-aos="zoom-in" />
             </div>
             <div className="intro-img">
-              <img src={promote6} alt="" />
+              <img src={promote6} alt="" data-aos="zoom-in" />
             </div>
           </div>
         </div>
       </section>
       <section className="wrapper4">
-        <div className="titles">
+        <div className="titles" data-aos="fade-down">
           <h2>Features</h2>
         </div>
-        <div className="feauture-wrap">
+        <div className="feauture-wrap" data-aos="fade-left">
           <div className="feauture-img">
             <img src={feautures} alt="" />
           </div>
@@ -376,7 +376,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>AR</span> AKM
             </h4>
-            <img src={w1} alt="" />
+            <img src={w1} alt="" data-aos="flip-down" />
 
             <div className="line1"></div>
           </div>
@@ -384,7 +384,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SR</span> AWM
             </h4>
-            <img src={w2} alt="" />
+            <img src={w2} alt="" data-aos="flip-down" />
 
             <div className="line2"></div>
           </div>
@@ -392,7 +392,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>AR</span> FAMAS
             </h4>
-            <img src={w4} alt="" />
+            <img src={w4} alt="" data-aos="flip-down" />
 
             <div className="line3"></div>
           </div>
@@ -400,7 +400,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SMG</span> KRISS
             </h4>
-            <img src={w6} alt="" />
+            <img src={w6} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
@@ -408,7 +408,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>AR</span> M4A3
             </h4>
-            <img src={w7} alt="" />
+            <img src={w7} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
@@ -416,7 +416,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SR</span> M110
             </h4>
-            <img src={w8} alt="" />
+            <img src={w8} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
@@ -424,7 +424,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>MG</span> M249
             </h4>
-            <img src={w9} alt="" />
+            <img src={w9} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
@@ -432,12 +432,12 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SG</span> M1216
             </h4>
-            <img src={w10} alt="" />
+            <img src={w10} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
           <div className="weapon">
-            <img src={w11} alt="" />
+            <img src={w11} alt="" data-aos="flip-down" />
             <h4>
               <span>SMG</span> MP5
             </h4>
@@ -448,7 +448,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SMG</span> P90
             </h4>
-            <img src={w12} alt="" />
+            <img src={w12} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
@@ -456,7 +456,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SG</span> REMINGTON
             </h4>
-            <img src={w13} alt="" />
+            <img src={w13} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
@@ -464,7 +464,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <h4>
               <span>SR</span> TAC15
             </h4>
-            <img src={w14} alt="" />
+            <img src={w14} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>
