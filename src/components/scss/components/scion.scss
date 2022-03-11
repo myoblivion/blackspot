@@ -72,8 +72,9 @@
     height: 50%;
     font-weight: 900;
     background-image: url("/src/images/background/textsmoke.png");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .orange {
     color: orange;
