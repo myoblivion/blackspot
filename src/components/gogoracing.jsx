@@ -42,8 +42,8 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing wrapper">
       <section className="gogoracing-wrapper">
-        <img src={image} alt="" id="first-image" />
-        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" />
+        <img src={image} alt="" id="first-image" data-aos="fade-left"/>
+        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" data-aos="fade-right"/>
         <h1>Coming Soon</h1>
       </section>
       <section className="gogoracing-features">

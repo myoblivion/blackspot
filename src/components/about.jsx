@@ -47,13 +47,13 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
         <div className="title-about"></div>
         <section className="wrappersk">
           <div className="image">
-            <img src={character} alt="Tosuni" />
+            <img src={character} alt="Tosuni" data-aos="zoom-out" />
           </div>
           <div className="content">
-            <h2>Black Spot Studio PH</h2>
+            <h2 data-aos="fade-down">Black Spot Studio PH</h2>
             <div className="line2"></div>
             <span></span>
-            <p>
+            <p data-aos="fade-right">
               {" "}
               <strong>Black Spot Studio PH</strong>, was formed in December 2021
               through the collaboration of <strong>Black Spot Studio Co</strong>
@@ -67,25 +67,25 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
               the needs of all Filipino Gamers.
             </p>
             <ul className="linksz">
-              <li>
+              <li data-aos="flip-down">
                 <HashLink smooth to="/about#work">
                   Work
                 </HashLink>
               </li>
               <div className="vertical-line"></div>
-              <li>
+              <li data-aos="flip-down">
                 <HashLink smooth to="/about#services">
                   Services
                 </HashLink>
               </li>
               <div className="vertical-line"></div>
-              <li>
+              <li data-aos="flip-down">
                 <HashLink smooth to="/about#partners">
                   Partners
                 </HashLink>
               </li>
             </ul>
-            <ul className="icons">
+            <ul className="icons" data-aos="fade-up">
               <li>
                 <a href="https://twitter.com/BlackSpotPH" target="_blank">
                   <FaTwitter />
@@ -122,12 +122,12 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
         <br />
       </div>
       <section className="work" id="work">
-        <div className="section-title-work">
+        <div className="section-title-work" data-aos="fade-down">
           <h1>Works</h1>
         </div>
         <div className="box-wrapper">
           <div className="baks box1">
-            <div className="logo-game" id="g1">
+            <div className="logo-game" id="g1" data-aos="zoom-in">
               <Link
                 to="/scion"
                 {...props}
@@ -138,13 +138,13 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
               </Link>
             </div>
 
-            <p>
+            <p data-aos="zoom-out">
               An Automatic First-Person Shooting game! The higher the rank, the
               better performance. The battle is ready for you.
             </p>
           </div>
           <div className="baks box2">
-            <div className="logo-game">
+            <div className="logo-game" data-aos="zoom-in">
               <Link
                 to="/gogoworld"
                 {...props}
@@ -155,13 +155,13 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
               </Link>
             </div>
 
-            <p>
+            <p data-aos="zoom-out">
               Adorable characters living in their own world. Check out how they
               make your world more entertaining.
             </p>
           </div>
           <div className="baks box3">
-            <div className="logo-game" id="g2">
+            <div className="logo-game" id="g2" data-aos="zoom-in">
               <Link
                 to="/gogochain"
                 {...props}
@@ -171,13 +171,13 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
                 <img src={ggc} alt="" />
               </Link>
             </div>
-            <p>
+            <p data-aos="zoom-out">
               Are you ready to explore the dimension of these cute characters?
               They are coming soon to play with you.
             </p>
           </div>
           <div className="baks box4">
-            <div className="logo-game">
+            <div className="logo-game" data-aos="zoom-in">
               <Link
                 to="/gogoracing"
                 {...props}
@@ -187,7 +187,7 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
                 <img src={ggr} alt="" />
               </Link>
             </div>
-            <p>
+            <p data-aos="zoom-out">
               A racing game where you compete with other users using your
               purchased and unique cars. Ready your car, finish the line and win
               a coin and be incentivized. Play to Earn? It’s a surprise.
@@ -195,21 +195,26 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
         <div className="baks box5" id="should">
-          <div className="logo-game">
+          <div className="logo-game" data-aos="zoom-in">
             <img src={ggnft} alt="" />
           </div>
-          <p>
+          <p data-aos="zoom-out">
             Because all Black Spot Studio Philippines games have gogo coins,
             save it and it may turn into a real one!
           </p>
         </div>
       </section>
       <section className="services" id="services">
-        <div className="section-title-work">
+        <div className="section-title-work" data-aos="fade-down">
           <h1>Services</h1>
         </div>
         <div className="row-about">
-          <div className="service">
+          <div
+            className="service"
+            data-aos="flip-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <FaBrain className="i" />
             <h2>The Brain of the Game</h2>
             <p>
@@ -217,7 +222,12 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
               From making the theme to winning the game.
             </p>
           </div>
-          <div className="service">
+          <div
+            className="service"
+            data-aos="flip-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <FaEye className="i" />
             <h2>An Eye for the life of Games</h2>
             <p>
@@ -226,7 +236,12 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
               to making art for the game.
             </p>
           </div>
-          <div className="service">
+          <div
+            className="service"
+            data-aos="flip-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <FaHeart className="i" />
             <h2>The Heart of the Perfect Game</h2>
             <p>
@@ -235,7 +250,12 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
               the best quality of entertainment.
             </p>
           </div>
-          <div className="service">
+          <div
+            className="service"
+            data-aos="flip-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <FaUsers className="i" />
             <h2>The Lending Hands of the Game</h2>
             <p>
@@ -244,7 +264,13 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
         </div>
-        <div className="service" id="middle-spot">
+        <div
+          className="service"
+          id="middle-spot"
+          data-aos="flip-up"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <FaAssistiveListeningSystems className="i" />
           <h2>The Ear for the Gamers</h2>
           <p>
@@ -255,17 +281,17 @@ const AboutComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="partners" id="partners">
         <div className="partnerz">
-          <div className="section-title-work">
+          <div className="section-title-work" data-aos="fade-down">
             <h1>Partners</h1>
           </div>
           <div className="links">
             <ul>
-              <li>
+              <li data-aos="fade-right">
                 <a href="http://blackspotstudio.com/">
                   <img src={krlogo} alt="" />
                 </a>
               </li>
-              <li>
+              <li data-aos="fade-left">
                 <a href="http://blackspotstudio.com/">
                   <img src={dubai} alt="" />
                 </a>

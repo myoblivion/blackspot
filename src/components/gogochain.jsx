@@ -24,8 +24,8 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
     <div className="gogochain wrapper">
       <section className="gogochain-wrapper">
         <h1>Coming Soon</h1>
-        <img src={image} alt="" id="first-image" />
-        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" />
+        <img src={image} alt="" id="first-image" data-aos="fade-left"/>
+        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" data-aos="fade-right" />
       </section>
       
       <div className="section">

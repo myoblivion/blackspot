@@ -30,24 +30,34 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
     <div className="gogoworld wrapper">
       <section className="gogoworld-wrapper">
         <h1>Coming Soon</h1>
-        <img src={image} alt="Gogo World" id="first-image" />
-        <img src={image2} alt="Gogo World Mobile image" id="second-image" />
+        <img
+          src={image}
+          alt="Gogo World"
+          id="first-image"
+          data-aos="fade-left"
+        />
+        <img
+          src={image2}
+          alt="Gogo World Mobile image"
+          id="second-image"
+          data-aos="fade-right"
+        />
       </section>
 
       <section className="gogoworld-features">
         <div className="gogoworld-collection">
           <ul>
             <li>
-              <img src={f1} alt="" />
+              <img src={f1} alt="" data-aos="zoom-in" />
             </li>
             <li>
-              <img src={f2} alt="" />
+              <img src={f2} alt="" data-aos="zoom-in" />
             </li>
             <li>
-              <img src={f4} alt="" />
+              <img src={f4} alt="" data-aos="zoom-in" />
             </li>
             <li>
-              <img src={f6} alt="" />
+              <img src={f6} alt="" data-aos="zoom-in" />
             </li>
           </ul>
         </div>

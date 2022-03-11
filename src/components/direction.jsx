@@ -36,14 +36,24 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="direction wrapper">
       <section className="map-wrapper" id="map-wrapper">
-        <section className="map">
+        <section
+          className="map"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <GifLoader
             loading={true}
             imageSrc="https://media.giphy.com/media/XYHRwxYXXA68DhcAmF/giphy.gif"
             overlayBackground="transparent"
           />
         </section>
-        <section className="description-map">
+        <section
+          className="description-map"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <div className="come-address">
             <h1>Come Visit Us!</h1>
             <h2> 26th St, Taguig, 1634 Metro Manila</h2>
@@ -345,7 +355,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
               >
                 Privacy & Policy
               </Link> */}
-                <p>Privacy & Policy</p>
+              <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}
