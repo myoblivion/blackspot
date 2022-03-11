@@ -1,5 +1,4 @@
 .gogochain {
-  overflow-y: hidden;
 
   .gogochain-wrapper {
     height: 100vh;
@@ -87,6 +86,7 @@
   }
 }
 .gogochain-footer-distributed {
+  overflow-y: hidden;
   background: rgb(68, 68, 68);
   box-sizing: border-box;
   width: 100%;

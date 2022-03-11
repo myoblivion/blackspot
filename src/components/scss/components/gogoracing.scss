@@ -1,7 +1,6 @@
 .gogoracing {
   width: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
 
   .gogoracing-wrapper {
     height: 100vh;
@@ -153,7 +152,8 @@
   text-align: left;
   font: bold 16px sans-serif;
   padding: 10px 50px;
-  position: relative;
+
+
 }
 .footer-left {
   display: flex;

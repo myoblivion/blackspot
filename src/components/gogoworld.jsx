@@ -64,7 +64,7 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
       </section>
       <div className="section">
         <footer className="gogoworld-footer-distributed">
-          <div className="footer-left" data-aos="fade-up">
+          <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -97,7 +97,7 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div className="footer-center" data-aos="fade-up">
+          <div className="footer-center">
             <div className="desz">
               <p>
                 <Link
@@ -121,7 +121,7 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right" data-aos="fade-up">
+          <div className="footer-right">
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>
