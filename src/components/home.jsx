@@ -88,7 +88,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   const [isShown, setIsShown] = useState(false);
   // Aos (Animation On Scroll)
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
   // slide show (banner)
   const [count, setCount] = useState(0);

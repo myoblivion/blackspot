@@ -25,17 +25,17 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
   }, []);
   return (
     <div className="news wrapper">
-      <div className="accordion">
+      <div
+        className="accordion"
+        data-aos="zoom-in"
+        data-aos-offset="500"
+        data-aos-duration="500"
+      >
         <div className="news-title">
           <h1>News & Announcements</h1>
         </div>
         <div className="wrapper-bg">
-          <section
-            className="bg-1"
-            data-aos="flip-down"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <section className="bg-1">
             <div className="blog-card card-1">
               <img className="blog-img" src={Banner1} />
               <div className="text-overlay">
@@ -54,12 +54,7 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </section>
-          <section
-            className="bg-2"
-            data-aos="flip-down"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <section className="bg-2">
             <div className="blog-card card-2">
               <img className="blog-img" src={Banner2} />
               <div className="text-overlay">
@@ -78,12 +73,7 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </section>
-          <section
-            className="bg-3"
-            data-aos="flip-down"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <section className="bg-3">
             <div className="blog-card card-3">
               <img className="blog-img" src={Banner3} />
               <div className="text-overlay">
@@ -102,12 +92,7 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </section>
-          <section
-            className="bg-4"
-            data-aos="flip-down"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+          <section className="bg-4">
             <div className="blog-card card-3">
               <img className="blog-img" src={Banner4} />
               <div className="text-overlay">
