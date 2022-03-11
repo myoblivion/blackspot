@@ -220,7 +220,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         {/* Game Section */}
         <div className="container-2" id="game">
           <div className="game-wrapper">
-            <div className="game-title" data-aos="fade-down">
+            <div
+              className="game-title"
+              data-aos="fade-down"
+              data-aos-offset="700"
+              data-aos-duration="700"
+            >
               <h2>Black Spot Studio PH</h2>
               <h4 className="fourz">
                 Four exciting games are being developed for your entertainment.
@@ -230,10 +235,38 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="sliders">
               <Slider {...settings}>
                 <div className="slider-image" id="firstgame">
-                  <img src={game1} alt="" id="desktop1" data-aos="fade-up" />
-                  <img src={Irina} alt="" id="irina" data-aos="fade-left" />
-                  <img src={Risa} alt="" id="risa" data-aos="fade-right" />
-                  <img src={mobile1} alt="" id="mobile1" data-aos="fade-up" />
+                  <img
+                    src={game1}
+                    alt=""
+                    id="desktop1"
+                    data-aos="fade-up"
+                    data-aos-offset="700"
+                    data-aos-duration="700"
+                  />
+                  <img
+                    src={Irina}
+                    alt=""
+                    id="irina"
+                    data-aos="fade-left"
+                    data-aos-offset="700"
+                    data-aos-duration="700"
+                  />
+                  <img
+                    src={Risa}
+                    alt=""
+                    id="risa"
+                    data-aos="fade-right"
+                    data-aos-offset="700"
+                    data-aos-duration="700"
+                  />
+                  <img
+                    src={mobile1}
+                    alt=""
+                    id="mobile1"
+                    data-aos="fade-up"
+                    data-aos-offset="700"
+                    data-aos-duration="700"
+                  />
                   <div className="gamedes">
                     <div className="logoz">
                       <div className="icons">
@@ -253,24 +286,42 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                         </div>
                       </div>
                       <ul className="icon-list">
-                        <li data-aos="fade-up">
+                        <li
+                          data-aos="fade-up"
+                          data-aos-offset="700"
+                          data-aos-duration="700"
+                        >
                           <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
                             <FaGooglePlay />
                           </a>
                         </li>
-                        <li data-aos="fade-up">
+                        <li
+                          data-aos="fade-up"
+                          data-aos-offset="700"
+                          data-aos-duration="700"
+                        >
                           <a href="#">
                             <FaAppStore />
                           </a>
                         </li>
-                        <li data-aos="fade-up">
+                        <li
+                          data-aos="fade-up"
+                          data-aos-offset="700"
+                          data-aos-duration="700"
+                        >
                           <a href="#">
                             <FaWindows />
                           </a>
                         </li>
                       </ul>
                     </div>
-                    <div className="video" id="scionvid" data-aos="fade-up">
+                    <div
+                      className="video"
+                      id="scionvid"
+                      data-aos="fade-up"
+                      data-aos-offset="700"
+                      data-aos-duration="700"
+                    >
                       <iframe
                         width="560"
                         height="315"
@@ -457,7 +508,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         </div>
         {/* Contact Us */}
         <div className="contactforms" id="contact">
-          <div className="container contact-us-section" data-aos="fade-right">
+          <div className="container contact-us-section" data-aos="fade-right"           data-aos-offset="700"
+          data-aos-duration="700">
             <div className="contact-row h-100">
               <div className="col-md-3 section-title">
                 <h2>
@@ -508,7 +560,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </div>
-          <div className="partners-logo" data-aos="fade-left">
+          <div className="partners-logo" data-aos="fade-left"           data-aos-offset="700"
+          data-aos-duration="700">
             <div className="ourpartners-title">
               <h1>Partners</h1>
             </div>
@@ -536,26 +589,37 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
           <div className="mobile-partners">
-          <div className="ourpartners-mobile-title">
-              <h1 data-aos="fade-up">Partners</h1>
+            <div className="ourpartners-mobile-title">
+              <h1 data-aos="fade-up"           data-aos-offset="700"
+          data-aos-duration="700">Partners</h1>
             </div>
-              <div className="dubai-mobile">
-                <a
-                  href="http://blackspotstudio.com/final/main/main.asp"
-                  target="_blank"
-                >
-                  <img src={Dubailogo} alt="" id="dubaimobile" data-aos="fade-up"/>
-                </a>
-              </div>
-              <div className="korea-mobile">
-                <a
-                  href="http://blackspotstudio.com/final/main/main.asp"
-                  target="_blank"
-                >
-                  <img src={Korealogo} alt="" id="dubaimobile" data-aos="fade-up"/>
-                </a>
-              </div>
+            <div className="dubai-mobile">
+              <a
+                href="http://blackspotstudio.com/final/main/main.asp"
+                target="_blank"
+              >
+                <img
+                  src={Dubailogo}
+                  alt=""
+                  id="dubaimobile"
+                  data-aos="fade-up"
+                />
+              </a>
             </div>
+            <div className="korea-mobile">
+              <a
+                href="http://blackspotstudio.com/final/main/main.asp"
+                target="_blank"
+              >
+                <img
+                  src={Korealogo}
+                  alt=""
+                  id="dubaimobile"
+                  data-aos="fade-up"
+                />
+              </a>
+            </div>
+          </div>
         </div>
         {/* Footer */}
         <div className="section">

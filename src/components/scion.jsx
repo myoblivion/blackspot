@@ -243,7 +243,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
             <div className="character">
-              <img src={ch6} alt="" />
+              <img src={ch6} alt="" id="irinaa"/>
               <div className="ch-description">
                 <div className="name">
                   <h4>Irina</h4>
@@ -313,7 +313,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
             <div className="character">
-              <img src={ch11} alt="" />
+              <img src={ch11} alt="" id="risaa"/>
               <div className="ch-description">
                 <div className="name">
                   <h4>Risa</h4>
@@ -472,7 +472,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <div className="section">
         <footer className="footer-distributed">
-          <div className="footer-left">
+          <div className="footer-left" data-aos="fade-up">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -513,7 +513,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div className="footer-center">
+          <div className="footer-center" data-aos="fade-up">
             <div className="desz">
               <p>
                 <Link
@@ -537,7 +537,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right">
+          <div className="footer-right" data-aos="fade-up">
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>

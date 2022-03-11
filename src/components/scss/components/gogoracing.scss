@@ -1,5 +1,8 @@
 .gogoracing {
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
   .gogoracing-wrapper {
     height: 100vh;
     width: 100%;

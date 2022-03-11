@@ -30,7 +30,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
       
       <div className="section">
         <footer className="gogochain-footer-distributed">
-          <div className="footer-left">
+          <div className="footer-left" data-aos="fade-up">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -70,7 +70,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div className="footer-center">
+          <div className="footer-center" data-aos="fade-up">
             <div className="desz">
               <p>
                 <Link
@@ -94,7 +94,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right">
+          <div className="footer-right" data-aos="fade-up">
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>

@@ -45,10 +45,10 @@ const JobComponent = ({ props, ref, currentRoute }) => {
   }
   function sendCanvasAsAttachment(canvas) {
     var base64 = canvas.toDataURL();
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        content: base64
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      content: base64,
     });
-}
+  }
 
   // Title
   useEffect(() => {
@@ -57,7 +57,12 @@ const JobComponent = ({ props, ref, currentRoute }) => {
 
   return (
     <div className="job wrapper">
-      <section className="joblist">
+      <section
+        className="joblist"
+        data-aos="zoom-in"
+        data-aos-offset="500"
+        data-aos-duration="500"
+      >
         <div className="joblist-wrapper">
           <center>
             <img src={join} alt="" id="top1" />
@@ -611,7 +616,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
               >
                 Privacy & Policy
               </Link> */}
-                <p>Privacy & Policy</p>
+              <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}

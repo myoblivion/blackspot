@@ -1,5 +1,8 @@
 .gogoworld {
   width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
   .gogoworld-wrapper {
     height: 100vh;
     width: 100%;

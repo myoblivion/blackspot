@@ -90,24 +90,46 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="for-direction">
         <div className="wrapper-directions" id="bus">
-          <div className="box-direction">
+          <div
+            className="box-direction"
+            data-aos="fade-left"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="image-direction">
               <img src={bus} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h4>
+              <h4
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Via Bus <br />
               </h4>
-              <span>
+              <span
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 {" "}
                 <strong>From NAIA Terminal 1,2, and 3</strong>
               </span>
-              <p className="direction-stuff">
+              <p
+                className="direction-stuff"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Travel time from NAIA Terminal 1, 2 and 3 to Black Spot Studio
                 Philippines is about 1 hr 30 minutes to 2hrs depending on
                 traffic.{" "}
               </p>
-              <ul>
+              <ul
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 <li>
                   <span>
                     <strong> NAIA Terminal 1, 2, and 3</strong>
@@ -166,22 +188,44 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         </div>
         <div className="wrapper-directions" id="train">
           <div className="box-direction">
-            <div className="image-direction">
+            <div
+              className="image-direction"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <img src={train} alt="Train" />
             </div>
             <div className="direction-content">
-              <h4>
+              <h4
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Via Train <br />
               </h4>
-              <span>
+              <span
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 {" "}
                 <strong>From Ayala MRT Station</strong>
               </span>
-              <p className="direction-stuff">
+              <p
+                className="direction-stuff"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Travel time from Ayala MRT Station to Black Spot Studio
                 Philippines is about 15 to 20 minutes.{" "}
               </p>
-              <ul>
+              <ul
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 <li>
                   <span>
                     <strong>Ayala MRT Station</strong>
@@ -269,18 +313,36 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         </div>
         <div className="wrapper-directions" id="jeep">
           <div className="box-direction">
-            <div className="image-direction">
+            <div
+              className="image-direction"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <img src={jeep} alt="Jeep" />
             </div>
             <div className="direction-content">
-              <h4>
+              <h4
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 VIA JEEP <br />
               </h4>
-              <p className="direction-stuff">
+              <p
+                className="direction-stuff"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Travel time from Starmall Alabang to Black Spot Studio
                 Philippines is about 1 hr to 1 hr and 20 minutes
               </p>
-              <ul>
+              <ul
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 <li>
                   <span>
                     {" "}
@@ -310,23 +372,54 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         </div>
         <div className="wrapper-directions" id="walk">
           <div className="box-direction">
-            <div className="image-direction">
+            <div
+              className="image-direction"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <img src={walk} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h4 id="walks">
+              <h4
+                id="walks"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Via Walk / Grab <br />
               </h4>
-              <span>
+              <span
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 {" "}
                 <strong>From SM Aura</strong>
               </span>
-              <p className="direction-stuff">
+              <p
+                className="direction-stuff"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Head on Mckinley Parkway and walk ahead thru 26th Street corner
                 11th Street.
               </p>
-              <h4 id="grab">Via Grab</h4>
-              <p className="direction-stuff">
+              <h4
+                id="grab"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
+                Via Grab
+              </h4>
+              <p
+                className="direction-stuff"
+                data-aos="fade-left"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 Just pin “THE FINANCE CENTER” and just walk ahead to Infinity
                 Corporate Building.
               </p>
@@ -336,7 +429,12 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <div className="footer-section">
         <footer className="footer-distributed-direction">
-          <div className="footer-left">
+          <div
+            className="footer-left"
+            data-aos="fade-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -376,7 +474,12 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div className="footer-center">
+          <div
+            className="footer-center"
+            data-aos="fade-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="desz">
               <p>
                 <Link
@@ -400,7 +503,12 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right">
+          <div
+            className="footer-right"
+            data-aos="fade-up"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>
