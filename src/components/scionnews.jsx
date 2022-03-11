@@ -12,10 +12,21 @@ const ScionNewsComponent = ({ currentRoute }) => {
   return (
     <div className="something wrapper">
       <section className="something-wrapper">
-        <div className="something-news">
+        <div
+          className="something-news"
+          data-aos="fade-down"
+          data-aos-offset="500"
+          data-aos-delay="300"
+          data-aos-duration="500"
+        >
           <h2 className="something-title">Scion Fist News & Updates</h2>
         </div>
-        <div className="something-news-wrapper">
+        <div
+          className="something-news-wrapper"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <div className="container">
             <div className="row">
               <div className="col-md-10 offset-md-1">
@@ -24,9 +35,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Announcement</h4>
-                        <h5 className="company">
-                          Updating Soon
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -35,9 +44,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Updates</h4>
 
-                        <h5 className="company">
-                          Updating Soon
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -45,9 +52,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                     <li className="news-preview">
                       <div className="newscontent float-left">
                         <h4>Game Guide</h4>
-                        <h5 className="company">
-                          Updating Soon
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -56,9 +61,7 @@ const ScionNewsComponent = ({ currentRoute }) => {
                       <div className="newscontent float-left">
                         <h4>Markets</h4>
 
-                        <h5 className="company">
-                          Updating Soon
-                        </h5>
+                        <h5 className="company">Updating Soon</h5>
                       </div>
                     </li>
                   </label>
@@ -67,12 +70,33 @@ const ScionNewsComponent = ({ currentRoute }) => {
             </div>
           </div>
         </div>
-          <img src={risa} alt="aa" id="girl-1" />
-          <img src={grace} alt="aa" id="girl-2" />
+        <img
+          src={risa}
+          alt="aa"
+          id="girl-1"
+          data-aos="fade-right"
+          data-aos-offset="500"
+          data-aos-delay="300"
+          data-aos-duration="500"
+        />
+        <img
+          src={grace}
+          alt="aa"
+          id="girl-2"
+          data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-delay="300"
+          data-aos-duration="500"
+        />
       </section>
 
       <div className="modal-container">
-        <input type="checkbox" className="modal-checkbox" id="fullship" disabled/>
+        <input
+          type="checkbox"
+          className="modal-checkbox"
+          id="fullship"
+          disabled
+        />
         <label htmlFor="fullship" className="modal-overlay"></label>
         <div className="modal-content">
           <label htmlFor="fullship" className="modal-close">

@@ -18,7 +18,7 @@ import {
 import { AiFillInstagram } from "react-icons/ai";
 import icono from "../images/icons/logo.png";
 
-const NewsComponent = ({props, ref, currentRoute }) => {
+const NewsComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | News & Announcement";
@@ -30,7 +30,12 @@ const NewsComponent = ({props, ref, currentRoute }) => {
           <h1>News & Announcements</h1>
         </div>
         <div className="wrapper-bg">
-          <section className="bg-1">
+          <section
+            className="bg-1"
+            data-aos="flip-down"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="blog-card card-1">
               <img className="blog-img" src={Banner1} />
               <div className="text-overlay">
@@ -49,7 +54,12 @@ const NewsComponent = ({props, ref, currentRoute }) => {
               </div>
             </div>
           </section>
-          <section className="bg-2">
+          <section
+            className="bg-2"
+            data-aos="flip-down"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="blog-card card-2">
               <img className="blog-img" src={Banner2} />
               <div className="text-overlay">
@@ -68,7 +78,12 @@ const NewsComponent = ({props, ref, currentRoute }) => {
               </div>
             </div>
           </section>
-          <section className="bg-3">
+          <section
+            className="bg-3"
+            data-aos="flip-down"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="blog-card card-3">
               <img className="blog-img" src={Banner3} />
               <div className="text-overlay">
@@ -87,7 +102,12 @@ const NewsComponent = ({props, ref, currentRoute }) => {
               </div>
             </div>
           </section>
-          <section className="bg-4">
+          <section
+            className="bg-4"
+            data-aos="flip-down"
+            data-aos-offset="500"
+            data-aos-duration="500"
+          >
             <div className="blog-card card-3">
               <img className="blog-img" src={Banner4} />
               <div className="text-overlay">
@@ -129,7 +149,7 @@ const NewsComponent = ({props, ref, currentRoute }) => {
               >
                 Privacy & Policy
               </Link> */}
-                <p>Privacy & Policy</p>
+              <p>Privacy & Policy</p>
 
               <Link
                 to="/job"

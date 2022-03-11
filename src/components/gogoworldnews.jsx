@@ -12,10 +12,21 @@ const GogoWorldNewsComponent = ({ currentRoute }) => {
   return (
     <div className="gogoworldnews wrapper">
       <section className="something-wrapper">
-        <div className="something-news">
+        <div
+          className="something-news"
+          data-aos="fade-down"
+          data-aos-offset="500"
+          data-aos-delay="300"
+          data-aos-duration="500"
+        >
           <h2 className="something-title">Gogo World News & Updates</h2>
         </div>
-        <div className="something-news-wrapper">
+        <div
+          className="something-news-wrapper"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <div className="container">
             <div className="row">
               <div className="col-md-10 offset-md-1">
