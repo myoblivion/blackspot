@@ -227,7 +227,7 @@
   text-decoration: none;
 }
 
-.gogoracing-footer-distributed .footer-links a:before {
+.gogoracing-footer-distributed .footer-links a::after {
   content: "|";
   font-weight: 300;
   font-size: 20px;
@@ -237,7 +237,7 @@
   padding-right: 5px;
   margin-left: 5px;
 }
-.gogoracing-footer-distributed .footer-links p:before {
+.gogoracing-footer-distributed .footer-links p::after {
   content: "|";
   font-weight: 300;
   font-size: 20px;

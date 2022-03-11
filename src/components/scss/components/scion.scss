@@ -394,6 +394,17 @@
 }
 
 .footer-distributed .footer-links a:before {
+  content: "";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #ffb808;
+  display: inline-block;
+  padding-right: 1px;
+  margin-left: 1px;
+}
+
+.footer-distributed .footer-links p:after {
   content: "|";
   font-weight: 300;
   font-size: 20px;
@@ -403,7 +414,6 @@
   padding-right: 5px;
   margin-left: 5px;
 }
-
 .footer-distributed .footer-links .link-1:before {
   content: none;
 }

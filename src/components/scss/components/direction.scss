@@ -319,18 +319,19 @@
   text-decoration: none;
 }
 
-.footer-distributed-direction .footer-links a:before {
+
+
+
+.footer-distributed-direction .footer-links p:after {
   content: "|";
   font-weight: 300;
   font-size: 20px;
   left: 0;
   color: #ffb808;
-
   display: inline-block;
   padding-right: 5px;
   margin-left: 5px;
 }
-
 .footer-distributed-direction .footer-links .link-1:before {
   content: none;
 }

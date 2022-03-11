@@ -221,7 +221,7 @@
   text-decoration: none;
 }
 
-.gogoworld-footer-distributed .footer-links a:before {
+.gogoworld-footer-distributed .footer-links a::after {
   content: "|";
   font-weight: 300;
   font-size: 20px;
@@ -232,7 +232,7 @@
   margin-left: 5px;
 }
 
-.gogoworld-footer-distributed .footer-links p:before {
+.gogoworld-footer-distributed .footer-links p::after {
   content: "|";
   font-weight: 300;
   font-size: 20px;
