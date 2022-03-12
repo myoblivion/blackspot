@@ -84,7 +84,6 @@ const handleExpire = () => {
   });
 };
 
-
 const HomeComponent = ({ props, ref, currentRoute }) => {
 
   const [isShown, setIsShown] = useState(false);
