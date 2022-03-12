@@ -85,7 +85,6 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
-
   const [isShown, setIsShown] = useState(false);
   // Aos (Animation On Scroll)
   useEffect(() => {
@@ -220,13 +219,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         </div>
         {/* Game Section */}
         <div className="container-2" id="game">
-          <div className="game-wrapper">
-            <div
-              className="game-title"
-              data-aos="fade-down"
-              data-aos-offset="700"
-              data-aos-duration="700"
-            >
+          <div
+            className="game-wrapper"
+            data-aos="fade-up"
+            data-aos-offset="700"
+            data-aos-duration="700"
+          >
+            <div className="game-title">
               <h2>Black Spot Studio PH</h2>
               <h4 className="fourz">
                 Four exciting games are being developed for your entertainment.
@@ -235,13 +234,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="sliders">
               <Slider {...settings}>
-                <div
-                  className="slider-image"
-                  id="firstgame"
-                  data-aos="fade-up"
-                  data-aos-offset="700"
-                  data-aos-duration="700"
-                >
+                <div className="slider-image" id="firstgame">
                   <img src={game1} alt="" id="desktop1" />
                   <img
                     src={Irina}
@@ -482,7 +475,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
         {/* Contact Us */}
-        <div className="contactforms" id="contact">
+        <div className="contactforms" id="contact" >
           <div
             className="container contact-us-section"
             data-aos="fade-right"
@@ -571,27 +564,21 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </div>
-          <div className="mobile-partners">
+          <div
+            className="mobile-partners"
+            data-aos="fade-up"
+            data-aos-offset="700"
+            data-aos-duration="700"
+          >
             <div className="ourpartners-mobile-title">
-              <h1
-                data-aos="fade-up"
-                data-aos-offset="700"
-                data-aos-duration="700"
-              >
-                Partners
-              </h1>
+              <h1>Partners</h1>
             </div>
             <div className="dubai-mobile">
               <a
                 href="http://blackspotstudio.com/final/main/main.asp"
                 target="_blank"
               >
-                <img
-                  src={Dubailogo}
-                  alt=""
-                  id="dubaimobile"
-                  data-aos="fade-up"
-                />
+                <img src={Dubailogo} alt="" id="dubaimobile" />
               </a>
             </div>
             <div className="korea-mobile">
@@ -599,12 +586,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 href="http://blackspotstudio.com/final/main/main.asp"
                 target="_blank"
               >
-                <img
-                  src={Korealogo}
-                  alt=""
-                  id="dubaimobile"
-                  data-aos="fade-up"
-                />
+                <img src={Korealogo} alt="" id="dubaimobile" />
               </a>
             </div>
           </div>
