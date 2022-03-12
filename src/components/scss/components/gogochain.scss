@@ -43,6 +43,9 @@
 @media only screen and (max-width: 500px) {
   .gogochain {
     .wrapper {
+      .logso {
+        width: 47%;
+      }
       height: 90vh;
       h1 {
         width: 50%;
@@ -55,6 +58,7 @@
       }
     }
   }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -249,6 +253,9 @@
   .gogochain-footer-distributed {
     font: bold 14px sans-serif;
     top: 50px;
+    .logso {
+      width: 47%;
+    }
   }
 
   .gogochain-footer-distributed .footer-left,

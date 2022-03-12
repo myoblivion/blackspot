@@ -269,6 +269,9 @@ ul.job-list > li.job-preview:hover {
       height: 100%;
     }
   }
+  .logso {
+    width: 47%;
+  }
 }
 @media only screen and (max-width: 800px) {
   .joblist-wrapper {
@@ -481,6 +484,7 @@ ul.job-list > li.job-preview:hover {
     margin-bottom: 40px;
     text-align: center;
   }
+ 
 
   .footer-distributed-direction .footer-center i {
     margin-left: 0;

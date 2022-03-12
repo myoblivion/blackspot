@@ -388,7 +388,7 @@
     font: bold 14px sans-serif;
     top: 1000px;
   }
-
+  
   .footer-distributed-direction .footer-left,
   .footer-distributed-direction .footer-center,
   .footer-distributed-direction .footer-right {
@@ -550,6 +550,9 @@
 }
 @media only screen and (max-width: 500px) {
   .direction {
+    .logso {
+      width: 47%;
+    }
     #bus {
       text-align: center;
       margin-top: 7%;
