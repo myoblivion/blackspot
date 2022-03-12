@@ -270,6 +270,7 @@ ul.job-list > li.job-preview:hover {
     }
   }
   .logso {
+    margin-top: 10%;
     width: 47%;
   }
 }
@@ -358,6 +359,7 @@ ul.job-list > li.job-preview:hover {
 }
 .logso {
   margin: 0;
+  margin-top: 10%;
   width: 27%;
 }
 
@@ -472,7 +474,7 @@ ul.job-list > li.job-preview:hover {
 
 @media (max-width: 880px) {
   .footer-distributed-direction {
-    font: bold 14px sans-serif;
+    font: bold 12px sans-serif;
     top: 1000px;
   }
 
@@ -484,7 +486,6 @@ ul.job-list > li.job-preview:hover {
     margin-bottom: 40px;
     text-align: center;
   }
- 
 
   .footer-distributed-direction .footer-center i {
     margin-left: 0;
@@ -500,4 +501,3 @@ ul.job-list > li.job-preview:hover {
   padding-right: 5px;
   margin-left: 5px;
 }
-
