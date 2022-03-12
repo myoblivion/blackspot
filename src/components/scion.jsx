@@ -243,7 +243,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
             <div className="character">
-              <img src={ch6} alt="" id="irinaa"/>
+              <img src={ch6} alt="" id="irinaa" />
               <div className="ch-description">
                 <div className="name">
                   <h4>Irina</h4>
@@ -313,7 +313,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
             <div className="character">
-              <img src={ch11} alt="" id="risaa"/>
+              <img src={ch11} alt="" id="risaa" />
               <div className="ch-description">
                 <div className="name">
                   <h4>Risa</h4>
@@ -437,10 +437,10 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <div className="line"></div>
           </div>
           <div className="weapon">
-            <img src={w11} alt="" data-aos="flip-down" />
             <h4>
               <span>SMG</span> MP5
             </h4>
+            <img src={w11} alt="" data-aos="flip-down" />
 
             <div className="line"></div>
           </div>

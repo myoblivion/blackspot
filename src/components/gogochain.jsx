@@ -24,13 +24,18 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
     <div className="gogochain wrapper">
       <section className="gogochain-wrapper">
         <h1>Coming Soon</h1>
-        <img src={image} alt="" id="first-image" data-aos="fade-left"/>
-        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" data-aos="fade-right" />
+        <img src={image} alt="" id="first-image" data-aos="fade-left" />
+        <img
+          src={image2}
+          alt="Gogo Racing Mobile image"
+          id="second-image"
+          data-aos="fade-right"
+        />
       </section>
-      
+
       <div className="section">
         <footer className="gogochain-footer-distributed">
-          <div className="footer-left" data-aos="fade-up">
+          <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -49,7 +54,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
               >
                 Privacy & Policy
               </Link> */}
-                <p>Privacy & Policy</p>
+              <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}
@@ -70,7 +75,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div className="footer-center" data-aos="fade-up">
+          <div className="footer-center">
             <div className="desz">
               <p>
                 <Link
@@ -94,7 +99,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right" data-aos="fade-up">
+          <div className="footer-right">
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>

@@ -360,7 +360,6 @@ body {
   .contact-us-section {
     background-color: rgba(0, 0, 0, 0.541);
     width: 70%;
-    min-height: 500px;
     height: 700px;
     position: relative;
     margin-bottom: 50px;
@@ -1327,9 +1326,8 @@ input[type="radio"] {
       width: 100%;
       margin-left: 0;
       border-radius: 0;
-      margin-top: 20%;
+      margin-top: 45%;
       margin-bottom: 5%;
-      height: 100%;
     }
     .contact-row {
       padding-top: 20%;
@@ -1347,24 +1345,23 @@ input[type="radio"] {
       .contact-us-form {
         margin: 0 auto;
         width: 90%;
-
         .form-group {
           margin: 0 auto;
           padding: 4px 6px;
           width: 100%;
+          height: 100%;
         }
-        .contact-us-form input,
-        .contact-us-form textarea {
-          width: 90%;
+        input,
+        textarea {
+          width: 100%;
         }
       }
       .partners-logo {
         position: static;
-        display: flex;
+        display: block;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        margin-bottom: 20%;
         width: 60%;
         height: 100%;
         display: none;
@@ -1385,7 +1382,7 @@ input[type="radio"] {
     }
     .mobile-partners {
       position: static;
-      display: flex;
+      display: block;
       flex-direction: column;
       align-items: center;
       justify-content: center;

@@ -46,37 +46,10 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <img src={image2} alt="Gogo Racing Mobile image" id="second-image" data-aos="fade-right"/>
         <h1>Coming Soon</h1>
       </section>
-      <section className="gogoracing-features">
-        <div className="gogoracing-collection">
-          <ul>
-            <li>
-              <img src={f1} alt="" />
-            </li>
-            <li>
-              <img src={f2} alt="" />
-            </li>
-            <li>
-              <img src={f3} alt="" />
-            </li>
-            <li>
-              <img src={f4} alt="" />
-            </li>
-            <li>
-              <img src={f5} alt="" />
-            </li>
-            <li>
-              <img src={f6} alt="" />
-            </li>
-            <li>
-              <img src={f7} alt="" />
-            </li>
-          </ul>
-        </div>
-      </section>
       {/* Footer */}
       <div className="section">
         <footer className="gogoracing-footer-distributed">
-          <div className="footer-left" data-aos="fade-up">
+          <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">
               <Link
@@ -111,7 +84,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
             </p>
           </div>
 
-          <div className="footer-center" data-aos="fade-up">
+          <div className="footer-center">
             <div className="desz">
               <p>
                 <Link
@@ -135,7 +108,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right" data-aos="fade-up">
+          <div className="footer-right" >
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>
