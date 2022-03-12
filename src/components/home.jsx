@@ -475,7 +475,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
         {/* Contact Us */}
-        <div className="contactforms" id="contact" >
+        <div className="contactforms" id="contact">
           <div
             className="container contact-us-section"
             data-aos="fade-right"
@@ -594,7 +594,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         {/* Footer */}
         <div className="section">
           <footer className="footer-distributed">
-            <div className="footer-left" data-aos="fade-up">
+            <div
+              className="footer-left"
+              data-aos="fade-up"
+              data-aos-offset="700"
+              data-aos-duration="700"
+            >
               <img src={icono} alt="" id="footer-logo" />
               <p className="footer-links">
                 <Link
@@ -634,7 +639,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </p>
             </div>
 
-            <div className="footer-center" data-aos="fade-up">
+            <div
+              className="footer-center"
+              data-aos="fade-up"
+              data-aos-offset="700"
+              data-aos-duration="700"
+            >
               <div className="desz">
                 <p>
                   <Link
@@ -658,7 +668,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
 
-            <div className="footer-right" data-aos="fade-up">
+            <div
+              className="footer-right"
+              data-aos="fade-up"
+              data-aos-offset="700"
+              data-aos-duration="700"
+            >
               <div className="footer-icons">
                 <ul className="social-media-list">
                   <li>
