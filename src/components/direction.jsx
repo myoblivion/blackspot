@@ -35,11 +35,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
   }, []);
   return (
     <div className="direction wrapper">
-      <section
-        className="map-wrapper"
-        id="map-wrapper"
-
-      >
+      <section className="map-wrapper" id="map-wrapper">
         <section className="map">
           <GifLoader
             loading={true}
@@ -83,47 +79,31 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         </section>
       </section>
       <section className="for-direction">
-        <div className="wrapper-directions" id="bus">
-          <div
-            className="box-direction"
-            data-aos="fade-left"
-            data-aos-offset="500"
-            data-aos-duration="500"
-          >
+        <div
+          className="wrapper-directions"
+          id="bus"
+          data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
+          <div className="box-direction">
             <div className="image-direction">
               <img src={bus} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h4
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <h4>
                 Via Bus <br />
               </h4>
-              <span
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <span>
                 {" "}
                 <strong>From NAIA Terminal 1,2, and 3</strong>
               </span>
-              <p
-                className="direction-stuff"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <p>
                 Travel time from NAIA Terminal 1, 2 and 3 to Black Spot Studio
                 Philippines is about 1 hr 30 minutes to 2hrs depending on
                 traffic.{" "}
               </p>
-              <ul
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <ul>
                 <li>
                   <span>
                     <strong> NAIA Terminal 1, 2, and 3</strong>
@@ -180,46 +160,30 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </div>
-        <div className="wrapper-directions" id="train">
+        <div
+          className="wrapper-directions"
+          id="train"
+          data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <div className="box-direction">
-            <div
-              className="image-direction"
-              data-aos="fade-left"
-              data-aos-offset="500"
-              data-aos-duration="500"
-            >
+            <div className="image-direction">
               <img src={train} alt="Train" />
             </div>
             <div className="direction-content">
-              <h4
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <h4>
                 Via Train <br />
               </h4>
-              <span
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <span>
                 {" "}
                 <strong>From Ayala MRT Station</strong>
               </span>
-              <p
-                className="direction-stuff"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <p>
                 Travel time from Ayala MRT Station to Black Spot Studio
                 Philippines is about 15 to 20 minutes.{" "}
               </p>
-              <ul
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <ul>
                 <li>
                   <span>
                     <strong>Ayala MRT Station</strong>
@@ -305,38 +269,26 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </div>
-        <div className="wrapper-directions" id="jeep">
+        <div
+          className="wrapper-directions"
+          id="jeep"
+          data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <div className="box-direction">
-            <div
-              className="image-direction"
-              data-aos="fade-left"
-              data-aos-offset="500"
-              data-aos-duration="500"
-            >
+            <div>
               <img src={jeep} alt="Jeep" />
             </div>
             <div className="direction-content">
-              <h4
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <h4>
                 VIA JEEP <br />
               </h4>
-              <p
-                className="direction-stuff"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <p className="direction-stuff">
                 Travel time from Starmall Alabang to Black Spot Studio
                 Philippines is about 1 hr to 1 hr and 20 minutes
               </p>
-              <ul
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <ul>
                 <li>
                   <span>
                     {" "}
@@ -364,56 +316,31 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </div>
-        <div className="wrapper-directions" id="walk">
+        <div
+          className="wrapper-directions"
+          id="walk"
+          data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <div className="box-direction">
-            <div
-              className="image-direction"
-              data-aos="fade-left"
-              data-aos-offset="500"
-              data-aos-duration="500"
-            >
+            <div className="image-direction">
               <img src={walk} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h4
-                id="walks"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <h4 id="walks">
                 Via Walk / Grab <br />
               </h4>
-              <span
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <span>
                 {" "}
                 <strong>From SM Aura</strong>
               </span>
-              <p
-                className="direction-stuff"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <p className="direction-stuff">
                 Head on Mckinley Parkway and walk ahead thru 26th Street corner
                 11th Street.
               </p>
-              <h4
-                id="grab"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
-                Via Grab
-              </h4>
-              <p
-                className="direction-stuff"
-                data-aos="fade-left"
-                data-aos-offset="500"
-                data-aos-duration="500"
-              >
+              <h4 id="grab">Via Grab</h4>
+              <p className="direction-stuff">
                 Just pin “THE FINANCE CENTER” and just walk ahead to Infinity
                 Corporate Building.
               </p>
