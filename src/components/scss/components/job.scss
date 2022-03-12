@@ -460,10 +460,10 @@ ul.job-list > li.job-preview:hover {
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color: #33383b;
+  background-color: #ffb808;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffb808;
+  color: white;
 
   text-align: center;
   line-height: 40px;
@@ -474,7 +474,7 @@ ul.job-list > li.job-preview:hover {
 
 @media (max-width: 880px) {
   .footer-distributed-direction {
-    font: bold 12px sans-serif;
+    font: bold 11px sans-serif;
     top: 1000px;
   }
 
@@ -489,6 +489,21 @@ ul.job-list > li.job-preview:hover {
 
   .footer-distributed-direction .footer-center i {
     margin-left: 0;
+  }
+  .footer-distributed-direction .footer-center p a {
+    font-size: 12px;
+  }
+  .footer-distributed-direction .footer-links a {
+    font-size: 12px;
+  }
+  .footer-distributed-direction .footer-links p {
+    font-size: 12px;
+  }
+  .footer-icons h4 {
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    text-transform: uppercase;
   }
 }
 .footer-distributed-direction .footer-links a:after {

@@ -140,9 +140,8 @@ $text-color: #363738;
 }
 @media only screen and (max-width: 600px) {
   .news {
-    background-image: url("/src/images/gogoworlds.jpg");
-    background-size: 100% 100%;
-    background-position: center;
+    background-image: url("/src/images/GGW BG.png");
+    background-size: 100% 105%;
   }
   .wrapper-bg {
     height: 5%;
@@ -159,11 +158,227 @@ $text-color: #363738;
     .blog-card {
       p {
         width: 70%;
-        text-align: left  ;
+        text-align: left;
         a {
           right: 10%;
         }
       }
     }
+  }
+}
+.footer-distributed-news {
+  background: rgb(68, 68, 68);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 2% 50px;
+  img {
+    width: 27%;
+  }
+}
+.footer-left {
+  display: flex;
+}
+.footer-distributed-news .footer-left,
+.footer-distributed-news .footer-center,
+.footer-distributed-news .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed-news .footer-left {
+  width: 40%;
+  display: inline-block;
+}
+
+/* The company logo */
+.footer-left {
+  display: flex;
+
+  img {
+    margin: 0 2%;
+    width: 27%;
+  }
+}
+/* Footer links */
+
+.footer-distributed-news .footer-links {
+  color: #ffb808;
+  padding: 0;
+}
+
+.footer-distributed-news .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-distributed-news .footer-links p {
+  display: inline-block;
+  line-height: 1;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.footer-distributed-news .footer-company-name {
+  color: #ffb808;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-center {
+  width: 40%;
+  p span {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 2;
+  }
+  a {
+    color: #ffb808;
+
+    text-decoration: none;
+  }
+  .desz {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+.footer-distributed-news .footer-center p a {
+  color: #ffb808;
+  text-decoration: none;
+}
+
+.footer-distributed-news .footer-links a:before {
+  content: "";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #ffb808;
+  display: inline-block;
+  padding-right: 1px;
+  margin-left: 1px;
+}
+.footer-distributed-news .footer-links p:after {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #ffb808;
+  display: inline-block;
+  padding-right: 5px;
+  margin-left: 5px;
+}
+
+.footer-distributed-news .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed-news .footer-right {
+  width: 20%;
+}
+
+.footer-distributed-news .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed-news .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer-icons h4 {
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.footer-distributed-news .footer-icons ul {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-distributed-news .footer-icons li a {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  background-color: #ffb808;
+  border-radius: 2px;
+  font-size: 25px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.9;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed-news {
+    font: bold 12px sans-serif;
+    top: 0;
+  }
+  .footer-left {
+    img {
+      margin: 0 2%;
+      margin-top: 10%;
+      width: 47%;
+    }
+  }
+  .footer-distributed-news .footer-left,
+  .footer-distributed-news .footer-center,
+  .footer-distributed-news .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed-news .footer-center i {
+    margin-left: 0;
+  }
+  .footer-distributed-news .footer-center p a {
+    font-size: 12px;
+  }
+  .footer-distributed-news .footer-links a {
+    font-size: 12px;
+  }
+  .footer-distributed-news .footer-links p {
+    font-size: 12px;
+  }
+  .footer-distributed-news .footer-icons li a {
+    font-size: 24px;
+    line-height: 1.6;
+    width: 32px;
+    height: 32px;
+  }
+  .footer-icons h4 {
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    text-transform: uppercase;
   }
 }

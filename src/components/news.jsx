@@ -114,7 +114,7 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
         </div>
       </div>
       <div className="section">
-        <footer className="footer-distributed">
+        <footer className="footer-distributed-news">
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />
             <p className="footer-links">

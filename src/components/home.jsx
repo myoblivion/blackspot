@@ -273,18 +273,19 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       </div>
                       <ul className="icon-list">
                         <li>
-                          <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
+                          <a
+                            href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
+                            target="_blank"
+                          >
                             <FaGooglePlay />
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a
+                            href="https://apps.apple.com/ph/app/scion-fist/id1591386655"
+                            target="_blank"
+                          >
                             <FaAppStore />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <FaWindows />
                           </a>
                         </li>
                       </ul>
@@ -332,18 +333,16 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       </div>
                       <ul className="icon-list" id="display-nones">
                         <li>
-                          <a href="#">
+                          <a
+                            href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                            target="_blank"
+                          >
                             <FaGooglePlay />
                           </a>
                         </li>
                         <li>
                           <a href="#">
                             <FaAppStore />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <FaWindows />
                           </a>
                         </li>
                       </ul>
