@@ -332,7 +332,7 @@
   }
 
   .footer-distributed .footer-links a:before {
-    content: "|";
+    content: "";
     font-weight: 300;
     font-size: 20px;
     left: 0;
@@ -342,6 +342,19 @@
     margin-left: 5px;
   }
 
+  .footer-distributed .footer-links p::after {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #ffb808;
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: 5px;
+  }
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
   .footer-distributed .footer-links .link-1:before {
     content: none;
   }
@@ -396,7 +409,7 @@
 
   @media (max-width: 880px) {
     .footer-distributed {
-      font: bold 14px sans-serif;
+      font: bold 12px sans-serif;
       top: 1000px;
     }
 

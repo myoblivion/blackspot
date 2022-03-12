@@ -175,8 +175,8 @@
   left: 0;
   color: #ffb808;
   display: inline-block;
-  padding-right: 1px;
-  margin-left: 1px;
+  padding-right: 5px;
+  margin-left: 5px;
 }
 .gogoracing-footer-distributed .footer-links p::after {
   content: "|";
@@ -248,10 +248,11 @@
 
 @media (max-width: 880px) {
   .gogoracing-footer-distributed {
-    font: bold 14px sans-serif;
+    font: bold 12px sans-serif;
     top: 50px;
     .logso {
       width: 47%;
+      margin-top: 10%;
     }
   }
 

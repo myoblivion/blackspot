@@ -465,9 +465,10 @@
 
 @media (max-width: 880px) {
   .footer-distributed {
-    font: bold 14px sans-serif;
+    font: bold 12px sans-serif;
     top: 1000px;
     .logso {
+      margin-top: 10%;
       width: 47%;
     }
   }
@@ -626,7 +627,7 @@
     }
   }
   .footer-distributed {
-    font: bold 10px sans-serif;
+    font: bold 12px sans-serif;
   }
   
   .footer-distributed .footer-icons li a {
