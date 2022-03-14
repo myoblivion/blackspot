@@ -7,6 +7,8 @@ import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
 
+import getit from "../images/edit/123.png";
+
 // Devices
 import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
@@ -335,7 +337,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                             href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
                             target="_blank"
                           >
-                            <FaGooglePlay />
+                            <img src={getit} alt="" />
                           </a>
                         </li>
                       </ul>

@@ -267,12 +267,16 @@ body {
         display: none;
       }
       #ggr {
-        left: 80%;
+        left: 70%;
         flex-direction: column;
         width: 8%;
-        top: -20%;
+        top: -30%;
         li {
           margin-bottom: 25%;
+          background-color: transparent;
+          img {
+            width: 500px;
+          }
         }
       }
       #gogoracing {
@@ -1059,11 +1063,13 @@ input[type="radio"] {
 
     &-bg {
       position: absolute;
-      top: -9%;
+      top: -6%;
       left: -10%;
       width: 120%;
       height: 120%;
-      background-size: contain;
+      background-size: 100% 100%;
+      overflow-y: hidden !important;
+      overflow-x: hidden !important;
       transition: transform $BG-T $RT;
       will-change: transform;
       background-position: center;
@@ -1426,7 +1432,7 @@ input[type="radio"] {
           position: absolute;
           clip-path: polygon(0% 100%, 0 0%, 100% 0%, 25% 100%);
           left: 9.9%;
-          top: 28.9%;
+          top: 27.8%;
         }
       }
     }
