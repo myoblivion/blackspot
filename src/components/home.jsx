@@ -87,7 +87,15 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
-  const [isShown, setIsShown] = useState(false);
+  
+  function MouseOver(event) {
+    event.target.style.background = 'red';
+  }
+  function MouseOut(event){
+    event.target.style.background="";
+  }
+
+  const [isShown, setIsShown] = useState(true);
   // Aos (Animation On Scroll)
   useEffect(() => {
     Aos.init({ duration: 1000 });

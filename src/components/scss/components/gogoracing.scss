@@ -217,11 +217,11 @@
   }
   .el-characters {
     top: 35%;
-    left: 33%;
+    left: 29%;
   }
   .el-tires {
     top: 35%;
-    left: 28%;
+    left: 24%;
   }
   .el-cars-containers {
     display: grid;
@@ -230,16 +230,18 @@
     margin: 0 auto;
     align-items: center;
     img {
-      width: 110%;
+      width: 115%;
     }
   }
   .el-tires-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
+    grid-gap: 30px;
     align-items: center;
     width: 100%;
     img {
+      width: 110%;
       margin: 5%;
     }
   }
@@ -247,10 +249,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
+    grid-gap: 30px;
     align-items: center;
     width: 100%;
     .gogocharacter {
+      width: 100%;
       margin: 2% auto;
+      padding: 0;
+      border: 5px solid white;
     }
   }
   #tab1:checked ~ .el-car {
