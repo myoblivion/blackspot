@@ -148,6 +148,48 @@
     right: 5%;
   }
 }
+.features-select {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/src/images/gogoracingbackground/web_bg_3.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .select-wrapper {
+    width: 100%;
+    input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+    }
+    label {
+      font-size: 25px;
+      color: white;
+      margin-right: 5%;
+    }
+  }
+  .el-characters {
+    display: none;
+  }
+  .el-car {
+    display: none;
+  }
+  .el-tires {
+    display: none;
+  }
+  #tab1:checked ~ .el-characters {
+    display: block;
+  } 
+   #tab2:checked ~ .el-car {
+    display: block;
+  }
+  #tab3:checked ~ .el-tires {
+    display: block;
+  }
+}
 
 // @media only screen and (max-width: 500px) {
 //   .gogoracing {
