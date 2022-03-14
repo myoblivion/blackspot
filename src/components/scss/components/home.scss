@@ -897,7 +897,7 @@ input[type="radio"] {
           @include bgPart;
           width: 300%;
           height: 300%;
-          background-image: url("/src/images/photos/Gogo\ Racing\ \(2\).png");
+          background-image: url("/src/images/photos/GGR\ NEW.png");
         }
 
         &.left-top {
@@ -1324,7 +1324,7 @@ input[type="radio"] {
       width: 100%;
       margin-left: 0;
       border-radius: 0;
-      margin-top: 45%;
+      margin-top: 10%;
       margin-bottom: 5%;
     }
 
@@ -1338,7 +1338,7 @@ input[type="radio"] {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 130vh;
+      height: 110vh;
       .contact-us-form {
         margin: 0 auto;
         width: 90%;
@@ -1518,7 +1518,7 @@ input[type="radio"] {
       &.anim-9parts {
         .part { 
           &:before {
-            background-image: url("/src/images/photos/GGR\ Banner\ \(Mobile\).png");
+            background-image: url("/src/images/photos/NEW\ GGR\ MOBILE.png");
             overflow-y: hidden !important;
             overflow-x: hidden !important;
             /*background-size: cover;*/

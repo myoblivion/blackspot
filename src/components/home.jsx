@@ -241,7 +241,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     alt=""
                     id="irina"
                     data-aos="fade-left"
-                    data-aos-offset="700"
                     data-aos-duration="700"
                   />
                   <img
@@ -249,7 +248,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     alt=""
                     id="risa"
                     data-aos="fade-right"
-                    data-aos-offset="700"
                     data-aos-duration="700"
                   />
                   <img src={mobile1} alt="" id="mobile1" />

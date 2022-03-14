@@ -82,7 +82,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         <div
           className="wrapper-directions"
           id="bus"
-          data-aos="fade-left"
+          data-aos="zoom-out"
           data-aos-offset="500"
           data-aos-duration="500"
         >
@@ -163,7 +163,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         <div
           className="wrapper-directions"
           id="train"
-          data-aos="fade-left"
+          data-aos="zoom-out"
           data-aos-offset="500"
           data-aos-duration="500"
         >
@@ -272,7 +272,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         <div
           className="wrapper-directions"
           id="jeep"
-          data-aos="fade-left"
+          data-aos="zoom-out"
           data-aos-offset="500"
           data-aos-duration="500"
         >
@@ -319,7 +319,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         <div
           className="wrapper-directions"
           id="walk"
-          data-aos="fade-left"
+          data-aos="zoom-out"
           data-aos-offset="500"
           data-aos-duration="500"
         >
