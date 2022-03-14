@@ -172,13 +172,15 @@
       color: white;
       margin-right: 15%;
       padding: 10px 10px;
-      border: 4px solid rgb(0, 51, 255);
+      border: 5px solid rgb(255, 255, 255);
       border-radius: 15px;
       font-weight: 900;
     }
   }
-  #control1, #control2, #control3 {
-  position: absolute;
+  #control1,
+  #control2,
+  #control3 {
+    position: absolute;
   }
   #control1 {
     top: 20%;
@@ -197,24 +199,21 @@
     display: block;
     position: absolute;
   }
-  .el-cars-containers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 0 auto;
-    align-items: center;
-  }
+
   .el-characters,
   .el-tires {
     display: none;
   }
-  .el-characters, .el-car, .el-tires {
+  .el-characters,
+  .el-car,
+  .el-tires {
     position: absolute;
     top: 30%;
     left: 5%;
   }
   .el-car {
     top: 35%;
-    left: 20%;
+    left: 15%;
   }
   .el-characters {
     top: 35%;
@@ -223,6 +222,16 @@
   .el-tires {
     top: 35%;
     left: 28%;
+  }
+  .el-cars-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin: 0 auto;
+    align-items: center;
+    img {
+      width: 110%;
+    }
   }
   .el-tires-container {
     display: grid;
