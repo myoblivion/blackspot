@@ -1,3 +1,6 @@
+@import url('http://fonts.cdnfonts.com/css/blazed');
+
+
 .gogoracing {
   .gogoracing-wrapper {
     width: 100%;
@@ -169,13 +172,14 @@
       top: 0;
     }
     label {
-      font-size: 35px;
+      font-size: 55px;
       color: white;
       margin-right: 15%;
-      padding: 10px 10px;
       border: 5px solid rgb(255, 255, 255);
       border-radius: 15px;
+      width: 25%;
       font-weight: 900;
+      text-align: center;
     }
   }
   #control1,
@@ -184,16 +188,26 @@
     position: absolute;
   }
   #control1 {
-    top: 20%;
-    left: 30%;
+    top: 30%;
+    left: 10%;
   }
   #control2 {
-    top: 20%;
-    left: 40%;
+    top: 40%;
+    left: 10%;
+  }
+  #titled {
+    font-family: 'Blazed', sans-serif;
+    color: rgb(146, 4, 4);
+    position: absolute;
+    font-size: 88px;
+    top: 10%;
+    left: 15%;
+    text-shadow: 8px 2px rgb(253, 92, 92), -9px -2px rgb(250, 176, 17);
+    text-transform: uppercase;
   }
   #control3 {
-    top: 20%;
-    left: 55%;
+    top: 50%;
+    left: 10%;
   }
 
   .el-car {
@@ -210,33 +224,36 @@
   .el-tires {
     position: absolute;
     top: 30%;
-    left: 5%;
   }
   .el-car {
-    top: 40%;
-    left: 11%;
+    top: 20%;
+    right: 10%;
   }
   .el-characters {
-    top: 35%;
-    left: 29%;
+    top: 20%;
+    right: 10%;
   }
   .el-tires {
-    top: 35%;
-    left: 24%;
+    top: 20%;
+    right: 10%;
   }
   .el-cars-containers {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
     margin: 0 auto;
     align-items: center;
     img {
       width: 115%;
+      border: 3px solid white;
+      padding: 2%;
+      border-radius: 10px;
+      margin: 5%;
     }
   }
   .el-tires-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 auto;
     grid-gap: 30px;
     align-items: center;
@@ -244,13 +261,16 @@
     img {
       width: 110%;
       margin: 5%;
+      padding: 2%;
+      border-radius: 10px;
+      border: 3px solid white;
     }
   }
   .el-characters-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    grid-gap: 30px;
+    grid-gap: 25px;
     align-items: center;
     width: 100%;
     .gogocharacter {
@@ -282,13 +302,16 @@
   }
 }
 
-// @media only screen and (max-width: 500px) {
-//   .gogoracing {
-//     .gogoracing-wrapper {
-
-//     }
-//   }
-// }
+@media only screen and (max-width: 500px) {
+  .gogoracing {
+    .gogoracing-wrapper {
+      background-image: url("/src/images/gogoracingbackground/4.png");
+    }
+    .gamedescription {
+      background-image: url("/src/images/gogoracingbackground/3.png");
+    }
+  }
+}
 
 .gogoracing-footer-distributed {
   overflow-y: hidden;

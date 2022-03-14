@@ -187,6 +187,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="features-select">
         <div className="select-wrapper">
+        <h1 id="titled">Tune your race</h1>
           <input type="radio" name="tabs" id="tab1" />
           <label htmlFor="tab1" id="control1">
             Cars

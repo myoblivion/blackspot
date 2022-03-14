@@ -270,8 +270,7 @@ ul.job-list > li.job-preview:hover {
     }
   }
   .logso {
-    margin-top: 10%;
-    width: 47%;
+    width: 27%;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -476,6 +475,9 @@ ul.job-list > li.job-preview:hover {
   .footer-distributed-direction {
     font: bold 11px sans-serif;
     top: 1000px;
+    .logso {
+      width: 47%;
+    }
   }
 
   .footer-distributed-direction .footer-left,

@@ -57,7 +57,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to="/direction#train">
+                <HashLink smooth to="/direction#chuchu">
                   {" "}
                   Via Train
                 </HashLink>
@@ -171,7 +171,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
             <div className="image-direction">
               <img src={train} alt="Train" />
             </div>
-            <div className="direction-content">
+            <div className="direction-content" id="chuchu">
               <h4>
                 Via Train <br />
               </h4>
