@@ -150,7 +150,7 @@
 }
 .features-select {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   background-image: url(/src/images/gogoracingbackground/web_bg_3.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -158,6 +158,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    margin: 0 auto;
     input {
       opacity: 0;
       height: 0;
@@ -212,8 +213,8 @@
     left: 5%;
   }
   .el-car {
-    top: 35%;
-    left: 15%;
+    top: 40%;
+    left: 11%;
   }
   .el-characters {
     top: 35%;
@@ -253,10 +254,12 @@
     align-items: center;
     width: 100%;
     .gogocharacter {
-      width: 100%;
+      height: 80%;
+      width: 110%;
       margin: 2% auto;
-      padding: 0;
-      border: 5px solid white;
+      padding: 2%;
+      border: 3px solid white;
+      border-radius: 10px;
     }
   }
   #tab1:checked ~ .el-car {
