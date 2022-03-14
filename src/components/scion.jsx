@@ -48,6 +48,9 @@ import w13 from "../images/weapons/w13.png";
 import w14 from "../images/weapons/w14.png";
 import w15 from "../images/weapons/w15.png";
 
+import googleplay from "../images/icons/google.png";
+import applestore from "../images/icons/i-os.png";
+
 import icono from "../images/icons/logo.png";
 
 import {
@@ -469,6 +472,27 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <div className="line"></div>
           </div>
         </div>
+      </section>
+      <section className="playnow">
+        <h1 data-aos="flip-up">DOWNLOAD NOW</h1>
+        <ul data-aos="flip-up">
+          <li>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
+              target="_blank"
+            >
+              <img src={googleplay} alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://apps.apple.com/ph/app/scion-fist/id1591386655"
+              target="_blank"
+            >
+              <img src={applestore} alt="" />
+            </a>
+          </li>
+        </ul>
       </section>
       <div className="section">
         <footer className="footer-distributed">
