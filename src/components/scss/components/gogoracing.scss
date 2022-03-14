@@ -1,5 +1,10 @@
 @import url('http://fonts.cdnfonts.com/css/blazed');
-
+@font-face {
+  font-family: 'EntezareZohoor2';
+  src: url('/src/DistorterDemoRegular.ttf'), url('/src/DistorterDemoRegular.ttf') format('truetype'), url('/src/DistorterDemoRegular.ttf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .gogoracing {
   .gogoracing-wrapper {
@@ -153,7 +158,7 @@
 }
 .features-select {
   width: 100%;
-  height: 110vh;
+  height: 120vh;
   background-image: url(/src/images/gogoracingbackground/web_bg_3.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -172,12 +177,12 @@
       top: 0;
     }
     label {
-      font-size: 55px;
+      font-size: 45px;
       color: white;
       margin-right: 15%;
       border: 5px solid rgb(255, 255, 255);
       border-radius: 15px;
-      width: 25%;
+      width: 20%;
       font-weight: 900;
       text-align: center;
     }
@@ -196,13 +201,13 @@
     left: 10%;
   }
   #titled {
-    font-family: 'Blazed', sans-serif;
-    color: rgb(146, 4, 4);
+    font-family: 'EntezareZohoor2';
+    color: #de35e8;
     position: absolute;
-    font-size: 88px;
-    top: 10%;
-    left: 15%;
-    text-shadow: 8px 2px rgb(253, 92, 92), -9px -2px rgb(250, 176, 17);
+    font-size: 98px;
+    top: 8%;
+    left: 30%;
+    text-shadow: 18px 12px #670a2a, -18px -12px #40d993;
     text-transform: uppercase;
   }
   #control3 {
@@ -235,7 +240,7 @@
   }
   .el-tires {
     top: 20%;
-    right: 10%;
+    right: 15%;
   }
   .el-cars-containers {
     display: grid;
@@ -255,12 +260,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    grid-gap: 30px;
+    grid-gap: 95px;
     align-items: center;
-    width: 100%;
+    width: 115%;
     img {
       width: 110%;
       margin: 5%;
+      height: 70%;
       padding: 2%;
       border-radius: 10px;
       border: 3px solid white;
@@ -270,12 +276,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    grid-gap: 25px;
+    grid-gap: 88px;
     align-items: center;
     width: 100%;
     .gogocharacter {
-      height: 80%;
-      width: 110%;
+      height: 65%;
+      width: 140%;
       margin: 2% auto;
       padding: 2%;
       border: 3px solid white;
