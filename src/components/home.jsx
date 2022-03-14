@@ -329,18 +329,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       <div className="icons">
                         <div className="sccionlogo"></div>
                       </div>
-                      <ul className="icon-list" id="display-nones">
+                      <ul className="icon-list" id="ggr">
                         <li>
                           <a
                             href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
                             target="_blank"
                           >
                             <FaGooglePlay />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <FaAppStore />
                           </a>
                         </li>
                       </ul>

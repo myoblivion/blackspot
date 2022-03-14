@@ -266,6 +266,15 @@ body {
       #display-nones {
         display: none;
       }
+      #ggr {
+        left: 80%;
+        flex-direction: column;
+        width: 8%;
+        top: -20%;
+        li {
+          margin-bottom: 25%;
+        }
+      }
       #gogoracing {
         opacity: 1;
       }
