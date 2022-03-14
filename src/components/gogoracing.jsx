@@ -141,7 +141,12 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         </div>
       </section>
       <section className="gamedescription">
-        <div className="gogodescription">
+        <div
+          className="gogodescription"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <h2>Game Detail</h2>
           <span>
             <p>
@@ -159,7 +164,12 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       <section className="nft-des">
         <img src={nftboi1} alt="" id="char1" />
         <img src={nftboi2} alt="" id="char2" />
-        <div className="desc-nft">
+        <div
+          className="desc-nft"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <h2>NFTs</h2>
           <span>
             <p>
@@ -177,59 +187,71 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="features-select">
         <div className="select-wrapper">
-          <input type="radio" name="tab1" id="tab1" />
-          <label htmlFor="tab1">Cars</label>
-          <input type="radio" name="tab2" id="tab2" />
-          <label htmlFor="tab2">Character</label>
-          <input type="radio" name="tab3" id="tab3" />
-          <label htmlFor="tab3">Custom Parts</label>
+          <input type="radio" name="tabs" id="tab1" />
+          <label htmlFor="tab1" id="control1">
+            Cars
+          </label>
+          <input type="radio" name="tabs" id="tab2" />
+          <label htmlFor="tab2" id="control2">
+            Character
+          </label>
+          <input type="radio" name="tabs" id="tab3" />
+          <label htmlFor="tab3" id="control3">
+            Custom Parts
+          </label>
           <div className="el-car">
-            <img src={car1} alt="" />
-            <img src={car2} alt="" />
-            <img src={car3} alt="" />
-            <img src={car4} alt="" />
-            <img src={car5} alt="" />
-            <img src={car6} alt="" />
-            <img src={car7} alt="" />
-            <img src={car8} alt="" />
-            <img src={car9} alt="" />
-            <img src={car10} alt="" />
-            <img src={car11} alt="" />
-            <img src={car12} alt="" />
+            <div className="el-cars-containers">
+              <img src={car1} alt="" />
+              <img src={car2} alt="" />
+              <img src={car3} alt="" />
+              <img src={car4} alt="" />
+              <img src={car5} alt="" />
+              <img src={car6} alt="" />
+              <img src={car7} alt="" />
+              <img src={car8} alt="" />
+              <img src={car9} alt="" />
+              <img src={car10} alt="" />
+              <img src={car11} alt="" />
+              <img src={car12} alt="" />
+            </div>
           </div>
           <div className="el-characters">
-            <img src={character1} alt="" className="gogocharacter" />
-            <img src={character2} alt="" className="gogocharacter" />
-            <img src={character3} alt="" className="gogocharacter" />
-            <img src={character4} alt="" className="gogocharacter" />
-            <img src={character5} alt="" className="gogocharacter" />
-            <img src={character6} alt="" className="gogocharacter" />
-            <img src={character7} alt="" className="gogocharacter" />
-            <img src={character8} alt="" className="gogocharacter" />
-            <img src={character9} alt="" className="gogocharacter" />
-            <img src={character10} alt="" className="gogocharacter" />
-            <img src={character11} alt="" className="gogocharacter" />
-            <img src={character12} alt="" className="gogocharacter" />
-            <img src={character13} alt="" className="gogocharacter" />
-            <img src={character14} alt="" className="gogocharacter" />
-            <img src={character15} alt="" className="gogocharacter" />
-            <img src={character16} alt="" className="gogocharacter" />
-            <img src={character17} alt="" className="gogocharacter" />
-            <img src={character18} alt="" className="gogocharacter" />
+            <div className="el-characters-container">
+              <img src={character1} alt="" className="gogocharacter" />
+              <img src={character2} alt="" className="gogocharacter" />
+              <img src={character3} alt="" className="gogocharacter" />
+              <img src={character4} alt="" className="gogocharacter" />
+              <img src={character5} alt="" className="gogocharacter" />
+              <img src={character6} alt="" className="gogocharacter" />
+              <img src={character7} alt="" className="gogocharacter" />
+              <img src={character8} alt="" className="gogocharacter" />
+              <img src={character9} alt="" className="gogocharacter" />
+              <img src={character10} alt="" className="gogocharacter" />
+              <img src={character11} alt="" className="gogocharacter" />
+              <img src={character12} alt="" className="gogocharacter" />
+              <img src={character13} alt="" className="gogocharacter" />
+              <img src={character14} alt="" className="gogocharacter" />
+              <img src={character15} alt="" className="gogocharacter" />
+              <img src={character16} alt="" className="gogocharacter" />
+              <img src={character17} alt="" className="gogocharacter" />
+              <img src={character18} alt="" className="gogocharacter" />
+            </div>
           </div>
           <div className="el-tires">
-            <img src={tire1} alt="" />
-            <img src={tire2} alt="" />
-            <img src={tire3} alt="" />
-            <img src={tire4} alt="" />
-            <img src={tire5} alt="" />
-            <img src={tire6} alt="" />
-            <img src={tire7} alt="" />
-            <img src={tire8} alt="" />
-            <img src={tire9} alt="" />
-            <img src={tire10} alt="" />
-            <img src={tire11} alt="" />
-            <img src={tire12} alt="" />
+            <div className="el-tires-container">
+              <img src={tire1} alt="" />
+              <img src={tire2} alt="" />
+              <img src={tire3} alt="" />
+              <img src={tire4} alt="" />
+              <img src={tire5} alt="" />
+              <img src={tire6} alt="" />
+              <img src={tire7} alt="" />
+              <img src={tire8} alt="" />
+              <img src={tire9} alt="" />
+              <img src={tire10} alt="" />
+              <img src={tire11} alt="" />
+              <img src={tire12} alt="" />
+            </div>
           </div>
         </div>
       </section>

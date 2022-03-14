@@ -108,7 +108,7 @@
     flex-direction: column;
     justify-content: center;
     height: 40%;
-    top: 50%;
+    top: 40%;
     left: 5%;
     position: absolute;
     color: white;
@@ -155,7 +155,9 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .select-wrapper {
+    height: 100%;
     width: 100%;
+    position: relative;
     input {
       opacity: 0;
       height: 0;
@@ -166,28 +168,99 @@
       top: 0;
     }
     label {
-      font-size: 25px;
+      font-size: 35px;
       color: white;
-      margin-right: 5%;
+      margin-right: 15%;
+      padding: 10px 10px;
+      border: 4px solid rgb(0, 51, 255);
+      border-radius: 15px;
+      font-weight: 900;
     }
   }
-  .el-characters {
-    display: none;
+  #control1, #control2, #control3 {
+  position: absolute;
   }
+  #control1 {
+    top: 20%;
+    left: 30%;
+  }
+  #control2 {
+    top: 20%;
+    left: 40%;
+  }
+  #control3 {
+    top: 20%;
+    left: 55%;
+  }
+
   .el-car {
-    display: none;
+    display: block;
+    position: absolute;
   }
+  .el-cars-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .el-characters,
   .el-tires {
     display: none;
   }
-  #tab1:checked ~ .el-characters {
-    display: block;
-  } 
-   #tab2:checked ~ .el-car {
+  .el-characters, .el-car, .el-tires {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+  }
+  .el-car {
+    top: 35%;
+    left: 20%;
+  }
+  .el-characters {
+    top: 35%;
+    left: 33%;
+  }
+  .el-tires {
+    top: 35%;
+    left: 28%;
+  }
+  .el-tires-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    img {
+      margin: 5%;
+    }
+  }
+  .el-characters-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    .gogocharacter {
+      margin: 2% auto;
+    }
+  }
+  #tab1:checked ~ .el-car {
     display: block;
   }
+
+  #tab2:checked ~ .el-characters {
+    display: block;
+  }
+
   #tab3:checked ~ .el-tires {
     display: block;
+  }
+  #tab2:checked ~ .el-car {
+    display: none;
+  }
+
+  #tab3:checked ~ .el-car {
+    display: none;
   }
 }
 
