@@ -4,13 +4,61 @@ import image from "../images/goracing.png";
 import image2 from "../images/gogorc.jpg";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
-import f1 from "../images/collection1.png";
-import f2 from "../images/collection2.jpg";
-import f3 from "../images/collection3.png";
-import f4 from "../images/collection4.png";
-import f5 from "../images/collection5.png";
-import f6 from "../images/collection6.png";
-import f7 from "../images/collection7.png";
+// Logo
+import ggrlogo from "../images/icons/gogoracing.png";
+import getit from "../images/edit/123.png";
+
+// Characters
+import character1 from "../images/ggr-characters/1-pengsuni-costume-1.png";
+import character2 from "../images/ggr-characters/1-pengsuni-costume-2.png";
+import character3 from "../images/ggr-characters/1-pengsuni-costume-3.png";
+import character4 from "../images/ggr-characters/2-mongi-costume-1.png";
+import character5 from "../images/ggr-characters/2-mongi-costume-2.png";
+import character6 from "../images/ggr-characters/2-mongi-costume-3.png";
+import character7 from "../images/ggr-characters/3-euik-costume-1.png";
+import character8 from "../images/ggr-characters/3-euik-costume-2.png";
+import character9 from "../images/ggr-characters/3-euik-costume-3.png";
+import character10 from "../images/ggr-characters/4-tosuni-costume-1.png";
+import character11 from "../images/ggr-characters/4-tosuni-costume-1.png";
+import character12 from "../images/ggr-characters/4-tosuni-costume-1.png";
+import character13 from "../images/ggr-characters/6-hekhek-costume-1.png";
+import character14 from "../images/ggr-characters/6-hekhek-costume-2.png";
+import character15 from "../images/ggr-characters/6-hekhek-costume-3.png";
+import character16 from "../images/ggr-characters/8-eureungi-costume-1.png";
+import character17 from "../images/ggr-characters/8-eureungi-costume-2.png";
+import character18 from "../images/ggr-characters/8-eureungi-costume-3.png";
+
+import nftboi1 from "../images/gogoracingbackground/NFTcar_1.png";
+import nftboi2 from "../images/gogoracingbackground/weeee.png";
+
+// Cars
+import car1 from "../images/ggr-cars/gogo-racing-car-02-1.png";
+import car2 from "../images/ggr-cars/gogo-racing-car-02-2.png";
+import car3 from "../images/ggr-cars/gogo-racing-car-02-3.png";
+import car4 from "../images/ggr-cars/gogo-racing-car-03-1.png";
+import car5 from "../images/ggr-cars/gogo-racing-car-03-2.png";
+import car6 from "../images/ggr-cars/gogo-racing-car-03-3.png";
+import car7 from "../images/ggr-cars/gogo-racing-car-04-1.png";
+import car8 from "../images/ggr-cars/gogo-racing-car-04-2.png";
+import car9 from "../images/ggr-cars/gogo-racing-car-04-3.png";
+import car10 from "../images/ggr-cars/gogo-racing-car-05-1.png";
+import car11 from "../images/ggr-cars/gogo-racing-car-05-2.png";
+import car12 from "../images/ggr-cars/gogo-racing-car-05-3.png";
+// Tires
+import tire1 from "../images/ggr-tires/gogo-racing-tire-26-1.png";
+import tire2 from "../images/ggr-tires/gogo-racing-tire-26-2.png";
+import tire3 from "../images/ggr-tires/gogo-racing-tire-26-3.png";
+import tire4 from "../images/ggr-tires/gogo-racing-tire-27-1.png";
+import tire5 from "../images/ggr-tires/gogo-racing-tire-27-2.png";
+import tire6 from "../images/ggr-tires/gogo-racing-tire-27-3.png";
+import tire7 from "../images/ggr-tires/gogo-racing-tire-29-1.png";
+import tire8 from "../images/ggr-tires/gogo-racing-tire-29-2.png";
+import tire9 from "../images/ggr-tires/gogo-racing-tire-29-3.png";
+import tire10 from "../images/ggr-tires/gogo-racing-tire-30-1.png";
+import tire11 from "../images/ggr-tires/gogo-racing-tire-30-2.png";
+import tire12 from "../images/ggr-tires/gogo-racing-tire-30-3.png";
+
+import nftshop from "../images/gogoracingbackground/NFT_Shop.png";
 import {
   FaChartLine,
   FaDatabase,
@@ -42,9 +90,90 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing wrapper">
       <section className="gogoracing-wrapper">
-        <img src={image} alt="" id="first-image" data-aos="fade-left"/>
-        <img src={image2} alt="Gogo Racing Mobile image" id="second-image" data-aos="fade-right"/>
-        <h1>Coming Soon</h1>
+        <div
+          className="ggrwelcome"
+          data-aos="zoom-in"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
+          <img src={ggrlogo} alt="Gogo Racing Logo" id="ggrlogo" />
+          <span>
+            {" "}
+            <p>
+              A racing game where you compete with other users using your
+              purchased and unique cars. Ready your car, finish the line and win
+              a coin and be incentivized. Play to Earn? It’s a surprise.
+            </p>
+          </span>
+          <div className="links">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+              target="_blank"
+            >
+              {" "}
+              <img src={getit} alt="" />
+            </a>
+          </div>
+          <div className="socials">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/GogoRacingPhilippines/">
+                  <FaFacebook />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gogoracingph/">
+                  <FaInstagram />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/GogoRacingPhil">
+                  <FaTwitter />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.reddit.com/r/GogoRacingPH/">
+                  <FaReddit />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="gamedescription">
+        <div className="gogodescription">
+          <h2>Game Detail</h2>
+          <span>
+            <p>
+              GoGo Racing is a P2E (Play To Earn) game that combines the NFT
+              elements of the blockchain. The player will initially need to own
+              a car(NFT) to start the game. (NFT) can be created through the R&D
+              center. Players can earn GoGo Chain by winning in a PvP match or
+              clearing the stage. Damaged car(NFT) should be repaired in the
+              repair shop to continue playing. The TANK Token Stakers will get
+              an authority to operate the repair shop.
+            </p>
+          </span>
+        </div>
+      </section>
+      <section className="nft-des">
+        <img src={nftboi1} alt="" id="char1" />
+        <img src={nftboi2} alt="" id="char2" />
+        <div className="desc-nft">
+          <h2>NFTs</h2>
+          <span>
+            <p>
+              GoGo Racing is a P2E (Play To Earn) game that combines the NFT
+              elements of the blockchain. The player will initially need to own
+              a tank(NFT) to start the game. A new car(NFT) can be created
+              through the R&D center. Players can earn GoGo Chain by winning ina
+              PvP match or clearing the stage. Damaged car(NFT) should be
+              repaired in the repair shop to continue playing. The GoGo Chain
+              Stakers will get an authority to operate the repair shop.
+            </p>
+          </span>
+        </div>
+        <img src={nftshop} alt="" id="nftshop" />
       </section>
       {/* Footer */}
       <div className="section">
@@ -63,7 +192,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               {/* <Link to="/privacy"                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}>Privacy & Policy</Link> */}
-                <p>Privacy & Policy</p>
+              <p>Privacy & Policy</p>
               <Link
                 to="/job"
                 {...props}
@@ -108,7 +237,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
 
-          <div className="footer-right" >
+          <div className="footer-right">
             <div className="footer-icons">
               <ul className="social-media-list">
                 <li>
