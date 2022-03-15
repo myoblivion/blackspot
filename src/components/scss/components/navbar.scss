@@ -33,6 +33,12 @@ a {
   font-weight: 900;
   color: #ffb808;
   margin: 0 5px;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none;
 }
 .navbar li span {
   display: block;
@@ -41,6 +47,12 @@ a {
   color: #ffb808;
   cursor: pointer;
   font-weight: 900;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none;
 }
 
 .navbar li a:hover,
