@@ -214,7 +214,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       <section className="features-select">
         <h1 id="titled">Tune your race</h1>
         <h2 className="disclaimer">
-          Note: These characters will be available SOON.
+        Some of these will be available SOON.
         </h2>
         <div className="select-wrapper">
           <input type="radio" name="tabs" id="tab1" />
