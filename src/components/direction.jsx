@@ -46,7 +46,10 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         <section className="description-map">
           <div className="come-address">
             <h1>Come Visit Us!</h1>
-            <h2> 26th St, Taguig, 1634 Metro Manila</h2>
+            <h2>
+              The Infinity Tower, 26th Street, Bonifacio Global City, Taguig,
+              1630 Philippines.
+            </h2>
           </div>
           <div className="direction-navigation">
             <ul>
