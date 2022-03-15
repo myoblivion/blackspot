@@ -60,7 +60,6 @@ const JobComponent = ({ props, ref, currentRoute }) => {
       <section
         className="joblist"
         data-aos="zoom-in"
-        data-aos-offset="500"
         data-aos-duration="500"
       >
         <div className="joblist-wrapper">

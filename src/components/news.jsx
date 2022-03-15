@@ -28,7 +28,6 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
       <div
         className="accordion"
         data-aos="zoom-in"
-        data-aos-offset="500"
         data-aos-duration="500"
       >
         <div className="news-title">

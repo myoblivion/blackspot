@@ -57,7 +57,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to="/direction#chuchu">
+                <HashLink smooth to="/direction#train">
                   {" "}
                   Via Train
                 </HashLink>
