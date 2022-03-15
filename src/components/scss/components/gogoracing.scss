@@ -421,14 +421,10 @@
         .mblcharacter {
           width: 70px;
           height: 300px;
-          width: 50%;
-          display: none;
         }
         .mbltire {
           width: 70px;
           height: 300px;
-          width: 50%;
-          display: none;
         }
         .slick-slide {
           opacity: 0;
@@ -436,6 +432,15 @@
         .slick-active {
           opacity: 1;
         }
+      }
+      .mblcar {
+        display: none;
+      }
+      .mblcharacter {
+        display: none;
+      }
+      .mbltire {
+        display: none;
       }
       #mbl1:checked ~ .mblcar {
         display: block;

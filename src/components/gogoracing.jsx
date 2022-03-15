@@ -87,6 +87,7 @@ import { AiFillInstagram } from "react-icons/ai";
 // Prev, Next
 
 const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
+  const [isShown, setIsShown] = useState(true);
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick} key={NextArrow}>
@@ -285,14 +286,19 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         </div>
 
         <div className="mobile-selection">
-          <label htmlFor="mbl1">Car</label>
+          <label
+            htmlFor="mbl1"
+
+          >
+            Car
+          </label>
           <label htmlFor="mbl2">Character</label>
           <label htmlFor="mbl3">Custom Parts</label>
           <input type="radio" name="mobilectrl" id="mbl1" />
           <input type="radio" name="mobilectrl" id="mbl2" />
           <input type="radio" name="mobilectrl" id="mbl3" />
           <Slider {...settings}>
-            <img src={car1} alt="" className="mblcar"/>
+            <img src={car1} alt="" className="mblcar" />
             <img src={car2} alt="" className="mblcar" />
             <img src={car3} alt="" className="mblcar" />
             <img src={car4} alt="" className="mblcar" />
