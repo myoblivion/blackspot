@@ -105,7 +105,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   const settings = {
     Infinite: true,
     lazyload: true,
-    speed: 300,
+    speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,

@@ -1555,7 +1555,16 @@ input[type="radio"] {
     }
   }
 }
-
+@media only screen and (max-width: 375px) {
+  .mobile-partners {
+    height: 900%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .mobile-partners {
+    height: 900%;
+  }
+}
 // Animations
 
 // @keyframes broom {
