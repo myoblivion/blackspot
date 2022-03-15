@@ -418,17 +418,65 @@
           font-weight: 900;
           border-radius: 10px;
         }
-        .mblcar {
-          width: 70px;
-          height: 300px;
+        .carss {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          h1 {
+            padding-top: 10%;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+          }
+          img {
+            width: 70%;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 30%;
+          }
         }
-        .mblcharacter {
-          width: 70px;
-          height: 300px;
+        .characterss {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          h1 {
+            padding-top: 10%;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+          }
+          img {
+            width: 200px;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 30%;
+          }
         }
-        .mbltire {
-          width: 70px;
-          height: 300px;
+        .tiress {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          h1 {
+            padding-top: 10%;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+          }
+          img {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 30%;
+          }
         }
         .slick-slide {
           opacity: 0;
@@ -437,24 +485,7 @@
           opacity: 1;
         }
       }
-      .mblcar {
-        display: none;
-      }
-      .mblcharacter {
-        display: none;
-      }
-      .mbltire {
-        display: none;
-      }
-      #mbl1:checked ~ .mblcar {
-        display: block;
-      }
-      #mbl2:checked ~ .mblcharacter {
-        display: block;
-      }
-      #mbl3:checked ~ .mbltire {
-        display: block;
-      }
+
       .arrow {
         width: 25px;
       }
