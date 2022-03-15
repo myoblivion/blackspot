@@ -658,6 +658,21 @@
       }
     }
   }
+  .playnow {
+    h1 {
+      width: 70%;
+      margin: 0 auto;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
   .footer-distributed {
     font: bold 12px sans-serif;
   }
