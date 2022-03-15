@@ -12,7 +12,9 @@
     right: 0;
     bottom: 0;
     position: relative;
+    overflow-x: hidden;
 
+    overflow-y: hidden;
   }
 
   position: absolute;
@@ -25,6 +27,8 @@
     margin: 0 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 12px;
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
   }
 
@@ -44,6 +48,8 @@
     flex-direction: column;
     align-items: center;
     border-radius: 0 12px 12px 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
     color: #fff;
   }
   .content h2 {
@@ -612,7 +618,7 @@
   .bootons {
     position: fixed;
     bottom: 10%;
-    right: 3%;
+    right: 5%;
     z-index: 999;
     font-size: 30px;
     background-color: #ffb808;
