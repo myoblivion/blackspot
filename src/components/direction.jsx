@@ -83,7 +83,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
           className="wrapper-directions"
           id="bus"
           data-aos="zoom-out"
-          data-aos-offset="500"
           data-aos-duration="500"
         >
           <div className="box-direction">
@@ -164,7 +163,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
           className="wrapper-directions"
           id="train"
           data-aos="zoom-out"
-          data-aos-offset="500"
           data-aos-duration="500"
         >
           <div className="box-direction">
@@ -273,7 +271,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
           className="wrapper-directions"
           id="jeep"
           data-aos="zoom-out"
-          data-aos-offset="500"
           data-aos-duration="500"
         >
           <div className="box-direction">
@@ -320,7 +317,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
           className="wrapper-directions"
           id="walk"
           data-aos="zoom-out"
-          data-aos-offset="500"
           data-aos-duration="500"
         >
           <div className="box-direction">

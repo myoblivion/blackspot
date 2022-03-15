@@ -168,6 +168,23 @@
   background-image: url(/src/images/gogoracingbackground/web_bg_3.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  .mobile-selection {
+    display: none;
+  }
+  #titled {
+    font-family: "EntezareZohoor2";
+    color: #de35e8;
+    font-size: 98px;
+    padding-top: 5%;
+    text-shadow: 18px 12px #670a2a, -18px -12px #40d993;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .disclaimer {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
   .select-wrapper {
     height: 100%;
     width: 100%;
@@ -199,25 +216,16 @@
     position: absolute;
   }
   #control1 {
-    top: 28%;
+    top: 18%;
     left: 10%;
   }
   #control2 {
-    top: 50%;
+    top: 40%;
     left: 10%;
   }
-  #titled {
-    font-family: "EntezareZohoor2";
-    color: #de35e8;
-    position: absolute;
-    font-size: 98px;
-    top: 8%;
-    left: 30%;
-    text-shadow: 18px 12px #670a2a, -18px -12px #40d993;
-    text-transform: uppercase;
-  }
+
   #control3 {
-    top: 75%;
+    top: 65%;
     left: 10%;
   }
 
@@ -234,18 +242,17 @@
   .el-car,
   .el-tires {
     position: absolute;
-    top: 30%;
   }
   .el-car {
-    top: 20%;
+    top: 10%;
     right: 10%;
   }
   .el-characters {
-    top: 20%;
+    top: 10%;
     right: 10%;
   }
   .el-tires {
-    top: 20%;
+    top: 10%;
     right: 15%;
   }
   .el-cars-containers {
@@ -255,7 +262,7 @@
     margin: 0 auto;
     align-items: center;
     img {
-      width: 115%;
+      width: 110%;
       border: 3px solid white;
       padding: 2%;
       border-radius: 10px;
@@ -270,7 +277,7 @@
     align-items: center;
     width: 115%;
     img {
-      width: 110%;
+      width: 100%;
       margin: 5%;
       height: 70%;
       padding: 2%;
@@ -286,7 +293,7 @@
     align-items: center;
     width: 100%;
     .gogocharacter {
-      height: 65%;
+      height: 55%;
       width: 140%;
       margin: 2% auto;
       padding: 2%;
@@ -374,14 +381,88 @@
     }
     .features-select {
       background-image: url("/src/images/gogoracingbackground/2.png");
+      height: 80vh;
+      #titled {
+        font-size: 40px;
+        padding-top: 10%;
+      }
+      .disclaimer {
+        font-size: 17px;
+      }
       .select-wrapper {
-        #titled {
-          font-size: 40px;
-          left: 10%;
+        display: none;
+      }
+      .mobile-selection {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        input {
+          opacity: 0;
+          height: 0;
+          width: 0;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+          top: 0;
         }
-        .el-car, .el-tires, .el-characters img {
+        label {
+          margin: 5% auto;
+          border: 2px solid white;
+          text-align: center;
+          width: 40%;
+          color: white;
+          font-weight: 900;
+          border-radius: 10px;
+        }
+        .mblcar {
+          width: 70px;
+          height: 300px;
+        }
+        .mblcharacter {
+          width: 70px;
+          height: 300px;
+          width: 50%;
           display: none;
         }
+        .mbltire {
+          width: 70px;
+          height: 300px;
+          width: 50%;
+          display: none;
+        }
+        .slick-slide {
+          opacity: 0;
+        }
+        .slick-active {
+          opacity: 1;
+        }
+      }
+      #mbl1:checked ~ .mblcar {
+        display: block;
+      }
+      #mbl2:checked ~ .mblcharacter {
+        display: block;
+      }
+      #mbl3:checked ~ .mbltire {
+        display: block;
+      }
+      .arrow {
+        width: 25px;
+      }
+      .next,
+      .prev {
+        position: absolute;
+      }
+      .next {
+        right: 5%;
+        top: 50%;
+        img {
+          width: 35px;
+        }
+      }
+      .prev {
+        top: 50%;
+        z-index: 1;
       }
     }
   }
@@ -568,5 +649,12 @@
 
   .gogoracing-footer-distributed .footer-center i {
     margin-left: 0;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .gogoracing {
+    .features-select {
+      height: 100vh;
+    }
   }
 }

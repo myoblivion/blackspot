@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
+import Slider from "react-slick";
 
 import image from "../images/goracing.png";
 import image2 from "../images/gogorc.jpg";
@@ -7,7 +8,8 @@ import { Link } from "react-router-dom";
 // Logo
 import ggrlogo from "../images/icons/gogoracing.png";
 import getit from "../images/edit/123.png";
-
+import prevv from "../images/gogoracingbackground/prev.png";
+import nextt from "../images/gogoracingbackground/next.png";
 // Characters
 import character1 from "../images/ggr-characters/1-pengsuni-costume-1.png";
 import character2 from "../images/ggr-characters/1-pengsuni-costume-2.png";
@@ -82,7 +84,36 @@ import {
 import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
 
+// Prev, Next
+
 const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick} key={NextArrow}>
+        <img src={nextt} alt="" />
+      </div>
+    );
+  };
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick} key={PrevArrow}>
+        <img src={prevv} alt="" />
+      </div>
+    );
+  };
+  // Slider
+  const settings = {
+    Infinite: true,
+    lazyload: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: true,
+    autoplay: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Racing";
@@ -90,11 +121,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing wrapper">
       <section className="gogoracing-wrapper">
-        <div
-          className="ggrwelcome"
-          data-aos="zoom-in"
-          data-aos-duration="500"
-        >
+        <div className="ggrwelcome" data-aos="zoom-in" data-aos-duration="500">
           <img src={ggrlogo} alt="Gogo Racing Logo" id="ggrlogo" />
           <span>
             {" "}
@@ -184,8 +211,11 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <img src={nftshop} alt="" id="nftshop" />
       </section>
       <section className="features-select">
-        <div className="select-wrapper">
         <h1 id="titled">Tune your race</h1>
+        <h2 className="disclaimer">
+          Note: These characters will be available SOON.
+        </h2>
+        <div className="select-wrapper">
           <input type="radio" name="tabs" id="tab1" />
           <label htmlFor="tab1" id="control1">
             Cars
@@ -252,6 +282,59 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               <img src={tire12} alt="" />
             </div>
           </div>
+        </div>
+
+        <div className="mobile-selection">
+          <label htmlFor="mbl1">Car</label>
+          <label htmlFor="mbl2">Character</label>
+          <label htmlFor="mbl3">Custom Parts</label>
+          <input type="radio" name="mobilectrl" id="mbl1" />
+          <input type="radio" name="mobilectrl" id="mbl2" />
+          <input type="radio" name="mobilectrl" id="mbl3" />
+          <Slider {...settings}>
+            <img src={car1} alt="" className="mblcar"/>
+            <img src={car2} alt="" className="mblcar" />
+            <img src={car3} alt="" className="mblcar" />
+            <img src={car4} alt="" className="mblcar" />
+            <img src={car5} alt="" className="mblcar" />
+            <img src={car6} alt="" className="mblcar" />
+            <img src={car7} alt="" className="mblcar" />
+            <img src={car8} alt="" className="mblcar" />
+            <img src={car9} alt="" className="mblcar" />
+            <img src={car10} alt="" className="mblcar" />
+            <img src={car11} alt="" className="mblcar" />
+            <img src={car12} alt="" className="mblcar" />
+            <img src={character1} alt="" className="mblcharacter" />
+            <img src={character2} alt="" className="mblcharacter" />
+            <img src={character3} alt="" className="mblcharacter" />
+            <img src={character4} alt="" className="mblcharacter" />
+            <img src={character5} alt="" className="mblcharacter" />
+            <img src={character6} alt="" className="mblcharacter" />
+            <img src={character7} alt="" className="mblcharacter" />
+            <img src={character8} alt="" className="mblcharacter" />
+            <img src={character9} alt="" className="mblcharacter" />
+            <img src={character10} alt="" className="mblcharacter" />
+            <img src={character11} alt="" className="mblcharacter" />
+            <img src={character12} alt="" className="mblcharacter" />
+            <img src={character13} alt="" className="mblcharacter" />
+            <img src={character14} alt="" className="mblcharacter" />
+            <img src={character15} alt="" className="mblcharacter" />
+            <img src={character16} alt="" className="mblcharacter" />
+            <img src={character17} alt="" className="mblcharacter" />
+            <img src={character18} alt="" className="mblcharacter" />
+            <img src={tire1} alt="" className="mbltire" />
+            <img src={tire2} alt="" className="mbltire" />
+            <img src={tire3} alt="" className="mbltire" />
+            <img src={tire4} alt="" className="mbltire" />
+            <img src={tire5} alt="" className="mbltire" />
+            <img src={tire6} alt="" className="mbltire" />
+            <img src={tire7} alt="" className="mbltire" />
+            <img src={tire8} alt="" className="mbltire" />
+            <img src={tire9} alt="" className="mbltire" />
+            <img src={tire10} alt="" className="mbltire" />
+            <img src={tire11} alt="" className="mbltire" />
+            <img src={tire12} alt="" className="mbltire" />
+          </Slider>
         </div>
       </section>
 
