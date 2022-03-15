@@ -93,7 +93,6 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <div
           className="ggrwelcome"
           data-aos="zoom-in"
-          data-aos-offset="500"
           data-aos-duration="500"
         >
           <img src={ggrlogo} alt="Gogo Racing Logo" id="ggrlogo" />
@@ -144,7 +143,6 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <div
           className="gogodescription"
           data-aos="zoom-in"
-          data-aos-offset="500"
           data-aos-duration="500"
         >
           <h2>Game Detail</h2>
@@ -167,7 +165,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <div
           className="desc-nft"
           data-aos="zoom-in"
-          data-aos-offset="500"
+          data-aos-offset="100"
           data-aos-duration="500"
         >
           <h2>NFTs</h2>

@@ -479,7 +479,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <div
             className="container contact-us-section"
             data-aos="fade-right"
-            data-aos-offset="100"
+            data-aos-offset="200"
             data-aos-duration="700"
           >
             <div className="contact-row h-100">
@@ -535,7 +535,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <div
             className="partners-logo"
             data-aos="fade-left"
-            data-aos-offset="700"
+            data-aos-offset="200"
             data-aos-duration="700"
           >
             <div className="ourpartners-title">
@@ -567,7 +567,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <div
             className="mobile-partners"
             data-aos="fade-up"
-            data-aos-offset="700"
+            data-aos-offset="200"
             data-aos-duration="700"
           >
             <div className="ourpartners-mobile-title">
