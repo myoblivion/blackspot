@@ -87,12 +87,11 @@ const handleExpire = () => {
 };
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
-  
   function MouseOver(event) {
-    event.target.style.background = 'red';
+    event.target.style.background = "red";
   }
-  function MouseOut(event){
-    event.target.style.background="";
+  function MouseOut(event) {
+    event.target.style.background = "";
   }
 
   const [isShown, setIsShown] = useState(true);
@@ -231,8 +230,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         <div className="container-2" id="game">
           <div
             className="game-wrapper"
-            data-aos="fade-up"
-            data-aos-offset="700"
+            data-aos="fade-right"
             data-aos-duration="700"
           >
             <div className="game-title">
@@ -481,7 +479,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <div
             className="container contact-us-section"
             data-aos="fade-right"
-            data-aos-offset="700"
+            data-aos-offset="100"
             data-aos-duration="700"
           >
             <div className="contact-row h-100">
