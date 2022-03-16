@@ -9,7 +9,7 @@ import {
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
-import AboutComponent from "../components/about"
+import AboutComponent from "../components/about";
 import DirectionComponent from "./direction";
 import JobComponent from "./job";
 import NewsComponent from "./news";
@@ -26,6 +26,7 @@ import GogoRacingNewsComponent from "./gogoracingnews";
 import NotFoundComponent from "./notfound";
 // styles
 import "./scss/index.scss";
+import { Redirect } from "react-router-dom";
 
 const Appcomponent = () => {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ const Appcomponent = () => {
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   return (
+    <Router>
       <Switch>
         <>
           {loading ? (
@@ -87,12 +89,14 @@ const Appcomponent = () => {
                 <GogoRacingNewsComponent />
               </Route>
               <Route path="*">
-                <NotFoundComponent />
+                <Redirect to="/">
+                </Redirect>
               </Route>
             </div>
           )}
         </>
       </Switch>
+    </Router>
   );
 };
 
