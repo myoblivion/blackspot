@@ -2,14 +2,15 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  context: __dirname,
   entry: ["babel-polyfill", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "build.js",
+    publicPath: "/",
   },
   devServer: {
     historyApiFallback: true,
-    hot: true,
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -41,9 +42,6 @@ module.exports = {
         test: /\.(svg|jpg|png)$/,
       },
     ],
-  },
-  devServer: {
-    historyApiFallback: true,
   },
   plugins: [
     new htmlWebpackPlugin({
