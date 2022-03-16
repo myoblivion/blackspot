@@ -7,6 +7,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "build.js",
   },
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+  },
   resolve: {
     extensions: [".js", ".jsx"],
   },
@@ -47,9 +51,4 @@ module.exports = {
       filename: "./index.html",
     }),
   ],
-  devServer: {
-    historyApiFallback: { index: "./index.html" },
-    contentBase: "./",
-    hot: true,
-  },
 };
