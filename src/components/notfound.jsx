@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import notfoundimg from "../images/Yellow - 404.png";
 
-const NotFound = ({ props, ref, currentRoute }) => {
+const NotFoundComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | 404 Not Found";
   }, []);
   return (
     <div className="notfound wrapper">
-      <div className="notfound-wrapper">
+      <section className="notfound-wrapper">
         <h2>
           GO{" "}
           <Link
@@ -22,9 +21,9 @@ const NotFound = ({ props, ref, currentRoute }) => {
             Home
           </Link>
         </h2>
-      </div>
+      </section>
     </div>
   );
 };
 
-export default NotFound;
+export default NotFoundComponent;

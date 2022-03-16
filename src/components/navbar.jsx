@@ -52,7 +52,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
         checked={myCheckbox}
         onChange={(_e) => setMyCheckbox((prev) => !prev)}
       />
-      <label className="menu-icon" htmlFor="menu-btn">
+      <label className="menu-icon" htmlFor="menu-btn" >
         <span className="navicon"></span>
       </label>
       <ul className="menu" ref={menuRef}>

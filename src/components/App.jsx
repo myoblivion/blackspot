@@ -9,7 +9,7 @@ import {
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
-import AboutComponent from "./about";
+import AboutComponent from "../components/about"
 import DirectionComponent from "./direction";
 import JobComponent from "./job";
 import NewsComponent from "./news";
@@ -23,7 +23,7 @@ import ScionNewsComponent from "./scionnews";
 import GogoWorldNewsComponent from "./gogoworldnews";
 import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
-import NotFound from "./notfound";
+import NotFoundComponent from "./notfound";
 // styles
 import "./scss/index.scss";
 
@@ -37,7 +37,6 @@ const Appcomponent = () => {
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   return (
-    <Router>
       <Switch>
         <>
           {loading ? (
@@ -46,7 +45,7 @@ const Appcomponent = () => {
             <div className={"main " + newClass}>
               <NavbarComponent currentRoute={newClass} />
               <Route exact path="/">
-                <HomeComponent Route exact path={["/", "/index.html"]} />
+                <HomeComponent />
               </Route>
               <Route path="/about">
                 <AboutComponent />
@@ -87,12 +86,13 @@ const Appcomponent = () => {
               <Route path="/gogoracingnews">
                 <GogoRacingNewsComponent />
               </Route>
-              <Route component={NotFound} />
+              <Route path="*">
+                <NotFoundComponent />
+              </Route>
             </div>
           )}
         </>
       </Switch>
-    </Router>
   );
 };
 
