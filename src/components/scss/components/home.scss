@@ -1240,6 +1240,22 @@ input[type="radio"] {
           left: 122px;
         }
       }
+      #ggr {
+        position: relative;
+        right: 100%;
+        margin-left: 0;
+        width: 2%;
+        li {
+          width: 100px;
+          img {
+            position: absolute;
+            left: -650%;
+            width: 5px;
+            height: 40%;
+            top: 70%;
+          }
+        }
+      }
       #gogoracingsz {
         height: 15%;
         width: 50%;

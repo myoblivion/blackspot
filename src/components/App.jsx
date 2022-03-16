@@ -89,8 +89,7 @@ const Appcomponent = () => {
                 <GogoRacingNewsComponent />
               </Route>
               <Route path="*">
-                <Redirect to="/">
-                </Redirect>
+                <Redirect to="/" />
               </Route>
             </div>
           )}
