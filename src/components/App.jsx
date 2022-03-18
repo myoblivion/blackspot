@@ -38,7 +38,7 @@ const Appcomponent = () => {
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   return (
-    <Router>
+    <Router basename="/">
       <Switch>
         <>
           {loading ? (
