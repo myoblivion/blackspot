@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+
   Route,
   Switch,
   useLocation,
@@ -44,11 +44,10 @@ const Appcomponent = () => {
       {loading ? (
         <LoadingComponent />
       ) : (
-        <Router basename="/">
           <Switch>
             <div className={"main " + newClass}>
               <NavbarComponent currentRoute={newClass} />
-              <Route exact path="/home">
+              <Route exact path="/">
                 <HomeComponent />
               </Route>
               <Route path="/about">
@@ -92,7 +91,6 @@ const Appcomponent = () => {
               </Route>
             </div>
           </Switch>
-        </Router>
       )}
     </>
   );

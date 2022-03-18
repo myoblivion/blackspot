@@ -34,7 +34,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
   return (
     <header className="navbar active">
       <div className="logo">
-        <Link to="/home">
+        <Link to="/">
           <img
             src={icono}
             alt="Black Spot Studio"
@@ -61,7 +61,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
           onClick={() => setMyCheckbox((prev) => !prev)}
         >
           <Link
-            to="/home"
+            to="/"
             className="nav-item a"
             {...props}
             ref={ref}

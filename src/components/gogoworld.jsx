@@ -86,7 +86,7 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
                 Career
               </Link>
 
-              <HashLink smooth to="/home#contact">
+              <HashLink smooth to="/#contact">
                 {" "}
                 Contact Us
               </HashLink>
