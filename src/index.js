@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import App from "./components/App";
 import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={hist}>
+    <Router history={hist} hashType="noslash">
       <App />
     </Router>
   </React.StrictMode>,
