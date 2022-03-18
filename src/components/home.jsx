@@ -623,7 +623,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   Career
                 </Link>
 
-                <HashLink smooth to="/#contact">
+                <HashLink smooth to="/home#contact">
                   {" "}
                   Contact Us
                 </HashLink>
@@ -711,7 +711,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
           </footer>
           <div className="bootons">
-            <HashLink smooth to="/#" id="up">
+            <HashLink smooth to="/home#" id="up">
               <FaRegArrowAltCircleUp />
             </HashLink>
           </div>

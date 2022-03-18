@@ -144,7 +144,7 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
                 Career
               </Link>
 
-              <HashLink smooth to="/#contact">
+              <HashLink smooth to="/home#contact">
                 {" "}
                 Contact Us
               </HashLink>

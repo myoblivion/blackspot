@@ -4,7 +4,7 @@
   "description": "Black Spot Studio Website",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --open --config webpack.config.js --mode development",
+    "dev": "webpack serve --open --config webpack.config.js --mode development --history-api-fallback",
     "build": "webpack --mode production --config webpack.config.js",
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"

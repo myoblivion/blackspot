@@ -28,6 +28,7 @@ import NotFoundComponent from "./notfound";
 import { Redirect } from "react-router-dom";
 // styles
 import "./scss/index.scss";
+
 const hist = createBrowserHistory();
 const Appcomponent = () => {
   const [loading, setLoading] = useState(true);
@@ -43,55 +44,52 @@ const Appcomponent = () => {
       {loading ? (
         <LoadingComponent />
       ) : (
-        <Router history={hist}>
+        <Router basename="/">
           <Switch>
             <div className={"main " + newClass}>
               <NavbarComponent currentRoute={newClass} />
-              <Route exact path="/">
+              <Route exact path="/home">
                 <HomeComponent />
               </Route>
-              <Route exact path="/about">
+              <Route path="/about">
                 <AboutComponent />
               </Route>
-              <Route exact path="/direction">
+              <Route path="/direction">
                 <DirectionComponent />
               </Route>
-              <Route exact path="/job">
+              <Route path="/job">
                 <JobComponent />
               </Route>
-              <Route exact path="/news">
+              <Route path="/news">
                 <NewsComponent />
               </Route>
-              <Route exact path="/scion">
+              <Route path="/scion">
                 <ScionComponent />
               </Route>
-              <Route exact path="/gogoworld">
+              <Route path="/gogoworld">
                 <GoGoWorldComponent />
               </Route>
-              <Route exact path="/gogochain">
+              <Route path="/gogochain">
                 <GoGoChainComponent />
               </Route>
-              <Route exact path="/gogoracing">
+              <Route path="/gogoracing">
                 <GoGoRacingComponent />
               </Route>
-              <Route exact path="/privacy">
+              <Route path="/privacy">
                 <PrivacyComponent />
               </Route>
-              <Route exact path="/scionnews">
+              <Route path="/scionnews">
                 <ScionNewsComponent />
               </Route>
-              <Route exact path="/gogoworldnews">
+              <Route path="/gogoworldnews">
                 <GogoWorldNewsComponent />
               </Route>
-              <Route exact path="/gogochainnews">
+              <Route path="/gogochainnews">
                 <GogoChainNewsComponent />
               </Route>
-              <Route exact path="/gogoracingnews">
+              <Route path="/gogoracingnews">
                 <GogoRacingNewsComponent />
               </Route>
-             <Route exact path="*">
-               <NotFoundComponent />
-             </Route>
             </div>
           </Switch>
         </Router>
