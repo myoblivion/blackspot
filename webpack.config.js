@@ -6,7 +6,8 @@ module.exports = {
   entry: ["babel-polyfill", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "build.js",
+    filename: "index.js",
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import App from "./components/App";
 import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
-
 ReactDOM.render(
   <React.StrictMode>
     <Router history={hist}>
