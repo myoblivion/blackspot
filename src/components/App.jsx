@@ -89,6 +89,9 @@ const Appcomponent = () => {
               <Route exact path="/gogoracingnews">
                 <GogoRacingNewsComponent />
               </Route>
+             <Route exact path="*">
+               <NotFoundComponent />
+             </Route>
             </div>
           </Switch>
         </Router>
