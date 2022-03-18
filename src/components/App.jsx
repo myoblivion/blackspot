@@ -24,8 +24,6 @@ import ScionNewsComponent from "./scionnews";
 import GogoWorldNewsComponent from "./gogoworldnews";
 import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
-import NotFoundComponent from "./notfound";
-import { Redirect } from "react-router-dom";
 // styles
 import "./scss/index.scss";
 
