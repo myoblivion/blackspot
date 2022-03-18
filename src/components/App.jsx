@@ -42,16 +42,15 @@ const Appcomponent = () => {
       {loading ? (
         <LoadingComponent />
       ) : (
-          <Switch>
             <div className={"main " + newClass}>
               <NavbarComponent currentRoute={newClass} />
-              <Route exact path="/">
+              <Route exact path={"/"}>
                 <HomeComponent />
               </Route>
-              <Route path="/about">
+              <Route path={"/about"}>
                 <AboutComponent />
               </Route>
-              <Route path="/direction">
+              <Route path={"/direction"}>
                 <DirectionComponent />
               </Route>
               <Route path="/job">
@@ -88,7 +87,6 @@ const Appcomponent = () => {
                 <GogoRacingNewsComponent />
               </Route>
             </div>
-          </Switch>
       )}
     </>
   );

@@ -6,7 +6,7 @@ import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={hist} hashType="noslash">
+    <Router history={hist} basename="main">
       <App />
     </Router>
   </React.StrictMode>,
