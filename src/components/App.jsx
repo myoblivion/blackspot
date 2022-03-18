@@ -5,6 +5,7 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 // Components
 import NavbarComponent from "../components/navbar";
@@ -24,10 +25,10 @@ import GogoWorldNewsComponent from "./gogoworldnews";
 import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
 import NotFoundComponent from "./notfound";
+import { Redirect } from "react-router-dom";
 // styles
 import "./scss/index.scss";
-import { Redirect } from "react-router-dom";
-
+const hist = createBrowserHistory();
 const Appcomponent = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -38,64 +39,61 @@ const Appcomponent = () => {
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   return (
-    <Router basename="/">
-      <Switch>
-        <>
-          {loading ? (
-            <LoadingComponent />
-          ) : (
+    <>
+      {loading ? (
+        <LoadingComponent />
+      ) : (
+        <Router history={hist}>
+          <Switch>
             <div className={"main " + newClass}>
               <NavbarComponent currentRoute={newClass} />
               <Route exact path="/">
                 <HomeComponent />
               </Route>
-              <Route path="/about">
+              <Route exact path="/about">
                 <AboutComponent />
               </Route>
-              <Route path="/direction">
+              <Route exact path="/direction">
                 <DirectionComponent />
               </Route>
-              <Route path="/job">
+              <Route exact path="/job">
                 <JobComponent />
               </Route>
-              <Route path="/news">
+              <Route exact path="/news">
                 <NewsComponent />
               </Route>
-              <Route path="/scion">
+              <Route exact path="/scion">
                 <ScionComponent />
               </Route>
-              <Route path="/gogoworld">
+              <Route exact path="/gogoworld">
                 <GoGoWorldComponent />
               </Route>
-              <Route path="/gogochain">
+              <Route exact path="/gogochain">
                 <GoGoChainComponent />
               </Route>
-              <Route path="/gogoracing">
+              <Route exact path="/gogoracing">
                 <GoGoRacingComponent />
               </Route>
-              <Route path="/privacy">
+              <Route exact path="/privacy">
                 <PrivacyComponent />
               </Route>
-              <Route path="/scionnews">
+              <Route exact path="/scionnews">
                 <ScionNewsComponent />
               </Route>
-              <Route path="/gogoworldnews">
+              <Route exact path="/gogoworldnews">
                 <GogoWorldNewsComponent />
               </Route>
-              <Route path="/gogochainnews">
+              <Route exact path="/gogochainnews">
                 <GogoChainNewsComponent />
               </Route>
-              <Route path="/gogoracingnews">
+              <Route exact path="/gogoracingnews">
                 <GogoRacingNewsComponent />
               </Route>
-              <Route path="*">
-                <Redirect to="/" />
-              </Route>
             </div>
-          )}
-        </>
-      </Switch>
-    </Router>
+          </Switch>
+        </Router>
+      )}
+    </>
   );
 };
 
