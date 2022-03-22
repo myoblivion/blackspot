@@ -17,7 +17,7 @@
   .adoginacar {
     position: absolute;
     top: 100%;
-    left: 55%;
+    left: 85%;
   }
 }
 .something-wrapper {
@@ -85,6 +85,7 @@
 
     .company {
       color: #96a4b1;
+
     }
 
     .news-preview .btn {
@@ -175,6 +176,36 @@
   padding: 5em 5em 5em 5em;
   overflow-y: scroll;
   overflow-x: hidden;
+  .modal-title {
+    font-weight: 700;
+    margin: 0 0 0.75em 0;
+    margin-top: 2%;
+  }
+  #mainte,
+  #isse,
+  #upde {
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5%;
+    font-weight: 900;
+  }
+  #mainte {
+    background-color: aqua;
+  }
+  #isse {
+    background-color: yellow;
+  }
+  #upde {
+    background-color: greenyellow;
+  }
+  #updates:checked ~.patch {
+    display: block;
+  }
+  .patch {
+    display: none;
+    margin-top: 20px;
+
+  }
 }
 
 .modal-close {
@@ -188,10 +219,7 @@
   cursor: pointer;
 }
 
-.modal-title {
-  font-weight: 700;
-  margin: 0 0 0.75em 0;
-}
+
 
 .modal-checkbox:checked ~ .modal-overlay,
 .modal-checkbox:checked ~ .modal-content {
