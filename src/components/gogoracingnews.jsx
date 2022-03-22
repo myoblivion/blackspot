@@ -45,7 +45,7 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
                         <h4>Updates</h4>
 
                         <h5 className="company">
-                        <span>3/22/2022</span>
+                          <span>3/22/2022</span>
                         </h5>
                       </div>
                     </li>
@@ -88,18 +88,18 @@ const GoGoRacingNewsComponent = ({ currentRoute }) => {
           </label>
           <h2>GOGO RACING</h2>
           <h3 className="modal-title">Updates</h3>
-          <input type="radio" name="updates" id="maintenance" />
-          <label htmlFor="maintenance" id="mainte">
-            Maintenance{" "}
-          </label>
-          <input type="radio" name="updates" id="updates" />
-          <label htmlFor="updates" id="upde">
-            Patch{" "}
-          </label>
-          <input type="radio" name="updates" id="issue" />
-          <label htmlFor="issue" id="isse">
-            Known Issue{" "}
-          </label>
+            <input type="radio" name="updates" id="maintenance" />
+            <label htmlFor="maintenance" id="mainte">
+              Maintenance{" "}
+            </label>
+            <input type="radio" name="updates" id="updates" />
+            <label htmlFor="updates" id="upde">
+              Patch{" "}
+            </label>
+            <input type="radio" name="updates" id="issue" />
+            <label htmlFor="issue" id="isse">
+              Known Issue{" "}
+            </label>
           <div className="patch">
             <h2>1.0.1 Patch Note</h2>
             <h3>Patch content:</h3>
