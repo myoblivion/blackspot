@@ -110,9 +110,9 @@
   .terms {
     width: 100%;
     .terms-section {
-      margin-top: 25%;
       width: 100%;
-      
+
+
       .terms-wrapper {
 
         width: 100%;
@@ -121,17 +121,17 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-
+        margin: 0 auto;
+        margin-top: 25%;
         justify-content: center;
         img {
           width: 50%;
         }
         h1 {
           font-size: 40px;
-          text-align: center;
         }
         h2 {
-          font-size: 27px;
+          font-size: 20px;
 
         }
       }

@@ -515,7 +515,14 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               >
                 Privacy & Policy
               </Link>
-
+              <Link
+                  to="/terms-of-use"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Terms of Use
+                </Link>
               <Link
                 to="/job"
                 {...props}
