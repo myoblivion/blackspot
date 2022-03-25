@@ -75,8 +75,14 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
               >
                 About Us
               </Link>
-              {/* <Link to="/privacy">Privacy & Policy</Link> */}
-              <p>Privacy & Policy</p>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
               <Link
                 to="/job"
                 {...props}

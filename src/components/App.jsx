@@ -24,6 +24,7 @@ import ScionNewsComponent from "./scionnews";
 import GogoWorldNewsComponent from "./gogoworldnews";
 import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
+import TermsAndConditions from "./terms-of-use";
 // styles
 import "./scss/index.scss";
 
@@ -85,6 +86,9 @@ const Appcomponent = () => {
               </Route>
               <Route path="/gogoracingnews">
                 <GogoRacingNewsComponent />
+              </Route>
+              <Route path="/terms-of-use">
+                <TermsAndConditions />
               </Route>
             </div>
       )}

@@ -1,0 +1,140 @@
+.terms {
+  width: 100%;
+  .terms-section {
+    width: 100%;
+
+    .terms-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 90%;
+      text-align: justify;
+      margin: 0 auto;
+      margin-top: 7%;
+    }
+    .article-4,
+    .article-5,
+    .article-6 {
+      ul {
+        list-style-type: "● ";
+      }
+    }
+    p {
+      width: 70%;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 2%;
+    }
+    h3 {
+      font-size: 24px;
+      margin-bottom: 1%;
+    }
+    h4 {
+      margin-left: 1%;
+      margin-bottom: 1%;
+    }
+    img {
+      margin: 0 auto;
+      width: 30%;
+    }
+    margin-top: 7%;
+    h1 {
+      font-size: 45px;
+    }
+    ul {
+      list-style-type: "● ";
+      li {
+        margin-left: 3%;
+        width: 70%;
+        margin-bottom: 8px;
+      }
+    }
+    ul li ul li {
+      list-style: circle;
+    }
+    .chapter-1 {
+      margin: 0 auto;
+      .article-1 {
+        h3 {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+          margin-bottom: 8px;
+        }
+      }
+      .article-2 {
+        margin: 0 auto;
+      }
+    }
+    .chapter-2 {
+      .article-7 {
+        ul li {
+          list-style: none;
+        }
+        ul li ul li {
+          list-style: circle;
+        }
+      }
+      .article-9 {
+        ul {
+          list-style-type: "● ";
+        }
+      }
+      .article-10 {
+        ul {
+          list-style-type: "● ";
+        }
+      }
+      .article-11 {
+        ul {
+          list-style-type: "● ";
+        }
+      }
+    }
+    .chapter-3 {
+      .article-12 {
+        ul li {
+          list-style-type: "● ";
+        }
+        ul li ul li {
+          list-style: circle;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .terms {
+    width: 100%;
+    .terms-section {
+      margin-top: 25%;
+      width: 100%;
+      
+      .terms-wrapper {
+
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        justify-content: center;
+        img {
+          width: 50%;
+        }
+        h1 {
+          font-size: 40px;
+          text-align: center;
+        }
+        h2 {
+          font-size: 27px;
+
+        }
+      }
+    }
+  }
+}

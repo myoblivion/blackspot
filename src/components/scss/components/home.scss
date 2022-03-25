@@ -913,7 +913,7 @@ input[type="radio"] {
           @include bgPart;
           width: 300%;
           height: 300%;
-          background-image: url("/src/images/Gogo Racing.png");
+          background-image: url("/src/images/Gogo Racing Play now.png");
         }
 
         &.left-top {
@@ -1552,7 +1552,7 @@ input[type="radio"] {
       &.anim-9parts {
         .part {
           &:before {
-            background-image: url("/src/images/photos/NEW\ GGR\ MOBILE.png");
+            background-image: url("/src/images/GGR - Mobile.png");
             overflow-y: hidden !important;
             overflow-x: hidden !important;
             /*background-size: cover;*/

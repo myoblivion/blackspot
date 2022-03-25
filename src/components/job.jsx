@@ -607,15 +607,14 @@ const JobComponent = ({ props, ref, currentRoute }) => {
               >
                 About Us
               </Link>
-              {/* <Link
+               <Link
                 to="/privacy"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Privacy & Policy
-              </Link> */}
-              <p>Privacy & Policy</p>
+              </Link> 
               <Link
                 to="/job"
                 {...props}

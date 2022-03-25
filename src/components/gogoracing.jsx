@@ -7,7 +7,7 @@ import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 // Logo
 import ggrlogo from "../images/icons/gogoracing.png";
-import getit from "../images/edit/123.png";
+import getit from "../images/app-download.png";
 import prevv from "../images/gogoracingbackground/prev.png";
 import nextt from "../images/gogoracingbackground/next.png";
 // Characters
@@ -213,9 +213,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="features-select">
         <h1 id="titled">Tune your race</h1>
-        <h2 className="disclaimer">
-        Some of these will be available SOON.
-        </h2>
+        <h2 className="disclaimer">Some of these will be available SOON.</h2>
         <div className="select-wrapper">
           <input type="radio" name="tabs" id="tab1" />
           <label htmlFor="tab1" id="control1">
@@ -288,168 +286,168 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <div className="mobile-selection">
           <Slider {...settings}>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car1} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car1} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car2} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car2} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car3} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car3} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car4} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car4} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car5} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car5} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car6} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car6} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car7} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car7} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car8} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car8} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car9} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car9} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car10} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car10} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car11} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car11} alt="" className="mblcar" />
             </div>
             <div className="carss">
-             <h1>Cars</h1>
-            <img src={car12} alt="" className="mblcar" />
+              <h1>Cars</h1>
+              <img src={car12} alt="" className="mblcar" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character1} alt="" className="mblcharacter" />
+              <img src={character1} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character2} alt="" className="mblcharacter" />
+              <img src={character2} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character3} alt="" className="mblcharacter" />
+              <img src={character3} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character4} alt="" className="mblcharacter" />
+              <img src={character4} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character5} alt="" className="mblcharacter" />
+              <img src={character5} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character6} alt="" className="mblcharacter" />
+              <img src={character6} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character7} alt="" className="mblcharacter" />
+              <img src={character7} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character8} alt="" className="mblcharacter" />
+              <img src={character8} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character9} alt="" className="mblcharacter" />
+              <img src={character9} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character10} alt="" className="mblcharacter" />
+              <img src={character10} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character11} alt="" className="mblcharacter" />
+              <img src={character11} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character12} alt="" className="mblcharacter" />
+              <img src={character12} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character13} alt="" className="mblcharacter" />
+              <img src={character13} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character14} alt="" className="mblcharacter" />
+              <img src={character14} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character15} alt="" className="mblcharacter" />
+              <img src={character15} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character16} alt="" className="mblcharacter" />
+              <img src={character16} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character17} alt="" className="mblcharacter" />
+              <img src={character17} alt="" className="mblcharacter" />
             </div>
             <div className="characterss">
               <h1>Characters</h1>
-            <img src={character18} alt="" className="mblcharacter" />
+              <img src={character18} alt="" className="mblcharacter" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire2} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire2} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire3} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire3} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire4} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire4} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire5} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire5} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire6} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire6} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire7} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire7} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire8} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire8} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire9} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire9} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire10} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire10} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire11} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire11} alt="" className="mbltire" />
             </div>
             <div className="tiress">
-            <h1>Tires</h1>
-            <img src={tire12} alt="" className="mbltire" />
+              <h1>Tires</h1>
+              <img src={tire12} alt="" className="mbltire" />
             </div>
           </Slider>
         </div>
@@ -469,10 +467,14 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               >
                 About Us
               </Link>
-              {/* <Link to="/privacy"                   {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}>Privacy & Policy</Link> */}
-              <p>Privacy & Policy</p>
+              <Link
+                to="/privacy"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Privacy & Policy
+              </Link>
               <Link
                 to="/job"
                 {...props}

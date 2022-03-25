@@ -7,7 +7,7 @@ import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
 
-import getit from "../images/edit/123.png";
+import getit from "../images/app-download.png";
 
 // Devices
 import Phone from "../images/icons/phone.png";
@@ -605,15 +605,22 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 >
                   About Us
                 </Link>
-                {/* <Link
+                <Link
                   to="/privacy"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Privacy & Policy
-                </Link> */}
-                <p>Privacy & Policy</p>
+                </Link>
+                <Link
+                  to="/terms-of-use"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Terms of Use
+                </Link>
                 <Link
                   to="/job"
                   {...props}

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import GifLoader from "react-gif-loader";
-
+import logo from "../images/icons/logo.png";
+import antok from "../images/antok.png";
+import { HashLink } from "react-router-hash-link";
+import {FaRegArrowAltCircleUp} from "react-icons/fa";
 const DirectionComponent = ({ currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Privacy Policy";
@@ -8,181 +10,440 @@ const DirectionComponent = ({ currentRoute }) => {
   return (
     <div className="privacy wrapper">
       <section className="privacy-section">
-        <h2>Privacy Policy</h2>{" "}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias,
-          corrupti ab! Reprehenderit natus tempora ipsam unde provident quaerat
-          nam magni nemo voluptates architecto, nobis quia vitae maxime
-          accusamus sit nihil.
-        </p>{" "}
-        <p>
-          This page is used to inform visitors regarding my policies with the
-          collection, use, and disclosure of Personal Information if anyone
-          decided to use my Service.
-        </p>{" "}
-        <p>
-          If you choose to use my Service, then you agree to the collection and
-          use of information in relation to this policy. The Personal
-          Information that I collect is used for providing and improving the
-          Service. I will not use or share your information with anyone except
-          as described in this Privacy Policy.
-        </p>{" "}
-        <p>
-          The terms used in this Privacy Policy have the same meanings as in our
-          Terms and Conditions, which is accessible at Key Code Generator unless
-          otherwise defined in this Privacy Policy.
-        </p>{" "}
-        <p>
-          <strong>Information Collection and Use</strong>
-        </p>{" "}
-        <p>
-          For a better experience, while using our Service, I may require you to
-          provide us with certain personally identifiable information. The
-          information that I request will be retained on your device and is not
-          collected by me in any way.
-        </p>{" "}
-        <p>
-          The app does use third party services that may collect information
-          used to identify you.
-        </p>{" "}
-        <div>
+        <img src={logo} alt="" />
+        <div className="section-1">
+          <h1>Privacy & Policy </h1>
           <p>
-            Link to privacy policy of third party service providers used by the
-            app
-          </p>{" "}
+            'Black Spot Studio' (hereinafter referred to as the 'Company')
+            values the personal information of its customers and complies with
+            relevant laws such as the “Act on Promotion of Information and
+            Communications Network Utilization and Information Protection” and
+            “Personal Information Protection Act”. “The company has written this
+            privacy policy to inform you about the purpose and method of using
+            the personal information provided by customers and what measures are
+            being taken to protect personal information. This personal
+            information processing policy contains various policies related to
+            the protection of personal information of the company, and the
+            company discloses the personal information processing policy on the
+            company website or within the service so that customers can easily
+            check it at any time in accordance with the provisions of laws and
+            regulations. When the company revises the personal information
+            processing policy, the company takes measures to make it easy to
+            find out the major changes and the revision date through the notice
+            on the website. When a customer registers for a membership or uses
+            the service provided by the company, the company prepares a
+            procedure for agreeing to the terms of service and personal
+            information collection and use guide, and when the customer selects
+            “agree” We collect and use personal information.”
+          </p>
+        </div>
+        <div className="section-2">
+          <h2>
+            1. Items of personal information to be collected and methods of
+            collection
+          </h2>
+          <p>
+            The company collects the following personal information to provide
+            services.
+          </p>
           <ul>
+            ● Collected Items
             <li>
-              <a
-                href="http://blackspotstudio.com/final/main/main.asp"
-                target="_blank"
-              >
-                Google Play Services
-              </a>
+              When signing up for game services and using games: ID and
+              nickname, device information (model name, OS version, device
+              unique identification number), carrier information, store
+              information, game version, game and service usage records, access
+              records, cookies, payment records, paid Billing information,
+              promotion/event participation record, and product delivery related
+              information
             </li>
             <li>
-              <a
-                href="http://blackspotstudio.com/final/main/main.asp"
-                target="_blank"
-              >
-                AdMob
-              </a>
+              When using Facebook-based services: Facebook email ID, profile
+              picture
+            </li>
+            <li>
+              When using customer support service: mobile phone number, name,
+              email address
             </li>
           </ul>
-        </div>{" "}
-        <p>
-          <strong>Log Data</strong>
-        </p>{" "}
-        <p>
-          I want to inform you that whenever you use my Service, in a case of an
-          error in the app I collect data and information (through third party
-          products) on your phone called Log Data. This Log Data may include
-          information such as your device Internet Protocol (“IP”) address,
-          device name, operating system version, the configuration of the app
-          when utilizing my Service, the time and date of your use of the
-          Service, and other statistics.
-        </p>{" "}
-        <p>
-          <strong>Cookies</strong>
-        </p>{" "}
-        <p>
-          Cookies are files with a small amount of data that are commonly used
-          as anonymous unique identifiers. These are sent to your browser from
-          the websites that you visit and are stored on your device's internal
-          memory.
-        </p>{" "}
-        <p>
-          This Service does not use these “cookies” explicitly. However, the app
-          may use third party code and libraries that use “cookies” to collect
-          information and improve their services. You have the option to either
-          accept or refuse these cookies and know when a cookie is being sent to
-          your device. If you choose to refuse our cookies, you may not be able
-          to use some portions of this Service.
-        </p>{" "}
-        <p>
-          <strong>Service Providers</strong>
-        </p>{" "}
-        <p>
-          I may employ third-party companies and individuals due to the
-          following reasons:
-        </p>{" "}
-        <ul>
-          <li>To facilitate our Service;</li>{" "}
-          <li>To provide the Service on our behalf;</li>{" "}
-          <li>To perform Service-related services; or</li>{" "}
-          <li>To assist us in analyzing how our Service is used.</li>
-        </ul>{" "}
-        <p>
-          I want to inform users of this Service that these third parties have
-          access to your Personal Information. The reason is to perform the
-          tasks assigned to them on our behalf. However, they are obligated not
-          to disclose or use the information for any other purpose.
-        </p>{" "}
-        <p>
-          <strong>Security</strong>
-        </p>{" "}
-        <p>
-          I value your trust in providing us your Personal Information, thus we
-          are striving to use commercially acceptable means of protecting it.
-          But remember that no method of transmission over the internet, or
-          method of electronic storage is 100% secure and reliable, and I cannot
-          guarantee its absolute security.
-        </p>{" "}
-        <p>
-          <strong>Links to Other Sites</strong>
-        </p>{" "}
-        <p>
-          This Service may contain links to other sites. If you click on a
-          third-party link, you will be directed to that site. Note that these
-          external sites are not operated by me. Therefore, I strongly advise
-          you to review the Privacy Policy of these websites. I have no control
-          over and assume no responsibility for the content, privacy policies,
-          or practices of any third-party sites or services.
-        </p>{" "}
-        <p>
-          <strong>Children’s Privacy</strong>
-        </p>{" "}
-        <p>
-          These Services do not address anyone under the age of 13. I do not
-          knowingly collect personally identifiable information from children
-          under 13. In the case I discover that a child under 13 has provided me
-          with personal information, I immediately delete this from our servers.
-          If you are a parent or guardian and you are aware that your child has
-          provided us with personal information, please contact me so that I
-          will be able to do necessary actions.
-        </p>{" "}
-        <p>
-          <strong>Changes to This Privacy Policy</strong>
-        </p>{" "}
-        <p>
-          I may update our Privacy Policy from time to time. Thus, you are
-          advised to review this page periodically for any changes. I will
-          notify you of any changes by posting the new Privacy Policy on this
-          page. These changes are effective immediately after they are posted on
-          this page.
-        </p>{" "}
-        <p>
-          <strong>Contact Us</strong>
-        </p>{" "}
-        <p>
-          If you have any questions or suggestions about my Privacy Policy, do
-          not hesitate to contact me at babarusi.cristian@gmail.com.
-        </p>{" "}
-        <p>
-          This privacy policy page was created at
-          <a
-            href="http://blackspotstudio.com/final/main/main.asp"
-            target="_blank"
-          >
-            privacypolicytemplate.net
-          </a>
-          and modified/generated by
-          <a
-            href="http://blackspotstudio.com/final/main/main.asp"
-            target="_blank"
-          >
-            App Privacy Policy Generator
-          </a>
-        </p>
+          <ul>
+            ● How to collect personal information
+            <li>
+              When the game is first launched after downloading, when connecting
+              to a network, when purchasing cash, when registering as a member,
+              when using the customer center, during content and service
+              promotions/events, when using selfdeveloped content and service
+              platforms, when using affiliated platforms Collected through a
+              consent system or a separate consent process
+            </li>
+            <li>
+              If consent to additional collection of personal information is
+              obtained, only the consented information is collected
+            </li>
+          </ul>
+        </div>
+        <div className="section-3">
+          <h2> 2. Purpose of collection and use of personal information</h2>
+          <p>
+            The company uses the collected personal information only for the
+            following purposes, and if the purpose of use is changed, the
+            company takes necessary measures, such as obtaining separate consent
+            in accordance with Article 18 of the Personal Information Protection
+            Act. However, if the customer agrees to provide personal information
+            to a third party in advance or there is a basis for relevant laws
+            and regulations, the company may provide the customer's personal
+            information to external parties.
+          </p>
+          <ul>
+            <li>
+              ● Implementation of contract for service provision and settlement
+              of fees for service{" "}
+            </li>
+            <li>
+              ● Event winning information, event prize delivery, content
+              provision, purchase and payment
+            </li>
+            <li>
+              ● Member Management
+              <ul>
+                <li>
+                  Identity verification according to membership service use,
+                  prevention of illegal use by bad members and unauthorized use,
+                  age verification, confirmation of consent of legal
+                  representative when collecting personal information of
+                  children under 14 years old, complaint handling, complaint
+                  handling, notice delivery, sharing in game Checking the status
+                  of content usage, checking to provide separate services for
+                  each customer
+                </li>
+              </ul>
+            </li>
+            <li>
+              ● Used for marketing and advertising, partnership and consignment
+              business
+              <ul>
+                <li>
+                  Development and specialization of new services (products),
+                  delivery of advertising information such as events, provision
+                  of services and advertisements according to demographic
+                  characteristics, identification of access frequency or
+                  statistics on member service use, and provision of
+                  promotion/event services
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="section-4">
+          <h2>3. Period of retention and use of personal information</h2>
+          <ul>
+            <li>
+              ● Regarding the personal information collected with the consent of
+              the member, the company may retain and use the member's personal
+              information while the member's membership is maintained. However,
+              for the purpose of recovery and victim protection in the event of
+              damage caused by personal information theft, the company may keep
+              member information for a maximum of 30 days from the date of
+              withdrawal, up to the period set by the individual service, and
+              then completely delete it. In addition, there are exceptions in
+              cases where the member's consent is obtained individually or in
+              the case of preservation in accordance with the provisions of
+              related laws, such as the Commercial Act and the Consumer
+              Protection Act in Electronic Commerce, etc.
+            </li>
+            <li>
+              ● In accordance with the 「Act on Promotion of Information and
+              Communications Network Utilization and Information Protection,
+              Etc.」 and the Enforcement Decree of the Act, the company destroys
+              personal information, etc. Take the necessary action.
+            </li>
+            <li>
+              ● If the company needs to preserve the customer's personal
+              information in accordance with the provisions of the relevant
+              laws, the company keeps the information for the period stipulated
+              by the relevant laws and regulations. (However, records of service
+              use restrictions are kept during the service period.)
+            </li>
+          </ul>
+        </div>
+        <div className="section-5">
+          <h2>
+            4. Procedure and method of destruction of personal information
+          </h2>
+          <p>
+            In principle, the company destroys the information without delay
+            after the purpose of collection and use of personal information is
+            achieved. The destruction procedure and method are as follows.
+          </p>
+          <ul>
+            <li>
+              ● destruction procedure
+              <ul>
+                <li>
+                  If the information entered by the customer for membership
+                  registration, etc. has to be kept after the personal
+                  information retention period has elapsed or the purpose has
+                  been achieved, as stipulated by related laws, the company may
+                  move the personal information to a separate database (DB) or
+                  It is stored in a different storage location and then
+                  destroyed. The company does not use the stored personal
+                  information for any other purpose other than those stipulated
+                  in the relevant laws.
+                </li>
+              </ul>
+            </li>
+            <li>
+              ● Destruction method
+              <ul>
+                <li>
+                  ○ Personal information stored in electronic file format is
+                  deleted using a technical method that cannot reproduce the
+                  record. Personal information printed on paper is shredded with
+                  a shredder or destroyed through incineration.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="section-6">
+          <h2>5. Measures to ensure the safety of personal information</h2>
+          <p>
+            The company is taking the following technical and managerial
+            measures to ensure safety so that personal information is not lost,
+            stolen, leaked, altered or damaged in processing members' personal
+            information.
+          </p>
+          <ul>
+            <li>
+              ● Administrative measures: Establishment/implementation of
+              internal management plan, minimization of processing staff,
+              regular in-house training for employees and external training for
+              personal information handling personnel, etc
+            </li>
+            <li>
+              ● Technical measures: management of access rights of personal
+              information processing system, etc., installation of access
+              control system, encryption of unique identification information,
+              installation of latest vaccine and security programs, data backup,
+              etc.
+            </li>
+            <li>
+              ● Physical measures: Control access and access to computer rooms,
+              data storage rooms, etc. However, despite the fact that the
+              company has fulfilled its obligation to protect personal
+              information, the company is not responsible for any damage not
+              attributable to the company, such as the user's negligence or
+              accidents in areas not managed by the company.
+            </li>
+          </ul>
+        </div>
+        <div className="section-7">
+          <h2>6. Provision of personal information to third parties</h2>
+          <p>
+            In principle, the company does not provide customers' personal
+            information to third parties. However, the following cases are
+            exceptions.
+          </p>
+          <ul>
+            <li>● If prior consent is obtained</li>
+            <li>
+              ● In case it is necessary for the settlement of charges for
+              service provision, etc
+            </li>
+            <li>
+              ● When there is a request from an investigation agency in
+              accordance with the procedures and methods stipulated in the
+              relevant laws and regulations or for the purpose of investigation
+            </li>
+            <li>
+              ● When it is necessary for statistical preparation, academic
+              research, or market research, and processing is performed so that
+              a specific individual cannot be identified
+            </li>
+          </ul>
+        </div>
+        <div className="section-8">
+          <h2> 7. Entrustment of processing of personal information</h2>
+          <p>
+            The company may entrust the member's personal information to a
+            consignment company for service improvement. In the case of
+            consignment contracts, necessary matters are stipulated so that
+            members' personal information can be safely managed.
+          </p>
+          <h3>Consignee and purpose of use</h3>
+          <div className="grid-stuff">
+            <img src={antok} alt="" />
+          </div>
+        </div>
+        <div className="section-9">
+          <h2>
+            8. Rights of users and their legal representatives and how to
+            exercise them
+          </h2>
+          <ul>
+            <li>
+              ● Members and their legal representatives can inquire or modify
+              the registered personal information of themselves or children
+              under the age of 14 (hereinafter referred to as 'child') at any
+              time, and may request cancellation of membership. When consent is
+              required for collection, use, provision, etc. of 'child' personal
+              information, the company obtains consent from the legal
+              representative. For this, the company may request the minimum
+              necessary information, such as the name and contact information of
+              the legal representative. The personal information of the legal
+              representative collected in this way is not used or provided to
+              third p
+            </li>
+            <li>
+              ● Members and their legal representatives can withdraw their
+              consent to the provision of personal information (withdrawal of
+              membership) at any time. A member can withdraw from membership by
+              clicking “withdraw member” or “delete account” in the service to
+              withdraw consent to the provision of personal information. Members
+              and their legal representatives can inquire and correct personal
+              information by writing to the company's customer center. In the
+              event of a member's request for correction of personal
+              information, the company does not use or provide the personal
+              information until the correction is completed. In addition, if
+              incorrect personal information has already been provided to a
+              third party, the company will notify the third party of the result
+              of the correction without delay so that the correction is made.
+            </li>
+            <li>
+              ● Personal information deleted at the request of a member or legal
+              representative is handled according to the company's terms of use,
+              etc., and is not viewed or used for any other purpose.
+            </li>
+          </ul>
+        </div>
+        <div className="section-10">
+          <h2>
+            9. Technical, administrative, and physical protection measures for
+            personal information
+          </h2>
+          <p>
+            The company is taking the following technical and administrative
+            measures to ensure safety without loss, theft, leakage,
+            falsification, or damage to personal information in handling
+            members' personal information.
+          </p>
+          <ul>
+            <li>
+              ● The company is doing its best to prevent leakage or damage to
+              members' personal information by hacking or computer viruses. Data
+              are frequently backed up in preparation for damage to personal
+              information, and the latest vaccine program is used to prevent
+              leakage or damage to customers' personal information or data.
+              there is. In addition, an intrusion prevention system is used to
+              control unauthorized access from the outside, and we are trying to
+              equip all possible technical devices to ensure systemic stability.
+            </li>
+            <li>
+              ● The company always emphasizes compliance with the customer's
+              privacy policy. In addition, we check the compliance of the
+              company's personal information handling policy and the compliance
+              of the person in charge through an in-house dedicated
+              organization, and if any problems are found, we are working hard
+              to correct them immediately. However, the company is not
+              responsible for any problems caused by the leakage of personal
+              information due to the member's negligence or problems on the
+              Internet.
+            </li>
+          </ul>
+        </div>
+        <div className="section-11">
+          <h2>10. Civil service related to personal information </h2>
+          <p>
+            In addition to regular training, the company continues to make
+            efforts to improve internal guidelines and systems to prevent
+            infringement of personal information. are specifying.
+          </p>
+          <ul id="thedude">
+            ● Personal Information Protection Officer
+            <li>Name: Kim Seong-yoon (CEO)</li>
+          </ul>
+          <p>
+            You can report any complaints related to personal information
+            protection that occur while using the company's services to the
+            person in charge of personal information management or the
+            department in charge. Representatives will respond promptly and
+            fully to your report. If you need to report or consult on other
+            personal information infringement, please contact the following
+            organizations.
+          </p>
+          <ul>
+            <li>
+              ● Privacy Infringement Report Center (http://privacy.kisa.or.kr /
+              118 without area code)
+            </li>
+            <li>
+              ● Personal Information Dispute Mediation Committee
+              (http://kopico.go.kr / 1833-6972 without area code)
+            </li>
+            <li>
+              ● Cyber Investigation Division, Supreme Prosecutors' Office
+              (http://www.spo.go.kr / 1301 without area code)
+            </li>
+            <li>
+              ● National Police Agency Cyber Security Bureau
+              (http://www.ctrc.go.kr / 182 without area code)
+            </li>
+          </ul>
+        </div>
+        <div className="section-12">
+          <h2>
+            11. Matters concerning the installation, operation and rejection of
+            automatic personal information collection devices
+          </h2>
+          <p>
+            The company may install and operate a device that automatically
+            collects 'cookies' that store and find customer information from
+            time to time. A cookie is a very small text file sent to the user's
+            browser by the server used to operate the company's site and is
+            stored on the user's computer hard disk. The company uses cookies
+            for the following purposes:
+          </p>
+          <ul>
+            ● Purpose of use of cookies, etc.
+            <li>
+              ○ Providing personalized service by identifying information such
+              as the number of visits and access frequency of customers using
+              cookies
+            </li>
+          </ul>
+          <ul>
+            ● Installation/operation and rejection of cookies
+            <li>
+              ○ Customers have the option to install cookies. Therefore, the
+              customer can accept all cookies by setting options in the web
+              browser, check each time a cookie is saved, or refuse to save all
+              cookies.
+            </li>
+          </ul>
+          <ul>
+            ● How to set cookie rejection (in case of Internet Explorer)
+            <li>
+              ○ Tools at the top of your web browser, Internet Options, Privacy,
+              Choose your privacy level
+            </li>
+          </ul>
+          <p>
+            However, if the customer refuses to install cookies, there may be
+            difficulties in providing the service.
+          </p>
+        </div>
+        <div className="section-13">
+          <h3>addendum</h3>
+          <p>This privacy policy is effective from October 12, 2021.</p>
+          <p>
+            The previous Privacy Policy will be replaced by this Privacy Policy.
+          </p>
+        </div>
+        <div className="bootons">
+          <HashLink smooth to="/privacy#" id="up">
+            <FaRegArrowAltCircleUp />
+          </HashLink>
+        </div>
       </section>
     </div>
   );
