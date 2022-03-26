@@ -5,7 +5,7 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-import { createBrowserHistory } from "history";
+
 
 // Components
 import NavbarComponent from "../components/navbar";
@@ -25,10 +25,10 @@ import GogoWorldNewsComponent from "./gogoworldnews";
 import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
 import TermsAndConditions from "./terms-of-use";
+import GoGoRacingGuide from "./gogoracing-guide";
 // styles
 import "./scss/index.scss";
 
-const hist = createBrowserHistory();
 const Appcomponent = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -89,6 +89,9 @@ const Appcomponent = () => {
               </Route>
               <Route path="/terms-of-use">
                 <TermsAndConditions />
+              </Route>
+              <Route path="/gogoracing-guide">
+                <GoGoRacingGuide />
               </Route>
             </div>
       )}

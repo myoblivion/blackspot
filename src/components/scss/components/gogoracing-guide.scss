@@ -1,0 +1,170 @@
+.gogoracing-guide {
+  width: 100%;
+  height: 100%;
+  .ggr-guide-contents {
+    top: 0;
+    background-image: url("/src/images/gogoracingbackground/withlogo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    .ggr-gdecontents {
+      width: 70%;
+      height: 100%;
+      background-color: white;
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 13%;
+      margin-bottom: 5%;
+      padding-bottom: 5%;
+      .ggr-header {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(48, 48, 48);
+        color: white;
+        width: 100%;
+        height: 100%;
+        border-top: 8px solid black;
+        .ggr-top {
+          display: flex;
+          justify-content: space-between;
+          height: 5vh;
+          align-items: center;
+          .ggr-left {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-left: 1%;
+            width: 100%;
+            a {
+              margin-left: 0;
+              font-size: 30px;
+              color: white;
+              margin-right: 2%;
+            }
+          }
+          .ggr-right {
+            margin-right: 2%;
+            button {
+              cursor: pointer;
+              padding: 10px 10px;
+              border-radius: 3px;
+              &:hover {
+                background-color: azure;
+              }
+            }
+          }
+        }
+        img {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+      }
+      .ggr-guides {
+        height: 100%;
+        .ggr-section-1 {
+          .game-introduction {
+            margin-top: 3%;
+            margin-left: 1%;
+            width: 40%;
+            h1 {
+              background-color: #116682;
+              height: 5vh;
+              color: white;
+
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-left: 2%;
+            }
+            p {
+              margin-left: 5%;
+            }
+          }
+          .required {
+            margin-top: 3%;
+            width: 40%;
+            margin-left: 1%;
+
+            h2 {
+              background-color: #116682;
+              height: 5vh;
+              color: white;
+
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-left: 2%;
+            }
+            ul {
+              margin-left: 5%;
+              li {
+                margin: 3% 0;
+              }
+            }
+          }
+          .system-requirements {
+            margin-top: 3%;
+            width: 40%;
+            margin-left: 1%;
+            .minimum {
+              h2 {
+                background-color: #116682;
+                height: 5vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 2%;
+              }
+              h3 {
+                margin-left: 2%;
+              }
+              ul {
+                margin-left: 5%;
+                li {
+                  margin: 3% 0;
+                }
+              }
+            }
+            .recommended {
+              margin-top: 3%;
+              width: 50%;
+              margin-left: 1%;
+              h2 {
+                background-color: #116682;
+                height: 5vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 2%;
+              }
+              h3 {
+                margin-left: 2%;
+              }
+              ul {
+                margin-left: 5%;
+                li {
+                  margin: 5% 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

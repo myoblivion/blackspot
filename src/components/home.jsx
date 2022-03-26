@@ -6,7 +6,7 @@ import ReCaptchaV2 from "react-google-recaptcha";
 import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
-
+import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
 
 // Devices
@@ -318,6 +318,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   />
                   <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-left" />
                   <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-right" />
+                  <img src={cat} alt="" id="cutecat" data-aos="fade-up" />
                   <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
                   <Link
                     to="/gogoracing"

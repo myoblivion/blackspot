@@ -14,13 +14,18 @@ a {
   backdrop-filter: blur(1px);
   top: 0;
   background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .navbar ul {
   margin: 20px 30px;
   padding: 0;
   list-style: none;
-
   animation: surprise 3s ease;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -33,12 +38,12 @@ a {
   font-weight: 900;
   color: #ffb808;
   margin: 0 5px;
-  -webkit-touch-callout: none; 
-  -webkit-user-select: none; 
-   -khtml-user-select: none; 
-     -moz-user-select: none; 
-      -ms-user-select: none; 
-          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .navbar li span {
   display: block;
@@ -47,12 +52,12 @@ a {
   color: #ffb808;
   cursor: pointer;
   font-weight: 900;
-  -webkit-touch-callout: none; 
-  -webkit-user-select: none; 
-   -khtml-user-select: none; 
-     -moz-user-select: none; 
-      -ms-user-select: none; 
-          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .navbar li a:hover,
@@ -74,6 +79,12 @@ a {
   padding: 2px 20px;
   margin: 20px 25px 0;
   animation: surprise-logo 3s ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   img {
     width: 90%;
   }
@@ -87,7 +98,7 @@ a {
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
   background-color: white;
-  animation: bruh .3s ease;
+  animation: bruh 0.3s ease;
 }
 .tabs {
   position: absolute;
@@ -97,7 +108,6 @@ a {
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
   background-color: white;
-
 }
 .navbar ul.tab li {
   float: none;
@@ -118,7 +128,7 @@ a {
   z-index: 500;
   display: none;
   margin-top: -5px;
-  animation: bruh .3s ease;
+  animation: bruh 0.3s ease;
 }
 .navbar .tabs {
   position: absolute;
@@ -126,7 +136,7 @@ a {
   display: none;
   margin-top: -5px;
   color: #ffb808;
-  animation: bruh .3s ease;
+  animation: bruh 0.3s ease;
 }
 li:hover > .tab {
   display: block;
@@ -163,7 +173,6 @@ li:hover > .tabs {
   transition: background-color 0.2s ease-out;
   width: 20px;
 }
-
 
 .navbar .menu-icon .navicon:before,
 .navbar .menu-icon .navicon:after {
