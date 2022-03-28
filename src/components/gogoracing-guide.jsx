@@ -21,7 +21,21 @@ import garage from "../images/ggrguide/stuff10.png";
 import chips from "../images/ggrguide/stuff11.png";
 import synthesis from "../images/ggrguide/stuff12.png";
 import mining from "../images/ggrguide/stuff13.png";
-
+import rankings from "../images/ggrguide/stuff14.png";
+import rankingmechanic from "../images/ggrguide/stuff15.png";
+import ratingtable from "../images/ggrguide/stuff16.png";
+import scorerating from "../images/ggrguide/stuff17.png";
+import gogocoin from "../images/ggrguide/gogotoken.png";
+import diamond from "../images/ggrguide/icon_dia.png";
+import equip from "../images/ggrguide/stuff18.png";
+import packages from "../images/ggrguide/stuff19.png";
+import package2 from "../images/ggrguide/stuff20.png";
+import language from "../images/ggrguide/stuff21.png";
+import settings from "../images/ggrguide/stuff22.png";
+import leaderbord from "../images/ggrguide/stuff23.png";
+import achieve from "../images/ggrguide/icon_achiv.png";
+import gamemode from "../images/ggrguide/stuff25.png";
+import timeattack from "../images/ggrguide/stuff26.png";
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -47,9 +61,15 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="ggr-right">
-                <button>
+                <label htmlFor="search" id="searchs">
                   <FaSearch />
-                </button>
+                </label>
+                <input type="checkbox" name="searched" id="search" />
+                <input
+                  type="text"
+                  id="text-search"
+                  placeholder="Enter the word to search for.."
+                />
               </div>
             </div>
             <img src={backgroundimg} alt="" />
@@ -57,7 +77,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
           <div className="ggr-guides">
             <div className="ggr-section-1">
               <div className="game-introduction">
-                <h1>Game Intro</h1>
+                <h1 id="introo">Game Intro</h1>
                 <p>
                   A racing game where you compete with other users using your
                   purchased and unique cars. Ready your car, finish the line and
@@ -65,7 +85,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </p>
               </div>
               <div className="required">
-                <h2>Account Needed: </h2>
+                <h2 id="acct">Account Needed: </h2>
                 <ul>
                   <li>▶ Personal Gmail account</li>
                   <li>▶ Google Play Store</li>
@@ -74,7 +94,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
               </div>
               <div className="system-requirements">
                 <div className="minimum">
-                  <h2>System Requirements</h2>
+                  <h2 id="requirementss">System Requirements</h2>
                   <h3>
                     Minimun: <br />
                     Based on Samsung Galaxy S7
@@ -102,7 +122,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </div>
               </div>
               <div className="ui-guide">
-                <h2>UI GUIDE</h2>
+                <h2 id="uiguide">UI GUIDE</h2>
                 <img src={uiguide} alt="UI Game Guide" />
                 <h3>Basic/Current game interface</h3>
                 <hr />
@@ -150,10 +170,6 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <h3>Reward Box</h3>
                 <img src={dailybox} alt="" />
                 <hr />
-                <h3>Free Box</h3>
-                <img src={soonbox} alt="" />
-                <h4>Will Be Updated Soon</h4>
-                <hr />
                 <h3>Coupon & Rewards</h3>
                 <img src={coupon} alt="" />
                 <img src={reward} alt="" />
@@ -178,13 +194,6 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <li>▶ Mechanics will be given and updated soon.</li>
                 </ul>
                 <hr />
-                <h3>Victory</h3>
-                <img src={nft} alt="" />
-                <hr />
-                <h3>Gacha</h3>
-                <img src={nft} alt="" />
-                <hr />
-                <h3>Garage</h3>
                 <img src={garage} alt="" />
                 <ul>
                   <li>▶ Equipped car basic stats.</li>
@@ -221,7 +230,189 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <h3>Mining</h3>
                 <img src={mining} alt="" />
                 <p>▶ Mechanics will be updated soon.</p>
+                <hr />
+                <h3>Rankings</h3>
+                <img src={rankings} alt="" />
+                <ul>
+                  <li>
+                    ▶ Ranking Mechanics button
+                    <img src={rankingmechanic} alt="" />
+                  </li>
+                  <li>
+                    ▶ Rating Table
+                    <img src={ratingtable} alt="" />
+                  </li>
+                  <li>
+                    ▶ Score Rating
+                    <img src={scorerating} alt="" />
+                  </li>
+                  <li>
+                    ▶ Track List - Tracks are highlighted per Score rating.
+                  </li>
+                  <li>▶ Speed League Ranking Button</li>
+                  <li>▶ Item League Ranking Button</li>
+                  <li>▶ Ranked character table</li>
+                  <li>▶ Character ranking</li>
+                </ul>
+                <hr />
+
+                <h3>Equipped Car and Character</h3>
+                <img src={equip} alt="" />
+                <hr />
+
+                <div className="currency">
+                  <div className="gogocoins">
+                    <h3>Gogo Coins</h3>
+                    <img src={gogocoin} alt="" id="gogocoin" />
+                    <ul>
+                      <li>▶ Shows current amount of GoGo Coins.</li>
+                      <li>▶ Will be directed to when pressed.</li>
+                    </ul>
+                  </div>
+                  <div className="diamons">
+                    <h3>Diamonds</h3>
+                    <img src={diamond} alt="" id="diamond" />
+                    <ul>
+                      <li>▶ Shows current amount of Diamonds.</li>
+                      <li>▶ Will be directed to when pressed.</li>
+                    </ul>
+                  </div>
+                </div>
+                <hr />
+                <h3>Package</h3>
+                <img src={packages} alt="" />
+                <ul>
+                  <li>▶ Package Tab</li>
+                  <li>▶ Offered Packages</li>
+                  <li>
+                    ▶ Highlighted Package Section <br />- Shows information
+                    regarding the items included.
+                  </li>
+                  <li>
+                    ▶ Buy Button
+                    <img src={package2} alt="" />
+                  </li>
+                  <li>▶ Confirm when purchasing the package.</li>
+                </ul>
+                <hr />
+                <h3>Language Settings</h3>
+                <img src={language} alt="" />
+                <p>Current Languages available are English and Korean.</p>
+                <hr />
+                <h3>Game Settings</h3>
+                <img src={settings} alt="" />
+                <ul>
+                  <li>
+                    ▶ Social Media <br />
+                    <ul>
+                      <li>Will be directed to the social media of the game</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Notice <br />
+                    <ul>
+                      <li>
+                        A notice to the players regarding the future updates.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Service Center <br />
+                    <ul>
+                      <li>
+                        Will be directed to Customer Support for inquiries.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Version
+                    <ul>
+                      <li>Current game version</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Account no.
+                    <ul>
+                      <li>Unique number assigned to the account.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Copy Button
+                    <ul>
+                      <li>Button to easily copy the account no.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Game setting Selectors
+                    <ul>
+                      <li>Language</li>
+                      <li>Graphics</li>
+                      <li>Resolution</li>
+                      <li>Background Music</li>
+                      <li>Sound Effects</li>
+                    </ul>
+                  </li>
+                </ul>
+                <hr />
+                <h3>Leaderboard</h3>
+                <img src={leaderbord} alt="" />
+                <ul>
+                  <li>Shows public High score of the game.</li>
+                </ul>
+                <hr />
+                <div className="achievements">
+                  <h3>Achievements</h3>
+                  <img src={achieve} alt="" />
+                  <ul>
+                    <li>Shows achievements of the player to the game.</li>
+                  </ul>
+                </div>
+                <hr />
+                <h3>Start</h3>
+                <img src={gamemode} alt="" />
+                <ul>
+                  <li>
+                    ▶ When the player clicks Start, the player will be directed
+                    to mode selection screen.
+                  </li>
+                  <li>
+                    ▶ Time Attack
+                    <p>Objective: To set the fastest recorded time per map</p>
+                    <img src={timeattack} alt="" />
+                  </li>
+                  <li>▶ </li>
+                  <li>▶ </li>
+                </ul>
               </div>
+            </div>
+            <div className="ggr-section-2">
+              <h2>Labels</h2>
+              <ul>
+                <li>
+                  <HashLink smooth to="/gogoracing-guide#introo">
+                    Game Intro
+                  </HashLink>
+                </li>
+                <li>
+                  {" "}
+                  <HashLink smooth to="/gogoracing-guide#acct">
+                    Account Needed
+                  </HashLink>
+                </li>
+                <li>
+                  {" "}
+                  <HashLink smooth to="/gogoracing-guide#requirementss">
+                    System Requirements
+                  </HashLink>
+                </li>
+                <li>
+                  {" "}
+                  <HashLink smooth to="/gogoracing-guide#uiguide">
+                    UI Guide
+                  </HashLink>
+                </li>
+                <li></li>
+              </ul>
             </div>
           </div>
         </div>
