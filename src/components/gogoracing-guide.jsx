@@ -8,6 +8,12 @@ import { Link } from "react-router-dom";
 import { FaUserCircle, FaSearch } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/gogoracingbackground/coolbackgroundboiiii.png";
+import uiguide from "../images/ggrguide/stuff1.png";
+import pfguide from "../images/ggrguide/stuff2.png";
+import pfcontents from "../images/ggrguide/stuff3.png";
+import dailyreward from "../images/ggrguide/stuff4.png";
+import dailybox from "../images/ggrguide/stuff5.png";
+
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -86,6 +92,58 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     <li>▶ Chipset: ARM Cortex-A53</li>
                   </ul>
                 </div>
+              </div>
+              <div className="ui-guide">
+                <h2>UI GUIDE</h2>
+                <img src={uiguide} alt="UI Game Guide" />
+                <h3>Basic/Current game interface</h3>
+                <hr />
+                <img src={pfguide} alt="" className="profile-guide" />
+                <h3>Profile/Avatar</h3>
+                <ul>
+                  <li>▶ Character Avatar</li>
+                  <li>▶ Display Name</li>
+                  <li>▶ Character Level & Current Experience Points</li>
+                </ul>
+                <hr />
+                <h3>Profile Contents</h3>
+                <img src={pfcontents} alt="" />
+                <ul>
+                  <li>▶ Bunny Button – Character will ride the car.</li>
+                  <li>▶ Speed League Tab</li>
+                  <li>▶ Item League Tab</li>
+                  <li>
+                    ▶ Speed/Item League Info
+                    <ul>
+                      <li>Display Name</li>
+                      <li>League Rank Rating</li>
+                      <li>Score</li>
+                      <li>Ranking</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Win/Game Percentage
+                    <ul>
+                      <li>Win Rate %</li>
+                      <li>Games Played</li>
+                      <li>Games Won</li>
+                    </ul>
+                  </li>
+                </ul>
+                <hr />
+                <h3>Daily Login Reward Calendar</h3>
+                <img src={dailyreward} alt="" />
+                <ul>
+                  <li>▶ Players were given with rewards on a daily basis. </li>
+                  <li>▶ Rewards may differ everyday. </li>
+                  <li>▶ Players must login in order to receive the rewards.</li>
+                </ul>
+                <hr />
+                <h3>Reward Box</h3>
+                <img src={dailybox} alt="" />
+                <hr />
+                <h3>Free Box</h3>
+                
               </div>
             </div>
           </div>

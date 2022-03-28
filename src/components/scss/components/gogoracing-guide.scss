@@ -128,6 +128,7 @@
                 flex-direction: column;
                 justify-content: center;
                 margin-left: 2%;
+                margin-bottom: 2%;
               }
               h3 {
                 margin-left: 2%;
@@ -151,6 +152,7 @@
                 flex-direction: column;
                 justify-content: center;
                 margin-left: 2%;
+                margin-bottom: 2%;
               }
               h3 {
                 margin-left: 2%;
@@ -159,6 +161,45 @@
                 margin-left: 5%;
                 li {
                   margin: 5% 0;
+                }
+              }
+            }
+          }
+          .ui-guide {
+            width: 40%;
+            h3 {
+              margin: 1% 0;
+              margin-left: 2%;
+
+              font-size: 23px;
+            }
+            hr {
+              width: 90%;
+              margin-left: 2%;
+              margin-bottom: 1%;
+            }
+            h2 {
+              background-color: #116682;
+              height: 5vh;
+              color: white;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-left: 2%;
+              margin-bottom: 3%;
+            }
+            img {
+              margin-left: 2%;
+            }
+            ul {
+              margin-left: 5%;
+              li {
+                margin: 3% 0;
+                ul {
+                  li {
+                    list-style: circle;
+                    margin-left: 2%;
+                  }
                 }
               }
             }
