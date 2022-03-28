@@ -666,7 +666,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
 
-            <div className="footer-right" data-aos="fade-up">
+            <div className="footer-right">
               <div className="footer-icons">
                 <ul className="social-media-list">
                   <li>

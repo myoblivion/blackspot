@@ -5,7 +5,7 @@ import image2 from "../images/gogochain-mobile.png";
 import { HashLink } from "react-router-hash-link";
 import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaSearch } from "react-icons/fa";
+import { FaUserCircle, FaSearch, FaRegArrowAltCircleUp } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/gogoracingbackground/coolbackgroundboiiii.png";
 import uiguide from "../images/ggrguide/stuff1.png";
@@ -13,6 +13,14 @@ import pfguide from "../images/ggrguide/stuff2.png";
 import pfcontents from "../images/ggrguide/stuff3.png";
 import dailyreward from "../images/ggrguide/stuff4.png";
 import dailybox from "../images/ggrguide/stuff5.png";
+import soonbox from "../images/ggrguide/stuff6.png";
+import coupon from "../images/ggrguide/stuff7.png";
+import reward from "../images/ggrguide/stuff8.png";
+import nft from "../images/ggrguide/stuff9.png";
+import garage from "../images/ggrguide/stuff10.png";
+import chips from "../images/ggrguide/stuff11.png";
+import synthesis from "../images/ggrguide/stuff12.png";
+import mining from "../images/ggrguide/stuff13.png";
 
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
@@ -143,10 +151,84 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <img src={dailybox} alt="" />
                 <hr />
                 <h3>Free Box</h3>
-                
+                <img src={soonbox} alt="" />
+                <h4>Will Be Updated Soon</h4>
+                <hr />
+                <h3>Coupon & Rewards</h3>
+                <img src={coupon} alt="" />
+                <img src={reward} alt="" />
+                <ul>
+                  <li>
+                    ▶ Codes were given to the players depending on the event
+                  </li>
+                  <li>
+                    ▶ Players must input the codes to the input box and should
+                    confirm.
+                  </li>
+                  <li>
+                    ▶ Rewards given are depending on the code that the players
+                    used.
+                  </li>
+                </ul>
+                <hr />
+                <h3>NFT</h3>
+                <img src={nft} alt="" />
+                <ul>
+                  <li>▶ Currently locked.</li>
+                  <li>▶ Mechanics will be given and updated soon.</li>
+                </ul>
+                <hr />
+                <h3>Victory</h3>
+                <img src={nft} alt="" />
+                <hr />
+                <h3>Gacha</h3>
+                <img src={nft} alt="" />
+                <hr />
+                <h3>Garage</h3>
+                <img src={garage} alt="" />
+                <ul>
+                  <li>▶ Equipped car basic stats.</li>
+                  <li>▶ Chips Box</li>
+                  <li>▶ Bunny Button</li>
+                  <li>▶ Car Tab</li>
+                  <li>▶ Tab items</li>
+                  <li>▶ Character Tab</li>
+                  <li>▶ Tire Tab</li>
+                  <li>▶ Spoiler Tab</li>
+                  <li>▶ Character Class</li>
+                  <li>▶ Active/Passive Skills</li>
+                  <li>▶ Equip Button</li>
+                  <li id="stuff">
+                    ▶ Chips – are items that can be equipped to your car to gain
+                    additional stats.
+                    <img src={chips} alt="" />
+                    <ul>
+                      <li>Engine Chip</li>
+                      <li>Nitro Chip</li>
+                      <li>Muffler Chip</li>
+                      <li>AI Chip</li>
+                      <li>Close Button</li>
+                      <li>
+                        Synthesis – you can combine 3 same grade/category chips
+                        in order to receive a higher grade (by chance) or with
+                        higher stats.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <img src={synthesis} alt="" />
+                <hr />
+                <h3>Mining</h3>
+                <img src={mining} alt="" />
+                <p>▶ Mechanics will be updated soon.</p>
               </div>
             </div>
           </div>
+        </div>
+        <div className="bootons">
+          <HashLink smooth to="/gogoracing-guide#" id="up">
+            <FaRegArrowAltCircleUp />
+          </HashLink>
         </div>
       </div>
     </div>
