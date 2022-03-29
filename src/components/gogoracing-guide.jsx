@@ -96,7 +96,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </p>
               </div>
               <div className="required">
-                <h2 id="acct">Account Needed: </h2>
+                <h2 id="acct">Game Requirement: </h2>
                 <ul>
                   <li>▶ Personal Gmail account</li>
                   <li>▶ Google Play Store</li>
@@ -486,9 +486,10 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </li>
                 <li id="hover">
                   {" "}
-                  <HashLink smooth to="/gogoracing-guide#uiguide">
+                  <label htmlFor="drop-down" id="dropss">
                     UI Guide ▼
-                  </HashLink>
+                  </label>
+                  <input type="checkbox" name="drop-down" id="drop-down" />
                   <ul id="hidden">
                     <li>
                       <HashLink smooth to="/gogoracing-guide#basic">
