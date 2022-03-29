@@ -5,7 +5,12 @@ import image2 from "../images/gogochain-mobile.png";
 import { HashLink } from "react-router-hash-link";
 import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaSearch, FaRegArrowAltCircleUp } from "react-icons/fa";
+import {
+  FaUserCircle,
+  FaSearch,
+  FaRegArrowAltCircleUp,
+  FaWindowClose,
+} from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/gogoracingbackground/coolbackgroundboiiii.png";
 import uiguide from "../images/ggrguide/stuff1.png";
@@ -36,6 +41,8 @@ import leaderbord from "../images/ggrguide/stuff23.png";
 import achieve from "../images/ggrguide/icon_achiv.png";
 import gamemode from "../images/ggrguide/stuff25.png";
 import timeattack from "../images/ggrguide/stuff26.png";
+import speedleague from "../images/ggrguide/stuff27.png";
+import speeddescript from "../images/ggrguide/stuff28.png";
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -65,6 +72,10 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <FaSearch />
                 </label>
                 <input type="checkbox" name="searched" id="search" />
+                <input type="checkbox" name="searched" id="close" />
+                <label htmlFor="search" id="close">
+                  <FaWindowClose />
+                </label>
                 <input
                   type="text"
                   id="text-search"
@@ -124,7 +135,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
               <div className="ui-guide">
                 <h2 id="uiguide">UI GUIDE</h2>
                 <img src={uiguide} alt="UI Game Guide" />
-                <h3>Basic/Current game interface</h3>
+                <h3 id="basic">Basic/Current game interface</h3>
                 <hr />
                 <img src={pfguide} alt="" className="profile-guide" />
                 <h3>Profile/Avatar</h3>
@@ -134,7 +145,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <li>▶ Character Level & Current Experience Points</li>
                 </ul>
                 <hr />
-                <h3>Profile Contents</h3>
+                <h3 id="profile-contents">Profile Contents</h3>
                 <img src={pfcontents} alt="" />
                 <ul>
                   <li>▶ Bunny Button – Character will ride the car.</li>
@@ -159,7 +170,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </li>
                 </ul>
                 <hr />
-                <h3>Daily Login Reward Calendar</h3>
+                <h3 id="daily-login-reward">Daily Login Reward Calendar</h3>
                 <img src={dailyreward} alt="" />
                 <ul>
                   <li>▶ Players were given with rewards on a daily basis. </li>
@@ -167,10 +178,10 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <li>▶ Players must login in order to receive the rewards.</li>
                 </ul>
                 <hr />
-                <h3>Reward Box</h3>
+                <h3 id="reward-box">Reward Box</h3>
                 <img src={dailybox} alt="" />
                 <hr />
-                <h3>Coupon & Rewards</h3>
+                <h3 id="coupon">Coupon & Rewards</h3>
                 <img src={coupon} alt="" />
                 <img src={reward} alt="" />
                 <ul>
@@ -187,13 +198,14 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </li>
                 </ul>
                 <hr />
-                <h3>NFT</h3>
+                <h3 id="nft">NFT</h3>
                 <img src={nft} alt="" />
                 <ul>
                   <li>▶ Currently locked.</li>
                   <li>▶ Mechanics will be given and updated soon.</li>
                 </ul>
                 <hr />
+                <h3 id="garage">Garage</h3>
                 <img src={garage} alt="" />
                 <ul>
                   <li>▶ Equipped car basic stats.</li>
@@ -227,11 +239,11 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </ul>
                 <img src={synthesis} alt="" />
                 <hr />
-                <h3>Mining</h3>
+                <h3 id="mining">Mining</h3>
                 <img src={mining} alt="" />
                 <p>▶ Mechanics will be updated soon.</p>
                 <hr />
-                <h3>Rankings</h3>
+                <h3 id="rankings">Rankings</h3>
                 <img src={rankings} alt="" />
                 <ul>
                   <li>
@@ -256,11 +268,11 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </ul>
                 <hr />
 
-                <h3>Equipped Car and Character</h3>
+                <h3 id="equipped-car">Equipped Car and Character</h3>
                 <img src={equip} alt="" />
                 <hr />
 
-                <div className="currency">
+                <div className="currency" id="currency">
                   <div className="gogocoins">
                     <h3>Gogo Coins</h3>
                     <img src={gogocoin} alt="" id="gogocoin" />
@@ -279,7 +291,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </div>
                 </div>
                 <hr />
-                <h3>Package</h3>
+                <h3 id="package">Package</h3>
                 <img src={packages} alt="" />
                 <ul>
                   <li>▶ Package Tab</li>
@@ -295,11 +307,11 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <li>▶ Confirm when purchasing the package.</li>
                 </ul>
                 <hr />
-                <h3>Language Settings</h3>
+                <h3 id="language-settings">Language Settings</h3>
                 <img src={language} alt="" />
                 <p>Current Languages available are English and Korean.</p>
                 <hr />
-                <h3>Game Settings</h3>
+                <h3 id="game-settings">Game Settings</h3>
                 <img src={settings} alt="" />
                 <ul>
                   <li>
@@ -354,7 +366,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </li>
                 </ul>
                 <hr />
-                <h3>Leaderboard</h3>
+                <h3 id="leaderboard">Leaderboard</h3>
                 <img src={leaderbord} alt="" />
                 <ul>
                   <li>Shows public High score of the game.</li>
@@ -368,7 +380,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </ul>
                 </div>
                 <hr />
-                <h3>Start</h3>
+                <h3 id="game-mode">Start</h3>
                 <img src={gamemode} alt="" />
                 <ul>
                   <li>
@@ -380,8 +392,75 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     <p>Objective: To set the fastest recorded time per map</p>
                     <img src={timeattack} alt="" />
                   </li>
-                  <li>▶ </li>
-                  <li>▶ </li>
+                  <li>
+                    ▶ Time Record{" "}
+                    <ul>
+                      <li>Best Record (Public record)</li>
+                      <li>My Record (Personal record)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Track Info
+                    <ul>
+                      <li>Shows the track description</li>
+                    </ul>
+                  </li>
+                  <li>▶ Available tracks</li>
+                  <li>
+                    ▶ Start button
+                    <ul>
+                      <li>Will find a match and be directed to the race</li>
+                    </ul>
+                  </li>
+                  <li>▶ Track difficulty level</li>
+                  <li>
+                    ▶ Speed League
+                    <ul>
+                      <li>
+                        Objective: To be placed in Podium in order to increase
+                        ranking.{" "}
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <img src={speedleague} alt="" />
+                <ul>
+                  <li>
+                    ▶ Speed League Description
+                    <img src={speeddescript} alt="" />
+                    <ul>
+                      <li>
+                        Shows a description on how speed league will be played.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Ranking
+                    <ul>
+                      <li>Shows your current ranking</li>
+                      <li>Shows the total games played and games won.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Track Info
+                    <ul>
+                      <li>Shows track description and difficulty level</li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Available Tracks
+                    <ul>
+                      <li>
+                        Available tracks will be updated as the rank increases.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    ▶ Start button
+                    <ul>
+                      <li>Will find a match and directed to the race.</li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -405,13 +484,97 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     System Requirements
                   </HashLink>
                 </li>
-                <li>
+                <li id="hover">
                   {" "}
                   <HashLink smooth to="/gogoracing-guide#uiguide">
-                    UI Guide
+                    UI Guide ▼
                   </HashLink>
+                  <ul id="hidden">
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#basic">
+                        Basic Game Interface
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#profile-contents">
+                        Profile Contents
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        smooth
+                        to="/gogoracing-guide#daily-login-reward"
+                      >
+                        Daily Login Reward Calendar
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#reward-box">
+                        Reward Box
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#coupon">
+                        Coupon & Rewards
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#nft">
+                        NFT
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#garage">
+                        Garage
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#mining">
+                        Mining
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#rankings">
+                        Rankings
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#equipped-car">
+                        Equipped Car & Character
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#currency">
+                        Game Coins/Currency
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#package">
+                        Package
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#language-settings">
+                        Language Settings
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#game-settings">
+                        Game Settings
+                      </HashLink>
+                    </li>{" "}
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#leaderboard">
+                        Leaderboard
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink smooth to="/gogoracing-guide#game-mode">
+                        Game Mode
+                      </HashLink>
+                    </li>
+                  </ul>
                 </li>
-                <li></li>
               </ul>
             </div>
           </div>

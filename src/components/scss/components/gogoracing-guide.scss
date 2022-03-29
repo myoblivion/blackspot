@@ -59,8 +59,8 @@
             align-self: center;
             #text-search {
               position: absolute;
-              right: 120%;
-              width: 1000%;
+              right: 200%;
+              width: 1500%;
               height: 75%;
               border-radius: 8x;
               margin-top: 10%;
@@ -72,16 +72,25 @@
             }
             #searchs {
               cursor: pointer;
-              padding: 10px 10px;
+              padding: 7px 10px;
               border-radius: 3px;
+              background-color: #51575a;
               &:hover {
                 background-color: azure;
+                color: black;
               }
+            }
+            #close {
+              display: none;
             }
 
             #search:checked ~ #text-search {
               display: block;
             }
+            #search:checked ~ #close {
+              display: none;
+            }
+
           }
         }
         img {
@@ -276,7 +285,12 @@
               flex-direction: column;
               margin-left: 5%;
               a {
-              margin-bottom: 10%; 
+                margin-bottom: 10%;
+              }
+              #hidden {
+                li {
+                  margin-left: 10%;
+                }
               }
             }
           }
