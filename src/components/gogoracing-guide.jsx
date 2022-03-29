@@ -209,20 +209,42 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <h3 id="garage">Garage</h3>
                   <img src={garage} alt="" />
                   <ul>
-                    <li>Equipped car basic stats.</li>
-                    <li>Chips Box</li>
-                    <li>Bunny Button</li>
-                    <li>Car Tab</li>
-                    <li>Tab items</li>
-                    <li>Character Tab</li>
-                    <li>Tire Tab</li>
-                    <li>Spoiler Tab</li>
-                    <li>Character Class</li>
-                    <li>Active/Passive Skills</li>
-                    <li>Equip Button</li>
+                    <li>
+                      <span></span> Equipped car basic stats.
+                    </li>
+                    <li>
+                      <span></span> Chips Box
+                    </li>
+                    <li>
+                      <span></span> Bunny Button
+                    </li>
+                    <li>
+                      <span></span> Car Tab
+                    </li>
+                    <li>
+                      <span></span> Tab items
+                    </li>
+                    <li>
+                      <span></span> Character Tab
+                    </li>
+                    <li>
+                      <span></span> Tire Tab
+                    </li>
+                    <li>
+                      <span></span> Spoiler Tab
+                    </li>
+                    <li>
+                      <span></span> Character Class
+                    </li>
+                    <li>
+                      <span></span> Active/Passive Skills
+                    </li>
+                    <li>
+                      <span></span> Equip Button
+                    </li>
                     <li id="stuff">
-                      Chips – are items that can be equipped to your car to gain
-                      additional stats.
+                      <span> </span> Chips – are items that can be equipped to
+                      your car to gain additional stats.
                       <img src={chips} alt="" />
                       <ul>
                         <li>Engine Chip</li>

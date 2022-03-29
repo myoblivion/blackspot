@@ -4,7 +4,7 @@ import image from "../images/goracing.png";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import somedog from "../images/somedog.png";
-import { FaUserCircle, FaSearch } from "react-icons/fa";
+import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import catto from "../images/gogoracingbackground/catto.png";
 const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
   // Title
@@ -22,9 +22,19 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
               </h2>
             </div>
             <div className="ggr-right">
-              <button>
+              <label htmlFor="search" id="searchs">
                 <FaSearch />
-              </button>
+              </label>
+              <input type="checkbox" name="searched" id="search" />
+              <input type="checkbox" name="searched" id="close" />
+              <label htmlFor="search" id="close">
+                <FaWindowClose />
+              </label>
+              <input
+                type="text"
+                id="text-search"
+                placeholder="Enter the word to search for.."
+              />
             </div>
           </div>
           <div className="ggrnws-contents">
@@ -38,15 +48,22 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   <span>See important in-game notice and announcements!</span>
                 </div>
               </li>
-              <li>
-                <div className="li-left">
-                  <img src={catto} alt="" />
-                </div>
-                <div className="li-right">
-                  <h3>Updates</h3>
-                  <span>Keep updated with Gogo Racing!</span>
-                </div>
-              </li>
+              <Link
+                to="/ggr-updates"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <div className="li-left">
+                    <img src={catto} alt="" />
+                  </div>
+                  <div className="li-right">
+                    <h3>Updates</h3>
+                    <span>Keep updated with Gogo Racing!</span>
+                  </div>
+                </li>
+              </Link>
               <Link
                 to="/gogoracing-guide"
                 {...props}

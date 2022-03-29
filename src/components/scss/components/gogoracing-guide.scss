@@ -277,12 +277,18 @@
             margin-bottom: 5%;
           }
           ul {
-            display: flex;
-            flex-direction: column;
+            color: black;
             li {
               display: flex;
               flex-direction: column;
               margin-left: 5%;
+              font-weight: 900;
+              span {
+                width: 4%;
+                height: 5%;
+                background-color: #116682;
+                display: block;
+              }
               a {
                 margin-bottom: 10%;
               }
@@ -290,6 +296,7 @@
                 display: none;
                 li {
                   margin-left: 10%;
+                  font-weight: 100;
                 }
               }
               input {
