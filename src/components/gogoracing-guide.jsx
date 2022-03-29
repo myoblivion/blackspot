@@ -107,12 +107,12 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <div className="minimum">
                   <h2 id="requirementss">System Requirements</h2>
                   <h3>
-                    Minimun: <br />
+                    Minimum: <br />
                     Based on Samsung Galaxy S7
                   </h3>
                   <ul>
                     Android
-                    <li>▶ RAM: 4GB</li>
+                    <li>▶ RAM: 1GB</li>
                     <li>▶ OS version: 6.0 (Marshmallow)</li>
                     <li>▶ Memory: 32GB</li>
                     <li>▶ Chipset: ARM Cortex-A53</li>
@@ -205,39 +205,41 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <li>▶ Mechanics will be given and updated soon.</li>
                 </ul>
                 <hr />
-                <h3 id="garage">Garage</h3>
-                <img src={garage} alt="" />
-                <ul>
-                  <li>▶ Equipped car basic stats.</li>
-                  <li>▶ Chips Box</li>
-                  <li>▶ Bunny Button</li>
-                  <li>▶ Car Tab</li>
-                  <li>▶ Tab items</li>
-                  <li>▶ Character Tab</li>
-                  <li>▶ Tire Tab</li>
-                  <li>▶ Spoiler Tab</li>
-                  <li>▶ Character Class</li>
-                  <li>▶ Active/Passive Skills</li>
-                  <li>▶ Equip Button</li>
-                  <li id="stuff">
-                    ▶ Chips – are items that can be equipped to your car to gain
-                    additional stats.
-                    <img src={chips} alt="" />
-                    <ul>
-                      <li>Engine Chip</li>
-                      <li>Nitro Chip</li>
-                      <li>Muffler Chip</li>
-                      <li>AI Chip</li>
-                      <li>Close Button</li>
-                      <li>
-                        Synthesis – you can combine 3 same grade/category chips
-                        in order to receive a higher grade (by chance) or with
-                        higher stats.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                <img src={synthesis} alt="" />
+                <div className="garages">
+                  <h3 id="garage">Garage</h3>
+                  <img src={garage} alt="" />
+                  <ul>
+                    <li>Equipped car basic stats.</li>
+                    <li>Chips Box</li>
+                    <li>Bunny Button</li>
+                    <li>Car Tab</li>
+                    <li>Tab items</li>
+                    <li>Character Tab</li>
+                    <li>Tire Tab</li>
+                    <li>Spoiler Tab</li>
+                    <li>Character Class</li>
+                    <li>Active/Passive Skills</li>
+                    <li>Equip Button</li>
+                    <li id="stuff">
+                      Chips – are items that can be equipped to your car to gain
+                      additional stats.
+                      <img src={chips} alt="" />
+                      <ul>
+                        <li>Engine Chip</li>
+                        <li>Nitro Chip</li>
+                        <li>Muffler Chip</li>
+                        <li>AI Chip</li>
+                        <li>Close Button</li>
+                        <li>
+                          Synthesis – you can combine 3 same grade/category
+                          chips in order to receive a higher grade (by chance)
+                          or with higher stats.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <img src={synthesis} alt="" />
+                </div>
                 <hr />
                 <h3 id="mining">Mining</h3>
                 <img src={mining} alt="" />
