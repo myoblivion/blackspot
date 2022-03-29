@@ -60,7 +60,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   <div className="li-right">
                     <h3>GameGuide</h3>
                     <span>
-                      New to MapleStory M? Here is everything you need to know
+                      New to Gogo Racing? Here is everything you need to know
                       about the game!
                     </span>
                   </div>
