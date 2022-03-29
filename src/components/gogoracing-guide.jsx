@@ -112,7 +112,18 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </h3>
                   <ul>
                     Android
-                    <li>▶ RAM: 1GB</li>
+                    <li>▶ Requires at least 1GB RAM</li>
+                    <li>▶ AOS 8.0 or higher / Galaxy Note 3 or higher</li>
+                  </ul>
+                </div>
+                <div className="moderate">
+                  <h3>
+                    Moderate: <br />
+                    Based on Samsung Galaxy S10.
+                  </h3>
+                  <ul>
+                    Android
+                    <li>▶ RAM: 4GB</li>
                     <li>▶ OS version: 6.0 (Marshmallow)</li>
                     <li>▶ Memory: 32GB</li>
                     <li>▶ Chipset: ARM Cortex-A53</li>
@@ -125,7 +136,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </h3>
                   <ul>
                     Android
-                    <li>▶ RAM: 4GB</li>
+                    <li>▶ RAM: 8GB</li>
                     <li>▶ OS version: 6.0 (Marshmallow)</li>
                     <li>▶ Memory: 32GB</li>
                     <li>▶ Chipset: ARM Cortex-A53</li>

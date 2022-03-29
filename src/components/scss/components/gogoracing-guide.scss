@@ -171,6 +171,27 @@
                 }
               }
             }
+            .moderate {
+              h2 {
+                background-color: #116682;
+                height: 5vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 2%;
+                margin-bottom: 2%;
+              }
+              h3 {
+                margin-left: 2%;
+              }
+              ul {
+                margin-left: 5%;
+                li {
+                  margin: 3% 0;
+                }
+              }
+            }
             .recommended {
               margin-top: 3%;
               width: 50%;
