@@ -409,7 +409,12 @@
             }
             .garages {
               width: 95%;
-              margin-left: 3%;
+              ul {
+                li {
+              margin-left: 6%;
+
+                }
+              }
             }
             .required {
               width: 95%;
