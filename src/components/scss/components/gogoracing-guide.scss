@@ -419,7 +419,9 @@
             }
             .ui-guide {
               width: 95%;
-
+              hr {
+                margin: 0 auto;
+              }
               .achievements {
                 width: 100%;
                 display: flex;
