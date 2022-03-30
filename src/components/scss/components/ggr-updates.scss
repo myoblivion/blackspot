@@ -146,13 +146,23 @@
     height: 100%;
     .ggr-updates-contents {
       background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-    background-repeat: no-repeat;
+      background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center;
       .ggr-udecontents {
         margin-top: 70%;
         width: 100%;
-        .ggr-update-contents  {
+        .ggr-header {
+          .ggr-top {
+            .ggr-right {
+              #text-search {
+                width: 400%;
+                right: 120%;
+              }
+            }
+          }
+        }
+        .ggr-update-contents {
           width: 90%;
           h1 {
             font-size: 20px;
