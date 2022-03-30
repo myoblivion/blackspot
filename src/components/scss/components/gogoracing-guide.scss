@@ -417,6 +417,14 @@
             }
             .ui-guide {
               width: 95%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              .achievements {
+
+                width: 35%;
+              }
             }
           }
           .ggr-section-2 {
@@ -424,6 +432,13 @@
           }
         }
       }
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .gogoracing-guide {
+    .ggr-guide-contents {
+      margin-top: 25%;
     }
   }
 }
