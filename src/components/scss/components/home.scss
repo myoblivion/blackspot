@@ -1211,6 +1211,9 @@ input[type="radio"] {
         opacity: 0;
         height: 0;
       }
+      #cutecat {
+        display: none;
+      }
       .slick-dots {
         top: 70%;
         width: 100%;
@@ -1253,15 +1256,15 @@ input[type="radio"] {
         position: relative;
         right: 100%;
         margin-left: 0;
-        width: 2%;
+        width: 1%;
         li {
-          width: 100px;
+          width: 50%;
           img {
             position: absolute;
-            left: -650%;
-            width: 5px;
-            height: 40%;
-            top: 70%;
+            left: -600%;
+            width: 1%;
+            height: 90%;
+            top: 120%;
           }
         }
       }
@@ -1325,7 +1328,7 @@ input[type="radio"] {
             left: 5.4%;
           }
           .video {
-            top: 4.5%;
+            top: 4.8%;
             left: 5.4%;
             width: 90%;
             height: 25%;
@@ -1593,7 +1596,7 @@ input[type="radio"] {
     }
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-height: 550px) {
   .home {
     .contactforms {
       height: 144vh;
