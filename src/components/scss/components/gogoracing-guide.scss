@@ -7,14 +7,14 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    background-attachment: fixed;
-    height: 100%;
+      height: 100%;
     margin-top: 5%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    position: relative;
     .ggr-gdecontents {
       width: 70%;
       height: 100%;
@@ -373,6 +373,9 @@
   .gogoracing-guide {
     .ggr-guide-contents {
       background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+      background-size: 100% 100%;
+      background-position: center center;
+      background-attachment: fixed;
       .ggr-gdecontents {
         width: 100%;
         margin-top: 55%;
@@ -439,6 +442,7 @@
   .gogoracing-guide {
     .ggr-guide-contents {
       margin-top: 25%;
+      top: 20%;
     }
   }
 }
