@@ -372,9 +372,10 @@
 @media only screen and (max-width: 500px) {
   .gogoracing-guide {
     .ggr-guide-contents {
+      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
       .ggr-gdecontents {
         width: 100%;
-        margin-top: 45%;
+        margin-top: 55%;
         .ggr-header {
           .ggr-top {
             .ggr-right {
@@ -392,13 +393,34 @@
           align-items: center;
           width: 100%;
           img {
-            width: 200%;
+            width: 95%;
           }
           h1 {
             font-size: 20px;
           }
           h2 {
             font-size: 18px;
+          }
+          .ggr-section-1 {
+            .game-introduction {
+              width: 95%;
+            }
+            .garages {
+              width: 95%;
+              margin-left: 3%;
+            }
+            .required {
+              width: 95%;
+            }
+            .system-requirements {
+              width: 95%;
+            }
+            .ui-guide {
+              width: 95%;
+            }
+          }
+          .ggr-section-2 {
+            display: none;
           }
         }
       }
