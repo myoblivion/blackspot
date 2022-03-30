@@ -1,0 +1,100 @@
+.gogoracing-list {
+  margin-top: 2.8%;
+  height: 100%;
+  .gogo-racing-list-wrapper {
+    background-image: url("/src/images/gogoracingbackground/withlogo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    .ggrupdatelist-contents {
+      margin-top: 2%;
+      width: 60%;
+      height: 40%;
+      .ggr-top {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(48, 48, 48);
+        align-items: center;
+        height: 10%;
+        border-top: 8px solid black;
+        .ggr-left {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-left: 1%;
+            width: 100%;
+            a {
+              margin-left: 0;
+              font-size: 30px;
+              color: white;
+              margin-right: 2%; 
+
+            }
+        }
+        .ggr-right {
+          margin-right: 2%;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #text-search {
+            position: absolute;
+            right: 200%;
+            width: 1500%;
+            height: 75%;
+            border-radius: 8px;
+            margin-top: 10%;
+            display: none;
+            padding-left: 5px;
+          }
+          input[type="checkbox"] {
+            opacity: 0;
+          }
+          #searchs {
+            cursor: pointer;
+            padding: 7px 10px;
+            border-radius: 3px;
+            background-color: #51575a;
+            &:hover {
+              background-color: azure;
+              color: black;
+            }
+          }
+          #close {
+            display: none;
+          }
+          #search:checked ~ #text-search {
+            display: block;
+          }
+        }
+      }
+    }
+    .ggrlists-contents {
+        background-color: white;
+        height: 100%;
+        ul {
+            li {
+                border-bottom: 1px solid rgb(230, 230, 230);
+                height: 9.9vh;
+                padding-left: 2%;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        }
+    }
+  }
+}

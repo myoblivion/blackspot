@@ -43,6 +43,8 @@ import gamemode from "../images/ggrguide/stuff25.png";
 import timeattack from "../images/ggrguide/stuff26.png";
 import speedleague from "../images/ggrguide/stuff27.png";
 import speeddescript from "../images/ggrguide/stuff28.png";
+import linkacc from "../images/ggrguide/stuff29.png";
+import prefferd from "../images/ggrguide/stuff30.png";
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -497,6 +499,32 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     </ul>
                   </li>
                 </ul>
+                <div className="account-linking">
+                  <h2>Account Linking</h2>
+                  <ul>
+                    <li>
+                      👉 Step 1: Select Google Login
+                      <img src={linkacc} alt="" />
+                    </li>
+                    <li>
+                      👉 Step 2: Select your preferred Google account.
+                      <img src={prefferd} alt="" />
+                    </li>
+                  </ul>
+                </div>
+                <div className="coming-soon">
+                  <h2>Will be updated soon:</h2>
+                  <ul>
+                    <li>▶ Friends</li>
+                    <li>▶ Swap</li>
+                    <li>▶ Quest</li>
+                    <li>▶ Shop</li>
+                    <li>▶ Gacha</li>
+                    <li>▶ Victory</li>
+                    <li>▶ Free Box</li>
+                    <li>▶ Clan</li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="ggr-section-2">

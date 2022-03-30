@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-
-  Route,
-  Switch,
-  useLocation,
-} from "react-router-dom";
-
+import { Route, Switch, useLocation } from "react-router-dom";
 
 // Components
 import NavbarComponent from "../components/navbar";
@@ -26,6 +20,7 @@ import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
 import TermsAndConditions from "./terms-of-use";
 import GoGoRacingGuide from "./gogoracing-guide";
+import GogoRacingUpdateList from "./ggr-update-list";
 import GogoRacingUpdates from "./ggr-updates";
 // styles
 import "./scss/index.scss";
@@ -44,60 +39,63 @@ const Appcomponent = () => {
       {loading ? (
         <LoadingComponent />
       ) : (
-            <div className={"main " + newClass}>
-              <NavbarComponent currentRoute={newClass} />
-              <Route exact path={"/"}>
-                <HomeComponent />
-              </Route>
-              <Route path={"/about"}>
-                <AboutComponent />
-              </Route>
-              <Route path={"/direction"}>
-                <DirectionComponent />
-              </Route>
-              <Route path="/job">
-                <JobComponent />
-              </Route>
-              <Route path="/news">
-                <NewsComponent />
-              </Route>
-              <Route path="/scion">
-                <ScionComponent />
-              </Route>
-              <Route path="/gogoworld">
-                <GoGoWorldComponent />
-              </Route>
-              <Route path="/gogochain">
-                <GoGoChainComponent />
-              </Route>
-              <Route path="/gogoracing">
-                <GoGoRacingComponent />
-              </Route>
-              <Route path="/privacy">
-                <PrivacyComponent />
-              </Route>
-              <Route path="/scionnews">
-                <ScionNewsComponent />
-              </Route>
-              <Route path="/gogoworldnews">
-                <GogoWorldNewsComponent />
-              </Route>
-              <Route path="/gogochainnews">
-                <GogoChainNewsComponent />
-              </Route>
-              <Route path="/gogoracingnews">
-                <GogoRacingNewsComponent />
-              </Route>
-              <Route path="/terms-of-use">
-                <TermsAndConditions />
-              </Route>
-              <Route path="/gogoracing-guide">
-                <GoGoRacingGuide />
-              </Route>
-              <Route path="/ggr-updates">
-                <GogoRacingUpdates />
-              </Route>
-            </div>
+        <div className={"main " + newClass}>
+          <NavbarComponent currentRoute={newClass} />
+          <Route exact path={"/"}>
+            <HomeComponent />
+          </Route>
+          <Route path={"/about"}>
+            <AboutComponent />
+          </Route>
+          <Route path={"/direction"}>
+            <DirectionComponent />
+          </Route>
+          <Route path="/job">
+            <JobComponent />
+          </Route>
+          <Route path="/news">
+            <NewsComponent />
+          </Route>
+          <Route path="/scion">
+            <ScionComponent />
+          </Route>
+          <Route path="/gogoworld">
+            <GoGoWorldComponent />
+          </Route>
+          <Route path="/gogochain">
+            <GoGoChainComponent />
+          </Route>
+          <Route path="/gogoracing">
+            <GoGoRacingComponent />
+          </Route>
+          <Route path="/privacy">
+            <PrivacyComponent />
+          </Route>
+          <Route path="/scionnews">
+            <ScionNewsComponent />
+          </Route>
+          <Route path="/gogoworldnews">
+            <GogoWorldNewsComponent />
+          </Route>
+          <Route path="/gogochainnews">
+            <GogoChainNewsComponent />
+          </Route>
+          <Route path="/gogoracingnews">
+            <GogoRacingNewsComponent />
+          </Route>
+          <Route path="/terms-of-use">
+            <TermsAndConditions />
+          </Route>
+          <Route path="/gogoracing-guide">
+            <GoGoRacingGuide />
+          </Route>
+          <Route path="/ggr-update-list">
+            <GogoRacingUpdateList />
+          </Route>
+          <Route path="/ggr-updates">
+            <GogoRacingUpdates />
+          </Route>
+        </div>
       )}
     </>
   );

@@ -49,7 +49,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                 </div>
               </li>
               <Link
-                to="/ggr-updates"
+                to="/ggr-update-list"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
