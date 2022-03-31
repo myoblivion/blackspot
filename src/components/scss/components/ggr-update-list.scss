@@ -26,18 +26,17 @@
         color: white;
         border-top: 8px solid black;
         .ggr-left {
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            margin-left: 1%;
-            width: 100%;
-            a {
-              margin-left: 0;
-              font-size: 30px;
-              color: white;
-              margin-right: 2%; 
-
-            }
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          margin-left: 1%;
+          width: 100%;
+          a {
+            margin-left: 0;
+            font-size: 30px;
+            color: white;
+            margin-right: 2%;
+          }
         }
         .ggr-right {
           margin-right: 2%;
@@ -45,14 +44,14 @@
           justify-content: center;
           align-self: center;
           form {
-          position: relative;
-          display: flex;
+            position: relative;
+            display: flex;
           }
 
           #text-search {
             position: absolute;
-            right: 100%;
-            width: 900%;
+            right: 65%;
+            width: 600%;
             height: 100%;
             border-radius: 8px;
             display: none;
@@ -72,7 +71,7 @@
             }
           }
           #submit {
-            display: none;
+            opacity: 0;
           }
           #submitted {
             display: none;
@@ -112,24 +111,24 @@
       }
     }
     .ggrlists-contents {
-        background-color: white;
-        height: 100%;
-        ul {
-            li {
-                border-bottom: 1px solid rgb(230, 230, 230);
-                height: 9.9vh;
-                padding-left: 2%;
-                display: flex;
-                align-items: center;
-                justify-content: left;
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
+      background-color: white;
+      height: 100%;
+      ul {
+        li {
+          border-bottom: 1px solid rgb(230, 230, 230);
+          height: 9.9vh;
+          padding-left: 2%;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
         }
+      }
     }
   }
 }

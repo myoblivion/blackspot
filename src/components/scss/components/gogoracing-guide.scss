@@ -64,8 +64,8 @@
 
             #text-search {
               position: absolute;
-              right: 100%;
-              width: 900%;
+              right: 65%;
+              width: 600%;
               height: 100%;
               border-radius: 8px;
               display: none;
@@ -85,7 +85,7 @@
               }
             }
             #submit {
-              display: none;
+              opacity: 0;
             }
             #submitted {
               display: none;
