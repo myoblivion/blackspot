@@ -60,12 +60,15 @@
             form {
             position: relative;
             display: flex;
+            label {
+              margin-right: 5px;
+            }
             }
 
             #text-search {
               position: absolute;
               right: 65%;
-              width: 600%;
+              width: 550%;
               height: 100%;
               border-radius: 8px;
               display: none;
