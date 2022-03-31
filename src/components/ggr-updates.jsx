@@ -38,10 +38,10 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="ggr-right">
-              <form>
-                  <input type="checkbox" name="searched" id="search" required />
+                <form>
+                  <input type="checkbox" name="searched" id="search" />
                   <input type="checkbox" name="searched" id="close" />
-                  <input type="submit" name="submit" id="submit" />
+                  <input type="submit" name="submited" id="submit" />
                   <label htmlFor="submit" id="submitted">
                     <FaSearch />
                   </label>
@@ -56,6 +56,7 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
                     type="text"
                     id="text-search"
                     placeholder="Enter the word to search for.."
+                    required
                   />
                 </form>
               </div>
@@ -118,6 +119,7 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
               </li>
             </ul>
           </div>
+          <div className="bottom-eyes"></div>
         </div>
         <div className="bootons">
           <HashLink smooth to="/ggr-updates#" id="up">

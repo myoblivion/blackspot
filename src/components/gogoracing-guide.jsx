@@ -104,6 +104,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     type="text"
                     id="text-search"
                     placeholder="Enter the word to search for.."
+                    required 
                   />
                 </form>
               </div>

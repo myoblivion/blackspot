@@ -34,7 +34,7 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
             </div>
             <div className="ggr-right">
             <form>
-                  <input type="checkbox" name="searched" id="search" required />
+                  <input type="checkbox" name="searched" id="search"/>
                   <input type="checkbox" name="searched" id="close" />
                   <input type="submit" name="submit" id="submit" />
                   <label htmlFor="submit" id="submitted">
@@ -51,6 +51,7 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
                     type="text"
                     id="text-search"
                     placeholder="Enter the word to search for.."
+                    required 
                   />
                 </form>
             </div>
