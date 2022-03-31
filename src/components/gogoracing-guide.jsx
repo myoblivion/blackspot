@@ -89,6 +89,11 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <form>
                   <input type="checkbox" name="searched" id="search" required />
                   <input type="checkbox" name="searched" id="close" />
+                  <select name="select" id="selection">
+                  <option value="title">Title</option>
+                  <option value="contents">Contents</option>
+                  <option value="tags">Tags</option>
+                </select>
                   <input type="submit" name="submit" id="submit" />
                   <label htmlFor="submit" id="submitted">
                     <FaSearch />

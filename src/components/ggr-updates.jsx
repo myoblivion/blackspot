@@ -15,6 +15,7 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
   // Title
+
   useEffect(() => {
     document.title = "Black Spot Studio | Gogo Racing Guide";
   }, []);
@@ -41,6 +42,11 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
                 <form>
                   <input type="checkbox" name="searched" id="search" />
                   <input type="checkbox" name="searched" id="close" />
+                  <select name="select" id="selection">
+                    <option value="title">Title</option>
+                    <option value="contents">Contents</option>
+                    <option value="tags">Tags</option>
+                  </select>
                   <input type="submit" name="submited" id="submit" />
                   <label htmlFor="submit" id="submitted">
                     <FaSearch />
