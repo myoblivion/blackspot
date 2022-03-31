@@ -38,19 +38,26 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="ggr-right">
-                <label htmlFor="search" id="searchs">
-                  <FaSearch />
-                </label>
-                <input type="checkbox" name="searched" id="search" />
-                <input type="checkbox" name="searched" id="close" />
-                <label htmlFor="search" id="close">
-                  <FaWindowClose />
-                </label>
-                <input
-                  type="text"
-                  id="text-search"
-                  placeholder="Enter the word to search for.."
-                />
+              <form>
+                  <input type="checkbox" name="searched" id="search" required />
+                  <input type="checkbox" name="searched" id="close" />
+                  <input type="submit" name="submit" id="submit" />
+                  <label htmlFor="submit" id="submitted">
+                    <FaSearch />
+                  </label>
+                  <label htmlFor="search" id="searchs">
+                    <FaSearch />
+                  </label>
+
+                  <label htmlFor="search" id="close">
+                    <FaWindowClose />
+                  </label>
+                  <input
+                    type="text"
+                    id="text-search"
+                    placeholder="Enter the word to search for.."
+                  />
+                </form>
               </div>
             </div>
             <img src={backgroundimg} alt="" />

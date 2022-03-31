@@ -53,17 +53,20 @@
         }
         .ggr-right {
           margin-right: 2%;
-          position: relative;
           display: flex;
           justify-content: center;
           align-self: center;
+          form {
+          position: relative;
+          display: flex;
+          }
+
           #text-search {
             position: absolute;
-            right: 200%;
-            width: 1500%;
-            height: 75%;
+            right: 100%;
+            width: 900%;
+            height: 100%;
             border-radius: 8px;
-            margin-top: 10%;
             display: none;
             padding-left: 5px;
           }
@@ -80,15 +83,42 @@
               color: black;
             }
           }
+          #submit {
+            display: none;
+          }
+          #submitted {
+            display: none;
+          }
           #close {
             display: none;
           }
-
+          #search:checked ~ #searchs {
+            display: none;
+          }
           #search:checked ~ #text-search {
             display: block;
           }
           #search:checked ~ #close {
-            display: none;
+            display: block;
+            cursor: pointer;
+            padding: 7px 10px;
+            border-radius: 3px;
+            background-color: #51575a;
+            &:hover {
+              background-color: azure;
+              color: black;
+            }
+          }
+          #search:checked ~ #submitted {
+            display: block;
+            cursor: pointer;
+            padding: 7px 10px;
+            border-radius: 3px;
+            background-color: #51575a;
+            &:hover {
+              background-color: azure;
+              color: black;
+            }
           }
         }
       }
