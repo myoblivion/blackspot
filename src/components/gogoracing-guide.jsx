@@ -45,6 +45,16 @@ import speedleague from "../images/ggrguide/stuff27.png";
 import speeddescript from "../images/ggrguide/stuff28.png";
 import linkacc from "../images/ggrguide/stuff29.png";
 import prefferd from "../images/ggrguide/stuff30.png";
+import terms from "../images/ggrguide/stuff31.png";
+import confirm from "../images/ggrguide/stuff32.png";
+import priv from "../images/ggrguide/stuff33.png";
+import confirm2 from "../images/ggrguide/stuff34.png";
+import all from "../images/ggrguide/stuff35.png";
+import download from "../images/ggrguide/stuff36.png";
+import download2 from "../images/ggrguide/stuff37.png";
+import tutorial from "../images/ggrguide/stuff38.png";
+import completetut from "../images/ggrguide/stuff39.png";
+
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -510,8 +520,50 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                       👉 Step 2: Select your preferred Google account.
                       <img src={prefferd} alt="" />
                     </li>
+                    <li>
+                      👉 Step 3: Read the Terms of Service
+                      <img src={terms} alt="" />
+                    </li>{" "}
+                    <li>
+                      👉 Step 4: Press “Confirm” when done.
+                      <img src={confirm} alt="" />
+                    </li>{" "}
+                    <li>
+                      👉 Step 5: Read the Agree to collect and use personal
+                      information
+                      <img src={priv} alt="" />
+                    </li>
+                    <li>
+                      👉 Step 6: Press “Confirm” when done.
+                      <img src={confirm2} alt="" />
+                    </li>
+                    <li>
+                      👉 Step 7: Check “All agree” and press “Confirm”.
+                      <img src={all} alt="" />
+                    </li>
+                    <li>
+                      👉 Step 8: Additional download will be required. (Size
+                      will depend on the update.) Press “Confirm” to continue.
+                      <img src={download} alt="" />
+                    </li>
+                    <li>
+                      👉Step 9: Complete the additional download. (Make sure to
+                      download the patch under Wi-fi connection)
+                      <img src={download2} alt="" />
+                    </li>
+                    <li>
+                      👉 Step 10: Complete or Skip the tutorial
+                      <img src={tutorial} alt="" />
+                    </li>
+                    <li>
+                      👉 Step 11: Press “Confirm” to complete the tutorial.
+                      <img src={completetut} alt="" />
+                    </li>
                   </ul>
+                  <hr />
+                  <h2>Facebook Account Linking</h2>
                 </div>
+
                 <div className="coming-soon">
                   <h2>Will be updated soon:</h2>
                   <ul>
