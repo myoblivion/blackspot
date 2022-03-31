@@ -54,6 +54,12 @@ import download from "../images/ggrguide/stuff36.png";
 import download2 from "../images/ggrguide/stuff37.png";
 import tutorial from "../images/ggrguide/stuff38.png";
 import completetut from "../images/ggrguide/stuff39.png";
+import fblogin from "../images/ggrguide/stuff40.png";
+import fbinput from "../images/ggrguide/stuff41.png";
+import fbcontinue from "../images/ggrguide/stuff42.png";
+import link from "../images/ggrguide/stuff43.png";
+import link2 from "../images/ggrguide/stuff44.png";
+import link3 from "../images/ggrguide/stuff45.png";
 
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
@@ -510,7 +516,8 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </li>
                 </ul>
                 <div className="account-linking">
-                  <h2>Account Linking</h2>
+                  <h1>Account Linking</h1>
+                  <h2>Gmail Account Linking</h2>
                   <ul>
                     <li>
                       👉 Step 1: Select Google Login
@@ -560,22 +567,98 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                       <img src={completetut} alt="" />
                     </li>
                   </ul>
-                  <hr />
                   <h2>Facebook Account Linking</h2>
-                </div>
-
-                <div className="coming-soon">
-                  <h2>Will be updated soon:</h2>
                   <ul>
-                    <li>▶ Friends</li>
-                    <li>▶ Swap</li>
-                    <li>▶ Quest</li>
-                    <li>▶ Shop</li>
-                    <li>▶ Gacha</li>
-                    <li>▶ Victory</li>
-                    <li>▶ Free Box</li>
-                    <li>▶ Clan</li>
+                    <li>
+                      ⭐ Step 1: Select Facebook Login{" "}
+                      <img src={fblogin} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 2: Login your preferred Facebook account.
+                      <img src={fbinput} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 3: Continue as your Facebook profile
+                      <img src={fbcontinue} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 4: Read the Terms of Service
+                      <img src={terms} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 5: Press “Confirm” when done.
+                      <img src={confirm} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 6: Read the Agree to collect and use personal
+                      information
+                      <img src={priv} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 7: Press “Confirm” when done.
+                      <img src={confirm2} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 8: Check “All agree” and press “Confirm”.
+                      <img src={all} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 9: Additional download will be required. (Size
+                      will depend on the update.) Press “Confirm” to continue.
+                      <img src={download} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 10: Complete the additional download. (Make sure
+                      to download the patch under Wi-fi connection)
+                      <img src={download2} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Step 11: Complete or Skip the tutorial
+                      <img src={tutorial} alt="" />
+                    </li>
+                    <li>
+                      ⭐ Press “Confirm” to complete the tutorial.
+                      <img src={completetut} alt="" />
+                    </li>
                   </ul>
+                </div>
+                <div className="acc-transfer">
+                  <h2>Account Transfer</h2>
+                  <ul>
+                    <li>
+                      🏎️ Step 1: Make sure that you are using a “Guest” account
+                      where your IGN is consisting of BSS########.
+                      <br />
+                      <img src={link} alt="" />
+                    </li>
+                    <li>
+                      🏎️ Step 2: Select the account transfer button on the game
+                      lobby <br />
+                      <img src={link2} alt="" />
+                    </li>
+                    <li>
+                      🏎️ Step 3: Select the platform where you want to transfer
+                      your account.
+                      <img src={link3} alt="" />
+                    </li>
+                    <li>
+                      🏎️ Step 4: You will be rewarded with 3,000 GoGo Tokens and
+                      60 Diamonds after successfully transferring your account.
+                    </li>
+                  </ul>
+                  <div className="coming-soon">
+                    <h2>Will be updated soon:</h2>
+                    <ul>
+                      <li>▶ Friends</li>
+                      <li>▶ Swap</li>
+                      <li>▶ Quest</li>
+                      <li>▶ Shop</li>
+                      <li>▶ Gacha</li>
+                      <li>▶ Victory</li>
+                      <li>▶ Free Box</li>
+                      <li>▶ Clan</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
