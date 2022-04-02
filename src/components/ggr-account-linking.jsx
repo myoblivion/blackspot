@@ -37,9 +37,9 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
     document.title = "Black Spot Studio | Gogo Racing Guide";
   }, []);
   return (
-    <div className="gogoracing-guide wrapper">
-      <div className="ggr-guide-contents">
-        <div className="ggr-gdecontents">
+    <div className="gogoracing-acc wrapper">
+      <div className="ggr-acc-contents">
+        <div className="ggr-acdecontents">
           <div className="ggr-header">
             <div className="ggr-top">
               <div className="ggr-left">
@@ -86,7 +86,7 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
             </div>
             <img src={backgroundimg} alt="" />
           </div>
-          <div className="ggr-guides">
+          <div className="ggr-accs">
             <div className="ggr-section-1">
               <div className="game-introduction">
                 <div className="account-linking">
