@@ -156,3 +156,13 @@
     }
   }
 }
+@media only screen and (max-width: 500px) {
+  .gogoracing-list {
+    .gogo-racing-list-wrapper {
+    background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+    .ggrupdatelist-contents {
+        width: 100%;
+    }
+    }
+  }
+}

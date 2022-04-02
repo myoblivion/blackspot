@@ -154,3 +154,13 @@
     }
   }
 }
+@media only screen and (max-width: 500px) {
+  .ggr-guidelist {
+    .ggr-glist-contents {
+      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+      .ggr-glistgontents {
+        width: 100%;
+      }
+    }
+  }
+}
