@@ -20,8 +20,10 @@ import GogoChainNewsComponent from "./gogochainnews";
 import GogoRacingNewsComponent from "./gogoracingnews";
 import TermsAndConditions from "./terms-of-use";
 import GoGoRacingGuide from "./gogoracing-guide";
+import GogoracingGuidelist from "./ggr-guide-list";
 import GogoRacingUpdateList from "./ggr-update-list";
 import GogoRacingUpdates from "./ggr-updates";
+import GogoRacingPatch from "./ggr-patch2";
 // styles
 import "./scss/index.scss";
 
@@ -94,6 +96,12 @@ const Appcomponent = () => {
           </Route>
           <Route path="/ggr-updates">
             <GogoRacingUpdates />
+          </Route>
+          <Route path="/ggr-patch2">
+            <GogoRacingPatch />
+          </Route>
+          <Route path="/ggr-guide-list">
+            <GogoracingGuidelist />
           </Route>
         </div>
       )}
