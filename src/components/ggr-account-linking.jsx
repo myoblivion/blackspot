@@ -91,7 +91,7 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
               <div className="game-introduction">
                 <div className="account-linking">
                   <h1>Account Linking</h1>
-                  <h2>Gmail Account Linking</h2>
+                  <h2 id="gmail-account-linking">Gmail Account Linking</h2>
                   <ul>
                     <li>
                       👉 Step 1: Select Google Login
@@ -141,7 +141,7 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
                       <img src={completetut} alt="" />
                     </li>
                   </ul>
-                  <h2>Facebook Account Linking</h2>
+                  <h2 id="facebook-link">Facebook Account Linking</h2>
                   <ul>
                     <li>
                       ⭐ Step 1: Select Facebook Login{" "}
@@ -196,7 +196,7 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
                     </li>
                   </ul>
                 </div>
-                <div className="acc-transfer">
+                <div className="acc-transfer" id="acc-transfer">
                   <h2>Account Transfer</h2>
                   <ul>
                     <li>
@@ -222,6 +222,26 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="ggr-section-2">
+              <h2>Labels</h2>
+              <ul>
+              <li>
+                  <HashLink smooth to="/ggr-account-linking#gmail-account-linking">
+                   Gmail Account Linking
+                  </HashLink>
+                </li>
+              <li>
+                  <HashLink smooth to="/ggr-account-linking#facebook-link">
+                   Facebook Account Linking
+                  </HashLink>
+                </li>
+                <li>
+                  <HashLink smooth to="/ggr-account-linking#acc-transfer">
+                    Guess Transfer
+                  </HashLink>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

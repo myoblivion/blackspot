@@ -52,7 +52,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
         checked={myCheckbox}
         onChange={(_e) => setMyCheckbox((prev) => !prev)}
       />
-      <label className="menu-icon" htmlFor="menu-btn" >
+      <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
       <ul className="menu" ref={menuRef}>
@@ -81,12 +81,12 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 onClick={() => setMyCheckbox((prev) => !prev)}
               >
                 <Link
-                  to="/scion"
+                  to="/gogoracing"
                   className="nav-item a"
                   {...props}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Scion Fist
+                  GoGo Racing
                 </Link>
               </li>
               <li
@@ -94,12 +94,12 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 onClick={() => setMyCheckbox((prev) => !prev)}
               >
                 <Link
-                  to="/gogoracing"
+                  to="/scion"
                   className="nav-item a"
                   {...props}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  GoGo Racing
+                  Scion Fist
                 </Link>
               </li>
               <li

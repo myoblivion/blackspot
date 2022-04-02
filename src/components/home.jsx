@@ -230,7 +230,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         <div className="container-2" id="game">
           <div
             className="game-wrapper"
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-duration="700"
           >
             <div className="game-title">
@@ -242,22 +242,63 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="sliders">
               <Slider {...settings}>
+                <div className="slider-image">
+                  <img
+                    src={game4}
+                    alt="Game"
+                    id="desktop2"
+                    data-aos="fade-up"
+                  />
+                  <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-up" />
+                  <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-up" />
+                  <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
+                  <Link
+                    to="/gogoracing"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <img
+                      src={Gogoracing}
+                      alt="Gogo Racing Logo"
+                      id="gogoracingsz"
+                      data-aos="fade-up"
+                    />
+                  </Link>
+                  <div className="gamedes">
+                    <div className="logoz">
+                      <div className="icons">
+                        <div className="sccionlogo"></div>
+                      </div>
+                      <ul className="icon-list" id="ggr" data-aos="fade-up">
+                        <li>
+                          <a
+                            href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                            target="_blank"
+                          >
+                            <img src={getit} alt="" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="video" id="gogoracevid" data-aos="fade-up">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/uwW4wjSUgSM"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
                 <div className="slider-image" id="firstgame">
                   <img src={game1} alt="" id="desktop1" />
-                  <img
-                    src={Irina}
-                    alt=""
-                    id="irina"
-                    data-aos="fade-left"
-                    data-aos-duration="700"
-                  />
-                  <img
-                    src={Risa}
-                    alt=""
-                    id="risa"
-                    data-aos="fade-right"
-                    data-aos-duration="700"
-                  />
+                  <img src={Irina} alt="" id="irina" />
+                  <img src={Risa} alt="" id="risa" />
                   <img src={mobile1} alt="" id="mobile1" />
                   <div className="gamedes">
                     <div className="logoz">
@@ -301,60 +342,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                         width="560"
                         height="315"
                         src="https://www.youtube.com/embed/pxSzRmCFqL0"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div className="slider-image">
-                  <img
-                    src={game4}
-                    alt="Game"
-                    id="desktop2"
-                    data-aos="fade-up"
-                  />
-                  <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-left" />
-                  <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-right" />
-                  <img src={cat} alt="" id="cutecat" data-aos="fade-up" />
-                  <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
-                  <Link
-                    to="/gogoracing"
-                    {...props}
-                    ref={ref}
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
-                    <img
-                      src={Gogoracing}
-                      alt="Gogo Racing Logo"
-                      id="gogoracingsz"
-                      data-aos="fade-left"
-                    />
-                  </Link>
-                  <div className="gamedes">
-                    <div className="logoz">
-                      <div className="icons">
-                        <div className="sccionlogo"></div>
-                      </div>
-                      <ul className="icon-list" id="ggr">
-                        <li>
-                          <a
-                            href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
-                            target="_blank"
-                          >
-                            <img src={getit} alt="" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="video" id="gogoracevid" data-aos="fade-up">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/uwW4wjSUgSM"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
