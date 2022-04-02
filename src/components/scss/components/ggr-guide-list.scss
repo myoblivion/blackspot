@@ -1,43 +1,28 @@
 .ggr-guidelist {
-  width: 100%;
   height: 100%;
   .ggr-glist-contents {
     background-image: url("/src/images/gogoracingbackground/withlogo.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    background-attachment: fixed;
-    height: 100%;
-    margin-top: 5%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    z-index: 1;
     .ggr-glistgontents {
       width: 70%;
-      height: 100%;
-      margin-top: 10%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 13%;
-      margin-bottom: 5%;
-      padding-bottom: 5%;
-      background-color: white;
-      .ggr-header {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(48, 48, 48);
-        color: white;
-        width: 100%;
-        height: 100%;
-        border-top: 8px solid black;
-        margin-bottom: 5%;
-      }
+      height: 40%;
       .ggr-top {
         display: flex;
         justify-content: space-between;
-        height: 5vh;
+        background-color: rgb(48, 48, 48);
         align-items: center;
+        height: 10%;
+        color: white;
+        border-top: 8px solid black;
         .ggr-left {
           font-size: 16px;
           display: flex;
@@ -63,6 +48,9 @@
               margin-right: 5px;
             }
           }
+          #submit {
+            transform: translate(0, -9000%);
+          }
           #selection {
             display: none;
           }
@@ -70,6 +58,7 @@
             position: absolute;
             right: 65%;
             width: 450%;
+
             height: 100%;
             border-radius: 8px;
             display: none;
@@ -102,9 +91,6 @@
           }
           #search:checked ~ #text-search {
             display: block;
-          }
-          #submit {
-            transform: translate(0, -9000%);
           }
           #search:checked ~ #close {
             display: block;
@@ -139,96 +125,29 @@
           }
         }
       }
-      img {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      .ggr-guidelist {
-        width: 50%;
-        h1 {
-          background-color: #116682;
-          height: 5vh;
-          color: white;
-          margin-left: 2%;
-          margin-bottom: 3%;
-        }
-        h3 {
-          margin-left: 2%;
-        }
-        p {
-          margin-left: 2%;
-        }
-        h2 {
-          margin-bottom: 2%;
-        }
-        h2 {
-          margin-left: 2%;
-        }
-        ul {
-          margin-left: 2%;
-          li {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 3%;
-            h3 {
-              &::before {
-                content: "⚡ ";
-              }
-            }
-            ul {
-              li {
-                margin-top: 2%;
-                a {
-                  margin-left: 2px;
-                  color: rgb(95, 95, 255);
-                }
-                &::before {
-                  content: "➟ ";
-                }
-              }
-            }
-          }
-        }
-      }
     }
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .ggr-patch2 {
-    width: 100%;
-    height: 100%;
     .ggr-guidelist {
-      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-position: center;
-      .ggr-pdecontents {
-        margin-top: 70%;
-        width: 100%;
-        .ggr-header {
-          .ggr-top {
-            .ggr-right {
-              #search:checked ~ #selection {
-                right: 175%;
-                width: 50%;
-              }
-              #text-search {
-                right: 60%;
-                width: 100%;
-              }
-            }
+      background-color: white;
+      height: 100%;
+      ul {
+        li {
+          border-bottom: 1px solid rgb(230, 230, 230);
+          height: 9.9vh;
+          padding-left: 2%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          h3 {
+            margin-bottom: 8px;
           }
-        }
-        .ggr-guidelist {
-          width: 90%;
-          h1 {
-            font-size: 20px;
+          span {
+            margin-left: 2%;
           }
         }
       }

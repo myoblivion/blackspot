@@ -145,6 +145,12 @@
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
+          h3 {
+            margin-bottom: 8px; 
+          }
+          span {
+            margin-left: 18%;
+          }
         }
       }
     }

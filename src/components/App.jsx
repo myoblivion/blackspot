@@ -21,6 +21,7 @@ import GogoRacingNewsComponent from "./gogoracingnews";
 import TermsAndConditions from "./terms-of-use";
 import GoGoRacingGuide from "./gogoracing-guide";
 import GogoracingGuidelist from "./ggr-guide-list";
+import GogoRacingAccountLinking from "./ggr-account-linking";
 import GogoRacingUpdateList from "./ggr-update-list";
 import GogoRacingUpdates from "./ggr-updates";
 import GogoRacingPatch from "./ggr-patch2";
@@ -102,6 +103,9 @@ const Appcomponent = () => {
           </Route>
           <Route path="/ggr-guide-list">
             <GogoracingGuidelist />
+          </Route>
+          <Route path="/ggr-account-linking">
+            <GogoRacingAccountLinking />
           </Route>
         </div>
       )}
