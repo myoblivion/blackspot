@@ -90,7 +90,6 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
             <div className="ggr-section-1">
               <div className="game-introduction">
                 <div className="account-linking">
-                  <h1>Account Linking</h1>
                   <h2 id="gmail-account-linking">Gmail Account Linking</h2>
                   <ul>
                     <li>
