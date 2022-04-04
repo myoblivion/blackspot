@@ -63,8 +63,8 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
           </div>
           <div className="ggrlists-contents">
             <ul>
-              <Link
-                to="/ggr-updates"
+            <Link
+                to="/ggr-patch3"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
@@ -72,8 +72,8 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
                 <li>
                   <div className="li-left"></div>
                   <div className="li-right">
-                    <h3>🔊 1.0.1 Patch Note</h3>
-                    <span>03.23.2022</span>
+                    <h3>🔊 1.0.3 Patch Note</h3>
+                    <span>04.04.2022</span>
                   </div>
                 </li>
               </Link>
@@ -88,6 +88,20 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
                   <div className="li-right">
                     <h3>🔊 1.0.2 Patch Note</h3>
                     <span>03.25.2022</span>
+                  </div>
+                </li>
+              </Link>
+              <Link
+                to="/ggr-updates"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <div className="li-left"></div>
+                  <div className="li-right">
+                    <h3>🔊 1.0.1 Patch Note</h3>
+                    <span>03.23.2022</span>
                   </div>
                 </li>
               </Link>
