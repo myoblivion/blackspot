@@ -14,7 +14,11 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracingnews wrapper">
       <div className="gogo-racing-news-wrapper">
-        <div className="ggrnews-contents">
+        <div
+          className="ggrnews-contents"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="ggr-top">
             <div className="ggr-left">
               <h2>
@@ -45,7 +49,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   type="text"
                   id="text-search"
                   placeholder="Enter the word to search for.."
-                  required 
+                  required
                 />
               </form>
             </div>

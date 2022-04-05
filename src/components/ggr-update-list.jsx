@@ -17,7 +17,11 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing-list wrapper">
       <div className="gogo-racing-list-wrapper">
-        <div className="ggrupdatelist-contents">
+        <div
+          className="ggrupdatelist-contents"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="ggr-top">
             <div className="ggr-left">
               <Link
@@ -63,7 +67,7 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
           </div>
           <div className="ggrlists-contents">
             <ul>
-            <Link
+              <Link
                 to="/ggr-patch3"
                 {...props}
                 ref={ref}

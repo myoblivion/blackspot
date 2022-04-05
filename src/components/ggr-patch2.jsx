@@ -21,7 +21,11 @@ const GogoRacingPatch = ({ props, ref, currentRoute }) => {
   return (
     <div className="ggr-patch2 wrapper">
       <div className="ggr-patch-contents">
-        <div className="ggr-pdecontents">
+        <div
+          className="ggr-pdecontents"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="ggr-header">
             <div className="ggr-top">
               <div className="ggr-left">
@@ -126,9 +130,9 @@ const GogoRacingPatch = ({ props, ref, currentRoute }) => {
                     <a href="https://bit.ly/3JCuqTP">https://bit.ly/3JCuqTP</a>
                   </li>
                   <li>
-                    🌐: To know more about our games visit: 
-                     <a href="https://linktr.ee/BSSPH">
-                       https://linktr.ee/BSSPH
+                    🌐: To know more about our games visit:
+                    <a href="https://linktr.ee/BSSPH">
+                      https://linktr.ee/BSSPH
                     </a>
                   </li>
                 </ul>

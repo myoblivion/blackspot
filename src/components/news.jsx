@@ -32,7 +32,11 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="news wrapper">
       <div className="news-wrapper">
-        <div className="news-contents">
+        <div
+          className="news-contents"
+          data-aos="zoom-in"
+          data-aos-duration="700"
+        >
           <div className="header">
             <h1>News & Announcements</h1>
           </div>

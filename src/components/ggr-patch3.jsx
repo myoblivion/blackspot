@@ -21,7 +21,11 @@ const GogoRacingPatchs = ({ props, ref, currentRoute }) => {
   return (
     <div className="ggr-patch3 wrapper">
       <div className="ggr-patc3-contents">
-        <div className="ggr-pde3contents">
+        <div
+          className="ggr-pde3contents"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="ggr-header">
             <div className="ggr-top">
               <div className="ggr-left">
@@ -73,49 +77,43 @@ const GogoRacingPatchs = ({ props, ref, currentRoute }) => {
             <h2>1.0.3 Patch Note</h2>
             <h3>Fix version informations: </h3>
             <ul>
+              <li>Fixed incorrect game information version.</li>
               <li>
-                Fixed the type display on the paint and package in the purchase
-                pop-up window.
+                Modified game reward icon to appear differently when you lose
+                the game.
+              </li>
+              <li>Fixed vehicle change pop-up error in the matching room.</li>
+              <li>Added exception if the expired characters are installed.</li>
+              <li>
+                Revised exception handling if the expired vehicle is installed.
               </li>
               <li>
-                Correct the alignment in Iteam League that applies to the same
-                team when using EMP.
+                Fixed sound setting: to prevent sound from coming out when the
+                effect was turned off.
+              </li>
+              <li>Fixed / Adjusted reward icon size. </li>
+              <li>
+                Applied correction on the item acquisition effect when using
+                magnetic field items.
               </li>
               <li>
-                Activate the "Change Installation" button in the matching room.
+                Applied correction on turtle attack whereas the attack effect
+                does not disappear when the shield is used.
               </li>
+              <li>Fixed Attendance Reward Pop-up.</li>
               <li>
-                Modified the alignment of track difficulty level of each league
-                that was displayed differently.
-              </li>
-              <li>
-                Modified the text "cencel" ➡️ "cancel" in the system pop-up
-                window
-              </li>
-              <li>Altered the basic animation of the practice character.</li>
-              <li>Changed UI effects of results on the Time Attack Mode.</li>
-              <li>Upcoming new car and character added in the shop.</li>
-              <li>
-                Correct the appearance of repeated acquisition when acquiring
-                item boxes during Item League play
-              </li>
-              <li>
-                Ingame distance calculation UI, modify function to operate until
-                end of game
-              </li>
-              <li>
-                Fixed the appearance that AI when the network is unstable.
-              </li>
-              <li>
-                Changed the display: Pop-up window will be removed when all
-                attendance compensation is obtained
-              </li>
-
-              <li>
-                Established Account Linking on Google or Facebook Account.{" "}
-              </li>
-              <li>
-                Fixed the animation on the ranking profile.
+                Languages:
+                <ul>
+                  <li>
+                    Added 7 new text translations: Japanese, Indonesian,
+                    Vietnamese, Thai, Spanish, French, and Italian.
+                  </li>
+                  <li>Unavailable language is locked for processing.</li>
+                  <li>
+                    Fixed issue where language is set automatically when the
+                    user moved to the lobby
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

@@ -22,7 +22,11 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing-updates wrapper">
       <div className="ggr-updates-contents">
-        <div className="ggr-udecontents">
+        <div
+          className="ggr-udecontents1"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="ggr-header">
             <div className="ggr-top">
               <div className="ggr-left">

@@ -69,7 +69,11 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing-guide wrapper">
       <div className="ggr-guide-contents">
-        <div className="ggr-gdecontents">
+        <div
+          className="ggr-gdecontents"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="ggr-header">
             <div className="ggr-top">
               <div className="ggr-left">
