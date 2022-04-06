@@ -10,6 +10,8 @@ import ggrlogo from "../images/icons/gogoracing.png";
 import getit from "../images/app-download.png";
 import prevv from "../images/gogoracingbackground/prev.png";
 import nextt from "../images/gogoracingbackground/next.png";
+import movingchar from "../images/edit/stuff.png";
+import marketplace from "../images/goto.png";
 // Characters
 import character1 from "../images/ggr-characters/1-pengsuni-costume-1.png";
 import character2 from "../images/ggr-characters/1-pengsuni-costume-2.png";
@@ -165,6 +167,11 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="market-ggr">
+          <a href="https://gogochain.net/market/nfts" target="_blank">
+            <img src={marketplace} alt="" />
+          </a>
         </div>
       </section>
       <section className="gamedescription">
