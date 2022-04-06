@@ -57,11 +57,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
 
   return (
     <div className="job wrapper">
-      <section
-        className="joblist"
-        data-aos="zoom-in"
-        data-aos-duration="500"
-      >
+      <section className="joblist" data-aos="zoom-in" data-aos-duration="500">
         <div className="joblist-wrapper">
           <center>
             <img src={join} alt="" id="top1" />
@@ -210,7 +206,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
                     <ReCaptchaV2
-                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                       onChange={handleToken}
                     />
                     <button type="submit">Submit</button>
@@ -295,7 +291,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                   <label htmlFor="file">Upload your CV</label>
                   <input type="file" name="file" id="file" />
                   <ReCaptchaV2
-                    sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                    sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                     onChange={handleToken}
                   />
                   <button type="submit">Submit</button>
@@ -394,7 +390,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
                     <ReCaptchaV2
-                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                       onChange={handleToken}
                     />
                     <button type="submit">Submit</button>
@@ -499,7 +495,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
                     <ReCaptchaV2
-                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                       onChange={handleToken}
                     />
                     <button type="submit">Submit</button>
@@ -584,7 +580,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                   <label htmlFor="file">Upload your CV</label>
                   <input type="file" name="file" id="file" />
                   <ReCaptchaV2
-                    sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                    sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                     onChange={handleToken}
                   />
                   <button type="submit">Submit</button>
@@ -607,22 +603,22 @@ const JobComponent = ({ props, ref, currentRoute }) => {
               >
                 About Us
               </Link>
-               <Link
+              <Link
                 to="/privacy"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Privacy & Policy
-              </Link> 
+              </Link>
               <Link
-                  to="/terms-of-use"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Terms of Use
-                </Link>
+                to="/terms-of-use"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Terms of Use
+              </Link>
               <Link
                 to="/job"
                 {...props}

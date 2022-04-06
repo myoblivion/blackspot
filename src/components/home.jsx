@@ -80,6 +80,12 @@ const handleToken = (token) => {
     return { ...currentForm, token };
   });
 };
+const verifyCallback = function (response) {
+  this.setState({
+       reCaptchaResponse: response
+   });
+};
+
 const handleExpire = () => {
   setForm((currentForm) => {
     return { ...currentForm, token: null };
@@ -507,6 +513,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     <ReCaptchaV2
                       sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                       onChange={handleToken}
+                      verifyCallback={verifyCallback}
                     />
                     <button
                       type="sumbit"
