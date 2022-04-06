@@ -115,7 +115,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                     </li>
                     <li className="job-preview">
                       <div className="content float-left">
-                        <h4 className="job-title">Custumer Service Manager</h4>
+                        <h4 className="job-title">Customer Service Manager</h4>
                         <h5 className="company">Full Time</h5>
                       </div>
                       <label htmlFor="manager">
