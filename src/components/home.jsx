@@ -505,7 +505,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   </div>
                   <div className="form-group clearfix">
                     <ReCaptchaV2
-                      sitekey="6LdYi10eAAAAAHWU89tjxpmTA_aNeWMg8OXIHgpj"
+                      sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
                       onChange={handleToken}
                     />
                     <button
