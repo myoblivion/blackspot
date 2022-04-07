@@ -82,15 +82,9 @@ const handleToken = (token) => {
 };
 const verifyCallback = function (response) {
   this.setState({
-       reCaptchaResponse: response
-   });
+    reCaptchaResponse: response,
+  });
 };
-
-const handleExpire = () => {
-  setForm((currentForm) => {
-   return {...currentForm, token: null }
-  })
-}
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
   function MouseOver(event) {
@@ -115,7 +109,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
 
     return () => clearInterval(intervalId);
   }, []);
-
+  function enableBtn() {
+    document.getElementById("submit").disabled = false;
+  }
   const [imageIndex, setImageIndex] = useState(0);
   const settings = {
     Infinite: true,
@@ -502,7 +498,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     <label htmlFor="message">Message :</label>
                     <textarea
                       placeholder="Message"
-                      required
                       id="message"
                       rows="2"
                       name="message"
@@ -511,15 +506,17 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   </div>
                   <div className="form-group clearfix">
                     <ReCaptchaV2
-                      sitekey="6Le1GFIfAAAAAMueB9l94SgqYRP7EOWZ0vPBQucM"
+                      sitekey="6LewvFIfAAAAAMVRz13RUSCKEFcLEY7eVhV6a-in"
+                      data-callback="enableBtn"
                       onChange={handleToken}
                       verifyCallback={verifyCallback}
-                      onExpire={handleExpire}
                     />
                     <button
+                      id="submit"
                       type="sumbit"
                       data-id="#accessories-holder"
                       className="red-select-btn model-selector btn-send-message"
+                      disabled
                     >
                       <span>Submit</span>
                     </button>
