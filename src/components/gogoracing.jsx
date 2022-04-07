@@ -169,9 +169,9 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
         <div className="market-ggr">
-          <a href="https://gogochain.net/market/nfts" target="_blank">
+          <p>
             <img src={marketplace} alt="" />
-          </a>
+            </p>
         </div>
       </section>
       <section className="gamedescription">

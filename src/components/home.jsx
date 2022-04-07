@@ -85,6 +85,9 @@ const verifyCallback = function (response) {
        reCaptchaResponse: response
    });
 };
+function onChange(value) {
+  console.log('Captcha value:', value);
+}
 
 const handleExpire = () => {
   setForm((currentForm) => {
@@ -512,7 +515,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   <div className="form-group clearfix">
                     <ReCaptchaV2
                       sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
-                      onChange={handleToken}
+                      onChange={onChange}
                       verifyCallback={verifyCallback}
                     />
                     <button

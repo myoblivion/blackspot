@@ -78,8 +78,8 @@
       }
     }
     .market-ggr {
-      height: 50%;
-      width: 40%;
+      height: 25%;
+      width: 45%;
       position: absolute;
       display: flex;
       flex-direction: column;
@@ -87,10 +87,15 @@
       justify-content: center;
       backdrop-filter: blur(11px);
       right: 10%;
-      top: 30%;
-      a {
+      top: 40%;
+      p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         img {
-          width: 100%;
+          cursor: pointer;
+          width: 90%;
         }
       }
     }
