@@ -86,9 +86,19 @@ const GogoracingGuidelist = ({ props, ref, currentRoute }) => {
                 <li>
                   <h3>🔗 Account Linking</h3>
                   <span>
-                    New to Gogo Racing? Here is everything you need to know
-                    about the game!
+                    Here's a guide about how you can link your account.
                   </span>
+                </li>
+              </Link>
+              <Link
+                to="/ggr-purchase-guide"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <h3>💳 Purchase & Linking Guide</h3>
+                  <span>This will guide you on how to purchase items in GoGo Racing using different types of payment method.</span>
                 </li>
               </Link>
             </ul>
