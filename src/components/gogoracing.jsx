@@ -171,7 +171,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         <div className="market-ggr">
           <p>
             <img src={marketplace} alt="" />
-            </p>
+          </p>
         </div>
       </section>
       <section className="gamedescription">
