@@ -93,39 +93,57 @@ const GogoRacingPurchaseGuide = ({ props, ref, currentRoute }) => {
               The game will ask you to select your preferred payment method in
               order to successfully purchase into the game.
             </h4>
-            <img src={purchase1} alt="" id="ihateyou"/>
+            <img src={purchase1} alt="" id="ihateyou" />
             <h2>Types of payment methods:</h2>
             <h3>GCash</h3>
             <ul>
-              <li>🌟 Select GCash as your payment method and tap “Continue”.</li>
+              <li>
+                <p>
+                  🌟 Select GCash as your payment method and tap “Continue”.{" "}
+                </p>
+              </li>
               <li>
                 <img src={purchase2} alt="" />
               </li>
-              <li>🌟 Enter your GCash MPIN if you have any.</li>
+              <li>
+                {" "}
+                <p>🌟 Enter your GCash MPIN if you have any. </p>
+              </li>
               <li>
                 <img src={purchase3} alt="" />
               </li>
               <li>
-                🌟 Check the checkbox for GCash Terms and Conditions and tap
-                “Authorize”.
+                <p>
+                  {" "}
+                  🌟 Check the checkbox for GCash Terms and Conditions and tap
+                  “Authorize”.{" "}
+                </p>
               </li>
               <li>
                 <img src={purchase4} alt="" />
               </li>
               <li>
-                🌟 An authentication code will be sent to your GCash. Input the
-                code and tap “Next”.
+                <p>
+                  {" "}
+                  🌟 An authentication code will be sent to your GCash. Input
+                  the code and tap “Next”.{" "}
+                </p>
               </li>
               <li>
                 <img src={purchase5} alt="" />
               </li>
-              <li>🌟 When linking is successful. Press “OKAY”.</li>
+              <li>
+                {" "}
+                <p>🌟 When linking is successful. Press “OKAY”. </p>
+              </li>
               <li>
                 <img src={purchase6} alt="" />
               </li>
               <li>
-                🌟 When GCash is selected as a payment method, press “Buy” to
-                proceed on purchasing.
+                <p>
+                  🌟 When GCash is selected as a payment method, press “Buy” to
+                  proceed on purchasing.{" "}
+                </p>
               </li>
               <li>
                 <img src={purchase7} alt="" />
@@ -133,21 +151,33 @@ const GogoRacingPurchaseGuide = ({ props, ref, currentRoute }) => {
             </ul>
             <h3>Debit/Credit Card</h3>
             <ul>
-              <li>🌟 Input your Debit/Credit Card number.</li>
+              <li>
+                {" "}
+                <p>🌟 Input your Debit/Credit Card number. </p>
+              </li>
               <li>
                 <img src={purchase8} alt="" />
               </li>
-              <li>Input your other Credit/Debit card details</li>
+              <li>
+                {" "}
+                <p>Input your other Credit/Debit card details </p>
+              </li>
               <li>
                 <img src={purchase9} alt="" />
               </li>
-              <li>🌟 Once done, tap “Save”.</li>
+              <li>
+                {" "}
+                <p>🌟 Once done, tap “Save”. </p>
+              </li>
               <li>
                 <img src={purchase10} alt="" />
               </li>
               <li>
-                🌟 When Debit/Credit card is selected as a payment method, press
-                “Buy” to proceed on purchasing.
+                {" "}
+                <p>
+                  🌟 When Debit/Credit card is selected as a payment method,
+                  press “Buy” to proceed on purchasing.{" "}
+                </p>
               </li>
               <li>
                 <img src={purchase11} alt="" />
@@ -155,28 +185,45 @@ const GogoRacingPurchaseGuide = ({ props, ref, currentRoute }) => {
             </ul>
             <h3>Paypal</h3>
             <ul>
-              <li>🌟 Input your PayPal email address.</li>
+              <li>
+                <p>🌟 Input your PayPal email address.</p>
+              </li>
               <li>
                 <img src={purchase12} alt="" />
               </li>
-              <li>🌟 Input your PayPal phone number.</li>
+              <li>
+                <p>🌟 Input your PayPal phone number.</p>{" "}
+              </li>
+
               <li>
                 <img src={purchase12} alt="" />
               </li>
               <li>
-                🌟 Verify your PayPal account using by requesting a code by tapping
-                “Request Code”.
+                <p>
+                  🌟 Verify your PayPal account using by requesting a code by
+                  tapping “Request Code”.
+                </p>
               </li>
               <li>
                 <img src={purchase13} alt="" />
               </li>
-              <li>🌟 A security code will be sent to your PayPal number to input it to the text box and tap “Verify”.</li>
               <li>
-                  <img src={purchase13} alt="" />
+                <p>
+                  🌟 A security code will be sent to your PayPal number to input
+                  it to the text box and tap “Verify”.
+                </p>
               </li>
-              <li>🌟 When PayPal is selected as a payment method, press “Buy” to proceed on purchasing.</li>
               <li>
-                  <img src={purchase14} alt="" />
+                <img src={purchase13} alt="" />
+              </li>
+              <li>
+                <p>
+                  🌟 When PayPal is selected as a payment method, press “Buy” to
+                  proceed on purchasing.
+                </p>
+              </li>
+              <li>
+                <img src={purchase14} alt="" />
               </li>
             </ul>
           </div>

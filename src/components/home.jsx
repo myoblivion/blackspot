@@ -86,6 +86,16 @@ const verifyCallback = function (response) {
   });
 };
 
+function validateRecaptcha() {
+  var response = grecaptcha.getResponse();
+  if (response.length === 0) {
+      alert("You need to fill the captcha");
+      return false;
+  } else {
+      alert("validated");
+      return true;
+  }
+}
 const HomeComponent = ({ props, ref, currentRoute }) => {
   function MouseOver(event) {
     event.target.style.background = "red";
@@ -479,7 +489,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="col-md-9">
-                <form className="contact-us-form" onSubmit={sendEmail}>
+                <form className="contact-us-form" onSubmit={sendEmail} onsubmit="return validateRecaptcha();">
                   <div className="form-group">
                     <label htmlFor="name">Name : *</label>
                     <input
@@ -516,7 +526,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       type="sumbit"
                       data-id="#accessories-holder"
                       className="red-select-btn model-selector btn-send-message"
-                      disabled
                     >
                       <span>Submit</span>
                     </button>
