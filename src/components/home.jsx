@@ -80,23 +80,39 @@ const handleToken = (token) => {
     return { ...currentForm, token };
   });
 };
-const verifyCallback = function (response) {
-  this.setState({
-    reCaptchaResponse: response,
+const handleExpired = () => {
+  setForm((currentForm) => {
+    return { ...currentForm, token: null };
   });
 };
 
 function validateRecaptcha() {
   var response = grecaptcha.getResponse();
   if (response.length === 0) {
-      alert("You need to fill the captcha");
-      return false;
+    alert("You need to fill the captcha");
+    return false;
   } else {
-      alert("validated");
-      return true;
+    alert("validated");
+    return true;
   }
 }
 const HomeComponent = ({ props, ref, currentRoute }) => {
+  // Captchas
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [text, setText] = React.useState("");
+
+  function onFormSubmit(e) {
+    e.preventDefault();
+    window.grecaptcha.ready(function () {
+      window.grecaptcha
+        .execute("6LcGKFcfAAAAAPsfHPaa1L2VXx14OD_IeqpLgIa0", { action: "submit" })
+        .then(function (token) {
+          // Send form value as well as token to the server
+        });
+    });
+  }
+
   function MouseOver(event) {
     event.target.style.background = "red";
   }
@@ -119,9 +135,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
 
     return () => clearInterval(intervalId);
   }, []);
-  function enableBtn() {
-    document.getElementById("submit").disabled = false;
-  }
+
   const [imageIndex, setImageIndex] = useState(0);
   const settings = {
     Infinite: true,
@@ -489,7 +503,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="col-md-9">
-                <form className="contact-us-form" onSubmit={sendEmail} onsubmit="return validateRecaptcha();">
+                <form className="contact-us-form" onSubmit={sendEmail}>
                   <div className="form-group">
                     <label htmlFor="name">Name : *</label>
                     <input
@@ -497,12 +511,21 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       type="text"
                       required
                       id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       name="name"
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email Address : *</label>
-                    <input type="email" name="email" id="email" required />
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
                   </div>
                   <div className="form-group">
                     <label htmlFor="message">Message :</label>
@@ -511,20 +534,23 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       id="message"
                       rows="2"
                       name="message"
+                      value={text}
+                      onChange={(e) => setText(e.target.value)}
                       maxLength={600}
                     ></textarea>
                   </div>
                   <div className="form-group clearfix">
                     <ReCaptchaV2
-                      sitekey="6LewvFIfAAAAAMVRz13RUSCKEFcLEY7eVhV6a-in"
-                      data-callback="enableBtn"
+                      sitekey={"6LcGKFcfAAAAAPsfHPaa1L2VXx14OD_IeqpLgIa0"}
                       onChange={handleToken}
-                      verifyCallback={verifyCallback}
+                      onExpired={handleExpired}
                     />
                     <button
                       id="submit"
                       type="sumbit"
                       data-id="#accessories-holder"
+                      onClick={(e) => onFormSubmit(e)}
+                      data-action="submit"
                       className="red-select-btn model-selector btn-send-message"
                     >
                       <span>Submit</span>
