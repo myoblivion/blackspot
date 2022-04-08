@@ -205,11 +205,19 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                     />
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
-                    <ReCaptchaV2
-                      sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
-                      onChange={handleToken}
-                    />
                     <button type="submit">Submit</button>
+                    <h3>This site is protected by reCAPTCHA and the Google</h3>
+                    <span id="protected">
+                      {" "}
+                      <a href="https://policies.google.com/privacy">
+                        Privacy Policy
+                      </a>{" "}
+                      and
+                      <a href="https://policies.google.com/terms">
+                        Terms of Service
+                      </a>{" "}
+                      apply.
+                    </span>
                   </form>
                 </div>
               </div>
@@ -290,11 +298,19 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                   />
                   <label htmlFor="file">Upload your CV</label>
                   <input type="file" name="file" id="file" />
-                  <ReCaptchaV2
-                    sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
-                    onChange={handleToken}
-                  />
                   <button type="submit">Submit</button>
+                  <h3>This site is protected by reCAPTCHA and the Google</h3>
+                  <span id="protected">
+                    {" "}
+                    <a href="https://policies.google.com/privacy">
+                      Privacy Policy
+                    </a>{" "}
+                    and
+                    <a href="https://policies.google.com/terms">
+                      Terms of Service
+                    </a>{" "}
+                    apply.
+                  </span>
                 </form>
               </div>
             </div>
@@ -389,11 +405,19 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                     />
                     <label htmlFor="file">Upload your CV</label>
                     <input type="file" name="file" id="file" />
-                    <ReCaptchaV2
-                      sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
-                      onChange={handleToken}
-                    />
                     <button type="submit">Submit</button>
+                    <h3>This site is protected by reCAPTCHA and the Google</h3>
+                    <span id="protected">
+                      {" "}
+                      <a href="https://policies.google.com/privacy">
+                        Privacy Policy
+                      </a>{" "}
+                      and
+                      <a href="https://policies.google.com/terms">
+                        Terms of Service
+                      </a>{" "}
+                      apply.
+                    </span>
                   </form>
                 </div>
               </div>
@@ -499,6 +523,18 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                       onChange={handleToken}
                     />
                     <button type="submit">Submit</button>
+                    <h3>This site is protected by reCAPTCHA and the Google</h3>
+                    <span id="protected">
+                      {" "}
+                      <a href="https://policies.google.com/privacy">
+                        Privacy Policy
+                      </a>{" "}
+                      and
+                      <a href="https://policies.google.com/terms">
+                        Terms of Service
+                      </a>{" "}
+                      apply.
+                    </span>
                   </form>
                 </div>
               </div>
@@ -579,11 +615,20 @@ const JobComponent = ({ props, ref, currentRoute }) => {
                   />
                   <label htmlFor="file">Upload your CV</label>
                   <input type="file" name="file" id="file" />
-                  <ReCaptchaV2
-                    sitekey="6Lew2kwfAAAAAJYzQ1VSZhxzhQiOrcHBa5OAEmPk"
-                    onChange={handleToken}
-                  />
+
                   <button type="submit">Submit</button>
+                  <h3>This site is protected by reCAPTCHA and the Google</h3>
+                    <span id="protected">
+                      {" "}
+                      <a href="https://policies.google.com/privacy">
+                        Privacy Policy
+                      </a>{" "}
+                      and
+                      <a href="https://policies.google.com/terms">
+                        Terms of Service
+                      </a>{" "}
+                      apply.
+                    </span>
                 </form>
               </div>
             </div>

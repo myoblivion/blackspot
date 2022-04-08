@@ -96,23 +96,8 @@ function validateRecaptcha() {
     return true;
   }
 }
+
 const HomeComponent = ({ props, ref, currentRoute }) => {
-  // Captchas
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [text, setText] = React.useState("");
-
-  function onFormSubmit(e) {
-    e.preventDefault();
-    window.grecaptcha.ready(function () {
-      window.grecaptcha
-        .execute("6LcGKFcfAAAAAPsfHPaa1L2VXx14OD_IeqpLgIa0", { action: "submit" })
-        .then(function (token) {
-          // Send form value as well as token to the server
-        });
-    });
-  }
-
   function MouseOver(event) {
     event.target.style.background = "red";
   }
@@ -511,21 +496,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       type="text"
                       required
                       id="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
                       name="name"
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email Address : *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
+                    <input type="email" name="email" id="email" required />
                   </div>
                   <div className="form-group">
                     <label htmlFor="message">Message :</label>
@@ -534,27 +510,30 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       id="message"
                       rows="2"
                       name="message"
-                      value={text}
-                      onChange={(e) => setText(e.target.value)}
                       maxLength={600}
                     ></textarea>
                   </div>
                   <div className="form-group clearfix">
-                    <ReCaptchaV2
-                      sitekey={"6LcGKFcfAAAAAPsfHPaa1L2VXx14OD_IeqpLgIa0"}
-                      onChange={handleToken}
-                      onExpired={handleExpired}
-                    />
                     <button
                       id="submit"
                       type="sumbit"
                       data-id="#accessories-holder"
-                      onClick={(e) => onFormSubmit(e)}
-                      data-action="submit"
                       className="red-select-btn model-selector btn-send-message"
                     >
                       <span>Submit</span>
                     </button>
+                    <h3>This site is protected by reCAPTCHA and the Google</h3>
+                    <span id="protected">
+                      {" "}
+                      <a href="https://policies.google.com/privacy">
+                        Privacy Policy
+                      </a>{" "}
+                      and
+                      <a href="https://policies.google.com/terms">
+                        Terms of Service
+                      </a>{" "}
+                      apply.
+                    </span>
                   </div>
                 </form>
               </div>

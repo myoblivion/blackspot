@@ -418,6 +418,20 @@ body {
   }
   .contact-us-form .form-group {
     margin-bottom: 30px;
+    h3 {
+      color: white;
+      width: 100%;
+      font-size: 15px;
+    }
+    #protected {
+      margin: 2px auto;
+      color: white;
+      font-weight: 900;
+      margin-left: 3%;
+      a {
+        color: #ffb808;
+      }
+    }
   }
   .contact-us-form label {
     color: #ffb908f5;
@@ -451,7 +465,7 @@ body {
     background-position: 0 0;
     background-size: 0px 100%;
     background-repeat: no-repeat;
-    color: #ffb808;
+    color: white;
     font-size: 18px;
     resize: none;
   }
@@ -1390,7 +1404,14 @@ input[type="radio"] {
           margin: 0 auto;
           padding: 4px 6px;
           width: 100%;
-          height: 100%;
+          width: 100%;
+          h3 {
+            font-size: 12.5px;
+          }
+          #protected {
+            margin-left: 5%;
+            font-size: 12.5px;
+          }
         }
         input,
         textarea {
