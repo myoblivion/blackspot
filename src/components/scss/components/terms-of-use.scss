@@ -50,7 +50,6 @@
     ul {
       list-style-type: "● ";
       li {
-        margin-left: 3%;
         width: 70%;
         margin-bottom: 2%;
       }
@@ -116,7 +115,60 @@
     .terms-section {
       width: 100%;
 
-
+      .article-1,
+      .article-2,
+      .article-3,
+      .article-4,
+      .article-5,
+      .article-6,
+      .article-7,
+      .article-8,
+      .article-9,
+      .article-10,
+      .article-11,
+      .article-12,
+      .article-13,
+      .article-14,
+      .article-15,
+      .article-16,
+      .article-17,
+      .article-18,
+      .article-19,
+      .article-20,
+      .article-21,
+      .article-22,
+      .article-23,
+      .article-24,
+      .article-25,
+      .article-26,
+      .article-27,
+      .article-28,
+      .article-29,
+      .article-30,
+      .article-31,
+      .article-32,
+      .article-33 {
+        p {
+          width: 100%;
+          margin: 0 auto;
+        }
+        ul {
+          li {
+            margin: 0 auto;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            text-align: justify;
+            width: 90%;
+            ul {
+              li {
+                margin-bottom: 2%;
+                margin-top: 2%;
+              }
+            }
+          }
+        }
+      }
+      
       .terms-wrapper {
 
         width: 100%;
@@ -137,6 +189,14 @@
         h2 {
           font-size: 20px;
 
+        }
+      }
+      .addendum {
+        ul {
+          li {
+            font-size: 10px;
+            margin: 2% auto;
+          }
         }
       }
     }
