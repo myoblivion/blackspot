@@ -26,6 +26,16 @@
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2%;
+    li {
+      margin-bottom: 2%;
+      margin-top: 2%;
+      ul {
+        li {
+          margin-bottom: 2%;
+          margin-top: 2%;
+        }
+      }
+    }
     ul li ul li {
       margin-left: 3%;
       list-style: circle;
@@ -39,19 +49,26 @@
       width: 50%;
     }
   }
+
   .section-2 {
     ul {
       list-style: circle;
-
       li {
-        margin-left: 3%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        ul {
+          li {
+            margin-bottom: 2%;
+            margin-top: 2%;
+          }
+        }
       }
     }
   }
+  
   .section-11 {
     #thedude {
       list-style: circle;
-
       li {
         margin-left: 3%;
       }

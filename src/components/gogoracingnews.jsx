@@ -26,7 +26,8 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
               </h2>
             </div>
             <div className="ggr-right">
-              <form>
+              <form action="/gogoracingnews" method="get">
+                <label htmlFor="text-search"></label>
                 <input type="checkbox" name="searched" id="search" required />
                 <input type="checkbox" name="searched" id="close" />
                 <select name="select" id="selection">
@@ -34,6 +35,12 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   <option value="contents">Contents</option>
                   <option value="tags">Tags</option>
                 </select>
+                <input
+                  type="text"
+                  id="text-search"
+                  placeholder="Enter the word to search for.."
+                  required
+                />
                 <input type="submit" name="submit" id="submit" />
                 <label htmlFor="submit" id="submitted">
                   <FaSearch />
@@ -41,16 +48,9 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                 <label htmlFor="search" id="searchs">
                   <FaSearch />
                 </label>
-
                 <label htmlFor="search" id="close">
                   <FaWindowClose />
                 </label>
-                <input
-                  type="text"
-                  id="text-search"
-                  placeholder="Enter the word to search for.."
-                  required
-                />
               </form>
             </div>
           </div>
