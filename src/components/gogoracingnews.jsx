@@ -11,6 +11,8 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Racing News";
   }, []);
+
+  
   return (
     <div className="gogoracingnews wrapper">
       <div className="gogo-racing-news-wrapper">
@@ -26,15 +28,15 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
               </h2>
             </div>
             <div className="ggr-right">
-              <form action="/gogoracingnews" method="get">
+              <form>
                 <label htmlFor="text-search"></label>
-                <input type="checkbox" name="searched" id="search" required />
+                <input type="checkbox" name="searched" id="search"  />
                 <input type="checkbox" name="searched" id="close" />
-                <select name="select" id="selection">
+                {/* <select name="select" id="selection">
                   <option value="title">Title</option>
                   <option value="contents">Contents</option>
                   <option value="tags">Tags</option>
-                </select>
+                </select> */}
                 <input
                   type="text"
                   id="text-search"
