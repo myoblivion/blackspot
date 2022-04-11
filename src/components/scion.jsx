@@ -219,40 +219,40 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             <label htmlFor="select1" id="label1">
               <img src={profile1} alt="" />
             </label>
-            <label htmlFor="select2" id="label1">
+            <label htmlFor="select2" id="label2">
               <img src={profile2} alt="" />
             </label>
-            <label htmlFor="select3" id="label1">
+            <label htmlFor="select3" id="label3">
               <img src={profile3} alt="" />
             </label>
-            <label htmlFor="select4" id="label1">
+            <label htmlFor="select4" id="label4">
               <img src={profile4} alt="" />
             </label>
-            <label htmlFor="select5" id="label1">
+            <label htmlFor="select5" id="label5">
               <img src={profile5} alt="" />
             </label>
-            <label htmlFor="select6" id="label1">
+            <label htmlFor="select6" id="label6">
               <img src={profile6} alt="" />
             </label>
-            <label htmlFor="select7" id="label1">
+            <label htmlFor="select7" id="label7">
               <img src={profile7} alt="" />
             </label>
-            <label htmlFor="select8" id="label1">
+            <label htmlFor="select8" id="label8">
               <img src={profile8} alt="" />
             </label>
-            <label htmlFor="select9" id="label1">
+            <label htmlFor="select9" id="label9">
               <img src={profile9} alt="" />
             </label>
-            <label htmlFor="select10" id="label1">
+            <label htmlFor="select10" id="label10">
               <img src={profile10} alt="" />
             </label>
-            <label htmlFor="select11" id="label1">
+            <label htmlFor="select11" id="label11">
               <img src={profile11} alt="" />
             </label>
-            <label htmlFor="select12" id="label1">
+            <label htmlFor="select12" id="label12">
               <img src={profile12} alt="" />
             </label>
-            <label htmlFor="select13" id="label1">
+            <label htmlFor="select13" id="label13">
               <img src={profile13} alt="" />
             </label>
           </div>
