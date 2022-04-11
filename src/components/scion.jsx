@@ -31,6 +31,21 @@ import ch16 from "../images/characters/ch16.png";
 import ch17 from "../images/characters/ch17.png";
 import prev from "../images/arrow-left.png";
 import next from "../images/arrow-right.png";
+// profiles
+import profile1 from "../images/scionprofiles/01-off.png";
+import profile2 from "../images/scionprofiles/02-off.png";
+import profile3 from "../images/scionprofiles/03-off.png";
+import profile4 from "../images/scionprofiles/04-off.png";
+import profile5 from "../images/scionprofiles/05-off.png";
+import profile6 from "../images/scionprofiles/06-off.png";
+import profile7 from "../images/scionprofiles/07-off.png";
+import profile8 from "../images/scionprofiles/08-off.png";
+import profile9 from "../images/scionprofiles/09-off.png";
+import profile10 from "../images/scionprofiles/10-off.png";
+import profile11 from "../images/scionprofiles/11-off.png";
+import profile12 from "../images/scionprofiles/12-off.png";
+import profile13 from "../images/scionprofiles/13-off.png";
+
 // Weapons
 import w1 from "../images/weapons/w1.png";
 import w2 from "../images/weapons/w2.png";
@@ -186,6 +201,238 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="wrapper5">
         <h2 className="titles">Characters</h2>
+        <div className="character-selections">
+          <input type="radio" name="profiles" id="select1" />
+          <input type="radio" name="profiles" id="select2" />
+          <input type="radio" name="profiles" id="select3" />
+          <input type="radio" name="profiles" id="select4" />
+          <input type="radio" name="profiles" id="select5" />
+          <input type="radio" name="profiles" id="select6" />
+          <input type="radio" name="profiles" id="select7" />
+          <input type="radio" name="profiles" id="select8" />
+          <input type="radio" name="profiles" id="select9" />
+          <input type="radio" name="profiles" id="select10" />
+          <input type="radio" name="profiles" id="select11" />
+          <input type="radio" name="profiles" id="select12" />
+          <input type="radio" name="profiles" id="select13" />
+          <div className="labels">
+            <label htmlFor="select1">
+              <img src={profile1} alt="" />
+            </label>
+            <label htmlFor="select2">
+              <img src={profile2} alt="" />
+            </label>
+            <label htmlFor="select3">
+              <img src={profile3} alt="" />
+            </label>
+            <label htmlFor="select4">
+              <img src={profile4} alt="" />
+            </label>
+            <label htmlFor="select5">
+              <img src={profile5} alt="" />
+            </label>
+            <label htmlFor="select6">
+              <img src={profile6} alt="" />
+            </label>
+            <label htmlFor="select7">
+              <img src={profile7} alt="" />
+            </label>
+            <label htmlFor="select8">
+              <img src={profile8} alt="" />
+            </label>
+            <label htmlFor="select9">
+              <img src={profile9} alt="" />
+            </label>
+            <label htmlFor="select10">
+              <img src={profile10} alt="" />
+            </label>
+            <label htmlFor="select11">
+              <img src={profile11} alt="" />
+            </label>
+            <label htmlFor="select12">
+              <img src={profile12} alt="" />
+            </label>
+            <label htmlFor="select13">
+              <img src={profile13} alt="" />
+            </label>
+          </div>
+          <div className="character-1">
+            <img src={ch2} alt="" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Crefford</h4>
+              </div>
+              <div className="story">
+                A poisonous species recognized even within the striker platoon,
+                known for its roughness. Rumor has it that there is no mercy
+                toward the enemy, and that the task given has never failed.
+              </div>
+            </div>
+          </div>
+          <div className="character-2">
+            <img src={ch3} alt="" id="character-2" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Dale</h4>
+              </div>
+              <div className="story">
+                The leader of an assault team that enjoys blood-splattering wars
+                and battles. When judged to be an enemy, he attacks without
+                thinking about the back, and his skills are as good as his
+                aggression.
+              </div>
+            </div>
+          </div>
+          <div className="character-3">
+            <img src={ch4} alt="" id="character-3" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Elena</h4>
+              </div>
+              <div className="story">
+                Allied intelligence analyst and combatant. From an early age,
+                she completed the basic training of the Allied Forces with
+                genius intelligence, and is fluent in how to handle weapons. She
+                is a beauty from all sides, with information analysis, advanced
+                equipment, and combat.
+              </div>
+            </div>
+          </div>
+          <div className="character-4">
+            <img src={ch5} alt="" id="character-4" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Grace</h4>
+              </div>
+              <div className="story">
+                A member of a sniper unit who has just started making a name for
+                himself as Snyder's apprentice. His skill in handling snipers is
+                outstanding, and there is an evaluation that his skill surpasses
+                that of Snyder.
+              </div>
+            </div>
+          </div>
+          <div className="character-5">
+            <img src={ch6} alt="" id="character-5" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Irina</h4>
+              </div>
+              <div className="story">
+                A spy belonging to the Secret Service. She is good at collecting
+                information, and her top area of expertise is beauty. Although
+                she is a member of the Secret Service, she has completed the SAS
+                training course, so her combat power is high.
+              </div>
+            </div>
+          </div>
+          <div className="character-6">
+            <img src={ch7} alt="" id="character-6" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Jack</h4>
+              </div>
+              <div className="story">
+                The leader of the striker platoon who is somewhat radical but
+                leads the members with excellent leadership. As well as
+                individual combat skills, he excels in situational judgment and
+                quick tactics.
+              </div>
+            </div>
+          </div>
+          <div className="character-7">
+            <img src={ch8} alt="" id="character-7" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Maya</h4>
+              </div>
+              <div className="story">
+                A veteran who originally traveled the battlefield as a freelance
+                mercenary. After terminating the contract due to an order to
+                kill civilians to maintain security during the mission, he joins
+                the Scientific Fist.
+              </div>
+            </div>
+          </div>
+          <div className="character-8">
+            <img src={ch9} alt="" id="character-8" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Murdoch</h4>
+              </div>
+              <div className="story">
+                The elite leader among the elite who participated in numerous
+                operations. Mainly in charge of field command,“He has excellent
+                individual skills and is trusted by his superiors.”
+              </div>
+            </div>
+          </div>
+          <div className="character-9">
+            <img src={ch10} alt="" id="character-9" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Raven</h4>
+              </div>
+              <div className="story">
+                An elite special forces member who is very good at CQB and
+                handles all guns well. With a solid military spirit, he is a
+                professional among pros who can do any task given the orders of
+                his superiors.
+              </div>
+            </div>
+          </div>
+          <div className="character-10">
+            <img src={ch11} alt="" id="character-10" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Risa</h4>
+              </div>
+              <div className="story">
+                A poisonous species recognized even within the striker platoon,
+                known for its roughness. Rumor has it that there is no mercy
+                toward the enemy, and that the task given has never failed.
+              </div>
+            </div>
+          </div>
+          <div className="character-11">
+            <img src={ch14} alt="" id="character-11" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Snyder</h4>
+              </div>
+              <div className="story">
+                Special Forces member in a veil. They are mainly in charge of
+                secret missions within the unit, and are very good at sniping.
+              </div>
+            </div>
+          </div>
+          <div className="character-12">
+            <img src={ch16} alt="" id="character-12" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Steven</h4>
+              </div>
+              <div className="story">
+                The first-class power of the striker platoon with a natural
+                fighting sense. He has the ability of a monster to wield all
+                weapons proficiently
+              </div>
+            </div>
+          </div>
+          <div className="character-13">
+            <img src={ch17} alt="" id="character-13" />
+            <div className="ch-description">
+              <div className="name">
+                <h4>Taylor</h4>
+              </div>
+              <div className="story">
+                A simple and ignorant extremist who doesn't think about battles
+                or actions. With hefty power, he treats very heavy machine guns
+                like toys.
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="characters">
           <Slider {...settings}>
             <div className="character">
@@ -516,13 +763,13 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
                 Privacy & Policy
               </Link>
               <Link
-                  to="/terms-of-use"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Terms of Use
-                </Link>
+                to="/terms-of-use"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Terms of Use
+              </Link>
               <Link
                 to="/job"
                 {...props}
