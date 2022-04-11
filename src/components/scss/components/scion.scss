@@ -924,14 +924,16 @@
       .ch-description {
         height: 100%;
         width: 100%;
-        top: 57%;
-        left: 5%;
+        margin-top: 10%;
+        display: block;
+        text-align: center;
         .name {
-          font-size: 15px;
+          font-size: 20px;
         }
         .story {
           width: 100%;
           font-size: 15px;
+          margin: 0 auto;
         }
       }
       #small {
