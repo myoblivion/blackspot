@@ -201,7 +201,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="wrapper5">
         <h2 className="titles">Characters</h2>
-        <div className="character-selections">
+        <div className="character-selections" data-aos="zoom-in">
           <input type="radio" name="profiles" id="select1" />
           <input type="radio" name="profiles" id="select2" />
           <input type="radio" name="profiles" id="select3" />
@@ -216,43 +216,43 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
           <input type="radio" name="profiles" id="select12" />
           <input type="radio" name="profiles" id="select13" />
           <div className="labels">
-            <label htmlFor="select1">
+            <label htmlFor="select1" id="label1">
               <img src={profile1} alt="" />
             </label>
-            <label htmlFor="select2">
+            <label htmlFor="select2" id="label1">
               <img src={profile2} alt="" />
             </label>
-            <label htmlFor="select3">
+            <label htmlFor="select3" id="label1">
               <img src={profile3} alt="" />
             </label>
-            <label htmlFor="select4">
+            <label htmlFor="select4" id="label1">
               <img src={profile4} alt="" />
             </label>
-            <label htmlFor="select5">
+            <label htmlFor="select5" id="label1">
               <img src={profile5} alt="" />
             </label>
-            <label htmlFor="select6">
+            <label htmlFor="select6" id="label1">
               <img src={profile6} alt="" />
             </label>
-            <label htmlFor="select7">
+            <label htmlFor="select7" id="label1">
               <img src={profile7} alt="" />
             </label>
-            <label htmlFor="select8">
+            <label htmlFor="select8" id="label1">
               <img src={profile8} alt="" />
             </label>
-            <label htmlFor="select9">
+            <label htmlFor="select9" id="label1">
               <img src={profile9} alt="" />
             </label>
-            <label htmlFor="select10">
+            <label htmlFor="select10" id="label1">
               <img src={profile10} alt="" />
             </label>
-            <label htmlFor="select11">
+            <label htmlFor="select11" id="label1">
               <img src={profile11} alt="" />
             </label>
-            <label htmlFor="select12">
+            <label htmlFor="select12" id="label1">
               <img src={profile12} alt="" />
             </label>
-            <label htmlFor="select13">
+            <label htmlFor="select13" id="label1">
               <img src={profile13} alt="" />
             </label>
           </div>
