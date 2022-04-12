@@ -51,5 +51,13 @@
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myoblivion/blackspot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/myoblivion/blackspot/issues"
   }
 }

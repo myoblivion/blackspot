@@ -6,13 +6,44 @@ import { Link } from "react-router-dom";
 import somedog from "../images/somedog.png";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import catto from "../images/gogoracingbackground/catto.png";
+
+const getFilteredItems = (query, items) => {
+  if (!query) {
+    return items;
+  }
+  return items.filter(songs.name.includes(query))
+};
+
 const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Racing News";
   }, []);
 
-  
+  const libraries = [
+    { name: "Backbone.js", url: "https://documentcloud.github.io/backbone/" },
+    { name: "AngularJS", url: "https://angularjs.org/" },
+    { name: "jQuery", url: "https://jquery.com/" },
+    { name: "Prototype", url: "http://www.prototypejs.org/" },
+    { name: "React", url: "https://facebook.github.io/react/" },
+    { name: "Ember", url: "http://emberjs.com/" },
+    { name: "Knockout.js", url: "https://knockoutjs.com/" },
+    { name: "Dojo", url: "http://dojotoolkit.org/" },
+    { name: "Mootools", url: "http://mootools.net/" },
+    { name: "Underscore", url: "https://documentcloud.github.io/underscore/" },
+    { name: "Lodash", url: "http://lodash.com/" },
+    { name: "Moment", url: "https://momentjs.com/" },
+    { name: "Express", url: "http://expressjs.com/" },
+    { name: "Koa", url: "http://koajs.com/" },
+  ];
+  const { items } = libraries;
+
+  const filteredItems = getFilteredItems(query, items);
+
+  const [query, searchKey] = useState("");
+
+  console.log("searchKey");
+
   return (
     <div className="gogoracingnews wrapper">
       <div className="gogo-racing-news-wrapper">
@@ -28,10 +59,20 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
               </h2>
             </div>
             <div className="ggr-right">
-              <form>
+              <form autoComplete="off">
                 <label htmlFor="text-search"></label>
-                <input type="checkbox" name="searched" id="search"  />
-                <input type="checkbox" name="searched" id="close" />
+                <input
+                  type="checkbox"
+                  name="searched"
+                  id="search"
+                  defaultChecked
+                />
+                <input
+                  type="checkbox"
+                  name="searched"
+                  id="close"
+                  defaultChecked
+                />
                 {/* <select name="select" id="selection">
                   <option value="title">Title</option>
                   <option value="contents">Contents</option>
@@ -40,6 +81,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                 <input
                   type="text"
                   id="text-search"
+                  onChange={(e) => searchKey(e.target.value)}
                   placeholder="Enter the word to search for.."
                   required
                 />
