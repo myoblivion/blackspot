@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import App from "./components/App";
 import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={hist}>
+    <HashRouter history={hist}>
       <App />
-    </Router>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("app")
 );
