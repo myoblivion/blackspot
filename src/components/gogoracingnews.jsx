@@ -20,7 +20,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
     document.title = "Black Spot Studio | GoGo Racing News";
   }, []);
 
-  const libraries = [
+  const links = [
     { name: "Game Guide", to: "/gogoracing-guide" },
     { name: "Game Guide", to: "/ggr-guide-list" },
     { name: "Account Linking", to: "/ggr-account-linking" },
@@ -30,13 +30,21 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
     { name: "1.0.2 Patch Note", to: "/ggr-patch2" },
     { name: "1.0.1 Patch Note", to: "/ggr-updatess" },
   ];
-  const { items } = libraries;
+  const { items } = links;
 
   const filteredItems = getFilteredItems(query, items);
 
   const [query, searchKey] = useState("");
 
   console.log("searchKey");
+  console.log("Game Guide");
+  console.log("Game Guide");
+  console.log("Account Linking");
+  console.log("Purchase & Linking Guide");
+  console.log("Updates");
+  console.log("1.0.3 Patch Note");
+  console.log("1.0.2 Patch Note");
+  console.log("1.0.1 Patch Note");
 
   return (
     <div className="gogoracingnews wrapper">
@@ -139,6 +147,11 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   <span>Hear what's new in Gogo Racing Here!</span>
                 </div>
               </li>
+              {links.map((link) => (
+                <Link to={link.to}>
+                  <li className="hidden">{link.name}</li>
+                </Link>
+              ))}
             </ul>
           </div>
         </div>
