@@ -70,7 +70,7 @@ const GogoracingGuidelist = ({ props, ref, currentRoute }) => {
                 onClick={() => window.scrollTo(0, 0)}
               >
                 <li>
-                  <h3>❓ GameGuide</h3>
+                  <h3>❓ Game Guide</h3>
                   <span>
                     New to Gogo Racing? Here is everything you need to know
                     about the game!
