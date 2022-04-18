@@ -21,14 +21,46 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
   }, []);
 
   const links = [
-    { name: "Game Guide", to: "/gogoracing-guide" },
-    { name: "Game Guide", to: "/ggr-guide-list" },
-    { name: "Account Linking", to: "/ggr-account-linking" },
-    { name: "Purchase & Linking Guide", to: "/ggr-purchase-guide" },
-    { name: "Updates", to: "/ggr-update-list" },
-    { name: "1.0.3 Patch Note", to: "/ggr-patch3" },
-    { name: "1.0.2 Patch Note", to: "/ggr-patch2" },
-    { name: "1.0.1 Patch Note", to: "/ggr-updatess" },
+    {
+      name: "Game Guide",
+      to: "/ggr-guide-list",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "Game Guide",
+      to: "/gogoracing-guide",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "Account Linking",
+      to: "/ggr-account-linking",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "Purchase & Linking Guide",
+      to: "/ggr-purchase-guide",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "Updates",
+      to: "/ggr-update-list",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "1.0.3 Patch Note",
+      to: "/ggr-patch3",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "1.0.2 Patch Note",
+      to: "/ggr-patch2",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      name: "1.0.1 Patch Note",
+      to: "/ggr-updatess",
+      image: "../images/gogoracingbackground/catto.png",
+    },
   ];
   const { items } = links;
 
@@ -37,14 +69,6 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
   const [query, searchKey] = useState("");
 
   console.log("searchKey");
-  console.log("Game Guide");
-  console.log("Game Guide");
-  console.log("Account Linking");
-  console.log("Purchase & Linking Guide");
-  console.log("Updates");
-  console.log("1.0.3 Patch Note");
-  console.log("1.0.2 Patch Note");
-  console.log("1.0.1 Patch Note");
 
   return (
     <div className="gogoracingnews wrapper">
@@ -148,7 +172,12 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                 </div>
               </li>
               {links.map((link) => (
-                <Link to={link.to}>
+                <Link
+                  to={link.to}
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <li className="hidden">{link.name}</li>
                 </Link>
               ))}
