@@ -58,7 +58,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
     },
     {
       name: "1.0.1 Patch Note",
-      to: "/ggr-updatess",
+      to: "/ggr-updates",
       image: "../images/gogoracingbackground/catto.png",
     },
   ];
@@ -94,6 +94,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   <option value="contents">Contents</option>
                   <option value="tags">Tags</option>
                 </select> */}
+                
                 <input
                   type="text"
                   id="text-search"
