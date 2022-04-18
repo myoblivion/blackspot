@@ -20,45 +20,59 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
     document.title = "Black Spot Studio | GoGo Racing News";
   }, []);
 
+  const themes = [
+    {
+      background: "#f2a3f2",
+    },
+  ];
+
   const links = [
     {
       name: "Game Guide",
       to: "/ggr-guide-list",
+      span: "New to Gogo Racing? Here is everything you need to know about the game!",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "Game Guide",
       to: "/gogoracing-guide",
+      span: "New to Gogo Racing? Here is everything you need to know about the game!",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "Account Linking",
       to: "/ggr-account-linking",
+      span: "Here's a guide about how you can link your account.",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "Purchase & Linking Guide",
       to: "/ggr-purchase-guide",
+      span: "This will guide you on how to purchase items in GoGo Racing using different types of payment method.",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "Updates",
       to: "/ggr-update-list",
+      span: "Keep updated with Gogo Racing!",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "1.0.3 Patch Note",
       to: "/ggr-patch3",
+      span: "04.04.2022",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "1.0.2 Patch Note",
       to: "/ggr-patch2",
+      span: "03.25.2022",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
       name: "1.0.1 Patch Note",
       to: "/ggr-updates",
+      span: "03.23.2022",
       image: "../images/gogoracingbackground/catto.png",
     },
   ];
@@ -94,7 +108,7 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   <option value="contents">Contents</option>
                   <option value="tags">Tags</option>
                 </select> */}
-                
+
                 <input
                   type="text"
                   id="text-search"
@@ -178,8 +192,17 @@ const GoGoRacingNewsComponent = ({ props, ref, currentRoute }) => {
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
+                  className="hidden"
                 >
-                  <li className="hidden">{link.name}</li>
+                  <li>
+                    <div className="li-left">
+                      <img src={catto} alt="" />
+                    </div>
+                    <div className="li-right">
+                      <h3 style={{ color: themes.background }}>{link.name}</h3>
+                      <span>{link.span}</span>
+                    </div>
+                  </li>
                 </Link>
               ))}
             </ul>
