@@ -362,7 +362,29 @@ body {
       position: relative;
     }
   }
+  .ads {
+    width: 60%;
+    height: 70%;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 900;
+    display: none;
+    input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+    }
+    // #close:checked {
 
+    // }
+  }
   // Contact
   .contactforms {
     width: 100%;
