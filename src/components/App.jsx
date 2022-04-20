@@ -27,7 +27,7 @@ import GogoRacingUpdates from "./ggr-updates";
 import GogoRacingPatch from "./ggr-patch2";
 import GogoRacingPatchs from "./ggr-patch3";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
-import GogoRacingSearch from "./search/ggr-search";
+import GogoRacingSearch from "./ggr-search";
 // styles
 import "./scss/index.scss";
 
@@ -89,10 +89,8 @@ const Appcomponent = () => {
           <Route path="/gogoracingnews">
             <GogoRacingNewsComponent />
           </Route>
-            {/* <Route path='/ggr-search' component={GogoRacingSearch}/> */}
-            <Route path="/ggr-search">
-            <GogoRacingSearch />
-          </Route>
+          <Route path='/ggr-search' component={GogoRacingSearch}/>
+
           <Route path="/terms-of-use">
             <TermsAndConditions />
           </Route>

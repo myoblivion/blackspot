@@ -45,11 +45,10 @@
 
           #text-search {
             position: absolute;
-            right: 10%;
-            width: 50%;
-            height: 9%;
+            right: 70%;
+            width: 300%;
+            height: 100%;
             border-radius: 8px;
-            display: none;
             padding-left: 5px;
           }
           input[type="checkbox"] {
@@ -71,9 +70,7 @@
           #selection {
             display: none;
           }
-          #submitted {
-            display: none;
-          }
+
           #close {
             display: none;
           }
@@ -103,7 +100,7 @@
             height: 100%;
             border-radius: 7px;
           }
-          #search:checked ~ #submitted {
+          #submitted {
             display: block;
             cursor: pointer;
             padding: 7px 10px;
@@ -122,6 +119,8 @@
         ul {
           list-style: none;
           margin: 0;
+          background-color: white;
+
           .hidden {
             display: block;
           }
