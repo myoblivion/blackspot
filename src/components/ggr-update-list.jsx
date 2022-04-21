@@ -37,26 +37,14 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
               </h2>
             </div>
             <div className="ggr-right">
-              <form>
-                <input type="checkbox" name="searched" id="search" />
-                <input type="checkbox" name="searched" id="close" />
-
-                <input type="submit" name="submit" id="submit" />
-                <label htmlFor="submit" id="submitted">
-                  <FaSearch />
-                </label>
-                <label htmlFor="search" id="searchs">
-                  <FaSearch />
-                </label>
-
-
-                <input
-                  type="text"
-                  id="text-search"
-                  placeholder="Enter the word to search for.."
-                  required
-                />
-              </form>
+              <Link
+                to="/ggrsearch"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <FaSearch />
+              </Link>
             </div>
           </div>
           <div className="ggrlists-contents">

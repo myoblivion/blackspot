@@ -63,6 +63,18 @@
               margin-right: 5px;
             }
           }
+          a {
+            display: block;
+            cursor: pointer;
+            padding: 7px 10px;
+            border-radius: 3px;
+            background-color: #51575a;
+            color: white;
+            &:hover {
+              background-color: azure;
+              color: black;
+            }
+          }
           #selection {
             display: none;
           }

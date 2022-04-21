@@ -7,6 +7,7 @@ import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import catto from "../images/gogoracingbackground/catto.png";
 import { render } from "react-dom";
 import { useHistory } from "react-router-dom";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 
 const GogoRacingSearch = ({ props, ref, onSearch }) => {
   useEffect(() => {
@@ -118,23 +119,26 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
       e.preventDefault();
     };
     return (
-      <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">
-        <label htmlFor="header-search">
-          <span className="visually-hidden">Search blog posts</span>
-        </label>
-        <input
-          value={searchQuery}
-          onInput={(e) => setSearchQuery(e.target.value)}
-          type="text"
-          id="header-search"
-          placeholder="Search blog posts"
-          name="s"
-        />
-        <button type="submit">Search</button>
-        <label htmlFor="submit" id="submitted">
-          <FaSearch />
-        </label>
-      </form>
+      <div className="ggr-right">
+        <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">
+          <label htmlFor="header-search">
+            <span className="visually-hidden">Search blog posts</span>
+          </label>
+          <input
+            value={searchQuery}
+            onInput={(e) => setSearchQuery(e.target.value)}
+            type="text"
+            id="header-search"
+            placeholder="Search blog posts"
+            autoFocus="autoFocus"
+            name="s"
+          />
+          <button type="submit">Search</button>
+          <label htmlFor="submit" id="submitted">
+            <FaSearch />
+          </label>
+        </form>
+      </div>
     );
   };
 
@@ -151,6 +155,14 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
           >
             <div className="ggr-top">
               <div className="ggr-left">
+              <Link
+                  to="/ggr-guide-list"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <IoIosArrowDropleftCircle />
+                </Link>
                 <h2>
                   <FaUserCircle /> User
                 </h2>

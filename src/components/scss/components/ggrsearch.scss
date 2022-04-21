@@ -33,8 +33,17 @@
           border-top: 8px solid black;
           margin-top: 4%;
           .ggr-left {
-            margin-left: 3%;
             font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-left: 1%;
+            width: 100%;
+            a {
+              margin-left: 0;
+              font-size: 20px;
+              color: white; 
+              margin-right: 2%;
+            }
           }
           .ggr-right {
             margin-right: 2%;
