@@ -1,0 +1,231 @@
+.gogoracingsearch {
+  height: 100%;
+  .gogo-racing-search-wrapper {
+    background-image: url("/src/images/gogoracingbackground/withlogo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 5%;
+    .search-contents {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      max-width: 100%;
+      .ggrsearch-contents {
+        height: 100%;
+        width: 70%;
+        .ggr-top {
+          display: flex;
+          justify-content: space-between;
+          background-color: rgb(48, 48, 48);
+          color: white;
+          align-items: center;
+          height: 10%;
+          border-top: 8px solid black;
+          margin-top: 4%;
+          .ggr-left {
+            margin-left: 3%;
+            font-size: 16px;
+          }
+          .ggr-right {
+            margin-right: 2%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            form {
+              position: relative;
+              width: 100%;
+              display: flex;
+              label {
+                margin-right: 5px;
+              }
+            }
+
+            #header-search {
+              position: absolute;
+              right: 70%;
+              width: 300%;
+              height: 100%;
+              border-radius: 8px;
+              padding-left: 5px;
+            }
+            input[type="checkbox"] {
+              opacity: 0;
+            }
+            #searchs {
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+            button {
+              opacity: 0;
+
+              transform: translate(0, -9000%);
+            }
+            #selection {
+              display: none;
+            }
+
+            #close {
+              display: none;
+            }
+            #search:checked ~ #searchs {
+              display: none;
+            }
+            #search:checked ~ #header-search {
+              display: block;
+            }
+            #search:checked ~ #close {
+              display: block;
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+            #search:checked ~ #selection {
+              display: block;
+              position: absolute;
+              outline: none;
+              right: 530%;
+              width: 100%;
+              height: 100%;
+              border-radius: 7px;
+            }
+            #submitted {
+              display: block;
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+          }
+          a {
+            display: block;
+            cursor: pointer;
+            padding: 7px 10px;
+            border-radius: 3px;
+            background-color: #51575a;
+            color: white;
+            &:hover {
+              background-color: azure;
+              color: black;
+            }
+          }
+          .visually-hidden {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+          }
+        }
+        .ggrsearch-contents {
+          background-color: white;
+          height: 100vh;
+          width: 100%;
+          ul {
+            list-style: none;
+            margin: 0;
+            background-color: white;
+
+            li {
+              border-bottom: 1px solid rgb(230, 230, 230);
+              height: 9.9vh;
+              padding-left: 2%;
+              display: flex;
+              align-items: center;
+              justify-content: left;
+              -webkit-touch-callout: none;
+              -webkit-user-select: none;
+              -khtml-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              cursor: pointer;
+              .li-left {
+                width: 5%;
+                margin: 0;
+                margin-right: 2%;
+                img {
+                  width: 90%;
+                }
+              }
+              .li-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 50%;
+              }
+              h3 {
+                color: black;
+                font-weight: 900;
+              }
+              span {
+                font-size: 13px;
+                margin-top: 1%;
+                color: gray;
+              }
+              &:hover {
+                background-color: rgb(211, 211, 211);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gogoracingnews {
+    width: 100%;
+    height: 100%;
+    .gogo-racing-news-wrapper {
+      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      background-attachment: fixed;
+      .ggrnews-contents {
+        width: 100%;
+        height: 50%;
+        .ggr-top {
+          .ggr-right {
+            #search:checked ~ #selection {
+              right: 175%;
+              width: 50%;
+            }
+            #header-search {
+              right: 60%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
