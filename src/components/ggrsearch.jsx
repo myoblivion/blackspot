@@ -98,17 +98,17 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
   //       );
   //     }
   //   }
-  const filterPosts = (posts, query) => {
+  var filterPosts = (posts, query) => {
     if (!query) {
       return posts;
     }
     return posts.filter((post) => {
       var postName = post.name.toLowerCase();
-      var postName = post.span.toLowerCase();
       return postName.includes(query);
     });
 
   };
+
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
   const [searchQuery, setSearchQuery] = useState(query || "");
@@ -131,7 +131,7 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
             onInput={(e) => setSearchQuery(e.target.value)}
             type="text"
             id="header-search"
-            placeholder="Search blog posts"
+            placeholder="Search "
             autoFocus="autoFocus"
             name="s"
           />
