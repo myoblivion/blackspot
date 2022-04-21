@@ -103,9 +103,11 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
       return posts;
     }
     return posts.filter((post) => {
-      const postName = post.name.toLowerCase();
+      var postName = post.name.toLowerCase();
+      var postName = post.span.toLowerCase();
       return postName.includes(query);
     });
+
   };
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
