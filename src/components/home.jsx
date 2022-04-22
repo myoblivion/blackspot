@@ -730,8 +730,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </HashLink>
           </div>
         </div>
-        <div className="ads">
-          <input type="checkbox" id="close"/>
+        <input type="checkbox" id="close" />
+        <div className="ads" data-aos="zoom-out" data-aos-duration="500">
           <label htmlFor="close">Close</label>
           <button>Something</button>
         </div>
