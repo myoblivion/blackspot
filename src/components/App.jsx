@@ -28,6 +28,7 @@ import GogoRacingPatch from "./ggr-patch2";
 import GogoRacingPatchs from "./ggr-patch3";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
+import TestForm from "./testform";
 // styles
 import "./scss/index.scss";
 
@@ -118,6 +119,9 @@ const Appcomponent = () => {
           </Route>
           <Route path="/ggrsearch">
             <GogoRacingSearch />
+          </Route>
+          <Route path="/testform">
+            <TestForm />
           </Route>
         </div>
       )}
