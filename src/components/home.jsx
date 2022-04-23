@@ -34,6 +34,8 @@ import Gogoracing from "../images/edit/4.png";
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
 
+// something's in the way hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+import AdPhoto from "../images/icons/uiiiiiiiigagiiiiiiiiiii.png"
 // Images
 import game1 from "../images/edit/banner1.png";
 import game2 from "../images/edit/banner2.png";
@@ -730,11 +732,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </HashLink>
           </div>
         </div>
-        <input type="checkbox" id="close" />
-        <div className="ads" data-aos="zoom-out" data-aos-duration="500">
-          <label htmlFor="close">Close</label>
-          <button>Something</button>
-        </div>
+        <a href="">
+          <input type="checkbox" id="close" />
+          <div className="ads" data-aos="zoom-out" data-aos-duration="500">
+            <label htmlFor="close">Close</label>
+          </div>
+        </a>
       </div>
     </div>
   );
