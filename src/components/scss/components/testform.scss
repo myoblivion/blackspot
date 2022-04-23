@@ -90,19 +90,25 @@
         box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
       }
       .down-buddeh {
-          display: flex;
-          height: 10%;
-          align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 4%;
+        color: white;
+        input {
           margin: 0;
-          margin-bottom: 4%;
-          color: white;
-          input {
-              margin: 0;
-              margin-right: 10px;
-          }
-          label {
-            margin-left: 10px;
-          }
+          margin-right: 10px;
+        }
+        label {
+          margin-left: 10px;
+        }
+        .up,
+        .down {
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }

@@ -49,8 +49,17 @@ const TestForm = ({ props, ref, currentRoute }) => {
               required
             />
             <div className="down-buddeh">
-              <input type="checkbox" name="check" id="check" required />
-              <label htmlFor="check">I have read and agree to the terms and conditions and privacy policy.</label>
+              <div className="up">
+                <input type="checkbox" name="check" id="check" required />
+                <label htmlFor="check">
+                  I have read and agree to the terms and conditions and privacy
+                  policy.
+                </label>
+              </div>
+              <div className="down">
+                <input type="checkbox" name="check2" id="check2" required />
+                <label htmlFor="check2">E-mail acceptance</label>
+              </div>
             </div>
             <button type="submit">Submit</button>
           </form>
