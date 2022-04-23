@@ -3,7 +3,7 @@ import image from "../images/banner4.png";
 import image2 from "../images/gogochain-mobile.png";
 import { HashLink } from "react-router-hash-link";
 import icono from "../images/icons/logo.png";
-import { Link } from "react-router-dom";
+import { Link, withRouter, useHistory } from "react-router-dom";
 import {
   FaEnvelope,
   FaFacebook,
@@ -14,19 +14,18 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { render } from "react-dom";
 
 const TestForm = ({ props, ref, currentRoute }) => {
-  // Title
-  useEffect(() => {
-    document.title = "Black Spot Studio | Raffle Registration";
-  }, []);
   return (
     <div className="register wrapper">
       <div className="register-wrapper">
         <div className="form-wrapper">
+          <h1>Gogo Racing Info</h1>
           <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfScxhbKW8tFPjIu7KUPVe_UATxav5UkfvAjSzUXacuf5fQkg/formResponse"
             method="post"
+            id="formwrap"
           >
             <input
               type="text"
@@ -49,14 +48,11 @@ const TestForm = ({ props, ref, currentRoute }) => {
               placeholder="Your Email"
               required
             />
-            <Link
-              to="/"
-              {...props}
-              ref={ref}
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              <button type="submit">Submit</button>
-            </Link>
+            <div className="down-buddeh">
+              <input type="checkbox" name="check" id="check" required />
+              <label htmlFor="check">I have read and agree to the terms and conditions and privacy policy.</label>
+            </div>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>
