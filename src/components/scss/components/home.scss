@@ -824,6 +824,7 @@ body {
       }
     }
   }
+
 }
 @media only screen and (max-width: 1200px) {
   .container-2 {
@@ -882,7 +883,7 @@ input[type="radio"] {
     &.right {
       right: 4rem;
     }
-
+    
     label {
       z-index: 2000;
       position: absolute;
@@ -1242,6 +1243,11 @@ input[type="radio"] {
 }
 @media only screen and (max-width: 500px) {
   .home {
+    .ads {
+      width: 90%;
+      top: 20%;
+      left: 5%;
+    }
     .container-2 {
       background-color: black;
       padding: 0;
@@ -1637,6 +1643,7 @@ input[type="radio"] {
       }
     }
   }
+  
 }
 @media only screen and (max-width: 375px) {
   .home {
@@ -1644,7 +1651,8 @@ input[type="radio"] {
       height: 50%;
       .dubai-mobile {
         img {
-          top: 35%;
+          top:
+           35%;
         }
       }
     }
@@ -1665,6 +1673,7 @@ input[type="radio"] {
     }
   }
 }
+
 // Animations
 
 // @keyframes broom {

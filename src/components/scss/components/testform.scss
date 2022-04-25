@@ -34,7 +34,6 @@
         flex-direction: column;
         margin: 0 auto;
         line-height: 2;
-        position: relative;
         width: 60%;
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -78,7 +77,7 @@
         -ms-user-select: none;
         user-select: none;
       }
-      
+
       a {
         margin: 0 auto;
       }
@@ -123,6 +122,35 @@
     }
   }
 }
-@media only screen and (max-width: 350px) {
-  
+@media only screen and (max-width: 500px) {
+  .register {
+  height: 110vh;
+    .register-wrapper {
+      margin-top: 5%;
+      background-image: url("/src/images/gogoracingbackground/Regi_Web_Mob_1.png");
+      .form-wrapper {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 3%;
+        height: 60%;
+        position: relative;
+        form {
+          width: 90%;
+        }
+        h1 {
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+        button {
+          position: absolute;
+          bottom: 4%;
+          left: 0;
+          right: 0;
+        }
+        .down-buddeh {
+          height: 5%;
+        }
+      }
+    }
+  }
 }
