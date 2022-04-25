@@ -732,7 +732,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </HashLink>
           </div>
         </div>
-        <Link to="/testform" {...props} ref={ref} onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/earn-to-win-raffle" {...props} ref={ref} onClick={() => window.scrollTo(0, 0)}>
           <input type="checkbox" id="close" />
           <div className="ads" data-aos="zoom-out" data-aos-duration="500">
             <label htmlFor="close">Close</label>
