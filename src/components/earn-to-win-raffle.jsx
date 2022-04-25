@@ -50,7 +50,11 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
-
+  const alertMessage = () => {
+    alert(
+      "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
+    );
+  };
   return (
     <div className="register wrapper">
       <div className="register-wrapper">
@@ -87,7 +91,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
             <div className="down-buddeh">
               <div className="up">
                 <input type="checkbox" name="check" id="check" required />
-                <label htmlFor="check" id="checksz">
+                <label htmlFor="check" id="checksz" onClick={alertMessage}>
                   I have read and agree to the terms and conditions and privacy
                   policy.
                 </label>
