@@ -1245,9 +1245,12 @@ input[type="radio"] {
 @media only screen and (max-width: 500px) {
   .home {
     .ads {
-      width: 90%;
+      background-image: url("/src/images/icons/mobayl.png");
+      background-size: 100% 90%;
+      width: 100%;
+      height: 70%;
       top: 20%;
-      left: 5%;
+      left: 0;
     }
     .container-2 {
       background-color: black;
