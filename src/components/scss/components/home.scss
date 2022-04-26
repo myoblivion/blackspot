@@ -383,7 +383,8 @@ body {
     margin: 0 auto;
     background-image: url("/src/images/icons/uiiiiiiiigagiiiiiiiiiii.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+      display: none;
+      background-size: 100% 100%;
     z-index: 900;
     label {
       position: absolute;
