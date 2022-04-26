@@ -169,10 +169,10 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       <div className="home">
         {/* Slideshow */}
         <div className="slider">
-          <input name="control" id="page1" type="radio" checked={count === 0} />
-          <input name="control" id="page2" type="radio" checked={count === 1} />
-          <input name="control" id="page3" type="radio" checked={count === 2} />
-          <input name="control" id="page4" type="radio" checked={count === 3} />
+          <input name="control" id="page1" type="radio" checked={count == 0} />
+          <input name="control" id="page2" type="radio" checked={count == 1}/>
+          <input name="control" id="page3" type="radio" checked={count == 2} />
+          <input name="control" id="page4" type="radio" checked={count == 3}/>
           <div className="slider--el slider--el-1 anim-4parts">
             <div className="slider--el-bg">
               <div className="part top left"></div>

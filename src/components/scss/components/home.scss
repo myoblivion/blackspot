@@ -868,6 +868,14 @@ input[type="radio"] {
   position: relative;
   margin-top: 1%;
   height: 100vh;
+  input[type="radio"] {
+    // OVERKILL
+    position: absolute;
+    top: -5000px;
+    left: -5000px;
+    opacity: 0;
+    z-index: -1000;
+  }
   &--control {
     z-index: 50;
     position: absolute;
@@ -876,7 +884,6 @@ input[type="radio"] {
     height: 4px;
     background-color: white;
     cursor: pointer;
-    display: none;
     &.left {
       top: 43%;
       right: 4rem;

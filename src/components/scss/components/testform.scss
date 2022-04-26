@@ -124,16 +124,19 @@
 }
 @media only screen and (max-width: 500px) {
   .register {
-  height: 110vh;
+    height: 130vh;
     .register-wrapper {
-      margin-top: 5%;
+      margin-top: 22%;
       background-image: url("/src/images/gogoracingbackground/Regi_Web_Mob_1.png");
+      background-size: 100% 100%;
+      display: block;
       .form-wrapper {
         width: 100%;
         margin-left: 0;
-        margin-top: 3%;
-        height: 60%;
+        margin-top: 0;
+        height: 45%;
         position: relative;
+        top: 19%;
         form {
           width: 90%;
         }
