@@ -29,7 +29,7 @@ import GogoRacingPatchs from "./ggr-patch3";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./earn-to-win-raffle";
-import Admin from "./admin";
+import Admins from "./admin";
 // styles
 import "./scss/index.scss";
 
@@ -125,7 +125,7 @@ const Appcomponent = () => {
             <EarnToWinRaffle />
           </Route>
           <Route path="/admin">
-            <Admin />
+            <Admins />
           </Route>
         </div>
       )}
