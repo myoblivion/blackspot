@@ -10,16 +10,70 @@
     #backendstuff {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
       .admin_contents {
         display: flex;
+        justify-content: space-around;
         .components {
-          input[type="radio"] {
-            position: static;
-            margin: 0 20px;
-            opacity: 1;
+          display: flex;
+          margin-left: 5%;
+          align-items: center;
+          width: 100%;
+          .game-components {
+            display: flex;
+            flex-direction: column;
+            label {
+              margin: 5px 0;
+            }
+            input[type="radio"] {
+              position: static;
+              margin: 0 20px;
+              opacity: 1;
+            }
+            #choose1:checked ~ #lel {
+              background-color: white;
+            }
+            #choose2:checked ~ #lele {
+              background-color: white;
+            }
+            #choose3:checked ~ #lelele {
+              background-color: white;
+            }
+            #choose4:checked ~ #lelelele {
+              background-color: white;
+            }
           }
+          .sub-components {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5%;
+            label {
+              margin: 5px 0;
+            }
+            input[type="radio"] {
+              position: static;
+              margin: 0 20px;
+              opacity: 1;
+            }
+            #sub1:checked ~ #submen1 {
+              background-color: white;
+            }
+            #sub2:checked ~ #submen2 {
+              background-color: white;
+            }
+            #sub3:checked ~ #submen3 {
+              background-color: white;
+            }
+            #sub4:checked ~ #submen4 {
+              background-color: white;
+            }
+          }
+        }
+        .textfields {
+          margin-right: 5%;
+        }
+        .button1 {
+          margin-right: 5%;
         }
       }
     }

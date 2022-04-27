@@ -113,13 +113,15 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     Aos.init({ duration: 1000 });
   }, []);
   // slide show (banner)
-  const [count, setCount] = useState(0);
 
+  const radioButtons = document.querySelectorAll('input[name="control"]');
+  console.log(radioButtons);
+
+  const [count, setTimeout] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCount((c) => ++c % 4);
+      setTimeout((c) => ++c % 4);
     }, 6000);
-
     return () => clearInterval(intervalId);
   }, []);
 
@@ -169,10 +171,34 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       <div className="home">
         {/* Slideshow */}
         <div className="slider">
-          <input name="control" id="page1" type="radio" checked={count == 0} />
-          <input name="control" id="page2" type="radio" checked={count == 1}/>
-          <input name="control" id="page3" type="radio" checked={count == 2} />
-          <input name="control" id="page4" type="radio" checked={count == 3}/>
+          <input
+            name="control"
+            id="page1"
+            type="radio"
+            value={count}
+            checked={count == 0}
+          />
+          <input
+            name="control"
+            id="page2"
+            type="radio"
+            value={count}
+            checked={count == 1}
+          />
+          <input
+            name="control"
+            id="page3"
+            type="radio"
+            value={count}
+            checked={count == 2}
+          />
+          <input
+            name="control"
+            id="page4"
+            type="radio"
+            value={count}
+            checked={count == 3}
+          />
           <div className="slider--el slider--el-1 anim-4parts">
             <div className="slider--el-bg">
               <div className="part top left"></div>
@@ -732,7 +758,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </HashLink>
           </div>
         </div>
-        <Link to="/earn-to-win-raffle" {...props} ref={ref} onClick={() => window.scrollTo(0, 0)}>
+        <Link
+          to="/earn-to-win-raffle"
+          {...props}
+          ref={ref}
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <input type="checkbox" id="close" />
           <div className="ads" data-aos="zoom-out" data-aos-duration="500">
             <label htmlFor="close">Close</label>
