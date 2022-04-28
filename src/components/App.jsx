@@ -30,11 +30,14 @@ import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./play-to-win-raffle";
 import Admins from "./admin";
+import LogInComponent from "./log-in";
 // styles
 import "./scss/index.scss";
 
 const Appcomponent = () => {
-  const [loading, setLoading] = useState(true);
+
+  const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -123,6 +126,9 @@ const Appcomponent = () => {
           </Route>
           <Route path="/play-to-win-raffle">
             <EarnToWinRaffle />
+          </Route>
+          <Route path="/log-in">
+            <LogInComponent />
           </Route>
           <Route path="/admin">
             <Admins />
