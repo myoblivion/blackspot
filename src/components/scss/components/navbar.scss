@@ -222,7 +222,7 @@ li:hover > .tabs {
 
 /* 48em = 768px */
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 873px) {
   .navbar li {
     float: left;
   }
@@ -273,7 +273,7 @@ li:hover > .tabs {
   }
 }
 
-@media (min-width: 450px) {
+@media only screen and (min-width: 450px) {
   .logo {
     img {
       width: 50%;
@@ -314,11 +314,15 @@ li:hover > .tabs {
 @media only screen and (max-width: 872) {
   .navbar {
     height: 50%;
-    display: flex;
     width: 100%;
+    background-color: black;
   }
   .navbar ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: black;
     margin: 0;
   }
 }
