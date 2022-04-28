@@ -759,7 +759,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
         <Link
-          to="/earn-to-win-raffle"
+          to="/play-to-win-raffle"
           {...props}
           ref={ref}
           onClick={() => window.scrollTo(0, 0)}

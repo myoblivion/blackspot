@@ -86,13 +86,14 @@
         cursor: pointer;
         background-color: rgb(231, 72, 236);
         border-radius: 3px;
-        padding: 6px;
+        padding: 7px;
         width: 200px;
         color: white;
         margin-left: 25px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
         margin: 0 auto;
         font-weight: 900;
+        font-size: 20px;
       }
       button:hover {
         transform: translateY(-3px);
@@ -112,6 +113,7 @@
         }
         label {
           margin-left: 10px;
+          font-size: 20px;
         }
         .up,
         .down {
@@ -134,24 +136,54 @@
         width: 100%;
         margin-left: 0;
         margin-top: 0;
-        height: 45%;
+        height: 43%;
         position: relative;
         top: 19%;
-        form {
-          width: 90%;
-        }
         h1 {
           font-size: 20px;
           margin-bottom: 0;
         }
-        button {
-          position: absolute;
-          bottom: 4%;
-          left: 0;
-          right: 0;
+        form {
+          width: 90%;
+          input {
+            font-size: 14px;
+          }
+          button {
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            width: 150px;
+            font-size: 15px;
+          }
+          .down-buddeh {
+            height: 3%;
+            .up,
+            .down {
+              label {
+                font-size: 14px;
+              }
+            }
+          }
         }
-        .down-buddeh {
-          height: 5%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1990px) {
+  .register {
+    .register-wrapper {
+      .form-wrapper {
+        h1 {
+          margin-bottom: 0;
+        }
+        form {
+          .down-buddeh {
+            label {
+              font-size: 17px;
+            }
+            height: 15%;
+          }
         }
       }
     }
