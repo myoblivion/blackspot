@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
-
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
@@ -30,14 +34,25 @@ import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./play-to-win-raffle";
 import Admins from "./admin";
-import LogInComponent from "./log-in";
+import LogInComponent from "./login";
 // styles
 import "./scss/index.scss";
-
+const firebaseConfig = {
+  apiKey: "AIzaSyDe_ISIJrMFlNbsFpN1io--gnlANZRY_JI",
+  authDomain: "black-spot-studio-ph.firebaseapp.com",
+  projectId: "black-spot-studio-ph",
+  storageBucket: "black-spot-studio-ph.appspot.com",
+  messagingSenderId: "366890563540",
+  appId: "1:366890563540:web:00b2063a519c11420d0841",
+  measurementId: "G-1Z34EP137Q",
+};
+const fire = firebase.initializeApp(firebaseConfig);
 const Appcomponent = () => {
-
+  const firebase = require("firebase/compat/app");
+  require("firebase/compat/auth");
+  require("firebase/compat/firestore");
   const [loading, setLoading] = useState(false);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -45,6 +60,78 @@ const Appcomponent = () => {
   }, []);
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("Mali password bano!");
+  const [hasAccount, setHasAccount] = useState("false");
+
+  const clearInputs = () => {
+    setEmail("");
+    setPassword("");
+  };
+
+  const clearErrors = () => {
+    setEmailError("");
+    setPasswordError("");
+  };
+
+  const handleLogin = () => {
+    clearErrors();
+    fire
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/invalid-email":
+          case "auth/user-disabled":
+          case "auth/user-not-found":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
+  const handleSignup = () => {
+    clearErrors();
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
+  const handleLogout = () => {
+    fire.auth().signout();
+  };
+  const authListener = () => {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        clearInputs();
+        setUser(user);
+      } else {
+        setUser("");
+      }
+    });
+  };
+  useEffect(() => {
+    authListener();
+  }, []);
   return (
     <>
       {loading ? (
@@ -127,8 +214,19 @@ const Appcomponent = () => {
           <Route path="/play-to-win-raffle">
             <EarnToWinRaffle />
           </Route>
-          <Route path="/log-in">
-            <LogInComponent />
+          <Route path="/login">
+            <LogInComponent
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              handleLogin={handleLogin}
+              handleSignup={handleSignup}
+              hasAccount={hasAccount}
+              setHasAccount={setHasAccount}
+              emailError={emailError}
+              passwordError={passwordError}
+            />
           </Route>
           <Route path="/admin">
             <Admins />
