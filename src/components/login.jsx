@@ -24,6 +24,7 @@ const LogInComponent = (props) => {
           required
           onChange={(e) => setEmail(e.target.value)}
         />
+        <p className="errorMsg">{emailError}</p>
         <label>Password</label>
         <input
           type="password"
@@ -31,19 +32,9 @@ const LogInComponent = (props) => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <p className="errormssg">{passwordError}</p>
-        <div className="btncontainer">
-          {hasAccount ? (
-            <>
-              <button onClick={handleLogin}>Sign In</button>
-              <p>Don't have account? <span>Sign Up</span></p>
-            </>
-          ) : (
-            <>
-              <button onClick={handleSignup}>Sign Up</button>
-              <p>Have an Account? <span>Sign In</span></p>
-            </>
-          )}
+        <p className="errorMsg">{passwordError}</p>
+        <div className="btnContainer">
+            <button onClick={handleLogin}>Sign In</button>
         </div>
       </div>
     </div>

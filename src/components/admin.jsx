@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Admin, Resource } from "react-admin";
 import { useHistory } from "react-router-dom";
 
-const Admins = ({ record }) => {
+const Admins = ({ record, handleLogout }) => {
   const Labels = [
     {
       id: "submen1",
@@ -69,6 +69,7 @@ const Admins = ({ record }) => {
       <div className="admin-wrapper">
         <div className="admins">
           <h1>Admin Panel</h1>
+          <button onClick={handleLogout}>Log Out</button>
           <div className="admin_contents">
             <div className="components">
               <div className="game-components">

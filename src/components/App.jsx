@@ -68,7 +68,7 @@ const Appcomponent = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("Mali password bano!");
+  const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState("false");
 
   const clearInputs = () => {
@@ -117,7 +117,7 @@ const Appcomponent = () => {
       });
   };
   const handleLogout = () => {
-    fire.auth().signout();
+    fire.auth().signOut();
   };
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
@@ -214,23 +214,25 @@ const Appcomponent = () => {
           <Route path="/play-to-win-raffle">
             <EarnToWinRaffle />
           </Route>
-          <Route path="/login">
-            <LogInComponent
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              handleLogin={handleLogin}
-              handleSignup={handleSignup}
-              hasAccount={hasAccount}
-              setHasAccount={setHasAccount}
-              emailError={emailError}
-              passwordError={passwordError}
-            />
-          </Route>
-          <Route path="/admin">
-            <Admins />
-          </Route>
+          {user ? (
+
+              <Admins handleLogout={handleLogout} path="/admin"/>
+          ) : (
+            <Route path="/login">
+              <LogInComponent
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                handleLogin={handleLogin}
+                handleSignup={handleSignup}
+                hasAccount={hasAccount}
+                setHasAccount={setHasAccount}
+                emailError={emailError}
+                passwordError={passwordError}
+              />
+            </Route>
+          )}
         </div>
       )}
     </>
