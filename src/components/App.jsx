@@ -70,7 +70,6 @@ const Appcomponent = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState("false");
-
   const clearInputs = () => {
     setEmail("");
     setPassword("");
