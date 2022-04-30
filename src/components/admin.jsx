@@ -69,7 +69,9 @@ const Admins = ({ record, handleLogout }) => {
       <div className="admin-wrapper">
         <div className="admins">
           <h1>Admin Panel</h1>
-          <button onClick={handleLogout}>Log Out</button>
+          <button id="logout" onClick={handleLogout}>
+            Log Out
+          </button>
           <div className="admin_contents">
             <div className="components">
               <div className="game-components">
