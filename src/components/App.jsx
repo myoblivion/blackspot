@@ -48,16 +48,11 @@ const firebaseConfig = {
 };
 const fire = firebase.initializeApp(firebaseConfig);
 const Appcomponent = () => {
+  const [loading, setLoading] = useState(false);
   const firebase = require("firebase/compat/app");
   require("firebase/compat/auth");
   require("firebase/compat/firestore");
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2600);
-  }, []);
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
 
@@ -130,6 +125,11 @@ const Appcomponent = () => {
   };
   useEffect(() => {
     authListener();
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2600);
   }, []);
   return (
     <>
@@ -214,8 +214,7 @@ const Appcomponent = () => {
             <EarnToWinRaffle />
           </Route>
           {user ? (
-
-              <Admins handleLogout={handleLogout} path="/admin"/>
+            <Admins handleLogout={handleLogout} />
           ) : (
             <Route path="/login">
               <LogInComponent
