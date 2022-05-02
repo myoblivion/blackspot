@@ -81,11 +81,11 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
               </li>
               <li>
                 <h3>STEP 2 -- Download the game & Register</h3>
-                <br />{" "}
+                <br /> Download the game
                 <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                  Download the game
+                  https://bit.ly/3KHoMzu
                 </a>
-                <br /> Register on our website <br />
+                <br /> Register on our website
                 <a href="https://bit.ly/38A9Qph">https://bit.ly/38A9Qph</a>
               </li>
               <li>
