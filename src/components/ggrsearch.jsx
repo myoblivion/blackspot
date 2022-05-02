@@ -17,6 +17,7 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
     {
       id: 1,
       name: "Announcements",
+      to: "/ggr-announcement-list",
       span: "See important in-game notice and announcements",
       image: "../images/gogoracingbackground/catto.png",
     },
@@ -158,7 +159,7 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
             <div className="ggr-top">
               <div className="ggr-left">
               <Link
-                  to="/ggr-guide-list"
+                  to="/gogoracingnews"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}

@@ -25,15 +25,15 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
         >
           <div className="ggr-top">
             <div className="ggr-left">
-            <Link
+              <Link
                 to="/login"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
-              <h2>
-                <FaUserCircle /> User
-              </h2>
+                <h2>
+                  <FaUserCircle /> User
+                </h2>
               </Link>
             </div>
             <div className="ggr-right">
@@ -49,15 +49,22 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
           </div>
           <div className="ggrnws-contents">
             <ul>
-              <li>
-                <div className="li-left">
-                  <img src={catto} alt="" />
-                </div>
-                <div className="li-right">
-                  <h3>Announcements</h3>
-                  <span>See important in-game notice and announcements!</span>
-                </div>
-              </li>
+              <Link
+                to="/ggr-announcement-list"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <div className="li-left">
+                    <img src={catto} alt="" />
+                  </div>
+                  <div className="li-right">
+                    <h3>Announcements</h3>
+                    <span>See important in-game notice and announcements!</span>
+                  </div>
+                </li>
+              </Link>
               <Link
                 to="/ggr-update-list"
                 {...props}

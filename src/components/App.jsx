@@ -35,6 +35,8 @@ import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./play-to-win-raffle";
 import Admins from "./admin";
 import LogInComponent from "./login";
+import GogoRacingAnnouncementList from "./ggr-announcement-list";
+import GogoRacingRaffleAnnouncement from "./ggr-annoncement";
 // styles
 import "./scss/index.scss";
 const firebaseConfig = {
@@ -212,6 +214,12 @@ const Appcomponent = () => {
           </Route>
           <Route path="/play-to-win-raffle">
             <EarnToWinRaffle />
+          </Route>
+          <Route path="/ggr-announcement-list">
+            <GogoRacingAnnouncementList />
+          </Route>
+          <Route path="/gogo-racing-raffle-announcement">
+            <GogoRacingRaffleAnnouncement />
           </Route>
           {user ? (
             <Admins handleLogout={handleLogout} />

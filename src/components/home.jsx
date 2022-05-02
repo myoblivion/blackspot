@@ -70,6 +70,7 @@ import {
   FaAppStore,
   FaGooglePlay,
   FaRegArrowAltCircleUp,
+  FaWindowClose,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -758,17 +759,23 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </HashLink>
           </div>
         </div>
-        <Link
-          to="/play-to-win-raffle"
-          {...props}
-          ref={ref}
-          onClick={() => window.scrollTo(0, 0)}
-        >
-          <input type="checkbox" id="close" />
-          <div className="ads" data-aos="zoom-out" data-aos-duration="500">
-            <label htmlFor="close">Close</label>
-          </div>
-        </Link>
+        <input type="checkbox" id="close" />
+        <div className="stuffwrapper">
+          <label htmlFor="close" id="iwannasleep">
+          <FaWindowClose />
+          </label>
+          <Link
+            to="/play-to-win-raffle"
+            ref={ref}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <div
+              className="ads"
+              data-aos="zoom-out"
+              data-aos-duration="500"
+            ></div>
+          </Link>
+        </div>
       </div>
     </div>
   );
