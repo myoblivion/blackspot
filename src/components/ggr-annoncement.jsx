@@ -64,7 +64,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
             </p>
             <ul>
               <li>
-                STEP 1 -- Follow our community
+                <h3>STEP 1 -- Follow our community</h3>
                 <br /> 1. Like & Follow our Page
                 <br />
                 ➡️{" "}
@@ -80,7 +80,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 </a>
               </li>
               <li>
-                STEP 2 -- Download the game & Register
+                <h3>STEP 2 -- Download the game & Register</h3>
                 <br />{" "}
                 <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
                   Download the game
@@ -89,13 +89,15 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 <a href="https://bit.ly/38A9Qph">https://bit.ly/38A9Qph</a>
               </li>
               <li>
-                STEP 3 -- Follow the Game Requirements
+                <h3>STEP 3 -- Follow the Game Requirements</h3>
                 <br /> 1. Play the Game and complete the 60 days log in rewards
                 (make sure to play everyday and get the rewards)
                 <br /> 2. Level up your account ( must reach the level 10-
                 above) 3. Rank UP! (must reach platinum rank) aa
               </li>
-              <li>STEP 4 -- Wait for the raffle result</li>
+              <li>
+                <h3>STEP 4 -- Wait for the raffle result</h3>
+              </li>
               <li>
                 It’s easy, right? Registration will start on May 1, 2022.
                 Register and play for a chance to win these cool prizes! Let’s
@@ -108,8 +110,14 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
               Racers! 🥳🥳🥳
             </p>
             <ul className="no-emoji">
-              <li>📲 You may download the game here: <a href="https://bit.ly/3JCuqTP">https://bit.ly/3JCuqTP  </a> </li>
-              <li>🌐 To know more about our games visit: <a href="https://linktr.ee/BSSPH">https://linktr.ee/BSSPH</a></li>
+              <li>
+                📲 You may download the game here:{" "}
+                <a href="https://bit.ly/3JCuqTP">https://bit.ly/3JCuqTP </a>{" "}
+              </li>
+              <li>
+                🌐 To know more about our games visit:{" "}
+                <a href="https://linktr.ee/BSSPH">https://linktr.ee/BSSPH</a>
+              </li>
             </ul>
           </div>
         </div>
