@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/announcement.png";
+import Formsz from "../images/icons/form.png";
+import { Form } from "react-admin";
 
 const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
   // Title
@@ -66,7 +68,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
               <li>
                 <h3>STEP 1 -- Follow our community</h3>
               </li>
-              <li>Like & Follow our Page</li>
+              <li>👉 Like & Follow our Page</li>
               <li className="dobol">
                 <iframe
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGogoRacingPhilippines&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
@@ -79,8 +81,8 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 ></iframe>
               </li>
-              <li>Like, comment, tag 5 friends, and share this post</li>
-              <li  id="toobig">
+              <li>👉 Like, comment, tag 5 friends, and share this post</li>
+              <li id="toobig">
                 {" "}
                 <iframe
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FGogoRacingPhilippines%2Fposts%2F131756579445246&show_text=true&width=500"
@@ -107,18 +109,19 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 </a>
               </li>
               <li>
-                Register on our website{" "}
+              👉 Register on our website{" "}
                 <a href="https://bit.ly/38A9Qph">https://bit.ly/38A9Qph</a>
               </li>
+              <li id="formzs"><img src={Formsz} alt="" /></li>
               <li>
                 <h3>STEP 3 -- Follow the Game Requirements</h3>
               </li>
               <li>
-                Play the Game and complete the 60 days log in rewards <br />{" "}
+              👉 Play the Game and complete the 60 days log in rewards <br />{" "}
                 (make sure to play everyday and get the rewards)
               </li>
-              <li>Level up your account ( must reach the level 10)</li>
-              <li> Rank UP! (must reach platinum rank)</li>
+              <li>L👉 evel up your account ( must reach the level 10)</li>
+              <li>👉 Rank UP! (must reach platinum rank)</li>
               <li>
                 <h3>STEP 4 -- Wait for the raffle result</h3>
               </li>
@@ -131,7 +134,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
             <ul className="no-emoji">
               <li>
                 🌐 To know more about our games visit:{" "}
-                <a href="https://linktr.ee/BSSPH">https://linktr.ee/BSSPH</a>
+                <a href="https://linktr.ee/BSSPH">👉 https://linktr.ee/BSSPH</a>
               </li>
             </ul>
           </div>
