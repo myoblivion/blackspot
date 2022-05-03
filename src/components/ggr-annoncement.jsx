@@ -109,18 +109,20 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 </a>
               </li>
               <li>
-              👉 Register on our website{" "}
+                👉 Register on our website{" "}
                 <a href="https://bit.ly/38A9Qph">https://bit.ly/38A9Qph</a>
               </li>
-              <li id="formzs"><img src={Formsz} alt="" /></li>
+              <li id="formzs">
+                <img src={Formsz} alt="" />
+              </li>
               <li>
                 <h3>STEP 3 -- Follow the Game Requirements</h3>
               </li>
               <li>
-              👉 Play the Game and complete the 60 days log in rewards <br />{" "}
+                👉 Play the Game and complete the 60 days log in rewards <br />{" "}
                 (make sure to play everyday and get the rewards)
               </li>
-              <li>L👉 evel up your account ( must reach the level 10)</li>
+              <li>👉 Level up your account ( must reach the level 10)</li>
               <li>👉 Rank UP! (must reach platinum rank)</li>
               <li>
                 <h3>STEP 4 -- Wait for the raffle result</h3>
