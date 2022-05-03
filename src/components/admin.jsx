@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import { Admin, Resource } from "react-admin";
+import { Create, SimpleForm, TextInput, DateInput, required } from 'react-admin';
 import { useHistory } from "react-router-dom";
 
 const Admins = ({ record, handleLogout }) => {

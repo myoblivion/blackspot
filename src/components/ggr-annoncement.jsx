@@ -9,11 +9,16 @@ import {
   FaSearch,
   FaRegArrowAltCircleUp,
   FaWindowClose,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/announcement.png";
 import Formsz from "../images/icons/form.png";
 import { Form } from "react-admin";
+import ReactPlayer from "react-player";
+import Images1 from "../images/event/1233.png";
+import Images2 from "../images/event/IGN.PNG.png";
+import Images3 from "../images/event/n.png";
 
 const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
   // Title
@@ -66,38 +71,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
             </p>
             <ul>
               <li>
-                <h3>STEP 1 -- Follow our community</h3>
-              </li>
-              <li>👉 Like & Follow our Page</li>
-              <li className="dobol">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGogoRacingPhilippines&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                  width="500"
-                  height="535"
-                  scrolling="no"
-                  frameBorder="0"
-                  style={{ border: "none", outline: "none" }}
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
-              </li>
-              <li>👉 Like, comment, tag 5 friends, and share this post</li>
-              <li id="toobig">
-                {" "}
-                <iframe
-                  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FGogoRacingPhilippines%2Fposts%2F131756579445246&show_text=true&width=500"
-                  width="500"
-                  height="535"
-                  scrolling="no"
-                  frameBorder="0"
-                  style={{ border: "none", outline: "none" }}
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
-              </li>
-
-              <li>
-                <h3>STEP 2 -- Download the game & Register</h3>
+                <h3>Download the game & Register</h3>
               </li>
               <li>
                 {" "}
@@ -109,23 +83,56 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 </a>
               </li>
               <li>
-                👉 Register on our website{" "}
-                <a href="https://bit.ly/38A9Qph">https://bit.ly/38A9Qph</a>
+                <h3>Follow This Video</h3>
+              </li>
+              <li>
+                <ReactPlayer
+                  className="react-player fixed-bottom"
+                  url="videos/Likecommenttags.mp4"
+                  width="100%"
+                  height="100%"
+                  controls={true}
+                />
+              </li>
+              <li>
+                {" "}
+                <a href="https://www.facebook.com/GogoRacingPhilippines">
+                  Link to our Facebook page <FaExternalLinkAlt />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/GogoRacingPhilippines/posts/131756579445246">
+                  Like, comment, and share this post
+                </a>
+              </li>
+
+              <li>
+                <a href="https://bit.ly/38A9Qph">
+                  {" "}
+                  Register on our website <FaExternalLinkAlt />
+                </a>
               </li>
               <li id="formzs">
                 <img src={Formsz} alt="" />
               </li>
               <li>
-                <h3>STEP 3 -- Follow the Game Requirements</h3>
+                <h3> Follow the Game Requirements</h3>
               </li>
               <li>
                 👉 Play the Game and complete the 60 days log in rewards <br />{" "}
                 (make sure to play everyday and get the rewards)
               </li>
+              <img src={Images3} alt="" />
               <li>👉 Level up your account ( must reach the level 10)</li>
+              <li>
+                <img src={Images2} alt="" />
+              </li>
               <li>👉 Rank UP! (must reach platinum rank)</li>
               <li>
-                <h3>STEP 4 -- Wait for the raffle result</h3>
+                <img src={Images1} alt="" />
+              </li>
+              <li>
+                <h3>Wait for the raffle result</h3>
               </li>
               <li>
                 It’s easy, right? Registration will start on May 1, 2022.
