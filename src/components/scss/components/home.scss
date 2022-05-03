@@ -50,14 +50,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  #close {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
-    top: 0;
-  }
+
   #close:checked ~ .stuffwrapper {
     display: none;
   }
@@ -66,6 +59,15 @@ body {
   }
   #close:checked ~ #iwannasleep {
     display: none;
+  }
+  #close {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
   }
   @keyframes imageAnimation {
     0% {

@@ -167,9 +167,10 @@
           color: white;
           margin-left: 2%;
           margin-bottom: 3%;
+          text-align: center;
         }
         h3 {
-          margin-left: 2%;
+          margin-left: 1%;
         }
         p {
           margin-left: 2%;
@@ -194,9 +195,11 @@
                 margin-bottom: 2%;
                 margin-left: 2%;
             }
-            br {
-                margin-top: 4%;
-                margin-bottom: 4%;
+            img {
+              width: 50%;
+            }
+            iframe {
+              transform:scale(0.9);
             }
           }
 
@@ -214,6 +217,7 @@
 @media only screen and (max-width: 500px) {
   .ggr-event {
     width: 100%;
+    overflow-x: hidden;
     height: 100%;
     .ggr-event-contents {
       background-image: url("/src/images/gogoracingbackground/ggrmb.png");
@@ -241,6 +245,23 @@
           width: 90%;
           h1 {
             font-size: 20px;
+            line-height: 2;
+          }
+          ul {
+            li {
+              iframe {
+                margin-left: 0;
+              }
+            }
+            .dobol {
+              margin-left: 0;
+              transform:scale(1);
+            }
+            #toobig {
+              margin-left: 0;
+              transform-origin: -25% 0;
+              transform:scale(0.8);
+            }
           }
         }
       }

@@ -65,36 +65,60 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
             <ul>
               <li>
                 <h3>STEP 1 -- Follow our community</h3>
-                <br /> 1. Like & Follow our Page
-                <br />
-                ➡️{" "}
-                <a href="https://www.facebook.com/GogoRacingPhilippines/">
-                  https://www.facebook.com/GogoRacingPhilippines/
-                </a>
-                <br /> 2. Like, comment, tag 5 friends, and share this post
-                <br />
-                ➡️{" "}
-                <a href="https://www.facebook.com/GogoRacingPhilippines/photos/131756562778581">
-                  {" "}
-                  https://www.facebook.com/GogoRacingPhilippines/photos/131756562778581
+              </li>
+              <li>Like & Follow our Page</li>
+              <li className="dobol">
+                <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGogoRacingPhilippines&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                  width="500"
+                  height="535"
+                  scrolling="no"
+                  frameBorder="0"
+                  style={{ border: "none", outline: "none" }}
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
+              </li>
+              <li>Like, comment, tag 5 friends, and share this post</li>
+              <li  id="toobig">
+                {" "}
+                <iframe
+                  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FGogoRacingPhilippines%2Fposts%2F131756579445246&show_text=true&width=500"
+                  width="500"
+                  height="535"
+                  scrolling="no"
+                  frameBorder="0"
+                  style={{ border: "none", outline: "none" }}
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
+              </li>
+
+              <li>
+                <h3>STEP 2 -- Download the game & Register</h3>
+              </li>
+              <li>
+                {" "}
+                <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                  <img
+                    alt="Get it on Google Play"
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  />
                 </a>
               </li>
               <li>
-                <h3>STEP 2 -- Download the game & Register</h3>
-                <br /> Download the game
-                <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                  https://bit.ly/3KHoMzu
-                </a>
-                <br /> Register on our website
+                Register on our website{" "}
                 <a href="https://bit.ly/38A9Qph">https://bit.ly/38A9Qph</a>
               </li>
               <li>
                 <h3>STEP 3 -- Follow the Game Requirements</h3>
-                <br /> 1. Play the Game and complete the 60 days log in rewards
-                (make sure to play everyday and get the rewards)
-                <br /> 2. Level up your account ( must reach the level 10-
-                above) 3. Rank UP! (must reach platinum rank) aa
               </li>
+              <li>
+                Play the Game and complete the 60 days log in rewards <br />{" "}
+                (make sure to play everyday and get the rewards)
+              </li>
+              <li>Level up your account ( must reach the level 10)</li>
+              <li> Rank UP! (must reach platinum rank)</li>
               <li>
                 <h3>STEP 4 -- Wait for the raffle result</h3>
               </li>
@@ -104,16 +128,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 go GoGo Racers! 🥳🥳🥳
               </li>
             </ul>
-            <p>
-              It’s easy right? Registration will start on May 1, 2022. Register
-              and play for a chance to win these cool prizes! Let’s go GoGo
-              Racers! 🥳🥳🥳
-            </p>
             <ul className="no-emoji">
-              <li>
-                📲 You may download the game here:{" "}
-                <a href="https://bit.ly/3JCuqTP">https://bit.ly/3JCuqTP </a>{" "}
-              </li>
               <li>
                 🌐 To know more about our games visit:{" "}
                 <a href="https://linktr.ee/BSSPH">https://linktr.ee/BSSPH</a>
@@ -122,7 +137,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
           </div>
         </div>
         <div className="bootons">
-          <HashLink smooth to="/ggr-patch2#" id="up">
+          <HashLink smooth to="/gogo-racing-raffle-announcement#" id="up">
             <FaRegArrowAltCircleUp />
           </HashLink>
         </div>
