@@ -6,7 +6,7 @@ import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    <HashRouter forceRefresh={true}>
       <App />
     </HashRouter>
   </React.StrictMode>,
