@@ -86,13 +86,13 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 <h3>Follow This Video</h3>
               </li>
               <li>
-                <ReactPlayer
+              <ReactPlayer
                   className="react-player fixed-bottom"
                   url="videos/Likecommenttags.mp4"
                   width="100%"
                   height="100%"
                   controls={true}
-                />
+                />  
               </li>
               <li>
                 {" "}

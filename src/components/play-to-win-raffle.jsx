@@ -1,20 +1,7 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import image from "../images/banner4.png";
-import image2 from "../images/gogochain-mobile.png";
-import { HashLink } from "react-router-hash-link";
-import icono from "../images/icons/logo.png";
+
 import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
-import {
-  FaEnvelope,
-  FaFacebook,
-  FaMapMarked,
-  FaReddit,
-  FaRegArrowAltCircleUp,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { render } from "react-dom";
+
 import axios from "axios";
 
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
@@ -22,6 +9,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
+
   const onSubmit = (e) => {
     e.preventDefault();
     history.push("/");
@@ -45,7 +33,6 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
   };
-  // GUMANA KA
 
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
@@ -55,6 +42,39 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
     );
   };
+  // const [userData, setUserData] = useState([]);
+
+  // const getUsers = () => {
+  //   // Sending HTTP GET request
+  //   axios.get(url).then((response) => {
+  //     const userDatas = response.data.map((res) => res.name);
+  //     setUserData(userDatas);
+  //   });
+  // };
+  // function submit(e) {
+  //   e.preventDefault();
+  //   //reset form validation errors
+  //   resetFormValidationErrors();
+
+  //   // Checking here if `userData` already includes name
+  //   if (userData.includes(data.name.trim())) {
+  //     alert(`${data.name} is already taken, Please select any other name.`);
+  //     return;
+  //   }
+
+  //   axios
+  //     .post(
+  //       "https://sheet.best/api/sheets/92edf6b2-47cf-4210-b748-4540768dff4b",
+  //       {
+  //         name: data.name,
+  //         number: data.number,
+  //         email: data.email,
+  //       }
+  //     )
+  //     .then((res) => {
+  //       resetForm();
+  //     });
+  // }
   return (
     <div className="register wrapper">
       <div className="register-wrapper">
