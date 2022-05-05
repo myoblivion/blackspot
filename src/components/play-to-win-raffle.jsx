@@ -9,7 +9,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
-
+  const [data, setData] = useState([]);
   const handleSubmit = (e) => {
     history.push("/");
     e.preventDefault();
@@ -20,7 +20,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/5c678ba6-9f8c-44ca-8490-912d85d8c7b4",
+        "https://sheet.best/api/sheets/9eda958b-9a8f-44e2-a8bd-3a08338c31cc",
         data
       )
       .then((response) => {
@@ -32,12 +32,24 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     alert(
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
+    useEffect(() => {
+      getData();
+    }, [data]);
   };
+  const getData = () => {
+    axios
+      .get("https://sheet.best/api/sheets/9eda958b-9a8f-44e2-a8bd-3a08338c31cc")
+      .then((response) => {
+        setData(response.data);
+      });
+  };
+
   const alertMessage = () => {
     alert(
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
     );
   };
+
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
