@@ -10,10 +10,9 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
     history.push("/");
-    console.log(name, number, email);
+    e.preventDefault();
     const data = {
       Name: name,
       Number: number,
@@ -21,10 +20,11 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/92edf6b2-47cf-4210-b748-4540768dff4b",
+        "https://sheet.best/api/sheets/5c678ba6-9f8c-44ca-8490-912d85d8c7b4",
         data
       )
       .then((response) => {
+        console.log(response);
         setName("");
         setNumber("");
         setEmail("");
@@ -33,54 +33,21 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
   };
-
-  useEffect(() => {
-    document.title = "Black Spot Studio | Earn to win raffle";
-  }, []);
   const alertMessage = () => {
     alert(
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
     );
   };
-  // const [userData, setUserData] = useState([]);
+  useEffect(() => {
+    document.title = "Black Spot Studio | Earn to win raffle";
+  }, []);
 
-  // const getUsers = () => {
-  //   // Sending HTTP GET request
-  //   axios.get(url).then((response) => {
-  //     const userDatas = response.data.map((res) => res.name);
-  //     setUserData(userDatas);
-  //   });
-  // };
-  // function submit(e) {
-  //   e.preventDefault();
-  //   //reset form validation errors
-  //   resetFormValidationErrors();
-
-  //   // Checking here if `userData` already includes name
-  //   if (userData.includes(data.name.trim())) {
-  //     alert(`${data.name} is already taken, Please select any other name.`);
-  //     return;
-  //   }
-
-  //   axios
-  //     .post(
-  //       "https://sheet.best/api/sheets/92edf6b2-47cf-4210-b748-4540768dff4b",
-  //       {
-  //         name: data.name,
-  //         number: data.number,
-  //         email: data.email,
-  //       }
-  //     )
-  //     .then((res) => {
-  //       resetForm();
-  //     });
-  // }
   return (
     <div className="register wrapper">
       <div className="register-wrapper">
         <div className="form-wrapper">
           <h1>Gogo Racing Info</h1>
-          <form onSubmit={onSubmit} method="get" id="formwrap">
+          <form onSubmit={handleSubmit} method="get" id="formwrap">
             <input
               type="text"
               autoComplete="off"
