@@ -20,7 +20,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/9eda958b-9a8f-44e2-a8bd-3a08338c31cc",
+        "https://sheet.best/api/sheets/c24db70e-a771-4036-ab7a-afc359687c86",
         data
       )
       .then((response) => {
@@ -38,7 +38,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   };
   const getData = () => {
     axios
-      .get("https://sheet.best/api/sheets/9eda958b-9a8f-44e2-a8bd-3a08338c31cc")
+      .get("https://sheet.best/api/sheets/c24db70e-a771-4036-ab7a-afc359687c86")
       .then((response) => {
         setData(response.data);
       });
@@ -64,7 +64,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               type="text"
               autoComplete="off"
               name="entry.944015103"
-              placeholder="Enter your account name"
+              placeholder="Enter your Account Name"
               onChange={(e) => setName(e.target.value)}
               value={name}
               required
@@ -73,7 +73,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               type="number"
               autoComplete="off"
               name="entry.396245137"
-              placeholder="Enter Your Account Number"
+              placeholder="Enter Your Account ID"
               onChange={(e) => setNumber(e.target.value)}
               value={number}
               required

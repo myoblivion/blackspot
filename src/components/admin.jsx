@@ -1,8 +1,25 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import { Create, SimpleForm, TextInput, DateInput, required } from 'react-admin';
+import {
+  Create,
+  SimpleForm,
+  TextInput,
+  DateInput,
+  required,
+} from "react-admin";
 import { useHistory } from "react-router-dom";
+import { FaTrash, FaImages } from "react-icons/fa";
+import {
+  FiFileText,
+  FiMove,
+  FiRotateCw,
+  FiRotateCcw,
+  FiZoomOut,
+  FiZoomIn,
+} from "react-icons/fi";
 
 const Admins = ({ record, handleLogout }) => {
+
+
   const Labels = [
     {
       id: "submen1",
@@ -67,58 +84,72 @@ const Admins = ({ record, handleLogout }) => {
   return (
     <div className="admin wrapper">
       <div className="admin-wrapper">
-        <div className="admins">
-          <h1>Admin Panel</h1>
-          <button id="logout" onClick={handleLogout}>
-            Log Out
-          </button>
-          <div className="admin_contents">
-            <div className="components">
-              <div className="game-components">
-                <input type="radio" name="choose" id="choose1" />
-                <input type="radio" name="choose" id="choose2" />
-                <input type="radio" name="choose" id="choose3" />
-                <input type="radio" name="choose" id="choose4" />
-                <label htmlFor="choose1" id="lel">
-                  Gogo Racing
+        <div className="admin-left">
+          <div className="sub-components">
+            <button id="logout" onClick={handleLogout}>
+              Log Out
+            </button>
+            <div className="game-components">
+              <input type="radio" name="choose" id="choose1" />
+              <input type="radio" name="choose" id="choose2" />
+              <input type="radio" name="choose" id="choose3" />
+              <input type="radio" name="choose" id="choose4" />
+              <label htmlFor="choose1" id="lel">
+                Gogo Racing
+              </label>
+              <label htmlFor="choose2" id="lele">
+                Scion Fist
+              </label>
+              <label htmlFor="choose3" id="lelele">
+                Gogo World
+              </label>
+              <label htmlFor="choose4" id="lelelele">
+                Gogo Chain
+              </label>
+            </div>
+            <div className="sub-contents">
+              <input type="radio" name="sub" id="sub1" />
+              <input type="radio" name="sub" id="sub2" />
+              <input type="radio" name="sub" id="sub3" />
+              <input type="radio" name="sub" id="sub4" />
+              <SearchBar
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+              />
+              {filteredPosts.map((post, s) => (
+                <label htmlFor={post.htmlFor} key={s} id={post.id}>
+                  {post.name}
                 </label>
-                <label htmlFor="choose2" id="lele">
-                  Scion Fist
-                </label>
-                <label htmlFor="choose3" id="lelele">
-                  Gogo World
-                </label>
-                <label htmlFor="choose4" id="lelelele">
-                  Gogo Chain
-                </label>
-              </div>
-              <div className="sub-components">
-                <input type="radio" name="sub" id="sub1" />
-                <input type="radio" name="sub" id="sub2" />
-                <input type="radio" name="sub" id="sub3" />
-                <input type="radio" name="sub" id="sub4" />
-                <SearchBar
-                  searchQuery={searchQuery}
-                  setSearchQuery={setSearchQuery}
-                />
-                {filteredPosts.map((post, s) => (
-                  <label htmlFor={post.htmlFor} key={s} id={post.id}>
-                    {post.name}
-                  </label>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
-          <form autoComplete="off" id="backendstuff">
-            <input type="text" placeholder="Author's name" />
-            <input type="date" name="" id="" />
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <input type="file" name="" id="" />
-            <div className="button1">
-              <button>Add new content</button>
-              <button>Delete Content</button>
-            </div>
-          </form>
+        </div>
+        <div className="admin-right">
+          <div className="main-tools">
+            <button className="tools" >
+              <FaImages />
+            </button>
+            <button className="tools" >
+              <FiFileText />
+            </button>
+            <button className="tools" >
+              <FiMove />
+            </button>
+            <button className="tools" >
+              <FiRotateCcw />
+            </button>
+            <button className="tools" >
+              <FiRotateCw />
+            </button>
+            <button className="tools" >
+              <FiZoomIn />
+            </button>
+            <button className="tools" >
+              <FiZoomOut />
+            </button>
+          </div>
+          <div className="content-web">
+          </div>
         </div>
       </div>
     </div>
