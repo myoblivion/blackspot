@@ -2,7 +2,6 @@ $fuschia: #000000;
 $button-bg: $fuschia;
 $button-text-color: #fff;
 $baby-blue: #f8faff;
-
 .admin {
   width: 100%;
   height: 100%;
@@ -96,12 +95,10 @@ $baby-blue: #f8faff;
           #sub3:checked ~ #submen3 {
             background-color: white;
             color: black;
-
           }
           #sub4:checked ~ #submen4 {
             background-color: white;
             color: black;
-
           }
         }
         input[type="text"] {
@@ -127,7 +124,8 @@ $baby-blue: #f8faff;
           display: inline-block;
           font-size: 1em;
           padding: 1em 2em;
-          margin-bottom: 60px;
+          margin-bottom: 40px;
+          margin-top: 2%;
           -webkit-appearance: none;
           appearance: none;
           background-color: $button-bg;
@@ -227,9 +225,10 @@ $baby-blue: #f8faff;
           }
         }
       }
-      .conetnt-web {
-        width: 100%;
-        height: 100vh;
+      .content-web {
+        width: 80%;
+        margin: 0 auto;
+        height: 80vh;
         background-color: white;
       }
     }

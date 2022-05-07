@@ -16,10 +16,7 @@ import {
   FiZoomOut,
   FiZoomIn,
 } from "react-icons/fi";
-
 const Admins = ({ record, handleLogout }) => {
-
-
   const Labels = [
     {
       id: "submen1",
@@ -126,29 +123,30 @@ const Admins = ({ record, handleLogout }) => {
         </div>
         <div className="admin-right">
           <div className="main-tools">
-            <button className="tools" >
+            <button className="tools">
               <FaImages />
             </button>
-            <button className="tools" >
+            <button className="tools">
               <FiFileText />
             </button>
-            <button className="tools" >
+            <button className="tools">
               <FiMove />
             </button>
-            <button className="tools" >
+            <button className="tools">
               <FiRotateCcw />
             </button>
-            <button className="tools" >
+            <button className="tools">
               <FiRotateCw />
             </button>
-            <button className="tools" >
+            <button className="tools">
               <FiZoomIn />
             </button>
-            <button className="tools" >
+            <button className="tools">
               <FiZoomOut />
             </button>
           </div>
           <div className="content-web">
+            <canvas></canvas>
           </div>
         </div>
       </div>
