@@ -189,3 +189,12 @@
     }
   }
 }
+@media only screen and (max-width: 375px) {
+  .register {
+    .register-wrapper {
+      .form-wrapper {
+        height: 52%;
+      }
+    }
+  }
+}
