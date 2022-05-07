@@ -91,7 +91,10 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                   url="videos/Likecommenttags.mp4"
                   width="100%"
                   height="100%"
-                  controls={true}
+                  playing={true}
+                  muted={true}
+                  loop={true}
+                  controls={false}
                 />  
               </li>
               <li>

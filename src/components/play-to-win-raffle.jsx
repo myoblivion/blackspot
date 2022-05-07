@@ -43,13 +43,27 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
         setData(response.data);
       });
   };
+  const Fetch = () => {
+    fetch(
+      "https://sheet.best/api/sheets/c24db70e-a771-4036-ab7a-afc359687c86",
+      {
+        headers: {
+          "X-Api-Key":
+            "RvSUskrtSvFF5ksOTOCryevB31j-Y3d$WJAjp%lp!jQs#zuIHJql$24%Rf_fR_VL",
+        },
+      }
+    );
+  };
 
   const alertMessage = () => {
     alert(
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
     );
   };
-
+  useEffect(() => {
+    getData();
+    Fetch();
+  }, [data]);
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
@@ -70,10 +84,11 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               required
             />
             <input
-              type="number"
+              type="text"
               autoComplete="off"
               name="entry.396245137"
               placeholder="Enter Your Account ID"
+              maxLength="6"
               onChange={(e) => setNumber(e.target.value)}
               value={number}
               required
