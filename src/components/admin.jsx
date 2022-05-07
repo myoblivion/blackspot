@@ -20,22 +20,22 @@ const Admins = ({ record, handleLogout }) => {
   const Labels = [
     {
       id: "submen1",
-      name: "Content1",
+      name: "Announcements",
       htmlFor: "sub1",
     },
     {
       id: "submen2",
-      name: "Content2",
+      name: "Updates",
       htmlFor: "sub2",
     },
     {
       id: "submen3",
-      name: "Content3",
+      name: "Game Guide",
       htmlFor: "sub3",
     },
     {
       id: "submen4",
-      name: "Content4",
+      name: "Newsletter",
       htmlFor: "sub4",
     },
   ];
