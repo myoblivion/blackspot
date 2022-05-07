@@ -15,12 +15,14 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/announcement.png";
 import Formsz from "../images/icons/form.png";
 import { Form } from "react-admin";
-import ReactPlayer from "react-player";
 import Images1 from "../images/event/1233.png";
 import Images2 from "../images/event/IGN.PNG.png";
 import Images3 from "../images/event/n.png";
+import VideoPlayer from "react-video-js-player";
+import Tutorial from "/Users/USER/Desktop/blackspot/public/videos/Tutorial.mp4";
 
 const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
+  const videoTutorial = Tutorial;
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Gogo Racing Play to Win Raffle Event";
@@ -86,16 +88,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 <h3>Follow This Video</h3>
               </li>
               <li>
-              <ReactPlayer
-                  className="react-player fixed-bottom"
-                  url="videos/Likecommenttags.mp4"
-                  width="100%"
-                  height="100%"
-                  playing={true}
-                  muted={true}
-                  loop={true}
-                  controls={false}
-                />  
+                <VideoPlayer src={videoTutorial} width="720" height="420" />
               </li>
               <li>
                 {" "}
