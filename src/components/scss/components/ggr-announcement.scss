@@ -189,20 +189,22 @@
             &::before {
               content: " ";
             }
+            .vjs-big-play-button {
+              background-color: rgb(31, 114, 186);
+            }
             a {
-                font-weight: 600;
-                padding-top: 2%;
-                margin-bottom: 2%;
-                margin-left: 2%;
+              font-weight: 600;
+              padding-top: 2%;
+              margin-bottom: 2%;
+              margin-left: 2%;
             }
             img {
               width: 50%;
             }
             iframe {
-              transform:scale(0.9);
+              transform: scale(0.9);
             }
           }
-
         }
         #formzs {
           width: 100%;
@@ -219,7 +221,7 @@
           margin-left: 9%;
           margin-top: 10%;
           iframe {
-            transform:scale(1.2);
+            transform: scale(1.2);
           }
         }
       }
@@ -268,12 +270,12 @@
             }
             .dobol {
               margin-left: 0;
-              transform:scale(1);
+              transform: scale(1);
             }
             #toobig {
               margin-left: 0;
               transform-origin: -25% 0;
-              transform:scale(0.8);
+              transform: scale(0.8);
             }
           }
         }
