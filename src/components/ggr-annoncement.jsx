@@ -88,7 +88,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 <h3>Follow This Video</h3>
               </li>
               <li>
-                <VideoPlayer src={videoTutorial} width="720" height="420" />
+                <VideoPlayer src={videoTutorial} width="720" height="420" id="mobile"/>
               </li>
               <li>
                 {" "}
@@ -118,7 +118,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 👉 Play the Game and complete the 60 days log in rewards <br />{" "}
                 (make sure to play everyday and get the rewards)
               </li>
-              <img src={Images3} alt="" />
+              <img src={Images3} alt="" id="attendance"/>
               <li>👉 Level up your account ( must reach the level 10)</li>
               <li>
                 <img src={Images2} alt="" />

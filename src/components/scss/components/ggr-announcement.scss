@@ -189,6 +189,7 @@
             &::before {
               content: " ";
             }
+
             .vjs-big-play-button {
               background-color: rgb(31, 114, 186);
             }
@@ -267,6 +268,10 @@
               iframe {
                 margin-left: 0;
               }
+              .video-js {
+                width: 105%;
+                height: 250px;
+              }
             }
             .dobol {
               margin-left: 0;
@@ -281,5 +286,8 @@
         }
       }
     }
-  }
+    #attendance {
+      width: 100%;
+    }
+  } 
 }
