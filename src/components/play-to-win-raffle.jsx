@@ -20,7 +20,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/c24db70e-a771-4036-ab7a-afc359687c86",
+        "https://sheet.best/api/sheets/ca2b339e-10fe-4000-9f5f-b7e5449fab76",
         data
       )
       .then((response) => {
@@ -38,14 +38,14 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   };
   const getData = () => {
     axios
-      .get("https://sheet.best/api/sheets/c24db70e-a771-4036-ab7a-afc359687c86")
+      .get("https://sheet.best/api/sheets/9eda958b-9a8f-44e2-a8bd-3a08338c31cc")
       .then((response) => {
         setData(response.data);
       });
   };
   const Fetch = () => {
     fetch(
-      "https://sheet.best/api/sheets/c24db70e-a771-4036-ab7a-afc359687c86",
+      "https://sheet.best/api/sheets/9eda958b-9a8f-44e2-a8bd-3a08338c31cc",
       {
         headers: {
           "X-Api-Key":
