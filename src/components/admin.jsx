@@ -6,8 +6,19 @@ import {
   DateInput,
   required,
 } from "react-admin";
+import { HashLink } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
-import { FaTrash, FaImages } from "react-icons/fa";
+import {
+  FaTrash,
+  FaImages,
+  FaUserCircle,
+  FaSearch,
+  FaRegArrowAltCircleUp,
+  FaWindowClose,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+
 import {
   FiFileText,
   FiMove,
@@ -16,7 +27,9 @@ import {
   FiZoomOut,
   FiZoomIn,
 } from "react-icons/fi";
-const Admins = ({ record, handleLogout }) => {
+import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
+
+const Admins = ({ record, handleLogout, props, ref }) => {
   const Labels = [
     {
       id: "submen1",
@@ -119,13 +132,18 @@ const Admins = ({ record, handleLogout }) => {
                 </label>
               ))}
             </div>
+            <div className="buttonzs">
+              <button>Delete</button>
+              <button>Submit</button>
+            </div>
           </div>
         </div>
         <div className="admin-right">
           <div className="main-tools">
-            <button className="tools">
+            <label htmlFor="image" className="tools">
               <FaImages />
-            </button>
+            </label>
+            <input type="file" name="image" id="image" />
             <button className="tools">
               <FiFileText />
             </button>
@@ -146,7 +164,55 @@ const Admins = ({ record, handleLogout }) => {
             </button>
           </div>
           <div className="content-web">
-            <canvas></canvas>
+            <div className="ggr-updates-contents">
+              <div
+                className="ggr-udecontents1"
+                data-aos="zoom-in"
+                data-aos-duration="500"
+              >
+                <div className="ggr-header">
+                  <div className="ggr-top">
+                    <div className="ggr-left">
+                      <Link
+                        to="/ggr-update-list"
+                        {...props}
+                        ref={ref}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        <IoIosArrowDropleftCircle />
+                      </Link>
+                      <h2>
+                        <FaUserCircle /> User
+                      </h2>
+                    </div>
+                    <div className="ggr-right">
+                      <Link
+                        to="/ggrsearch"
+                        {...props}
+                        ref={ref}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        <FaSearch />
+                      </Link>
+                    </div>
+                  </div>
+                  <img src={backgroundimg} alt="" />
+                </div>
+                <div className="ggr-update-contents">
+                  <h1>Gogo Racing Edit</h1>
+                  <h2>Description</h2>
+                  <ul>
+                    <li>Empty</li>
+                  </ul>
+                </div>
+                <div className="bottom-eyes"></div>
+              </div>
+              <div className="bootons">
+                <HashLink smooth to="/ggr-updates#" id="up">
+                  <FaRegArrowAltCircleUp />
+                </HashLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>

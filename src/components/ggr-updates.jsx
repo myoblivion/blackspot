@@ -11,7 +11,8 @@ import {
   FaRegArrowAltCircleUp,
   FaWindowClose,
 } from "react-icons/fa";
-import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDropleftCircle  } from "react-icons/io";
+
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
   // Title
@@ -49,7 +50,7 @@ const GogoRacingUpdates = ({ props, ref, currentRoute }) => {
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                <FaSearch />
+                <FaSearch />  
               </Link>
               </div>
             </div>

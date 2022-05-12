@@ -60,7 +60,7 @@ $baby-blue: #f8faff;
             color: $button-text-color;
             border-radius: 4px;
             cursor: pointer;
-            position: relative; 
+            position: relative;
           }
           width: 100%;
           display: flex;
@@ -120,6 +120,25 @@ $baby-blue: #f8faff;
           #sub4:checked ~ #submen4 {
             background-color: white;
             color: black;
+          }
+        }
+        .buttonzs {
+          button {
+            width: 20%;
+            background-color: #6e6e6e;
+            color: white;
+            margin: 2% 0;
+            margin-left: 5%;
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 1em;
+            padding: 0.5em 1em;
+            margin-bottom: 60px;
+            -webkit-appearance: none;
+            appearance: none;
+            color: $button-text-color;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            cursor: pointer;
           }
         }
         input[type="text"] {
@@ -245,12 +264,84 @@ $baby-blue: #f8faff;
             }
           }
         }
+        input {
+          opacity: 0;
+          height: 0;
+          width: 0;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+          top: 0;
+        }
       }
       .content-web {
-        width: 80%;
         margin: 0 auto;
+        width: 80%;
         height: 80vh;
+        background-image: url("/src/images/Gogo Racing Desktop 3.png");
+        background-size: 100% 100%;
+        filter: brightness(85%);
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        .ggr-header {
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+          margin-top: 3%;
+          background-color: rgb(48, 48, 48);
+          color: white;
+          width: 50%;
+          height: 100%;
+          border-top: 8px solid black;
+        }
+        .ggr-top {
+          display: flex;
+          justify-content: space-between;
+          height: 5vh;
+          align-items: center;
+          .ggr-left {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-left: 1%;
+            width: 100%;
+            a {
+              margin-left: 0;
+              font-size: 30px;
+              color: white;
+              margin-right: 2%;
+            }
+          }
+        }
+
+      }
+      .ggr-update-contents {
+        width: 50%;
         background-color: white;
+        margin: 0 auto;
+        ul {
+          margin-left: 2%;
+          li {
+            margin-bottom: 3%;
+            margin-top: 3%;
+            &::before {
+              content: "⚡ ";
+            }
+            ul {
+              li {
+                margin-top: 2%;
+                a {
+                  margin-left: 2px;
+                  color: rgb(95, 95, 255);
+                }
+                &::before {
+                  content: "➟ ";
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

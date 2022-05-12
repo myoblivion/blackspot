@@ -5,6 +5,7 @@ import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
+
   let history = useHistory();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -45,15 +46,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       });
   };
   const Fetch = () => {
-    fetch(
-      "https://sheet.best/api/sheets/27267504-45db-4b10-953e-9f543977fec6",
-      {
-        headers: {
-          "X-Api-Key":
-            "RvSUskrtSvFF5ksOTOCryevB31j-Y3d$WJAjp%lp!jQs#zuIHJql$24%Rf_fR_VL",
-        },
-      }
-    );
+    fetch("https://sheet.best/api/sheets/27267504-45db-4b10-953e-9f543977fec6");
   };
 
   const alertMessage = () => {
@@ -68,7 +61,6 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
-
   return (
     <div className="register wrapper">
       <div className="register-wrapper">
