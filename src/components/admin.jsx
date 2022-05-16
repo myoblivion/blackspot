@@ -52,6 +52,13 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       htmlFor: "sub4",
     },
   ];
+  const subLabels = [
+    {
+      id: "raffle",
+      name: "Raffle giveaway",
+      htmlFor: "pup"
+    },
+  ]
   var filterPosts = (posts, query) => {
     if (!query) {
       return posts;
@@ -163,7 +170,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
               <FiZoomOut />
             </button>
           </div>
-          <div className="content-web">
+          <div className="content-web" id="GGR">
             <div className="ggr-updates-contents">
               <div
                 className="ggr-udecontents1"

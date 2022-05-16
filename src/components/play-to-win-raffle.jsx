@@ -5,7 +5,6 @@ import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
-
   let history = useHistory();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
