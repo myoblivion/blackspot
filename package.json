@@ -27,6 +27,7 @@
     "firebase": "^9.6.11",
     "gh-pages": "^3.2.3",
     "google-spreadsheet": "^3.3.0",
+    "informed": "^4.13.0",
     "lottie-react-native": "^5.0.1",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "react": "^17.0.2",
