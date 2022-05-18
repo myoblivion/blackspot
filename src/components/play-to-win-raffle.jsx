@@ -1,65 +1,106 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import { Form, Text } from "informed";
-import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
-import { useForm, ValidationError } from "@formspree/react";
-import { GoogleSpreadsheet } from "google-spreadsheet";
 
-const SPREADSHEET_ID = "1aj3fhDrOp1M_Qww8n8CC_TziNiYyhyifPKGGKSeNaUw"; //from the URL of your blank Google Sheet
-const CLIENT_ID =
-  "366890563540-41bike67bihilkifa0rscek54g3cmkt4.apps.googleusercontent.com"; //from https://console.developers.google.com/apis/credentials
-const API_KEY = "AIzaSyApqrQ8aXiKeZbRkAxnhSY1eE-CROieVIU"; //https://console.developers.google.com/apis/credentials
-const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
+import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
+
+import axios from "axios";
 
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [number, setNumber] = useState("");
+
+
+
+  let history = useHistory();
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [data, setData] = useState([]);
+  const handleSubmit = (e) => {
+    history.push("/");
+    e.preventDefault();
     const data = {
       Name: name,
       Number: number,
       Email: email,
-    }
+    };
+    axios
+      .post(
+        "https://sheet.best/api/sheets/93cff6ea-88b5-4f74-a585-8389f20eadbf",
+        "http://54.179.151.77",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+        setName("");
+        setNumber("");
+        setEmail("");
+      });
+    alert(
+      "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
+    );
+    useEffect(() => {
+      getData();
+    }, [data]);
+  };
+  const getData = () => {
+    axios
+      .get("https://sheet.best/api/sheets/93cff6ea-88b5-4f74-a585-8389f20eadbf")
+      .then((response) => {
+        setData(response.data);
+      });
+  };
+  const Fetch = () => { 
+    fetch("https://sheet.best/api/sheets/93cff6ea-88b5-4f74-a585-8389f20eadbf");
+  };
 
-
+  const alertMessage = () => {
+    alert(
+      "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
+    );
+  };
+  useEffect(() => {
+    getData();
+    Fetch();
+  }, [data]);
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
-
   return (
     <div className="register wrapper">
       <div className="register-wrapper">
         <div className="form-wrapper">
           <h1>Gogo Racing Info</h1>
-          <form method="get" id="formwrap" >
+          <form onSubmit={handleSubmit} method="get" id="formwrap">
             <input
               type="text"
               autoComplete="off"
-              name="name"
+              name="entry.944015103"
               placeholder="Enter your Account Name"
-              required
               onChange={(e) => setName(e.target.value)}
+              value={name}
+              required
             />
             <input
               type="text"
               autoComplete="off"
-              name="number"
+              name="entry.396245137"
               placeholder="Enter Your Account ID"
               maxLength="6"
-              required
               onChange={(e) => setNumber(e.target.value)}
+              value={number}
+              required
             />
             <input
               type="email"
               autoComplete="off"
-              name="email"
+              name="entry.49579415"
               placeholder="Enter Your Email"
-              required
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              required
             />
             <div className="down-buddeh">
               <div className="up">
                 <input type="checkbox" name="check" id="check" required />
-                <label htmlFor="check" id="checksz">
+                <label htmlFor="check" id="checksz" onClick={alertMessage}>
                   I have read and agree to the terms and conditions and privacy
                   policy.
                 </label>
