@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Form, Text } from "informed";
 import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
-import { GoogleSpreadsheet } from "google-spreadsheet";
 
 const SPREADSHEET_ID = "1aj3fhDrOp1M_Qww8n8CC_TziNiYyhyifPKGGKSeNaUw"; //from the URL of your blank Google Sheet
 const CLIENT_ID =
@@ -19,7 +18,25 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       Number: number,
       Email: email,
     }
-
+    let handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        let res = await fetch("366890563540-41bike67bihilkifa0rscek54g3cmkt4.apps.googleusercontent.com", {
+          method: "GET",
+          body: JSON.stringify({data}),
+        });
+        let resJson = await res.json();
+        if (res.status === 200) {
+          setName("");
+          setNumber("");
+          setEmail("");
+        } else {
+          setName("Some error occured");
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
@@ -30,7 +47,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       <div className="register-wrapper">
         <div className="form-wrapper">
           <h1>Gogo Racing Info</h1>
-          <form method="get" id="formwrap" >
+          <form method="get" id="formwrap" onSubmit={handleSubmit}>
             <input
               type="text"
               autoComplete="off"

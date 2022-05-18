@@ -14,7 +14,7 @@ const handleSubmit = (e) => {
   const data = {
     Name: name,
     Number: number,
-    Email: email,   
+    Email: email,
   };
   axios.post("http://54.179.151.77/api/event/join", users).then((response) => {
     console.log(response);
@@ -38,9 +38,9 @@ class App extends Component {
   }
 }
 console.log(App);
-const PORT = 200 || process.env.PORT;
+const PORT = 800 || process.env.PORT;
 const admin = (e) => {
-    history.push("/admin");
-}
+  history.push("/admin");
+};
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
