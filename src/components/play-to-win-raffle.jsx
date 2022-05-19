@@ -3,10 +3,9 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
 
 import axios from "axios";
+import Config from "../config.js";
 
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
-
-
 
   let history = useHistory();
   const [name, setName] = useState("");
@@ -23,7 +22,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/93cff6ea-88b5-4f74-a585-8389f20eadbf",
+        "https://sheet.best/api/sheets/9eb9ee00-47d8-434c-adb0-b82b856c5a5b",
         "http://54.179.151.77",
         data
       )
@@ -42,13 +41,13 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   };
   const getData = () => {
     axios
-      .get("https://sheet.best/api/sheets/93cff6ea-88b5-4f74-a585-8389f20eadbf")
+      .get("https://sheet.best/api/sheets/9eb9ee00-47d8-434c-adb0-b82b856c5a5b")
       .then((response) => {
         setData(response.data);
       });
   };
-  const Fetch = () => { 
-    fetch("https://sheet.best/api/sheets/93cff6ea-88b5-4f74-a585-8389f20eadbf");
+  const Fetch = () => {
+    fetch("https://sheet.best/api/sheets/9eb9ee00-47d8-434c-adb0-b82b856c5a5b");
   };
 
   const alertMessage = () => {
