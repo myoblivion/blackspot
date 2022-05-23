@@ -3,10 +3,8 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
 
 import axios from "axios";
-import Config from "../config.js";
 
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
-
   let history = useHistory();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -22,7 +20,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/9eb9ee00-47d8-434c-adb0-b82b856c5a5b",
+        "https://script.google.com/macros/library/d/1JrAOnX0z8XeVlYWWH51es3pHiMYGSK6xz2mTpHE_fhZdR8DZyxir2zzN/2",
         "http://54.179.151.77",
         data
       )
@@ -41,13 +39,17 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   };
   const getData = () => {
     axios
-      .get("https://sheet.best/api/sheets/9eb9ee00-47d8-434c-adb0-b82b856c5a5b")
+      .get(
+        "https://script.google.com/macros/library/d/1JrAOnX0z8XeVlYWWH51es3pHiMYGSK6xz2mTpHE_fhZdR8DZyxir2zzN/2"
+      )
       .then((response) => {
         setData(response.data);
       });
   };
   const Fetch = () => {
-    fetch("https://sheet.best/api/sheets/9eb9ee00-47d8-434c-adb0-b82b856c5a5b");
+    fetch(
+      "https://script.google.com/macros/library/d/1JrAOnX0z8XeVlYWWH51es3pHiMYGSK6xz2mTpHE_fhZdR8DZyxir2zzN/2"
+    );
   };
 
   const alertMessage = () => {

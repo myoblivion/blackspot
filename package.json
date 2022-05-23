@@ -27,6 +27,7 @@
     "file-loader": "^6.2.0",
     "firebase": "^9.6.11",
     "gapi": "^0.0.3",
+    "gaxios": "^5.0.0",
     "gh-pages": "^3.2.3",
     "google-spreadsheet": "^3.3.0",
     "informed": "^4.13.0",
