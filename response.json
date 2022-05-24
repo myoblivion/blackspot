@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "black-spot-studio-ph",
+  "private_key_id": "0cc4c814497b8fdbe3793752adf84df100e06eed",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4UGifmuug8lm7\nVGHZkoWwb5pHMRuxW7qOcbXaEV2mES+FHqJsf8tyRDyc/Z9+AaTfUSu7g+UgXzie\ncUum5u00NCysBCeT7OhJANx6+2jfVF2P1x4P0UXQyT5YwCAOjUjn2sUq39FAkqh3\nHMUWSLu/6HUIxqJPCEW88MSGu7hR6p27iz1pu9SPAc+beba9Wy/EAz6MfAx5Gxod\nLdzliNgqg54coFUvSqt9+tGnG1ZCjGeKrBW3NqKuYR8xYbgbvSSzHEhz/BxR3i+t\n+zk7e85+/lU+FeHIWQs2jQntuyevN60hi6yEfz3lkAGVr3y0Ycrs7hfJNfYzFRFd\nfsxR26I5AgMBAAECggEAAnmwpgVuc7IS4BqxLmWy3kc+wwUBp7ShK/I9Vyk+NjxA\nhKEAMm/W8M5szU5KBZG1FVC27c+cKf6iuTIGqj5WDN+Z1/zoS9V12yvOn5I1JYax\ns6cCdC5DKfDXTFmBigsotwBvqcnpZVzINBf9UkrLcWIzAYQAFbVOkSE0qns77acF\n9qnSvU2FKWR5rUHqKA+K0HPcUlCLzjip7qbuIoDmtXUwQ6NZH0ennC/xzfrX41+h\nFAY58/zB7nNT/9HEQHAkFtHUngeTFvMqLmi1mdM4qmau6hd8RwG3PZiqmzTILkw0\ngF0NI7ncbUavMU/ghpEESXN8pBbnUAd6FGRoiICiwQKBgQDvwwJLdNnDs/0du/Kn\n6/lEYgJtqHdbYogiJJ2b6A6kEWFmr+bCDd+RFJnH+CDc6YbIC67Hev6+W5JmL7PN\nlWO8ebkY/7+UoE7lfIcvBysWjJwMqQnsMUZ3NQVEeijaFNShWivDQu/eaEgq5+pT\naZYls8IGz/hdVthNrzxmptd2UQKBgQDEzAw+2c5984HWvnDIuq/CX7jxm/k3bvRD\nWw69ixzf43PVXEJMH/sCzSyvvBKCAqId09SLTQbPReLOY9BQKs9XLBR6rjS9QImU\nfCM6YQ/Di5xpOSp9FPdDTNcRKLWHgiI+duPDm1Y5ZWXzeXHUkriWsKIsulrO1VFu\njAn+PzSraQKBgQCIB+1CYH648WK3vw3yxgh8Cttz2fQ2LhYswPeHIEdGQPIxL7XN\n/c8NYlHJyfbjP7+PukkktpzX5d6PCZuLFaoroigpjdjle3qn61pLjVaeCZLz/+g4\nUNC5C6T8cA7DhLQLA7z2oQC1ABeJ+GDTiIF+zJlWAiLY2lAI61Zqq1htsQKBgG2L\n7BEcay5/WzovnlaOXQIFCM0tdqfd0oif6m+mPXd/hF4zUhBQCQkBLyvPtDm8v4N9\nBCZaxTyh+WPL+gx2GB69QdUcnezvPOZzx6RanUzLrVCBat5fylgjMOCzWYFJ9kfx\nJE4hbPjcMck7RBsBZVE0l8HwJlZWNlMkDvgBNQ9pAoGBAIOXAV6rtCk85xgkz177\nUaqm7MhQmVtfVLvSN3HCP8qUo3DkeTI9A3h3YKjwX4P4UuB+8i+9bZpRYVSZ+TuZ\nxUHwPRKsgEAFFo/WKl1JqoNnXFfAdD/KknIObsjeVWBzB4qQl+Ra+Jawmr5zWLG1\nSxpfzvhtx838dLdLlxNc8YcD\n-----END PRIVATE KEY-----\n",
+  "client_email": "form-submission@black-spot-studio-ph.iam.gserviceaccount.com",
+  "client_id": "107838062430836037008",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/form-submission%40black-spot-studio-ph.iam.gserviceaccount.com"
+}
