@@ -14,6 +14,9 @@ import {
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
+// Example adapted from https://fetch.spec.whatwg.org/#example-headers-class
+
+
 const TermsAndConditions = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {

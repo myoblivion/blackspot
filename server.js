@@ -1,11 +1,25 @@
 const express = require("express");
 const { google } = require("googleapis");
 const cors = require("cors");
-
-const app = express();
-app.use(express.json());
-
-app.use(cors());
+const path = require("path");
+const router = express.Router();
+const App = express();
+const http = require("http");
+App.use(express.json());
+App.use(express.static(path.join(__dirname, "App")));
+App.get("/ping", (req, res) => {
+  return res.send("pong");
+});
+router.get("/", function (req, res, next) {
+  res.send("I guess it's working");
+});
+module.export = router;
+App.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname));
+});
+App.use(
+  cors()
+);
 const authentication = async () => {
   const auth = new google.auth.GoogleAuth({
     keyFile: "response.json",
@@ -19,11 +33,9 @@ const authentication = async () => {
   return { sheets };
 };
 
-
-
 const id = "1llRobkQRlqW61AI8nZ6Dl_HXxGobzfJVLnjq_kF67Q4";
 
-app.get("/", async (req, res) => {
+App.get("/", async (req, res) => {
   try {
     const { sheets } = await authentication();
     const response = await sheets.spreadsheets.values.get({
@@ -37,11 +49,11 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.post("/", async (req, res) => {
+App.post("/", async (req, res) => {
   try {
     const { newName, newNumber, newEmail } = req.body;
     const { sheets } = await authentication();
-    const writeReq = await sheets.spreadsheets.values.append({
+    const writeReq = sheets.spreadsheets.values.append({
       spreadsheetId: id,
       range: "sheesh",
       valueInputOption: "USER_ENTERED",
@@ -50,20 +62,20 @@ app.post("/", async (req, res) => {
       },
     });
     if ((writeReq.status = 200)) {
-      return res.json({ msg: "newName: Hi!" });
+      return res.json({ msg: req.body });
     }
     return res.json({
       msg: "something went wrong while updating the spreadsheet",
     });
   } catch (e) {
-    console.log("ERROR BROTHER", e);
+    console.log("NOOOOOO ERROR", e);
     res.status(500).send();
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.get("/", function (req, res) {
+const PORT = process.env.PORT || 8081;
+App.get("/", function (req, res) {
   res.send("Express Server Is Running!!!!!!");
 });
 
-app.listen(PORT, () => console.log("Server running YES!"));
+App.listen(PORT, () => console.log("Server running YES!"));

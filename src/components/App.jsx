@@ -1,10 +1,10 @@
+
 import React, { useState, useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
@@ -59,7 +59,6 @@ const Appcomponent = () => {
   const newClass = location.split("/")[1];
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");

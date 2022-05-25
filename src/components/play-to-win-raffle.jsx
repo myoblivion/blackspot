@@ -3,12 +3,12 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
 
 import axios from "axios";
-
+import Server from "/Users/USER/Desktop/blackspot/response.json";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   let history = useHistory();
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, newName] = useState("");
+  const [number, newNumber] = useState("");
+  const [email, newEmail] = useState("");
   const [data, setData] = useState([]);
   const handleSubmit = (e) => {
     history.push("/");
@@ -18,18 +18,12 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       Number: number,
       Email: email,
     };
-    axios
-      .post(
-        "https://script.google.com/macros/library/d/1JrAOnX0z8XeVlYWWH51es3pHiMYGSK6xz2mTpHE_fhZdR8DZyxir2zzN/2",
-        "http://54.179.151.77",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-        setName("");
-        setNumber("");
-        setEmail("");
-      });
+    axios.post("http://localhost:8081", data).then((response) => {
+      console.log(response);
+      newName("");
+      newNumber("");
+      newEmail("");
+    });
     alert(
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
@@ -38,18 +32,12 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     }, [data]);
   };
   const getData = () => {
-    axios
-      .get(
-        "https://script.google.com/macros/library/d/1JrAOnX0z8XeVlYWWH51es3pHiMYGSK6xz2mTpHE_fhZdR8DZyxir2zzN/2"
-      )
-      .then((response) => {
-        setData(response.data);
-      });
+    axios.get("http://localhost:8081").then((response) => {
+      setData(response.data);
+    });
   };
   const Fetch = () => {
-    fetch(
-      "https://script.google.com/macros/library/d/1JrAOnX0z8XeVlYWWH51es3pHiMYGSK6xz2mTpHE_fhZdR8DZyxir2zzN/2"
-    );
+    fetch({ Server });
   };
 
   const alertMessage = () => {
@@ -75,7 +63,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               autoComplete="off"
               name="entry.944015103"
               placeholder="Enter your Account Name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => newName(e.target.value)}
               value={name}
               required
             />
@@ -85,7 +73,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               name="entry.396245137"
               placeholder="Enter Your Account ID"
               maxLength="6"
-              onChange={(e) => setNumber(e.target.value)}
+              onChange={(e) => newNumber(e.target.value)}
               value={number}
               required
             />
@@ -94,7 +82,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               autoComplete="off"
               name="entry.49579415"
               placeholder="Enter Your Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => newEmail(e.target.value)}
               value={email}
               required
             />
