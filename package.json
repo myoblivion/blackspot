@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server"
   },
-  "proxy": "http://localhost:4000",
+  "proxy": "https://blackspotstudio.ph/",
   "author": "France Lee",
   "license": "MIT",
   "dependencies": {
