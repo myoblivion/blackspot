@@ -17,8 +17,20 @@ module.export = router;
 App.get("/", (req, res) => {
   res.sendFile(path.join(__dirname));
 });
+const allowedOrigins = ["http://localhost:8080","http://localhost:4000"];
 App.use(
-  cors()
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        var msg =
+          "The CORS policy for this site does not " +
+          "allow access from the specified Origin.";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+  })
 );
 const authentication = async () => {
   const auth = new google.auth.GoogleAuth({
@@ -45,20 +57,20 @@ App.get("/", async (req, res) => {
     res.send(response.data);
   } catch (e) {
     console.log(e);
-    res.status(500).send();
+    res.status(90000).send();
   }
 });
 
 App.post("/", async (req, res) => {
   try {
-    const { newName, newNumber, newEmail } = req.body;
+    const { setName, setNumber, setEmail } = req.body;
     const { sheets } = await authentication();
     const writeReq = sheets.spreadsheets.values.append({
       spreadsheetId: id,
       range: "sheesh",
       valueInputOption: "USER_ENTERED",
       resource: {
-        values: [[newName, newNumber, newEmail]],
+        values: [[setName, setNumber, setEmail]],
       },
     });
     if ((writeReq.status = 200)) {
@@ -69,11 +81,11 @@ App.post("/", async (req, res) => {
     });
   } catch (e) {
     console.log("NOOOOOO ERROR", e);
-    res.status(500).send();
+    res.status(9000).send();
   }
 });
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 4000;
 App.get("/", function (req, res) {
   res.send("Express Server Is Running!!!!!!");
 });

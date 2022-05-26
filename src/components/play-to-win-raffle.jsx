@@ -6,49 +6,59 @@ import axios from "axios";
 import Server from "/Users/USER/Desktop/blackspot/response.json";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   let history = useHistory();
-  const [name, newName] = useState("");
-  const [number, newNumber] = useState("");
-  const [email, newEmail] = useState("");
-  const [data, setData] = useState([]);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [range, setData] = useState([]);
   const handleSubmit = (e) => {
-    history.push("/");
     e.preventDefault();
-    const data = {
+    const range = {
       Name: name,
       Number: number,
       Email: email,
     };
-    axios.post("http://localhost:8081", data).then((response) => {
+    
+    axios.post("http://localhost:4000", range).then((response) => {
       console.log(response);
-      newName("");
-      newNumber("");
-      newEmail("");
+      setName("");
+      setNumber("");
+      setEmail("");
     });
     alert(
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
     useEffect(() => {
-      getData();
-    }, [data]);
-  };
-  const getData = () => {
-    axios.get("http://localhost:8081").then((response) => {
-      setData(response.data);
+      setData();
+      return () => {
+        [range];
+      };
     });
   };
-  const Fetch = () => {
-    fetch({ Server });
-  };
 
-  const alertMessage = () => {
+  const Fetch = () => {
+    fetch("http://localhost:4000");
+  };
+  function reqListener(Fetch) {
+    var range = JSON.parse(this.responseText);
+    console.log(range);
+  }
+
+  function reqError(err) {
+    console.log("Fetch Error :-S", err);
+  }   
+
+  var oReq = new XMLHttpRequest();
+  oReq.onload = reqListener;
+  oReq.onerror = reqError;
+  oReq.open("get", "http://localhost:4000", true);
+  oReq.send("post", "http://localhost:4000", true);
+
+  function alertMessage() {
     alert(
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
     );
-  };
-  useEffect(() => {
-    getData();
-    Fetch();
-  }, [data]);
+  }
+
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
@@ -63,7 +73,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               autoComplete="off"
               name="entry.944015103"
               placeholder="Enter your Account Name"
-              onChange={(e) => newName(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               value={name}
               required
             />
@@ -73,7 +83,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               name="entry.396245137"
               placeholder="Enter Your Account ID"
               maxLength="6"
-              onChange={(e) => newNumber(e.target.value)}
+              onChange={(e) => setNumber(e.target.value)}
               value={number}
               required
             />
@@ -82,7 +92,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               autoComplete="off"
               name="entry.49579415"
               placeholder="Enter Your Email"
-              onChange={(e) => newEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               value={email}
               required
             />
