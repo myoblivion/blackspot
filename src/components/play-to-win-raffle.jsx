@@ -12,13 +12,14 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [range, setData] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
+    // history.push("/");
     const range = {
-      Name: name,
-      Number: number,
-      Email: email,
+      setName: name,
+      setNumber: number,
+      setEmail: email,
     };
-    
-    axios.post("http://localhost:4000", range).then((response) => {
+
+    axios.post("http://localhost:4000", range).then(async (response) => {
       console.log(response);
       setName("");
       setNumber("");
@@ -27,37 +28,37 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     alert(
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
-    useEffect(() => {
-      setData();
-      return () => {
-        [range];
-      };
-    });
+
+    const Fetch = () => {
+      fetch("http://localhost:4000");
+    };
+    function reqListener() {
+      var range = JSON.parse(this.responseText);
+      console.log(range);
+    }
+
+    function reqError(err) {
+      console.log("Fetch Error :-S", err);
+    }
+
+    var oReq = new XMLHttpRequest(Fetch);
+    oReq.onload = reqListener;
+    oReq.onerror = reqError;
+    oReq.open("get", "http://localhost:4000", true);
+    oReq.send("post", "http://localhost:4000", true);
   };
-
-  const Fetch = () => {
-    fetch("http://localhost:4000");
-  };
-  function reqListener(Fetch) {
-    var range = JSON.parse(this.responseText);
-    console.log(range);
-  }
-
-  function reqError(err) {
-    console.log("Fetch Error :-S", err);
-  }   
-
-  var oReq = new XMLHttpRequest();
-  oReq.onload = reqListener;
-  oReq.onerror = reqError;
-  oReq.open("get", "http://localhost:4000", true);
-  oReq.send("post", "http://localhost:4000", true);
 
   function alertMessage() {
     alert(
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."
     );
   }
+  useEffect(() => {
+    setData();
+    return () => {
+      [range];
+    };
+  });
 
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
@@ -67,7 +68,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       <div className="register-wrapper">
         <div className="form-wrapper">
           <h1>Gogo Racing Info</h1>
-          <form onSubmit={handleSubmit} method="get" id="formwrap">
+          <form onSubmit={handleSubmit} method="post" id="formwrap">
             <input
               type="text"
               autoComplete="off"

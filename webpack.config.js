@@ -18,6 +18,9 @@ module.exports = {
       crypto: require.resolve("crypto-browserify"),
       "crypto-browserify": require.resolve("crypto-browserify"),
     },
+    alias: {
+      react: path.resolve("./node_modules/react"),
+    },
   },
   context: __dirname,
   entry: ["babel-polyfill", "./src/index.js"],
