@@ -18,6 +18,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       setNumber: number,
       setEmail: email,
     };
+
     axios.post("http://localhost:4000", range).then(async (response) => {
       console.log(response);
       setName("");

@@ -17,7 +17,7 @@ module.export = router;
 App.get("/", (req, res) => {
   res.sendFile(path.join(__dirname));
 });
-const allowedOrigins = ["http://localhost:8080", "http://localhost:4000"];
+const allowedOrigins = ["http://localhost:8080", "http://localhost:4000", "https://blackspotstudio.ph/#/"];
 App.use(
   cors({
     origin: function (origin, callback) {
