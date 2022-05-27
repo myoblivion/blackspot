@@ -19,6 +19,7 @@ App.get("/", (req, res) => {
 });
 const allowedOrigins = [
   "http://localhost:8080",
+  "http://blackspotstudio.ph",
   "http://3.37.118.67/api/event/join",
 ];
 App.use(
