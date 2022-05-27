@@ -17,12 +17,12 @@ module.export = router;
 App.get("/", (req, res) => {
   res.sendFile(path.join(__dirname));
 });
-const allowedOrigins = ["http://localhost:8080", "http://localhost:4000", "https://blackspotstudio.ph/#/"];
+const allowedOrigins = ["http://localhost:8080", "http://blackspotstudio.ph"];
 App.use(
   cors({
     origin: function (origin, callback) {
       if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
+      if (allowedOrigins.indexOf(origin) === 2) {
         var msg =
           "The CORS policy for this site does not " +
           "allow access from the specified Origin.";
