@@ -18,19 +18,37 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       setNumber: number,
       setEmail: email,
     };
+    axios
+      .all([
+        axios.post("http://localhost:4000", range).then(async (response) => {
+          console.log(response);
+          setName("");
+          setNumber("");
+          setEmail("");
+        }),
+        axios
+          .post("http://3.37.118.67/api/event/join", range)
+          .then(async (response) => {
+            console.log(response);
+            setName("");
+            setNumber("");
+            setEmail("");
+          }),
+      ])
+      .then(
+        axios.spread((data1, data2) => {
+          // output of req.
+          console.log("data1", data1, "data2", data2);
+        })
+      );
 
-    axios.post("http://localhost:4000", range).then(async (response) => {
-      console.log(response);
-      setName("");
-      setNumber("");
-      setEmail("");
-    });
     alert(
       "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
     );
 
     const Fetch = () => {
-      fetch("http://localhost:4000");
+      fetch("http://localhost:4000"),
+        fetch("http://3.37.118.67/api/event/join");
     };
     function reqListener() {
       var range = JSON.parse(this.responseText);
@@ -44,8 +62,18 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     var oReq = new XMLHttpRequest(Fetch);
     oReq.onload = reqListener;
     oReq.onerror = reqError;
-    oReq.open("get", "http://localhost:4000", true);
-    oReq.send("post", "http://localhost:4000", true);
+    oReq.open(
+      "get",
+      "http://localhost:4000",
+      "http://3.37.118.67/api/event/join",
+      true
+    );
+    oReq.send(
+      "post",
+      "http://localhost:4000",
+      "http://3.37.118.67/api/event/join",
+      true
+    );
   };
 
   function alertMessage() {
