@@ -17,7 +17,10 @@ module.export = router;
 App.get("/", (req, res) => {
   res.sendFile(path.join(__dirname));
 });
-const allowedOrigins = ["http://localhost:8080", "http://blackspotstudio.ph"];
+const allowedOrigins = [
+  "http://localhost:8080",
+  "http://3.37.118.67/api/event/join",
+];
 App.use(
   cors({
     origin: function (origin, callback) {
@@ -32,6 +35,7 @@ App.use(
     },
   })
 );
+console.log(allowedOrigins);
 const authentication = async () => {
   const auth = new google.auth.GoogleAuth({
     keyFile: "response.json",

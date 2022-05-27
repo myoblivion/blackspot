@@ -12,7 +12,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [range, setData] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // history.push("/");
+    history.push("/");
     const range = {
       setName: name,
       setNumber: number,
