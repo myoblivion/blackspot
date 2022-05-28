@@ -2,6 +2,7 @@ const express = require("express");
 const { google } = require("googleapis");
 const cors = require("cors");
 const path = require("path");
+const axios = require("axios");
 const router = express.Router();
 const App = express();
 const http = require("http");
@@ -13,6 +14,12 @@ App.get("/ping", (req, res) => {
 router.get("/", function (req, res, next) {
   res.send("I guess it's working");
 });
+const bodyParser = require("body-parser");
+var server = App.listen(3000);
+
+App.use(bodyParser.json());
+App.use(bodyParser.urlencoded({ extended: true }));
+
 module.export = router;
 App.get("/", (req, res) => {
   res.sendFile(path.join(__dirname));
@@ -20,7 +27,7 @@ App.get("/", (req, res) => {
 const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
-  "http://3.37.118.67/api/event/join",
+  "http://3.37.118.67/api/event/join/",
 ];
 App.use(
   cors({
@@ -68,14 +75,14 @@ App.get("/", async (req, res) => {
 
 App.post("/", async (req, res) => {
   try {
-    const { setName, setNumber, setEmail } = req.body;
+    const { refer_user_id, uuid, setEmail, event_index } = req.body;
     const { sheets } = await authentication();
     const writeReq = sheets.spreadsheets.values.append({
       spreadsheetId: id,
       range: "sheesh",
       valueInputOption: "USER_ENTERED",
       resource: {
-        values: [[setName, setNumber, setEmail]],
+        values: [[refer_user_id, uuid, setEmail, event_index]],
       },
     });
     if ((writeReq.status = 200)) {
@@ -88,6 +95,34 @@ App.post("/", async (req, res) => {
     console.log("NOOOOOO ERROR", e);
     res.status(9000).send();
   }
+});
+
+// Axios
+
+const posts = [
+  {
+    refer_user_id: "test",
+    uuid: "",
+    event_index: "",
+  },
+];
+posts.forEach((post) => {
+  axios
+    .post("http://3.37.118.67/api/event/join", post, {
+      headers: {
+        PUBLISHER_PRIVATE_KEY: "4a06076c-a4e8-5029-8365-00004978d622",
+        KEY: "AIzaSyApqrQ8aXiKeZbRkAxnhSY1eE-CROieVIU",
+      },
+    })
+
+    // Print response
+    .then((response) => {
+      const { refer_user_id, uuid, event_index } = response.data;
+      console.log(response.data);
+    })
+
+    // Print error message if occur
+    .catch((error) => console.log(error));
 });
 
 const PORT = process.env.PORT || 4000;

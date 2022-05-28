@@ -1,38 +1,41 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 
-import { Link, withRouter, useHistory, useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import axios from "axios";
-import Server from "/Users/USER/Desktop/blackspot/response.json";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   let history = useHistory();
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [name, refer_user_id] = useState("");
+  const [number, uuid] = useState("");
   const [email, setEmail] = useState("");
+  const [event, event_index] = useState("1");
   const [range, setData] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push("/");
     const range = {
-      setName: name,
-      setNumber: number,
+      refer_user_id: name,
+      uuid: number,
       setEmail: email,
+      event_index: event,
     };
     axios
       .all([
         axios.post("http://localhost:4000", range).then(async (response) => {
           console.log(response);
-          setName("");
-          setNumber("");
+          refer_user_id("");
+          uuid("");
           setEmail("");
+          event_index("1")
         }),
         axios
           .post("http://3.37.118.67/api/event/join", range)
           .then(async (response) => {
             console.log(response);
-            setName("");
-            setNumber("");
+            refer_user_id("");
+            uuid("");
             setEmail("");
+            event_index("1")
           }),
       ])
       .then(
@@ -102,7 +105,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               autoComplete="off"
               name="entry.944015103"
               placeholder="Enter your Account Name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => refer_user_id(e.target.value)}
               value={name}
               required
             />
@@ -112,7 +115,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
               name="entry.396245137"
               placeholder="Enter Your Account ID"
               maxLength="6"
-              onChange={(e) => setNumber(e.target.value)}
+              onChange={(e) => uuid(e.target.value)}
               value={number}
               required
             />
