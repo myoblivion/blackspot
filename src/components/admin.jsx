@@ -200,6 +200,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
               <FiZoomOut />
             </button>
           </div>
+          {/*  */}
           <div className="content-web" id="GGR">
             <div className="ggr-admin-contents">
               <div className="ggr-admcontents1">
@@ -232,9 +233,9 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                   <img src={backgroundimg} alt="" />
                 </div>
                 <div className="ggr-admins-contents">
-                  <Draggable>
-                    <h1 contentEditable>Title (header)</h1>
-                  </Draggable>
+                  <h1 contentEditable draggable>
+                    Title (header)
+                  </h1>
                   <Draggable>
                     <h2 contentEditable>Description</h2>
                   </Draggable>
@@ -248,6 +249,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
               </div>
             </div>
           </div>
+          {/*  */}
         </div>
       </div>
     </div>

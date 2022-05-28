@@ -101,7 +101,7 @@ App.post("/", async (req, res) => {
 
 const posts = [
   {
-    refer_user_id: "test",
+    refer_user_id: "",
     uuid: "",
     event_index: "",
   },
