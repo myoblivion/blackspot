@@ -9,7 +9,7 @@ import {
 import { HashLink } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
 import Draggable from "react-draggable"; // The default// ES6
-import { Resizable } from "react-resizable";
+import { ResizableBox } from "react-resizable";
 import {
   FaTrash,
   FaImages,
