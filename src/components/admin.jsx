@@ -8,6 +8,8 @@ import {
 } from "react-admin";
 import { HashLink } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
+import Draggable from "react-draggable"; // The default// ES6
+import { Resizable } from "react-resizable";
 import {
   FaTrash,
   FaImages,
@@ -30,6 +32,25 @@ import {
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
 const Admins = ({ record, handleLogout, props, ref }) => {
+  const [cursor, setCursor] = useState("crosshair");
+
+  const changeCursor1 = () => {
+    setCursor((prevState) => {
+      if (prevState === "crosshair") {
+        return "pointer";
+      }
+      return "crosshair";
+    });
+  };
+  const changeCursor2 = () => {
+    setCursor((prevState) => {
+      if (prevState === "zoom-in") {
+        return "pointer";
+      }
+      return "zoom-in";
+    });
+  };
+
   const Labels = [
     {
       id: "submen1",
@@ -56,9 +77,9 @@ const Admins = ({ record, handleLogout, props, ref }) => {
     {
       id: "raffle",
       name: "Raffle giveaway",
-      htmlFor: "pup"
+      htmlFor: "pup",
     },
-  ]
+  ];
   var filterPosts = (posts, query) => {
     if (!query) {
       return posts;
@@ -141,7 +162,8 @@ const Admins = ({ record, handleLogout, props, ref }) => {
             </div>
             <div className="buttonzs">
               <button>Delete</button>
-              <button>Submit</button>
+              <button>Add New</button>
+              <button>Save</button>
             </div>
           </div>
         </div>
@@ -154,7 +176,11 @@ const Admins = ({ record, handleLogout, props, ref }) => {
             <button className="tools">
               <FiFileText />
             </button>
-            <button className="tools">
+            <button
+              className="tools"
+              onClick={changeCursor1}
+              style={{ cursor: cursor }}
+            >
               <FiMove />
             </button>
             <button className="tools">
@@ -163,7 +189,11 @@ const Admins = ({ record, handleLogout, props, ref }) => {
             <button className="tools">
               <FiRotateCw />
             </button>
-            <button className="tools">
+            <button
+              className="tools"
+              onClick={changeCursor2}
+              style={{ cursor: cursor }}
+            >
               <FiZoomIn />
             </button>
             <button className="tools">
@@ -171,17 +201,13 @@ const Admins = ({ record, handleLogout, props, ref }) => {
             </button>
           </div>
           <div className="content-web" id="GGR">
-            <div className="ggr-updates-contents">
-              <div
-                className="ggr-udecontents1"
-                data-aos="zoom-in"
-                data-aos-duration="500"
-              >
+            <div className="ggr-admin-contents">
+              <div className="ggr-admcontents1">
                 <div className="ggr-header">
                   <div className="ggr-top">
                     <div className="ggr-left">
                       <Link
-                        to="/ggr-update-list"
+                        to="/admin"
                         {...props}
                         ref={ref}
                         onClick={() => window.scrollTo(0, 0)}
@@ -194,7 +220,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                     </div>
                     <div className="ggr-right">
                       <Link
-                        to="/ggrsearch"
+                        to="/admin"
                         {...props}
                         ref={ref}
                         onClick={() => window.scrollTo(0, 0)}
@@ -205,19 +231,20 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                   </div>
                   <img src={backgroundimg} alt="" />
                 </div>
-                <div className="ggr-update-contents">
-                  <h1>Gogo Racing Edit</h1>
-                  <h2>Description</h2>
-                  <ul>
-                    <li>Empty</li>
-                  </ul>
+                <div className="ggr-admins-contents">
+                  <Draggable>
+                    <h1 contentEditable>Title (header)</h1>
+                  </Draggable>
+                  <Draggable>
+                    <h2 contentEditable>Description</h2>
+                  </Draggable>
+                  <Draggable>
+                    <ul>
+                      <li contentEditable>Empty</li>
+                    </ul>
+                  </Draggable>
                 </div>
                 <div className="bottom-eyes"></div>
-              </div>
-              <div className="bootons">
-                <HashLink smooth to="/ggr-updates#" id="up">
-                  <FaRegArrowAltCircleUp />
-                </HashLink>
               </div>
             </div>
           </div>
