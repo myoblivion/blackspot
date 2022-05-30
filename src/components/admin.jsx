@@ -1,15 +1,8 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import {
-  Create,
-  SimpleForm,
-  TextInput,
-  DateInput,
-  required,
-} from "react-admin";
+
 import { HashLink } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
 import Draggable from "react-draggable"; // The default// ES6
-import { ResizableBox } from "react-resizable";
 import {
   FaTrash,
   FaImages,
@@ -105,6 +98,9 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       history.push(`?s=${searchQuery}`);
       e.preventDefault();
     };
+
+    const [textAreaNo, setTextAreaNo] = useState(0);
+    const [uploadNo, setUploadNo] = useState(0);
     return (
       <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">
         <input
@@ -215,9 +211,9 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                       >
                         <IoIosArrowDropleftCircle />
                       </Link>
-                      <h2>
+                      <h1>
                         <FaUserCircle /> User
-                      </h2>
+                      </h1>
                     </div>
                     <div className="ggr-right">
                       <Link

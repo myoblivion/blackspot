@@ -19,39 +19,19 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       setEmail: email,
       event_index: event,
     };
-    axios
-      .all([
-        axios.post("http://localhost:4000", range).then(async (response) => {
-          console.log(response);
-          refer_user_id("");
-          uuid("");
-          setEmail("");
-          event_index("1")
-        }),
-        axios
-          .post("http://3.37.118.67/api/event/join", range)
-          .then(async (response) => {
-            console.log(response);
-            refer_user_id("");
-            uuid("");
-            setEmail("");
-            event_index("1")
-          }),
-      ])
-      .then(
-        axios.spread((data1, data2) => {
-          // output of req.
-          console.log("data1", data1, "data2", data2);
-        })
+    axios.post("http://localhost:4000", range).then(async (response) => {
+      console.log(response);
+      refer_user_id("");
+      uuid("");
+      setEmail("");
+      event_index("1");
+    }),
+      alert(
+        "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
       );
 
-    alert(
-      "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
-    );
-
     const Fetch = () => {
-      fetch("http://localhost:4000"),
-        fetch("http://3.37.118.67/api/event/join");
+      fetch("http://localhost:4000");
     };
     function reqListener() {
       var range = JSON.parse(this.responseText);
@@ -62,21 +42,11 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       console.log("Fetch Error :-S", err);
     }
 
-    var oReq = new XMLHttpRequest(Fetch);
+    const oReq = new XMLHttpRequest(Fetch);
     oReq.onload = reqListener;
     oReq.onerror = reqError;
-    oReq.open(
-      "get",
-      "http://localhost:4000",
-      "http://3.37.118.67/api/event/join",
-      true
-    );
-    oReq.send(
-      "post",
-      "http://localhost:4000",
-      "http://3.37.118.67/api/event/join",
-      true
-    );
+    oReq.open("get", "http://localhost:4000", true);
+    oReq.send("post", "http://localhost:4000", true);
   };
 
   function alertMessage() {
@@ -103,7 +73,6 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
             <input
               type="text"
               autoComplete="off"
-              name="entry.944015103"
               placeholder="Enter your Account Name"
               onChange={(e) => refer_user_id(e.target.value)}
               value={name}
@@ -112,7 +81,6 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
             <input
               type="text"
               autoComplete="off"
-              name="entry.396245137"
               placeholder="Enter Your Account ID"
               maxLength="6"
               onChange={(e) => uuid(e.target.value)}
@@ -122,7 +90,6 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
             <input
               type="email"
               autoComplete="off"
-              name="entry.49579415"
               placeholder="Enter Your Email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}

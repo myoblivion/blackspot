@@ -3,6 +3,7 @@ const { google } = require("googleapis");
 const cors = require("cors");
 const path = require("path");
 const axios = require("axios");
+const { ResizableBox } = require("react-resizable");
 const router = express.Router();
 const App = express();
 const http = require("http");
@@ -11,6 +12,11 @@ App.use(express.static(path.join(__dirname, "App")));
 App.get("/ping", (req, res) => {
   return res.send("pong");
 });
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 router.get("/", function (req, res, next) {
   res.send("I guess it's working");
 });
@@ -28,12 +34,13 @@ const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
   "http://3.37.118.67/api/event/join/",
+  "*",
 ];
 App.use(
   cors({
     origin: function (origin, callback) {
       if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === 2) {
+      if (allowedOrigins.indexOf(origin) === 3) {
         var msg =
           "The CORS policy for this site does not " +
           "allow access from the specified Origin.";
@@ -43,6 +50,7 @@ App.use(
     },
   })
 );
+App.use(cors(corsOptions));
 console.log(allowedOrigins);
 const authentication = async () => {
   const auth = new google.auth.GoogleAuth({
