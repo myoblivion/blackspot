@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 
 import { useHistory } from "react-router-dom";
-
+const api = axios.create({
+  baseUrl: "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
+});
 import axios from "axios";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   let history = useHistory();
@@ -12,7 +14,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [range, setData] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/");
+    // history.push("/");
     const range = {
       refer_user_id: name,
       uuid: number,
@@ -31,7 +33,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       );
 
     const Fetch = () => {
-      fetch("http://localhost:4000");
+      fetch("http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id")
     };
     function reqListener() {
       var range = JSON.parse(this.responseText);
@@ -45,8 +47,16 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     const oReq = new XMLHttpRequest(Fetch);
     oReq.onload = reqListener;
     oReq.onerror = reqError;
-    oReq.open("get", "http://localhost:4000", true);
-    oReq.send("post", "http://localhost:4000", true);
+    oReq.open(
+      "get",
+      "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
+      true
+    );
+    oReq.send(
+      "post",
+      "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
+      true
+    );
   };
 
   function alertMessage() {
@@ -64,6 +74,9 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
+
+
+
   return (
     <div className="register wrapper">
       <div className="register-wrapper">

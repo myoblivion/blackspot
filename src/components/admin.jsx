@@ -99,8 +99,6 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       e.preventDefault();
     };
 
-    const [textAreaNo, setTextAreaNo] = useState(0);
-    const [uploadNo, setUploadNo] = useState(0);
     return (
       <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">
         <input
@@ -114,6 +112,32 @@ const Admins = ({ record, handleLogout, props, ref }) => {
         />
       </form>
     );
+  };
+  const [inputList, setInputList] = useState([]);
+
+  const onAddBtnClick = (events, a) => {
+    setInputList(
+      inputList.concat(
+        <ul key={a}>
+          <li contentEditable></li>
+        </ul>
+      )
+    );
+  };
+  const [headerList, setHeaderList] = useState([]);
+
+  const onAddBtnClickHeader = (event, index) => {
+    setHeaderList(
+      headerList.concat(
+        <h1 contentEditable></h1>,
+      )
+    );
+  };
+
+  const [subHeaderList, setSubHeaderList] = useState([]);
+
+  const onAddBtnClickSubHeader = (eventd, c) => {
+    setSubHeaderList(headerList.concat(<h2 contentEditable key={c}></h2>));
   };
   return (
     <div className="admin wrapper">
@@ -157,9 +181,9 @@ const Admins = ({ record, handleLogout, props, ref }) => {
               ))}
             </div>
             <div className="buttonzs">
-              <button>Delete</button>
-              <button>Add New</button>
-              <button>Save</button>
+              <button onClick={onAddBtnClickHeader}>Delete</button>
+              <button onClick={onAddBtnClick}>Add New</button>
+              <button onClick={onAddBtnClickSubHeader}>Save</button>
             </div>
           </div>
         </div>
@@ -229,17 +253,9 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                   <img src={backgroundimg} alt="" />
                 </div>
                 <div className="ggr-admins-contents">
-                  <h1 contentEditable draggable>
-                    Title (header)
-                  </h1>
-                  <Draggable>
-                    <h2 contentEditable>Description</h2>
-                  </Draggable>
-                  <Draggable>
-                    <ul>
-                      <li contentEditable>Empty</li>
-                    </ul>
-                  </Draggable>
+                  {headerList}
+                  {subHeaderList}
+                  {inputList}
                 </div>
                 <div className="bottom-eyes"></div>
               </div>

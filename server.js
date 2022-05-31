@@ -33,7 +33,7 @@ App.get("/", (req, res) => {
 const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
-  "http://3.37.118.67/api/event/join/",
+  "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
   "*",
 ];
 App.use(
@@ -106,32 +106,33 @@ App.post("/", async (req, res) => {
 });
 
 // Axios
-
-const posts = [
-  {
-    refer_user_id: "",
-    uuid: "",
-    event_index: "",
+axios({
+  url: "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
+  method: "get",
+  data: {
+    foo: "bar",
   },
-];
-posts.forEach((post) => {
-  axios
-    .post("http://3.37.118.67/api/event/join", post, {
-      headers: {
-        PUBLISHER_PRIVATE_KEY: "4a06076c-a4e8-5029-8365-00004978d622",
-        KEY: "AIzaSyApqrQ8aXiKeZbRkAxnhSY1eE-CROieVIU",
-      },
-    })
-
-    // Print response
-    .then((response) => {
-      const { refer_user_id, uuid, event_index } = response.data;
-      console.log(response.data);
-    })
-
-    // Print error message if occur
-    .catch((error) => console.log(error));
 });
+
+const getUsers = async () => {
+  try {
+    return await axios.get("http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id");
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const countUsers = async () => {
+  const users = await getUsers();
+
+  if (users.data) {
+    console.log(`Got ${Object.entries(users.data).length} users`);
+  }
+};
+
+countUsers();
+
+
 
 const PORT = process.env.PORT || 4000;
 App.get("/", function (req, res) {

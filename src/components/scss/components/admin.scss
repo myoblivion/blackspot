@@ -308,7 +308,7 @@ $baby-blue: #f8faff;
             .ggr-top {
               display: flex;
               justify-content: space-between;
-              height: 5vh;
+              height: 50%;
               align-items: center;
               .ggr-left {
                 font-size: 16px;
@@ -432,15 +432,19 @@ $baby-blue: #f8faff;
             }
             .ggr-admins-contents {
               width: 50%;
+              display: contents;
+              input[type=color] {
+                margin-left: 2%;
+              }
               h1 {
                 background-color: #116682;
                 color: white;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-left: 2%;
                 width: 45%;
-                margin-bottom: 3%;
+                margin: 0;
+                margin-left: 2%;
               }
               h2 {
                 margin-bottom: 2%;
