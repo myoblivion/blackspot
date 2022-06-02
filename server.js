@@ -21,6 +21,8 @@ router.get("/", function (req, res, next) {
   res.send("I guess it's working");
 });
 const bodyParser = require("body-parser");
+const { response } = require("express");
+const { info } = require("console");
 var server = App.listen(3000);
 
 App.use(bodyParser.json());
@@ -106,33 +108,32 @@ App.post("/", async (req, res) => {
 });
 
 // Axios
+
+
+
+
+// Replace with the appropriate url.
+let url =
+"http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id";
 axios({
-  url: "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
-  method: "get",
-  data: {
-    foo: "bar",
+  type: "GET",
+  url: url,
+  sucess: function (response) {
+    const ret = JSON.parse(response);
+    if (ret.code.logic == 0) {
+      alert("success");
+    } else {
+      alert("error - " + ret.code.logic);
+    }
   },
-});
-
-const getUsers = async () => {
-  try {
-    return await axios.get("http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id");
-  } catch (error) {
-    console.error(error);
+}).then(
+  (response) => {
+    console.log(response.data);
+  },
+  (error) => {
+    console.log(error);
   }
-};
-
-const countUsers = async () => {
-  const users = await getUsers();
-
-  if (users.data) {
-    console.log(`Got ${Object.entries(users.data).length} users`);
-  }
-};
-
-countUsers();
-
-
+);
 
 const PORT = process.env.PORT || 4000;
 App.get("/", function (req, res) {

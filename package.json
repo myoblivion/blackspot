@@ -36,6 +36,7 @@
     "informed": "^4.13.0",
     "lottie-react-native": "^5.0.1",
     "node-polyfill-webpack-plugin": "^1.1.4",
+    "qs": "^6.10.3",
     "react": "^17.0.2",
     "react-admin": "^4.0.1",
     "react-bootstrap": "^2.3.0",
@@ -51,9 +52,11 @@
     "react-router-hash-link": "^2.4.3",
     "react-slick": "^0.28.1",
     "react-video-js-player": "^1.1.1",
+    "react-wheel-of-prizes": "^1.0.9",
     "slick-carousel": "^1.8.1",
     "url-loader": "^4.1.1",
-    "util": "^0.12.4"
+    "util": "^0.12.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/code-frame": "^7.16.7",

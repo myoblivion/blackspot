@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import { useHistory } from "react-router-dom";
 const api = axios.create({
-  baseUrl: "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
+  baseUrl:
+    "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
 });
 import axios from "axios";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
@@ -32,9 +34,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
         "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
       );
 
-    const Fetch = () => {
-      fetch("http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id")
-    };
+
     function reqListener() {
       var range = JSON.parse(this.responseText);
       console.log(range);
@@ -44,19 +44,16 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       console.log("Fetch Error :-S", err);
     }
 
-    const oReq = new XMLHttpRequest(Fetch);
+    const oReq = new XMLHttpRequest();
     oReq.onload = reqListener;
     oReq.onerror = reqError;
     oReq.open(
       "get",
-      "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
-      true
+      "http://localhost:4000",
+      true,
+      console.log(oReq.open)
     );
-    oReq.send(
-      "post",
-      "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
-      true
-    );
+    oReq.send();
   };
 
   function alertMessage() {
@@ -71,11 +68,11 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
   });
 
+
+
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
-
-
 
   return (
     <div className="register wrapper">

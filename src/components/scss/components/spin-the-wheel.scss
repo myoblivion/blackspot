@@ -1,0 +1,17 @@
+.spin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 3%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    #canvas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+    }
+}

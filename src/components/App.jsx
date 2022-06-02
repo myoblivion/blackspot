@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import firebase from "firebase/compat/app";
@@ -37,6 +36,7 @@ import Admins from "./admin";
 import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import GogoRacingRaffleAnnouncement from "./ggr-annoncement";
+import SpinTheWheel from "./spin-the-wheel";
 // styles
 import "./scss/index.scss";
 const firebaseConfig = {
@@ -219,6 +219,9 @@ const Appcomponent = () => {
           </Route>
           <Route path="/gogo-racing-raffle-announcement">
             <GogoRacingRaffleAnnouncement />
+          </Route>
+          <Route path="/spin-the-wheel">
+            <SpinTheWheel />
           </Route>
           {user ? (
             <Admins handleLogout={handleLogout} />
