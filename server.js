@@ -68,7 +68,10 @@ const authentication = async () => {
 };
 
 const id = "1llRobkQRlqW61AI8nZ6Dl_HXxGobzfJVLnjq_kF67Q4";
-
+App.get("/public", function (req, res) {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.send(response.data);
+});
 App.get("/", async (req, res) => {
   try {
     const { sheets } = await authentication();
@@ -108,36 +111,55 @@ App.post("/", async (req, res) => {
 });
 
 // Axios
+// let refer_user_id = "";
+// let url = `http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=${refer_user_id}`;
 
+// axios({
+//   type: "GET",
+//   dataType: "json",
+//   contentType: "application/json",
+//   baseURL: url,
+//   withCredentials: true,
+//   url: url,
+//   params: {
+//     refer_user_id: this.refer_user_id,
+//     uuid: this.uuid,
+//   },
+//   timeout: 10000,
+//   sucess: function (response) {
+//     const ret = JSON.parse(response);
+//     if (ret.code.logic == 0) {
+//       alert("success");
+//     } else {
+//       alert("error - " + ret.code.logic);
+//     }
+//   },
+//   headers: {
+//     "user-agent": "not axios",
+//   },
+// }).then(
+//   (response) => {
+//     console.log(response.data);
+//   },
+//   (error) => {
+//     console.log(error);
+//   }
+// );
+async function getUsers() {
+  // exact raw URL, no need to append an extra .json extension
+  const { data } = await axios.get(
+    `http://3.37.118.67//api/event/join?event_index=1&uuid=72&refer_user_id=/#/play-to-win-raffle/`, true
+  );
+  console.log(data);
 
+  return data;
+}
+getUsers();
 
-
-// Replace with the appropriate url.
-let url =
-"http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id";
-axios({
-  type: "GET",
-  url: url,
-  sucess: function (response) {
-    const ret = JSON.parse(response);
-    if (ret.code.logic == 0) {
-      alert("success");
-    } else {
-      alert("error - " + ret.code.logic);
-    }
-  },
-}).then(
-  (response) => {
-    console.log(response.data);
-  },
-  (error) => {
-    console.log(error);
-  }
-);
 
 const PORT = process.env.PORT || 4000;
 App.get("/", function (req, res) {
   res.send("Express Server Is Running!!!!!!");
 });
 
-App.listen(PORT, () => console.log("Server running YES!"));
+App.listen(PORT, () => console.log("Server running"));
