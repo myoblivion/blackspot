@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-
+import trix from "trix";
 import {
   FiFileText,
   FiMove,
@@ -127,11 +127,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
   const [headerList, setHeaderList] = useState([]);
 
   const onAddBtnClickHeader = (event, index) => {
-    setHeaderList(
-      headerList.concat(
-        <h1 contentEditable></h1>,
-      )
-    );
+    setHeaderList(headerList.concat(<h1 contentEditable></h1>));
   };
 
   const [subHeaderList, setSubHeaderList] = useState([]);
@@ -181,45 +177,13 @@ const Admins = ({ record, handleLogout, props, ref }) => {
               ))}
             </div>
             <div className="buttonzs">
-              <button onClick={onAddBtnClickHeader}>Delete</button>
-              <button onClick={onAddBtnClick}>Add New</button>
-              <button onClick={onAddBtnClickSubHeader}>Save</button>
+              <button>Delete</button>
+              <button>Add New</button>
+              <button>Save</button>
             </div>
           </div>
         </div>
         <div className="admin-right">
-          <div className="main-tools">
-            <label htmlFor="image" className="tools">
-              <FaImages />
-            </label>
-            <input type="file" name="image" id="image" />
-            <button className="tools">
-              <FiFileText />
-            </button>
-            <button
-              className="tools"
-              onClick={changeCursor1}
-              style={{ cursor: cursor }}
-            >
-              <FiMove />
-            </button>
-            <button className="tools">
-              <FiRotateCcw />
-            </button>
-            <button className="tools">
-              <FiRotateCw />
-            </button>
-            <button
-              className="tools"
-              onClick={changeCursor2}
-              style={{ cursor: cursor }}
-            >
-              <FiZoomIn />
-            </button>
-            <button className="tools">
-              <FiZoomOut />
-            </button>
-          </div>
           {/*  */}
           <div className="content-web" id="GGR">
             <div className="ggr-admin-contents">
@@ -253,9 +217,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                   <img src={backgroundimg} alt="" />
                 </div>
                 <div className="ggr-admins-contents">
-                  {headerList}
-                  {subHeaderList}
-                  {inputList}
+                  <trix-editor class="trix-content"></trix-editor>
                 </div>
                 <div className="bottom-eyes"></div>
               </div>

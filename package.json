@@ -54,6 +54,7 @@
     "react-video-js-player": "^1.1.1",
     "react-wheel-of-prizes": "^1.0.9",
     "slick-carousel": "^1.8.1",
+    "trix": "^2.0.0-beta.0",
     "url-loader": "^4.1.1",
     "util": "^0.12.4",
     "uuid": "^8.3.2"

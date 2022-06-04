@@ -68,14 +68,14 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   //       setUsers(myUsers);
   //     });
   // };
-  // useEffect(() => users(), []);
+  // ;
   const [puser, setUsers] = useState({});
 
   useEffect(() => {
     if ((number, name)) {
       axios
         .get(
-          `http://3.37.118.67/api/event/join?event_index=1&uuid=${number}&refer_user_id=https://blackspotstudio.ph/#/play-to-win-raffle${name}`
+          `http://3.37.118.67/api/event/join?event_index=1&uuid=${number}&refer_user_id=${name}`
         )
         .then((res) => {
           console.log(res);
@@ -85,7 +85,8 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
           console.log(err);
         });
     }
-  }, [number, name]);
+  }, [number, name]),
+    useEffect(() => setUsers(), []);
   function alertMessage() {
     alert(
       "Before you join the raffle “Win while you play”, you must register here online. Please note that you must be registered for the said raffle or you may not win. In registering here, you will provide personal information (e.i. email address) so Black Spot Studio Philippines may provide notices or correspondence to you via electronic Communication. Black Spot Studio Philippines complies with the Republic Act 10173- Data Privacy Act of 2012, as the guidelines ensuring the protection of personal information. This policy applies to all personal information collected, stored, used, and disclosed by BSS PH. By ”personal information” we mean information about an identifiable individual."

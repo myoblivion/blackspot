@@ -110,52 +110,33 @@ App.post("/", async (req, res) => {
   }
 });
 
-// Axios
-// let refer_user_id = "";
-// let url = `http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=${refer_user_id}`;
-
-// axios({
-//   type: "GET",
-//   dataType: "json",
-//   contentType: "application/json",
-//   baseURL: url,
-//   withCredentials: true,
-//   url: url,
-//   params: {
-//     refer_user_id: this.refer_user_id,
-//     uuid: this.uuid,
-//   },
-//   timeout: 10000,
-//   sucess: function (response) {
-//     const ret = JSON.parse(response);
-//     if (ret.code.logic == 0) {
-//       alert("success");
-//     } else {
-//       alert("error - " + ret.code.logic);
-//     }
-//   },
-//   headers: {
-//     "user-agent": "not axios",
-//   },
-// }).then(
-//   (response) => {
-//     console.log(response.data);
-//   },
-//   (error) => {
-//     console.log(error);
-//   }
-// );
-async function getUsers() {
-  // exact raw URL, no need to append an extra .json extension
-  const { data } = await axios.get(
-    `http://3.37.118.67//api/event/join?event_index=1&uuid=72&refer_user_id=/#/play-to-win-raffle/`, true
-  );
-  console.log(data);
-
-  return data;
-}
-getUsers();
-
+let refer_user_id = "";
+let uuid = "";
+let url = `http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=${refer_user_id}`;
+App.get(() => {
+  if ((uuid, refer_user_id)) {
+    axios
+      .get(
+        `http://3.37.118.67/api/event/join?event_index=1&uuid=${uuid}&refer_user_id=${refer_user_id}`
+      )
+      .then((res) => {
+        console.log(res);
+        const writeReq = sheets.spreadsheets.values.append({
+          spreadsheetId: id,
+          range: "sheesh",
+          valueInputOption: "USER_ENTERED",
+          resource: {
+            values: [[refer_user_id, uuid, setEmail, event_index]],
+          },
+        });
+        console.log(writeReq)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    console.log(uuid, refer_user_id);
+  }
+});
 
 const PORT = process.env.PORT || 4000;
 App.get("/", function (req, res) {

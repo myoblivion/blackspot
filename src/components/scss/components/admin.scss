@@ -4,18 +4,20 @@ $button-text-color: #fff;
 $baby-blue: #f8faff;
 .admin {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   z-index: 9999;
   .admin-wrapper {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     .admin-left {
-      width: 30%;
+      width: 13%;
       height: 100%;
       background-color: black;
       color: white;
+      position: fixed;
       .sub-components {
         height: 100%;
         width: 100%;
@@ -46,7 +48,7 @@ $baby-blue: #f8faff;
           #lele,
           #lelele,
           #lelelele {
-            width: 30%;
+            width: 20%;
             background-color: #6e6e6e;
             color: white;
             margin: 2% 0;
@@ -88,7 +90,7 @@ $baby-blue: #f8faff;
           flex-direction: column;
           width: 91.5%;
           label {
-            width: 100%;
+            width: 90%;
             background-color: #6e6e6e;
             color: white;
             margin: 2% 0;
@@ -123,7 +125,7 @@ $baby-blue: #f8faff;
         }
         .buttonzs {
           button {
-            width: 30%;
+            width: 40%;
             background-color: #a54e4e;
             color: white;
             margin: 1% 0;
@@ -150,10 +152,9 @@ $baby-blue: #f8faff;
     }
     .admin-right {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      background-color: rgb(57, 57, 57);
       .main-tools {
         display: flex;
         align-items: center;
@@ -274,13 +275,12 @@ $baby-blue: #f8faff;
         }
       }
       .content-web {
+        background-image: url("/src/images/gogoracingbackground/withlogo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         .ggr-admin-contents {
-          background-image: url("/src/images/gogoracingbackground/withlogo.png");
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-          background-position: center;
-          background-attachment: fixed;
-          height: 100%;
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -293,17 +293,13 @@ $baby-blue: #f8faff;
             display: flex;
             flex-direction: column;
             margin-top: 13%;
-            margin-bottom: 5%;
-            padding-bottom: 5%;
             .ggr-header {
               display: flex;
               flex-direction: column;
               background-color: rgb(48, 48, 48);
               color: white;
               width: 100%;
-              height: 20%;
               border-top: 8px solid black;
-              margin-bottom: 20%;
             }
             .ggr-top {
               display: flex;
@@ -395,7 +391,6 @@ $baby-blue: #f8faff;
                   cursor: pointer;
                   padding: 7px 10px;
                   border-radius: 3px;
-                  background-color: #51575a;
                   &:hover {
                     background-color: azure;
                     color: black;
@@ -433,44 +428,28 @@ $baby-blue: #f8faff;
             .ggr-admins-contents {
               width: 50%;
               display: contents;
-              input[type=color] {
+              input[type="color"] {
                 margin-left: 2%;
               }
-              h1 {
-                background-color: #116682;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 45%;
-                margin: 0;
+              #trix-toolbar-1 {
                 margin-left: 2%;
-              }
-              h2 {
-                margin-bottom: 2%;
-                width: 45%;
-              }
-              h2 {
-                margin-left: 2%;
-              }
-              ul {
-                margin-left: 2%;
-                li {
-                  width: 45%;
-
-                  margin-bottom: 3%;
-                  &::before {
-                    content: "⚡ ";
-                  }
-                  ul {
-                    li {
-                      margin-top: 2%;
-                      &::before {
-                        content: "➟ ";
-                      }
-                    }
+                .trix-button-group {
+                  button {
+                    background-color: white;
+                    color: black;
+                    cursor: pointer;
+                    border: 2px solid black;
+                    padding: 5px;
                   }
                 }
+              }
+              .trix-content {
+                background-color: white;
+                width: 95%;
+                border: 1px solid black;
+                height: 100%;
+                padding-bottom: 55%;
+                margin-left: 2%;
               }
             }
           }
