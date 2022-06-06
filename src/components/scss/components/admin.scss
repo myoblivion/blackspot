@@ -433,15 +433,22 @@ $baby-blue: #f8faff;
               }
               #trix-toolbar-1 {
                 margin-left: 2%;
+                width: 95%;
                 .trix-button-group {
-                  button {
-                    background-color: white;
-                    color: black;
-                    cursor: pointer;
-                    border: 2px solid black;
-                    padding: 5px;
-                  }
+                  margin-top: 1%;
                 }
+              }
+              .rdw-editor-main {
+                height: 100vh;
+              }
+              .public-DraftStyleDefault-block {
+                overflow: hidden;
+                height: 100%;
+              }
+              .public-DraftStyleDefault-block span {
+                background-color: white;
+                width: 100%;
+                margin-left: 2%;
               }
               .trix-content {
                 background-color: white;
@@ -450,6 +457,9 @@ $baby-blue: #f8faff;
                 height: 100%;
                 padding-bottom: 55%;
                 margin-left: 2%;
+                ul {
+                  list-style: circle;
+                }
               }
             }
           }

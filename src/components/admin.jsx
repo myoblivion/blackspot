@@ -13,7 +13,16 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-import trix from "trix";
+import { EditorState, convertToRaw } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import draftToHtml from "draftjs-to-html";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import axios from "axios";
+
+import "trix/dist/trix";
+import "trix/dist/trix.css";
+import { TrixEditor } from "react-trix";
+import Trix from "trix";
 import {
   FiFileText,
   FiMove,
@@ -25,25 +34,6 @@ import {
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
 const Admins = ({ record, handleLogout, props, ref }) => {
-  const [cursor, setCursor] = useState("crosshair");
-
-  const changeCursor1 = () => {
-    setCursor((prevState) => {
-      if (prevState === "crosshair") {
-        return "pointer";
-      }
-      return "crosshair";
-    });
-  };
-  const changeCursor2 = () => {
-    setCursor((prevState) => {
-      if (prevState === "zoom-in") {
-        return "pointer";
-      }
-      return "zoom-in";
-    });
-  };
-
   const Labels = [
     {
       id: "submen1",
@@ -124,17 +114,61 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       )
     );
   };
-  const [headerList, setHeaderList] = useState([]);
-
-  const onAddBtnClickHeader = (event, index) => {
-    setHeaderList(headerList.concat(<h1 contentEditable></h1>));
+  function TextEditor() {
+    /** @type {React.RefObject<Trix>} */
+    const textEditor = React.useRef(null);
+    /** @type {React.RefObject<Tribute>} */
+    const tribute = React.useRef(null);
+    const onChange = (event) => {
+      console.log(event.target.value);
+    };
+  }
+  const handleEditorReady = (editor) => {
+    // this is a reference back to the editor if you want to
+    // do editing programatically
+    // editor.insertString("editor is ready");
+  };
+  const handleChange = (html, text) => {
+    console.log({ html, text });
   };
 
-  const [subHeaderList, setSubHeaderList] = useState([]);
-
-  const onAddBtnClickSubHeader = (eventd, c) => {
-    setSubHeaderList(headerList.concat(<h2 contentEditable key={c}></h2>));
+  // Foararaarara
+  let history = useHistory();
+  const [userInfo, setuserInfo] = useState({
+    title: "",
+  });
+  const onChangeValue = (e) => {
+    setuserInfo({
+      ...userInfo,
+      [e.target.name]: e.target.value,
+    });
   };
+  let editorState = EditorState.createEmpty();
+  const [description, setDescription] = useState(editorState);
+  const onEditorStateChange = (editorState) => {
+    setDescription(editorState);
+  };
+  const [isError, setError] = useState(null);
+  // const addDetails = async (event) => {
+  //   try {
+  //     event.preventDefault();
+  //     event.persist();
+  //     if(userInfo.description.value.length < 50){
+  //       setError('Required, Add description minimum length 50 characters');
+  //       return;
+  //     }
+  //     axios.post(`http://localhost:8080/addArticle`, {
+  //       title: userInfo.title,
+  //       description: userInfo.description.value
+  //     })
+  //     .then(res => {
+  //       if(res.data.success === true){
+  //         history.push('/');
+  //       }
+  //     })
+  //   } catch (error) { throw error;}
+  // }
+
   return (
     <div className="admin wrapper">
       <div className="admin-wrapper">
@@ -217,7 +251,24 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                   <img src={backgroundimg} alt="" />
                 </div>
                 <div className="ggr-admins-contents">
-                  <trix-editor class="trix-content"></trix-editor>
+                  {" "}
+                  {/* <TrixEditor
+                    id="trixEditor"
+                    className="trix-content"
+                    onChange={handleChange}
+                    onEditorReady={handleEditorReady}
+                  /> */}
+                  <form className="update__forms">
+                    <div className="form-row">
+                      <div className="form-group col-md-12 editor">
+                        <Editor
+                          toolbarClassName="toolbarClassName"
+                          wrapperClassName="wrapperClassName"
+                          editorClassName="editorClassName"
+                        />
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div className="bottom-eyes"></div>
               </div>
