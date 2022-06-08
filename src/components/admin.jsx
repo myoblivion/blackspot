@@ -19,10 +19,6 @@ import draftToHtml from "draftjs-to-html";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import axios from "axios";
 
-import "trix/dist/trix";
-import "trix/dist/trix.css";
-import { TrixEditor } from "react-trix";
-import Trix from "trix";
 import {
   FiFileText,
   FiMove,
@@ -97,7 +93,6 @@ const Admins = ({ record, handleLogout, props, ref }) => {
           type="text"
           id="header-search"
           placeholder="Search "
-          autoFocus="autoFocus"
           name="s"
         />
       </form>
@@ -149,26 +144,42 @@ const Admins = ({ record, handleLogout, props, ref }) => {
     setDescription(editorState);
   };
   const [isError, setError] = useState(null);
-  // const addDetails = async (event) => {
-  //   try {
-  //     event.preventDefault();
-  //     event.persist();
-  //     if(userInfo.description.value.length < 50){
-  //       setError('Required, Add description minimum length 50 characters');
-  //       return;
-  //     }
-  //     axios.post(`http://localhost:8080/addArticle`, {
-  //       title: userInfo.title,
-  //       description: userInfo.description.value
-  //     })
-  //     .then(res => {
-  //       if(res.data.success === true){
-  //         history.push('/');
-  //       }
-  //     })
-  //   } catch (error) { throw error;}
-  // }
 
+  useEffect(() => {
+    viewPost();
+  }, []);
+
+  const [ispost, setpost] = useState([]);
+  const viewPost = async () => {
+    try {
+      await axios.get(`http://localhost:4000`).then((res) => {
+        if (res.data.success === true) {
+          setpost(res.data.listall);
+        }
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
+  console.log(viewPost);
+  const addDetails = async (event) => {
+    try {
+      event.preventDefault();
+      event.persist();
+      axios
+        .post(`http://localhost:4000`, {
+          title: userInfo.title,
+          description: userInfo.description.value,
+        })
+        .then((res) => {
+          if (res.data.success === true) {
+            history.push("/");
+          }
+        });
+    } catch (error) {
+      throw error;
+    }
+  };
   return (
     <div className="admin wrapper">
       <div className="admin-wrapper">
@@ -252,20 +263,50 @@ const Admins = ({ record, handleLogout, props, ref }) => {
                 </div>
                 <div className="ggr-admins-contents">
                   {" "}
-                  {/* <TrixEditor
-                    id="trixEditor"
-                    className="trix-content"
-                    onChange={handleChange}
-                    onEditorReady={handleEditorReady}
-                  /> */}
-                  <form className="update__forms">
+                  <form onSubmit={addDetails} className="update__forms">
+                    <h3 className="myaccount-content"> Add </h3>
                     <div className="form-row">
+                      <div className="form-group col-md-12">
+                        <label className="font-weight-bold">
+                          {" "}
+                          Title <span className="required"> * </span>{" "}
+                        </label>
+                        <input
+                          type="text"
+                          name="title"
+                          value={userInfo.title}
+                          onChange={onChangeValue}
+                          className="form-control"
+                          placeholder="Title"
+                          required
+                        />
+                      </div>
                       <div className="form-group col-md-12 editor">
+                        <label className="font-weight-bold">
+                          {" "}
+                          Description <span className="required"> * </span>{" "}
+                        </label>
                         <Editor
+                          editorState={description}
                           toolbarClassName="toolbarClassName"
                           wrapperClassName="wrapperClassName"
                           editorClassName="editorClassName"
+                          onEditorStateChange={onEditorStateChange}
                         />
+                        <textarea
+                          style={{ display: "none" }}
+                          disabled
+                          ref={(val) => (userInfo.description = val)}
+                          value={draftToHtml(
+                            convertToRaw(description.getCurrentContent())
+                          )}
+                        />
+                      </div>
+                      <div className="form-group col-sm-12 text-right">
+                        <button type="submit" className="btn btn__theme">
+                          {" "}
+                          Submit{" "}
+                        </button>
                       </div>
                     </div>
                   </form>

@@ -448,7 +448,18 @@ $baby-blue: #f8faff;
               .public-DraftStyleDefault-block span {
                 background-color: white;
                 width: 100%;
-                margin-left: 2%;
+              }
+              .btn__theme {
+                margin-left: 15%;
+                background-color: black;
+                color: white;
+                padding: 15px 15px;
+                cursor: pointer;
+                &:hover {
+                  background-color: white;
+                  border: solid black;
+                  color: black;
+                }
               }
               .trix-content {
                 background-color: white;

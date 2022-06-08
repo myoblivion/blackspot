@@ -129,7 +129,7 @@ App.get(() => {
             values: [[refer_user_id, uuid, setEmail, event_index]],
           },
         });
-        console.log(writeReq)
+        console.log(writeReq);
       })
       .catch((err) => {
         console.log(err);
@@ -137,10 +137,58 @@ App.get(() => {
     console.log(uuid, refer_user_id);
   }
 });
+App.get("/allPost", async (req, res) => {
+  try {
+    const [rows] = await db_connection.execute("SELECT * FROM posts ");
+    return res.json({ success: true, listall: rows });
+  } catch (err) {
+    console.log(err);
+  }
+});
+App.post("/addArticle", async (req, res) => {
+  try {
+    const [rows] = await db_connection.execute(
+      "INSERT INTO `posts` (`title`,`description`) VALUES(?, ?)",
+      [req.body.title, req.body.description]
+    );
+    if (rows.affectedRows === 1) {
+      return res.json({ success: true });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
 
+App.post("/getPostId", async (req, res) => {
+  try {
+    const [rows] = await db_connection.execute(
+      "SELECT * FROM  posts where id = ? ",
+      [req.body.ids]
+    );
+    if (rows.length > 0) {
+      return res.json({ success: true, listId: rows });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+App.post("/editArticle", async (req, res) => {
+  try {
+    const [update] = await db_connection.execute(
+      "UPDATE `posts` SET `title`=?, `description`=? WHERE id = ?",
+      [req.body.title, req.body.description, req.body.ids]
+    );
+    if (update.affectedRows === 1) {
+      return res.json({ success: true });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
 const PORT = process.env.PORT || 4000;
 App.get("/", function (req, res) {
   res.send("Express Server Is Running!!!!!!");
 });
 
-App.listen(PORT, () => console.log("Server running"));
+App.listen(PORT, () => console.log(`Server running ${PORT}`));

@@ -38,6 +38,8 @@
     "googleapis": "^100.0.0",
     "informed": "^4.13.0",
     "lottie-react-native": "^5.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "qs": "^6.10.3",
     "react": "^17.0.2",

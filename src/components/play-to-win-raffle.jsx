@@ -46,7 +46,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     const oReq = new XMLHttpRequest();
     oReq.onload = reqListener;
     oReq.onerror = reqError;
-    oReq.open("get", "http://localhost:4000", true, console.log(oReq.open));
+    oReq.open("Get", "http://localhost:4000", true, console.log(oReq.open));
     oReq.send();
   };
   // const [pusers, setUsers] = useState([]);
