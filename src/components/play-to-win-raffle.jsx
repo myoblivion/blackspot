@@ -77,7 +77,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     if ((number, name)) {
       axios
         .get(
-          `http://3.37.118.67/api/event/join?event_index=1&uuid=${number}&refer_user_id=${name}`
+          `http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id`
         )
         .then((res) => {
           console.log(res);
