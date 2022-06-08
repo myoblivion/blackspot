@@ -16,12 +16,14 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   const [range, setData] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // history.push("/");
+    history.push("/");
     const range = {
       refer_user_id: name,
       uuid: number,
       setEmail: email,
       event_index: event,
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
     };
     axios.post("http://localhost:4000", range).then(async (response) => {
       console.log(response);
