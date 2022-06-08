@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import { v4 as uuidv4 } from "uuid";
 import LogRocket from "logrocket";
 LogRocket.init("hlb5ho/black-spot");
 
@@ -11,10 +10,7 @@ LogRocket.identify("THE_USER_ID_IN_YOUR_APP", {
   // Add your own custom user variables here, ie:
   subscriptionType: "pro",
 });
-const api = axios.create({
-  baseUrl:
-    "http://3.37.118.67/api/event/join?event_index=1&uuid=72${uuid}&refer_user_id=${refer_user_id}",
-});
+
 import axios from "axios";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
   let history = useHistory();
@@ -34,7 +30,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       method: "POST",
       headers: { "content-type": "application/x-www-form-urlencoded" },
     };
-    axios.post("192.168.2.154", range).then(async (response) => {
+    axios.post("http://localhost:4000", range).then(async (response) => {
       console.log(response);
       refer_user_id("");
       uuid("");
@@ -60,26 +56,14 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     oReq.open("Get", "http://localhost:4000", true, console.log(oReq.open));
     oReq.send();
   };
-  // const [pusers, setUsers] = useState([]);
-
-  // const users = () => {
-  //   axios
-  //     .get(
-  //       `http://3.37.118.67/api/event/join?event_index=1&uuid=72${uuid}&refer_user_id=${refer_user_id}`,
-  //       {
-  //         responseType: "values",
-  //         data: "values",
-  //       },
-  //       range
-  //     )
-  //     .then(async (response) => {
-  //       console.log(response);
-  //       event_index("1");
-  //       const myUsers = response.data;
-  //       setUsers(myUsers);
-  //     });
-  // };
-  // ;
+  const request = async () => {
+    try {
+      const response = await test_api.get("/");
+      console.log("response = ", response.data);
+    } catch (error) {
+      console.log("error = ", error);
+    }
+  };
   const [puser, setUsers] = useState({});
 
   useEffect(() => {

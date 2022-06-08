@@ -3,7 +3,6 @@ const { google } = require("googleapis");
 const cors = require("cors");
 const path = require("path");
 const axios = require("axios");
-const { ResizableBox } = require("react-resizable");
 const router = express.Router();
 const App = express();
 const http = require("http");
@@ -36,8 +35,13 @@ const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
   "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
+
   "*",
 ];
+axios.create({
+  baseUrl: "http://localhost:4000",
+  headers: { "Content-Type": "application/json" },
+});
 App.use(
   cors({
     origin: function (origin, callback) {
