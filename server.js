@@ -35,13 +35,8 @@ const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
   "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
-
   "*",
 ];
-axios.create({
-  baseUrl: "http://localhost:4000",
-  headers: { "Content-Type": "application/json" },
-});
 App.use(
   cors({
     origin: function (origin, callback) {
@@ -62,6 +57,8 @@ const authentication = async () => {
   const auth = new google.auth.GoogleAuth({
     keyFile: "response.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
+    baseUrl: "http://localhost:4000",
+    headers: { "Content-Type": "application/json" },
   });
   const client = await auth.getClient();
   const sheets = google.sheets({
