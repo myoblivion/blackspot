@@ -46,7 +46,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       alert(
         "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
       ),
-      fetch(`${process.env.REACT_APP_API_BASE_URL}/consumption/`, options);
+      fetch(`${"http://localhost:4000"}`, options);
     function reqListener() {
       var range = JSON.parse(this.responseText);
       console.log(range);
