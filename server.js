@@ -34,7 +34,8 @@ App.get("/", (req, res) => {
 const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
-  "10.0.2.1",
+  "http://61.28.152.194:4000",
+  "http://61.28.152.194:8080",
   "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
   "*",
 ];
@@ -68,7 +69,18 @@ const authentication = async () => {
   });
   return { sheets };
 };
-
+App.use(function (req, res, next) {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "http://192.168.2.1:8080",
+    "http://localhost:4000"
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 const id = "1llRobkQRlqW61AI8nZ6Dl_HXxGobzfJVLnjq_kF67Q4";
 App.get("/public", function (req, res) {
   res.set("Access-Control-Allow-Origin", "*");
