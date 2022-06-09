@@ -42,7 +42,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       uuid("");
       setEmail("");
       event_index("1");
-    }),
+    }, options),
       alert(
         "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
       );
