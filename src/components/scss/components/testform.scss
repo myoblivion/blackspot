@@ -198,3 +198,20 @@
     }
   }
 }
+@media only screen and (max-height: 597px) {
+  .register {
+    .register-wrapper {
+      .form-wrapper {
+        height: 100%;
+        form {
+          button {
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            right: 15%;
+          }
+        }
+      }
+    }
+  }
+}
