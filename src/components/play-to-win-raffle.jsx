@@ -32,7 +32,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json, text/plain, */*",
+        "Content-type": "application/json; charset=UTF-8",
       },
     };
     axios.defaults.baseURL = "http://localhost:4000";
