@@ -22,7 +22,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/");
+    // history.push("/");
     const range = {
       refer_user_id: name,
       uuid: number,
