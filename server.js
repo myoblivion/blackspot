@@ -61,7 +61,7 @@ const authentication = async () => {
     keyFile: "response.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
     baseUrl: "http://localhost:4000",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
   });
   const client = await auth.getClient();
   const sheets = google.sheets({
@@ -73,7 +73,7 @@ const authentication = async () => {
 App.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "http://192.168.2.1:8080",
+    "http://192.168.2.1:4000",
     "http://localhost:4000/"
   );
   res.header(
