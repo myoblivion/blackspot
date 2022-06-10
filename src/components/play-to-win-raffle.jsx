@@ -38,19 +38,14 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
         Accept: "application/json",
         enctype: "mutipart/form-data",
       },
-    };
-    fetch("http://localhost:4000/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify({
         refer_user_id,
         uuid,
         setEmail,
         event_index,
       }),
-    });
+    };
+
     console.log(fetch);
     axios.post("http://localhost:4000/", range).then(async (response) => {
       console.log(response);
@@ -62,7 +57,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       alert(
         "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
       ),
-      fetch(`${"http://localhost:4000/"}`, options);
+      fetch(options);
     function reqListener() {
       var range = JSON.parse(this.responseText);
       console.log(range);
