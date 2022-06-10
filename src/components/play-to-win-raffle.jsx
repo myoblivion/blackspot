@@ -38,19 +38,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
         Accept: "application/json",
       },
     };
-    fetch("http://localhost:4000/", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/x-www-form-urlencoded",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        refer_user_id: "",
-        uuid: "",
-        setEmail: "",
-        event_index: "",
-      }),
-    });
+
     console.log(fetch);
     axios.post("http://localhost:4000/", range).then(async (response) => {
       console.log(response);
