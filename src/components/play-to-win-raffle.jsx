@@ -36,6 +36,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       headers: {
         "Content-type": "	application/json, text/plain, */*",
         Accept: "application/json",
+        enctype: "mutipart/form-data",
       },
     };
 

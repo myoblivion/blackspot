@@ -44,7 +44,7 @@ App.use(
   cors({
     origin: function (origin, callback) {
       if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === 6) {
+      if (allowedOrigins.indexOf(origin) === 8) {
         var msg =
           "The CORS policy for this site does not " +
           "allow access from the specified Origin.";
@@ -61,7 +61,11 @@ const authentication = async () => {
     keyFile: "response.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
     baseUrl: "http://localhost:4000",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      enctype: "mutipart/form-data",
+    },
   });
   const client = await auth.getClient();
   const sheets = google.sheets({
@@ -78,7 +82,8 @@ App.use(function (req, res, next) {
   );
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+    "Origin, X-Requested-With, Content-Type, Accept",
+    "mutipart/form-data"
   );
   next();
 });
@@ -113,6 +118,7 @@ axios("http://localhost:4000/", {
   headers: {
     "Content-type": "	application/json",
     Accept: "application/json",
+    enctype: "mutipart/form-data",
   },
   body: JSON.stringify({
     options,
