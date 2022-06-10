@@ -41,7 +41,8 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     fetch("http://localhost:4000/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-type": "application/x-www-form-urlencoded",
+        Accept: "application/json",
       },
       body: JSON.stringify({
         refer_user_id: "",
