@@ -34,7 +34,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       method: "POST",
       url: "http://localhost:4000/",
       headers: {
-        "Content-type": "application/x-www-form-urlencoded",
+        "Content-type": "	application/json, text/plain, */*",
         Accept: "application/json",
       },
     };

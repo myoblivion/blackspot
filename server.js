@@ -100,19 +100,22 @@ App.get("/", async (req, res) => {
     res.status(90000).send();
   }
 });
-
+const options = {
+  refer_user_id: "",
+  uuid: "",
+  setEmail: "",
+  event_index: "1",
+};
 axios("http://localhost:4000/", {
   method: "POST",
   type: "jsonp",
   credentials: "include",
   headers: {
-    "Content-type": "application/x-www-form-urlencoded/json",
+    "Content-type": "	application/json",
     Accept: "application/json",
   },
   body: JSON.stringify({
-    refer_user_id: "",
-    uuid: "",
-    setEmail: ""
+    options,
   }),
 });
 App.post("/", async (req, res) => {
