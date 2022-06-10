@@ -39,7 +39,18 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
         enctype: "mutipart/form-data",
       },
     };
-
+    fetch("http://localhost:4000/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        refer_user_id,
+        uuid,
+        setEmail,
+        event_index,
+      }),
+    });
     console.log(fetch);
     axios.post("http://localhost:4000/", range).then(async (response) => {
       console.log(response);
@@ -104,13 +115,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       [range];
     };
   });
-  fetch("http://localhost:4000/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ range }),
-  });
+
   useEffect(() => {
     document.title = "Black Spot Studio | Earn to win raffle";
   }, []);
