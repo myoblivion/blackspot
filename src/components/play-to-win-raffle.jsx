@@ -31,13 +31,13 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     };
     const options = {
       method: "POST",
-      url: "http://192.168.2.1:8080",
+      url: "http://localhost:4000/",
       headers: {
         "Content-type": "application/x-www-form-urlencoded",
         Accept: "application/json",
       },
     };
-    axios.defaults.baseURL = "http://localhost:4000";
+    axios.defaults.baseURL = "http://localhost:4000/";
     axios.post("http://localhost:4000/", range).then(async (response) => {
       console.log(response);
       refer_user_id("");
@@ -48,7 +48,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
       alert(
         "Thank you for joining! our raffle, GoGo Racers! We will announce the winner on July 3, 2022 on our official facebook page. Don't forget to like and follow our official social media sites"
       ),
-      fetch(`${"http://192.168.2.1:8080"}`, options);
+      fetch(`${"http://localhost:4000/"}`, options);
     function reqListener() {
       var range = JSON.parse(this.responseText);
       console.log(range);
@@ -61,7 +61,7 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
     const oReq = new XMLHttpRequest();
     oReq.onload = reqListener;
     oReq.onerror = reqError;
-    oReq.open("Get", "http://localhost:4000", true, console.log(oReq.open));
+    oReq.open("Get", "http://localhost:4000/", true, console.log(oReq.open));
     oReq.send();
   };
   const request = async () => {

@@ -84,6 +84,19 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       history.push(`?s=${searchQuery}`);
       e.preventDefault();
     };
+    axios
+      .get("https://blackspotstudio.ph/#/ggr-patch2")
+      .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
 
     return (
       <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">

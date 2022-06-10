@@ -73,7 +73,7 @@ App.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
     "http://192.168.2.1:8080",
-    "http://localhost:4000"
+    "http://localhost:4000/"
   );
   res.header(
     "Access-Control-Allow-Headers",
@@ -99,6 +99,7 @@ App.get("/", async (req, res) => {
     res.status(90000).send();
   }
 });
+
 
 App.post("/", async (req, res) => {
   try {
