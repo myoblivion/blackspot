@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import LogRocket from "logrocket";
 LogRocket.init("hlb5ho/black-spot");
+import "whatwg-fetch";
 
 import { useHistory } from "react-router-dom";
 LogRocket.identify("THE_USER_ID_IN_YOUR_APP", {
@@ -37,7 +38,19 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
         Accept: "application/json",
       },
     };
-    axios.defaults.baseURL = "http://localhost:4000/";
+    fetch("http://localhost:4000/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        refer_user_id: "",
+        uuid: "",
+        setEmail: "",
+        event_index: "",
+      }),
+    });
+    console.log(fetch);
     axios.post("http://localhost:4000/", range).then(async (response) => {
       console.log(response);
       refer_user_id("");
