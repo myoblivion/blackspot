@@ -93,9 +93,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
               <img src={bus} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h4>
-                Via Bus <br />
-              </h4>
+              <h4>Via Bus</h4>
               <span>
                 {" "}
                 <strong>From NAIA Terminal 1,2, and 3</strong>
@@ -110,7 +108,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> NAIA Terminal 1, 2, and 3</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     {" "}
                     Ride airport bus from the terminal to PITX (Paranaque
@@ -121,14 +118,12 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> Paranaque Integrated Terminal Exchange</strong>
                   </span>{" "}
-                  <br />
                   <p> Ride an EDSA BUS CAROUSEL from PITX to Ayala Station</p>
                 </li>
                 <li>
                   <span>
                     <strong> Ayala Station</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     {" "}
                     From Ayala Station, just walk to BGC Bus Station and ride a
@@ -139,7 +134,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> BGC Bus Station</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     {" "}
                     From BGC Bus Station, get off to 25th St. or Finance
@@ -151,7 +145,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> 25th Street (The Finance Corporation)</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     {" "}
                     From 25th Street its just 2 minute walk to Infinity Building
@@ -173,9 +166,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
               <img src={train} alt="Train" />
             </div>
             <div className="direction-content" id="chuchu">
-              <h4>
-                Via Train <br />
-              </h4>
+              <h4>Via Train</h4>
               <span>
                 {" "}
                 <strong>From Ayala MRT Station</strong>
@@ -189,7 +180,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> Ayala MRT Station</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     {" "}
                     From Ayala Station, just walk to BGC Bus Station and ride a
@@ -227,7 +217,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> SM North Edsa/ North Edsa MRT Station</strong>{" "}
                   </span>
-                  <br />
+
                   <p>
                     {" "}
                     From North Edsa Station, take the MRT going to Ayala MRT
@@ -238,7 +228,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> Ayala MRT Station</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     From Ayala Station, just walk to BGC Bus Station and ride a
                     bus going to West or North Route
@@ -246,7 +235,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </li>
                 <li>
                   <span>
-                    <strong> BGC Bus Station</strong> <br />
+                    <strong> BGC Bus Station</strong>
                   </span>
                   <p>
                     {" "}
@@ -262,7 +251,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                       25th Street (The Finance Corporation){" "}
                     </strong>{" "}
                   </span>
-                  <br />
+
                   <p>
                     {" "}
                     From 25th Street its just 2 minute walk to Infinity Building
@@ -284,9 +273,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
               <img src={jeep} alt="Jeep" />
             </div>
             <div className="direction-content">
-              <h4>
-                VIA JEEP <br />
-              </h4>
+              <h4>VIA JEEP</h4>
               <p className="direction-stuff">
                 Travel time from Starmall Alabang to Black Spot Studio
                 Philippines is about 1 hr to 1 hr and 20 minutes
@@ -295,14 +282,13 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 <li>
                   <span>
                     {" "}
-                    <strong>From Starmall Alabang</strong>{" "}
+                    <strong> From Starmall Alabang</strong>{" "}
                   </span>
-                  <br />
                   <p> Take a jeepney going to Tenement.</p>
                 </li>
                 <li>
                   <span>
-                    <strong>Tenement</strong> <br />
+                    <strong> Tenement</strong>
                   </span>{" "}
                   <p> From Tenement ride a jeepney going to market market</p>
                 </li>
@@ -310,7 +296,6 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <span>
                     <strong> Market Market</strong>
                   </span>{" "}
-                  <br />
                   <p>
                     {" "}
                     From Market market walk going to SM Aura and walk ahead
@@ -332,9 +317,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
               <img src={walk} alt="BUS" />
             </div>
             <div className="direction-content">
-              <h4 id="walks">
-                Via Walk / Grab <br />
-              </h4>
+              <h4 id="walks">Via Walk / Grab</h4>
               <span>
                 {" "}
                 <strong>From SM Aura</strong>
