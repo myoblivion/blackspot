@@ -41,7 +41,7 @@
             a {
               margin-left: 0;
               font-size: 20px;
-              color: white; 
+              color: white;
               margin-right: 2%;
             }
           }
@@ -210,16 +210,17 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .gogoracingnews {
+  .gogoracingsearch {
     width: 100%;
     height: 100%;
-    .gogo-racing-news-wrapper {
+    margin-top: 20%;
+    .gogo-racing-search-wrapper {
       background-image: url("/src/images/gogoracingbackground/ggrmb.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center;
       background-attachment: fixed;
-      .ggrnews-contents {
+      .ggrsearch-contents {
         width: 100%;
         height: 50%;
         .ggr-top {
@@ -236,5 +237,11 @@
         }
       }
     }
+  }
+  .gogoracingsearch
+    .gogo-racing-search-wrapper
+    .search-contents
+    .ggrsearch-contents {
+    width: 100%;
   }
 }

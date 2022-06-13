@@ -29,6 +29,7 @@ import GogoRacingUpdateList from "./ggr-update-list";
 import GogoRacingUpdates from "./ggr-updates";
 import GogoRacingPatch from "./ggr-patch2";
 import GogoRacingPatchs from "./ggr-patch3";
+import GogoRacingPatch4 from "./ggr-patch4";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./play-to-win-raffle";
@@ -204,6 +205,9 @@ const Appcomponent = () => {
           </Route>
           <Route path="/ggr-patch3">
             <GogoRacingPatchs />
+          </Route>
+          <Route path="/ggr-patch4">
+            <GogoRacingPatch4 />
           </Route>
           <Route path="/ggr-purchase-guide">
             <GogoRacingPurchaseGuide />
