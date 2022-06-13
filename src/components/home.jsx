@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
 
+import appstore from "../images/appstore.png";
 // Devices
 import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
@@ -321,6 +322,14 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                             target="_blank"
                           >
                             <img src={getit} alt="" />
+                          </a>
+                        </li>
+                        <li id="secondu">
+                          <a
+                            href="https://apps.apple.com/app/id1623115563?platform=iphone"
+                            target="_blank"
+                          >
+                            <img src={appstore} alt="" />
                           </a>
                         </li>
                       </ul>
