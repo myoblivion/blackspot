@@ -663,6 +663,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       </a>{" "}
                       and
                       <a href="https://policies.google.com/terms">
+                        {" "}
                         Terms of Service
                       </a>{" "}
                       apply.

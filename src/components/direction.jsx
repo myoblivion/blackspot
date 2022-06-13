@@ -187,7 +187,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
               <ul>
                 <li>
                   <span>
-                    <strong>Ayala MRT Station</strong>
+                    <strong> Ayala MRT Station</strong>
                   </span>{" "}
                   <br />
                   <p>
@@ -213,7 +213,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </li>
                 <li>
                   <span>
-                    <strong>From SM North Edsa/ North Edsa MRT Station</strong>
+                    <strong> From SM North Edsa/ North Edsa MRT Station</strong>
                   </span>
                 </li>
                 <li>
@@ -225,7 +225,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </li>
                 <li>
                   <span>
-                    <strong>SM North Edsa/ North Edsa MRT Station</strong>{" "}
+                    <strong> SM North Edsa/ North Edsa MRT Station</strong>{" "}
                   </span>
                   <br />
                   <p>
@@ -236,7 +236,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </li>
                 <li>
                   <span>
-                    <strong>Ayala MRT Station</strong>
+                    <strong> Ayala MRT Station</strong>
                   </span>{" "}
                   <br />
                   <p>
@@ -246,7 +246,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 </li>
                 <li>
                   <span>
-                    <strong>BGC Bus Station</strong> <br />
+                    <strong> BGC Bus Station</strong> <br />
                   </span>
                   <p>
                     {" "}
@@ -257,7 +257,10 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 <li>
                   <span>
                     {" "}
-                    <strong>25th Street (The Finance Corporation) </strong>{" "}
+                    <strong>
+                      {" "}
+                      25th Street (The Finance Corporation){" "}
+                    </strong>{" "}
                   </span>
                   <br />
                   <p>
@@ -298,7 +301,9 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                   <p> Take a jeepney going to Tenement.</p>
                 </li>
                 <li>
-                  <strong>Tenement</strong> <br />
+                  <span>
+                    <strong>Tenement</strong> <br />
+                  </span>{" "}
                   <p> From Tenement ride a jeepney going to market market</p>
                 </li>
                 <li>
@@ -338,7 +343,9 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
                 Head on Mckinley Parkway and walk ahead thru 26th Street corner
                 11th Street.
               </p>
-              <h4 id="grab">Via Grab</h4>
+              <span>
+                <strong>Via Grab</strong>
+              </span>
               <p className="direction-stuff">
                 Just pin “THE FINANCE CENTER” and just walk ahead to Infinity
                 Corporate Building.
