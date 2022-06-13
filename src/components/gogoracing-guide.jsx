@@ -234,7 +234,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </ul>
                 <hr />
                 <h3 id="reward-box">Reward Box</h3>
-                <img src={rewardbox} alt="" />
+                <img src={rewardboxz} alt="" />
                 <img src={dailybox} alt="" />
                 <p>▶ Updated to 6 boxes per League.</p>
                 <hr />
