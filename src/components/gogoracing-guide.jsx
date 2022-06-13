@@ -60,6 +60,32 @@ import fbcontinue from "../images/ggrguide/stuff42.png";
 import link from "../images/ggrguide/stuff43.png";
 import link2 from "../images/ggrguide/stuff44.png";
 import link3 from "../images/ggrguide/stuff45.png";
+import victory from "../images/ggrguide/stuff47.png";
+import gacha from "../images/ggrguide/stuff48.png";
+import gacha2 from "../images/ggrguide/stuff49.png";
+import shop from "../images/ggrguide/stuff51.png";
+import shop2 from "../images/ggrguide/stuff50.png";
+import quest from "../images/ggrguide/stuff52.png";
+import friends from "../images/ggrguide/stuff53.png";
+import chat from "../images/ggrguide/stuff54.png";
+import game1 from "../images/ggrguide/stuff55.png";
+import game2 from "../images/ggrguide/stuff56.png";
+import game3 from "../images/ggrguide/stuff57.png";
+import game4 from "../images/ggrguide/stuff58.png";
+import game5 from "../images/ggrguide/stuff59.png";
+import game6 from "../images/ggrguide/stuff60.png";
+import game7 from "../images/ggrguide/stuff61.png";
+import tickets from "../images/ggrguide/stuff62.png";
+import game8 from "../images/ggrguide/stuff63.png";
+import game9 from "../images/ggrguide/stuff64.png";
+import game10 from "../images/ggrguide/stuff65.png";
+import game11 from "../images/ggrguide/stuff66.png";
+import game12 from "../images/ggrguide/stuff67.png";
+import game13 from "../images/ggrguide/stuff68.png";
+import game14 from "../images/ggrguide/stuff69.png";
+import game15 from "../images/ggrguide/stuff70.png";
+
+import rewardBox from "../images/ggrguide/stuff46.png";
 
 const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
   // Title
@@ -90,14 +116,14 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="ggr-right">
-              <Link
-                to="/ggrsearch"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <FaSearch />
-              </Link>
+                <Link
+                  to="/ggrsearch"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <FaSearch />
+                </Link>
               </div>
             </div>
             <img src={backgroundimg} alt="" />
@@ -207,6 +233,7 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </ul>
                 <hr />
                 <h3 id="reward-box">Reward Box</h3>
+                <img src={rewardBox} alt="" />
                 <img src={dailybox} alt="" />
                 <hr />
                 <h3 id="coupon">Coupon & Rewards</h3>
@@ -231,6 +258,52 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <ul>
                   <li>▶ Currently locked.</li>
                   <li>▶ Mechanics will be given and updated soon.</li>
+                </ul>
+                <hr />
+                <h3 id="victory">Victory</h3>
+                <img src={victory} alt="" />
+                <ul>
+                  <li>
+                    ▶ Victory Box reward can be obtained by winning 10 times.
+                  </li>
+                </ul>
+                <hr />
+                <h3 id="gacha">Gacha</h3>
+                <img src={gacha} alt="" />
+                <ul>
+                  <li>▶ You can obtain rewards by using Golden Ticket.</li>
+                </ul>
+                <img src={gacha2} alt="" />
+                <ul>
+                  <li>▶ You can use 1 to 10 tickets at a time.</li>
+                </ul>
+                <hr />
+                <h3>Tickets</h3>
+                <img src={tickets} alt="" />
+                <ul>
+                  <li>
+                    ▶ Grand Prix ticket can be used as an entry ticket to Grand
+                    Prix mode.
+                  </li>
+                  <li>
+                    ▶ Gacha Ticket can be used in order to get awesome rewards.
+                  </li>
+                </ul>
+                <hr />
+                <h3 id="shop">Shop</h3>
+                <img src={shop} alt="" />
+                <ul>
+                  <li>
+                    ▶ You can purchase Shop Items by using Diamonds, Tokens or
+                    real money.
+                  </li>
+                </ul>
+                <img src={shop2} alt="" />
+                <ul>
+                  <li>
+                    ▶ Recommended or Hot items are also highlighted for you to
+                    check.
+                  </li>
                 </ul>
                 <hr />
                 <div className="garages">
@@ -289,7 +362,16 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     </li>
                   </ul>
                   <img src={synthesis} alt="" />
+                  <hr />
                 </div>
+                <h3 id="quest">Quest</h3>
+                <img src={quest} alt="" />
+                <ul>
+                  <li>
+                    ▶ You can obtain rewards such as Diamonds and Tokens after
+                    completing a certain quest.
+                  </li>
+                </ul>
                 <hr />
                 <h3 id="mining">Mining</h3>
                 <img src={mining} alt="" />
@@ -343,6 +425,8 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   </div>
                 </div>
                 <hr />
+                <h3 className="swap">Swap</h3>
+                <img src={soonbox} alt="" />
                 <h3 id="package">Package</h3>
                 <img src={packages} alt="" />
                 <ul>
@@ -361,7 +445,11 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <hr />
                 <h3 id="language-settings">Language Settings</h3>
                 <img src={language} alt="" />
-                <p>Current Languages available are English and Korean.</p>
+                <p>
+                  ▶ Current Languages available are English, Korean, Chinese
+                  (Simplified), Chinese (Traditional) and Japanese.
+                </p>
+                <p> ▶ Non-highlighted languages will be updated soon.</p>
                 <hr />
                 <h3 id="game-settings">Game Settings</h3>
                 <img src={settings} alt="" />
@@ -424,13 +512,27 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                   <li>Shows public High score of the game.</li>
                 </ul>
                 <hr />
-                <div className="achievements">
-                  <h3>Achievements</h3>
-                  <img src={achieve} alt="" />
-                  <ul>
-                    <li>Shows achievements of the player to the game.</li>
-                  </ul>
-                </div>
+
+                <h3>Achievements</h3>
+                <img src={achieve} alt="" />
+                <ul>
+                  <li>Shows achievements of the player to the game.</li>
+                </ul>
+                <hr />
+                <h3>Friends</h3>
+                <img src={friends} alt="" />
+                <ul>
+                  <li>Shows achievements of the player to the game.</li>
+                </ul>
+                <hr />
+                <h3>Chat</h3>
+                <img src={chat} alt="" />
+                <ul>
+                  <li>
+                    ▶ You can use the lobby chat in order to communicate with
+                    other players.
+                  </li>
+                </ul>
                 <hr />
                 <h3 id="game-mode">Start</h3>
                 <img src={gamemode} alt="" />
@@ -439,92 +541,212 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                     ▶ When the player clicks Start, the player will be directed
                     to mode selection screen.
                   </li>
-                  <li>
-                    ▶ Time Attack
-                    <p>Objective: To set the fastest recorded time per map</p>
-                    <img src={timeattack} alt="" />
-                  </li>
-                  <li>
-                    ▶ Time Record{" "}
-                    <ul>
-                      <li>Best Record (Public record)</li>
-                      <li>My Record (Personal record)</li>
-                    </ul>
-                  </li>
-                  <li>
-                    ▶ Track Info
-                    <ul>
-                      <li>Shows the track description</li>
-                    </ul>
-                  </li>
-                  <li>▶ Available tracks</li>
-                  <li>
-                    ▶ Start button
-                    <ul>
-                      <li>Will find a match and be directed to the race</li>
-                    </ul>
-                  </li>
-                  <li>▶ Track difficulty level</li>
-                  <li>
-                    ▶ Speed League
-                    <ul>
-                      <li>
-                        Objective: To be placed in Podium in order to increase
-                        ranking.{" "}
-                      </li>
-                    </ul>
-                  </li>
                 </ul>
-                <img src={speedleague} alt="" />
+                <hr />
+                <h3>Gameplay Guide</h3>
+                <h4>Time Attack</h4>
+                <p>Objective: </p>
+                <p>▶ To set the fastest recorded time per map.</p>
+                <p>Mechanics:</p>
                 <ul>
                   <li>
-                    ▶ Speed League Description
-                    <img src={speeddescript} alt="" />
-                    <ul>
-                      <li>
-                        Shows a description on how speed league will be played.
-                      </li>
-                    </ul>
+                    ▶ Player will race through the entire map setting best lap
+                    and time record.
                   </li>
-                  <li>
-                    ▶ Ranking
-                    <ul>
-                      <li>Shows your current ranking</li>
-                      <li>Shows the total games played and games won.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    ▶ Track Info
-                    <ul>
-                      <li>Shows track description and difficulty level</li>
-                    </ul>
-                  </li>
-                  <li>
-                    ▶ Available Tracks
-                    <ul>
-                      <li>
-                        Available tracks will be updated as the rank increases.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    ▶ Start button
-                    <ul>
-                      <li>Will find a match and directed to the race.</li>
-                    </ul>
-                  </li>
+                  <li>▶ No other players can join the race.</li>
+                  <li>▶ No items/skills can be used by the player.</li>
                 </ul>
-
+                <img src={game1} alt="" />
+                <ul>
+                  <li>▶ 1. Position/Display Name</li>
+                  <li>▶ 2. Car Reset</li>
+                  <li>▶ 3. Left and Right Buttons</li>
+                  <li>▶ 4. Countdown</li>
+                  <li>▶ 5. Character</li>
+                  <li>▶ 6. Speedometer</li>
+                  <li>▶ 7. Timer</li>
+                  <li>▶ 8. Settings</li>
+                  <li>▶ 9. Nitro</li>
+                  <li>▶ 10. Accelerate</li>
+                </ul>
+                <hr />
+                <h4>Starting boost</h4>
+                <img src={game2} alt="" />
+                <p>
+                  ▶ By pressing the Accelerate button on the right time, your
+                  character will gain a starting boost to take lead.
+                </p>
+                <hr />
+                <h4>Drifting</h4>
+                <p>
+                  ▶ By pressing the drift button and gaining momentum, the drift
+                  meter will fill up in order to gain Nitro.
+                </p>
+                <hr />
+                <h4>Drift Boost</h4>
+                <p>
+                  ▶ After drifting for a long period of time without crashing,
+                  you’ll gain a short boost by pressing the Acceleration button.
+                </p>
+                <img src={game3} alt="" />
+                <hr />
+                <h4>Drift Boost (Nitro)</h4>
+                <p>
+                  ▶ After successfully filling the drift meter, your character
+                  will gain a Nitro for a quick boost of speed.
+                </p>
+                <img src={game4} alt="" />
+                <img src={game5} alt="" />
+                <hr />
+                <h4>Boost Pads</h4>
+                <p>
+                  ▶ By driving over a boost pad, your character will gain a
+                  sudden boost like nitro. <br /> ▶ Boost Pads differs in color
+                  which gives boost for a longer period of time. Below are the
+                  color of boost pads from shortest amount of time to highest:
+                </p>
+                <img src={game6} alt="" />
+                <hr />
+                <h4>Nitro Grades</h4>
+                <p>
+                  ▶ Just like the boost pads, the duration of Nitro depends on
+                  the color. The grade of nitro will increase for as long as you
+                  are not using your nitro and continue to drift.
+                </p>
+                <img src={game8} alt="" />
+                <hr />
+                <h4>Result</h4>
+                <p>▶ The result shows your time per lap and it’s overall.</p>
+                <p>
+                  ▶ You’ll notice that you’ve broken a record if you have (-)
+                  minus amount of time.
+                </p>
+                <img src={game7} alt="" />
+                <hr />
+                <div className="speed-league">
+                  <h4>Speed League</h4>
+                  <p>Objective</p>
+                  <ul>
+                    <li>
+                      ▶ To be on placed in Podium in order to increase Ranking.
+                    </li>
+                  </ul>
+                  <p>Mechanics</p>
+                  <ul>
+                    <li>
+                      ▶ Player will race through the entire map and placing in
+                      Podium.{" "}
+                    </li>
+                    <li>▶ 5 other players can join the game</li>
+                    <li>▶ No items/skills can be used by the player.</li>
+                    <li>▶ Map is selected randomly.</li>
+                  </ul>
+                  <h4>Lobby</h4>
+                  <p>
+                    ▶ After finding a match, you will be directed to the race
+                    lobby.
+                  </p>
+                  <img src={game9} alt="" />
+                  <ul>
+                    <li>▶ Race Timer</li>
+                    <li>▶ Racers</li>
+                    <li>▶ Map description and difficulty level</li>
+                    <li>▶ Ready button</li>
+                  </ul>
+                  <p>
+                    Note: Speed League has the same game mechanics as Time
+                    Attack which was already stated above.
+                  </p>
+                  <hr />
+                  <h4>DNF (Did not Finish) Timer</h4>
+                  <img src={game10} alt="" />
+                  <ul>
+                    <li>
+                      ▶ DNF is enabled once a racer already finished the racer.
+                    </li>
+                    <li>
+                      ▶ All players who are unable to reach the finish line
+                      after the counter ends, players will be labeled as DNF.
+                    </li>
+                  </ul>
+                  <hr />
+                  <h4>Result</h4>
+                  <img src={game11} alt="" />
+                  <ul>
+                    <li>▶ Podium Finishers</li>
+                    <li>▶ Race result per order</li>
+                  </ul>
+                  <hr />
+                  <h4>Item League</h4>
+                  <p>Objective:</p>
+                  <ul>
+                    <li>
+                      ▶ To be on placed in Podium in order to increase Ranking.
+                    </li>
+                    <li>
+                      ▶ To let a team member be the first placer in order to win
+                      and placed in podium
+                    </li>
+                  </ul>
+                  <p>Mechanics:</p>
+                  <ul>
+                    <li>
+                      ▶ Player will race through the entire map and placing in
+                      Podium.
+                    </li>
+                    <li>▶ 5 other players can join the game</li>
+                    <li>▶ Items/skills can be used by the player.</li>
+                    <li>▶ Map is selected randomly.</li>
+                  </ul>
+                  <h4>Lobby</h4>
+                  <p>
+                    Same like Speed League, players will be redirected to the
+                    lobby
+                  </p>
+                  <img src={game12} alt="" />
+                  <p>
+                    Note: Item League has the same game mechanics as Time Attack
+                    which was already stated above. Item only differs on Speed
+                    League since players can use items and skills.
+                  </p>
+                  <hr />
+                  <h4>Passive/Active Skills</h4>
+                  <ul>
+                    <li>
+                      ▶ Passive and active skill depends on the character that
+                      you are using.
+                    </li>
+                    <li>
+                      ▶ Before the race starts, your active skills already
+                      available to use while the passive is already activated.
+                    </li>
+                  </ul>
+                  <img src={game13} alt="" />
+                  <hr />
+                  <h4>Items</h4>
+                  <p>
+                    items can be obtained by driving through a random box, a
+                    random item will be given and can be used for advantage.
+                  </p>
+                  <img src={game14} alt="" />
+                  <ul>
+                    <li>
+                      ▶ Same as the Speed League, podium finishers are
+                      highlighted.
+                    </li>
+                    <li>
+                      ▶ Team members of who finished first will be included in
+                      the podium.
+                    </li>
+                    <li>▶ Characters are sorted per order.</li>
+                  </ul>
+                  <img src={game15} alt="" />
+                  <hr />
+                </div>
                 <div className="coming-soon">
                   <h2>Will be updated soon:</h2>
                   <ul>
-                    <li>▶ Friends</li>
                     <li>▶ Swap</li>
-                    <li>▶ Quest</li>
-                    <li>▶ Shop</li>
-                    <li>▶ Gacha</li>
-                    <li>▶ Victory</li>
-                    <li>▶ Free Box</li>
                     <li>▶ Clan</li>
                   </ul>
                 </div>

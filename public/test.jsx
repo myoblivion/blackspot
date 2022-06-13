@@ -44,54 +44,28 @@ const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
 
   return (
     <div className="register wrapper">
-      <div className="register-wrapper">
-        <div className="form-wrapper">
-          <h1>Gogo Racing Info</h1>
-          <form method="get" id="formwrap" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              autoComplete="off"
-              name="name"
-              placeholder="Enter your Account Name"
-              required
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              type="text"
-              autoComplete="off"
-              name="number"
-              placeholder="Enter Your Account ID"
-              maxLength="6"
-              required
-              onChange={(e) => setNumber(e.target.value)}
-            />
-            <input
-              type="email"
-              autoComplete="off"
-              name="email"
-              placeholder="Enter Your Email"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <div className="down-buddeh">
-              <div className="up">
-                <input type="checkbox" name="check" id="check" required />
-                <label htmlFor="check" id="checksz">
-                  I have read and agree to the terms and conditions and privacy
-                  policy.
-                </label>
-              </div>
-              <div className="down">
-                <input type="checkbox" name="check2" id="check2" required />
-                <label htmlFor="check2" id="checksz">
-                  Sign up to our newsletter to receive our latest news and
-                  offers
-                </label>
-              </div>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+      <div className="content1">Content1
+      </div>
+      <div className="content1">Content2</div>
+      <div className="content1">Content3</div>
+      <div className="content1">Content4</div>
+      <input type="radio" id="game1" name="slider-game"/>
+      <input type="radio" id="game2" name="slider-game"/>
+      <input type="radio" id="game3" name="slider-game"/>
+      <input type="radio" id="game4" name="slider-game"/>
+      <div className="displayers">
+      <label htmlFor="game1">
+        <img src="https://64.media.tumblr.com/ae7dfd85ecb37f88adfdfc1f3adb3176/e18cfa5e91c738e4-b5/s1280x1920/cb381798533fb27092d2c0e29826ffdbf5e2ee2a.pnj" alt="" />
+      </label>
+      <label htmlFor="game2">
+        <img src="https://64.media.tumblr.com/4d949557870d81d37486045a47773849/e18cfa5e91c738e4-28/s1280x1920/9ff8010e4a6fb35d5e93e7fd21ac24835f079309.pnj" alt="" />
+      </label>
+      <label htmlFor="game3">
+        <img src="https://64.media.tumblr.com/734fd29aa1c0a3d612f15d82f45f09e8/e18cfa5e91c738e4-37/s1280x1920/dd945c2ac107205f0265d4922bce0e73cf2571fe.pnj" alt="" />
+      </label>
+      <label htmlFor="game4">
+        <img src="https://64.media.tumblr.com/cc17c525f9d7b67a2db738a576982670/e18cfa5e91c738e4-45/s1280x1920/e8085b5d4bd2cddf78ece019af1140b2f6cde807.pnj" alt="" />
+      </label>
       </div>
     </div>
   );

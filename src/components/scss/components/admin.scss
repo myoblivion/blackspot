@@ -68,6 +68,7 @@ $baby-blue: #f8faff;
           display: flex;
           justify-content: space-around;
           margin-bottom: 20px;
+
           #choose1:checked ~ #lel {
             color: black;
             background-color: white;
@@ -290,7 +291,7 @@ $baby-blue: #f8faff;
             height: 100%;
             background-color: white;
             margin-top: 10%;
-            display: flex;
+            display: block;
             flex-direction: column;
             margin-top: 13%;
             .ggr-header {

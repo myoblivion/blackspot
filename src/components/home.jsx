@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
+import VideoPlayer from "react-video-js-player";
 
 // Animate on Scroll
 import Aos from "aos";
@@ -49,6 +50,8 @@ import mobile2 from "../images/game_mobile/phone2.png";
 import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
 import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
 // Slider
+import video1 from "../images/video/Big Update Trailer FB (1).mp4";
+import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
 
@@ -73,7 +76,8 @@ import {
   FaWindowClose,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-
+import collect from "/Users/USER/Desktop/blackspot/src/images/collection1.png";
+import chain from "/Users/USER/Desktop/blackspot/src/images/banner4.png";
 // Image Js
 import emailjs from "emailjs-com";
 
@@ -266,7 +270,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         <div className="container-1">
           <div className="container-wrapper"></div>
         </div>
-        {/* Game Section */}
+
         <div className="container-2" id="game">
           <div
             className="game-wrapper"
@@ -502,6 +506,97 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </div>
+        {/*
+        <div className="selectorz-wrapper">
+ <input type="radio" id="game1" name="slider-game" defaultChecked />
+          <input type="radio" id="game2" name="slider-game" />
+          <input type="radio" id="game3" name="slider-game" />
+          <input type="radio" id="game4" name="slider-game" />
+          <div className="content1">
+            <div className="leftx">
+              <h1>Gogo Racing</h1>
+              <h2>PLAY NOW</h2>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <video
+                  src={video1}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="content2">
+            <div className="leftx">
+              <h1>Gogo Racing</h1>
+              <h2>PLAY NOW</h2>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <video
+                  src={video2}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="content3">
+            <div className="leftx">
+              <h1>Gogo Racing</h1>
+              <h2>PLAY NOW</h2>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <img src={collect} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content4">
+            <div className="leftx">
+              <h1>Gogo Racing</h1>
+              <h2>PLAY NOW</h2>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <img src={chain} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="displayers">
+            <label htmlFor="game1">
+              <img
+                src="https://64.media.tumblr.com/4d949557870d81d37486045a47773849/e18cfa5e91c738e4-28/s1280x1920/9ff8010e4a6fb35d5e93e7fd21ac24835f079309.pnj"
+                alt=""
+              />
+            </label>
+            <label htmlFor="game2">
+              <img
+                src="https://64.media.tumblr.com/cc17c525f9d7b67a2db738a576982670/e18cfa5e91c738e4-45/s1280x1920/e8085b5d4bd2cddf78ece019af1140b2f6cde807.pnj"
+                alt=""
+              />
+            </label>
+            <label htmlFor="game3">
+              <img
+                src="https://64.media.tumblr.com/734fd29aa1c0a3d612f15d82f45f09e8/e18cfa5e91c738e4-37/s1280x1920/dd945c2ac107205f0265d4922bce0e73cf2571fe.pnj"
+                alt=""
+              />
+            </label>
+            <label htmlFor="game4">
+              <img
+                src="https://64.media.tumblr.com/ae7dfd85ecb37f88adfdfc1f3adb3176/e18cfa5e91c738e4-b5/s1280x1920/cb381798533fb27092d2c0e29826ffdbf5e2ee2a.pnj"
+                alt=""
+              />
+            </label>
+          </div>
+        </div> */}
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div
@@ -762,7 +857,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         <input type="checkbox" id="close" />
         <div className="stuffwrapper">
           <label htmlFor="close" id="iwannasleep">
-          <FaWindowClose />
+            <FaWindowClose />
           </label>
           <Link
             to="/play-to-win-raffle"
