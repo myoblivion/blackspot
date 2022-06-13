@@ -84,6 +84,7 @@ import game12 from "../images/ggrguide/stuff67.png";
 import game13 from "../images/ggrguide/stuff68.png";
 import game14 from "../images/ggrguide/stuff69.png";
 import game15 from "../images/ggrguide/stuff70.png";
+import rewardboxz from "../images/ggrguide/stuff71.png";
 
 import rewardBox from "../images/ggrguide/stuff46.png";
 
@@ -233,8 +234,9 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 </ul>
                 <hr />
                 <h3 id="reward-box">Reward Box</h3>
-                <img src={rewardBox} alt="" />
+                <img src={rewardbox} alt="" />
                 <img src={dailybox} alt="" />
+                <p>▶ Updated to 6 boxes per League.</p>
                 <hr />
                 <h3 id="coupon">Coupon & Rewards</h3>
                 <img src={coupon} alt="" />
