@@ -34,8 +34,7 @@ App.get("/", (req, res) => {
 const allowedOrigins = [
   "http://localhost:8080",
   "http://blackspotstudio.ph",
-  "http://192.168.2.154/4000",
-  "http://192.168.2.154/8080",
+  "http://192.168.2.154:8080",
   "http://192.168.2.154/getAll",
   "http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=your_site_user_id",
   "*",
@@ -77,7 +76,7 @@ const authentication = async () => {
 App.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "http://192.168.2.1:4000",
+    "http://192.168.2.154:8080",
     "http://localhost:4000/"
   );
   res.header(
@@ -150,7 +149,6 @@ App.post("/", async (req, res) => {
 
 let refer_user_id = "";
 let uuid = "";
-let url = `http://3.37.118.67/api/event/join?event_index=1&uuid=72&refer_user_id=${refer_user_id}`;
 App.get(() => {
   if ((uuid, refer_user_id)) {
     axios

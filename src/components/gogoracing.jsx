@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 // Logo
 import ggrlogo from "../images/icons/gogoracing.png";
 import getit from "../images/app-download.png";
+import appstore from "../images/appstore.png";
 import prevv from "../images/gogoracingbackground/prev.png";
 import nextt from "../images/gogoracingbackground/next.png";
 import movingchar from "../images/edit/stuff.png";
@@ -141,6 +142,13 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
             >
               {" "}
               <img src={getit} alt="" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+              target="_blank"
+            >
+              {" "}
+              <img src={appstore} alt="" />
             </a>
           </div>
           <div className="socials">

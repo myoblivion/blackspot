@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
 import VideoPlayer from "react-video-js-player";
-
+import dotzs from "../images/dots.png";
 // Animate on Scroll
 import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
 import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
-
+import Recaptcha from "react-recaptcha";
 import appstore from "../images/appstore.png";
 // Devices
 import Phone from "../images/icons/phone.png";
@@ -30,7 +30,7 @@ import ggrc2 from "../images/edit/2.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
-import Gogoracing from "../images/edit/4.png";
+import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
@@ -45,6 +45,11 @@ import game3 from "../images/edit/banner3.png";
 import game4 from "../images/edit/banner4.png";
 import icono from "../images/icons/logo.png";
 
+// Shadow :D
+import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
+import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
+import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
+
 // Game section mobile
 import mobile1 from "../images/game_mobile/phone1.png";
 import mobile2 from "../images/game_mobile/phone2.png";
@@ -55,7 +60,10 @@ import video1 from "../images/video/Big Update Trailer FB (1).mp4";
 import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
-
+import {
+  GoogleReCaptchaProvider,
+  GoogleReCaptcha,
+} from "react-google-recaptcha-v3";
 // Icons
 import {
   FaEnvelope,
@@ -75,6 +83,8 @@ import {
   FaGooglePlay,
   FaRegArrowAltCircleUp,
   FaWindowClose,
+  FaInstagram,
+  FaTiktok,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import collect from "/Users/USER/Desktop/blackspot/src/images/collection1.png";
@@ -106,13 +116,6 @@ function validateRecaptcha() {
 }
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
-  function MouseOver(event) {
-    event.target.style.background = "red";
-  }
-  function MouseOut(event) {
-    event.target.style.background = "";
-  }
-
   const [isShown, setIsShown] = useState(true);
   // Aos (Animation On Scroll)
   useEffect(() => {
@@ -143,7 +146,16 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     arrows: false,
     beforeChange: (current, next) => setImageIndex(next),
   };
-
+  // const settings = {
+  //   fade: true,
+  //   infinite: true,
+  //   vertical: true,
+  //   dots: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   arrows: false,
+  //   slidesToScroll: 1,
+  // };
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
@@ -171,6 +183,10 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     e.target.reset();
   }
 
+  const verifyCallback = function (response) {
+    console.log(response);
+    document.getElementById("someForm").submit();
+  };
   return (
     // Home
     <div className="wrapper">
@@ -515,16 +531,59 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </div>
-        {/*
-        <div className="selectorz-wrapper">
- <input type="radio" id="game1" name="slider-game" defaultChecked />
+
+        {/* <div className="selectorz-wrapper">
+          <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
           <input type="radio" id="game4" name="slider-game" />
           <div className="content1">
             <div className="leftx">
-              <h1>Gogo Racing</h1>
-              <h2>PLAY NOW</h2>
+              <Link
+                to="/gogoracing"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <img src={Gogoracing} alt="" id="ggr-logz" />
+              </Link>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                debitis impedit quibusdam amet et porro vitae ipsum assumenda
+                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
+                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+              </h1>
+              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                <img src={getit} alt="" id="getitt" />
+              </a>
+              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                <img src={appstore} alt="" id="appstur" />
+              </a>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a href="">
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="rightx">
               <div className="video">
@@ -536,13 +595,59 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   loop={true}
                   muted={true}
                 />
+                <img src={shadowLeft} alt="" id="leftu" />
+                <img src={shadowRight} alt="" id="rightu" />
+                <img src={shadowBottom} alt="" id="bottomtu" />
               </div>
             </div>
           </div>
           <div className="content2">
             <div className="leftx">
-              <h1>Gogo Racing</h1>
-              <h2>PLAY NOW</h2>
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <img src={ScionLogo} alt="" id="logo" />
+              </Link>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                debitis impedit quibusdam amet et porro vitae ipsum assumenda
+                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
+                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+              </h1>
+              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                <img src={getit} alt="" id="getitt" />
+              </a>
+              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                <img src={appstore} alt="" id="appstur" />
+              </a>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a href="">
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="rightx">
               <div className="video">
@@ -555,6 +660,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   muted={true}
                 />
               </div>
+              <img src={shadowLeft} alt="" id="leftu" />
+              <img src={shadowRight} alt="" id="rightu" />
+              <img src={shadowBottom} alt="" id="bottomtu" />
             </div>
           </div>
           <div className="content3">
@@ -565,6 +673,15 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="rightx">
               <div className="video">
                 <img src={collect} alt="" />
+              </div>
+              <div className="leftzz">
+                <img src={shadowLeft} alt="" />
+              </div>
+              <div className="right">
+                <img src={shadowRight} alt="" />
+              </div>
+              <div className="bottomzki">
+                <img src={shadowBottom} alt="" />
               </div>
             </div>
           </div>
@@ -577,41 +694,258 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <div className="video">
                 <img src={chain} alt="" />
               </div>
+              <div className="leftzz">
+                <img src={shadowLeft} alt="" />
+              </div>
+              <div className="right">
+                <img src={shadowRight} alt="" />
+              </div>
+              <div className="bottomzki">
+                <img src={shadowBottom} alt="" />
+              </div>
             </div>
           </div>
           <div className="displayers">
             <label htmlFor="game1">
-              <img
-                src="https://64.media.tumblr.com/4d949557870d81d37486045a47773849/e18cfa5e91c738e4-28/s1280x1920/9ff8010e4a6fb35d5e93e7fd21ac24835f079309.pnj"
-                alt=""
-              />
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Gogo Racing
             </label>
             <label htmlFor="game2">
-              <img
-                src="https://64.media.tumblr.com/cc17c525f9d7b67a2db738a576982670/e18cfa5e91c738e4-45/s1280x1920/e8085b5d4bd2cddf78ece019af1140b2f6cde807.pnj"
-                alt=""
-              />
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Scion Fist
             </label>
             <label htmlFor="game3">
-              <img
-                src="https://64.media.tumblr.com/734fd29aa1c0a3d612f15d82f45f09e8/e18cfa5e91c738e4-37/s1280x1920/dd945c2ac107205f0265d4922bce0e73cf2571fe.pnj"
-                alt=""
-              />
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Gogo World
             </label>
             <label htmlFor="game4">
-              <img
-                src="https://64.media.tumblr.com/ae7dfd85ecb37f88adfdfc1f3adb3176/e18cfa5e91c738e4-b5/s1280x1920/cb381798533fb27092d2c0e29826ffdbf5e2ee2a.pnj"
-                alt=""
-              />
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Gogo Chain
             </label>
           </div>
+        </div>
+        <div className="mobile-home">
+          <Slider {...settings}>
+            <div className="ggr-m">
+              <div className="top">
+                <video
+                  src={video1}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+                <img src={shadowLeft} alt="" id="leftu" />
+                <img src={shadowRight} alt="" id="rightu" />
+                <img src={shadowBottom} alt="" id="bottomtu" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
+                </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="scion-m">
+              <div className="top">
+                <video
+                  src={video2}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+                <img src={shadowLeft} alt="" id="leftu" />
+                <img src={shadowRight} alt="" id="rightu" />
+                <img src={shadowBottom} alt="" id="bottomtu" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
+                </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="ggworld-m">
+              <div className="top">
+                <video
+                  src={video1}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+                <img src={shadowLeft} alt="" id="leftu" />
+                <img src={shadowRight} alt="" id="rightu" />
+                <img src={shadowBottom} alt="" id="bottomtu" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
+                </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="ggc-m">
+              <div className="top">
+                <video
+                  src={video1}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+                <img src={shadowLeft} alt="" id="leftu" />
+                <img src={shadowRight} alt="" id="rightu" />
+                <img src={shadowBottom} alt="" id="bottomtu" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
+                </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div> */}
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div
             className="container contact-us-section"
             data-aos="fade-right"
-            data-aos-offset="200"
+            data-aos-offset="50"
             data-aos-duration="700"
           >
             <div className="contact-row h-100">
@@ -621,55 +955,52 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="col-md-9">
-                <form className="contact-us-form" onSubmit={sendEmail}>
-                  <div className="form-group">
-                    <label htmlFor="name">Name : *</label>
-                    <input
-                      placeholder="enter name"
-                      type="text"
-                      required
-                      id="name"
-                      name="name"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="email">Email Address : *</label>
-                    <input type="email" name="email" id="email" required />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="message">Message :</label>
-                    <textarea
-                      placeholder="Message"
-                      id="message"
-                      rows="2"
-                      name="message"
-                      maxLength={600}
-                    ></textarea>
-                  </div>
-                  <div className="form-group clearfix">
-                    <button
-                      id="submit"
-                      type="sumbit"
-                      data-id="#accessories-holder"
-                      className="red-select-btn model-selector btn-send-message"
-                    >
-                      <span>Submit</span>
-                    </button>
-                    <h3>This site is protected by reCAPTCHA and the Google</h3>
-                    <span id="protected">
-                      {" "}
-                      <a href="https://policies.google.com/privacy">
-                        Privacy Policy
-                      </a>{" "}
-                      and
-                      <a href="https://policies.google.com/terms">
-                        {" "}
-                        Terms of Service
-                      </a>{" "}
-                      apply.
-                    </span>
-                  </div>
-                </form>
+                <GoogleReCaptchaProvider reCaptchaKey="[key]">
+                  <form
+                    className="contact-us-form"
+                    id="someForm"
+                    onSubmit={sendEmail}
+                  >
+                    <div className="form-group">
+                      <label htmlFor="name">Name : *</label>
+                      <input
+                        placeholder="enter name"
+                        type="text"
+                        required
+                        id="name"
+                        name="name"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="email">Email Address : *</label>
+                      <input type="email" name="email" id="email" required />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="message">Message :</label>
+                      <textarea
+                        placeholder="Message"
+                        id="message"
+                        rows="2"
+                        name="message"
+                        maxLength={600}
+                      ></textarea>
+                    </div>
+                    <div className="form-group clearfix">
+                      <Recaptcha
+                        sitekey="6LcganggAAAAALJfQ9X3YBRJGzcfUK1dUKsvnJPQ"
+                        required
+                      />
+                      <button
+                        id="submit"
+                        type="sumbit"
+                        data-id="#accessories-holder"
+                        className="red-select-btn model-selector btn-send-message"
+                      >
+                        <span>Submit</span>
+                      </button>
+                    </div>
+                  </form>
+                </GoogleReCaptchaProvider>
               </div>
             </div>
           </div>
