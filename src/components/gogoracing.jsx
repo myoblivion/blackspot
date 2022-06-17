@@ -144,7 +144,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               <img src={getit} alt="" />
             </a>
             <a
-              href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+              href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg"
               target="_blank"
             >
               {" "}

@@ -21,6 +21,10 @@ $baby-blue: #f8faff;
       .sub-components {
         height: 100%;
         width: 100%;
+        h1 {
+          font-size: 107%;
+          margin-left: 2%;
+        }
         #logout {
           font-family: "Helvetica", "Arial", sans-serif;
           display: inline-block;
