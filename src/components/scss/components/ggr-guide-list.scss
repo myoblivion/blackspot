@@ -1,5 +1,8 @@
 .ggr-guidelist {
   height: 100%;
+  .admin {
+    display: none;
+  }
   .ggr-glist-contents {
     background-image: url("/src/images/gogoracingbackground/withlogo.png");
     background-repeat: no-repeat;

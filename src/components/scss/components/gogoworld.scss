@@ -1,7 +1,9 @@
 .gogoworld {
   width: 100%;
   overflow-x: hidden;
-
+  .admin {
+    display: none;
+  }
   .gogoworld-wrapper {
     height: 100vh;
     width: 100%;

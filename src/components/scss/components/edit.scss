@@ -1,48 +1,61 @@
-.gogoracing-purchase {
+.edit {
   width: 100%;
   height: 100%;
   .admin {
     display: none;
   }
-  .ggr-purchase-contents {
-    top: 0;
+  .edit-wrapper {
     background-image: url("/src/images/gogoracingbackground/withlogo.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     background-attachment: fixed;
+    z-index: 99999;
+    position: relative;
     height: 100%;
-    margin-top: 5%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
-    position: relative;
-    .ggr-pcrecontents {
+    .edit-right {
       width: 70%;
       height: 100%;
-      background-color: white;
       margin-top: 10%;
       display: flex;
       flex-direction: column;
       margin-top: 13%;
       margin-bottom: 5%;
       padding-bottom: 5%;
-      .ggr-header {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(48, 48, 48);
-        color: white;
-        width: 100%;
-        height: 100%;
-        border-top: 8px solid black;
-        .ggr-top {
+      background-color: white;
+      .edit-web {
+        .edit-header {
+          display: flex;
+          flex-direction: column;
+          background-color: rgb(48, 48, 48);
+          color: white;
+          width: 100%;
+          height: 100%;
+          border-top: 8px solid black;
+          margin-bottom: 5%;
+          #becku {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            padding: 0.3% 0.5%;
+            border-radius: 50%;
+            font-size: 200%;
+            background-color: white;
+          }
+        }
+        .edit-top {
           display: flex;
           justify-content: space-between;
           height: 5vh;
           align-items: center;
-          .ggr-left {
+          .edit-left {
             font-size: 16px;
             display: flex;
             align-items: center;
@@ -55,7 +68,7 @@
               margin-right: 2%;
             }
           }
-          .ggr-right {
+          .edit-right {
             margin-right: 2%;
             display: flex;
             justify-content: center;
@@ -67,6 +80,18 @@
                 margin-right: 5px;
               }
             }
+            a {
+              display: block;
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              color: white;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
             #selection {
               display: none;
             }
@@ -74,7 +99,6 @@
               position: absolute;
               right: 65%;
               width: 450%;
-
               height: 100%;
               border-radius: 8px;
               display: none;
@@ -88,18 +112,6 @@
               padding: 7px 10px;
               border-radius: 3px;
               background-color: #51575a;
-              &:hover {
-                background-color: azure;
-                color: black;
-              }
-            }
-            a {
-              display: block;
-              cursor: pointer;
-              padding: 7px 10px;
-              border-radius: 3px;
-              background-color: #51575a;
-              color: white;
               &:hover {
                 background-color: azure;
                 color: black;
@@ -119,6 +131,9 @@
             }
             #search:checked ~ #text-search {
               display: block;
+            }
+            #submit {
+              transform: translate(0, -9000%);
             }
             #search:checked ~ #close {
               display: block;
@@ -161,106 +176,46 @@
           -ms-user-select: none;
           user-select: none;
         }
-      }
-      .ggr-purchases {
-        width: 50%;
-        margin-top: 3%;
-        #ihateyou {
-          margin-left: 2%;
-          margin-top: 3%;
-          width: 90%;
-        }
-        h1 {
-          margin-bottom: 4%;
-          background-color: #116682;
-          height: 5vh;
-          color: white;
-          padding-left: 5px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin-left: 2%;
-        }
-        h2 {
-          margin-left: 2%;
-        }
-        h3 {
-          margin-top: 3%;
-          margin-bottom: 3%;
-          margin-left: 2%;
-          border-bottom: 2px solid black;
-          width: 30%;
-          text-align: center;
-        }
-        h4 {
-          margin-left: 2%;
-        }
-        ul {
-          width: 1000px;
-          li {
-            margin-left: 2%;
-            margin-bottom: 2%;
-            margin-top: 2%;
-            img {
-              width: 60%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 500px) {
-  .gogoracing-purchase {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    .ggr-purchase-contents {
-      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-position: center;
-      .ggr-pcrecontents {
-        margin-top: 70%;
-        width: 100%;
-        .ggr-header {
-          .ggr-top {
-            .ggr-right {
-              #search:checked ~ #selection {
-                right: 175%;
-                width: 50%;
-              }
-              #text-search {
-                right: 60%;
-                width: 100%;
-              }
-            }
-          }
-        }
-        .ggr-purchases {
-          width: 100%;
-          #ihateyou {
-              margin-left: 4%;
-          }
+        .edit-patchcontents4 {
+          width: 50%;
           h1 {
-            width: 100%;
-            font-size: 20px;
+            background-color: #116682;
+            height: 5vh;
+            color: white;
+            margin-left: 2%;
+            margin-bottom: 3%;
           }
           h3 {
-            text-align: center;
-            width: 100%;
-            margin-left: 0;
+            margin-left: 2%;
+          }
+          p {
+            margin-left: 2%;
+          }
+          h2 {
+            margin-bottom: 2%;
+          }
+          h2 {
+            margin-left: 2%;
           }
           ul {
-            display: flex;
-            flex-direction: column;
+            margin-left: 2%;
             li {
-            margin-left: 1%;
-              img {
-                width: 40%;
+              margin-bottom: 3%;
+              margin-top: 3%;
+              &::before {
+                content: "📢 ";
               }
-              p {
-                width: 400px;
+              ul {
+                li {
+                  margin-top: 2%;
+                  a {
+                    margin-left: 2px;
+                    color: rgb(95, 95, 255);
+                  }
+                  &::before {
+                    content: "➟ ";
+                  }
+                }
               }
             }
           }

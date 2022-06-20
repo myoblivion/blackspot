@@ -2,6 +2,9 @@
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  .admin {
+    display: none;
+  }
   overflow-y: hidden;
   .map-wrapper {
     width: 100%;

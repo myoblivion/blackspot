@@ -59,7 +59,7 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
                   <div className="li-left"></div>
                   <div className="li-right">
                     <h3>🔊 1.0.4 Patch Note</h3>
-                    <span>04.04.2022</span>
+                    <span>06.13.2022</span>
                   </div>
                 </li>
               </Link>

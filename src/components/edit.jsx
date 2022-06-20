@@ -29,7 +29,7 @@ import {
 } from "react-icons/fi";
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
-const Edit = ({ record, handleLogout, props, ref }) => {
+const EditComponent = ({ record, handleLogout, props, ref }) => {
   const announcements = [
     {
       title: "Gogo Racing Play To Win Raffle Event",
@@ -80,7 +80,7 @@ const Edit = ({ record, handleLogout, props, ref }) => {
 
   // Title
   useEffect(() => {
-    document.title = "Black Spot Studio | Admin";
+    document.title = "Black Spot Studio | edit";
   }, []);
 
   const SearchBar = ({ searchQuery, setSearchQuery }) => {
@@ -157,7 +157,6 @@ const Edit = ({ record, handleLogout, props, ref }) => {
   useEffect(() => {
     viewPost();
   }, []);
-
   const [ispost, setpost] = useState([]);
   const viewPost = async () => {
     try {
@@ -201,25 +200,27 @@ const Edit = ({ record, handleLogout, props, ref }) => {
     });
   };
   return (
-    <div className="admin wrapper">
-      <div className="admin-wrapper">
-        <div className="admin-left">
-          <div className="sub-components">
-            <button id="logout" onClick={handleLogout}>
-              Log Out
-            </button>
-          </div>
-        </div>
-        <div className="admin-right">
+    <div className="edit wrapper">
+      <div className="edit-wrapper">
+        <div className="edit-right">
           {/*  */}
-          <div className="content-web" id="GGR">
-            <div className="ggr-admin-contents">
-              <div className="ggr-admcontents1">
-                <div className="ggr-header">
-                  <div className="ggr-top">
-                    <div className="ggr-left">
+          <div className="edit-web" id="GGR">
+            <div className="edit-edit-contents">
+              <div className="edit-admcontents1">
+                <div className="edit-header">
+                  <Link
+                    to="/admin"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                    id="becku"
+                  >
+                    <IoIosArrowDropleftCircle />
+                  </Link>
+                  <div className="edit-top">
+                    <div className="edit-left">
                       <Link
-                        to="/admin"
+                        to="/edit"
                         {...props}
                         ref={ref}
                         onClick={() => window.scrollTo(0, 0)}
@@ -230,20 +231,11 @@ const Edit = ({ record, handleLogout, props, ref }) => {
                         <FaUserCircle /> User
                       </h1>
                     </div>
-                    <div className="ggr-right">
-                      <Link
-                        to="/admin"
-                        {...props}
-                        ref={ref}
-                        onClick={() => window.scrollTo(0, 0)}
-                      >
-                        <FaSearch />
-                      </Link>
-                    </div>
+
                   </div>
                   <img src={backgroundimg} alt="" />
                 </div>
-                <div className="ggr-Edit-contents">
+                <div className="edit-EditComponent-contents">
                   {" "}
                   <form onSubmit={addDetails} className="update__forms">
                     <h3 className="myaccount-content"> Add </h3>
@@ -336,4 +328,4 @@ const Edit = ({ record, handleLogout, props, ref }) => {
   );
 };
 
-export default Edit;
+export default EditComponent;

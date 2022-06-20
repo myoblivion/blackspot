@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 
 import { HashLink } from "react-router-hash-link";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import Draggable from "react-draggable"; // The default// ES6
 import {
   FaTrash,
@@ -124,26 +124,187 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       e.preventDefault();
     };
     return (
-      <div className="ggr-right">
-        <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">
-          <label htmlFor="header-search">
-            <span className="visually-hidden">Search blog posts</span>
-          </label>
-          <input
-            value={searchQuery}
-            onInput={(e) => setSearchQuery(e.target.value)}
-            type="text"
-            id="header-search"
-            placeholder="Search "
-            autoFocus="autoFocus"
-            name="s"
-          />
-          <button type="submit">Search</button>
-          <label htmlFor="submit" id="submitted">
-            <FaSearch />
-          </label>
-        </form>
-      </div>
+      <form
+        action="/"
+        method="get"
+        id="formus"
+        onSubmit={onSubmit}
+        autoComplete="off"
+      >
+        <label htmlFor="header-search">
+          <span className="visually-hidden">Search blog posts</span>
+        </label>
+        <input
+          value={searchQuery}
+          onInput={(e) => setSearchQuery(e.target.value)}
+          type="text"
+          id="header-search"
+          placeholder="Search "
+          autoFocus="autoFocus"
+          name="s"
+        />
+        <button type="submit">Search</button>
+        <label htmlFor="submit" id="submitted">
+          <FaSearch />
+        </label>
+      </form>
+    );
+  };
+  const PostResults = ({}) => {
+    const [showResults, setShowResults] = React.useState(true);
+    const Hide = () => setShowResults(false);
+    const [showResultss, setShowResultss] = React.useState(true);
+    const Hides = () => setShowResultss(false);
+    const [showResultsss, setShowResultsss] = React.useState(true);
+    const Hidess = () => setShowResultsss(false);
+    const [showResultssss, setShowResultssss] = React.useState(true);
+    const Hidesss = () => setShowResultssss(false);
+    const [showResultsssss, setShowResultsssss] = React.useState(true);
+    const Hidessss = () => setShowResultsssss(false);
+    const [showResultssssss, setShowResultssssss] = React.useState(true);
+    const Hidesssss = () => setShowResultssssss(false);
+    const [showResultsssssss, setShowResultsssssss] = React.useState(true);
+    const Hidessssss = () => setShowResultsssssss(false);
+    const [showResultssssssss, setShowResultssssssss] = React.useState(true);
+    const Hidesssssss = () => setShowResultssssssss(false);
+    const [showResultsssssssss, setShowResultsssssssss] = React.useState(true);
+    const Hidessssssss = () => setShowResultsssssssss(false);
+    return (
+      <ul>
+        
+        {showResults ? (
+          <li>
+            <div className="li-left">
+              {" "}
+              <h3>Announcements</h3>
+              <span>See important in-game notice and announcements</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hide}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultss ? (
+          <li>
+            <div className="li-left">
+              {" "}
+              <h3>Newsletter</h3>
+              <span>Hear what's new in Gogo Racing here!</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hides}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultsss ? (
+          <li>
+            <div className="li-left">
+              {" "}
+              <h3>Game Guide</h3>
+              <span>
+                New to Gogo Racing? Here is everything you need to know about
+                the game!
+              </span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidess}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultssss ? (
+          <li>
+            <div className="li-left">
+              {" "}
+              <h3>Account Linking</h3>
+              <span>Here's a guide about how you can link your account</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidesss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultsssss ? (
+          <li>
+            <div className="li-left">
+              <h3>Purchase & Linking Guide</h3>
+              <span>
+                This will guide you on how to purchase items in Gogo Racing
+                using different types of payment method.
+              </span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidessss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultssssss ? (
+          <li>
+            <div className="li-left">
+              {" "}
+              <h3>Updates</h3>
+              <span>Keep updated with Gogo Racing!</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidesssss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultsssssss ? (
+          <li>
+            <div className="li-left">
+              <h3>1.0.4 Patch Note</h3>
+              <span>6.13.2022</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidessssss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+
+        {showResultsssssss ? (
+          <li>
+            <div className="li-left">
+              <h3>1.0.3 Patch Note</h3>
+              <span>0.04.2022</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidesssssss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultssssssss ? (
+          <li>
+            <div className="li-left">
+              <h3>1.0.2 Patch Note</h3>
+              <span>03.25.2022</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidesssssss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+        {showResultsssssssss ? (
+          <li>
+            <div className="li-left">
+              <h3>1.0.1 Patch NOte</h3>
+              <span>03.23.2022</span>
+            </div>
+            <div className="li-right">
+              <button>Edit</button>
+              <button onClick={Hidessssssss}>Delete</button>
+            </div>
+          </li>
+        ) : null}
+      </ul>
     );
   };
 
@@ -151,7 +312,11 @@ const Admins = ({ record, handleLogout, props, ref }) => {
   const query = new URLSearchParams(search).get("s");
   const [searchQuery, setSearchQuery] = useState(query || "");
   const filteredPosts = filterPosts(posts, searchQuery);
-
+  const history = useHistory();
+  const routeChange = () => {
+    let path = `/edit`;
+    history.push(path);
+  };
   return (
     <div className="admin wrapper">
       <div className="admin-wrapper">
@@ -160,21 +325,19 @@ const Admins = ({ record, handleLogout, props, ref }) => {
             <button id="logout" onClick={handleLogout}>
               Log Out
             </button>
+            <h1>Welcome, Admin</h1>
             <div className="admin-right">
-              <h1>Welcome, Admin</h1>
-              <div className="displayed-contents">
-                <ul>
-                  {filteredPosts.map((post, s) => (
-                    <li key={s}>
-                      <div className="li-left"></div>
-                      <div className="li-right">
-                        <h3>{post.name}</h3>
-                        <span>{post.span}</span>
-                        <button>Edit</button>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+              <div className="somethings-in">
+                <SearchBar
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                />
+                <button id="added" onClick={routeChange}>
+                  Add New
+                </button>
+                <div className="displayed-contents">
+                  <PostResults />
+                </div>
               </div>
             </div>
           </div>

@@ -38,7 +38,12 @@ import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import GogoRacingRaffleAnnouncement from "./ggr-annoncement";
 import SpinTheWheel from "./spin-the-wheel";
+import { getLCP, getFID, getCLS } from "web-vitals";
+import EditComponent from "./edit";
 // styles
+getCLS(console.log);
+getFID(console.log);
+getLCP(console.log);
 import "./scss/index.scss";
 const firebaseConfig = {
   apiKey: "AIzaSyDe_ISIJrMFlNbsFpN1io--gnlANZRY_JI",
@@ -140,111 +145,116 @@ const Appcomponent = () => {
       ) : (
         <div className={"main " + newClass}>
           <NavbarComponent currentRoute={newClass} />
-          <Route exact path={"/"}>
-            <HomeComponent />
-          </Route>
-          <Route path={"/about"}>
-            <AboutComponent />
-          </Route>
-          <Route path={"/direction"}>
-            <DirectionComponent />
-          </Route>
-          <Route path="/job">
-            <JobComponent />
-          </Route>
-          <Route path="/news">
-            <NewsComponent />
-          </Route>
-          <Route path="/scion">
-            <ScionComponent />
-          </Route>
-          <Route path="/gogoworld">
-            <GoGoWorldComponent />
-          </Route>
-          <Route path="/gogochain">
-            <GoGoChainComponent />
-          </Route>
-          <Route path="/gogoracing">
-            <GoGoRacingComponent />
-          </Route>
-          <Route path="/privacy">
-            <PrivacyComponent />
-          </Route>
-          <Route path="/scionnews">
-            <ScionNewsComponent />
-          </Route>
-          <Route path="/gogoworldnews">
-            <GogoWorldNewsComponent />
-          </Route>
-          <Route path="/gogochainnews">
-            <GogoChainNewsComponent />
-          </Route>
-          <Route path="/gogoracingnews">
-            <GogoRacingNewsComponent />
-          </Route>
-          <Route path="/terms-of-use">
-            <TermsAndConditions />
-          </Route>
-          <Route path="/gogoracing-guide">
-            <GoGoRacingGuide />
-          </Route>
-          <Route path="/ggr-update-list">
-            <GogoRacingUpdateList />
-          </Route>
-          <Route path="/ggr-updates">
-            <GogoRacingUpdates />
-          </Route>
-          <Route path="/ggr-patch2">
-            <GogoRacingPatch />
-          </Route>
-          <Route path="/ggr-guide-list">
-            <GogoracingGuidelist />
-          </Route>
-          <Route path="/ggr-account-linking">
-            <GogoRacingAccountLinking />
-          </Route>
-          <Route path="/ggr-patch3">
-            <GogoRacingPatchs />
-          </Route>
-          <Route path="/ggr-patch4">
-            <GogoRacingPatch4 />
-          </Route>
-          <Route path="/ggr-purchase-guide">
-            <GogoRacingPurchaseGuide />
-          </Route>
-          <Route path="/ggrsearch">
-            <GogoRacingSearch />
-          </Route>
-          <Route path="/play-to-win-raffle">
-            <EarnToWinRaffle />
-          </Route>
-          <Route path="/ggr-announcement-list">
-            <GogoRacingAnnouncementList />
-          </Route>
-          <Route path="/gogo-racing-raffle-announcement">
-            <GogoRacingRaffleAnnouncement />
-          </Route>
-          <Route path="/spin-the-wheel">
-            <SpinTheWheel />
-          </Route>
-          {user ? (
-            <Admins handleLogout={handleLogout} />
-          ) : (
-            <Route path="/login">
-              <LogInComponent
-                email={email}
-                setEmail={setEmail}
-                password={password}
-                setPassword={setPassword}
-                handleLogin={handleLogin}
-                handleSignup={handleSignup}
-                hasAccount={hasAccount}
-                setHasAccount={setHasAccount}
-                emailError={emailError}
-                passwordError={passwordError}
-              />
+            <Route exact path={"/"}>
+              <HomeComponent />
             </Route>
-          )}
+            <Route path={"/about"}>
+              <AboutComponent />
+            </Route>
+            <Route path={"/direction"}>
+              <DirectionComponent />
+            </Route>
+            <Route path="/job">
+              <JobComponent />
+            </Route>
+            <Route path="/news">
+              <NewsComponent />
+            </Route>
+            <Route path="/scion">
+              <ScionComponent />
+            </Route>
+            <Route path="/gogoworld">
+              <GoGoWorldComponent />
+            </Route>
+            <Route path="/gogochain">
+              <GoGoChainComponent />
+            </Route>
+            <Route path="/gogoracing">
+              <GoGoRacingComponent />
+            </Route>
+            <Route path="/privacy">
+              <PrivacyComponent />
+            </Route>
+            <Route path="/scionnews">
+              <ScionNewsComponent />
+            </Route>
+            <Route path="/gogoworldnews">
+              <GogoWorldNewsComponent />
+            </Route>
+            <Route path="/gogochainnews">
+              <GogoChainNewsComponent />
+            </Route>
+            <Route path="/gogoracingnews">
+              <GogoRacingNewsComponent />
+            </Route>
+            <Route path="/terms-of-use">
+              <TermsAndConditions />
+            </Route>
+            <Route path="/gogoracing-guide">
+              <GoGoRacingGuide />
+            </Route>
+            <Route path="/ggr-update-list">
+              <GogoRacingUpdateList />
+            </Route>
+            <Route path="/ggr-updates">
+              <GogoRacingUpdates />
+            </Route>
+            <Route path="/ggr-patch2">
+              <GogoRacingPatch />
+            </Route>
+            <Route path="/ggr-guide-list">
+              <GogoracingGuidelist />
+            </Route>
+            <Route path="/ggr-account-linking">
+              <GogoRacingAccountLinking />
+            </Route>
+            <Route path="/ggr-patch3">
+              <GogoRacingPatchs />
+            </Route>
+            <Route path="/ggr-patch4">
+              <GogoRacingPatch4 />
+            </Route>
+            <Route path="/ggr-purchase-guide">
+              <GogoRacingPurchaseGuide />
+            </Route>
+            <Route path="/ggrsearch">
+              <GogoRacingSearch />
+            </Route>
+            <Route path="/play-to-win-raffle">
+              <EarnToWinRaffle />
+            </Route>
+            <Route path="/ggr-announcement-list">
+              <GogoRacingAnnouncementList />
+            </Route>
+            <Route path="/gogo-racing-raffle-announcement">
+              <GogoRacingRaffleAnnouncement />
+            </Route>
+            <Route path="/spin-the-wheel">
+              <SpinTheWheel />
+            </Route>
+          <Route path="/edit">
+            <EditComponent />
+          </Route>
+          <Switch>
+            {user ? (
+              <Admins handleLogout={handleLogout} />
+            ) : (
+              <Route path="/login">
+                <LogInComponent
+                  email={email}
+                  setEmail={setEmail}
+                  password={password}
+                  setPassword={setPassword}
+                  handleLogin={handleLogin}
+                  handleSignup={handleSignup}
+                  hasAccount={hasAccount}
+                  setHasAccount={setHasAccount}
+                  emailError={emailError}
+                  passwordError={passwordError}
+                />
+              </Route>
+            )}
+          </Switch>
         </div>
       )}
     </>

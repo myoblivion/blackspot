@@ -64,6 +64,13 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
     },
     {
       id: 8,
+      name: "1.0.4 Patch Note",
+      to: "/ggr-patch4",
+      span: "06.13.2022",
+      image: "../images/gogoracingbackground/catto.png",
+    },
+    {
+      id: 8,
       name: "1.0.3 Patch Note",
       to: "/ggr-patch3",
       span: "04.04.2022",

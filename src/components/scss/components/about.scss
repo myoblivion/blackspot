@@ -4,6 +4,9 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  .admin {
+    display: none;
+  }
   .container-about {
     margin: 10% 0;
     position: absolute;

@@ -1,6 +1,9 @@
 .gogoracing-list {
   margin-top: 2.8%;
   height: 100%;
+  .admin {
+    display: none;
+  }
   .gogo-racing-list-wrapper {
     background-image: url("/src/images/gogoracingbackground/withlogo.png");
     background-repeat: no-repeat;
@@ -158,7 +161,7 @@
           -ms-user-select: none;
           user-select: none;
           h3 {
-            margin-bottom: 8px; 
+            margin-bottom: 8px;
           }
           span {
             margin-left: 18%;
@@ -171,10 +174,10 @@
 @media only screen and (max-width: 500px) {
   .gogoracing-list {
     .gogo-racing-list-wrapper {
-    background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-    .ggrupdatelist-contents {
+      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+      .ggrupdatelist-contents {
         width: 100%;
-    }
+      }
     }
   }
 }
