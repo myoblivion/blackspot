@@ -33,7 +33,6 @@ export default class ArticleEditor extends Component {
       },
     });
   };
-
   render() {
     const { editorState } = this.state;
     return (

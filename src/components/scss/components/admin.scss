@@ -50,14 +50,21 @@ $baby-blue: #f8faff;
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          width: 100%;
+
           .somethings-in {
             height: 100%;
-            width: 50%;
+            width: 100%;
             #added {
               position: absolute;
               left: 30%;
-              top: 23%;
-
+              top: 25%;
+              padding: 1% 2%;
+              &:hover {
+                background-color: white;
+                border: 1px solid black;
+                cursor: pointer;
+              }
             }
             #formus {
               margin-left: 15%;
@@ -69,25 +76,55 @@ $baby-blue: #f8faff;
                 width: 50%;
                 height: 15%;
               }
-            label {
-              display: none;
+              label {
+                display: none;
+              }
             }
-          }
             .displayed-contents {
               width: 100%;
               display: flex;
+              flex-direction: column;
               justify-content: center;
               align-items: center;
-              margin-top: 5%;
+              margin-top: 7%;
+              .labelss {
+                  width: 100%;
+                  display: flex;
+                flex-direction: column;
+                text-align: center;
+                label {
+                  background-color: #000000;
+                  color: white;
+                  width: 100%;
+                  margin: 5px;
+                  &:hover {
+                    background-color: #2b2b2b;
+                  }
+                  &:active {
+                    background-color: white;
+                    border: 1px solid black;
+                    color: black;
+                  }
+                }
+              }
+
+              input {
+                position: absolute;
+                top: -5000px;
+                left: -5000px;
+                opacity: 0;
+                z-index: -1000;
+              }
               ul {
                 width: 100%;
                 li {
+                  display: flex;
                   margin: 1% auto;
                   background-color: #f3f3f3;
-                  display: flex;
                   justify-content: space-between;
                   align-items: center;
                   padding: 3%;
+                  width: 100%;
                   button {
                     margin: 0 2%;
                     margin-left: 5%;

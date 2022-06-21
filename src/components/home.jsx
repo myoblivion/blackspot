@@ -192,7 +192,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        {/* <div className="slider">
+        <div className="slider">
           <input
             name="control"
             id="page1"
@@ -530,14 +530,14 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Slider>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        <div className="selectorz-wrapper">
+        {/* <div className="selectorz-wrapper">
           <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
           <input type="radio" id="game4" name="slider-game" />
-          <div className="content1">
+          <div className="content1" data-aos="zoom-out" data-aos-duration="500">
             <div className="leftx">
               <Link
                 to="/gogoracing"
@@ -939,7 +939,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </Slider>
-        </div>
+        </div> */}
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div

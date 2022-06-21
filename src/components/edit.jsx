@@ -1,142 +1,36 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-
-import { HashLink } from "react-router-hash-link";
+import { Editor } from "react-draft-wysiwyg";
+import { EditorState, convertToRaw, ContentState } from "draft-js";
+import axios from "axios";
 import { useHistory } from "react-router-dom";
-import Draggable from "react-draggable"; // The default// ES6
+import { Link } from "react-router-dom";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import draftToHtml from "draftjs-to-html";
+import htmlToDraft from "html-to-draftjs";
 import {
-  FaTrash,
-  FaImages,
   FaUserCircle,
   FaSearch,
   FaRegArrowAltCircleUp,
   FaWindowClose,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-import { EditorState, convertToRaw } from "draft-js";
-import { Editor } from "react-draft-wysiwyg";
-import draftToHtml from "draftjs-to-html";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import axios from "axios";
-
-import {
-  FiFileText,
-  FiMove,
-  FiRotateCw,
-  FiRotateCcw,
-  FiZoomOut,
-  FiZoomIn,
-} from "react-icons/fi";
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
+const html = `
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-const EditComponent = ({ record, handleLogout, props, ref }) => {
-  const announcements = [
-    {
-      title: "Gogo Racing Play To Win Raffle Event",
-    },
-  ];
-  const Labels = [
-    {
-      id: "submen1",
-      name: "Announcements",
-      htmlFor: "sub1",
-    },
-    {
-      id: "submen2",
-      name: "Updates",
-      htmlFor: "sub2",
-    },
-    {
-      id: "submen3",
-      name: "Game Guide",
-      htmlFor: "sub3",
-    },
-    {
-      id: "submen4",
-      name: "Newsletter",
-      htmlFor: "sub4",
-    },
-  ];
-  const subLabels = [
-    {
-      id: "raffle",
-      name: "Raffle giveaway",
-      htmlFor: "pup",
-    },
-  ];
-  var filterPosts = (posts, query) => {
-    if (!query) {
-      return posts;
-    }
-    return posts.filter((post) => {
-      var postName = post.name.toLowerCase();
-      return postName.includes(query);
-    });
-  };
-  const { search } = window.location;
-  const query = new URLSearchParams(search).get("s");
-  const [searchQuery, setSearchQuery] = useState(query || "");
-  const filteredPosts = filterPosts(Labels, searchQuery);
+</html>
+`;
+const contentBlock = htmlToDraft(html);
 
-  // Title
-  useEffect(() => {
-    document.title = "Black Spot Studio | edit";
-  }, []);
+const contentState = ContentState.createFromBlockArray(
+  contentBlock.contentBlocks
+);
+const defaultEditorState = EditorState.createWithContent(contentState);
 
-  const SearchBar = ({ searchQuery, setSearchQuery }) => {
-    const history = useHistory();
-    const onSubmit = (e) => {
-      history.push(`?s=${searchQuery}`);
-      e.preventDefault();
-    };
-    axios
-      .get("https://blackspotstudio.ph/#/ggr-patch2")
-      .then(function (response) {
-        // handle success
-        console.log(response);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      });
+const Edit = ({ props, ref }) => {
+  const [editorState, setEditorState] = React.useState(defaultEditorState);
 
-    return (
-      <form action="/" method="get" onSubmit={onSubmit} autoComplete="off">
-        <input
-          value={searchQuery}
-          onInput={(e) => setSearchQuery(e.target.value)}
-          type="text"
-          id="header-search"
-          placeholder="Search "
-          name="s"
-        />
-      </form>
-    );
-  };
-  const [inputList, setInputList] = useState([]);
-
-  function TextEditor() {
-    /** @type {React.RefObject<Trix>} */
-    const textEditor = React.useRef(null);
-    /** @type {React.RefObject<Tribute>} */
-    const tribute = React.useRef(null);
-    const onChange = (event) => {
-      console.log(event.target.value);
-    };
-  }
-  const handleEditorReady = (editor) => {
-    // this is a reference back to the editor if you want to
-    // do editing programatically
-    // editor.insertString("editor is ready");
-  };
-  const handleChange = (html, text) => {
-    console.log({ html, text });
-  };
-
-  // Foararaarara
+  const onEditorStateChange = (editorState) => setEditorState(editorState);
   let history = useHistory();
   const [userInfo, setuserInfo] = useState({
     title: "",
@@ -147,29 +41,8 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
       [e.target.name]: e.target.value,
     });
   };
-  let editorState = EditorState.createEmpty();
   const [description, setDescription] = useState(editorState);
-  const onEditorStateChange = (editorState) => {
-    setDescription(editorState);
-  };
-  const [isError, setError] = useState(null);
 
-  useEffect(() => {
-    viewPost();
-  }, []);
-  const [ispost, setpost] = useState([]);
-  const viewPost = async () => {
-    try {
-      await axios.get(`http://localhost:4000`).then((res) => {
-        if (res.data.success === true) {
-          setpost(res.data.listall);
-        }
-      });
-    } catch (error) {
-      throw error;
-    }
-  };
-  console.log(viewPost);
   const addDetails = async (event) => {
     try {
       event.preventDefault();
@@ -199,6 +72,7 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
       }
     });
   };
+
   return (
     <div className="edit wrapper">
       <div className="edit-wrapper">
@@ -231,11 +105,10 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
                         <FaUserCircle /> User
                       </h1>
                     </div>
-
                   </div>
                   <img src={backgroundimg} alt="" />
                 </div>
-                <div className="edit-EditComponent-contents">
+                <div className="edit-contents">
                   {" "}
                   <form onSubmit={addDetails} className="update__forms">
                     <h3 className="myaccount-content"> Add </h3>
@@ -261,7 +134,9 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
                           Description <span className="required"> * </span>{" "}
                         </label>
                         <Editor
-                          editorState={description}
+                          editorState={editorState}
+                          editorClassName="editorClassName"
+                          onEditorStateChange={onEditorStateChange}
                           toolbar={{
                             options: [
                               "inline",
@@ -296,8 +171,6 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
                             },
                           }}
                           wrapperClassName="wrapperClassName"
-                          editorClassName="editorClassName"
-                          onEditorStateChange={onEditorStateChange}
                         />
                         <textarea
                           style={{ display: "none" }}
@@ -317,7 +190,9 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
                     </div>
                   </form>
                 </div>
-                <div className="bottom-eyes"></div>
+                <div>
+                    {draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+                </div>
               </div>
             </div>
           </div>
@@ -328,4 +203,5 @@ const EditComponent = ({ record, handleLogout, props, ref }) => {
   );
 };
 
-export default EditComponent;
+export default Edit;
+

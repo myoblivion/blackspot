@@ -117,39 +117,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
       return postName.includes(query);
     });
   };
-  const SearchBar = ({ searchQuery, setSearchQuery }) => {
-    const history = useHistory();
-    const onSubmit = (e) => {
-      history.push(`?s=${searchQuery}`);
-      e.preventDefault();
-    };
-    return (
-      <form
-        action="/"
-        method="get"
-        id="formus"
-        onSubmit={onSubmit}
-        autoComplete="off"
-      >
-        <label htmlFor="header-search">
-          <span className="visually-hidden">Search blog posts</span>
-        </label>
-        <input
-          value={searchQuery}
-          onInput={(e) => setSearchQuery(e.target.value)}
-          type="text"
-          id="header-search"
-          placeholder="Search "
-          autoFocus="autoFocus"
-          name="s"
-        />
-        <button type="submit">Search</button>
-        <label htmlFor="submit" id="submitted">
-          <FaSearch />
-        </label>
-      </form>
-    );
-  };
+
   const PostResults = ({}) => {
     const [showResults, setShowResults] = React.useState(true);
     const Hide = () => setShowResults(false);
@@ -169,142 +137,175 @@ const Admins = ({ record, handleLogout, props, ref }) => {
     const Hidesssssss = () => setShowResultssssssss(false);
     const [showResultsssssssss, setShowResultsssssssss] = React.useState(true);
     const Hidessssssss = () => setShowResultsssssssss(false);
+    const [showResultssssssssss, setShowResultssssssssss] =
+      React.useState(true);
+    const Hidesssssssss = () => setShowResultssssssssss(false);
     return (
-      <ul>
-        
-        {showResults ? (
-          <li>
-            <div className="li-left">
-              {" "}
-              <h3>Announcements</h3>
-              <span>See important in-game notice and announcements</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hide}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultss ? (
-          <li>
-            <div className="li-left">
-              {" "}
-              <h3>Newsletter</h3>
-              <span>Hear what's new in Gogo Racing here!</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hides}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultsss ? (
-          <li>
-            <div className="li-left">
-              {" "}
-              <h3>Game Guide</h3>
-              <span>
-                New to Gogo Racing? Here is everything you need to know about
-                the game!
-              </span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidess}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultssss ? (
-          <li>
-            <div className="li-left">
-              {" "}
-              <h3>Account Linking</h3>
-              <span>Here's a guide about how you can link your account</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidesss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultsssss ? (
-          <li>
-            <div className="li-left">
-              <h3>Purchase & Linking Guide</h3>
-              <span>
-                This will guide you on how to purchase items in Gogo Racing
-                using different types of payment method.
-              </span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidessss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultssssss ? (
-          <li>
-            <div className="li-left">
-              {" "}
-              <h3>Updates</h3>
-              <span>Keep updated with Gogo Racing!</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidesssss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultsssssss ? (
-          <li>
-            <div className="li-left">
-              <h3>1.0.4 Patch Note</h3>
-              <span>6.13.2022</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidessssss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
+      <div className="contents">
+        <div className="labelss">
+          <label htmlFor="content1">Announcement</label>
+          <label htmlFor="content2" id="test5">
+            Updates
+          </label>
+          <label htmlFor="content3">Game Guide</label>
+          <label htmlFor="content4">News</label>
+        </div>
+        <ul>
+          <input type="radio" name="reveal" id="content1" defaultChecked />
+          <input type="radio" name="reveal" id="content2" />
+          <input type="radio" name="reveal" id="content3" />
+          <input type="radio" name="reveal" id="content4" />
 
-        {showResultsssssss ? (
-          <li>
-            <div className="li-left">
-              <h3>1.0.3 Patch Note</h3>
-              <span>0.04.2022</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidesssssss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultssssssss ? (
-          <li>
-            <div className="li-left">
-              <h3>1.0.2 Patch Note</h3>
-              <span>03.25.2022</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidesssssss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-        {showResultsssssssss ? (
-          <li>
-            <div className="li-left">
-              <h3>1.0.1 Patch NOte</h3>
-              <span>03.23.2022</span>
-            </div>
-            <div className="li-right">
-              <button>Edit</button>
-              <button onClick={Hidessssssss}>Delete</button>
-            </div>
-          </li>
-        ) : null}
-      </ul>
+          {showResults ? (
+            <li id="li-1">
+              <div className="li-left">
+                {" "}
+                <h3>Announcements</h3>
+                <span>See important in-game notice and announcements</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hide}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultssssssssss ? (
+            <li id="li-1">
+              <div className="li-left">
+                {" "}
+                <h3>Gogo Racing Play To Win Raffle Event</h3>
+                <span>
+                  It's your time to win while you play! Get a chance to win ACER
+                  NITRO 5, IPAD MINI 6th Gen and CASH!{" "}
+                </span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidesssssssss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultss ? (
+            <li id="li-2">
+              <div className="li-left">
+                {" "}
+                <h3>Newsletter</h3>
+                <span>Hear what's new in Gogo Racing here!</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hides}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultsss ? (
+            <li id="li-3">
+              <div className="li-left">
+                {" "}
+                <h3>Game Guide</h3>
+                <span>
+                  New to Gogo Racing? Here is everything you need to know about
+                  the game!
+                </span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidess}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultssss ? (
+            <li id="li-3">
+              <div className="li-left">
+                {" "}
+                <h3>Account Linking</h3>
+                <span>Here's a guide about how you can link your account</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidesss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultsssss ? (
+            <li id="li-3">
+              <div className="li-left">
+                <h3>Purchase & Linking Guide</h3>
+                <span>
+                  This will guide you on how to purchase items in Gogo Racing
+                  using different types of payment method.
+                </span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidessss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultssssss ? (
+            <li id="li-4">
+              <div className="li-left">
+                {" "}
+                <h3>Updates</h3>
+                <span>Keep updated with Gogo Racing!</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidesssss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultsssssss ? (
+            <li id="li-4">
+              <div className="li-left">
+                <h3>1.0.4 Patch Note</h3>
+                <span>6.13.2022</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidessssss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+
+          {showResultsssssss ? (
+            <li id="li-4">
+              <div className="li-left">
+                <h3>1.0.3 Patch Note</h3>
+                <span>0.04.2022</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidesssssss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultssssssss ? (
+            <li id="li-4">
+              <div className="li-left">
+                <h3>1.0.2 Patch Note</h3>
+                <span>03.25.2022</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidesssssss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+          {showResultsssssssss ? (
+            <li id="li-4">
+              <div className="li-left">
+                <h3>1.0.1 Patch NOte</h3>
+                <span>03.23.2022</span>
+              </div>
+              <div className="li-right">
+                <button>Edit</button>
+                <button onClick={Hidessssssss}>Delete</button>
+              </div>
+            </li>
+          ) : null}
+        </ul>
+      </div>
     );
   };
 
@@ -328,10 +329,6 @@ const Admins = ({ record, handleLogout, props, ref }) => {
             <h1>Welcome, Admin</h1>
             <div className="admin-right">
               <div className="somethings-in">
-                <SearchBar
-                  searchQuery={searchQuery}
-                  setSearchQuery={setSearchQuery}
-                />
                 <button id="added" onClick={routeChange}>
                   Add New
                 </button>

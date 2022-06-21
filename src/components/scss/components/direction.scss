@@ -18,16 +18,12 @@
       width: 50%;
       height: 100%;
       z-index: 1;
-      left: 0;
+      left: 5%;
       position: absolute;
-      top: 0;
-      img {
+      top: 20%;
+      iframe {
         width: 80%;
-        height: 66%;
-        box-shadow: -4px 10px 21px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: -4px 10px 21px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: -4px 10px 21px 0px rgba(0, 0, 0, 0.75);
-        z-index: 2;
+        height: 70vh;
       }
     }
     .description-map {
@@ -556,13 +552,23 @@
 }
 @media only screen and (max-width: 500px) {
   .direction {
+    .map-wrapper {
+      .map {
+        margin-bottom: 5%;
+        width: 90%;
+        iframe {
+        left: 35%;
+        width: 100%;
+        }
+      }
+    }
     .logso {
       width: 47%;
       margin-top: 10%;
     }
     #bus {
       text-align: center;
-      margin-top: 7%;
+      margin-top: 55%;
       .direction-content {
         width: 70%;
         height: 50%;

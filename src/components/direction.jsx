@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, LinkProps } from "react";
-import GifLoader from "react-gif-loader";
+import React, { useState, useEffect, useRef, LinkProps, useMemo } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import {
@@ -28,7 +27,6 @@ import walk from "../images/icons/walk.png";
 import jeep from "../images/icons/Jeep.png";
 import train from "../images/icons/Train.png";
 import { AiFillInstagram } from "react-icons/ai";
-
 const DirectionComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | Direction";
@@ -37,11 +35,20 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
     <div className="direction wrapper">
       <section className="map-wrapper" id="map-wrapper">
         <section className="map">
-          <GifLoader
-            loading={true}
-            imageSrc="https://media.giphy.com/media/XYHRwxYXXA68DhcAmF/giphy.gif"
-            overlayBackground="transparent"
-          />
+          <div className="mapouter">
+            <div className="gmap_canvas">
+              <iframe
+                title="map"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=26th%20street%20the%20infinity&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight="0"
+                marginWidth="0"
+              ></iframe>
+              <br />
+            </div>
+          </div>
         </section>
         <section className="description-map">
           <div className="come-address">
