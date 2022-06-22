@@ -426,6 +426,7 @@ body {
     width: 100%;
     height: 100vh;
     background-image: url("/src/images/contact.jpg");
+    filter: brightness(80%);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -2076,134 +2077,81 @@ input[type="radio"] {
   }
   .displayers {
     display: flex;
-    width: 50%;
-    margin-left: 0.5%;
+      margin-left: 2%;
+      width: 40%;      
     label {
-      margin: 0 2px;
+      position: relative;
       display: flex;
-      width: 15%;
-      padding: 0.5%;
-      color: white;
-      text-transform: uppercase;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: relative;
+      margin: 0 2px;
       margin: 1.8% 1%;
-      text-decoration: none;
+      background-color: #202023;
+      border-radius: 5px;
+      width: 15%;
+      padding: 0.5%;
+      margin-left: 2%;
+      color: white;
       text-transform: uppercase;
-      transition: 0.5s;
       text-align: center;
       letter-spacing: 4px;
       visibility: visible;
       overflow: hidden;
       cursor: pointer;
+      transition: 0.5s;
       z-index: 99;
-      span {
-        position: absolute;
-        display: block;
-        &:nth-child(1) {
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, #ffffff);
-          animation: animate1 1s linear infinite;
-        }
-        &:nth-child(2) {
-          top: -100%;
-          right: 0;
-          width: 2px;
-          height: 100%;
-          background: linear-gradient(180deg, transparent, #ffffff);
-          animation: animate2 1s linear infinite;
-          animation-delay: 0.25s;
-        }
-        &:nth-child(3) {
-          bottom: 0;
-          right: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(270deg, transparent, #ffffff);
-          animation: animate3 1s linear infinite;
-          animation-delay: 0.5s;
-        }
-        &:nth-child(4) {
-          bottom: -100%;
-          left: 0;
-          width: 3px;
-          height: 100%;
-          background: linear-gradient(360deg, transparent, #ffffff);
-          animation: animate4 1s linear infinite;
-          animation-delay: 0.75s;
-        }
-      }
       &:hover {
-        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        background: #ffff;
+        background-color: white;
         color: black;
-        box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff,
-          0 0 200px #ffffff;
-        z-index: 99;
+        box-shadow: 4px -1px 40px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: 4px -1px 40px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-reflect: below 2px
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+        border-radius: 5px;
+        -moz-box-shadow: 4px -1px 40px 0px rgba(255, 255, 255, 0.75);
       }
-      &:nth-child(2) {
-        filter: hue-rotate(200deg);
+      &:active {
+        background-color: #cacaca;
       }
-      &:nth-child(3) {
-        filter: hue-rotate(230deg);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        opacity: 0;
+        height: 0;
+        border-top: 0.4px solid white;
+        border-left: 0.4px solid white;
+        transition: 0.5s;
       }
-      &:nth-child(4) {
-        filter: hue-rotate(120deg);
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        border-bottom: 0.4px solid rgb(255, 255, 255);
+        border-right: 0.4px solid rgb(255, 255, 255);
+        opacity: 0;
+        height: 0px;
+        transition: 0.5s;
       }
+    }
+    label:hover:before {
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+    }
+    label:hover:after {
+      height: 100%;
+      opacity: 1;
+      width: 100%;
     }
   }
 }
-@keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
-}
 
-@keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
-}
-@keyframes animate3 {
-  0% {
-    right: -100%;
-  }
-  50%,
-  100% {
-    right: 100%;
-  }
-}
-@keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,
-  100% {
-    bottom: 100%;
-  }
-}
-@keyframes animatez {
-  0% {
-    transform: scale(0.5);
-  }
-  50%,
-  100% {
-    transform: scale(1);
-  }
-}
 .mobile-home {
   display: none;
 }

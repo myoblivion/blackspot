@@ -192,7 +192,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        <div className="slider">
+        {/* <div className="slider">
           <input
             name="control"
             id="page1"
@@ -530,9 +530,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Slider>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* <div className="selectorz-wrapper">
+        <div className="selectorz-wrapper">
           <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
@@ -551,7 +551,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 debitis impedit quibusdam amet et porro vitae ipsum assumenda
                 repudiandae eligendi exercitationem, cumque neque, soluta, sunt
-                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+                veniam itaque fugit fugiat sint! <Link to="/gogoracingnews">read more.</Link>
               </h1>
               <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
                 <img src={getit} alt="" id="getitt" />
@@ -706,34 +706,10 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
           <div className="displayers">
-            <label htmlFor="game1">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Gogo Racing
-            </label>
-            <label htmlFor="game2">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Scion Fist
-            </label>
-            <label htmlFor="game3">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Gogo World
-            </label>
-            <label htmlFor="game4">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Gogo Chain
-            </label>
+            <label htmlFor="game1">Gogo Racing</label>
+            <label htmlFor="game2">Scion Fist</label>
+            <label htmlFor="game3">Gogo World</label>
+            <label htmlFor="game4">Gogo Chain</label>
           </div>
         </div>
         <div className="mobile-home">
@@ -939,7 +915,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </Slider>
-        </div> */}
+        </div>
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div
