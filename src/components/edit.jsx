@@ -34,10 +34,11 @@ const Edit = ({ props, ref }) => {
 
   const [description, setDescription] = useState(editorState);
 
+  const [message, setMessage] = useState();
   function sure() {
     alert("are you sure?");
   }
-const data = `lorem ipsum h2 <h2>Test</h2>`
+  const data = `lorem ipsum h2 <h2>Test</h2>`;
   const uploadCallback = (file) => {
     return new Promise((resolve, reject) => {
       if (file) {
@@ -99,12 +100,13 @@ const data = `lorem ipsum h2 <h2>Test</h2>`
                           name="title"
                           className="form-control"
                           id="title-input"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
                           required
                         />
                       </div>
                       <div className="form-group col-md-12 editor">
                         <label className="font-weight-bold"> Description</label>
-                        <input type="text" id="description-input" />
                         <Editor
                           editorState={editorState}
                           editorClassName="editorClassName"
@@ -161,7 +163,7 @@ const data = `lorem ipsum h2 <h2>Test</h2>`
                           Submit
                         </button>
                       </div>
-                      <div dangerouslySetInnerHTML={{ __html: data}} />
+                      <div>{message}</div>
                     </div>
                   </form>
                 </div>
