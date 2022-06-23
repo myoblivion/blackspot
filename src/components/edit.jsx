@@ -31,36 +31,13 @@ const Edit = ({ props, ref }) => {
   const [editorState, setEditorState] = React.useState(defaultEditorState);
 
   const onEditorStateChange = (editorState) => setEditorState(editorState);
-  let history = useHistory();
-  const [userInfo, setuserInfo] = useState({
-    title: "",
-  });
-  const onChangeValue = (e) => {
-    setuserInfo({
-      ...userInfo,
-      [e.target.name]: e.target.value,
-    });
-  };
+
   const [description, setDescription] = useState(editorState);
 
-  const addDetails = async (event) => {
-    try {
-      event.preventDefault();
-      event.persist();
-      axios
-        .post(`http://localhost:4000`, {
-          title: userInfo.title,
-          description: userInfo.description.value,
-        })
-        .then((res) => {
-          if (res.data.success === true) {
-            history.push("/");
-          }
-        });
-    } catch (error) {
-      throw error;
-    }
-  };
+  function sure() {
+    alert("are you sure?");
+  }
+const data = `lorem ipsum h2 <h2>Test</h2>`
   const uploadCallback = (file) => {
     return new Promise((resolve, reject) => {
       if (file) {
@@ -110,29 +87,24 @@ const Edit = ({ props, ref }) => {
                 </div>
                 <div className="edit-contents">
                   {" "}
-                  <form onSubmit={addDetails} className="update__forms">
-                    <h3 className="myaccount-content"> Add </h3>
+                  <form className="update__forms">
                     <div className="form-row">
                       <div className="form-group col-md-12">
                         <label className="font-weight-bold">
                           {" "}
-                          Title <span className="required"> * </span>{" "}
+                          <h3 className="myaccount-content"> Title </h3>
                         </label>
                         <input
                           type="text"
                           name="title"
-                          value={userInfo.title}
-                          onChange={onChangeValue}
                           className="form-control"
-                          placeholder="Title"
+                          id="title-input"
                           required
                         />
                       </div>
                       <div className="form-group col-md-12 editor">
-                        <label className="font-weight-bold">
-                          {" "}
-                          Description <span className="required"> * </span>{" "}
-                        </label>
+                        <label className="font-weight-bold"> Description</label>
+                        <input type="text" id="description-input" />
                         <Editor
                           editorState={editorState}
                           editorClassName="editorClassName"
@@ -175,28 +147,28 @@ const Edit = ({ props, ref }) => {
                         <textarea
                           style={{ display: "none" }}
                           disabled
-                          ref={(val) => (userInfo.description = val)}
                           value={draftToHtml(
                             convertToRaw(description.getCurrentContent())
                           )}
                         />
                       </div>
                       <div className="form-group col-sm-12 text-right">
-                        <button type="submit" className="btn btn__theme">
-                          {" "}
-                          Submit{" "}
+                        <button
+                          type="submit"
+                          className="btn btn__theme"
+                          onClick={sure}
+                        >
+                          Submit
                         </button>
                       </div>
+                      <div dangerouslySetInnerHTML={{ __html: data}} />
                     </div>
                   </form>
                 </div>
-                <div>
-                    {draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-                </div>
+                <div></div>
               </div>
             </div>
           </div>
-          {/*  */}
         </div>
       </div>
     </div>
@@ -204,4 +176,3 @@ const Edit = ({ props, ref }) => {
 };
 
 export default Edit;
-

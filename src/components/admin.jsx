@@ -142,20 +142,7 @@ const Admins = ({ record, handleLogout, props, ref }) => {
     const Hidesssssssss = () => setShowResultssssssssss(false);
     return (
       <div className="contents">
-        <div className="labelss">
-          <label htmlFor="content1">Announcement</label>
-          <label htmlFor="content2" id="test5">
-            Updates
-          </label>
-          <label htmlFor="content3">Game Guide</label>
-          <label htmlFor="content4">News</label>
-        </div>
         <ul>
-          <input type="radio" name="reveal" id="content1" defaultChecked />
-          <input type="radio" name="reveal" id="content2" />
-          <input type="radio" name="reveal" id="content3" />
-          <input type="radio" name="reveal" id="content4" />
-
           {showResults ? (
             <li id="li-1">
               <div className="li-left">

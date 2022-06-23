@@ -11,6 +11,7 @@ import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
 import Recaptcha from "react-recaptcha";
 import appstore from "../images/appstore.png";
+import Temporary from "../images/testsample.png";
 // Devices
 import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
@@ -551,7 +552,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 debitis impedit quibusdam amet et porro vitae ipsum assumenda
                 repudiandae eligendi exercitationem, cumque neque, soluta, sunt
-                veniam itaque fugit fugiat sint! <Link to="/gogoracingnews">read more.</Link>
+                veniam itaque fugit fugiat sint!{" "}
+                <Link to="/gogoracingnews">read more.</Link>
               </h1>
               <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
                 <img src={getit} alt="" id="getitt" />
@@ -667,42 +669,116 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           </div>
           <div className="content3">
             <div className="leftx">
-              <h1>Gogo Racing</h1>
-              <h2>PLAY NOW</h2>
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <img src={Gogoworld} alt="" id="worldsk" />
+              </Link>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                debitis impedit quibusdam amet et porro vitae ipsum assumenda
+                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
+                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+              </h1>
+              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                <img src={getit} alt="" id="getitt" />
+              </a>
+              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                <img src={appstore} alt="" id="appstur" />
+              </a>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a href="">
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="rightx">
               <div className="video">
-                <img src={collect} alt="" />
+                <img src={Temporary} alt="" />
               </div>
-              <div className="leftzz">
-                <img src={shadowLeft} alt="" />
-              </div>
-              <div className="right">
-                <img src={shadowRight} alt="" />
-              </div>
-              <div className="bottomzki">
-                <img src={shadowBottom} alt="" />
-              </div>
+              <img src={shadowLeft} alt="" id="leftu" />
+              <img src={shadowRight} alt="" id="rightu" />
+              <img src={shadowBottom} alt="" id="bottomtu" />
             </div>
           </div>
           <div className="content4">
             <div className="leftx">
-              <h1>Gogo Racing</h1>
-              <h2>PLAY NOW</h2>
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <img src={Gogochain} alt="" id="chain" />
+              </Link>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                debitis impedit quibusdam amet et porro vitae ipsum assumenda
+                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
+                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+              </h1>
+              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                <img src={getit} alt="" id="getitt" />
+              </a>
+              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                <img src={appstore} alt="" id="appstur" />
+              </a>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a href="">
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="rightx">
               <div className="video">
-                <img src={chain} alt="" />
+                <img src={Temporary} alt="" />
               </div>
-              <div className="leftzz">
-                <img src={shadowLeft} alt="" />
-              </div>
-              <div className="right">
-                <img src={shadowRight} alt="" />
-              </div>
-              <div className="bottomzki">
-                <img src={shadowBottom} alt="" />
-              </div>
+              <img src={shadowLeft} alt="" id="leftu" />
+              <img src={shadowRight} alt="" id="rightu" />
+              <img src={shadowBottom} alt="" id="bottomtu" />
             </div>
           </div>
           <div className="displayers">

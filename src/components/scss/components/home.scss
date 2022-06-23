@@ -1947,28 +1947,184 @@ input[type="radio"] {
     display: flex;
     justify-content: space-around;
     color: white;
-    img {
-      width: 50%;
+    position: relative;
+    visibility: visible;
+    transform: translate(0, 0);
+    .leftx {
+      transition: 0.5s ease-in;
+    }
+    #leftu,
+    #rightu,
+    #bottomtu {
+      position: absolute;
+    }
+    #leftu {
+      top: 70%;
+      left: 20%;
+      height: 770%;
+      width: 30%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    #rightu {
+      top: 70%;
+      right: -15%;
+      z-index: 9;
+      height: 700%;
+      width: 100%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    #bottomtu {
+      top: 470%;
+      left: 25%;
+      height: 400%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 80%;
+    }
+    #rightggr {
+      width: 20%;
+      top: 406%;
+      position: absolute;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      z-index: 9;
+    }
+    #leftggr {
+      width: 25%;
+      top: 206%;
+      left: 40%;
+      position: absolute;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      z-index: 9;
     }
     .video {
-      position: relative;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      margin-top: 3%;
+      width: 100%;
+      height: 100%;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 700%;
+        top: 100%;
+        right: -20%;
+      }
+      // video {
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 800%;
+      //   top: 20%;
+      //   right: -20%;
+      // }
     }
   }
 
   #game4:checked ~ .content4 {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     color: white;
-    img {
+    position: relative;
+    visibility: visible;
+    transform: translate(0, 0);
+    .leftx {
+      transition: 0.5s ease-in;
+    }
+    #leftu,
+    #rightu,
+    #bottomtu {
+      position: absolute;
+    }
+    #leftu {
+      top: 70%;
+      left: 20%;
+      height: 770%;
+      width: 30%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    #rightu {
+      top: 70%;
+      right: -15%;
+      z-index: 9;
+      height: 700%;
       width: 100%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    #bottomtu {
+      top: 470%;
+      left: 25%;
+      height: 400%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 80%;
+    }
+    #rightggr {
+      width: 20%;
+      top: 406%;
+      position: absolute;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      z-index: 9;
+    }
+    #leftggr {
+      width: 25%;
+      top: 206%;
+      left: 40%;
+      position: absolute;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      z-index: 9;
     }
     .video {
       display: flex;
       justify-content: space-around;
+      align-items: center;
+      margin-top: 3%;
+      width: 100%;
+      height: 100%;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 700%;
+        top: 100%;
+        right: -20%;
+      }
     }
   }
   .leftx {
@@ -1991,6 +2147,7 @@ input[type="radio"] {
       line-height: 2;
       top: 330%;
       position: absolute;
+      box-shadow: 1px 1px 11px 1px solid black;
       ul {
         display: flex;
         align-items: center;
@@ -2052,6 +2209,28 @@ input[type="radio"] {
       -ms-user-select: none;
       width: 35%;
     }
+    #worldsk {
+      z-index: 99;
+      left: 3%;
+      top: 350%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 30%;
+    }
+    #chain {
+      z-index: 99;
+      left: 10%;
+      top: 310%;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 15%;
+    }
     #getitt {
       top: 740%;
       left: 6%;
@@ -2077,8 +2256,8 @@ input[type="radio"] {
   }
   .displayers {
     display: flex;
-      margin-left: 2%;
-      width: 40%;      
+    margin-left: 2%;
+    width: 40%;
     label {
       position: relative;
       display: flex;
@@ -2086,7 +2265,7 @@ input[type="radio"] {
       align-items: center;
       justify-content: center;
       margin: 0 2px;
-      margin: 1.8% 1%;
+      margin: 2.8% 1%;
       background-color: #202023;
       border-radius: 5px;
       width: 15%;
@@ -2122,8 +2301,8 @@ input[type="radio"] {
         width: 0;
         opacity: 0;
         height: 0;
-        border-top: 0.4px solid white;
-        border-left: 0.4px solid white;
+        border-top: 0.4px solid rgb(0, 0, 0);
+        border-left: 0.4px solid rgb(0, 0, 0);
         transition: 0.5s;
       }
       &::after {
@@ -2132,8 +2311,8 @@ input[type="radio"] {
         bottom: 0;
         right: 0;
         width: 0;
-        border-bottom: 0.4px solid rgb(255, 255, 255);
-        border-right: 0.4px solid rgb(255, 255, 255);
+        border-bottom: 0.4px solid rgb(0, 0, 0);
+        border-right: 0.4px solid rgb(0, 0, 0);
         opacity: 0;
         height: 0px;
         transition: 0.5s;
@@ -2166,6 +2345,7 @@ input[type="radio"] {
     margin-top: 1%;
     width: 100%;
     height: 100vh;
+    background-color: #151517;
     padding-bottom: 5%;
     .ggr-m,
     .scion-m,
