@@ -43,7 +43,6 @@ import AdPhoto from "../images/icons/uiiiiiiiigagiiiiiiiiiii.png";
 import game1 from "../images/edit/banner1.png";
 import game2 from "../images/edit/banner2.png";
 import game3 from "../images/edit/banner3.png";
-import game4 from "../images/edit/banner4.png";
 import icono from "../images/icons/logo.png";
 
 // Shadow :D
@@ -88,8 +87,6 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import collect from "/Users/USER/Desktop/blackspot/src/images/collection1.png";
-import chain from "/Users/USER/Desktop/blackspot/src/images/banner4.png";
 // Image Js
 import emailjs from "emailjs-com";
 
@@ -306,7 +303,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <Slider {...settings}>
                 <div className="slider-image">
                   <img
-                    src={game4}
                     alt="Game"
                     id="desktop2"
                     data-aos="fade-up"

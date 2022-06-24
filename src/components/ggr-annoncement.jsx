@@ -19,7 +19,7 @@ import Images1 from "../images/event/1233.png";
 import Images2 from "../images/event/IGN.PNG.png";
 import Images3 from "../images/event/n.png";
 import VideoPlayer from "react-video-js-player";
-import Tutorial from "/Users/USER/Desktop/blackspot/public/videos/Tutorial.mp4";
+import Tutorial from "../images/video/Tutorial.mp4";
 
 const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
   const videoTutorial = Tutorial;
@@ -88,7 +88,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 <h3>Follow This Video</h3>
               </li>
               <li>
-                <VideoPlayer src={videoTutorial} width="720" height="420" id="mobile"/>
+                <video src={Tutorial}></video>
               </li>
               <li>
                 {" "}
@@ -118,7 +118,7 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
                 👉 Play the Game and complete the 60 days log in rewards <br />{" "}
                 (make sure to play everyday and get the rewards)
               </li>
-              <img src={Images3} alt="" id="attendance"/>
+              <img src={Images3} alt="" id="attendance" />
               <li>👉 Level up your account ( must reach the level 10)</li>
               <li>
                 <img src={Images2} alt="" />
