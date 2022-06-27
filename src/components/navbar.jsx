@@ -11,7 +11,6 @@ import { FaCaretDown } from "react-icons/fa";
 import { faBox } from "@fortawesome/free-solid-svg-icons";
 
 const NavbarComponent = ({ props, ref, currentRoute, events }) => {
-  const [isShowing, setIsShowing] = useState(false);
   // Aos Init
   useEffect(() => {
     Aos.init({ duration: 2000 });

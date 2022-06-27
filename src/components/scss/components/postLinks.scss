@@ -1,7 +1,6 @@
 .postLinks {
   width: 100%;
   height: 100vh;
-  background-color: blanchedalmond;
   display: flex;
   position: relative;
   #new-post {
@@ -16,10 +15,18 @@
   }
   .list-postsz {
     margin: 5% auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     li {
       list-style: none;
-      margin: 5% auto;
-      background-color: black;
+      margin-top: 5%;
+      background-color: #f3f3f3;
+      border: 1px solid grey;
+      width: 100%;
+      h2 {
+        margin-left: 2%;
+      }
     }
   }
 }

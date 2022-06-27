@@ -24,9 +24,6 @@ import WysiwygDataPersistence from "./wysiwygDataPersistence/wysiwygdatapersiste
 import Post from "./Post";
 
 const Admins = ({ record, props, ref }) => {
-  const { search } = window.location;
-  const query = new URLSearchParams(search).get("s");
-  const [searchQuery, setSearchQuery] = useState(query || "");
   const navigate = useNavigate();
   const routeChange = () => {
     let path = `/edit`;
@@ -51,9 +48,9 @@ const Admins = ({ record, props, ref }) => {
       <div className="admin-wrapper">
         <div className="admin-left">
           <div className="sub-components">
-            <h1>Welcome, Admin</h1>
             <div className="admin-right">
               <div className="somethings-in">
+                <h1>Welcome, Admin</h1>
                 <div className="displayed-contents">
                   {/* Dito */}
                   <Routes>

@@ -11,6 +11,7 @@ App.use(express.static(path.join(__dirname, "App")));
 App.get("/ping", (req, res) => {
   return res.send("pong");
 });
+
 const corsOptions = {
   origin: "*",
   credentials: true, //access-control-allow-credentials:true

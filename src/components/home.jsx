@@ -91,16 +91,6 @@ import { AiFillInstagram } from "react-icons/ai";
 import emailjs from "emailjs-com";
 
 // Captcha :D
-const handleToken = (token) => {
-  setForm((currentForm) => {
-    return { ...currentForm, token };
-  });
-};
-const handleExpired = () => {
-  setForm((currentForm) => {
-    return { ...currentForm, token: null };
-  });
-};
 
 function validateRecaptcha() {
   var response = grecaptcha.getResponse();

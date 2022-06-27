@@ -51,7 +51,7 @@ const Appcomponent = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 8000);
   }, []);
   return (
     <>
