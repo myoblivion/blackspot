@@ -6,7 +6,7 @@ import somedog from "../images/somedog.png";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import catto from "../images/gogoracingbackground/catto.png";
 import { render } from "react-dom";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 
 const GogoRacingSearch = ({ props, ref, onSearch }) => {
@@ -114,7 +114,6 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
       var postName = post.name.toLowerCase();
       return postName.includes(query);
     });
-
   };
 
   const { search } = window.location;
@@ -123,7 +122,7 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
   const filteredPosts = filterPosts(posts, searchQuery);
 
   const SearchBar = ({ searchQuery, setSearchQuery }) => {
-    const history = useHistory();
+    const history = useNavigate();
     const onSubmit = (e) => {
       history.push(`?s=${searchQuery}`);
       e.preventDefault();
@@ -165,7 +164,7 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
           >
             <div className="ggr-top">
               <div className="ggr-left">
-              <Link
+                <Link
                   to="/gogoracingnews"
                   {...props}
                   ref={ref}

@@ -3,7 +3,7 @@ import LogRocket from "logrocket";
 LogRocket.init("hlb5ho/black-spot");
 import "whatwg-fetch";
 
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 LogRocket.identify("THE_USER_ID_IN_YOUR_APP", {
   name: "James Morrison",
   email: "jamesmorrison@example.com",
@@ -14,7 +14,7 @@ LogRocket.identify("THE_USER_ID_IN_YOUR_APP", {
 
 import axios from "axios";
 const EarnToWinRaffle = ({ props, ref, currentRoute }) => {
-  let history = useHistory();
+  let history = useNavigate();
   const [name, refer_user_id] = useState("");
   const [number, uuid] = useState("");
   const [email, setEmail] = useState("");

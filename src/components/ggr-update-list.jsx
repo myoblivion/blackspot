@@ -49,7 +49,7 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute }) => {
           </div>
           <div className="ggrlists-contents">
             <ul>
-            <Link
+              <Link
                 to="/ggr-patch4"
                 {...props}
                 ref={ref}
