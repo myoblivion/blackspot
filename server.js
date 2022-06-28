@@ -23,7 +23,6 @@ router.get("/", function (req, res, next) {
 const bodyParser = require("body-parser");
 const { response } = require("express");
 const { info } = require("console");
-var server = App.listen(3000);
 
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({ extended: true }));
