@@ -44,7 +44,7 @@ $(document).ready(function () {
   function startAnimation(elem) {
     elem.removeClass("start");
     setCSSVars(elem, min, max, minMove, maxMove);
-    void elem[0].offsetWidth;
+    void elem[0];
     elem.addClass("start");
   }
 });
