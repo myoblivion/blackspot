@@ -8,7 +8,7 @@ import axios from "axios";
 axios.defaults.baseURL = "http://localhost:5000/";
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,

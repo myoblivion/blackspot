@@ -1,7 +1,7 @@
 {
   "name": "blackspot",
   "version": "1.0.0",
-  "homepage": "https://blackspotstudio.ph/",
+  "homepage": ".",
   "description": "Black Spot Studio Website",
   "main": "index.js",
   "scripts": {
