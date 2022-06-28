@@ -1,12 +1,8 @@
-import React, { useState, useEffect, useRef, LinkProps } from "react";
-
-import { useNavigate, useParams, Route, Routes } from "react-router-dom";
-
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import PostsLinks from "./postLinks";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import PostsLinks from "../components/postLinks";
+import Post from "../components/Post";
 import WysiwygDataPersistence from "./wysiwygDataPersistence/wysiwygdatapersistence";
-import Post from "./Post";
-
 const Admins = ({ posts }) => {
   return (
     <div className="admin wrapper">
@@ -19,8 +15,8 @@ const Admins = ({ posts }) => {
                 <div className="displayed-contents">
                   {/* Dito */}
                   <Routes>
-                    <Route path="/" element={<PostsLinks posts={posts} />} />
-                    <Route path="/:postId/" element={<Post posts={posts} />} />
+                    <Route path="/*" element={<PostsLinks posts={posts} />} />
+                    <Route path="/:postId/*" element={<Post posts={posts} />} />
                     <Route
                       path="new"
                       element={<WysiwygDataPersistence posts={posts} />}

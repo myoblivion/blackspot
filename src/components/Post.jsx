@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
-import { deletePost } from "../components/actions/postActions";
+import { deletePost } from "./actions/postActions";
 
 function Post({ posts }) {
   const { postId } = useParams();
   const navigate = useNavigate();
   const post = posts && posts.find(({ id }) => `${id}` === postId);
+
   return (
-    <div className="list-posts">
+    <React.Fragment>
       {post ? (
-        <div className="list-posts-container">
+        <div>
           <Link to="edit" style={{ padding: 20 }}>
             Edit
           </Link>
@@ -28,13 +29,15 @@ function Post({ posts }) {
           >
             Delete
           </button>
+
           <h1>{post.title}</h1>
           <Interweave content={post.body} />
         </div>
       ) : (
         <strong>Loading post...</strong>
       )}
-    </div>
+    </React.Fragment>
   );
 }
+
 export default Post;

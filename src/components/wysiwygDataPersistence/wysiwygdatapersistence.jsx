@@ -9,16 +9,6 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { addPost, editPost } from "../actions/postActions";
 import { validPost } from "./validator";
 
-// { NOTE:
-//   If you see a 502 error message,
-//   WAIT until the scipts finished
-//   running, and then click on the
-//   refresh page button in the
-//   codesandbox browser,
-//   and the app will
-//   load properly,
-// }
-
 function WysiwygDataPersistence({ posts }) {
   const routeParams = useParams();
   const location = useLocation();

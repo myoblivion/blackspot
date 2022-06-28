@@ -5,7 +5,7 @@ export function addPost(endpoint, postData, navigate) {
     .post(endpoint, postData)
     .then((response) => {
       console.log(response);
-      navigate(`../new/${response.data.id}`);
+      navigate(`../${response.data.id}`);
     })
     .catch((error) => {
       console.log(error);
