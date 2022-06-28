@@ -1,4 +1,4 @@
-let dataBase = require("/Users/Admin/Desktop/blackspot/src/db.json");
+let dataBase = require("/Users/Admin/Desktop/blackspot/db.json");
 
 export function mockAPI(request) {
   return new Promise((resolve, reject) => {
