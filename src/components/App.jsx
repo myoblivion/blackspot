@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, useLocation, Routes } from "react-router-dom";
+import { mockAPI } from "./mockApi/mockApi";
+import PostsLinks from "./postLinks";
+import WysiwygDataPersistence from "./wysiwygDataPersistence/wysiwygdatapersistence";
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
@@ -29,10 +32,11 @@ import GogoRacingPatch4 from "./ggr-patch4";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./play-to-win-raffle";
-import Admins from "./admin";
+import Admins from "./posts";
 import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import GogoRacingRaffleAnnouncement from "./ggr-annoncement";
+import NotFoundComponent from "./notfound";
 import SpinTheWheel from "./spin-the-wheel";
 import { getLCP, getFID, getCLS } from "web-vitals";
 import Post from "./test";
@@ -44,7 +48,16 @@ import "./scss/index.scss";
 
 const Appcomponent = () => {
   const [loading, setLoading] = useState(false);
-
+  const [posts, setPosts] = useState();
+  useEffect(() => {
+    const request = {
+      method: "get",
+    };
+    mockAPI(request).then((response) => {
+      console.log(response);
+      setPosts(response.data.posts);
+    });
+  }, []);
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   useEffect(() => {
@@ -61,6 +74,7 @@ const Appcomponent = () => {
         <div className={"main " + newClass}>
           <NavbarComponent currentRoute={newClass} />
           <Routes>
+            <Route path={"/*"} element={<NotFoundComponent />} />
             <Route exact path={"/"} element={<HomeComponent />} />
             <Route path={"/about"} element={<AboutComponent />} />
             <Route path={"/direction"} element={<DirectionComponent />} />
@@ -106,7 +120,7 @@ const Appcomponent = () => {
             />
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/test" element={<Post />} />
-            <Route path="/admin/*" element={<Admins />} />
+            <Route path="/posts/*" element={<Admins posts={posts} />} />
           </Routes>
         </div>
       )}

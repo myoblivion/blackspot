@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./components/App";
 import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 import axios from "axios";
-axios.defaults.baseURL = "https://localhost:8000/";
+axios.defaults.baseURL = "http://localhost:5000/";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

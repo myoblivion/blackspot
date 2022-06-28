@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
 import ReCaptchaV2 from "react-google-recaptcha";
 import VideoPlayer from "react-video-js-player";
-import dotzs from "../images/dots.png";
 // Animate on Scroll
 import Aos from "aos";
 // Animate on scroll css
@@ -11,7 +10,20 @@ import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
 import Recaptcha from "react-recaptcha";
 import appstore from "../images/appstore.png";
+import Mongi from "../images/characters/Mongi.png";
+import Pengsuni from "../images/characters/Pengsuni.png";
+import Euik from "../images/characters/Euik.png";
+import Eureungi from "../images/characters/Eureungi.png";
+import ggrc1 from "../images/edit/nf-tcharacter.png";
+import ggrc2 from "../images/edit/2.png";
 import Temporary from "../images/testsample.png";
+import mobile1 from "../images/game_mobile/phone1.png";
+import mobile2 from "../images/game_mobile/phone2.png";
+import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
+import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
+import game1 from "../images/edit/banner1.png";
+import game2 from "../images/edit/banner2.png";
+import game3 from "../images/edit/banner3.png";
 // Devices
 import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
@@ -20,14 +32,6 @@ import Laptop from "../images/icons/laptop.png";
 import Irina from "../images/characters/ch6.png";
 import Risa from "../images/characters/ch11.png";
 
-// Gogo Characters
-import Mongi from "../images/characters/Mongi.png";
-import Pengsuni from "../images/characters/Pengsuni.png";
-import Euik from "../images/characters/Euik.png";
-import Eureungi from "../images/characters/Eureungi.png";
-import ggrc1 from "../images/edit/nf-tcharacter.png";
-import ggrc2 from "../images/edit/2.png";
-// logo
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
@@ -37,12 +41,6 @@ import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
 
-// something's in the way hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-import AdPhoto from "../images/icons/uiiiiiiiigagiiiiiiiiiii.png";
-// Images
-import game1 from "../images/edit/banner1.png";
-import game2 from "../images/edit/banner2.png";
-import game3 from "../images/edit/banner3.png";
 import icono from "../images/icons/logo.png";
 
 // Shadow :D
@@ -50,11 +48,6 @@ import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
 import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
 import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
 
-// Game section mobile
-import mobile1 from "../images/game_mobile/phone1.png";
-import mobile2 from "../images/game_mobile/phone2.png";
-import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
-import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
 // Slider
 import video1 from "../images/video/Big Update Trailer FB (1).mp4";
 import video2 from "../images/video/Scion Fist PH Trailer.mp4";
@@ -123,27 +116,27 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   }, []);
 
   const [imageIndex, setImageIndex] = useState(0);
-  // const settings = {
-  //   Infinite: true,
-  //   lazyload: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   centerMode: true,
-  //   dots: true,
-  //   centerPadding: 0,
-  //   arrows: false,
-  //   beforeChange: (current, next) => setImageIndex(next),
-  // };
   const settings = {
-    fade: true,
-    infinite: true,
-    vertical: true,
-    dots: true,
-    speed: 500,
+    Infinite: true,
+    lazyload: true,
+    speed: 300,
     slidesToShow: 1,
+    centerMode: true,
+    dots: true,
+    centerPadding: 0,
     arrows: false,
-    slidesToScroll: 1,
+    beforeChange: (current, next) => setImageIndex(next),
   };
+  // const settings = {
+  //   fade: true,
+  //   infinite: true,
+  //   vertical: true,
+  //   dots: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   arrows: false,
+  //   slidesToScroll: 1,
+  // };
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
@@ -180,7 +173,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        {/* <div className="slider">
+        <div className="slider">
           <input
             name="control"
             id="page1"
@@ -292,11 +285,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="sliders">
               <Slider {...settings}>
                 <div className="slider-image">
-                  <img
-                    alt="Game"
-                    id="desktop2"
-                    data-aos="fade-up"
-                  />
+                  <img alt="Game" id="desktop2" data-aos="fade-up" />
                   <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-up" />
                   <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-up" />
                   <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
@@ -517,9 +506,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Slider>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        <div className="selectorz-wrapper">
+        {/* <div className="selectorz-wrapper">
           <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
@@ -977,7 +966,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </Slider>
-        </div>
+        </div> */}
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div

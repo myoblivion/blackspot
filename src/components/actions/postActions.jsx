@@ -5,7 +5,7 @@ export function addPost(endpoint, postData, navigate) {
     .post(endpoint, postData)
     .then((response) => {
       console.log(response);
-      navigate(`../${response.data.id}`);
+      navigate(`../new/${response.data.id}`);
     })
     .catch((error) => {
       console.log(error);
@@ -14,7 +14,7 @@ export function addPost(endpoint, postData, navigate) {
 
 export function editPost(endpoint, postData, navigate) {
   axios
-    .put("admin/" + endpoint, postData)
+    .put("posts/" + endpoint, postData)
     .then((response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
@@ -26,7 +26,7 @@ export function editPost(endpoint, postData, navigate) {
 
 export function deletePost(postId, navigate) {
   axios
-    .delete("admin/" + postId)
+    .delete("posts/" + postId)
     .then((response) => {
       console.log(response);
       navigate("../", { replace: true });

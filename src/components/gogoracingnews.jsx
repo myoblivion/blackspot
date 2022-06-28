@@ -26,7 +26,7 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
           <div className="ggr-top">
             <div className="ggr-left">
               <Link
-                to="/admin"
+                to="/posts"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
