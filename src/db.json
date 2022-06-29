@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Hello",
+      "body": "<p>Hi!?</p>\n",
+      "id": 2
+    },
+    {
+      "title": "dsad",
+      "body": "<p>asdadsad</p>\n",
+      "id": 3
+    },
+    {
+      "title": "asd",
+      "body": "<p>dsdsa</p>\n",
+      "id": 4
+    },
+    {
+      "title": "sadsad",
+      "body": "<p>adadad</p>\n",
+      "id": 5
+    }
+  ]
+}

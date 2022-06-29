@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, useLocation, Routes } from "react-router-dom";
 import { mockAPI } from "./mockApi/mockApi";
 import PostsLinks from "./postLinks";
-import WysiwygDataPersistence from "./wysiwygDataPersistence/wysiwygdatapersistence";
+import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
 // Components
 import NavbarComponent from "../components/navbar";
 import HomeComponent from "../components/home";
@@ -32,7 +32,7 @@ import GogoRacingPatch4 from "./ggr-patch4";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import EarnToWinRaffle from "./play-to-win-raffle";
-import Admins from "./posts";
+import PostPage from "./posts";
 import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import GogoRacingRaffleAnnouncement from "./ggr-annoncement";
@@ -46,7 +46,7 @@ getFID(console.log);
 getLCP(console.log);
 import "./scss/index.scss";
 
-const Appcomponent = () => {
+const Appcomponent = ({}) => {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState();
   useEffect(() => {
@@ -120,7 +120,7 @@ const Appcomponent = () => {
             />
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/test" element={<Post />} />
-            <Route path="/posts/*" element={<Admins posts={posts} />} />
+            <Route path="/posts/*" element={<PostPage posts={posts} />} />
           </Routes>
         </div>
       )}

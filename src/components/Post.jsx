@@ -18,10 +18,10 @@ function Post({ posts }) {
           <button
             onClick={() => deletePost(postId, navigate)}
             style={{
-              background: "none",
+              background: "#f3f3f3",
               color: "inherit",
               border: "none",
-              padding: "0",
+              padding: "1%",
               font: "inherit",
               cursor: "pointer",
               outline: "inherit",
@@ -29,7 +29,6 @@ function Post({ posts }) {
           >
             Delete
           </button>
-
           <h1>{post.title}</h1>
           <Interweave content={post.body} />
         </div>
