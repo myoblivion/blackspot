@@ -25,11 +25,9 @@
       "id": 4
     }
   ],
-  "ggrguides": [
+  "authors": [
     {
-      "title": "❓ Game Guide",
-      "description": "New to Gogo Racing? Here is everything you need to know about the game!",
-      "body": "<p>Hello Gogo Racers</p>",
+      "name": "Luis Martinez",
       "id": 1
     }
   ]

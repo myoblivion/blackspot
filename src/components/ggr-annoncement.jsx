@@ -4,25 +4,13 @@ import image2 from "../images/gogochain-mobile.png";
 import { HashLink } from "react-router-hash-link";
 import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
-import {
-  FaUserCircle,
-  FaSearch,
-  FaRegArrowAltCircleUp,
-  FaWindowClose,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import { FaUserCircle, FaSearch, FaRegArrowAltCircleUp } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/announcement.png";
-import Formsz from "../images/icons/form.png";
-import { Form } from "react-admin";
-import Images1 from "../images/event/1233.png";
-import Images2 from "../images/event/IGN.PNG.png";
-import Images3 from "../images/event/n.png";
-import VideoPlayer from "react-video-js-player";
-import Tutorial from "../images/video/Tutorial.mp4";
+
+import Tutorial from "../images/Untitled-1.png";
 
 const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
-  const videoTutorial = Tutorial;
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Gogo Racing Play to Win Raffle Event";
@@ -64,84 +52,12 @@ const GogoRacingRaffleAnnouncement = ({ props, ref, currentRoute }) => {
             <img src={backgroundimg} alt="" />
           </div>
           <div className="ggr-eventucontents">
-            <h1>REGISTER & WIN NOW</h1>
-
+            <h1>Raffle Ended</h1>
+            <img src={Tutorial} alt="" />
             <p>
-              It’s your time to win while you play! Get a chance to win ACER
-              NITRO 5, IPAD MINI 6th GEN and CASH. It’s simple just follow the
-              following steps:
+              See winners here!!{" "}
+              <a href="https://bit.ly/3ugnqWS">https://bit.ly/3ugnqWS</a>
             </p>
-            <ul>
-              <li>
-                <h3>Download the game & Register</h3>
-              </li>
-              <li>
-                {" "}
-                <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-                  <img
-                    alt="Get it on Google Play"
-                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                  />
-                </a>
-              </li>
-              <li>
-                <h3>Follow This Video</h3>
-              </li>
-              <li>
-                <video src={Tutorial}></video>
-              </li>
-              <li>
-                {" "}
-                <a href="https://www.facebook.com/GogoRacingPhilippines">
-                  Link to our Facebook page <FaExternalLinkAlt />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/GogoRacingPhilippines/posts/131756579445246">
-                  Like, comment, and share this post
-                </a>
-              </li>
-
-              <li>
-                <a href="https://bit.ly/38A9Qph">
-                  {" "}
-                  Register on our website <FaExternalLinkAlt />
-                </a>
-              </li>
-              <li id="formzs">
-                <img src={Formsz} alt="" />
-              </li>
-              <li>
-                <h3> Follow the Game Requirements</h3>
-              </li>
-              <li>
-                👉 Play the Game and complete the 60 days log in rewards <br />{" "}
-                (make sure to play everyday and get the rewards)
-              </li>
-              <img src={Images3} alt="" id="attendance" />
-              <li>👉 Level up your account ( must reach the level 10)</li>
-              <li>
-                <img src={Images2} alt="" />
-              </li>
-              <li>👉 Rank UP! (must reach platinum rank)</li>
-              <li>
-                <img src={Images1} alt="" />
-              </li>
-              <li>
-                <h3>Wait for the raffle result</h3>
-              </li>
-              <li>
-                It’s easy, right? Registration will start on May 1, 2022.
-                Register and play for a chance to win these cool prizes! Let’s
-                go GoGo Racers! 🥳🥳🥳
-              </li>
-            </ul>
-            <ul className="no-emoji">
-              <li>
-                🌐 To know more about our games visit:{" "}
-                <a href="https://linktr.ee/BSSPH">👉 https://linktr.ee/BSSPH</a>
-              </li>
-            </ul>
           </div>
         </div>
         <div className="bootons">

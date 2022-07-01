@@ -164,6 +164,10 @@
       }
       .ggr-eventucontents {
         width: 60%;
+        img {
+          margin-left: 2%;
+          width: 150%;
+        }
         h1 {
           background-color: #116682;
           height: 5vh;
@@ -292,5 +296,5 @@
     #attendance {
       width: 100%;
     }
-  } 
+  }
 }

@@ -3,7 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import PostsLinks from "./postLinks";
 import Post from "./Post";
 import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
-const PostPage = ({ posts }) => {
+import AuthorsLinks from "./AuthorLinks";
+import Author from "./Author";
+
+const PostPage = ({ posts, authors }) => {
   return (
     <div className="admin wrapper">
       <h1>Welcome, Admin</h1>
@@ -19,6 +22,10 @@ const PostPage = ({ posts }) => {
             path="/:postId/edit/"
             element={<WysiwygDataPersistence posts={posts} />}
           />
+        </Routes>
+        <Routes>
+          <Route path="/*" element={<AuthorsLinks authors={authors} />} />
+          <Route path=":authorId" element={<Author authors={authors} />} />
         </Routes>
       </div>
     </div>

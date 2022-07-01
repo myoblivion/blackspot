@@ -57,6 +57,7 @@ const Appcomponent = ({}) => {
   //   }, 8000);
   // }, []);
   const [posts, setPosts] = useState();
+  const [authors, setAuthors] = useState();
 
   useEffect(() => {
     const request = {
@@ -65,6 +66,7 @@ const Appcomponent = ({}) => {
     mockAPI(request).then((response) => {
       console.log(response);
       setPosts(response.data.posts);
+      setAuthors(response.data.authors);
     });
   }, []);
   return (
@@ -124,6 +126,7 @@ const Appcomponent = ({}) => {
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/test" element={<Post />} />
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
+            <Route path="/authors/*" element={<PostPage authors={authors} />} />
           </Routes>
         </div>
       )}
