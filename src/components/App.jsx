@@ -57,7 +57,7 @@ const Appcomponent = ({}) => {
   //   }, 8000);
   // }, []);
   const [posts, setPosts] = useState();
-  const [authors, setAuthors] = useState();
+  const [ggrguides, setGgrGuides] = useState();
 
   useEffect(() => {
     const request = {
@@ -66,7 +66,7 @@ const Appcomponent = ({}) => {
     mockAPI(request).then((response) => {
       console.log(response);
       setPosts(response.data.posts);
-      setAuthors(response.data.authors);
+      setGgrGuides(response.data.ggrguides);
     });
   }, []);
   return (
@@ -126,7 +126,11 @@ const Appcomponent = ({}) => {
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/test" element={<Post />} />
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
-            <Route path="/authors/*" element={<PostPage authors={authors} />} />
+            <Route
+              path="/ggrguides/*"
+              element={<PostPage ggrguides={ggrguides} />}
+            />
+            ``
           </Routes>
         </div>
       )}

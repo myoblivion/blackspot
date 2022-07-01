@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import React from "react";
-const AuthorsLinks = ({ authors }) => {
+const AuthorsLinks = ({ ggrguides }) => {
   const renderAuthors =
-    authors &&
-    authors.map(({ name, id }) => {
+    ggrguides &&
+    ggrguides.map(({ name, id, description }) => {
       return (
         <li key={id}>
           <h3>
-            <Link to={`${id}`}>{name} </Link>
+            <Link to={`${id}`}>
+              {name}
+              <span>{description}</span>
+            </Link>
           </h3>
         </li>
       );

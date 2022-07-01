@@ -6,7 +6,7 @@ import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
 import AuthorsLinks from "./AuthorLinks";
 import Author from "./Author";
 
-const PostPage = ({ posts, authors }) => {
+const PostPage = ({ posts, ggrguides }) => {
   return (
     <div className="admin wrapper">
       <h1>Welcome, Admin</h1>
@@ -24,8 +24,11 @@ const PostPage = ({ posts, authors }) => {
           />
         </Routes>
         <Routes>
-          <Route path="/*" element={<AuthorsLinks authors={authors} />} />
-          <Route path=":authorId" element={<Author authors={authors} />} />
+          <Route path="/*" element={<AuthorsLinks ggrguides={ggrguides} />} />
+          <Route
+            path=":ggrguidesId"
+            element={<Author ggrguides={ggrguides} />}
+          />
         </Routes>
       </div>
     </div>
