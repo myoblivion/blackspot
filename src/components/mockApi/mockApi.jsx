@@ -1,7 +1,7 @@
-let dataBase = require("/Users/Admin/Desktop/blackspot/src/db.json");
+let dataBase = require("../../db.json");
 
 export function mockAPI(request) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       switch (request.method) {
         case "get":
@@ -10,7 +10,7 @@ export function mockAPI(request) {
         default:
           resolve({ status: 400, message: "Bad Request" });
       }
-    });
+    }, 300);
   });
 }
 

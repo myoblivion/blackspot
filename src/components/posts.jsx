@@ -7,18 +7,20 @@ const PostPage = ({ posts }) => {
   return (
     <div className="admin wrapper">
       <h1>Welcome, Admin</h1>
-      <Routes>
-        <Route path="/*" element={<PostsLinks posts={posts} />} />
-        <Route path="/:postId/*" element={<Post posts={posts} />} />
-        <Route
-          path="/new/"
-          element={<WysiwygDataPersistence posts={posts} />}
-        />
-        <Route
-          path="/:postId/edit/"
-          element={<WysiwygDataPersistence posts={posts} />}
-        />
-      </Routes>
+      <div className="admin-contents">
+        <Routes>
+          <Route path="/*" element={<PostsLinks posts={posts} />} />
+          <Route path="/:postId/*" element={<Post posts={posts} />} />
+          <Route
+            path="/new/"
+            element={<WysiwygDataPersistence posts={posts} />}
+          />
+          <Route
+            path="/:postId/edit/"
+            element={<WysiwygDataPersistence posts={posts} />}
+          />
+        </Routes>
+      </div>
     </div>
   );
 };

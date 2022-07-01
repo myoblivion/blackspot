@@ -4,9 +4,9 @@
   "description": "",
   "main": "./jsonServer.js",
   "scripts": {
-    "start": "nodemon server",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npx json-server --watch db.json --port 3000"
+    "server": "wait-on http://localhost:8000 && nodemon server"
   },
   "keywords": [],
   "author": "",

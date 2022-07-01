@@ -57,6 +57,7 @@ const Appcomponent = ({}) => {
   //   }, 8000);
   // }, []);
   const [posts, setPosts] = useState();
+
   useEffect(() => {
     const request = {
       method: "get",

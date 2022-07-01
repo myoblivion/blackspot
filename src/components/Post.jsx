@@ -8,12 +8,12 @@ function Post({ posts }) {
   const { postId } = useParams();
   const navigate = useNavigate();
   const post = posts && posts.find(({ id }) => `${id}` === postId);
-
+  <img src={backgroundimg} alt="" id="patch-posts-img" />;
   return (
     <React.Fragment>
       {post ? (
         <div className="posts-contents">
-          <img src={backgroundimg} alt="" id="patch-posts-img" />
+          <img src={backgroundimg} alt="" id="patch-posts-img" />;
           <Link to="edit" id="edit-posts" style={{ padding: 20 }}>
             Edit
           </Link>
@@ -33,6 +33,7 @@ function Post({ posts }) {
             Delete
           </button>
           <h1>{post.title}</h1>
+          <span>{post.description}</span>
           <Interweave content={post.body} />
         </div>
       ) : (
