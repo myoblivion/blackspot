@@ -1,27 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { mockAPI } from "./mockApi/mockApi";
 function PostsLinks({ posts }) {
+  const [setPosts] = useState();
+
+  useEffect(() => {
+    const request = {
+      method: "get",
+    };
+    mockAPI(request).then((response) => {
+      console.log(response);
+      setPosts(response.data.posts);
+      setAuthors(response.data.authors);
+    });
+  }, []);
   return (
-    <div className="postLinks">
-      <div className="list-postsz">
-        <Link id="new-post" to="new">
-          New Post
-        </Link>
-        <ul>
-          {posts &&
-            posts.map(({ title, id }) => {
-              return (
+    <>
+      <Link id="new-post" to="new">
+        New Post
+      </Link>
+      <ul>
+        {posts &&
+          posts.map(({ title, id, description }) => {
+            return (
+              <Link to={`${id}`}>
                 <li key={id}>
-                  <h2>
-                    <Link to={`${id}`}>{title}</Link>
-                  </h2>
+                  <div className="li-left"></div>
+                  <div className="li-right">
+                    <h3>{title}</h3>
+                    <span>{description}</span>
+                  </div>
                 </li>
-              );
-            })}
-        </ul>
-      </div>
-    </div>
+              </Link>
+            );
+          })}
+      </ul>
+    </>
   );
 }
 

@@ -31,7 +31,6 @@ import GogoRacingPatchs from "./ggr-patch3";
 import GogoRacingPatch4 from "./ggr-patch4";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
-import EarnToWinRaffle from "./play-to-win-raffle";
 import PostPage from "./posts";
 import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
@@ -48,6 +47,15 @@ import "./scss/index.scss";
 
 const Appcomponent = ({}) => {
   const [loading, setLoading] = useState(false);
+
+  const location = useLocation().pathname;
+  const newClass = location.split("/")[1];
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 8000);
+  // }, []);
   const [posts, setPosts] = useState();
   useEffect(() => {
     const request = {
@@ -58,14 +66,6 @@ const Appcomponent = ({}) => {
       setPosts(response.data.posts);
     });
   }, []);
-  const location = useLocation().pathname;
-  const newClass = location.split("/")[1];
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 8000);
-  // }, []);
   return (
     <>
       {loading ? (
@@ -94,7 +94,10 @@ const Appcomponent = ({}) => {
             />
             <Route path="/terms-of-use" element={<TermsAndConditions />} />
             <Route path="/gogoracing-guide" element={<GoGoRacingGuide />} />
-            <Route path="/ggr-update-list" element={<GogoRacingUpdateList />} />
+            <Route
+              path="/ggr-update-list/*"
+              element={<GogoRacingUpdateList posts={posts} />}
+            />
             <Route path="/ggr-updates" element={<GogoRacingUpdates />} />
             <Route path="/ggr-patch2" element={<GogoRacingPatch />} />
             <Route path="/ggr-guide-list" element={<GogoracingGuidelist />} />
@@ -109,7 +112,6 @@ const Appcomponent = ({}) => {
               element={<GogoRacingPurchaseGuide />}
             />
             <Route path="/ggrsearch" element={<GogoRacingSearch />} />
-            <Route path="/play-to-win-raffle" element={<EarnToWinRaffle />} />
             <Route
               path="/ggr-announcement-list"
               element={<GogoRacingAnnouncementList />}

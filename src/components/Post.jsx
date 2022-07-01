@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
 import { deletePost } from "./actions/postActions";
+import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
 function Post({ posts }) {
   const { postId } = useParams();
@@ -11,8 +12,9 @@ function Post({ posts }) {
   return (
     <React.Fragment>
       {post ? (
-        <div>
-          <Link to="edit" style={{ padding: 20 }}>
+        <div className="posts-contents">
+          <img src={backgroundimg} alt="" id="patch-posts-img" />
+          <Link to="edit" id="edit-posts" style={{ padding: 20 }}>
             Edit
           </Link>
           <button
@@ -26,6 +28,7 @@ function Post({ posts }) {
               cursor: "pointer",
               outline: "inherit",
             }}
+            id="delete-posts"
           >
             Delete
           </button>

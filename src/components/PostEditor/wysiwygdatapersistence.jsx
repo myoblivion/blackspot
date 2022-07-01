@@ -14,6 +14,7 @@ function WysiwygDataPersistence({ posts }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
+  const [description, setDescritipn] = useState("");
 
   const [editorState, setEditorState] = useState(() => {
     if (location.pathname === "/posts/new") {
@@ -32,9 +33,9 @@ function WysiwygDataPersistence({ posts }) {
 
   function publish() {
     const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
-    if (validPost(title, body)) {
+    if (validPost(title, description, body)) {
       console.log(body);
-      const postData = { title, body };
+      const postData = { title, description, body };
       addPost("posts", postData, navigate);
     } else {
       console.log("Posts need to include a title and a body");
@@ -49,7 +50,7 @@ function WysiwygDataPersistence({ posts }) {
     console.log(title);
     console.log(body);
     if (validPost(title, body)) {
-      const postData = { title, body };
+      const postData = { title, description, body };
       editPost(id, postData, navigate);
     } else {
       console.log("Posts need to include a title and a body");
@@ -58,6 +59,10 @@ function WysiwygDataPersistence({ posts }) {
 
   const handleTitle = (event) => {
     setTitle(event.target.value);
+  };
+
+  const handledescription = (event) => {
+    setDescritipn(event.target.value);
   };
 
   let buttons;
@@ -88,6 +93,12 @@ function WysiwygDataPersistence({ posts }) {
         placeholder="Title"
         value={title}
         onChange={handleTitle}
+      />
+      <input
+        type="text"
+        placeholder="description"
+        value={description}
+        onChange={handledescription}
       />
       <Editor
         editorState={editorState}
