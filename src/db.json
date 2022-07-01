@@ -25,10 +25,9 @@
       "id": 4
     }
   ],
-  "ggrguides": [
+  "authors": [
     {
-      "name": "❓ Game Guide",
-      "description": "New to Gogo Racing? Here is everything you need to know about the game!",
+      "name": "Luis Martinez",
       "body": "<h1><span style=\"color: rgb(255,255,255);background-color: rgb(61,142,185);\">Gogo Racing Patch Notes</span></h1>\n<h2>1.0.4 Patch Note</h2>\n<h4>Hello GoGo Racers!</h4>\n<p>📢📢📢 We have an update today, June 14, 2022! As we want to give you an amazing and exciting game, here are detailed patch notes:</p>\n<p>⚙️ Unveiled a new character, a strict and arrogant chick named Bbi</p>\n<p>⚙️ Added new cars, one is small and cute car called Minimi and a special car called Speedstar.</p>\n<p>⚙️ Added six (6) new tracks:</p>\n<p>&nbsp;➡️ GoGo Stadium</p>\n<p>&nbsp;➡️ New Town</p>\n<p>&nbsp;&nbsp;➡️ Lost Temple</p>\n<p>&nbsp;&nbsp;➡️ Western Town</p>\n<p>&nbsp;&nbsp;➡️ Clock Tower</p>\n<p>&nbsp;&nbsp;➡️ Space City</p>\n<p>⚙️ GoGo Racing has a total of 14 tracks as of the moment.</p>\n<p>⚙️ Modified the packages on the shop. Items for each packages are already visible with images.</p>\n<p>⚙️ Added a lobby chat</p>\n<p>⚙️ Added a gacha system on the game.</p>\n<p>⚙️ Added a Victory box on the lobby which can be obtained by getting 10 trophies.</p>\n<p>⚙️ Added a Free box on the lobby that can be received every four (4) hours.</p>\n<p>⚙️ Improved the performance and animations of the game.</p>\n<p>⚙️ Improved the UI of the game.</p>\n<p>⚙️ Fixed the bugs on the game.&nbsp;</p>",
       "id": 1
     }

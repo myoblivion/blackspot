@@ -50,12 +50,12 @@ const Appcomponent = ({}) => {
 
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 8000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+  }, []);
   const [posts, setPosts] = useState();
   const [ggrguides, setGgrGuides] = useState();
 
