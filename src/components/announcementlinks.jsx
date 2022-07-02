@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
-const AuthorsLinks = ({ ggrguides }) => {
+const AuthorsLinks = ({ authors }) => {
   const renderAuthors =
-    ggrguides &&
-    ggrguides.map(({ name, id, description }) => {
+    authors &&
+    authors.map(({ name, id, description }) => {
       return (
         <li key={id}>
           <h3>

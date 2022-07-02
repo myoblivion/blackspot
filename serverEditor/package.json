@@ -4,7 +4,7 @@
   "description": "",
   "main": "./jsonServer.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "wait-on http://localhost:8000 && nodemon server"
   },

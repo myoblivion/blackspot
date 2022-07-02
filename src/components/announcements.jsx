@@ -4,22 +4,21 @@ import Interweave from "interweave";
 import { deletePost } from "./actions/postActions";
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
-function Author({ ggrguides }) {
-  const { ggrguideId } = useParams();
+function Author({ authors }) {
+  const { authorsId } = useParams();
   const navigate = useNavigate();
-  const ggrguide =
-    ggrguides && ggrguides.find(({ id }) => `${id}` === ggrguideId);
-  <img src={backgroundimg} alt="" id="patch-ggrguides-img" />;
+  const author = authors && authors.find(({ id }) => `${id}` === authorsId);
+  <img src={backgroundimg} alt="" id="patch-authors-img" />;
   return (
     <React.Fragment>
-      {ggrguide ? (
-        <div className="ggrguides-contents">
-          <img src={backgroundimg} alt="" id="patch-ggrguides-img" />;
-          <Link to="edit" id="edit-ggrguides" style={{ padding: 20 }}>
+      {author ? (
+        <div className="authors-contents">
+          <img src={backgroundimg} alt="" id="patch-authors-img" />;
+          <Link to="edit" id="edit-authors" style={{ padding: 20 }}>
             Edit
           </Link>
           <button
-            onClick={() => deletePost(ggrguideId, navigate)}
+            onClick={() => deletePost(authorsId, navigate)}
             style={{
               background: "#f3f3f3",
               color: "inherit",
@@ -29,13 +28,13 @@ function Author({ ggrguides }) {
               cursor: "pointer",
               outline: "inherit",
             }}
-            id="delete-ggrguides"
+            id="delete-authors"
           >
             Delete
           </button>
-          <h1>{ggrguide.name}</h1>
-          <span>{ggrguide.description}</span>
-          <Interweave content={ggrguide.body} />
+          <h1>{author.name}</h1>
+          <span>{author.description}</span>
+          <Interweave content={author.body} />
         </div>
       ) : (
         <strong>Loading...</strong>

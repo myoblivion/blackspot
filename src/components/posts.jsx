@@ -3,8 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import PostsLinks from "./postLinks";
 import Post from "./Post";
 import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
-import AuthorsLinks from "./AuthorLinks";
-import Author from "./Author";
 
 const PostPage = ({ posts, ggrguides }) => {
   return (
@@ -21,13 +19,6 @@ const PostPage = ({ posts, ggrguides }) => {
           <Route
             path="/:postId/edit/"
             element={<WysiwygDataPersistence posts={posts} />}
-          />
-        </Routes>
-        <Routes>
-          <Route path="/*" element={<AuthorsLinks ggrguides={ggrguides} />} />
-          <Route
-            path=":ggrguidesId"
-            element={<Author ggrguides={ggrguides} />}
           />
         </Routes>
       </div>

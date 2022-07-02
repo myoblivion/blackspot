@@ -50,14 +50,13 @@ const Appcomponent = ({}) => {
 
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 8000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 8000);
+  // }, []);
   const [posts, setPosts] = useState();
-  const [ggrguides, setGgrGuides] = useState();
 
   useEffect(() => {
     const request = {
@@ -66,7 +65,6 @@ const Appcomponent = ({}) => {
     mockAPI(request).then((response) => {
       console.log(response);
       setPosts(response.data.posts);
-      setGgrGuides(response.data.ggrguides);
     });
   }, []);
   return (
@@ -126,11 +124,6 @@ const Appcomponent = ({}) => {
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/test" element={<Post />} />
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
-            <Route
-              path="/ggrguides/*"
-              element={<PostPage ggrguides={ggrguides} />}
-            />
-            ``
           </Routes>
         </div>
       )}
