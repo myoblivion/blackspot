@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import WysiwygDataAnnouncement from "./PostEditor/wysiwygdataannouncement";
 import NewsPageLinks from "./newspagelinks";
-import GameGuidePost from "./gameguidepost";
 import WysiwygDataGuide from "./PostEditor/wysiwygdatagameguide";
+import NewsPost from "./newspost";
+import WysiwygDataNews from "./PostEditor/wysiwygnews";
 const NewsPageComponent = ({ newspage }) => {
   return (
     <div className="admin wrapper">
@@ -11,17 +11,14 @@ const NewsPageComponent = ({ newspage }) => {
       <div className="admin-contents">
         <Routes>
           <Route path="/*" element={<NewsPageLinks newspage={newspage} />} />
-          <Route
-            path="/:announcementID/*"
-            element={<GameGuidePost newspage={newspage} />}
-          />
+          <Route path="/:newsID/*" element={<NewsPost newspage={newspage} />} />
           <Route
             path="/new/"
-            element={<WysiwygDataGuide newspage={newspage} />}
+            element={<WysiwygDataNews newspage={newspage} />}
           />
           <Route
-            path="/:announcementID/edit/"
-            element={<WysiwygDataGuide newspage={newspage} />}
+            path="/:newsID/edit/"
+            element={<WysiwygDataNews newspage={newspage} />}
           />
         </Routes>
       </div>

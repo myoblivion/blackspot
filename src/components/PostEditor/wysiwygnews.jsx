@@ -6,23 +6,22 @@ import draftToHtml from "draftjs-to-html";
 // import htmlToDraft from "html-to-draftjs";
 import { convertFromHTML } from "draft-convert";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { addGuide, editGuide } from "../actions/guideActions";
+import { addNews, editNews } from "../actions/newsAction";
 import { validPost } from "./validator";
 
-function WysiwygDataGuide({ gameguide }) {
+function WysiwygDataNews({ newspage }) {
   const routeParams = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
-  const [gdescription, setDescritipn] = useState("");
+  const [ndescription, setDescritipn] = useState("");
 
   const [editorState, setEditorState] = useState(() => {
-    if (location.pathname === "/gameguide/new") {
+    if (location.pathname === "/newspage/new") {
       return EditorState.createEmpty();
-    } else if (routeParams.gameguideID) {
+    } else if (routeParams.newsID) {
       const currentPost =
-        gameguide &&
-        gameguide.find(({ id }) => `${id}` === routeParams.gameguideID);
+        newspage && newspage.find(({ id }) => `${id}` === routeParams.newsID);
       setTitle(currentPost.title);
       return EditorState.createWithContent(convertFromHTML(currentPost.body));
     }
@@ -34,10 +33,10 @@ function WysiwygDataGuide({ gameguide }) {
 
   function publish() {
     const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
-    if (validPost(title, gdescription, body)) {
+    if (validPost(title, ndescription, body)) {
       console.log(body);
-      const GuideData = { title, gdescription, body };
-      addGuide("gameguide", GuideData, navigate);
+      const newsData = { title, ndescription, body };
+      addNews("newspage", newsData, navigate);
     } else {
       console.log("Posts need to include a title and a body");
     }
@@ -47,12 +46,12 @@ function WysiwygDataGuide({ gameguide }) {
     const body = draftToHtml(
       convertToRaw(editorState.getCurrentContent())
     ).trim();
-    const id = routeParams.gameguideID;
+    const id = routeParams.newsID;
     console.log(title);
     console.log(body);
     if (validPost(title, body)) {
-      const GuideData = { title, gdescription, body };
-      editGuide(id, GuideData, navigate);
+      const newsData = { title, ndescription, body };
+      editNews(id, newsData, navigate);
     } else {
       console.log("Posts need to include a title and a body");
     }
@@ -97,8 +96,8 @@ function WysiwygDataGuide({ gameguide }) {
       />
       <input
         type="text"
-        placeholder="gdescription"
-        value={gdescription}
+        placeholder="ndescription"
+        value={ndescription}
         onChange={handledescription}
       />
       <Editor
@@ -145,4 +144,4 @@ function WysiwygDataGuide({ gameguide }) {
   );
 }
 
-export default WysiwygDataGuide;
+export default WysiwygDataNews;

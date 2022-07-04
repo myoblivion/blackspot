@@ -8,14 +8,14 @@ function NewsPageLinks({ newspage }) {
       </Link>
       <ol>
         {newspage &&
-          newspage.map(({ title, id, description }) => {
+          newspage.map(({ title, id, ndescription }) => {
             return (
               <Link to={`${id}`} key={id}>
                 <li>
                   <div className="li-left"></div>
                   <div className="li-right">
                     <h3>{title}</h3>
-                    <span>{description}</span>
+                    <span>{ndescription}</span>
                   </div>
                 </li>
               </Link>

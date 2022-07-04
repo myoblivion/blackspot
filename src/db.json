@@ -3,7 +3,7 @@
     {
       "title": "🔊 1.0.1 Patch Note",
       "description": "03.23.2022",
-      "body": "<h1 style=\"text-align:start;\"><span style=\"color: rgb(255,255,255);background-color: rgb(17,102,130);font-family: Hind, sans-serif;\">Gogo Racing Patch Notes</span></h1>\n<h2 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-family: Hind, sans-serif;\">1.0.1 Patch Note</span></h2>\n<ul>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Revision was made on Product category, so expired products can't be install anymore.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">After purchasing fixed-term items, the expiration display has been modified to be displayed when the expiration date expires.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">[Game Mode] It has been modified so that the sound is output when the back button is touched.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">[Garage] The vehicle name display length has been modified.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Revised to remove expired characters and vehicles when updating inventory.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Fixed the alignment of the character above the in-game and the name display that were misplaced.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Added Tapjoy Shop Event icon and function.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Fixed an issue where store alignment did not work properly.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Modified the profile to expose character vehicle stats and skill information.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">[Garage] We modified the items that is currently installing so that they are aligned at the front.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">[Garage] If Players have more than one same paint, we have improved it to indicate the quantity on one item.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">[Option] We adjusted the size of the web view window considering the sizes of the device.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">[Option] Fix related to web view back Button issue</span></li>\n<ul>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Add store data</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: medium;font-family: Barlow Condensed\", sans-serif;\">Disable the Login Guest button</span>&nbsp;</li>\n</ul>\n</ul>\n",
+      "body": "<h1><span style=\"color: rgb(255,255,255);background-color: rgb(61,142,185);\">Gogo Racing Patch Notes</span></h1>\n<h2>1.0.1 Patch Note</h2>\n<p>⚡ Revision was made on Product category, so expired products can't be install anymore.</p>\n<p>⚡ After purchasing fixed-term items, the expiration display has been modified to be displayed when the expiration date expires.</p>\n<p>⚡ [Game Mode] It has been modified so that the sound is output when the back button is touched.</p>\n<p>⚡ [Garage] The vehicle name display length has been modified.</p>\n<p>⚡ Revised to remove expired characters and vehicles when updating inventory.</p>\n<p>⚡ Fixed the alignment of the character above the in-game and the name display that were misplaced.</p>\n<p>⚡ Added Tapjoy Shop Event icon and function.</p>\n<p>⚡ Fixed an issue where store alignment did not work properly.</p>\n<p>⚡ Modified the profile to expose character vehicle stats and skill information.</p>\n<p>⚡ [Garage] We modified the items that is currently installing so that they are aligned at the front.</p>\n<p>⚡ [Garage] If Players have more than one same paint, we have improved it to indicate the quantity on one item.</p>\n<p>⚡ [Option] We adjusted the size of the web view window considering the sizes of the device.</p>\n<p>⚡ [Option] Fix related to web view back Button issue</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Add store data</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Disable the Login Guest button&nbsp;</p>",
       "id": 5
     },
     {
@@ -31,21 +31,27 @@
       "adescription": "qweqwe",
       "body": "<p>qweqweqwewqeq</p>\n",
       "id": 1
+    },
+    {
+      "title": "sadasda",
+      "adescription": "dasdsada",
+      "body": "<p>asdsadsad</p>\n",
+      "id": 2
     }
   ],
   "gameguide": [
     {
-      "title": "asd",
-      "guide=description": "sada",
-      "body": "<p>AAAAAAAAAAAAAAAAAAAAAAA</p>\n",
+      "title": "asdAaSDASDASDADSD",
+      "ndescription": "DASASDAD",
+      "body": "<p>ASaSDADADASAAAAAAAAAAAAAAAAAAAAAAA</p>",
       "id": "1"
     }
   ],
   "newspage": [
     {
-      "title": "asdA",
-      "guide=description": "sada",
-      "body": "<p>AAAAAAAAAAAAAAAAAAAAAAA</p>\n",
+      "title": "asdAdasdadasd",
+      "ndescription": "",
+      "body": "<p>dadasdasdsadasAAAAAAAAAAAAAAAAAAAAAAA</p>",
       "id": "1"
     }
   ]

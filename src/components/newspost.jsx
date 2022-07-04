@@ -2,23 +2,20 @@ import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
 import { deletePost } from "./actions/postActions";
-import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
-function Post({ posts }) {
-  const { postId } = useParams();
+function NewsPost({ newspage }) {
+  const { newsID } = useParams();
   const navigate = useNavigate();
-  const post = posts && posts.find(({ id }) => `${id}` === postId);
-  <img src={backgroundimg} alt="" id="patch-posts-img" />;
+  const newspages = newspage && newspage.find(({ id }) => `${id}` === newsID);
   return (
     <React.Fragment>
-      {post ? (
-        <div className="posts-contents">
-          <img src={backgroundimg} alt="" id="patch-posts-img" />
-          <Link to="edit" id="edit-posts" style={{ padding: 20 }}>
+      {newspages ? (
+        <div className="newspage-contents">
+          <Link to="edit" id="edit-newspage" style={{ padding: 20 }}>
             Edit
           </Link>
           <button
-            onClick={() => deletePost(postId, navigate)}
+            onClick={() => deletePost(newsID, navigate)}
             style={{
               background: "#f3f3f3",
               color: "inherit",
@@ -28,17 +25,17 @@ function Post({ posts }) {
               cursor: "pointer",
               outline: "inherit",
             }}
-            id="delete-posts"
+            id="delete-newspage"
           >
             Delete
           </button>
-          <Interweave content={post.body} />
+          <Interweave content={newspages.body} />
         </div>
       ) : (
-        <strong>Loading post...</strong>
+        <strong>Loading newspages...</strong>
       )}
     </React.Fragment>
   );
 }
 
-export default Post;
+export default NewsPost;

@@ -12,7 +12,7 @@ const GameGuidePage = ({ gameguide }) => {
         <Routes>
           <Route path="/*" element={<GameGuideLinks gameguide={gameguide} />} />
           <Route
-            path="/:announcementID/*"
+            path="/:gameguideID/*"
             element={<GameGuidePost gameguide={gameguide} />}
           />
           <Route
@@ -20,7 +20,7 @@ const GameGuidePage = ({ gameguide }) => {
             element={<WysiwygDataGuide gameguide={gameguide} />}
           />
           <Route
-            path="/:announcementID/edit/"
+            path="/:gameguideID/edit/"
             element={<WysiwygDataGuide gameguide={gameguide} />}
           />
         </Routes>

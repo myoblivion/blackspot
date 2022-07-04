@@ -8,14 +8,14 @@ function GameGuideLinks({ gameguide }) {
       </Link>
       <ol>
         {gameguide &&
-          gameguide.map(({ title, id, adescription }) => {
+          gameguide.map(({ title, id, gdescription }) => {
             return (
               <Link to={`${id}`} key={id}>
                 <li>
                   <div className="li-left"></div>
                   <div className="li-right">
                     <h3>{title}</h3>
-                    <span>{adescription}</span>
+                    <span>{gdescription}</span>
                   </div>
                 </li>
               </Link>
