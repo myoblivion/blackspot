@@ -1,7 +1,7 @@
 import axios from "axios";
 export function addGuide(endpoint, GuideData, navigate) {
   axios
-    .post("http://localhost:8000/" + endpoint, GuideData)
+    .post("http://blackspotstudio.ph/" + endpoint, GuideData)
     .then((response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
@@ -13,7 +13,7 @@ export function addGuide(endpoint, GuideData, navigate) {
 
 export function editGuide(endpoint, GuideData, navigate) {
   axios
-    .put("http://localhost:8000/gameguide/" + endpoint, GuideData)
+    .put("http://blackspotstudio.ph/gameguide/" + endpoint, GuideData)
     .then((response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
@@ -25,7 +25,7 @@ export function editGuide(endpoint, GuideData, navigate) {
 
 export function deleteGuide(gameguideID, navigate) {
   axios
-    .delete("http://localhost:8000/gameguide/" + gameguideID)
+    .delete("http://blackspotstudio.ph/gameguide/" + gameguideID)
     .then((response) => {
       console.log(response);
       navigate("../", { replace: true });

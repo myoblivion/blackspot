@@ -8,24 +8,64 @@ const AnnouncementPage = ({ announcements }) => {
     <div className="admin wrapper">
       <h1>Welcome, Admin</h1>
       <div className="admin-contents">
-        <Routes>
-          <Route
-            path="/*"
-            element={<AnnouncementsLinks announcements={announcements} />}
-          />
-          <Route
-            path="/:announcementID/*"
-            element={<Announcement announcements={announcements} />}
-          />
-          <Route
-            path="/new/"
-            element={<WysiwygDataAnnouncement announcements={announcements} />}
-          />
-          <Route
-            path="/:announcementID/edit/"
-            element={<WysiwygDataAnnouncement announcements={announcements} />}
-          />
-        </Routes>
+        <ul>
+          <Link
+            to="/ggr-patch4"
+            {...props}
+            ref={ref}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <li>
+              <div className="li-left"></div>
+              <div className="li-right">
+                <h3>🔊 1.0.4 Patch Note</h3>
+                <span>06.13.2022</span>
+              </div>
+            </li>
+          </Link>
+          <Link
+            to="/ggr-patch3"
+            {...props}
+            ref={ref}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <li>
+              <div className="li-left"></div>
+              <div className="li-right">
+                <h3>🔊 1.0.3 Patch Note</h3>
+                <span>04.04.2022</span>
+              </div>
+            </li>
+          </Link>
+          <Link
+            to="/ggr-patch2"
+            {...props}
+            ref={ref}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <li>
+              <div className="li-left"></div>
+              <div className="li-right">
+                <h3>🔊 1.0.2 Patch Note</h3>
+                <span>03.25.2022</span>
+              </div>
+            </li>
+          </Link>
+          <Link
+            to="/ggr-updates"
+            {...props}
+            ref={ref}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <li>
+              <div className="li-left"></div>
+              <div className="li-right">
+                <h3>🔊 1.0.1 Patch Note</h3>
+                <span>03.23.2022</span>
+              </div>
+            </li>
+          </Link>
+        </ul>
       </div>
     </div>
   );
