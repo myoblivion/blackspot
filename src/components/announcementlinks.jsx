@@ -1,22 +1,29 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import React from "react";
-const AuthorsLinks = ({ authors }) => {
-  const renderAuthors =
-    authors &&
-    authors.map(({ name, id, description }) => {
-      return (
-        <li key={id}>
-          <h3>
-            <Link to={`${id}`}>
-              {name}
-              <span>{description}</span>
-            </Link>
-          </h3>
-        </li>
-      );
-    });
+function AnnouncementsLinks({ announcements }) {
+  return (
+    <div className="aLinks">
+      <Link id="new-post" to="new" className="new-post">
+        New Post
+      </Link>
+      <ol>
+        {announcements &&
+          announcements.map(({ title, id, adescription }) => {
+            return (
+              <Link to={`${id}`} key={id}>
+                <li>
+                  <div className="li-left"></div>
+                  <div className="li-right">
+                    <h3>{title}</h3>
+                    <span>{adescription}</span>
+                  </div>
+                </li>
+              </Link>
+            );
+          })}
+      </ol>
+    </div>
+  );
+}
 
-  return <div>{renderAuthors}</div>;
-};
-
-export default AuthorsLinks;
+export default AnnouncementsLinks;

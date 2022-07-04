@@ -3,8 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import PostsLinks from "./postLinks";
 import Post from "./Post";
 import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
-
-const PostPage = ({ posts, ggrguides }) => {
+const PostPage = ({ posts, announcements }) => {
   return (
     <div className="admin wrapper">
       <h1>Welcome, Admin</h1>

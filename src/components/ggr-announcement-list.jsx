@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useRef, LinkProps } from "react";
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
+import AnnouncementsLinks from "./announcementlinks";
+import Announcement from "./announcement";
+import WysiwygDataAnnouncement from "./PostEditor/wysiwygdataannouncement";
 
-const GogoRacingAnnouncementList = ({ props, ref, currentRoute }) => {
+const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Gogo Racing Announcements";
@@ -20,7 +24,7 @@ const GogoRacingAnnouncementList = ({ props, ref, currentRoute }) => {
             <div className="ggr-top">
               <div className="ggr-left">
                 <Link
-                  to="/gogoracingnews"
+                  to="/ggr-announcement-list"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
@@ -44,22 +48,28 @@ const GogoRacingAnnouncementList = ({ props, ref, currentRoute }) => {
             </div>
           </div>
           <div className="ggr-announces">
-            <ul>
-              <Link
-                to="/gogo-racing-raffle-announcement"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <li>
-                  <h3>🎉 Gogo Racing Play to Win Raffle Event </h3>
-                  <span>
-                    It’s your time to win while you play! Get a chance to win
-                    ACER NITRO 5, IPAD MINI 6th GEN and CASH.
-                  </span>
-                </li>
-              </Link>
-            </ul>
+            <Routes>
+              <Route
+                path="/*"
+                element={<AnnouncementsLinks announcements={announcements} />}
+              />
+              <Route
+                path="/:announcementID/*"
+                element={<Announcement announcements={announcements} />}
+              />
+              <Route
+                path="/new/"
+                element={
+                  <WysiwygDataAnnouncement announcements={announcements} />
+                }
+              />
+              <Route
+                path="/:announcementID/edit/"
+                element={
+                  <WysiwygDataAnnouncement announcements={announcements} />
+                }
+              />
+            </Routes>
           </div>
         </div>
       </div>

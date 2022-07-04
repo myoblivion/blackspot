@@ -34,11 +34,14 @@ import GogoRacingSearch from "./ggrsearch";
 import PostPage from "./posts";
 import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
-import GogoRacingRaffleAnnouncement from "./ggr-annoncement";
 import NotFoundComponent from "./notfound";
 import SpinTheWheel from "./spin-the-wheel";
 import { getLCP, getFID, getCLS } from "web-vitals";
+import AdminComponent from "./admin";
+import AnnouncementPage from "./announcements";
+import GameGuidePage from "./gameguide";
 import Post from "./test";
+import NewsPageComponent from "./newspage";
 // styles
 getCLS(console.log);
 getFID(console.log);
@@ -57,6 +60,9 @@ const Appcomponent = ({}) => {
   //   }, 8000);
   // }, []);
   const [posts, setPosts] = useState();
+  const [announcements, setAnnouncements] = useState();
+  const [gameguide, setGameGuide] = useState();
+  const [newspage, setNewsPage] = useState();
 
   useEffect(() => {
     const request = {
@@ -65,6 +71,9 @@ const Appcomponent = ({}) => {
     mockAPI(request).then((response) => {
       console.log(response);
       setPosts(response.data.posts);
+      setGameGuide(response.data.gameguide);
+      setAnnouncements(response.data.announcements);
+      setNewsPage(response.data.newspage);
     });
   }, []);
   return (
@@ -117,13 +126,22 @@ const Appcomponent = ({}) => {
               path="/ggr-announcement-list"
               element={<GogoRacingAnnouncementList />}
             />
-            <Route
-              path="/gogo-racing-raffle-announcement"
-              element={<GogoRacingRaffleAnnouncement />}
-            />
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/test" element={<Post />} />
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
+            <Route path="/admin" element={<AdminComponent />} />
+            <Route
+              path="/announcements/*"
+              element={<AnnouncementPage announcements={announcements} />}
+            />
+            <Route
+              path="/gameguide/*"
+              element={<GameGuidePage gameguide={gameguide} />}
+            />
+            <Route
+              path="/newspage/*"
+              element={<NewsPageComponent newspage={newspage} />}
+            />
           </Routes>
         </div>
       )}

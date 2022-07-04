@@ -1,16 +1,10 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Routes, Route } from "react-router-dom";
-import image from "../images/banner4.png";
-import image2 from "../images/gogochain-mobile.png";
-import { HashLink } from "react-router-hash-link";
-import icono from "../images/icons/logo.png";
 import { Link } from "react-router-dom";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import PostsLinks from "./postLinks";
 import Post from "./Post";
-import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
-import { AiFillInstagram } from "react-icons/ai";
 
 const GogoRacingUpdateList = ({ props, ref, currentRoute, posts }) => {
   // Title
@@ -54,14 +48,6 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute, posts }) => {
             <Routes>
               <Route path="/*" element={<PostsLinks posts={posts} />} />
               <Route path="/:postId/*" element={<Post posts={posts} />} />
-              <Route
-                path="/new/"
-                element={<WysiwygDataPersistence posts={posts} />}
-              />
-              <Route
-                path="/:postId/edit/"
-                element={<WysiwygDataPersistence posts={posts} />}
-              />
             </Routes>
           </div>
         </div>

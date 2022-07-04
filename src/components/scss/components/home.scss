@@ -63,15 +63,7 @@ body {
   #close:checked ~ #iwannasleep {
     display: none;
   }
-  #close {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-  }
+
   @keyframes imageAnimation {
     0% {
       left: 100%;
