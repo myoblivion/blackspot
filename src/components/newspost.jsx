@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
-import { deletePost } from "./actions/postActions";
+import { deleteNews } from "./actions/newsAction";
 
 function NewsPost({ newspage }) {
   const { newsID } = useParams();
@@ -15,7 +15,7 @@ function NewsPost({ newspage }) {
             Edit
           </Link>
           <button
-            onClick={() => deletePost(newsID, navigate)}
+            onClick={() => deleteNews(newsID, navigate)}
             style={{
               background: "#f3f3f3",
               color: "inherit",

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import NewsPageLinks from "./newspagelinks";
-import WysiwygDataGuide from "./PostEditor/wysiwygdatagameguide";
 import NewsPost from "./newspost";
 import WysiwygDataNews from "./PostEditor/wysiwygnews";
 const NewsPageComponent = ({ newspage }) => {

@@ -1,8 +1,5 @@
 .ggr-patch3 {
   width: 100%;
-  .admin {
-    display: none;
-  }
   height: 100%;
   .ggr-patc3-contents {
     background-image: url("/src/images/gogoracingbackground/withlogo.png");
@@ -172,10 +169,10 @@
           margin-bottom: 3%;
         }
         h3 {
-            margin-left: 2%;
+          margin-left: 2%;
         }
         p {
-            margin-left: 2%;
+          margin-left: 2%;
         }
         h2 {
           margin-bottom: 2%;
@@ -195,8 +192,8 @@
               li {
                 margin-top: 2%;
                 a {
-                    margin-left: 2px;
-                    color: rgb(95, 95, 255);
+                  margin-left: 2px;
+                  color: rgb(95, 95, 255);
                 }
                 &::before {
                   content: "➟ ";

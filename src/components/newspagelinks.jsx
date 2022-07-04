@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 function NewsPageLinks({ newspage }) {
   return (
-    <div className="postLinks">
+    <div className="newsLinks">
       <Link id="new-post" to="new" className="new-post">
         New Post
       </Link>

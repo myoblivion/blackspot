@@ -1,9 +1,7 @@
 .gogoracing-purchase {
   width: 100%;
   height: 100%;
-  .admin {
-    display: none;
-  }
+
   .ggr-purchase-contents {
     top: 0;
     background-image: url("/src/images/gogoracingbackground/withlogo.png");
@@ -240,7 +238,7 @@
         .ggr-purchases {
           width: 100%;
           #ihateyou {
-              margin-left: 4%;
+            margin-left: 4%;
           }
           h1 {
             width: 100%;
@@ -255,7 +253,7 @@
             display: flex;
             flex-direction: column;
             li {
-            margin-left: 1%;
+              margin-left: 1%;
               img {
                 width: 40%;
               }

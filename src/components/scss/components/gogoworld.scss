@@ -1,9 +1,7 @@
 .gogoworld {
   width: 100%;
   overflow-x: hidden;
-  .admin {
-    display: none;
-  }
+
   .gogoworld-wrapper {
     height: 100vh;
     width: 100%;
@@ -141,9 +139,8 @@
       margin-top: 10%;
 
       width: 47%;
+    }
   }
-  }
-  
 }
 .gogoworld-footer-distributed {
   background: rgb(68, 68, 68);
@@ -311,7 +308,6 @@
   .gogoworld-footer-distributed {
     font: bold 12px sans-serif;
     top: 260px;
-
   }
 
   .gogoworld-footer-distributed .footer-left,
@@ -327,4 +323,3 @@
     margin-left: 0;
   }
 }
-

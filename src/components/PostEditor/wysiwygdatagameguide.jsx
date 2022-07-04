@@ -6,8 +6,8 @@ import draftToHtml from "draftjs-to-html";
 // import htmlToDraft from "html-to-draftjs";
 import { convertFromHTML } from "draft-convert";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { addGuide, editGuide } from "../actions/guideActions";
 import { validPost } from "./validator";
+import { addGuide, editGuide } from "../actions/guideActions";
 
 function WysiwygDataGuide({ gameguide }) {
   const routeParams = useParams();
@@ -67,7 +67,7 @@ function WysiwygDataGuide({ gameguide }) {
   };
 
   let buttons;
-  if (location.pathname === "/announcementpage/new") {
+  if (location.pathname === "/gameguide/new") {
     buttons = <button onClick={publish}>Publish</button>;
   } else {
     buttons = <button onClick={update}>Update</button>;
@@ -87,7 +87,7 @@ function WysiwygDataGuide({ gameguide }) {
   return (
     <div className="textEditor">
       <header className="posteditor-header">
-        <strong>Announcement Editor</strong>
+        <strong>Post Editor</strong>
       </header>
       <input
         type="text"

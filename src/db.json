@@ -37,22 +37,46 @@
       "adescription": "dasdsada",
       "body": "<p>asdsadsad</p>\n",
       "id": 2
+    },
+    {
+      "title": "asdasd",
+      "adescription": "sadsaddsad",
+      "body": "<p>dasdsad</p>\n",
+      "id": 3
     }
   ],
   "gameguide": [
     {
-      "title": "asdAaSDASDASDADSD",
-      "ndescription": "DASASDAD",
-      "body": "<p>ASaSDADADASAAAAAAAAAAAAAAAAAAAAAAA</p>",
-      "id": "1"
+      "title": "wqewqeqweqwe",
+      "gdescription": "ewqe",
+      "body": "<p>eqweqeqwe</p>\n",
+      "id": 1
+    },
+    {
+      "title": "adasdasdasdasasdad",
+      "gdescription": "asdasd",
+      "body": "<p>asdadsaasd</p>\n",
+      "id": 2
     }
   ],
   "newspage": [
     {
-      "title": "asdAdasdadasd",
-      "ndescription": "",
-      "body": "<p>dadasdasdsadasAAAAAAAAAAAAAAAAAAAAAAA</p>",
-      "id": "1"
+      "title": "asdsad",
+      "ndescription": "asda",
+      "body": "<p>dsdasd</p>\n",
+      "id": 1
+    },
+    {
+      "title": "dadasd",
+      "ndescription": "adadas",
+      "body": "<p>assdasdasdasasdad</p>\n",
+      "id": 2
+    },
+    {
+      "title": "dda",
+      "ndescription": "asdsa",
+      "body": "<p>sasadsa</p>\n",
+      "id": 3
     }
   ]
 }

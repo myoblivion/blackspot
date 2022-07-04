@@ -6,8 +6,8 @@ import draftToHtml from "draftjs-to-html";
 // import htmlToDraft from "html-to-draftjs";
 import { convertFromHTML } from "draft-convert";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { addNews, editNews } from "../actions/newsAction";
 import { validPost } from "./validator";
+import { addNews, editNews } from "../actions/newsAction";
 
 function WysiwygDataNews({ newspage }) {
   const routeParams = useParams();
@@ -66,7 +66,7 @@ function WysiwygDataNews({ newspage }) {
   };
 
   let buttons;
-  if (location.pathname === "/announcementpage/new") {
+  if (location.pathname === "/newspage/new") {
     buttons = <button onClick={publish}>Publish</button>;
   } else {
     buttons = <button onClick={update}>Update</button>;
@@ -86,7 +86,7 @@ function WysiwygDataNews({ newspage }) {
   return (
     <div className="textEditor">
       <header className="posteditor-header">
-        <strong>Announcement Editor</strong>
+        <strong>Post Editor</strong>
       </header>
       <input
         type="text"

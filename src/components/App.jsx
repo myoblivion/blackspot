@@ -32,7 +32,6 @@ import GogoRacingPatch4 from "./ggr-patch4";
 import GogoRacingPurchaseGuide from "./ggr-purchase-guide";
 import GogoRacingSearch from "./ggrsearch";
 import PostPage from "./posts";
-import LogInComponent from "./login";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import NotFoundComponent from "./notfound";
 import SpinTheWheel from "./spin-the-wheel";
@@ -42,6 +41,7 @@ import AnnouncementPage from "./announcements";
 import GameGuidePage from "./gameguide";
 import Post from "./test";
 import NewsPageComponent from "./newspage";
+import GGRnews from "./ggr-news";
 // styles
 getCLS(console.log);
 getFID(console.log);
@@ -127,7 +127,6 @@ const Appcomponent = ({}) => {
               element={<GogoRacingAnnouncementList />}
             />
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
-            <Route path="/test" element={<Post />} />
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
             <Route path="/admin" element={<AdminComponent />} />
             <Route
@@ -142,6 +141,7 @@ const Appcomponent = ({}) => {
               path="/newspage/*"
               element={<NewsPageComponent newspage={newspage} />}
             />
+            <Route path="/ggr-news" element={<GGRnews />} />
           </Routes>
         </div>
       )}

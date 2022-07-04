@@ -48,7 +48,7 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
             </div>
           </div>
           <div className="ggrnws-contents">
-            <ul>
+            <ol>
               <Link
                 to="/ggr-announcement-list"
                 {...props}
@@ -100,18 +100,23 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
                   </div>
                 </li>
               </Link>
-
-              <li>
-                <div className="li-left">
-                  <img src={catto} alt="" />
-                </div>
-
-                <div className="li-right">
-                  <h3>Newsletter</h3>
-                  <span>Hear what's new in Gogo Racing Here!</span>
-                </div>
-              </li>
-            </ul>
+              <Link
+                to="/ggr-news"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <div className="li-left">
+                    <img src={catto} alt="" />
+                  </div>
+                  <div className="li-right">
+                    <h3>Newsletter</h3>
+                    <span>Hear what's new in Gogo Racing Here!</span>
+                  </div>
+                </li>
+              </Link>
+            </ol>
           </div>
         </div>
       </div>

@@ -2,9 +2,7 @@
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  .admin {
-    display: none;
-  }
+
   overflow-y: hidden;
   .map-wrapper {
     width: 100%;
@@ -557,8 +555,8 @@
         margin-bottom: 5%;
         width: 90%;
         iframe {
-        left: 35%;
-        width: 100%;
+          left: 35%;
+          width: 100%;
         }
       }
     }

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import WysiwygDataAnnouncement from "./PostEditor/wysiwygdataannouncement";
 import GameGuideLinks from "./gameguidelinks";
 import GameGuidePost from "./gameguidepost";
 import WysiwygDataGuide from "./PostEditor/wysiwygdatagameguide";

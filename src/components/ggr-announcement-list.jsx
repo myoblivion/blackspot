@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
-import AnnouncementsLinks from "./announcementlinks";
-import Announcement from "./announcement";
-import WysiwygDataAnnouncement from "./PostEditor/wysiwygdataannouncement";
 
-const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
+const GogoRacingAnnouncementList = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Gogo Racing Announcements";
@@ -24,7 +20,7 @@ const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
             <div className="ggr-top">
               <div className="ggr-left">
                 <Link
-                  to="/ggr-announcement-list"
+                  to="/gogoracingnews"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
@@ -48,28 +44,22 @@ const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
             </div>
           </div>
           <div className="ggr-announces">
-            <Routes>
-              <Route
-                path="/*"
-                element={<AnnouncementsLinks announcements={announcements} />}
-              />
-              <Route
-                path="/:announcementID/*"
-                element={<Announcement announcements={announcements} />}
-              />
-              <Route
-                path="/new/"
-                element={
-                  <WysiwygDataAnnouncement announcements={announcements} />
-                }
-              />
-              <Route
-                path="/:announcementID/edit/"
-                element={
-                  <WysiwygDataAnnouncement announcements={announcements} />
-                }
-              />
-            </Routes>
+            <ol>
+              <Link
+                to="/gogo-racing-raffle-announcement"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <h3>🎉 Gogo Racing Play to Win Raffle Event </h3>
+                  <span>
+                    It’s your time to win while you play! Get a chance to win
+                    ACER NITRO 5, IPAD MINI 6th GEN and CASH.
+                  </span>
+                </li>
+              </Link>
+            </ol>
           </div>
         </div>
       </div>

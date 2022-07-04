@@ -2,19 +2,15 @@ import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
 import { deleteGuide } from "./actions/guideActions";
-import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
-
 function GameGuidePost({ gameguide }) {
   const { gameguideID } = useParams();
   const navigate = useNavigate();
   const gameguidez =
     gameguide && gameguide.find(({ id }) => `${id}` === gameguideID);
-  <img src={backgroundimg} alt="" id="patch-gameguide-img" />;
   return (
     <React.Fragment>
       {gameguidez ? (
         <div className="gameguide-contents">
-          <img src={backgroundimg} alt="" id="patch-gameguide-img" />
           <Link to="edit" id="edit-gameguide" style={{ padding: 20 }}>
             Edit
           </Link>
