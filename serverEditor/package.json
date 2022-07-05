@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "wait-on http://blackspotstudio.ph:8000 && nodemon server"
+    "server": "wait-on http://localhost:8000 && nodemon server"
   },
   "keywords": [],
   "author": "",

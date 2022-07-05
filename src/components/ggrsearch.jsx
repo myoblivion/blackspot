@@ -61,19 +61,19 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
       image: "../images/gogoracingbackground/catto.png",
     },
     {
-      id: 8,
+      id: 9,
       name: "1.0.3 Patch Note",
       span: "04.04.2022",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
-      id: 9,
+      id: 10,
       name: "1.0.2 Patch Note",
       span: "03.25.2022",
       image: "../images/gogoracingbackground/catto.png",
     },
     {
-      id: 10,
+      id: 11,
       name: "1.0.1 Patch Note",
       span: "03.23.2022",
       image: "../images/gogoracingbackground/catto.png",
@@ -174,7 +174,7 @@ const GogoRacingSearch = ({ props, ref, onSearch }) => {
             <div className="ggrsearch-contents">
               <ul>
                 {filteredPosts.map((post, s) => (
-                  <li>
+                  <li key={post.id}>
                     <div className="li-left">
                       <img src={catto} alt="" />
                     </div>

@@ -3,12 +3,39 @@ $button-bg: $fuschia;
 $button-text-color: #fff;
 $baby-blue: #f8faff;
 .admin {
-  z-index: 99999;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 6%;
+  .announcements-contents {
+    width: 100%;
+    background-color: pink;
+  }
   .admin-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
-    margin-top: 3%;
+    margin: 0 auto;
+    margin-top: 1%;
+    .admin-container {
+      margin-top: 1%;
+      ol {
+        li {
+          border-bottom: 1px solid black;
+          height: 9.9vh;
+          padding-left: 2%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          text-align: left;
+        }
+      }
+    }
     .new-post {
       background-color: black;
       color: white;

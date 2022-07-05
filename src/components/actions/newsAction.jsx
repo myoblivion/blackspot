@@ -1,7 +1,7 @@
 import axios from "axios";
 export function addNews(endpoint, newsData, navigate) {
   axios
-    .post("http://blackspotstudio.ph/" + endpoint, newsData)
+    .post("http://localhost:8000/" + endpoint, newsData)
     .then((response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
@@ -13,7 +13,7 @@ export function addNews(endpoint, newsData, navigate) {
 
 export function editNews(endpoint, newsData, navigate) {
   axios
-    .put("http://blackspotstudio.ph/newspage/" + endpoint, newsData)
+    .put("http://localhost:8000/newspage/" + endpoint, newsData)
     .then((response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
@@ -25,7 +25,7 @@ export function editNews(endpoint, newsData, navigate) {
 
 export function deleteNews(newsID, navigate) {
   axios
-    .delete("http://blackspotstudio.ph/newspage/" + newsID)
+    .delete("http://localhost:8000/newspage/" + newsID)
     .then((response) => {
       console.log(response);
       navigate("../", { replace: true });

@@ -1,13 +1,12 @@
 .ggr-event {
   width: 100%;
   height: 100%;
-
+  background-image: url("/src/images/gogoracingbackground/withlogo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
   .ggr-event-contents {
-    background-image: url("/src/images/gogoracingbackground/withlogo.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
     height: 100%;
     margin-top: 5%;
     width: 100%;
@@ -162,6 +161,8 @@
       }
       .ggr-eventucontents {
         width: 60%;
+        height: 100vh;
+        background-color: white;
         img {
           margin-left: 2%;
           width: 150%;

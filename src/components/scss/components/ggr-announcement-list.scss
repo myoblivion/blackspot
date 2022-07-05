@@ -1,21 +1,32 @@
 .ggr-announcements {
+  background-image: url("/src/images/gogoracingbackground/withlogo.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  padding-bottom: 39.7%;
+  width: 100%;
   height: 100%;
+  background-attachment: fixed;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
   .ggr-announcement-contents {
-    background-image: url("/src/images/gogoracingbackground/withlogo.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-
+    #edit-posts,
+    #delete-posts {
+      display: none;
+    }
     .ggr-alistgontents {
+      height: 60%;
+      margin-top: 10%;
       width: 70%;
-      height: 40%;
       .ggr-top {
         display: flex;
         justify-content: space-between;
@@ -142,7 +153,18 @@
     .ggr-announces {
       background-color: white;
       height: 100%;
+      .announcements-contents {
+        height: 70vh;
+      }
+      img {
+        width: 100%;
+        height: 30vh;
+      }
       #new-post {
+        display: none;
+      }
+      #delete-announcements,
+      #edit-announcements {
         display: none;
       }
       ol {

@@ -42,7 +42,6 @@ function WysiwygDataAnnouncement({ announcements }) {
       console.log("Posts need to include a title and a body");
     }
   }
-
   function update() {
     const body = draftToHtml(
       convertToRaw(editorState.getCurrentContent())

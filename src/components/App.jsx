@@ -110,7 +110,10 @@ const Appcomponent = ({}) => {
             />
             <Route path="/ggr-updates" element={<GogoRacingUpdates />} />
             <Route path="/ggr-patch2" element={<GogoRacingPatch />} />
-            <Route path="/ggr-guide-list" element={<GogoracingGuidelist />} />
+            <Route
+              path="/ggr-guide-list/*"
+              element={<GogoracingGuidelist gameguide={gameguide} />}
+            />
             <Route
               path="/ggr-account-linking"
               element={<GogoRacingAccountLinking />}
@@ -123,8 +126,10 @@ const Appcomponent = ({}) => {
             />
             <Route path="/ggrsearch" element={<GogoRacingSearch />} />
             <Route
-              path="/ggr-announcement-list"
-              element={<GogoRacingAnnouncementList />}
+              path="/ggr-announcement-list/*"
+              element={
+                <GogoRacingAnnouncementList announcements={announcements} />
+              }
             />
             <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
@@ -141,7 +146,10 @@ const Appcomponent = ({}) => {
               path="/newspage/*"
               element={<NewsPageComponent newspage={newspage} />}
             />
-            <Route path="/ggr-news" element={<GGRnews />} />
+            <Route
+              path="/ggr-news/*"
+              element={<GGRnews newspage={newspage} />}
+            />
           </Routes>
         </div>
       )}

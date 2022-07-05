@@ -30,7 +30,6 @@ import fbcontinue from "../images/ggrguide/stuff42.png";
 import link from "../images/ggrguide/stuff43.png";
 import link2 from "../images/ggrguide/stuff44.png";
 import link3 from "../images/ggrguide/stuff45.png";
-
 const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -56,14 +55,14 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="ggr-right">
-              <Link
-                to="/ggrsearch"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <FaSearch />
-              </Link>
+                <Link
+                  to="/ggrsearch"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <FaSearch />
+                </Link>
               </div>
             </div>
             <img src={backgroundimg} alt="" />
@@ -207,14 +206,17 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
             <div className="ggr-section-2">
               <h2>Labels</h2>
               <ul>
-              <li>
-                  <HashLink smooth to="/ggr-account-linking#gmail-account-linking">
-                   Gmail Account Linking
+                <li>
+                  <HashLink
+                    smooth
+                    to="/ggr-account-linking#gmail-account-linking"
+                  >
+                    Gmail Account Linking
                   </HashLink>
                 </li>
-              <li>
+                <li>
                   <HashLink smooth to="/ggr-account-linking#facebook-link">
-                   Facebook Account Linking
+                    Facebook Account Linking
                   </HashLink>
                 </li>
                 <li>

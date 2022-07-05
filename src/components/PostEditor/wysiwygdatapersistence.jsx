@@ -8,7 +8,7 @@ import { convertFromHTML } from "draft-convert";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { addPost, editPost } from "../actions/postActions";
 import { validPost } from "./validator";
-
+// Grabe inaantok na talaga ako Aaaa gusto ko pa matulog
 function WysiwygDataPersistence({ posts }) {
   const routeParams = useParams();
   const location = useLocation();

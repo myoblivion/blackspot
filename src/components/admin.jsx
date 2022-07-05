@@ -5,9 +5,10 @@ const AdminComponent = ({ props, ref }) => {
   return (
     <div id="admin wrapper">
       <div className="admin-contents">
+        <h1>Welcome Admin</h1>
         <div className="admin-container">
-          <h1>Gogo Racing</h1>
-          <ul>
+          <h2>Gogo Racing</h2>
+          <ol>
             <Link
               to="/announcements"
               {...props}
@@ -40,7 +41,7 @@ const AdminComponent = ({ props, ref }) => {
             >
               <li>News</li>
             </Link>
-          </ul>
+          </ol>
         </div>
       </div>
     </div>
