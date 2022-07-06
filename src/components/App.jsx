@@ -42,6 +42,7 @@ import GameGuidePage from "./gameguide";
 import Post from "./test";
 import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
+import GrandPixGuide from "./grand-pix-guide";
 // styles
 getCLS(console.log);
 getFID(console.log);
@@ -138,6 +139,7 @@ const Appcomponent = ({}) => {
               path="/announcements/*"
               element={<AnnouncementPage announcements={announcements} />}
             />
+            <Route path="/grand-pix-guide" element={<GrandPixGuide />} />
             <Route
               path="/gameguide/*"
               element={<GameGuidePage gameguide={gameguide} />}
