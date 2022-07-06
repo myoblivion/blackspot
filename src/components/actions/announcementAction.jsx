@@ -2,7 +2,7 @@ import axios from "axios";
 export function addAnnounce(endpoint, AnnouncementData, navigate) {
   axios
     .post("http://localhost:8000/" + endpoint, AnnouncementData)
-    .then((response) => {
+    .then(async (response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
     })
@@ -14,7 +14,7 @@ export function addAnnounce(endpoint, AnnouncementData, navigate) {
 export function editAnnouncement(endpoint, AnnouncementData, navigate) {
   axios
     .put("http://localhost:8000/announcements/" + endpoint, AnnouncementData)
-    .then((response) => {
+    .then(async (response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
     })
@@ -26,7 +26,7 @@ export function editAnnouncement(endpoint, AnnouncementData, navigate) {
 export function deleteAnnouncement(announcementID, navigate) {
   axios
     .delete("http://localhost:8000/announcements/" + announcementID)
-    .then((response) => {
+    .then(async (response) => {
       console.log(response);
       navigate("../", { replace: true });
     })
