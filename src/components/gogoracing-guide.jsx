@@ -290,7 +290,15 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
                 <ul>
                   <li>
                     ▶ Grand Prix ticket can be used as an entry ticket to Grand
-                    Prix mode.
+                    Prix mode.{" "}
+                    <Link
+                      to="/grand-pix-guide"
+                      {...props}
+                      ref={ref}
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      <strong> Click here for more info</strong>
+                    </Link>
                   </li>
                   <li>
                     ▶ Gacha Ticket can be used in order to get awesome rewards.
