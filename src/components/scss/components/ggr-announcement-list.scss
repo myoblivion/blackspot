@@ -151,6 +151,9 @@
     .ggr-announces {
       background-color: white;
       height: 100%;
+      .announcement-header {
+        display: none;
+      }
       .announcement-links {
         h1 {
           display: none;

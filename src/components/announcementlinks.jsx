@@ -28,5 +28,4 @@ function AnnouncementsLinks({ announcements }) {
     </div>
   );
 }
-
 export default AnnouncementsLinks;

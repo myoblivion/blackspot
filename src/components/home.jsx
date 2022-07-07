@@ -115,28 +115,28 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // const [imageIndex, setImageIndex] = useState(0);
-  // const settings = {
-  //   Infinite: true,
-  //   lazyload: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   centerMode: true,
-  //   dots: true,
-  //   centerPadding: 0,
-  //   arrows: false,
-  //   beforeChange: (current, next) => setImageIndex(next),
-  // };
+  const [imageIndex, setImageIndex] = useState(0);
   const settings = {
-    fade: true,
-    infinite: true,
-    vertical: true,
-    dots: true,
-    speed: 500,
+    Infinite: true,
+    lazyload: true,
+    speed: 300,
     slidesToShow: 1,
+    centerMode: true,
+    dots: true,
+    centerPadding: 0,
     arrows: false,
-    slidesToScroll: 1,
+    beforeChange: (current, next) => setImageIndex(next),
   };
+  // const settings = {
+  //   fade: true,
+  //   infinite: true,
+  //   vertical: true,
+  //   dots: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   arrows: false,
+  //   slidesToScroll: 1,
+  // };
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
@@ -173,7 +173,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        {/* <div className="slider">
+        <div className="slider">
           <input
             name="control"
             id="page1"
@@ -506,9 +506,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Slider>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        <div className="selectorz-wrapper">
+        {/* <div className="selectorz-wrapper">
           <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
@@ -966,7 +966,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </Slider>
-        </div>
+        </div> */}
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div
@@ -987,7 +987,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     className="contact-us-form"
                     id="someForm"
                     onSubmit={sendEmail}
-                    autoComplete="off"
                   >
                     <div className="form-group">
                       <label htmlFor="name">Name : *</label>

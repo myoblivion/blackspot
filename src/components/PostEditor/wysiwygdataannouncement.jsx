@@ -93,11 +93,13 @@ function WysiwygDataAnnouncement({ announcements }) {
         placeholder="Title"
         value={title}
         onChange={handleTitle}
+        className="inputsz"
       />
       <input
         type="text"
         placeholder="adescription"
         value={adescription}
+        className="inputsz"
         onChange={handledescription}
       />
       <Editor

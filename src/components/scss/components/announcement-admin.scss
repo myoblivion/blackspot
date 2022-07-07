@@ -6,9 +6,63 @@
   align-items: center;
   height: 100%;
   background-attachment: fixed;
+  .announcement-header {
+    margin-top: 8%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    width: 50%;
+    text-align: center;
+  }
   .announcements-contents {
     height: 100%;
     background-color: white;
     width: 50%;
+  }
+}
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-attachment: fixed;
+  .post-header {
+    margin-top: 8%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    width: 50%;
+    text-align: center;
+  }
+  .posts-contents {
+    height: 100%;
+    background-color: white;
+    width: 50%;
+    #patch-posts-img {
+      width: 100%;
+    }
+  }
+}
+.gameguide-contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .post-header {
+    margin-top: 8%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    width: 50%;
+    text-align: center;
+  }
+  .game-guide-contents {
+    height: 100%;
+    background-color: white;
+    width: 50%;
+    #patch-posts-img {
+      width: 100%;
+    }
   }
 }

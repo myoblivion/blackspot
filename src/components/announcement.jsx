@@ -13,6 +13,9 @@ function Announcement({ announcements }) {
     <React.Fragment>
       {announce ? (
         <div className="announcement wrapper">
+          <div className="announcement-header">
+            <h1>{announce.title}</h1>
+          </div>
           <div className="announcements-contents">
             <Link to="edit" id="edit-announcements" style={{ padding: 20 }}>
               Edit

@@ -82,17 +82,57 @@
 
 @media only screen and (max-width: 500px) {
   #loader-wrapper {
-    .loader-logo {
-      width: 50%;
-      display: flex;
-      justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    font-family: "GreatLakesNF";
+    overflow: hidden;
+    display: flex;
+    color: white;
+    background: rgb(0, 0, 0);
+
+    .loading {
+      --color: #f0c125;
+      --duration: 2000ms;
       font-family: "GreatLakesNF";
-      align-items: center;
-      margin-top: 50%;
-      height: 100%;
-      img {
-        height: 30%;
-        width: 80%;
+      letter-spacing: 5px;
+      font-size: 30px;
+      position: relative;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 900;
+      user-select: none;
+      color: var(--color);
+      span {
+        --x: 0;
+        --y: 0;
+        --move-y: 0;
+        --move-y-s: 0;
+        --delay: 0ms;
+        display: block;
+        font-family: "GreatLakesNF";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        text-indent: calc(var(--x) * -1);
+        overflow: hidden;
+        transform: translate(var(--x), var(--y));
+      }
+      &.start {
+        div {
+          font-family: "GreatLakesNF";
+          opacity: 0;
+        }
+        span {
+          font-family: "GreatLakesNF";
+          animation: move var(--duration) ease-in-out var(--delay);
+        }
       }
     }
   }

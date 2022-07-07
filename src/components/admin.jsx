@@ -6,7 +6,7 @@ const AdminComponent = ({ props, ref }) => {
     <div id="admin wrapper">
       <div className="admins">
         <div className="admin-contents">
-          <h1>Welcome Admin</h1>
+          <h1 className="welcome-admin">Welcome Admin</h1>
           <div className="admin-container">
             <h2>Gogo Racing</h2>
             <ol>
