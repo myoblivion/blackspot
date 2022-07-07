@@ -200,3 +200,39 @@
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .grandpix {
+    width: 100%;
+    height: 100%;
+    .ggr-purchase-contents {
+      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      .ggr-pcrecontents {
+        margin-top: 70%;
+        width: 100%;
+        .ggr-header {
+          .ggr-top {
+            .ggr-right {
+              #search:checked ~ #selection {
+                right: 175%;
+                width: 50%;
+              }
+              #text-search {
+                right: 60%;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .ggr-update-contents {
+          width: 90%;
+          h1 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
