@@ -317,6 +317,12 @@
               margin-left: 5%;
               li {
                 margin: 3% 0;
+                a {
+                  strong {
+                    color: blue;
+                    text-decoration: underline;
+                  }
+                }
                 ul {
                   li {
                     list-style: circle;
@@ -581,6 +587,7 @@
           h2 {
             font-size: 18px;
           }
+
           .ggr-section-1 {
             .game-introduction {
               width: 95%;
@@ -601,6 +608,7 @@
             }
             .ui-guide {
               width: 95%;
+
               .account-linking {
                 img {
                   width: 100%;

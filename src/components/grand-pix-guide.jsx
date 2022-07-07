@@ -64,16 +64,24 @@ const GrandPixGuide = ({ props, ref }) => {
                 <h4>1. Admission fee</h4>
               </li>
               <li>
-                - 1 Grand Prix ticket is required in order to participate on
-                this mode.
+                <ul>
+                  <li>
+                    - 1 Grand Prix ticket is required in order to participate on
+                    this mode.
+                  </li>
+                </ul>
               </li>
               <li>
                 <h4>2. Rewards</h4>
               </li>
               <li>
                 {" "}
-                - Podium finishers will be rewarded by specific amount of
-                Diamonds.
+                <ul>
+                  <li>
+                    - Podium finishers will be rewarded by specific amount of
+                    Diamonds.
+                  </li>
+                </ul>
               </li>
             </ul>
             <img src={img3} alt="" />
@@ -81,35 +89,59 @@ const GrandPixGuide = ({ props, ref }) => {
               <li>
                 <h4>3. Track Info</h4>
               </li>
-              <li>
-                {" "}
-                - This shows the track that will be used for the Grand Prix.{" "}
-              </li>
-              <li>
-                - The create can select a specific track or leave it randomly.
-              </li>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      {" "}
+                      - This shows the track that will be used for the Grand
+                      Prix.{" "}
+                    </li>
+                    <li>
+                      - The create can select a specific track or leave it
+                      randomly.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
               <li>
                 <h4>4. Quick Join </h4>
               </li>
               <li>
-                - Participating players can easily join a Grand Prix match by
-                pressing this button.
+                <ul>
+                  <li>
+                    - Participating players can easily join a Grand Prix match
+                    by pressing this button.
+                  </li>
+                  <li>
+                    - A room must be created before players can quick join.
+                  </li>
+                </ul>
               </li>
-              <li>- A room must be created before players can quick join.</li>
               <li>
                 <h4>5. Create</h4>
               </li>
               <li>
-                - A player can be a host of Grand Prix by pressing the “Create”
-                button. Players can join the room by pressing quick join.
+                <ul>
+                  <li>
+                    - A player can be a host of Grand Prix by pressing the
+                    “Create” button. Players can join the room by pressing quick
+                    join.
+                  </li>
+                </ul>
               </li>
+
               <li>
                 <h4> 6. Track Selection</h4>
               </li>
               <li>
-                {" "}
-                - Several tracks are being displayed in order to be selected by
-                the host.
+                <ul>
+                  <li>
+                    - Several tracks are being displayed in order to be selected
+                    by the host.
+                  </li>
+                </ul>
               </li>
             </ul>
             <h3>Grand Prix waiting room</h3>
@@ -117,8 +149,12 @@ const GrandPixGuide = ({ props, ref }) => {
             <ul>
               <li>1. Game Start timer</li>
               <li>
-                - Players have 30 seconds countdown in order to modify and
-                prepare their cars.
+                <ul>
+                  <li>
+                    - Players have 30 seconds countdown in order to modify and
+                    prepare their cars
+                  </li>
+                </ul>
               </li>
               <li>2. Participants</li>
               <li>(Player with “Crown” icon is the room creator)</li>
@@ -128,9 +164,13 @@ const GrandPixGuide = ({ props, ref }) => {
                 <img src={img5} alt="" />
               </li>
               <li>
-                - You can communicate with other players using chat. Chat
-                feature has limited number of characters that can be used to
-                avoid spam.
+                <ul>
+                  <li>
+                    - You can communicate with other players using chat. Chat
+                    feature has limited number of characters that can be used to
+                    avoid spam.
+                  </li>
+                </ul>
               </li>
             </ul>
             <h3>Change</h3>
@@ -139,9 +179,13 @@ const GrandPixGuide = ({ props, ref }) => {
                 <img src={img6} alt="" />
               </li>
               <li>
-                {" "}
-                - Players can quick modify their cars and characters by tapping
-                the “Change” button.
+                <ul>
+                  <li>
+                    {" "}
+                    - Players can quick modify their cars and characters by
+                    tapping the “Change” button.
+                  </li>
+                </ul>
               </li>
               <li>
                 <h4>1. Car Tab </h4>
@@ -154,19 +198,28 @@ const GrandPixGuide = ({ props, ref }) => {
                 <h4>3. Class Tab (Car/Character)</h4>
               </li>
               <li>
-                - Players can select their modified cars and characters to be
-                used on Grand Prix classified with their class.
+                <ul>
+                  <li>
+                    - Players can select their modified cars and characters to
+                    be used on Grand Prix classified with their class.
+                  </li>
+                </ul>
               </li>
             </ul>
             <h4>Ready</h4>
             <img src={img7} alt="" />
             <ul>
               <li>
-                - When all players pressed the “Ready” button, game start timer
-                will be skipped to 5 seconds countdown.
-              </li>
-              <li>
-                - Players will be redirected to the race after the countdown.
+                <ul>
+                  <li>
+                    - When all players pressed the “Ready” button, game start
+                    timer will be skipped to 5 seconds countdown.
+                  </li>
+                  <li>
+                    - Players will be redirected to the race after the
+                    countdown.
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

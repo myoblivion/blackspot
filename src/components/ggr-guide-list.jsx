@@ -86,6 +86,17 @@ const GogoracingGuidelist = ({ props, ref, currentRoute }) => {
                   </span>
                 </li>
               </Link>
+              <Link
+                to="/grand-pix-guide"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <li>
+                  <h3>❓ Grand Pix Game Guide</h3>
+                  <span>Grand Pix Game Guide</span>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
