@@ -86,7 +86,7 @@ function WysiwygDataAnnouncement({ announcements }) {
   return (
     <div className="textEditor">
       <header className="posteditor-header">
-        <strong>Post Editor</strong>
+        <strong>Announcement Editor</strong>
       </header>
       <input
         type="text"

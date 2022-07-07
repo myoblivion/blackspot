@@ -12,9 +12,8 @@ function Announcement({ announcements }) {
   return (
     <React.Fragment>
       {announce ? (
-        <div className="admin">
+        <div className="announcement wrapper">
           <div className="announcements-contents">
-            <img src={backgroundimg} alt="" id="patch-posts-img" />;
             <Link to="edit" id="edit-announcements" style={{ padding: 20 }}>
               Edit
             </Link>
