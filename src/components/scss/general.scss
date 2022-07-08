@@ -1,7 +1,5 @@
 @use "./components/mixins.scss" as mixin;
 
-
-
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -10,7 +8,6 @@ html {
 ul {
   list-style: none;
 }
-
 
 body {
   margin: 0;
@@ -34,20 +31,19 @@ a {
   display: block;
 }
 .app {
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  transition: 0.5s ease;
-  background-color: rgb(255, 255, 255);
-}
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s ease;
+    background-color: rgb(255, 255, 255);
+  }
 
-
-.wrapper {
-  @include mixin.displayFlex(row, start, flex-end);
-  z-index: 4;
-}
+  .wrapper {
+    @include mixin.displayFlex(row, start, flex-end);
+    z-index: 4;
+  }
 }
 
 @keyframes rotate {

@@ -53,12 +53,5 @@
       "id": 3
     }
   ],
-  "newspage": [
-    {
-      "title": "Test",
-      "ndescription": "sadas",
-      "body": "<p>dsada</p>\n",
-      "id": 1
-    }
-  ]
+  "newspage": []
 }

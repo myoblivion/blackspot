@@ -14,10 +14,10 @@ const GGRnews = ({ props, ref, newspage }) => {
   // Title
 
   return (
-    <div className="gogoracingnews wrapper">
-      <div className="gogo-racing-news-wrapper">
+    <div className="gogoracingnewsletter wrapper">
+      <div className="gogo-racing-newsletter-wrapper">
         <div
-          className="ggrnews-contents"
+          className="ggrnewsletterwrap-contents"
           data-aos="zoom-in"
           data-aos-duration="500"
         >
@@ -38,7 +38,7 @@ const GGRnews = ({ props, ref, newspage }) => {
               </Link>
             </div>
           </div>
-          <div className="ggrnws-contents">
+          <div className="ggrnwsz-contents">
             <Routes>
               <Route
                 path="/*"

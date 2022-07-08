@@ -10,12 +10,12 @@ function NewsPost({ newspage }) {
   return (
     <React.Fragment>
       {newspages ? (
-        <div className="newspage-contents">
-          <div className="post-header">
+        <div className="announcement wrapper">
+          <div className="announcement-header">
             <h1>{newspages.title}</h1>
           </div>
-          <div className="news-guide-contents">
-            <Link to="edit" id="edit-newspage" style={{ padding: 20 }}>
+          <div className="announcements-contents">
+            <Link to="edit" id="edit-announcements" style={{ padding: 20 }}>
               Edit
             </Link>
             <button
@@ -29,7 +29,7 @@ function NewsPost({ newspage }) {
                 cursor: "pointer",
                 outline: "inherit",
               }}
-              id="delete-newspage"
+              id="delete-announcements"
             >
               Delete
             </button>
