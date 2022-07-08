@@ -13,49 +13,51 @@ const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
   return (
     <div className="ggr-announcements wrapper">
       <div className="ggr-announcement-contents">
-        <div
-          className="ggr-alistgontents"
-          data-aos="zoom-in"
-          data-aos-duration="500"
-        >
-          <div className="ggr-header">
-            <div className="ggr-top">
-              <div className="ggr-left">
-                <Link
-                  to="/ggr-announcement-list"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <IoIosArrowDropleftCircle />
-                </Link>
-                <h2>
-                  <FaUserCircle /> User
-                </h2>
-              </div>
-              <div className="ggr-right">
-                <Link
-                  to="/ggrsearch"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <FaSearch />
-                </Link>
+        <div className="gr-a-wrap">
+          <div
+            className="ggr-alistgontents"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
+            <div className="ggr-header">
+              <div className="ggr-top">
+                <div className="ggr-left">
+                  <Link
+                    to="/ggr-announcement-list"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <IoIosArrowDropleftCircle />
+                  </Link>
+                  <h2>
+                    <FaUserCircle /> User
+                  </h2>
+                </div>
+                <div className="ggr-right">
+                  <Link
+                    to="/ggrsearch"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <FaSearch />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="ggr-announces">
-            <Routes>
-              <Route
-                path="/*"
-                element={<AnnouncementsLinks announcements={announcements} />}
-              />
-              <Route
-                path="/:announcementID/*"
-                element={<Announcement announcements={announcements} />}
-              />
-            </Routes>
+            <div className="ggr-announces">
+              <Routes>
+                <Route
+                  path="/*"
+                  element={<AnnouncementsLinks announcements={announcements} />}
+                />
+                <Route
+                  path="/:announcementID/*"
+                  element={<Announcement announcements={announcements} />}
+                />
+              </Routes>
+            </div>
           </div>
         </div>
       </div>

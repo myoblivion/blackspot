@@ -18,105 +18,109 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
   return (
     <div className="gogoracingnews wrapper">
       <div className="gogo-racing-news-wrapper">
-        <div
-          className="ggrnews-contents"
-          data-aos="zoom-in"
-          data-aos-duration="500"
-        >
-          <div className="ggr-top">
-            <div className="ggr-left">
-              <Link
-                to="/admin"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <h2>
-                  <FaUserCircle /> User
-                </h2>
-              </Link>
+        <div className="gr-anews-wrap">
+          <div
+            className="ggrnews-contents"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
+            <div className="ggr-top">
+              <div className="ggr-left">
+                <Link
+                  to="/admin"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <h2>
+                    <FaUserCircle /> User
+                  </h2>
+                </Link>
+              </div>
+              <div className="ggr-right">
+                <Link
+                  to="/ggrsearch"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <FaSearch />
+                </Link>
+              </div>
             </div>
-            <div className="ggr-right">
-              <Link
-                to="/ggrsearch"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <FaSearch />
-              </Link>
+            <div className="ggrnws-contents">
+              <ol>
+                <Link
+                  to="/ggr-announcement-list"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <li>
+                    <div className="li-left">
+                      <img src={catto} alt="" />
+                    </div>
+                    <div className="li-right">
+                      <h3>Announcements</h3>
+                      <span>
+                        See important in-game notice and announcements!
+                      </span>
+                    </div>
+                  </li>
+                </Link>
+                <Link
+                  to="/ggr-update-list"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <li>
+                    <div className="li-left">
+                      <img src={catto} alt="" />
+                    </div>
+                    <div className="li-right">
+                      <h3>Updates</h3>
+                      <span>Keep updated with Gogo Racing!</span>
+                    </div>
+                  </li>
+                </Link>
+                <Link
+                  to="/ggr-guide-list"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <li>
+                    <div className="li-left">
+                      <img src={catto} alt="" />
+                    </div>
+                    <div className="li-right">
+                      <h3>Game Guide</h3>
+                      <span>
+                        New to Gogo Racing? Here is everything you need to know
+                        about the game!
+                      </span>
+                    </div>
+                  </li>
+                </Link>
+                <Link
+                  to="/ggr-news"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <li>
+                    <div className="li-left">
+                      <img src={catto} alt="" />
+                    </div>
+                    <div className="li-right">
+                      <h3>Newsletter</h3>
+                      <span>Hear what's new in Gogo Racing Here!</span>
+                    </div>
+                  </li>
+                </Link>
+              </ol>
             </div>
-          </div>
-          <div className="ggrnws-contents">
-            <ol>
-              <Link
-                to="/ggr-announcement-list"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <li>
-                  <div className="li-left">
-                    <img src={catto} alt="" />
-                  </div>
-                  <div className="li-right">
-                    <h3>Announcements</h3>
-                    <span>See important in-game notice and announcements!</span>
-                  </div>
-                </li>
-              </Link>
-              <Link
-                to="/ggr-update-list"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <li>
-                  <div className="li-left">
-                    <img src={catto} alt="" />
-                  </div>
-                  <div className="li-right">
-                    <h3>Updates</h3>
-                    <span>Keep updated with Gogo Racing!</span>
-                  </div>
-                </li>
-              </Link>
-              <Link
-                to="/ggr-guide-list"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <li>
-                  <div className="li-left">
-                    <img src={catto} alt="" />
-                  </div>
-                  <div className="li-right">
-                    <h3>Game Guide</h3>
-                    <span>
-                      New to Gogo Racing? Here is everything you need to know
-                      about the game!
-                    </span>
-                  </div>
-                </li>
-              </Link>
-              <Link
-                to="/ggr-news"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <li>
-                  <div className="li-left">
-                    <img src={catto} alt="" />
-                  </div>
-                  <div className="li-right">
-                    <h3>Newsletter</h3>
-                    <span>Hear what's new in Gogo Racing Here!</span>
-                  </div>
-                </li>
-              </Link>
-            </ol>
           </div>
         </div>
       </div>

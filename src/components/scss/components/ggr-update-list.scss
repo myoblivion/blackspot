@@ -6,216 +6,235 @@
   overflow: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
-  padding-bottom: 19.7%;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-attachment: fixed;
   &::-webkit-scrollbar {
     width: 0 !important;
   }
   .gogo-racing-list-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    #edit-posts,
-    #delete-posts {
-      display: none;
-    }
-    #cars {
-      display: none;
-    }
-    .ggrupdatelist-contents {
-      height: 40%;
-      margin-top: 10%;
-      width: 70%;
-      .ggr-top {
-        display: flex;
-        justify-content: space-between;
-        background-color: rgb(48, 48, 48);
-        align-items: center;
-        height: 10%;
-        color: white;
-        border-top: 8px solid black;
-        .ggr-left {
-          font-size: 16px;
-          display: flex;
-          align-items: center;
-          margin-left: 1%;
-          width: 100%;
-          a {
-            margin-left: 0;
-            font-size: 30px;
-            color: white;
-            margin-right: 2%;
-          }
-        }
-        .ggr-right {
-          margin-right: 2%;
-          display: flex;
-          justify-content: center;
-          align-self: center;
-          form {
-            position: relative;
-            display: flex;
-            label {
-              margin-right: 5px;
-            }
-          }
-          a {
-            display: block;
-            cursor: pointer;
-            padding: 7px 10px;
-            border-radius: 3px;
-            background-color: #51575a;
-            color: white;
-            &:hover {
-              background-color: azure;
-              color: black;
-            }
-          }
-          #submit {
-            transform: translate(0, -9000%);
-          }
-          #selection {
-            display: none;
-          }
-          #text-search {
-            position: absolute;
-            right: 65%;
-            width: 450%;
-
-            height: 100%;
-            border-radius: 8px;
-            display: none;
-            padding-left: 5px;
-          }
-          input[type="checkbox"] {
-            opacity: 0;
-          }
-          #searchs {
-            cursor: pointer;
-            padding: 7px 10px;
-            border-radius: 3px;
-            background-color: #51575a;
-            &:hover {
-              background-color: azure;
-              color: black;
-            }
-          }
-          #submit {
-            transform: translate(0, -9000%);
-          }
-          #submitted {
-            display: none;
-          }
-          #close {
-            display: none;
-          }
-          #search:checked ~ #searchs {
-            display: none;
-          }
-          #search:checked ~ #text-search {
-            display: block;
-          }
-          #search:checked ~ #close {
-            display: block;
-            cursor: pointer;
-            padding: 7px 10px;
-            border-radius: 3px;
-            background-color: #51575a;
-            &:hover {
-              background-color: azure;
-              color: black;
-            }
-          }
-          #search:checked ~ #selection {
-            display: block;
-            position: absolute;
-            outline: none;
-            right: 530%;
-            width: 100%;
-            height: 100%;
-            border-radius: 7px;
-          }
-          #search:checked ~ #submitted {
-            display: block;
-            cursor: pointer;
-            padding: 7px 10px;
-            border-radius: 3px;
-            background-color: #51575a;
-            &:hover {
-              background-color: azure;
-              color: black;
-            }
-          }
-        }
-      }
-    }
-    .ggrlists-contents {
-      background-color: white;
+    position: relative;
+    .gr-list-wrap {
       height: 100%;
       width: 100%;
-      #new-post {
+      display: flex;
+      justify-content: center;
+      #edit-posts,
+      #delete-posts {
         display: none;
       }
-      .post {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        .post-header {
-          display: none;
-        }
-        .posts-contents {
-          #patch-posts-img {
-            width: 200%;
-          }
-        }
+      #cars {
+        display: none;
       }
-      .aLinks {
-        margin: 0;
-        margin-top: 0;
-        h1 {
-          display: none;
-        }
-      }
-      ol {
-        background-color: white;
-        li {
-          border-bottom: 1px solid rgb(230, 230, 230);
-          height: 9.9vh;
-          padding-left: 2%;
+      .ggrupdatelist-contents {
+        height: 40%;
+        margin-top: 10%;
+        width: 70%;
+        .ggr-top {
           display: flex;
+          justify-content: space-between;
+          background-color: rgb(48, 48, 48);
           align-items: center;
-          justify-content: left;
-          -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          background-color: white;
-          -khtml-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          h3 {
-            margin-bottom: 8px;
-            background-color: white;
+          height: 2%;
+          color: white;
+          border-top: 8px solid black;
+          .ggr-left {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-left: 1%;
+            width: 100%;
+            a {
+              margin-left: 0;
+              font-size: 30px;
+              color: white;
+              margin-right: 2%;
+            }
           }
-          span {
-            margin-left: 18%;
+          .ggr-right {
+            margin-right: 2%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            form {
+              position: relative;
+              display: flex;
+              label {
+                margin-right: 5px;
+              }
+            }
+            a {
+              display: block;
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              color: white;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+            #submit {
+              transform: translate(0, -9000%);
+            }
+            #selection {
+              display: none;
+            }
+            #text-search {
+              position: absolute;
+              right: 65%;
+              width: 450%;
+
+              height: 100%;
+              border-radius: 8px;
+              display: none;
+              padding-left: 5px;
+            }
+            input[type="checkbox"] {
+              opacity: 0;
+            }
+            #searchs {
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+            #submit {
+              transform: translate(0, -9000%);
+            }
+            #submitted {
+              display: none;
+            }
+            #close {
+              display: none;
+            }
+            #search:checked ~ #searchs {
+              display: none;
+            }
+            #search:checked ~ #text-search {
+              display: block;
+            }
+            #search:checked ~ #close {
+              display: block;
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+            #search:checked ~ #selection {
+              display: block;
+              position: absolute;
+              outline: none;
+              right: 530%;
+              width: 100%;
+              height: 100%;
+              border-radius: 7px;
+            }
+            #search:checked ~ #submitted {
+              display: block;
+              cursor: pointer;
+              padding: 7px 10px;
+              border-radius: 3px;
+              background-color: #51575a;
+              &:hover {
+                background-color: azure;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+      .ggrlists-contents {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        #new-post {
+          display: none;
+        }
+        .post {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          .post-header {
+            display: none;
+          }
+          .posts-contents {
+            #patch-posts-img {
+              width: 200%;
+            }
+          }
+        }
+        .aLinks {
+          margin: 0;
+          margin-top: 0;
+          h1 {
+            display: none;
+          }
+        }
+        ol {
+          background-color: white;
+          li {
+            border-bottom: 1px solid rgb(230, 230, 230);
+            height: 9.9vh;
+            padding-left: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            background-color: white;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            h3 {
+              margin-bottom: 8px;
+              background-color: white;
+            }
+            span {
+              margin-left: 18%;
+            }
           }
         }
       }
     }
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .gogoracing-list {
+    background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    height: 100vh;
     .gogo-racing-list-wrapper {
-      .ggrupdatelist-contents {
-        margin-top: 25%;
-        width: 100%;
-        .ggrlists-contents {
-          background-color: white;
+      .gr-list-wrap {
+        .ggrupdatelist-contents {
+          margin-top: 55%;
+          width: 100%;
+          height: 100%;
+          .ggrlists-contents {
+            background-color: white;
+            .posts-contents {
+              #patch-posts-img {
+                width: 100%;
+              }
+            }
+            .post {
+              width: 200%;
+            }
+          }
         }
       }
     }

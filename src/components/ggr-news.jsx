@@ -16,39 +16,41 @@ const GGRnews = ({ props, ref, newspage }) => {
   return (
     <div className="gogoracingnewsletter wrapper">
       <div className="gogo-racing-newsletter-wrapper">
-        <div
-          className="ggrnewsletterwrap-contents"
-          data-aos="zoom-in"
-          data-aos-duration="500"
-        >
-          <div className="ggr-top">
-            <div className="ggr-left">
-              <h2>
-                <FaUserCircle /> User
-              </h2>
+        <div className="gr-nletter">
+          <div
+            className="ggrnewsletterwrap-contents"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
+            <div className="ggr-top">
+              <div className="ggr-left">
+                <h2>
+                  <FaUserCircle /> User
+                </h2>
+              </div>
+              <div className="ggr-right">
+                <Link
+                  to="/ggrsearch"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <FaSearch />
+                </Link>
+              </div>
             </div>
-            <div className="ggr-right">
-              <Link
-                to="/ggrsearch"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <FaSearch />
-              </Link>
+            <div className="ggrnwsz-contents">
+              <Routes>
+                <Route
+                  path="/*"
+                  element={<NewsPageLinks newspage={newspage} />}
+                />
+                <Route
+                  path="/:newsID/*"
+                  element={<NewsPost newspage={newspage} />}
+                />
+              </Routes>
             </div>
-          </div>
-          <div className="ggrnwsz-contents">
-            <Routes>
-              <Route
-                path="/*"
-                element={<NewsPageLinks newspage={newspage} />}
-              />
-              <Route
-                path="/:newsID/*"
-                element={<NewsPost newspage={newspage} />}
-              />
-            </Routes>
           </div>
         </div>
       </div>

@@ -14,41 +14,43 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute, posts }) => {
   return (
     <div className="gogoracing-list wrapper">
       <div className="gogo-racing-list-wrapper">
-        <div
-          className="ggrupdatelist-contents"
-          data-aos="zoom-in"
-          data-aos-duration="500"
-        >
-          <div className="ggr-top">
-            <div className="ggr-left">
-              <Link
-                to="/ggr-update-list"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <IoIosArrowDropleftCircle />
-              </Link>
-              <h2>
-                <FaUserCircle /> User
-              </h2>
+        <div className="gr-list-wrap">
+          <div
+            className="ggrupdatelist-contents"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
+            <div className="ggr-top">
+              <div className="ggr-left">
+                <Link
+                  to="/ggr-update-list"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <IoIosArrowDropleftCircle />
+                </Link>
+                <h2>
+                  <FaUserCircle /> User
+                </h2>
+              </div>
+              <div className="ggr-right">
+                <Link
+                  to="/ggrsearch"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <FaSearch />
+                </Link>
+              </div>
             </div>
-            <div className="ggr-right">
-              <Link
-                to="/ggrsearch"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <FaSearch />
-              </Link>
+            <div className="ggrlists-contents">
+              <Routes>
+                <Route path="/*" element={<PostsLinks posts={posts} />} />
+                <Route path="/:postId/*" element={<Post posts={posts} />} />
+              </Routes>
             </div>
-          </div>
-          <div className="ggrlists-contents">
-            <Routes>
-              <Route path="/*" element={<PostsLinks posts={posts} />} />
-              <Route path="/:postId/*" element={<Post posts={posts} />} />
-            </Routes>
           </div>
         </div>
       </div>
