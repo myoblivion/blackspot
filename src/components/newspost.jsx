@@ -11,25 +11,30 @@ function NewsPost({ newspage }) {
     <React.Fragment>
       {newspages ? (
         <div className="newspage-contents">
-          <Link to="edit" id="edit-newspage" style={{ padding: 20 }}>
-            Edit
-          </Link>
-          <button
-            onClick={() => deleteNews(newsID, navigate)}
-            style={{
-              background: "#f3f3f3",
-              color: "inherit",
-              border: "none",
-              padding: "1%",
-              font: "inherit",
-              cursor: "pointer",
-              outline: "inherit",
-            }}
-            id="delete-newspage"
-          >
-            Delete
-          </button>
-          <Interweave content={newspages.body} />
+          <div className="post-header">
+            <h1>{newspages.title}</h1>
+          </div>
+          <div className="news-guide-contents">
+            <Link to="edit" id="edit-newspage" style={{ padding: 20 }}>
+              Edit
+            </Link>
+            <button
+              onClick={() => deleteNews(newsID, navigate)}
+              style={{
+                background: "#f3f3f3",
+                color: "inherit",
+                border: "none",
+                padding: "1%",
+                font: "inherit",
+                cursor: "pointer",
+                outline: "inherit",
+              }}
+              id="delete-newspage"
+            >
+              Delete
+            </button>
+            <Interweave content={newspages.body} />
+          </div>
         </div>
       ) : (
         <strong>Loading newspages...</strong>

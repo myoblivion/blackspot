@@ -49,17 +49,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   height: 100%;
   .post-header {
     margin-top: 8%;
     background-color: rgb(48, 48, 48);
     color: white;
     width: 100%;
+    width: 80%;
     text-align: center;
   }
   .game-guide-contents {
     height: 100%;
     background-color: white;
+    width: 80%;
+  }
+}
+.newspage-contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  .post-header {
+    margin-top: 8%;
+    background-color: rgb(48, 48, 48);
+    color: white;
     width: 100%;
+    width: 80%;
+    text-align: center;
+  }
+  .news-guide-contents {
+    height: 100%;
+    background-color: white;
+    width: 80%;
   }
 }
