@@ -1,7 +1,7 @@
 import axios from "axios";
 export function addNews(endpoint, newsData, navigate) {
   axios
-    .post("//192.168.2.117:8000/" + endpoint, newsData)
+    .post("//localhost:8000/" + endpoint, newsData)
     .then(async (response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
@@ -13,7 +13,7 @@ export function addNews(endpoint, newsData, navigate) {
 
 export function editNews(endpoint, newsData, navigate) {
   axios
-    .put("//192.168.2.117:8000/newspage/" + endpoint, newsData)
+    .put("//localhost:8000/newspage/" + endpoint, newsData)
     .then(async (response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
@@ -25,7 +25,7 @@ export function editNews(endpoint, newsData, navigate) {
 
 export function deleteNews(newsID, navigate) {
   axios
-    .delete("//192.168.2.117:8000/newspage/" + newsID)
+    .delete("//localhost:8000/newspage/" + newsID)
     .then(async (response) => {
       console.log(response);
       navigate("../", { replace: true });

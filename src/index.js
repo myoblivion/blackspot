@@ -5,7 +5,7 @@ import App from "./components/App";
 import { createBrowserHistory } from "history";
 const hist = createBrowserHistory();
 import axios from "axios";
-axios.defaults.baseURL = "//192.168.2.117:8000/";
+axios.defaults.baseURL = "//localhost:8000/";
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
