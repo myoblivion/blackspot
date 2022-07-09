@@ -2030,7 +2030,9 @@ input[type="radio"] {
       // }
     }
   }
-
+  #game1:checked ~ #ggr-icon img {
+    filter: grayscale(1%);
+  }
   #game4:checked ~ .content4 {
     display: flex;
     justify-content: space-around;
@@ -2260,8 +2262,7 @@ input[type="radio"] {
       margin: 2.8% 1%;
       background-color: #202023;
       border-radius: 5px;
-      width: 15%;
-      padding: 0.5%;
+      width: 10%;
       margin-left: 2%;
       color: white;
       text-transform: uppercase;
@@ -2272,6 +2273,11 @@ input[type="radio"] {
       cursor: pointer;
       transition: 0.5s;
       z-index: 99;
+      img {
+        width: 100%;
+        height: 100%;
+        filter: grayscale(100%);
+      }
       &:hover {
         background-color: white;
         color: black;

@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server"
   },
-  "proxy": "http://localhost:4000",
+  "proxy": "http://192.168.2.117:8000",
   "author": "France Lee",
   "license": "MIT",
   "dependencies": {
