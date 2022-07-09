@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function addPost(endpoint, postData, navigate) {
   axios
-    .post("https://192.168.2.117:8000/" + endpoint, postData)
+    .post("http://192.168.2.117:8000/" + endpoint, postData)
     .then(async (response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
@@ -14,7 +14,7 @@ export function addPost(endpoint, postData, navigate) {
 
 export function editPost(endpoint, postData, navigate) {
   axios
-    .put("https://192.168.2.117:8000/posts/" + endpoint, postData)
+    .put("http://192.168.2.117:8000/posts/" + endpoint, postData)
     .then(async (response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
@@ -26,7 +26,7 @@ export function editPost(endpoint, postData, navigate) {
 
 export function deletePost(postId, navigate) {
   axios
-    .delete("https://192.168.2.117:8000/posts/" + postId)
+    .delete("http://192.168.2.117:8000/posts/" + postId)
     .then(async (response) => {
       console.log(response);
       navigate("../", { replace: true });
