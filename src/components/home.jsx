@@ -1046,7 +1046,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               {isShown && (
                 <div className="korea">
                   <a
-                    href="https://blackspotstudio.com/final/main/main.asp"
+                    href="http://blackspotstudio.com/final/main/main.asp"
                     target="_blank"
                   >
                     <img src={Korealogo} alt="" />
@@ -1055,7 +1055,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               )}
               <div className="dubai">
                 <a
-                  href="https://blackspotstudio.com/final/main/main.asp"
+                  href="http://blackspotstudio.com/final/main/main.asp"
                   target="_blank"
                   onMouseEnter={() => setIsShown(false)}
                   onMouseLeave={() => setIsShown(true)}
@@ -1076,7 +1076,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="dubai-mobile">
               <a
-                href="https://blackspotstudio.com/final/main/main.asp"
+                href="http://blackspotstudio.com/final/main/main.asp"
                 target="_blank"
               >
                 <img src={Dubailogo} alt="" id="dubaimobile" />
@@ -1084,7 +1084,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="korea-mobile">
               <a
-                href="https://blackspotstudio.com/final/main/main.asp"
+                href="http://blackspotstudio.com/final/main/main.asp"
                 target="_blank"
               >
                 <img src={Korealogo} alt="" id="dubaimobile" />
