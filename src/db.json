@@ -53,5 +53,12 @@
       "id": 3
     }
   ],
-  "newspage": []
+  "newspage": [
+    {
+      "title": "wqe",
+      "ndescription": "wqe",
+      "body": "<p>wqe</p>\n",
+      "id": 1
+    }
+  ]
 }

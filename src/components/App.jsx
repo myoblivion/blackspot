@@ -75,6 +75,7 @@ const Appcomponent = ({}) => {
       setGameGuide(response.data.gameguide);
       setAnnouncements(response.data.announcements);
       setNewsPage(response.data.newspage);
+      window.addEventListener("DOMContentLoaded", () => renderPosts);
     });
   }, []);
   return (
