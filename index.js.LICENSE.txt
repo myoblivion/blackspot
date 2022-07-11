@@ -49,8 +49,6 @@ object-assign
  * Date: 2021-03-02T17:08Z
  */
 
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
 /**
  * @copyright   2016-2019, Miles Johnson
  * @license     https://opensource.org/licenses/MIT
