@@ -86,7 +86,7 @@ const Appcomponent = ({}) => {
         <div className={"main " + newClass}>
           <NavbarComponent currentRoute={newClass} />
           <Routes>
-            <Route path={"/*"} element={<NotFoundComponent />} />
+            <Route path={"*"} element={<NotFoundComponent />} />
             <Route exact path={"/"} element={<HomeComponent />} />
             <Route path={"/about"} element={<AboutComponent />} />
             <Route path={"/direction"} element={<DirectionComponent />} />
