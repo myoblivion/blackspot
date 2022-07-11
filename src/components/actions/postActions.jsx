@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export function addPost(endpoint, postData, navigate) {
   axios
     .post("http://192.168.2.117:8000/" + endpoint, postData)
