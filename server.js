@@ -53,6 +53,14 @@ App.use(
     },
   })
 );
+App.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/404.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
+
 App.use(cors(corsOptions));
 console.log(allowedOrigins);
 const authentication = async () => {
