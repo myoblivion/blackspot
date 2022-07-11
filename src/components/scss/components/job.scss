@@ -1,5 +1,5 @@
 .joblist-wrapper {
-  height: 100%;
+  height: 100vh;
   width: 100%;
 
   img {
@@ -261,7 +261,7 @@ ul.job-list > li.job-preview:hover {
 }
 
 .job {
-  margin: 5% auto;
+  margin: 8% auto;
   .bootons {
     position: fixed;
     bottom: 10%;
@@ -313,11 +313,12 @@ ul.job-list > li.job-preview:hover {
     }
   }
   .joblist-wrapper {
+    margin: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     img {
-      margin-top: 20%;
+      margin-top: 27%;
       width: 70%;
     }
     ul.job-list {
@@ -369,9 +370,7 @@ ul.job-list > li.job-preview:hover {
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-  padding: 2% 50px;
-  height: 50%;
-  bottom: 0;
+  height: 30%;
 }
 
 .footer-left {

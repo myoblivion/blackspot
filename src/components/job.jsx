@@ -631,137 +631,139 @@ const JobComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
       </section>
-      <div className="footer-section">
-        <footer className="footer-distributed-direction">
-          <div className="footer-left">
-            <img src={icono} alt="" className="logso" />
-            <p className="footer-links">
-              <Link
-                to="/about"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                About Us
-              </Link>
-              <Link
-                to="/privacy"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Privacy & Policy
-              </Link>
-              <Link
-                to="/terms-of-use"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Terms of Use
-              </Link>
-              <Link
-                to="/job"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Career
-              </Link>
-
-              <HashLink smooth to="/#contact">
-                {" "}
-                Contact Us
-              </HashLink>
-            </p>
-
-            <p className="footer-company-name">
-              Copyright © Black Spot Studio PH{" "}
-            </p>
-          </div>
-
-          <div className="footer-center">
-            <div className="desz">
-              <p>
+      <section className="footerzx">
+        <div className="footer-section">
+          <footer className="footer-distributed-direction">
+            <div className="footer-left">
+              <img src={icono} alt="" className="logso" />
+              <p className="footer-links">
                 <Link
-                  to="/direction"
+                  to="/about"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+                  About Us
                 </Link>
-              </p>
-            </div>
+                <Link
+                  to="/privacy"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Privacy & Policy
+                </Link>
+                <Link
+                  to="/terms-of-use"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Terms of Use
+                </Link>
+                <Link
+                  to="/job"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Career
+                </Link>
 
-            <div className="desz">
-              <p>
-                <a href="mailto:support@company.com">
+                <HashLink smooth to="/#contact">
                   {" "}
-                  <FaEnvelope /> support@company.com
-                </a>
+                  Contact Us
+                </HashLink>
+              </p>
+
+              <p className="footer-company-name">
+                Copyright © Black Spot Studio PH{" "}
               </p>
             </div>
-          </div>
 
-          <div className="footer-right">
-            <div className="footer-icons">
-              <ul className="social-media-list">
-                <li>
-                  <a
-                    href="https://www.facebook.com/BlackspotstudioPH"
-                    target="_blank"
-                    className="contact-icon"
+            <div className="footer-center">
+              <div className="desz">
+                <p>
+                  <Link
+                    to="/direction"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
-                    <FaFacebook />
+                    <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+                  </Link>
+                </p>
+              </div>
+
+              <div className="desz">
+                <p>
+                  <a href="mailto:support@company.com">
+                    {" "}
+                    <FaEnvelope /> support@company.com
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/phblackspotstudio/"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <AiFillInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/BlackSpotPH"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaTwitter />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaReddit />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaYoutube />
-                  </a>
-                </li>
-              </ul>
+                </p>
+              </div>
             </div>
-          </div>
-        </footer>
-        <div className="bootons">
-          <HashLink smooth to="/job#" id="up">
-            {" "}
-            <FaRegArrowAltCircleUp />
-          </HashLink>
+
+            <div className="footer-right">
+              <div className="footer-icons">
+                <ul className="social-media-list">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/BlackspotstudioPH"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/phblackspotstudio/"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <AiFillInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/BlackSpotPH"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaReddit />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                      target="_blank"
+                      className="contact-icon"
+                    >
+                      <FaYoutube />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
         </div>
+      </section>
+      <div className="bootons">
+        <HashLink smooth to="/job#" id="up">
+          {" "}
+          <FaRegArrowAltCircleUp />
+        </HashLink>
       </div>
     </div>
   );
