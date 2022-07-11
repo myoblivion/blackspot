@@ -26,7 +26,8 @@ const SpinTheWheel = () => {
     "#FF9000",
   ];
   const onFinished = (winner) => {
-    console.log(winner)
+    console.log(winner);
+    alert(winner);
   };
   return (
     <div className="spin wrapper">
