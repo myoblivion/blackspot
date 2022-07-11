@@ -1,8 +1,8 @@
 import axios from "axios";
 export function addGuide(endpoint, GuideData, navigate) {
   axios
-    .post("http://192.168.2.117:8000/" + endpoint, GuideData)
-    .then(async (response) => {
+    .post("http://localhost:8000/" + endpoint, GuideData)
+    .then((response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
     })
@@ -13,8 +13,8 @@ export function addGuide(endpoint, GuideData, navigate) {
 
 export function editGuide(endpoint, GuideData, navigate) {
   axios
-    .put("http://192.168.2.117:8000/gameguide/" + endpoint, GuideData)
-    .then(async (response) => {
+    .put("http://localhost:8000/gameguide/" + endpoint, GuideData)
+    .then((response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
     })
@@ -25,8 +25,8 @@ export function editGuide(endpoint, GuideData, navigate) {
 
 export function deleteGuide(gameguideID, navigate) {
   axios
-    .delete("http://192.168.2.117:8000/gameguide/" + gameguideID)
-    .then(async (response) => {
+    .delete("http://localhost:8000/gameguide/" + gameguideID)
+    .then((response) => {
       console.log(response);
       navigate("../", { replace: true });
     })
