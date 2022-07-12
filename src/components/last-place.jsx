@@ -43,6 +43,7 @@ const ConQuestLast = () => {
   }
 
   const onFinished = (winner) => {
+    alert(winner);
     console.log(winner);
   };
   return (

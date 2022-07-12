@@ -31,6 +31,7 @@ const ConQuestChamps = () => {
     "#FF9000",
   ];
   const onFinished = (winner) => {
+    alert(winner);
     console.log(winner);
   };
   return (
