@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import WheelComponent from "react-wheel-of-prizes";
-const SpinTheWheel = () => {
+const ConQuestChamps = () => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Spin The Wheel!";
   }, []);
   const segments = [
-    "Matulog sa office",
-    "Double pay",
-    "Iphone 13 Pro Max",
-    "PS5",
-    "Kiss si Sir Friday",
-    "Kape",
-    "Lagatak",
-    "6th floor",
+    "Tumbler",
+    "T-Shirt",
+    "BSSPH Kit",
+    "Keychain & Pin",
+    "Keychain",
+    "Pin",
+    "Special Item",
+    "5,000 Diamonds",
+    "750 Diamonds",
+    "Try Again",
   ];
   const segColors = [
     "#EE4040",
@@ -23,6 +25,9 @@ const SpinTheWheel = () => {
     "#34A24F",
     "#F9AA1F",
     "#EC3F3F",
+    "#FFBD33",
+    "#FF5733",
+    "#75FF33",
     "#FF9000",
   ];
   const onFinished = (winner) => {
@@ -48,4 +53,4 @@ const SpinTheWheel = () => {
   );
 };
 
-export default SpinTheWheel;
+export default ConQuestChamps;

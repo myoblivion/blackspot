@@ -53,7 +53,7 @@ App.use(
     },
   })
 );
-App.get("/*", function (req, res) {
+App.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/404.html"), function (err) {
     if (err) {
       res.status(500).send(err);
@@ -62,7 +62,6 @@ App.get("/*", function (req, res) {
 });
 
 App.use(cors(corsOptions));
-console.log(allowedOrigins);
 const authentication = async () => {
   const auth = new google.auth.GoogleAuth({
     keyFile: "response.json",
