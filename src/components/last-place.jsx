@@ -32,7 +32,7 @@ const ConQuestLast = () => {
   ];
   const rand = () => {
     return setTimeout(() => {
-      return "won 2";
+      return "Won!";
     }, 13000);
   };
   const onFinished = (winner) => {
@@ -41,20 +41,24 @@ const ConQuestLast = () => {
   };
   return (
     <div className="spin wrapper">
-      <WheelComponent
-        segments={segments}
-        segColors={segColors}
-        onFinished={(winner) => onFinished(winner)}
-        primaryColor="black"
-        contrastColor="white"
-        winningSegment={rand()}
-        buttonText="Spin!"
-        isOnlyOnce={false}
-        size={295}
-        upDuration={10}
-        downDuration={1000}
-        fontFamily="Arial"
-      />
+      <div className="spinner-wrap">
+        <div className="more-wrapper">
+          <WheelComponent
+            segments={segments}
+            segColors={segColors}
+            onFinished={(winner) => onFinished(winner)}
+            primaryColor="black"
+            contrastColor="white"
+            winningSegment={rand()}
+            buttonText="Spin!"
+            isOnlyOnce={false}
+            size={295}
+            upDuration={10}
+            downDuration={1000}
+            fontFamily="Arial"
+          />
+        </div>
+      </div>
     </div>
   );
 };

@@ -37,19 +37,23 @@ const SpinTheWheel = () => {
   };
   return (
     <div className="spin wrapper">
-      <WheelComponent
-        segments={segments}
-        segColors={segColors}
-        onFinished={(winner) => onFinished(winner)}
-        primaryColor="black"
-        contrastColor="white"
-        buttonText="Spin!"
-        isOnlyOnce={true}
-        size={290}
-        upDuration={10}
-        downDuration={1000}
-        fontFamily="Arial"
-      />
+      <div className="spinner-wrap">
+        <div className="more-wrapper">
+          <WheelComponent
+            segments={segments}
+            segColors={segColors}
+            onFinished={(winner) => onFinished(winner)}
+            primaryColor="black"
+            contrastColor="white"
+            buttonText="Spin!"
+            isOnlyOnce={true}
+            size={290}
+            upDuration={10}
+            downDuration={1000}
+            fontFamily="Arial"
+          />
+        </div>
+      </div>
     </div>
   );
 };

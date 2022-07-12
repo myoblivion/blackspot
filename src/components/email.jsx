@@ -42,6 +42,7 @@ const Email = () => {
             id="email"
             value={data.email}
             onChange={handleChange}
+            required
             placeholder="E-mail"
           />
           <input
@@ -50,6 +51,7 @@ const Email = () => {
             className="form-control"
             name="number"
             placeholder="Account ID"
+            required
             value={data.number}
             onChange={handleChange}
           />
