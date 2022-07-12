@@ -160,7 +160,7 @@ const Appcomponent = ({}) => {
               path="/ggr-news/*"
               element={<GGRnews newspage={newspage} />}
             />
-            <Route path="/email*" element={<Email />} />
+            <Route path="/email" element={<Email />} />
           </Routes>
         </div>
       )}
