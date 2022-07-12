@@ -37,7 +37,6 @@ const ConQuestLast = () => {
   };
   const onFinished = (winner) => {
     console.log(winner);
-    alert(winner);
   };
   return (
     <div className="spin wrapper">
@@ -46,15 +45,15 @@ const ConQuestLast = () => {
           <WheelComponent
             segments={segments}
             segColors={segColors}
+            winningSegment={rand[9]}
             onFinished={(winner) => onFinished(winner)}
             primaryColor="black"
             contrastColor="white"
-            winningSegment={rand()}
             buttonText="Spin!"
             isOnlyOnce={false}
             size={295}
-            upDuration={10}
-            downDuration={1000}
+            upDuration={1000}
+            downDuration={200}
             fontFamily="Arial"
           />
         </div>
