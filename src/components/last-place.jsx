@@ -35,6 +35,13 @@ const ConQuestLast = () => {
       return "Won!";
     }, 13000);
   };
+  function Wheelcomponent(props) {
+    if ((<WheelComponent winningSegment={rand[9]} />)) {
+      return <Wheelcomponent isOnlyOnce={false} />;
+    }
+    return <WheelComponent isOnlyOnce={true} />;
+  }
+
   const onFinished = (winner) => {
     console.log(winner);
   };
@@ -45,12 +52,12 @@ const ConQuestLast = () => {
           <WheelComponent
             segments={segments}
             segColors={segColors}
-            winningSegment={rand[9]}
+            winningSegment={Wheelcomponent}
             onFinished={(winner) => onFinished(winner)}
             primaryColor="black"
             contrastColor="white"
             buttonText="Spin!"
-            isOnlyOnce={false}
+            isOnlyOnce={true}
             size={295}
             upDuration={1000}
             downDuration={200}
