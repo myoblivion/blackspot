@@ -30,6 +30,11 @@ const ConQuestLast = () => {
     "#75FF33",
     "#FF9000",
   ];
+  const rand = () => {
+    return setTimeout(() => {
+      return "won 2";
+    }, 13000);
+  };
   const onFinished = (winner) => {
     console.log(winner);
     alert(winner);
@@ -42,6 +47,7 @@ const ConQuestLast = () => {
         onFinished={(winner) => onFinished(winner)}
         primaryColor="black"
         contrastColor="white"
+        winningSegment={rand()}
         buttonText="Spin!"
         isOnlyOnce={false}
         size={295}

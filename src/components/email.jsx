@@ -2,14 +2,12 @@ import React, { useState, useEffect, useRef, LinkProps } from "react";
 import WheelComponent from "react-wheel-of-prizes";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
 const Email = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     number: "",
   });
-
   const handleChange = (e) =>
     setData({ ...data, [e.target.name]: e.target.value });
 
@@ -33,7 +31,6 @@ const Email = () => {
       console.log(error);
     }
   };
-
   return (
     <div className="emailsx wrapper">
       <form onSubmit={handleSubmit} autoComplete="off">
@@ -64,5 +61,4 @@ const Email = () => {
     </div>
   );
 };
-
 export default Email;
