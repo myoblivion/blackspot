@@ -30,16 +30,9 @@ const ConQuestLast = () => {
     "#75FF33",
     "#FF9000",
   ];
-  const rand = () => {
-    return setTimeout(() => {
-      return "Won!";
-    }, 13000);
-  };
-  function Wheelcomponent(props) {
-    if ((<WheelComponent winningSegment={rand[9]} />)) {
-      return <Wheelcomponent isOnlyOnce={false} />;
-    }
-    return <WheelComponent isOnlyOnce={true} />;
+
+  function Wheelcomponent(winner) {
+    console.log(winner);
   }
 
   const onFinished = (winner) => {

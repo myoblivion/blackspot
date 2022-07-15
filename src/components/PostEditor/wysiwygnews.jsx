@@ -36,6 +36,7 @@ function WysiwygDataNews({ newspage }) {
     if (validPost(title, ndescription, body)) {
       console.log(body);
       const newsData = { title, ndescription, body };
+      alert("Please wait for France to update it to live ");
       addNews("newspage", newsData, navigate);
     } else {
       console.log("Posts need to include a title and a body");
