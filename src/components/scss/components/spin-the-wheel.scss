@@ -80,6 +80,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  h1 {
+    margin-bottom: 3%;
+  }
   form {
     margin: 0 auto;
     align-items: center;

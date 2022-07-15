@@ -31,7 +31,6 @@ const ConQuestChamps = () => {
     "#FF9000",
   ];
   const onFinished = (winner) => {
-    alert(winner);
     console.log(winner);
   };
   return (
@@ -48,8 +47,8 @@ const ConQuestChamps = () => {
             buttonText="Spin!"
             isOnlyOnce={false}
             size={295}
-            upDuration={1000}
-            downDuration={200}
+            upDuration={200}
+            downDuration={1400}
             fontFamily="Arial"
           />
         </div>

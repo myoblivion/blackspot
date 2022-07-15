@@ -45,7 +45,9 @@ import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
 import ConQuestChamps from "./conquest-champions";
 import ConQuestLast from "./last-place";
-import Email from "./email";
+import Email from "./enter-email-1";
+import Email2 from "./enter-email-2";
+import Email3 from "./enter-email-3";
 
 // styles
 getCLS(console.log);
@@ -160,7 +162,9 @@ const Appcomponent = ({}) => {
               path="/ggr-news/*"
               element={<GGRnews newspage={newspage} />}
             />
-            <Route path="/email" element={<Email />} />
+            <Route path="/enter-email-1" element={<Email />} />
+            <Route path="/enter-email-2" element={<Email2 />} />
+            <Route path="/enter-email-3" element={<Email3 />} />
           </Routes>
         </div>
       )}

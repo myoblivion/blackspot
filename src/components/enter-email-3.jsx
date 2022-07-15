@@ -15,7 +15,7 @@ const Email = () => {
     e.preventDefault();
     try {
       const res = await fetch(
-        "https://sheet.best/api/sheets/1820416b-c564-479c-92b8-1bcfca74bcd9",
+        "https://sheet.best/api/sheets/96910fa5-133b-4233-bb02-483c7ecef91e",
         {
           method: "POST",
           headers: {
@@ -25,7 +25,7 @@ const Email = () => {
         }
       );
       if (res.ok) {
-        navigate("/conquest-champions");
+        navigate("/last-place");
       }
     } catch (error) {
       console.log(error);
@@ -34,6 +34,7 @@ const Email = () => {
   return (
     <div className="emailsx wrapper">
       <form onSubmit={handleSubmit} autoComplete="off">
+        <h1>4th-6th Place</h1>
         <div className="mb-3">
           <input
             type="email"
