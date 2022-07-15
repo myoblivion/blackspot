@@ -1,21 +1,24 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
-import WheelComponent from "./WinWheel";
+import WheelComponent from "react-wheel-of-prizes";
+import Confetti from "react-confetti";
+import swal from "sweetalert";
+
 const ConQuestChamps = () => {
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Spin The Wheel!";
   }, []);
   const segments = [
-    { isSuper: false, value: "Tumbler" },
-    { isSuper: false, value: "T-Shirt" },
-    { isSuper: false, value: "BSSPH Kit" },
-    { isSuper: false, value: "Keychain & Pin" },
-    { isSuper: false, value: "Keychain" },
-    { isSuper: false, value: "Pin" },
-    { isSuper: false, value: "Special Item" },
-    { isSuper: false, value: "5,000 Diamonds" },
-    { isSuper: false, value: "750 Diamonds" },
-    { isSuper: false, value: "Try Again" },
+    "Tumbler",
+    "T-Shirt",
+    "BSSPH Kit",
+    "Keychain & Pin",
+    "Keychain",
+    "Pin",
+    "Special Item",
+    "5,000 Diamonds",
+    "750 Diamonds",
+    "Try Again",
   ];
 
   const segColors = [
@@ -31,29 +34,37 @@ const ConQuestChamps = () => {
     "#75FF33",
     "#FF9000",
   ];
+  const [hideMis, setHideMis] = useState(false);
 
   const onFinished = (winner) => {
-    return <div className="pop-up">{winner}</div>;
+    console.log(winner);
+    alert(winner);
   };
-
   return (
     <div className="spin wrapper">
       <div className="spinner-wrap">
         <div className="more-wrapper">
-          <WheelComponent
-            segments={segments}
-            segColors={segColors}
-            onFinished={(winner) => onFinished(winner)}
-            primaryColor="black"
-            contrastColor="white"
-            buttonText="Spin!"
-            isOnlyOnce={false}
-            size={295}
-            upDuration={900}
-            downDuration={400}
-            fontFamily="Arial"
-          />
-          <onFinished />
+          <Confetti width={1000} height={1000} />
+          {!hideMis && (
+            <>
+              <WheelComponent
+                segments={segments}
+                segColors={segColors}
+                winningSegment={segments[9]}
+                onFinished={(winner) => {
+                  swal(winner);
+                }}
+                primaryColor="black"
+                contrastColor="white"
+                buttonText="Spin!"
+                isOnlyOnce={false}
+                size={295}
+                upDuration={900}
+                downDuration={1100}
+                fontFamily="Arial"
+              />
+            </>
+          )}
         </div>
       </div>
     </div>

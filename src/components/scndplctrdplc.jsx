@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import WheelComponent from "react-wheel-of-prizes";
+import Confetti from "react-confetti";
+import swal from "sweetalert";
 const SpinTheWheel = () => {
   // Title
   useEffect(() => {
@@ -34,25 +36,33 @@ const SpinTheWheel = () => {
   const onFinished = (winner) => {
     console.log(winner);
   };
+  const [hideMis, setHideMis] = useState(false);
 
   return (
     <div className="spin wrapper">
       <div className="spinner-wrap">
         <div className="more-wrapper">
-          <WheelComponent
-            segments={segments}
-            segColors={segColors}
-            winningSegment={segments[9]}
-            onFinished={(winner) => onFinished(winner)}
-            primaryColor="black"
-            contrastColor="white"
-            buttonText="Spin!"
-            isOnlyOnce={false}
-            size={295}
-            upDuration={1000}
-            downDuration={200}
-            fontFamily="Arial"
-          />
+          <Confetti width={1000} height={1000} />
+          {!hideMis && (
+            <>
+              <WheelComponent
+                segments={segments}
+                segColors={segColors}
+                winningSegment={segments[9]}
+                onFinished={(winner) => {
+                  swal(winner);
+                }}
+                primaryColor="black"
+                contrastColor="white"
+                buttonText="Spin!"
+                isOnlyOnce={false}
+                size={295}
+                upDuration={900}
+                downDuration={1100}
+                fontFamily="Arial"
+              />
+            </>
+          )}
         </div>
       </div>
     </div>
