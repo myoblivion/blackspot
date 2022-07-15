@@ -47,7 +47,7 @@ const ConQuestChamps = () => {
             buttonText="Spin!"
             isOnlyOnce={false}
             size={295}
-            upDuration={200}
+            upDuration={900}
             downDuration={1400}
             fontFamily="Arial"
           />
