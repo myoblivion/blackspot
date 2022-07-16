@@ -13,12 +13,12 @@ const ConQuestChamps = ({ props }) => {
     { value: "Tumbler", probability: 3 },
     { value: "T-Shirt", probability: 3 },
     { value: "BSSPH Kit", probability: 5 },
-    { value: "BSSPH Kit", probability: 5 },
     { value: "KeyChain & Pin", probability: 7 },
     { value: "Keychain", probability: 10 },
     { value: "Pin", probability: 10 },
     { value: "Special Item", probability: 2 },
     { value: "5,000 Diamonds", probability: 15 },
+    { value: "BSSPH Kit", probability: 5 },
     { value: "750 Diamonds", probability: 20 },
     { value: "Try Again", probability: 20 },
   ];
