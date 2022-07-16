@@ -15,7 +15,7 @@ const Email = () => {
     e.preventDefault();
     try {
       const res = await fetch(
-        "https://sheet.best/api/sheets/1820416b-c564-479c-92b8-1bcfca74bcd9",
+        "https://sheet.best/api/sheets/91f58ed1-1c30-4572-bc05-4af454cfbd2d",
         {
           method: "POST",
           headers: {
