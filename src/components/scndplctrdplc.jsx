@@ -82,12 +82,7 @@ const SpinTheWheel = () => {
                 <span>S</span>
                 <span>P</span>
                 <span>I</span>
-                <span> </span>
-                <span>W</span>
-                <span>H</span>
-                <span>E</span>
-                <span>E</span>
-                <span>L</span>
+                <span>N </span>
                 <span>!</span>
               </h1>
               <WheelComponent

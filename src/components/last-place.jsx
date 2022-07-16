@@ -77,11 +77,6 @@ const ConQuestLast = () => {
                 <span>P</span>
                 <span>I</span>
                 <span>N </span>
-                <span>W</span>
-                <span>H</span>
-                <span>E</span>
-                <span>E</span>
-                <span>L</span>
                 <span>!</span>
               </h1>
               <WheelComponent

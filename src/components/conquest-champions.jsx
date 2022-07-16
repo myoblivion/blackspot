@@ -78,20 +78,15 @@ const ConQuestChamps = ({ props }) => {
           {!hideMis && (
             <>
               <h1>
+                <span>G</span>
+                <span>O</span>
+                <span>G</span>
+                <span>O</span>
+                <span> </span>
                 <span>S</span>
                 <span>P</span>
                 <span>I</span>
-                <span>N</span>
-                <span> </span>
-                <span>T</span>
-                <span>H</span>
-                <span>E</span>
-                <span> </span>
-                <span>W</span>
-                <span>H</span>
-                <span>E</span>
-                <span>E</span>
-                <span>L</span>
+                <span>N </span>
                 <span>!</span>
               </h1>
               <WheelComponent
