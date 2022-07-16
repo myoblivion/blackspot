@@ -48,7 +48,6 @@ const SpinTheWheel = () => {
               <WheelComponent
                 segments={segments}
                 segColors={segColors}
-                winningSegment={segments[9]}
                 onFinished={(winner) => {
                   swal(winner);
                 }}
