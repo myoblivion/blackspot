@@ -28,6 +28,9 @@ const ConQuestChamps = ({ props }) => {
   const weightedList = [];
   for (let i = 0; i < segments.length; i++) {
     for (let j = 0; j < segments[i].probability * 100; j++) {
+      if (segments.value === "Try Again") {
+        useState(isOnlyOnce, false);
+      }
       weightedList.push(i);
     }
   }
@@ -64,12 +67,28 @@ const ConQuestChamps = ({ props }) => {
     "#75FF33",
     "#FF9000",
   ];
+
   const [hideMis, setHideMis] = useState(false);
   const onFinished = (winner) => {
     console.log(winner);
     alert(winner);
   };
+  const [addToCart, setAddToCart] = useState(false);
 
+  const [selectedItemIndex, setSelectedItemIndex] = useState(false);
+
+  const showCartHandler = () => {
+    setAddToCart(true);
+    setSelectedItemIndex(-1);
+  };
+
+  const hideCartHandler = (index) => () => {
+    setAddToCart(false);
+    setSelectedItemIndex(index);
+  };
+  if (segments === "Try Again") {
+    useState(isOnlyOnce, false);
+  }
   return (
     <div className="spin wrapper">
       <div className="spinner-wrap">
