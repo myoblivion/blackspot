@@ -192,15 +192,13 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     if (/android/i.test(userAgent)) {
       return "Android";
     }
-    {
-      /* <button onClick={DetectAndServe}> Test</button> */
-    }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
-    console.log(userAgent);
+
+    return "unknown";
   }
   function DetectAndServe() {
     let os = getMobileOperatingSystem();
