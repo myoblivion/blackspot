@@ -37,7 +37,7 @@ import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
-import PlayNow from "../images/icons/playnow.png";
+
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
@@ -191,9 +191,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
 
     if (/android/i.test(userAgent)) {
       return "Android";
-    }
-    {
-      /* <button onClick={DetectAndServe}> Test</button> */
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
@@ -580,9 +577,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 veniam itaque fugit fugiat sint!{" "}
                 <Link to="/gogoracingnews">read more.</Link>
               </h1>
-              <button onClick={DetectAndServe}>
-                <img src={PlayNow} alt="" />
-              </button>
+              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                <img src={getit} alt="" id="getitt" />
+              </a>
+              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                <img src={appstore} alt="" id="appstur" />
+              </a>
               <div className="socialization">
                 <ul>
                   <li>

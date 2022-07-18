@@ -47,7 +47,7 @@ import ConQuestLast from "./last-place";
 import Email from "./enter-email-1";
 import Email2 from "./enter-email-2";
 import Email3 from "./enter-email-3";
-
+import TestComponent from "./test";
 // styles
 getCLS(console.log);
 getFID(console.log);
@@ -164,6 +164,7 @@ const Appcomponent = ({}) => {
             <Route path="/enter-email-1" element={<Email />} />
             <Route path="/enter-email-2" element={<Email2 />} />
             <Route path="/enter-email-3" element={<Email3 />} />
+            <Route path="/test" element={<TestComponent />} />
           </Routes>
         </div>
       )}

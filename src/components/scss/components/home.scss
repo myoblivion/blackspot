@@ -2413,12 +2413,9 @@ input[type="radio"] {
         .play-nowskiez {
           display: flex;
           width: 100%;
-          margin-left: 7%;
-          #getitt {
-            width: 70%;
-          }
-          #appstur {
-            width: 70%;
+          margin-left: 13%;
+          button {
+            background-color: transparent;
           }
         }
         .socialization {
