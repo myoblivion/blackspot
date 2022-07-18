@@ -20,6 +20,40 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Chain";
   }, []);
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+    console.log(userAgent);
+  }
+  function DetectAndServe() {
+    let os = getMobileOperatingSystem();
+    if (os == "Android") {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+    } else if (os == "iOS") {
+      window.location.href =
+        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+    } else if (os == "Windows Phone") {
+      window.location.href =
+        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+    } else {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+    }
+  }
   return (
     <div className="gogochain wrapper">
       <section className="gogochain-wrapper">
@@ -34,6 +68,7 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
       </section>
 
       <div className="section">
+        <button onClick={DetectAndServe}> Test</button>
         <footer className="gogochain-footer-distributed">
           <div className="footer-left">
             <img src={icono} alt="" className="logso" />

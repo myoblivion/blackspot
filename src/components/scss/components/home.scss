@@ -2183,7 +2183,7 @@ input[type="radio"] {
     #ggr-logz {
       z-index: 99;
       left: 0;
-      top: 250%;
+      top: 350%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -2340,22 +2340,30 @@ input[type="radio"] {
   display: none;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .selectorz-wrapper {
     display: none;
   }
   .mobile-home {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1%;
+    display: block;
     width: 100%;
-    height: 100vh;
     background-color: #151517;
     padding-bottom: 5%;
-    .ggr-m {
-      .game-mobile-wrapper {
-        width: 100%;
-        height: 100%;
+    position: relative;
+    .slick-dots {
+      top: 50%;
+      button {
+        color: white;
+        &::before {
+          color: white;
+        }
+      }
+      .slick-active {
+        button {
+          &::before {
+            color: white;
+          }
+        }
       }
     }
     .ggr-m,
@@ -2363,66 +2371,65 @@ input[type="radio"] {
     .ggworld-m,
     .ggc-m {
       width: 100%;
+      height: 100%;
       .top {
-        display: block;
+        position: relative;
         height: 100%;
-        width: 200%;
-        margin-top: 11.5%;
-        top: 0;
-        video {
-          width: 50%;
-          height: 100%;
-        }
+        width: 100%;
         #leftu,
         #rightu {
           display: none;
         }
-        #bottomtu {
-          top: 5%;
-          z-index: 9;
-          width: 200%;
-          height: 10%;
-          position: fixed;
+        video {
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+        #mggr-logz,
+        #mlogo,
+        #mworldsk {
+          width: 70%;
+          margin: 0 auto;
+          margin-top: 20%;
+          margin-bottom: 20%;
+        }
+        #mchain {
+          width: 30%;
+          margin: 0 auto;
+          margin-top: 20%;
+          margin-bottom: 20%;
         }
       }
       .bottomzkie {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        z-index: 10;
-        .socialization {
+        position: relative;
+        height: 100vh;
+        .play-nowskiez {
           display: flex;
-          align-items: center;
-          justify-content: center;
           width: 100%;
-          z-index: 10;
-          height: 100%;
+          margin-left: 7%;
+          #getitt {
+            width: 70%;
+          }
+          #appstur {
+            width: 70%;
+          }
+        }
+        .socialization {
+          margin-top: 10%;
           ul {
+            background-color: rgba(0, 0, 0, 0.686);
+            width: 80%;
+            padding: 3%;
+            border-radius: 15px;
+            margin: 0 auto;
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             li {
-              margin: 5% 20%;
+              font-size: 25px;
+              margin: 0 auto;
               a {
                 color: white;
               }
             }
-          }
-        }
-        .play-nowskiez {
-          width: 100%;
-          z-index: 10;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          #getitt {
-            width: 50%;
-          }
-          #appstur {
-            width: 50%;
           }
         }
       }

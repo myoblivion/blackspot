@@ -130,15 +130,27 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   };
 
   // const settings = {
-  //   dots: true,
-  //   fade: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
+  //   Infinite: true,
   //   lazyload: true,
+  //   speed: 200,
+  //   slidesToShow: 1,
+  //   fade: true,
   //   slidesToScroll: 1,
+  //   centerPadding: "0",
+  //   centerMode: true,
+  //   arrows: true,
+  //   dots: true,
+  //   appendDots: (dots) => (
+  //     <div
+  //       style={{
+  //         borderRadius: "10px",
+  //         padding: "10px",
+  //       }}
+  //     >
+  //       <ul style={{ margin: "0px" }}> {dots} </ul>
+  //     </div>
+  //   ),
   // };
-  // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
@@ -169,6 +181,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     console.log(response);
     document.getElementById("someForm").submit();
   };
+
   return (
     // Home
     <div className="wrapper">
@@ -573,9 +586,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   loop={true}
                   muted={true}
                 />
-                <img src={shadowLeft} alt="" id="leftu" />
-                <img src={shadowRight} alt="" id="rightu" />
-                <img src={shadowBottom} alt="" id="bottomtu" />
               </div>
             </div>
           </div>
@@ -589,6 +599,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               >
                 <img src={ScionLogo} alt="" id="logo" />
               </Link>
+
               <h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 debitis impedit quibusdam amet et porro vitae ipsum assumenda
@@ -775,7 +786,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </label>
           </div>
         </div>
-
         <div className="mobile-home">
           <Slider {...settings}>
             <div className="ggr-m">
@@ -830,157 +840,150 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   </div>
                 </div>
               </div>
-              <div className="scion-m">
-                <div className="top">
-                  <video
-                    src={video2}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-                  <img src={shadowLeft} alt="" id="leftu" />
-                  <img src={shadowRight} alt="" id="rightu" />
-                  <img src={shadowBottom} alt="" id="bottomtu" />
-                  <img src={ScionLogo} alt="" id="mlogo" />
+            </div>
+            <div className="scion-m">
+              <div className="top">
+                <video
+                  src={video2}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+
+                <img src={ScionLogo} alt="" id="mlogo" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
                 </div>
-                <div className="bottomzkie">
-                  <div className="play-nowskiez">
-                    <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                      <img src={getit} alt="" id="getitt" />
-                    </a>
-                    <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                      <img src={appstore} alt="" id="appstur" />
-                    </a>
-                  </div>
-                  <div className="socialization">
-                    <ul>
-                      <li>
-                        {" "}
-                        <a href="">
-                          <FaFacebook />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaInstagram />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaTwitter />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaReddit />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="ggworld-m">
-                <div className="top">
-                  <video
-                    src={video1}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-                  <img src={shadowLeft} alt="" id="leftu" />
-                  <img src={shadowRight} alt="" id="rightu" />
-                  <img src={shadowBottom} alt="" id="bottomtu" />
-                  <img src={Gogoworld} alt="" id="mworldsk" />
+            </div>
+            <div className="ggworld-m">
+              <div className="top">
+                <video
+                  src={video1}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+
+                <img src={Gogoworld} alt="" id="mworldsk" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
                 </div>
-                <div className="bottomzkie">
-                  <div className="play-nowskiez">
-                    <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                      <img src={getit} alt="" id="getitt" />
-                    </a>
-                    <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                      <img src={appstore} alt="" id="appstur" />
-                    </a>
-                  </div>
-                  <div className="socialization">
-                    <ul>
-                      <li>
-                        {" "}
-                        <a href="">
-                          <FaFacebook />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaInstagram />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaTwitter />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaReddit />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="ggc-m">
-                <div className="top">
-                  <video
-                    src={video1}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-                  <img src={shadowLeft} alt="" id="leftu" />
-                  <img src={shadowRight} alt="" id="rightu" />
-                  <img src={shadowBottom} alt="" id="bottomtu" />
-                  <img src={Gogochain} alt="" id="mchain" />
+            </div>
+            <div className="ggc-m">
+              <div className="top">
+                <video
+                  src={video1}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+
+                <img src={Gogochain} alt="" id="mchain" />
+              </div>
+              <div className="bottomzkie">
+                <div className="play-nowskiez">
+                  <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
+                    <img src={getit} alt="" id="getitt" />
+                  </a>
+                  <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
+                    <img src={appstore} alt="" id="appstur" />
+                  </a>
                 </div>
-                <div className="bottomzkie">
-                  <div className="play-nowskiez">
-                    <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                      <img src={getit} alt="" id="getitt" />
-                    </a>
-                    <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                      <img src={appstore} alt="" id="appstur" />
-                    </a>
-                  </div>
-                  <div className="socialization">
-                    <ul>
-                      <li>
-                        {" "}
-                        <a href="">
-                          <FaFacebook />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaInstagram />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaTwitter />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaReddit />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="socialization">
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="">
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <FaReddit />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

@@ -111,6 +111,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
     lazyload: true,
     speed: 200,
     slidesToShow: 1,
+    fade: true,
     slidesToScroll: 1,
     centerMode: true,
     arrows: true,

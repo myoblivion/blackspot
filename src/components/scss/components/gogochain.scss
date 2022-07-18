@@ -1,4 +1,15 @@
 .gogochain {
+  button {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    padding: 2%;
+    border: 1px solid black;
+    &:active {
+      background-color: #92999f;
+    }
+  }
   .gogochain-wrapper {
     height: 100vh;
     width: 100%;

@@ -39,7 +39,6 @@ import { getLCP, getFID, getCLS } from "web-vitals";
 import AdminComponent from "./admin";
 import AnnouncementPage from "./announcements";
 import GameGuidePage from "./gameguide";
-import Post from "./test";
 import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
