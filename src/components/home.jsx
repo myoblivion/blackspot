@@ -116,41 +116,41 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // const [imageIndex, setImageIndex] = useState(0);
-  // const settings = {
-  //   Infinite: true,
-  //   lazyload: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   centerMode: true,
-  //   dots: true,
-  //   centerPadding: 0,
-  //   arrows: false,
-  //   beforeChange: (current, next) => setImageIndex(next),
-  // };
-
+  const [imageIndex, setImageIndex] = useState(0);
   const settings = {
     Infinite: true,
     lazyload: true,
-    speed: 200,
+    speed: 300,
     slidesToShow: 1,
-    fade: true,
-    slidesToScroll: 1,
-    centerPadding: "0",
     centerMode: true,
-    arrows: true,
     dots: true,
-    appendDots: (dots) => (
-      <div
-        style={{
-          borderRadius: "10px",
-          padding: "10px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
+    centerPadding: 0,
+    arrows: false,
+    beforeChange: (current, next) => setImageIndex(next),
   };
+
+  // const settings = {
+  //   Infinite: true,
+  //   lazyload: true,
+  //   speed: 200,
+  //   slidesToShow: 1,
+  //   fade: true,
+  //   slidesToScroll: 1,
+  //   centerPadding: "0",
+  //   centerMode: true,
+  //   arrows: true,
+  //   dots: true,
+  //   appendDots: (dots) => (
+  //     <div
+  //       style={{
+  //         borderRadius: "10px",
+  //         padding: "10px",
+  //       }}
+  //     >
+  //       <ul style={{ margin: "0px" }}> {dots} </ul>
+  //     </div>
+  //   ),
+  // };
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
@@ -223,7 +223,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        {/* <div className="slider">
+        <div className="slider">
           <input
             name="control"
             id="page1"
@@ -556,9 +556,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Slider>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        <div className="selectorz-wrapper">
+        {/* <div className="selectorz-wrapper">
           <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
@@ -1021,7 +1021,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </Slider>
-        </div>
+        </div> */}
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div
