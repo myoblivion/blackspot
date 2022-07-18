@@ -197,8 +197,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
-
-    return "unknown";
+    console.log(userAgent);
   }
   function DetectAndServe() {
     let os = getMobileOperatingSystem();
@@ -244,9 +243,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 veniam itaque fugit fugiat sint!{" "}
                 <Link to="/gogoracingnews">read more.</Link>
               </h1>
-              <button onClick={DetectAndServe}>
-                <img src={PlayNow} alt="" />
-              </button>
+              <button onClick={DetectAndServe}>Play Now</button>
               <div className="socialization">
                 <ul>
                   <li>
@@ -506,9 +503,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 </div>
                 <div className="bottomzkie">
                   <div className="play-nowskiez">
-                    <button onClick={DetectAndServe}>
-                      <img src={PlayNow} alt="" />
-                    </button>
+                    <button onClick={DetectAndServe}>Play Now</button>
                   </div>
                   <div className="socialization">
                     <ul>

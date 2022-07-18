@@ -1772,8 +1772,8 @@ input[type="radio"] {
       button {
         position: absolute;
         left: -5%;
-        top: 380%;
-        cursor: pointer;
+        top: 395%;
+        padding: 3%;
         z-index: 999;
       }
     }
@@ -2415,7 +2415,10 @@ input[type="radio"] {
           width: 100%;
           margin-left: 13%;
           button {
-            background-color: transparent;
+            background-color: white;
+            font-weight: 999;
+            margin: 0 auto;
+            padding: 4%;
           }
         }
         .socialization {

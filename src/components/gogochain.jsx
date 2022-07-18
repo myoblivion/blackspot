@@ -20,7 +20,6 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Chain";
   }, []);
-
   return (
     <div className="gogochain wrapper">
       <section className="gogochain-wrapper">
