@@ -37,7 +37,7 @@ import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
-
+import PlayNow from "../images/icons/playnow.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
@@ -116,41 +116,41 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const [imageIndex, setImageIndex] = useState(0);
-  const settings = {
-    Infinite: true,
-    lazyload: true,
-    speed: 300,
-    slidesToShow: 1,
-    centerMode: true,
-    dots: true,
-    centerPadding: 0,
-    arrows: false,
-    beforeChange: (current, next) => setImageIndex(next),
-  };
-
+  // const [imageIndex, setImageIndex] = useState(0);
   // const settings = {
   //   Infinite: true,
   //   lazyload: true,
-  //   speed: 200,
+  //   speed: 300,
   //   slidesToShow: 1,
-  //   fade: true,
-  //   slidesToScroll: 1,
-  //   centerPadding: "0",
   //   centerMode: true,
-  //   arrows: true,
   //   dots: true,
-  //   appendDots: (dots) => (
-  //     <div
-  //       style={{
-  //         borderRadius: "10px",
-  //         padding: "10px",
-  //       }}
-  //     >
-  //       <ul style={{ margin: "0px" }}> {dots} </ul>
-  //     </div>
-  //   ),
+  //   centerPadding: 0,
+  //   arrows: false,
+  //   beforeChange: (current, next) => setImageIndex(next),
   // };
+
+  const settings = {
+    Infinite: true,
+    lazyload: true,
+    speed: 200,
+    slidesToShow: 1,
+    fade: true,
+    slidesToScroll: 1,
+    centerPadding: "0",
+    centerMode: true,
+    arrows: true,
+    dots: true,
+    appendDots: (dots) => (
+      <div
+        style={{
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+  };
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
@@ -181,13 +181,49 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     console.log(response);
     document.getElementById("someForm").submit();
   };
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+    {
+      /* <button onClick={DetectAndServe}> Test</button> */
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+    console.log(userAgent);
+  }
+  function DetectAndServe() {
+    let os = getMobileOperatingSystem();
+    if (os == "Android") {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+    } else if (os == "iOS") {
+      window.location.href =
+        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+    } else if (os == "Windows Phone") {
+      window.location.href =
+        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+    } else {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+    }
+  }
   return (
     // Home
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        <div className="slider">
+        {/* <div className="slider">
           <input
             name="control"
             id="page1"
@@ -520,9 +556,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Slider>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* <div className="selectorz-wrapper">
+        <div className="selectorz-wrapper">
           <input type="radio" id="game1" name="slider-game" defaultChecked />
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
@@ -544,12 +580,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 veniam itaque fugit fugiat sint!{" "}
                 <Link to="/gogoracingnews">read more.</Link>
               </h1>
-              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                <img src={getit} alt="" id="getitt" />
-              </a>
-              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                <img src={appstore} alt="" id="appstur" />
-              </a>
+              <button onClick={DetectAndServe}>
+                <img src={PlayNow} alt="" />
+              </button>
               <div className="socialization">
                 <ul>
                   <li>
@@ -988,7 +1021,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </Slider>
-        </div> */}
+        </div>
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div

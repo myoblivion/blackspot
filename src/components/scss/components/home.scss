@@ -1769,6 +1769,13 @@ input[type="radio"] {
     transform: translate(0, 0);
     .leftx {
       transition: 0.5s ease-in;
+      button {
+        position: absolute;
+        left: -5%;
+        top: 380%;
+        cursor: pointer;
+        z-index: 999;
+      }
     }
     #leftu,
     #rightu,
