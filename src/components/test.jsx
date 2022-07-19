@@ -486,15 +486,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
             <Slider {...settings}>
               <div className="ggr-m">
                 <div className="top">
-                  <video
-                    src={video1}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-
                   <img src={Gogoracing} alt="" id="mggr-logz" />
                 </div>
                 <div className="bottomzkie">
@@ -529,15 +520,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               </div>
               <div className="scion-m">
                 <div className="top">
-                  <video
-                    src={video2}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-
                   <img src={ScionLogo} alt="" id="mlogo" />
                 </div>
                 <div className="bottomzkie">
@@ -571,15 +553,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               </div>
               <div className="ggworld-m">
                 <div className="top">
-                  <video
-                    src={video1}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-
                   <img src={Gogoworld} alt="" id="mworldsk" />
                 </div>
                 <div className="bottomzkie">
@@ -612,15 +585,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               </div>
               <div className="ggc-m">
                 <div className="top">
-                  <video
-                    src={video1}
-                    width="750"
-                    height="500"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  />
-
                   <img src={Gogochain} alt="" id="mchain" />
                 </div>
                 <div className="bottomzkie">
