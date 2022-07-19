@@ -197,6 +197,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
+    console.log(getMobileOperatingSystem);
 
     return "unknown";
   }
@@ -507,7 +508,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                   <div className="socialization">
                     <ul>
                       <li>
-                        {" "}
                         <a href="">
                           <FaFacebook />
                         </a>
