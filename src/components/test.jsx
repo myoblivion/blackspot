@@ -36,7 +36,7 @@ import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
-import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
+import myFunction from "../images/icons/Gogo_Racing_Logo_Straight.png";
 import PlayNow from "../images/icons/playnow.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
@@ -181,37 +181,24 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     console.log(response);
     document.getElementById("someForm").submit();
   };
-  function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    // Windows Phone must come first because its UA also contains "Android"
-    if (/windows phone/i.test(userAgent)) {
-      return "Windows Phone";
-    }
-
-    if (/android/i.test(userAgent)) {
-      return "Android";
-    }
-
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      return "iOS";
-    }
-  }
-  function DetectAndServe() {
-    let os = getMobileOperatingSystem();
-    if (os == "Android") {
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
-    } else if (os == "iOS") {
+  function myFunction() {
+    if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
       window.location.href =
         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
-    } else if (os == "Windows Phone") {
+    }
+
+    if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       window.location.href =
         "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
-    } else {
-      window.location.href =
-        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+    }
+
+    //Update #2
+    if (
+      !navigator.userAgent.match(
+        /(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/
+      )
+    ) {
+      window.location.href = "https://www.google.com"; //Desktop Browser
     }
   }
   return (
@@ -233,7 +220,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                <img src={Gogoracing} alt="" id="ggr-logz" />
+                <img src={myFunction} alt="" id="ggr-logz" />
               </Link>
               <h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
@@ -242,7 +229,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 veniam itaque fugit fugiat sint!{" "}
                 <Link to="/gogoracingnews">read more.</Link>
               </h1>
-              <button onClick={DetectAndServe}>Play Now</button>
+              <button onClick={myFunction}>Play Now</button>
               <div className="socialization">
                 <ul>
                   <li>
@@ -496,11 +483,11 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                     muted={true}
                   />
 
-                  <img src={Gogoracing} alt="" id="mggr-logz" />
+                  <img src={myFunction} alt="" id="mggr-logz" />
                 </div>
                 <div className="bottomzkie">
                   <div className="play-nowskiez">
-                    <button onClick={DetectAndServe}>Play Now</button>
+                    <button onClick={myFunction}>Play Now</button>
                   </div>
                   <div className="socialization">
                     <ul>
