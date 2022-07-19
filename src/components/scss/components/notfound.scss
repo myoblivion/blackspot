@@ -270,8 +270,8 @@
         position: absolute;
         z-index: 2;
         top: 12%;
-        animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 1.05) both;
-        animation-delay: 1.2s;
+        animation: text 0.6s 1.8s ease backwards;
+
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -312,6 +312,8 @@
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
+          animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 1.05) both;
+          animation-delay: 1.2s;
           text-align: left;
         }
         #pengsuni {
