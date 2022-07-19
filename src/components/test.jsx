@@ -197,9 +197,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
-    console.log(getMobileOperatingSystem);
-
-    return "unknown";
   }
   function DetectAndServe() {
     let os = getMobileOperatingSystem();
