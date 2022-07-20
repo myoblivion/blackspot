@@ -96,7 +96,9 @@ function validateRecaptcha() {
     return true;
   }
 }
-
+function onChange(value) {
+  console.log("Captcha Value", value);
+}
 const TestComponent = ({ props, ref, currentRoute }) => {
   const [isShown, setIsShown] = useState(true);
   // Aos (Animation On Scroll)
@@ -177,9 +179,8 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     e.target.reset();
   }
 
-  const verifyCallback = function (response) {
-    console.log(response);
-    document.getElementById("someForm").submit();
+  var onloadCallback = function () {
+    alert("grecaptcha is ready!");
   };
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -432,7 +433,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 <ul>
                   <li>
                     {" "}
-                    <a href="">
+                    <a href="https://bit.ly/3PjM6pL">
                       <FaFacebook />
                     </a>
                   </li>
@@ -503,12 +504,15 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                   <div className="socialization">
                     <ul>
                       <li>
-                        <a href="">
+                        <a href="https://bit.ly/3PjM6pL" target="_blank">
                           <FaFacebook />
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a
+                          href="https://www.instagram.com/gogoracingph/"
+                          target="_blank"
+                        >
                           <FaInstagram />
                         </a>
                       </li>
@@ -676,11 +680,13 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                     <div className="form-group clearfix">
                       <Recaptcha
                         sitekey="6LcganggAAAAALJfQ9X3YBRJGzcfUK1dUKsvnJPQ"
+                        theme="dark"
+                        onChange={onChange}
                         required
                       />
                       <button
                         id="submit"
-                        type="sumbit"
+                        type="value"
                         data-id="#accessories-holder"
                         className="red-select-btn model-selector btn-send-message"
                       >

@@ -569,7 +569,6 @@ body {
   }
   .g-recaptcha {
     margin: 0 auto;
-    margin-left: 15%;
   }
   .partners-logo {
     margin: 0 auto;
@@ -1797,7 +1796,7 @@ input[type="radio"] {
       top: 70%;
       right: -15%;
       z-index: 9;
-      height: 700%;
+      height: 800%;
       width: 100%;
       -webkit-user-drag: none;
       user-select: none;
@@ -2361,10 +2360,13 @@ input[type="radio"] {
     justify-content: center;
     .game-mobile-wrapper {
       position: relative;
+      width: 100%;
       .slick-slider {
+        width: 100%;
+
         .slick-dots {
           top: 90%;
-          left: 1%;
+          left: 2%;
           position: absolute;
           ul {
             width: 50%;
@@ -2403,7 +2405,7 @@ input[type="radio"] {
           }
           #mggr-logz {
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 10%;
           }
         }
@@ -2438,16 +2440,15 @@ input[type="radio"] {
           .play-nowskiez {
             width: 100%;
             display: flex;
-            align-items: center;
             justify-content: center;
             height: 100%;
             position: relative;
             button {
-              position: fixed;
+              position: absolute;
               width: 200px;
               background-color: #024eb3;
-              height: 10%;
-              top: 60%;
+              height: 50px;
+              top: 480px;
               border-radius: 20%;
               color: white;
               text-transform: uppercase;
@@ -2466,8 +2467,152 @@ input[type="radio"] {
             align-items: center;
             justify-content: center;
             border-radius: 15px;
-            opacity: 0;
-            margin-top: 8%;
+            position: absolute;
+            top: 80%;
+            ul {
+              margin: 0 auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              padding: 2%;
+              li {
+                margin: 0 5%;
+                a {
+                  color: white;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .selectorz-wrapper {
+    display: none;
+  }
+  .mobile-home {
+    display: block;
+    width: 100%;
+    height: 90vh;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .game-mobile-wrapper {
+      position: relative;
+      width: 100%;
+      .slick-slider {
+        width: 100%;
+        .slick-dots {
+          top: 90%;
+          left: 2%;
+          position: absolute;
+          ul {
+            width: 50%;
+            display: flex;
+            li {
+              background-color: #2e3c79d5;
+              height: 15px;
+              margin: 0 5%;
+              width: 100px;
+              button {
+                width: 70px;
+                opacity: 0;
+              }
+            }
+            .slick-active {
+              background-color: #132266;
+            }
+          }
+        }
+      }
+      .ggr-m {
+        background-image: url("/src/images/icons//Conquest_Invite2_no_karatula\ \(1\).png");
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-size: 100% 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .top {
+          video {
+            position: absolute;
+            top: -5%;
+          }
+          #mggr-logz {
+            position: absolute;
+            top: 44%;
+            left: 10%;
+          }
+        }
+      }
+      .ggr-m,
+      .scion-m,
+      .ggworld-m,
+      .ggc-m {
+        display: flex;
+        width: 50%;
+        .top {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          video {
+            width: 100%;
+          }
+          img {
+            margin: 0 auto;
+            width: 80%;
+          }
+          #mchain {
+            width: 40%;
+          }
+        }
+        .bottomzkie {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .play-nowskiez {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+            button {
+              position: absolute;
+              width: 200px;
+              background-color: #024eb3;
+              height: 50px;
+              top: 420px;
+              border-radius: 20%;
+              color: white;
+              text-transform: uppercase;
+              font-weight: 900;
+              border: 5px solid #2d84f7;
+              box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
+              -webkit-box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
+              -moz-box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
+              z-index: 999;
+            }
+          }
+          .socialization {
+            width: 50%;
+            background-color: #33383b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            position: absolute;
+            top: 75%;
             ul {
               margin: 0 auto;
               display: flex;
