@@ -2364,22 +2364,23 @@ input[type="radio"] {
       .slick-slider {
         .slick-dots {
           top: 90%;
-          left: 20%;
+          left: 5%;
           position: absolute;
           ul {
             width: 50%;
             display: flex;
             li {
-              background-color: #383838;
+              background-color: #2e3c79d5;
               height: 15px;
               margin: 0 5%;
               width: 100px;
               button {
+                width: 70px;
                 opacity: 0;
               }
             }
             .slick-active {
-              background-color: #000000;
+              background-color: #132266;
             }
           }
         }
@@ -2440,7 +2441,7 @@ input[type="radio"] {
               width: 200px;
               background-color: #024eb3;
               height: 10%;
-              top: 70%;
+              top: 60%;
               border-radius: 20%;
               color: white;
               text-transform: uppercase;
@@ -2458,18 +2459,21 @@ input[type="radio"] {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 5%;
+            border-radius: 15px;
+            opacity: 0;
+            margin-top: 8%;
             ul {
               margin: 0 auto;
               display: flex;
               align-items: center;
               justify-content: center;
               width: 100%;
-              padding: 5%;
+              padding: 2%;
               li {
                 margin: 0 5%;
                 a {
                   color: white;
+                  font-size: 20px;
                 }
               }
             }

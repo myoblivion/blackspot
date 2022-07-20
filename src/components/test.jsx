@@ -486,6 +486,14 @@ const TestComponent = ({ props, ref, currentRoute }) => {
             <Slider {...settings}>
               <div className="ggr-m">
                 <div className="top">
+                  <video
+                    src={video1}
+                    width="750"
+                    height="500"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                  />
                   <img src={Gogoracing} alt="" id="mggr-logz" />
                 </div>
                 <div className="bottomzkie">
