@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "wait-on http://192.168.2.154:8000 && nodemon server"
+    "server": "wait-on http://192.168.2.105:8000/ && nodemon server"
   },
   "keywords": [],
   "author": "",

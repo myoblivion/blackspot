@@ -1,12 +1,20 @@
+const https = require("https");
 const jsonServer = require("json-server");
 const path = require("path");
-const server = jsonServer.create();
+const fs = require("fs");
+const key = fs.readFileSync("../cert/CA/localhost/localhost.decrypted.key");
+const cert = fs.readFileSync("../cert/CA/localhost/localhost.crt");
+const server = jsonServer.create(({ key, cert }, app));
 const router = jsonServer.router(path.join(__dirname, "../db.json"));
 const middlewares = jsonServer.defaults();
 const express = require("express");
 const cors = require("cors");
 var app = express(),
   http = require("http");
+
+app.get("/", (req, res, next) => {
+  res.status(200).send("Hello world!");
+});
 
 http.createServer(app).listen(3000);
 
@@ -20,31 +28,26 @@ const allowedOrigins = [
   "http://localhost:8000",
   "http://blackspotstudio.ph",
   "http://192.168.2.154:8000",
-  "http://192.168.2.105:8000",
   "http://192.168.2.154/getAll",
   "*",
 ];
 app.use(
-  cors(
-    (require = {
-      origin: function (origin, callback) {
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) === 8) {
-          var msg =
-            "The CORS policy for this site does not " +
-            "allow access from the specified Origin.";
-          return callback(new Error(msg), false);
-        }
-        return callback(null, true);
-      },
-    })
-  )
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === 8) {
+        var msg =
+          "The CORS policy for this site does not " +
+          "allow access from the specified Origin.";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+  })
 );
-
 app.use(cors(corsOptions));
 const bodyParser = require("body-parser");
 const { response } = require("express");
-const { info } = require("console");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -57,6 +60,8 @@ app.get("/public", function (req, res) {
 });
 server.use(middlewares);
 server.use(router);
-server.listen(8000, () => {
-  console.log("JSON Server is running");
+
+const port = process.env.PORT || 8000;
+server.listen(port, () => {
+  console.log(`Server is listening on https://localhost:${port}`);
 });

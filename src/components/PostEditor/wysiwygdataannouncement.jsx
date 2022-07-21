@@ -38,7 +38,6 @@ function WysiwygDataAnnouncement({ announcements }) {
       console.log(body);
       const AnnouncementData = { title, adescription, body };
       addAnnounce("announcements", AnnouncementData, navigate);
-      alert("Please wait for France to update it to live ");
     } else {
       console.log("Posts need to include a title and a body");
     }

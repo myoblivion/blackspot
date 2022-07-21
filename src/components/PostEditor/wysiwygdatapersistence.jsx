@@ -36,7 +36,6 @@ function WysiwygDataPersistence({ posts }) {
     if (validPost(title, description, body)) {
       console.log(body);
       const postData = { title, description, body };
-      alert("Please wait for France to update it to live ");
       addPost("posts", postData, navigate);
     } else {
       console.log("Posts need to include a title and a body");

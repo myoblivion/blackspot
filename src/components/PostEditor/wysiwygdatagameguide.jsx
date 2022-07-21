@@ -36,7 +36,6 @@ function WysiwygDataGuide({ gameguide }) {
     const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
     if (validPost(title, gdescription, body)) {
       console.log(body);
-      alert("Please wait for France to update it to live ");
       const GuideData = { title, gdescription, body };
       addGuide("gameguide", GuideData, navigate);
     } else {
