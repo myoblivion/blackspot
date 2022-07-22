@@ -27,7 +27,7 @@ const corsOptions = {
 const allowedOrigins = [
   "http://localhost:8000",
   "http://blackspotstudio.ph",
-  "http://192.168.2.154:8000",
+  "http://192.168.2.154:443",
   "http://192.168.2.154/getAll",
   "*",
 ];
@@ -61,7 +61,7 @@ app.get("/public", function (req, res) {
 server.use(middlewares);
 server.use(router);
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 80;
 server.listen(port, () => {
   console.log(`Server is listening on https://localhost:${port}`);
 });

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 
-const LogInComponent = (props) => {
+const Form = (props) => {
   const {
     email,
     setEmail,
@@ -17,29 +17,16 @@ const LogInComponent = (props) => {
     <div className="login wrapper">
       <div className="login-container">
         <label>Email</label>
-        <input
-          type="text"
-          autoFocus
-          value={email}
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <p className="errorMsg">{emailError}</p>
+        <input type="text" autoFocus required />
+        <p className="errorMsg"></p>
         <label>Password</label>
-        <input
-          type="password"
-          value={password}
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <p className="errorMsg">{passwordError}</p>
+        <input type="password" required />
+        <p className="errorMsg"></p>
 
-        <button onClick={handleLogin} type="submit">
-          Sign In
-        </button>
+        <button type="submit">Sign In</button>
       </div>
     </div>
   );
 };
 
-export default LogInComponent;
+export default Form;

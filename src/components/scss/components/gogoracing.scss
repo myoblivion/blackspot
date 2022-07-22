@@ -357,6 +357,8 @@
 
 @media only screen and (max-width: 500px) {
   .gogoracing {
+    width: 100%;
+    overflow: hidden;
     .gogoracing-wrapper {
       height: 120vh;
       background-image: url("/src/images/gogoracingbackground/4.png");
@@ -541,6 +543,9 @@
         top: 50%;
         z-index: 1;
       }
+    }
+    .bootons {
+      right: 5%;
     }
   }
 }

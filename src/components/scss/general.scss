@@ -45,7 +45,9 @@ a {
     z-index: 4;
   }
 }
-
+.wrapper {
+  width: 100%;
+}
 @keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);

@@ -59,18 +59,5 @@
       "id": 3
     }
   ],
-  "newspage": [
-    {
-      "title": "wqewq",
-      "ndescription": "ewqeqe",
-      "body": "<p>eqe</p>\n",
-      "id": 1
-    },
-    {
-      "title": "wq",
-      "ndescription": "wq",
-      "body": "<p>q</p>\n",
-      "id": 2
-    }
-  ]
+  "newspage": []
 }

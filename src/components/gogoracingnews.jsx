@@ -26,16 +26,9 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
           >
             <div className="ggr-top">
               <div className="ggr-left">
-                <Link
-                  to="/admin"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <h2>
-                    <FaUserCircle /> User
-                  </h2>
-                </Link>
+                <h2>
+                  <FaUserCircle /> User
+                </h2>
               </div>
               <div className="ggr-right">
                 <Link
