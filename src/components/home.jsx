@@ -1,22 +1,14 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
-import ReCaptchaV2 from "react-google-recaptcha";
-import VideoPlayer from "react-video-js-player";
 // Animate on Scroll
 import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
-import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
-import Recaptcha from "react-recaptcha";
+import Recaptcha from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
-import Mongi from "../images/characters/Mongi.png";
-import Pengsuni from "../images/characters/Pengsuni.png";
-import Euik from "../images/characters/Euik.png";
-import Eureungi from "../images/characters/Eureungi.png";
 import ggrc1 from "../images/edit/nf-tcharacter.png";
 import ggrc2 from "../images/edit/2.png";
-import Temporary from "../images/testsample.png";
 import mobile1 from "../images/game_mobile/phone1.png";
 import mobile2 from "../images/game_mobile/phone2.png";
 import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
@@ -25,9 +17,7 @@ import game1 from "../images/edit/banner1.png";
 import game2 from "../images/edit/banner2.png";
 import game3 from "../images/edit/banner3.png";
 import EventImage from "../images/event/unknown.png";
-import game4 from "../images/banner4.png";
 // Devices
-import Phone from "../images/icons/phone.png";
 import Laptop from "../images/icons/laptop.png";
 // Characters
 // Scion Fist
@@ -46,19 +36,10 @@ import ggwbroskie from "../images/gogoch.jpg";
 import icono from "../images/icons/logo.png";
 
 // Shadow :D
-import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
-import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
-import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
 
 // Slider
-import video1 from "../images/video/Big Update Trailer FB (1).mp4";
-import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
-import {
-  GoogleReCaptchaProvider,
-  GoogleReCaptcha,
-} from "react-google-recaptcha-v3";
 // Icons
 import {
   FaEnvelope,
@@ -86,17 +67,6 @@ import { AiFillInstagram } from "react-icons/ai";
 import emailjs from "emailjs-com";
 
 // Captcha :D
-
-function validateRecaptcha() {
-  var response = grecaptcha.getResponse();
-  if (response.length === 0) {
-    alert("You need to fill the captcha");
-    return false;
-  } else {
-    alert("validated");
-    return true;
-  }
-}
 
 const HomeComponent = ({ props, ref, currentRoute }) => {
   const [isShown, setIsShown] = useState(true);
@@ -159,7 +129,15 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   // Email Js
   function sendEmail(e) {
     e.preventDefault();
-
+    if (captcha.current.getValue()) {
+      console.log("The user is not a robot");
+      cambiarUsuarioValido(true);
+      cambiarCaptchaValido(true);
+    } else {
+      console.log("Please accept the captcha");
+      cambiarUsuarioValido(false);
+      cambiarCaptchaValido(false);
+    }
     emailjs
       .sendForm(
         "service_nh3pwyh",
@@ -216,6 +194,18 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
     }
   }
+  // Recaptcha
+  const [captchaValido, cambiarCaptchaValido] = useState(null);
+  const [usuarioValido, cambiarUsuarioValido] = useState(false);
+  const captcha = useRef(null);
+
+  const onChange = () => {
+    if (captcha.current.getValue()) {
+      console.log("The user is not a robot");
+      cambiarCaptchaValido(true);
+    }
+  };
+
   return (
     // Home
     <div className="wrapper">
@@ -570,8 +560,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   Contact Us <span>We'd love to hear from you!</span>
                 </h2>
               </div>
-              <div className="col-md-9">
-                <GoogleReCaptchaProvider reCaptchaKey="[key]">
+              {!usuarioValido && (
+                <div className="col-md-9">
                   <form
                     className="contact-us-form"
                     id="someForm"
@@ -604,8 +594,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     </div>
                     <div className="form-group clearfix">
                       <Recaptcha
-                        sitekey="6LcganggAAAAALJfQ9X3YBRJGzcfUK1dUKsvnJPQ"
-                        required
+                        ref={captcha}
+                        sitekey="6LfgXA4hAAAAAEKncvsfngTiqZPPRlv3903vapiP"
+                        onChange={onChange}
                       />
                       <button
                         id="submit"
@@ -617,8 +608,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       </button>
                     </div>
                   </form>
-                </GoogleReCaptchaProvider>
-              </div>
+                  {captchaValido === false && (
+                    <div className="error-captcha">
+                      Por favor accepte el captcha
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <div
