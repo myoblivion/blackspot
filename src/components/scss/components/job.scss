@@ -363,7 +363,14 @@ ul.job-list > li.job-preview:hover {
     }
   }
 }
-
+@media only screen and (max-width: 600px) {
+  .job {
+    .joblist-wrapper {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
 .footer-distributed-direction {
   background: rgb(68, 68, 68);
   box-sizing: border-box;
