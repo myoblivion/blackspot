@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -82,66 +82,75 @@ function WysiwygDataAnnouncement({ announcements }) {
       }
     });
   };
+  const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+  const editorRef = useRef();
 
   return (
     <div className="textEditor">
-      <header className="posteditor-header">
-        <strong>Announcement Editor</strong>
-      </header>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={handleTitle}
-        className="inputsz"
-      />
-      <input
-        type="text"
-        placeholder="adescription"
-        value={adescription}
-        className="inputsz"
-        onChange={handledescription}
-      />
-      <Editor
-        editorState={editorState}
-        wrapperClassName="wrapper-class"
-        editorClassName="editor-class"
-        toolbarClassName="toolbar-class"
-        onEditorStateChange={onEditorStateChange}
-        toolbar={{
-          options: [
-            "inline",
-            "blockType",
-            "fontSize",
-            "fontFamily",
-            "list",
-            "textAlign",
-            "colorPicker",
-            "link",
-            "embedded",
-            "emoji",
-            "image",
-            "remove",
-            "history",
-          ],
-          link: {
-            defaultTargetOption: "_blank",
-            popupClassName: "mail-editor-link",
-          },
-          image: {
-            uploadEnabled: true,
-            uploadCallback: uploadCallback,
-            previewImage: true,
-            inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg",
-            alt: { present: false, mandatory: false },
-            defaultSize: {
-              height: "auto",
-              width: "auto",
-            },
-          },
-        }}
-      />
-      {buttons}
+      <div className="text-editor-wrapper">
+        <div className="editorsk">
+          <header className="posteditor-header">
+            <strong>Announcement Editor</strong>
+          </header>
+          <input
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={handleTitle}
+            className="inputsz"
+          />
+          <input
+            type="text"
+            placeholder="adescription"
+            value={adescription}
+            className="inputsz"
+            onChange={handledescription}
+          />
+          <Editor
+            editorState={editorState}
+            wrapperClassName="wrapper-class"
+            editorClassName="editor-class"
+            toolbarClassName="toolbar-class"
+            onEditorStateChange={onEditorStateChange}
+            ref={editorRef}
+            toolbar={{
+              options: [
+                "inline",
+                "blockType",
+                "fontSize",
+                "fontFamily",
+                "list",
+                "textAlign",
+                "colorPicker",
+                "link",
+                "embedded",
+                "emoji",
+                "image",
+                "remove",
+                "history",
+              ],
+              link: {
+                defaultTargetOption: "_blank",
+                popupClassName: "mail-editor-link",
+              },
+              image: {
+                uploadEnabled: true,
+                uploadCallback: uploadCallback,
+                previewImage: true,
+                inputAccept:
+                  "image/gif,image/jpeg,image/jpg,image/png,image/svg",
+                alt: { present: false, mandatory: false },
+                defaultSize: {
+                  height: "auto",
+                  width: "auto",
+                },
+              },
+            }}
+          />
+          {buttons}
+        </div>
+        <div className="outputs" dangerouslySetInnerHTML={{ __html: body }} />
+      </div>
     </div>
   );
 }

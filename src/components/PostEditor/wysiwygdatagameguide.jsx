@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -83,64 +83,73 @@ function WysiwygDataGuide({ gameguide }) {
       }
     });
   };
+  const editorRef = useRef();
+  const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
 
   return (
     <div className="textEditor">
-      <header className="posteditor-header">
-        <strong>Post Editor</strong>
-      </header>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={handleTitle}
-      />
-      <input
-        type="text"
-        placeholder="gdescription"
-        value={gdescription}
-        onChange={handledescription}
-      />
-      <Editor
-        editorState={editorState}
-        wrapperClassName="wrapper-class"
-        editorClassName="editor-class"
-        toolbarClassName="toolbar-class"
-        onEditorStateChange={onEditorStateChange}
-        toolbar={{
-          options: [
-            "inline",
-            "blockType",
-            "fontSize",
-            "fontFamily",
-            "list",
-            "textAlign",
-            "colorPicker",
-            "link",
-            "embedded",
-            "emoji",
-            "image",
-            "remove",
-            "history",
-          ],
-          link: {
-            defaultTargetOption: "_blank",
-            popupClassName: "mail-editor-link",
-          },
-          image: {
-            uploadEnabled: true,
-            uploadCallback: uploadCallback,
-            previewImage: true,
-            inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg",
-            alt: { present: false, mandatory: false },
-            defaultSize: {
-              height: "auto",
-              width: "auto",
-            },
-          },
-        }}
-      />
-      {buttons}
+      <div className="text-editor-wrapper">
+        <div className="editorsk">
+          <header className="posteditor-header">
+            <strong>Post Editor</strong>
+          </header>
+          <input
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={handleTitle}
+          />
+          <input
+            type="text"
+            placeholder="gdescription"
+            value={gdescription}
+            onChange={handledescription}
+          />
+          <Editor
+            editorState={editorState}
+            ref={editorRef}
+            wrapperClassName="wrapper-class"
+            editorClassName="editor-class"
+            toolbarClassName="toolbar-class"
+            onEditorStateChange={onEditorStateChange}
+            toolbar={{
+              options: [
+                "inline",
+                "blockType",
+                "fontSize",
+                "fontFamily",
+                "list",
+                "textAlign",
+                "colorPicker",
+                "link",
+                "embedded",
+                "emoji",
+                "image",
+                "remove",
+                "history",
+              ],
+              link: {
+                defaultTargetOption: "_blank",
+                popupClassName: "mail-editor-link",
+              },
+              image: {
+                uploadEnabled: true,
+                uploadCallback: uploadCallback,
+                previewImage: true,
+                inputAccept:
+                  "image/gif,image/jpeg,image/jpg,image/png,image/svg",
+                alt: { present: false, mandatory: false },
+                defaultSize: {
+                  height: "auto",
+                  width: "auto",
+                },
+              },
+            }}
+          />
+          {buttons}
+        </div>
+        <div className="outputs" dangerouslySetInnerHTML={{ __html: body }} />
+      </div>
     </div>
   );
 }

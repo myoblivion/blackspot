@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -41,7 +41,7 @@ function WysiwygDataNews({ newspage }) {
       console.log("Posts need to include a title and a body");
     }
   }
-
+  const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
   function update() {
     const body = draftToHtml(
       convertToRaw(editorState.getCurrentContent())
@@ -82,64 +82,80 @@ function WysiwygDataNews({ newspage }) {
       }
     });
   };
+  const editorRef = useRef();
 
   return (
     <div className="textEditor">
-      <header className="posteditor-header">
-        <strong>Post Editor</strong>
-      </header>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={handleTitle}
-      />
-      <input
-        type="text"
-        placeholder="ndescription"
-        value={ndescription}
-        onChange={handledescription}
-      />
-      <Editor
-        editorState={editorState}
-        wrapperClassName="wrapper-class"
-        editorClassName="editor-class"
-        toolbarClassName="toolbar-class"
-        onEditorStateChange={onEditorStateChange}
-        toolbar={{
-          options: [
-            "inline",
-            "blockType",
-            "fontSize",
-            "fontFamily",
-            "list",
-            "textAlign",
-            "colorPicker",
-            "link",
-            "embedded",
-            "emoji",
-            "image",
-            "remove",
-            "history",
-          ],
-          link: {
-            defaultTargetOption: "_blank",
-            popupClassName: "mail-editor-link",
-          },
-          image: {
-            uploadEnabled: true,
-            uploadCallback: uploadCallback,
-            previewImage: true,
-            inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg",
-            alt: { present: false, mandatory: false },
-            defaultSize: {
-              height: "auto",
-              width: "auto",
-            },
-          },
-        }}
-      />
-      {buttons}
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,600;1,700;1,800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <div className="text-editor-wrapper">
+        <div className="editorsk">
+          <header className="posteditor-header">
+            <strong>Post Editor</strong>
+          </header>
+          <input
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={handleTitle}
+          />
+          <input
+            type="text"
+            placeholder="ndescription"
+            value={ndescription}
+            onChange={handledescription}
+          />
+          <Editor
+            editorState={editorState}
+            ref={editorRef}
+            wrapperClassName="wrapper-class"
+            editorClassName="editor-class"
+            toolbarClassName="toolbar-class"
+            onEditorStateChange={onEditorStateChange}
+            toolbar={{
+              options: [
+                "inline",
+                "blockType",
+                "fontSize",
+                "fontFamily",
+                "list",
+                "textAlign",
+                "colorPicker",
+                "link",
+                "embedded",
+                "emoji",
+                "image",
+                "remove",
+                "history",
+              ],
+              link: {
+                defaultTargetOption: "_blank",
+                popupClassName: "mail-editor-link",
+              },
+              image: {
+                uploadEnabled: true,
+                uploadCallback: uploadCallback,
+                previewImage: true,
+                inputAccept:
+                  "image/gif,image/jpeg,image/jpg,image/png,image/svg",
+                alt: { present: false, mandatory: false },
+                defaultSize: {
+                  height: "auto",
+                  width: "auto",
+                },
+              },
+            }}
+          />
+          {buttons}
+        </div>
+        <div className="outputs" dangerouslySetInnerHTML={{ __html: body }} />
+      </div>
     </div>
   );
 }
