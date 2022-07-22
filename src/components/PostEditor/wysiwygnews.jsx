@@ -86,14 +86,6 @@ function WysiwygDataNews({ newspage }) {
 
   return (
     <div className="textEditor">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,600;1,700;1,800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <div className="text-editor-wrapper">
         <div className="editorsk">
           <header className="posteditor-header">
@@ -134,6 +126,24 @@ function WysiwygDataNews({ newspage }) {
                 "remove",
                 "history",
               ],
+              fontFamily: {
+                options: [
+                  "Arial",
+                  "Georgia",
+                  "Impact",
+                  "Tahoma",
+                  "Times New Roman",
+                  "Verdana",
+                  "Oswald",
+                  "'Lobster', cursive",
+                  "'Indie Flower', cursive",
+                  "'Rubik Moonrocks', cursive",
+                  "'Permanent Marker', cursive",
+                ],
+                className: undefined,
+                component: undefined,
+                dropdownClassName: undefined,
+              },
               link: {
                 defaultTargetOption: "_blank",
                 popupClassName: "mail-editor-link",

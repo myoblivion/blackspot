@@ -3,22 +3,10 @@
   height: 100%;
   .text-editor-wrapper {
     width: 100%;
+    max-width: 100%;
     display: flex;
-    justify-content: space-between;
-    input {
-      border: 1px solid black;
-      width: 50%;
-      padding-bottom: 0.5%;
-    }
-    .rdw-editor-main {
-      height: 100%;
-      width: 100%;
-      border: 1px solid black;
-      padding-bottom: 8%;
-      cursor: text;
-    }
     .outputs {
-      width: 100%;
+      width: 50%;
       height: 100%;
       ul {
         list-style: unset;
@@ -26,6 +14,38 @@
       }
       ol {
         margin-left: 20px;
+      }
+    }
+    .editorsk {
+      background-color: white;
+      width: 40%;
+      height: 100%;
+      top: 10%;
+      input {
+        border: 1px solid black;
+        width: 50%;
+        padding-bottom: 0.5%;
+      }
+      .rdw-editor-main {
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;
+        padding-bottom: 8%;
+        cursor: text;
+      }
+      button {
+        background-color: #000000;
+        color: #fff;
+        padding: 1%;
+        width: 20%;
+        cursor: pointer;
+        margin-left: 5%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        &:hover {
+          background-color: rgb(36, 35, 35);
+          color: white;
+        }
       }
     }
   }
