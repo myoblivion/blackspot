@@ -126,36 +126,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
 
-  // Email Js
-  function sendEmail(e) {
-    e.preventDefault();
-    if (captcha.current.getValue()) {
-      console.log("The user is not a robot");
-      cambiarUsuarioValido(true);
-      cambiarCaptchaValido(true);
-    } else {
-      console.log("Please accept the captcha");
-      cambiarUsuarioValido(false);
-      cambiarCaptchaValido(false);
-    }
-    emailjs
-      .sendForm(
-        "service_nh3pwyh",
-        "template_xyvndrx",
-        e.target,
-        "user_DhVbKvTWQOQX3lDfGjGAj"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-  }
-
   const verifyCallback = function (response) {
     console.log(response);
     document.getElementById("someForm").submit();
@@ -205,7 +175,35 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       cambiarCaptchaValido(true);
     }
   };
-
+  // Email Js
+  function sendEmail(e) {
+    e.preventDefault();
+    if (captcha.current.getValue()) {
+      console.log("The user is not a robot");
+      cambiarUsuarioValido(true);
+      cambiarCaptchaValido(true);
+    } else {
+      console.log("Please accept the captcha");
+      cambiarUsuarioValido(false);
+      cambiarCaptchaValido(false);
+    }
+    emailjs
+      .sendForm(
+        "service_nh3pwyh",
+        "template_xyvndrx",
+        e.target,
+        "user_DhVbKvTWQOQX3lDfGjGAj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
     // Home
     <div className="wrapper">
