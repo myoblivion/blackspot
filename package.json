@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set HOST=192.168.2.117 && nodemon server"
+    "start": " hotel start && nodemon server"
   },
   "proxy": "http://localhost:80",
   "author": "France Lee",
@@ -104,7 +104,7 @@
     "css-loader": "^6.6.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.19",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

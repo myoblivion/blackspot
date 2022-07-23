@@ -1,7 +1,7 @@
 import axios from "axios";
 export function addAnnounce(endpoint, AnnouncementData, navigate) {
   axios
-    .post("http://localhost:80/" + endpoint, AnnouncementData)
+    .post("https://localhost:443/" + endpoint, AnnouncementData)
     .then((response) => {
       console.log(response);
       navigate(`../${response.data.id}`);
@@ -13,7 +13,7 @@ export function addAnnounce(endpoint, AnnouncementData, navigate) {
 
 export function editAnnouncement(endpoint, AnnouncementData, navigate) {
   axios
-    .put("http://localhost:80/announcements/" + endpoint, AnnouncementData)
+    .put("https://localhost:443/announcements/" + endpoint, AnnouncementData)
     .then((response) => {
       console.log(response);
       navigate(`../${endpoint}`, { replace: true });
@@ -25,7 +25,7 @@ export function editAnnouncement(endpoint, AnnouncementData, navigate) {
 
 export function deleteAnnouncement(announcementID, navigate) {
   axios
-    .delete("http://localhost:80/announcements/" + announcementID)
+    .delete("https://localhost:443/announcements/" + announcementID)
     .then((response) => {
       console.log(response);
       navigate("../", { replace: true });

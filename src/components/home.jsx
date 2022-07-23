@@ -77,7 +77,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   // slide show (banner)
 
   const radioButtons = document.querySelectorAll('input[name="control"]');
-  console.log(radioButtons);
 
   const [count, setTimeout] = useState(0);
   useEffect(() => {
