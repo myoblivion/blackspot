@@ -65,30 +65,5 @@
       "id": 3
     }
   ],
-  "newspage": [
-    {
-      "title": "etetet",
-      "ndescription": "etete",
-      "body": "<p>qwewqeqewqeqw eqw qw</p>\n",
-      "id": 1
-    },
-    {
-      "title": "qwewqewqeq",
-      "ndescription": "ewqewqwqe",
-      "body": "<p>qwewqe</p>\n",
-      "id": 2
-    },
-    {
-      "title": "dsa",
-      "ndescription": "dsa",
-      "body": "<p>dsa</p>\n",
-      "id": 3
-    },
-    {
-      "title": "asdasd",
-      "ndescription": "sadasdasda",
-      "body": "<p>dasdasd</p>\n",
-      "id": 4
-    }
-  ]
+  "newspage": []
 }
