@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "wait-on https://localhost:443/ && nodemon server"
+    "server": "wait-on https://localhost:443/ && nodemon server",
+    "serve": "concurrently -k \"nodemon api-faked/server.js --watch api-faked/*.*\""
   },
   "keywords": [],
   "author": "",

@@ -39,7 +39,7 @@ function Announcement({ announcements }) {
           </div>
         </div>
       ) : (
-        <strong>Loading...</strong>
+        <strong>Not Found</strong>
       )}
     </React.Fragment>
   );

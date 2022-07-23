@@ -40,7 +40,7 @@ function Post({ posts }) {
           </div>
         </div>
       ) : (
-        <strong>Loading post...</strong>
+        <strong>Not Found</strong>
       )}
     </React.Fragment>
   );

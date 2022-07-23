@@ -215,6 +215,8 @@ const TestComponent = ({ props, ref, currentRoute }) => {
         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
     }
   }
+  const [isNight, setIsNight] = React.useState(false);
+
   return (
     // Home
     <div className="wrapper">
@@ -226,6 +228,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
           <input type="radio" id="game2" name="slider-game" />
           <input type="radio" id="game3" name="slider-game" />
           <input type="radio" id="game4" name="slider-game" />
+
           <div className="content1" data-aos="zoom-out" data-aos-duration="500">
             <div className="leftx">
               <Link

@@ -37,7 +37,7 @@ function GameGuidePost({ gameguide }) {
           </div>
         </div>
       ) : (
-        <strong>Loading gameguidez...</strong>
+        <strong>Not Found</strong>
       )}
     </React.Fragment>
   );

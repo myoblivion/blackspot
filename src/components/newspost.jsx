@@ -37,7 +37,7 @@ function NewsPost({ newspage }) {
           </div>
         </div>
       ) : (
-        <strong>Loading newspages...</strong>
+        <strong>Not Found</strong>
       )}
     </React.Fragment>
   );
