@@ -2,6 +2,14 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  devServer: {
+    historyApiFallback: true,
+  },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+    publicPath: "/",
+  },
   resolve: {
     fallback: {
       fs: false,
@@ -24,14 +32,7 @@ module.exports = {
   },
   context: __dirname,
   entry: ["babel-polyfill", "./src/index.js"],
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "index.js",
-    publicPath: "/",
-  },
-  devServer: {
-    historyApiFallback: true,
-  },
+
   resolve: {
     extensions: [".js", ".jsx"],
   },
