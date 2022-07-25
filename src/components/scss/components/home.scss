@@ -444,10 +444,10 @@ body {
   .contactforms {
     width: 100%;
     height: 100vh;
-    background-image: url("/src/images/contact.jpg");
+    background-image: url("/src/images/gogoracingbackground/GGR_BG.png");
     filter: brightness(80%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2690,6 +2690,16 @@ input[type="radio"] {
           width: 100%;
           height: 500px;
         }
+      }
+    }
+  }
+}
+@media only screen and (max-height: 700px) {
+  .home {
+    .contactforms {
+      .mobile-partners {
+        height: 100%;
+        width: 100%;
       }
     }
   }

@@ -596,7 +596,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       />
                       {captchaValido === false && (
                         <div className="error-captcha">
-                          Please Accept ReCAPTCHA
+                          You must verify the captcha
                         </div>
                       )}
                       <button

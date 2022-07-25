@@ -82,19 +82,6 @@ import emailjs from "emailjs-com";
 
 // Captcha :D
 
-function validateRecaptcha() {
-  var response = grecaptcha.getResponse();
-  if (response.length === 0) {
-    alert("You need to fill the captcha");
-    return false;
-  } else {
-    alert("validated");
-    return true;
-  }
-}
-function onChange(value) {
-  console.log("Captcha Value", value);
-}
 const TestComponent = ({ props, ref, currentRoute }) => {
   const [isShown, setIsShown] = useState(true);
   // Aos (Animation On Scroll)
@@ -102,17 +89,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     Aos.init({ duration: 1000 });
   }, []);
   // slide show (banner)
-
-  const radioButtons = document.querySelectorAll('input[name="control"]');
-  console.log(radioButtons);
-
-  const [count, setTimeout] = useState(0);
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeout((c) => ++c % 4);
-    }, 6000);
-    return () => clearInterval(intervalId);
-  }, []);
 
   // const [imageIndex, setImageIndex] = useState(0);
   // const settings = {
@@ -191,7 +167,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
   const [captchaValido, changeCaptchaValid] = useState(null);
   const [usuarioValido, changeValidUser] = useState(false);
   const captcha = useRef(null);
-
   const onChange = () => {
     if (captcha.current.getValue()) {
       console.log("The User is not a Robot");
@@ -702,7 +677,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                       />
                       {captchaValido === false && (
                         <div className="error-captcha">
-                          Please Accept ReCAPTCHA
+                          You must verify the captcha
                         </div>
                       )}
                       <button
