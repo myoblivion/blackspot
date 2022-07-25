@@ -176,13 +176,14 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     if (captcha.current.getValue()) {
       console.log("El usuario no es un robot");
       changeValidUser(true);
+      alert("Your message has been sent");
       changeCaptchaValid(true);
       emailjs
         .sendForm(
-          "service_nh3pwyh",
-          "template_xyvndrx",
+          "service_dhedxwz",
+          "template_q1r5952",
           e.target,
-          "user_DhVbKvTWQOQX3lDfGjGAj"
+          "nOqEMPnZOelgJtLCT"
         )
         .then(
           (result) => {
