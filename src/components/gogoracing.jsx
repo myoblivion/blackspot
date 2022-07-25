@@ -204,8 +204,22 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         </div>
       </section>
       <section className="nft-des">
-        <img src={nftboi1} alt="" id="char1" />
-        <img src={nftboi2} alt="" id="char2" />
+        <img
+          src={nftboi1}
+          alt=""
+          id="char1"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-duration="500"
+        />
+        <img
+          src={nftboi2}
+          alt=""
+          id="char2"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-duration="500"
+        />
         <div
           className="desc-nft"
           data-aos="zoom-in"

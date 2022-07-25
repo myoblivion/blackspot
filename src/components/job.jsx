@@ -633,7 +633,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="footerzx">
         <div className="footer-section">
-          <footer className="footer-distributed-direction">
+          <footer className="footer-distributed-job">
             <div className="footer-left">
               <img src={icono} alt="" className="logso" />
               <p className="footer-links">
@@ -685,7 +685,7 @@ const JobComponent = ({ props, ref, currentRoute }) => {
               <div className="desz">
                 <p>
                   <Link
-                    to="/direction"
+                    to="/job"
                     {...props}
                     ref={ref}
                     onClick={() => window.scrollTo(0, 0)}

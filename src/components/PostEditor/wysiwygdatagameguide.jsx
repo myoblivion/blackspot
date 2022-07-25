@@ -8,6 +8,7 @@ import { convertFromHTML } from "draft-convert";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { validPost } from "./validator";
 import { addGuide, editGuide } from "../actions/guideActions";
+import embed from "embed-video";
 
 function WysiwygDataGuide({ gameguide }) {
   const routeParams = useParams();
@@ -106,6 +107,7 @@ function WysiwygDataGuide({ gameguide }) {
             onChange={handledescription}
           />
           <Editor
+            spellCheck
             editorState={editorState}
             ref={editorRef}
             wrapperClassName="wrapper-class"
@@ -113,6 +115,17 @@ function WysiwygDataGuide({ gameguide }) {
             toolbarClassName="toolbar-class"
             onEditorStateChange={onEditorStateChange}
             toolbar={{
+              link: {
+                linkCallback: (params) => ({ ...params }),
+              },
+              embedded: {
+                embedCallback: (link) => {
+                  const detectedSrc = /<iframe.*? src="(.*?)"/.exec(
+                    embed(link)
+                  );
+                  return (detectedSrc && detectedSrc[1]) || link;
+                },
+              },
               options: [
                 "inline",
                 "blockType",
@@ -128,6 +141,24 @@ function WysiwygDataGuide({ gameguide }) {
                 "remove",
                 "history",
               ],
+              fontFamily: {
+                options: [
+                  "Arial",
+                  "Georgia",
+                  "Impact",
+                  "Tahoma",
+                  "Times New Roman",
+                  "Verdana",
+                  "Oswald",
+                  "'Lobster', cursive",
+                  "'Indie Flower', cursive",
+                  "'Rubik Moonrocks', cursive",
+                  "'Permanent Marker', cursive",
+                ],
+                className: undefined,
+                component: undefined,
+                dropdownClassName: undefined,
+              },
               link: {
                 defaultTargetOption: "_blank",
                 popupClassName: "mail-editor-link",
@@ -146,9 +177,9 @@ function WysiwygDataGuide({ gameguide }) {
               },
             }}
           />
-          {buttons}
         </div>
         <div className="outputs" dangerouslySetInnerHTML={{ __html: body }} />
+        {buttons}
       </div>
     </div>
   );

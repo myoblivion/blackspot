@@ -1500,7 +1500,7 @@ input[type="radio"] {
       width: 100%;
       background-size: cover;
       background-position: center;
-      background-image: url("/src/images/Contact\ Us\ BG\ \(Mobile\ Size\).png");
+      background-image: url("/src/images/gogoracingbackground/GGR_BGM.png");
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
@@ -1729,7 +1729,7 @@ input[type="radio"] {
     }
   }
 }
-@media only screen and (max-height: 550px) {
+@media only screen and (max-height: 700px) {
   .home {
     .contactforms {
       height: 144vh;
@@ -2591,6 +2591,29 @@ input[type="radio"] {
         }
       }
       .ggr-m {
+        background-image: url("/src/images/icons//Conquest_Invite2_no_karatula\ \(1\).png");
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-size: 100% 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .top {
+          video {
+            position: absolute;
+            top: -5%;
+          }
+          #mggr-logz {
+            position: absolute;
+            top: 44%;
+            left: 10%;
+          }
+        }
+      }
+      .scion-m {
         background-image: url("/src/images/icons//Conquest_Invite2_no_karatula\ \(1\).png");
         width: 100%;
         height: 100vh;

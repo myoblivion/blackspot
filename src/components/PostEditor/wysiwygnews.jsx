@@ -8,7 +8,7 @@ import { convertFromHTML } from "draft-convert";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { validPost } from "./validator";
 import { addNews, editNews } from "../actions/newsAction";
-
+import embed from "embed-video";
 function WysiwygDataNews({ newspage }) {
   const routeParams = useParams();
   const location = useLocation();
@@ -104,6 +104,7 @@ function WysiwygDataNews({ newspage }) {
             onChange={handledescription}
           />
           <Editor
+            spellCheck
             editorState={editorState}
             ref={editorRef}
             wrapperClassName="wrapper-class"
@@ -111,6 +112,17 @@ function WysiwygDataNews({ newspage }) {
             toolbarClassName="toolbar-class"
             onEditorStateChange={onEditorStateChange}
             toolbar={{
+              link: {
+                linkCallback: (params) => ({ ...params }),
+              },
+              embedded: {
+                embedCallback: (link) => {
+                  const detectedSrc = /<iframe.*? src="(.*?)"/.exec(
+                    embed(link)
+                  );
+                  return (detectedSrc && detectedSrc[1]) || link;
+                },
+              },
               options: [
                 "inline",
                 "blockType",
@@ -162,9 +174,9 @@ function WysiwygDataNews({ newspage }) {
               },
             }}
           />
-          {buttons}
         </div>
         <div className="outputs" dangerouslySetInnerHTML={{ __html: body }} />
+        {buttons}
       </div>
     </div>
   );

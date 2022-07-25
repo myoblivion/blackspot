@@ -371,28 +371,27 @@ ul.job-list > li.job-preview:hover {
     }
   }
 }
-.footer-distributed-direction {
+.footer-distributed-job {
   background: rgb(68, 68, 68);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-  height: 30%;
+  padding: 10px 50px;
 }
-
 .footer-left {
   display: flex;
 }
-.footer-distributed-direction .footer-left,
-.footer-distributed-direction .footer-center,
-.footer-distributed-direction .footer-right {
+.footer-distributed-job .footer-left,
+.footer-distributed-job .footer-center,
+.footer-distributed-job .footer-right {
   display: inline-block;
   vertical-align: top;
 }
 
 /* Footer left */
 
-.footer-distributed-direction .footer-left {
+.footer-distributed-job .footer-left {
   width: 40%;
   display: inline-block;
 }
@@ -403,26 +402,33 @@ ul.job-list > li.job-preview:hover {
 }
 .logso {
   margin: 0;
-  margin-top: 10%;
   width: 27%;
 }
 
 /* Footer links */
 
-.footer-distributed-direction .footer-links {
+.footer-distributed-job .footer-links {
   color: #ffb808;
   padding: 0;
 }
 
-.footer-distributed-direction .footer-links a {
+.footer-distributed-job .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-distributed-job .footer-links p {
   display: inline-block;
   line-height: 1;
   font-weight: 400;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-.footer-distributed-direction .footer-company-name {
+.footer-distributed-job .footer-company-name {
   color: #ffb808;
   font-size: 14px;
   font-weight: normal;
@@ -448,112 +454,23 @@ ul.job-list > li.job-preview:hover {
   }
 }
 
-.footer-distributed-direction .footer-center p a {
+.footer-distributed-job .footer-center p a {
   color: #ffb808;
   text-decoration: none;
 }
 
-.footer-distributed-direction .footer-links a:before {
+.footer-distributed-job .footer-links a:before {
   content: "";
   font-weight: 300;
   font-size: 20px;
   left: 0;
   color: #ffb808;
-
   display: inline-block;
-  padding-right: 1px;
-  margin-left: 1px;
+  padding-right: 5px;
+  margin-left: 5px;
 }
 
-.footer-distributed-direction .footer-links .link-1:before {
-  content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed-direction .footer-right {
-  width: 20%;
-}
-
-.footer-distributed-direction .footer-company-about {
-  line-height: 20px;
-  color: #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed-direction .footer-company-about span {
-  display: block;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer-distributed-direction .footer-icons ul {
-  display: flex;
-  margin-top: 25px;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-.footer-distributed-direction .footer-icons li a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #ffb808;
-  border-radius: 2px;
-  font-size: 20px;
-  color: white;
-
-  text-align: center;
-  line-height: 40px;
-  margin: 0 10px;
-  border-radius: 50%;
-}
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
-  .footer-distributed-direction {
-    font: bold 11px sans-serif;
-    top: 1000px;
-    .logso {
-      width: 47%;
-    }
-  }
-
-  .footer-distributed-direction .footer-left,
-  .footer-distributed-direction .footer-center,
-  .footer-distributed-direction .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed-direction .footer-center i {
-    margin-left: 0;
-  }
-  .footer-distributed-direction .footer-center p a {
-    font-size: 12px;
-  }
-  .footer-distributed-direction .footer-links a {
-    font-size: 12px;
-  }
-  .footer-distributed-direction .footer-links p {
-    font-size: 12px;
-  }
-  .footer-icons h4 {
-    text-align: center;
-    font-size: 10px;
-    width: 100%;
-    text-transform: uppercase;
-  }
-}
-.footer-distributed-direction .footer-links a:after {
+.footer-distributed-job .footer-links p::after {
   content: "|";
   font-weight: 300;
   font-size: 20px;
@@ -562,4 +479,99 @@ ul.job-list > li.job-preview:hover {
   display: inline-block;
   padding-right: 5px;
   margin-left: 5px;
+}
+.footer-distributed-job .footer-links .link-1:before {
+  content: none;
+}
+.footer-distributed-job .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed-job .footer-right {
+  width: 20%;
+}
+
+.footer-distributed-job .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed-job .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed-job .footer-icons ul {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-distributed-job .footer-icons li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #ffb808;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+#middle-spot {
+  margin: 2% auto;
+}
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed-job {
+    font: bold 12px sans-serif;
+    top: 1000px;
+  }
+
+  .footer-distributed-job .footer-left,
+  .footer-distributed-job .footer-center,
+  .footer-distributed-job .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed-job .footer-center i {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .footer-distributed-job {
+    font: bold 10px sans-serif;
+    margin-top: 50%;
+  }
+  .footer-distributed-job .footer-icons li a {
+    font-size: 24px;
+    line-height: 1.6;
+    width: 32px;
+    height: 32px;
+  }
+  .footer-icons h4 {
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .footer-distributed-job .footer-center p a {
+    font-size: 15px;
+  }
 }
