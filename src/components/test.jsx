@@ -164,6 +164,42 @@ const TestComponent = ({ props, ref, currentRoute }) => {
         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
     }
   }
+
+  function getMobileOperatingSystems() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+  }
+  function DetectAndServes() {
+    let os = getMobileOperatingSystems();
+    if (os == "Android") {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
+    } else if (os == "iOS") {
+      window.location.href =
+        "https://apps.apple.com/ph/app/scion-fist/id1591386655";
+    } else if (os == "Windows Phone") {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
+    } else {
+      window.location.href =
+        "https://apps.apple.com/ph/app/scion-fist/id1591386655";
+    }
+  }
+
+  // CaptCha
   const [captchaValido, changeCaptchaValid] = useState(null);
   const [usuarioValido, changeValidUser] = useState(false);
   const captcha = useRef(null);
@@ -523,29 +559,39 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               <div className="scion-m">
                 <div className="top">
                   <img src={ScionLogo} alt="" id="mlogo" />
+                  <video
+                    src={video2}
+                    width="750"
+                    height="500"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                  />
                 </div>
                 <div className="bottomzkie">
-                  <div className="play-nowskiez"></div>
+                  <div className="play-nowskiez">
+                    <button onClick={DetectAndServes}>Play Now</button>
+                  </div>
                   <div className="socialization">
                     <ul>
                       <li>
                         {" "}
-                        <a href="">
+                        <a href="https://www.facebook.com/ScionFistPhilippines">
                           <FaFacebook />
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://www.instagram.com/scionfistphilippinesofficial/">
                           <FaInstagram />
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://twitter.com/ScionFist_PH">
                           <FaTwitter />
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://www.reddit.com/r/ScionFistPHofficial/">
                           <FaReddit />
                         </a>
                       </li>
