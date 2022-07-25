@@ -5,10 +5,10 @@ import PostsLinks from "./postLinks";
 import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
 // Components
 import NavbarComponent from "../components/navbar";
-import HomeComponent from "../components/home";
-import AboutComponent from "../components/about";
-import DirectionComponent from "./direction";
-import JobComponent from "./job";
+const LazyHomeComponent = React.lazy(() => import("./home"));
+const LazyAboutComponent = React.lazy(() => import("./about"));
+const LazyDirectionComponent = React.lazy(() => import("./direction"));
+const LazyJobComponent = React.lazy(() => import("./job"));
 import NewsComponent from "./news";
 import ScionComponent from "./scion";
 import GoGoWorldComponent from "./gogoworld";
@@ -92,10 +92,42 @@ const Appcomponent = ({}) => {
           <NavbarComponent currentRoute={newClass} />
           <Routes>
             <Route path={"*"} element={<NotFoundComponent />} />
-            <Route exact path={"/"} element={<HomeComponent />} />
-            <Route path={"/about"} element={<AboutComponent />} />
-            <Route path={"/direction"} element={<DirectionComponent />} />
-            <Route path="/job" element={<JobComponent />} />
+            <Route
+              exact
+              path={"/"}
+              element={
+                <React.Suspense fallback="loading....">
+                  <LazyHomeComponent />
+                </React.Suspense>
+              }
+            />
+            <Route
+              exact
+              path={"/about"}
+              element={
+                <React.Suspense fallback="loading....">
+                  <LazyAboutComponent />
+                </React.Suspense>
+              }
+            />
+            <Route
+              exact
+              path={"/direction"}
+              element={
+                <React.Suspense fallback="loading....">
+                  <LazyDirectionComponent />
+                </React.Suspense>
+              }
+            />
+            <Route
+              exact
+              path={"/job"}
+              element={
+                <React.Suspense fallback="loading....">
+                  <LazyJobComponent />
+                </React.Suspense>
+              }
+            />
             <Route path="/news" element={<NewsComponent />} />
             <Route path="/scion" element={<ScionComponent />} />
             <Route path="/gogoworld" element={<GoGoWorldComponent />} />

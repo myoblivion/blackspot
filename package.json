@@ -76,6 +76,7 @@
     "react-trix": "^0.10.0",
     "react-video-js-player": "^1.1.1",
     "react-wheel-of-prizes": "^1.0.9",
+    "react-window": "^1.8.7",
     "recaptcha2": "^1.3.3",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
