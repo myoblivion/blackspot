@@ -141,7 +141,7 @@
         }
       }
     }
-    .ggr-guidelist {
+    .ggr-guidelists {
       background-color: white;
       ul {
         li {
@@ -175,6 +175,29 @@
       background-image: url("/src/images/gogoracingbackground/ggrmb.png");
       .ggr-glistgontents {
         width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-height: 560px) {
+  .ggr-guidelist {
+    .ggr-glist-contents {
+      .ggr-glist-contents {
+        background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+        .ggr-glistgontents {
+          width: 100%;
+        }
+      }
+      .ggr-guidelists {
+        height: 130%;
+        ul {
+          height: 100%;
+          width: 100%;
+          li {
+            width: 100%;
+            height: 15vh;
+          }
+        }
       }
     }
   }

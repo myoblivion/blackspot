@@ -43,7 +43,7 @@ const GogoracingGuidelist = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </div>
-          <div className="ggr-guidelist">
+          <div className="ggr-guidelists">
             <ul>
               <Link
                 to="/gogoracing-guide"
