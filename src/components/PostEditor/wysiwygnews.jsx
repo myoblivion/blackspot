@@ -94,11 +94,13 @@ function WysiwygDataNews({ newspage }) {
           <input
             type="text"
             placeholder="Title"
+            className="title"
             value={title}
             onChange={handleTitle}
           />
           <input
             type="text"
+            className="description"
             placeholder="ndescription"
             value={ndescription}
             onChange={handledescription}

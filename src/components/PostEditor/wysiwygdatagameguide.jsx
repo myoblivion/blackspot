@@ -97,6 +97,7 @@ function WysiwygDataGuide({ gameguide }) {
           <input
             type="text"
             placeholder="Title"
+            className="title"
             value={title}
             onChange={handleTitle}
           />
@@ -104,6 +105,7 @@ function WysiwygDataGuide({ gameguide }) {
             type="text"
             placeholder="gdescription"
             value={gdescription}
+            className="description"
             onChange={handledescription}
           />
           <Editor

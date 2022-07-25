@@ -97,11 +97,13 @@ function WysiwygDataPersistence({ posts }) {
             type="text"
             placeholder="Title"
             value={title}
+            className="title"
             onChange={handleTitle}
           />
           <input
             type="text"
             placeholder="description"
+            className="description"
             value={description}
             onChange={handledescription}
           />
