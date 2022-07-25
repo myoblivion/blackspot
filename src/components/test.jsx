@@ -8,7 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
-import Recaptcha from "react-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
 import Mongi from "../images/characters/Mongi.png";
 import Pengsuni from "../images/characters/Pengsuni.png";
@@ -54,11 +54,7 @@ import video1 from "../images/video/Big Update Trailer FB (1).mp4";
 import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
-import {
-  GoogleReCaptchaProvider,
-  GoogleReCaptcha,
-} from "react-google-recaptcha-v3";
-// Icons
+
 import {
   FaEnvelope,
   FaFacebook,
@@ -215,7 +211,45 @@ const TestComponent = ({ props, ref, currentRoute }) => {
         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
     }
   }
-  const [isNight, setIsNight] = React.useState(false);
+  const [captchaValido, changeCaptchaValid] = useState(null);
+  const [usuarioValido, changeValidUser] = useState(false);
+  const captcha = useRef(null);
+
+  const onChange = () => {
+    if (captcha.current.getValue()) {
+      console.log("The User is not a Robot");
+      changeCaptchaValid(true);
+    }
+  };
+
+  // Email Js
+  const submit = (e) => {
+    e.preventDefault();
+    if (captcha.current.getValue()) {
+      console.log("El usuario no es un robot");
+      changeValidUser(true);
+      changeCaptchaValid(true);
+      emailjs
+        .sendForm(
+          "service_nh3pwyh",
+          "template_xyvndrx",
+          e.target,
+          "user_DhVbKvTWQOQX3lDfGjGAj"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else {
+      console.log("Accept Recaptcha pls");
+      changeValidUser(false);
+      changeCaptchaValid(false);
+    }
+  };
 
   return (
     // Home
@@ -649,11 +683,11 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 </h2>
               </div>
               <div className="col-md-9">
-                <GoogleReCaptchaProvider reCaptchaKey="[key]">
+                {!usuarioValido && (
                   <form
                     className="contact-us-form"
                     id="someForm"
-                    onSubmit={sendEmail}
+                    onSubmit={submit}
                     autoComplete="off"
                   >
                     <div className="form-group">
@@ -681,15 +715,21 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                       ></textarea>
                     </div>
                     <div className="form-group clearfix">
-                      <Recaptcha
-                        sitekey="6LcganggAAAAALJfQ9X3YBRJGzcfUK1dUKsvnJPQ"
-                        theme="dark"
+                      <ReCAPTCHA
+                        ref={captcha}
+                        sitekey="6LfgXA4hAAAAAEKncvsfngTiqZPPRlv3903vapiP"
                         onChange={onChange}
-                        required
+                        size={"normal"}
+                        theme="dark"
                       />
+                      {captchaValido === false && (
+                        <div className="error-captcha">
+                          Please Accept ReCAPTCHA
+                        </div>
+                      )}
                       <button
                         id="submit"
-                        type="value"
+                        type="sumbit"
                         data-id="#accessories-holder"
                         className="red-select-btn model-selector btn-send-message"
                       >
@@ -697,7 +737,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                       </button>
                     </div>
                   </form>
-                </GoogleReCaptchaProvider>
+                )}
               </div>
             </div>
           </div>

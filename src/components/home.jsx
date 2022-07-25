@@ -5,7 +5,7 @@ import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
 import getit from "../images/app-download.png";
-import Recaptcha from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
 import ggrc1 from "../images/edit/nf-tcharacter.png";
 import ggrc2 from "../images/edit/2.png";
@@ -20,7 +20,6 @@ import EventImage from "../images/event/unknown.png";
 // Devices
 import Laptop from "../images/icons/laptop.png";
 // Characters
-// Scion Fist
 import Irina from "../images/characters/ch6.png";
 import Risa from "../images/characters/ch11.png";
 import GGRICON from "../images/gogoracing_icon.png";
@@ -125,10 +124,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
 
-  const verifyCallback = function (response) {
-    console.log(response);
-    document.getElementById("someForm").submit();
-  };
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -164,45 +159,46 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     }
   }
   // Recaptcha
-  const [captchaValido, cambiarCaptchaValido] = useState(null);
-  const [usuarioValido, cambiarUsuarioValido] = useState(false);
+  const [captchaValido, changeCaptchaValid] = useState(null);
+  const [usuarioValido, changeValidUser] = useState(false);
   const captcha = useRef(null);
 
   const onChange = () => {
     if (captcha.current.getValue()) {
-      console.log("The user is not a robot");
-      cambiarCaptchaValido(true);
+      console.log("The User is not a Robot");
+      changeCaptchaValid(true);
     }
   };
+
   // Email Js
-  function sendEmail(e) {
+  const submit = (e) => {
     e.preventDefault();
     if (captcha.current.getValue()) {
-      console.log("The user is not a robot");
-      cambiarUsuarioValido(true);
-      cambiarCaptchaValido(true);
+      console.log("El usuario no es un robot");
+      changeValidUser(true);
+      changeCaptchaValid(true);
+      emailjs
+        .sendForm(
+          "service_nh3pwyh",
+          "template_xyvndrx",
+          e.target,
+          "user_DhVbKvTWQOQX3lDfGjGAj"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     } else {
-      console.log("Please accept the captcha");
-      cambiarUsuarioValido(false);
-      cambiarCaptchaValido(false);
+      console.log("Accept Recaptcha pls");
+      changeValidUser(false);
+      changeCaptchaValid(false);
     }
-    emailjs
-      .sendForm(
-        "service_nh3pwyh",
-        "template_xyvndrx",
-        e.target,
-        "user_DhVbKvTWQOQX3lDfGjGAj"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-  }
+  };
+
   return (
     // Home
     <div className="wrapper">
@@ -557,12 +553,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   Contact Us <span>We'd love to hear from you!</span>
                 </h2>
               </div>
-              {!usuarioValido && (
-                <div className="col-md-9">
+              <div className="col-md-9">
+                {!usuarioValido && (
                   <form
                     className="contact-us-form"
                     id="someForm"
-                    onSubmit={sendEmail}
+                    onSubmit={submit}
                     autoComplete="off"
                   >
                     <div className="form-group">
@@ -590,11 +586,18 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       ></textarea>
                     </div>
                     <div className="form-group clearfix">
-                      <Recaptcha
+                      <ReCAPTCHA
                         ref={captcha}
                         sitekey="6LfgXA4hAAAAAEKncvsfngTiqZPPRlv3903vapiP"
                         onChange={onChange}
+                        size={"normal"}
+                        theme="dark"
                       />
+                      {captchaValido === false && (
+                        <div className="error-captcha">
+                          Please Accept ReCAPTCHA
+                        </div>
+                      )}
                       <button
                         id="submit"
                         type="sumbit"
@@ -605,13 +608,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       </button>
                     </div>
                   </form>
-                  {captchaValido === false && (
-                    <div className="error-captcha">
-                      Por favor accepte el captcha
-                    </div>
-                  )}
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
           <div
@@ -805,17 +803,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </HashLink>
           </div>
         </div>
-        <input type="checkbox" id="close" />
-        <a
-          href="https://bit.ly/3BbtvYK"
-          className="event-stuff"
-          target="_blank"
-        >
-          <div className="ads" data-aos="zoom-out" data-aos-duration="500">
-            <label htmlFor="close">x</label>
-            <img src={EventImage} alt="" />
-          </div>
-        </a>
       </div>
     </div>
   );

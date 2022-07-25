@@ -493,6 +493,12 @@ body {
   .contact-us-form {
     margin: 35px 55px;
     width: 100%;
+    .error-captcha {
+      color: rgb(250, 243, 243);
+      background-color: #33383b;
+      width: 50%;
+      margin-top: 1%;
+    }
   }
   .contact-us-form .form-group {
     margin-bottom: 30px;
