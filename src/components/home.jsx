@@ -33,6 +33,7 @@ import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
 import ggwbroskie from "../images/gogoch.jpg";
 import icono from "../images/icons/logo.png";
+import LazyLoad from "react-lazy-load";
 
 // Shadow :D
 
@@ -316,22 +317,36 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             <div className="sliders">
               <Slider {...settings}>
                 <div className="slider-image">
-                  <img alt="Game" id="desktop2" data-aos="fade-up" />
-                  <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-up" />
-                  <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-up" />
-                  <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
+                  <LazyLoad>
+                    <img alt="Game" id="desktop2" data-aos="fade-up" />
+                  </LazyLoad>
+                  <LazyLoad>
+                    <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-up" />
+                  </LazyLoad>
+                  <LazyLoad>
+                    <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-up" />
+                  </LazyLoad>
+                  <LazyLoad>
+                    <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
+                  </LazyLoad>
                   <Link
                     to="/gogoracing"
                     {...props}
                     ref={ref}
                     onClick={() => window.scrollTo(0, 0)}
                   >
-                    <img
-                      src={Gogoracing}
-                      alt="Gogo Racing Logo"
-                      id="gogoracingsz"
-                      data-aos="fade-up"
-                    />
+                    <LazyLoad
+                      onContentVisible={() =>
+                        console.log("look ma I have been lazyloaded!")
+                      }
+                    >
+                      <img
+                        src={Gogoracing}
+                        alt="Gogo Racing Logo"
+                        id="gogoracingsz"
+                        data-aos="fade-up"
+                      />
+                    </LazyLoad>
                   </Link>
                   <div className="gamedes">
                     <div className="logoz">
@@ -344,7 +359,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                             href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
                             target="_blank"
                           >
-                            <img src={getit} alt="" />
+                            <LazyLoad
+                              onContentVisible={() =>
+                                console.log("look ma I have been lazyloaded!")
+                              }
+                            >
+                              <img src={getit} alt="" />
+                            </LazyLoad>
                           </a>
                         </li>
                         <li id="secondu">
@@ -352,7 +373,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                             href="https://apps.apple.com/app/id1623115563?platform=iphone"
                             target="_blank"
                           >
-                            <img src={appstore} alt="" />
+                            <LazyLoad
+                              onContentVisible={() =>
+                                console.log("look ma I have been lazyloaded!")
+                              }
+                            >
+                              <img src={appstore} alt="" />
+                            </LazyLoad>
                           </a>
                         </li>
                       </ul>
@@ -628,7 +655,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     href="https://blackspotstudio.com/final/main/main.asp"
                     target="_blank"
                   >
-                    <img src={Korealogo} alt="" />
+                    <LazyLoad
+                      onContentVisible={() =>
+                        console.log("look ma I have been lazyloaded!")
+                      }
+                    >
+                      <img src={Korealogo} alt="" />
+                    </LazyLoad>
                   </a>
                 </div>
               )}
@@ -639,7 +672,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   onMouseEnter={() => setIsShown(false)}
                   onMouseLeave={() => setIsShown(true)}
                 >
-                  <img src={Dubailogo} alt="dubaidesktop" />
+                  <LazyLoad
+                    onContentVisible={() =>
+                      console.log("look ma I have been lazyloaded!")
+                    }
+                  >
+                    <img src={Dubailogo} alt="dubaidesktop" />
+                  </LazyLoad>
                 </a>
               </div>
             </div>
