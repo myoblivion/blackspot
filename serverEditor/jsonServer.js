@@ -2,7 +2,6 @@ const fs = require("fs");
 const https = require("https");
 const jsonServer = require("json-server");
 const path = require("path");
-const bodyParser = require("body-parser");
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "../db.json"));
 server.use(function (req, res, next) {
@@ -42,6 +41,6 @@ server.use(defaultMiddleware);
 server.use(middlewares);
 server.use(router);
 server.use(jsonServer.bodyParser);
-https.createServer(options, server, bodyParser).listen(443, function () {
+https.createServer(options, server).listen(443, function () {
   console.log("json-server started on port " + 443);
 });
