@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
 import { deletePost } from "./actions/postActions";
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
 
 function Post({ posts }) {
+  const setPost = useState(null);
   const { postId } = useParams();
   const navigate = useNavigate();
   const post = posts && posts.find(({ id }) => `${id}` === postId);
-  <img src={backgroundimg} alt="" id="patch-posts-img" />;
+  useEffect(() => {
+    fetch("http://localhost:8000/posts")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setPost(data);
+      });
+  }, []);
   return (
     <React.Fragment>
       {post ? (

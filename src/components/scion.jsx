@@ -45,7 +45,7 @@ import profile10 from "../images/scionprofiles/10-off.png";
 import profile11 from "../images/scionprofiles/11-off.png";
 import profile12 from "../images/scionprofiles/12-off.png";
 import profile13 from "../images/scionprofiles/13-off.png";
-
+import tet from "../images/tet.jpg";
 // Weapons
 import w1 from "../images/weapons/w1.png";
 import w2 from "../images/weapons/w2.png";

@@ -5,7 +5,7 @@ import PostsLinks from "./postLinks";
 import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
 // Components
 import NavbarComponent from "../components/navbar";
-import HomeComponent from "./home";
+const LazyHomeComponent = React.lazy(() => import("./home"));
 const LazyAboutComponent = React.lazy(() => import("./about"));
 const LazyDirectionComponent = React.lazy(() => import("./direction"));
 const LazyJobComponent = React.lazy(() => import("./job"));
@@ -93,8 +93,15 @@ const Appcomponent = ({}) => {
           <NavbarComponent currentRoute={newClass} />
           <Routes>
             <Route path={"*"} element={<NotFoundComponent />} />
-            <Route path="/" element={<HomeComponent />} />
-
+            <Route
+              exact
+              path={"/"}
+              element={
+                <React.Suspense fallback="loading....">
+                  <LazyHomeComponent />
+                </React.Suspense>
+              }
+            />
             <Route
               exact
               path={"/about"}

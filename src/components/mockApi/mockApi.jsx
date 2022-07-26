@@ -8,7 +8,7 @@ export function mockAPI(request) {
           resolve({ status: 200, data: dataBase });
           break;
         default:
-          resolve({ status: 400, message: "Bad Request" });
+          resolve({ status: 200, message: "Bad Request" });
       }
     }, 300);
   });
