@@ -199,7 +199,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       changeCaptchaValid(false);
     }
   };
-
   return (
     // Home
     <div className="wrapper">

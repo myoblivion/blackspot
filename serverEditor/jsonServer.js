@@ -14,9 +14,6 @@ var options = {
 };
 server.db = router.db;
 server.use(defaultMiddleware);
-server.use(function (req, res, next) {
-  setTimeout(next, 0);
-});
 
 server.use(middlewares);
 server.use(router);

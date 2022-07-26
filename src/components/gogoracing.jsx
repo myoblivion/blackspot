@@ -206,22 +206,26 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
         </div>
       </section>
       <section className="nft-des">
-        <img
-          src={nftboi1}
-          alt=""
-          id="char1"
-          data-aos="zoom-in"
-          data-aos-offset="100"
-          data-aos-duration="500"
-        />
-        <img
-          src={nftboi2}
-          alt=""
-          id="char2"
-          data-aos="zoom-in"
-          data-aos-offset="100"
-          data-aos-duration="500"
-        />
+        <LazyLoad>
+          <img
+            src={nftboi1}
+            alt=""
+            id="char1"
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-duration="500"
+          />
+        </LazyLoad>
+        <LazyLoad>
+          <img
+            src={nftboi2}
+            alt=""
+            id="char2"
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-duration="500"
+          />
+        </LazyLoad>
         <div
           className="desc-nft"
           data-aos="zoom-in"
@@ -261,18 +265,42 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
           </label>
           <div className="el-car">
             <div className="el-cars-containers">
-              <img src={car1} alt="" />
-              <img src={car2} alt="" />
-              <img src={car3} alt="" />
-              <img src={car4} alt="" />
-              <img src={car5} alt="" />
-              <img src={car6} alt="" />
-              <img src={car7} alt="" />
-              <img src={car8} alt="" />
-              <img src={car9} alt="" />
-              <img src={car10} alt="" />
-              <img src={car11} alt="" />
-              <img src={car12} alt="" />
+              <LazyLoad>
+                <img src={car1} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car2} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car3} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car4} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car5} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car6} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car7} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car8} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car9} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car10} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car11} alt="" />
+              </LazyLoad>
+              <LazyLoad>
+                <img src={car12} alt="" />
+              </LazyLoad>
             </div>
           </div>
           <div className="el-characters">
