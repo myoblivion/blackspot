@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import Slider from "react-slick";
-
+import LazyLoad from "react-lazy-load";
 import image from "../images/goracing.png";
 import image2 from "../images/gogorc.jpg";
 import { HashLink } from "react-router-hash-link";
@@ -141,15 +141,17 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
               target="_blank"
             >
-              {" "}
-              <img src={getit} alt="" />
+              <LazyLoad>
+                <img src={getit} alt="" />
+              </LazyLoad>
             </a>
             <a
               href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg"
               target="_blank"
             >
-              {" "}
-              <img src={appstore} alt="" />
+              <LazyLoad>
+                <img src={appstore} alt="" />
+              </LazyLoad>
             </a>
           </div>
           <div className="socials">

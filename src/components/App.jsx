@@ -13,9 +13,8 @@ const LazyNewsComponent = React.lazy(() => import("./news"));
 const LazyScionComponent = React.lazy(() => import("./scion"));
 const LazyGoGoWorldComponent = React.lazy(() => import("./gogoworld"));
 const LazyGoGoChainComponent = React.lazy(() => import("./gogochain"));
+const LazyGoGoRacingComponent = React.lazy(() => import("./gogoracing"));
 
-import GoGoChainComponent from "./gogochain";
-import GoGoRacingComponent from "./gogoracing";
 import LoadingComponent from "./loading";
 import PrivacyComponent from "./privacy";
 import ScionNewsComponent from "./scionnews";
@@ -159,7 +158,15 @@ const Appcomponent = ({}) => {
                 </React.Suspense>
               }
             />
-            <Route path="/gogoracing" element={<GoGoRacingComponent />} />
+            <Route
+              exact
+              path={"/gogoracing"}
+              element={
+                <React.Suspense fallback="loading....">
+                  <LazyGoGoRacingComponent />
+                </React.Suspense>
+              }
+            />
             <Route path="/privacy" element={<PrivacyComponent />} />
             <Route path="/scionnews" element={<ScionNewsComponent />} />
             <Route path="/gogoworldnews" element={<GogoWorldNewsComponent />} />
