@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 function PostsLinks({ posts }) {
+  useEffect(() => {
+    viewPost();
+  }, []);
+
+  const [ispost, setpost] = useState([]);
+  const viewPost = async () => {
+    try {
+      await axios.get(`http://localhost:8081/posts`).then((res) => {
+        if (res.data.success === true) {
+          setpost(res.data.listall);
+        }
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
+
   return (
     <div className="announcement-links">
       <div className="aLinks">
@@ -9,20 +27,20 @@ function PostsLinks({ posts }) {
         </Link>
         <h1>Updates</h1>
         <ol>
-          {posts &&
-            posts.map(({ title, id, description }) => {
-              return (
-                <Link to={`${id}`} key={id}>
-                  <li>
-                    <div className="li-left"></div>
-                    <div className="li-right">
-                      <h3>{title}</h3>
-                      <span>{description}</span>
-                    </div>
-                  </li>
-                </Link>
-              );
-            })}
+          {ispost.map((item, index) => (
+            <div className="post__list" key={index}>
+              <h2>{item.title}</h2>
+
+              <div
+                className="post__description"
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
+              <Link to={`/Edit/${item.id}`} className="btn btn__theme">
+                {" "}
+                Edit{" "}
+              </Link>
+            </div>
+          ))}
         </ol>
       </div>
     </div>

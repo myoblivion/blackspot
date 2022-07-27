@@ -35,7 +35,6 @@ import GogoRacingSearch from "./ggrsearch";
 import PostPage from "./posts";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import NotFoundComponent from "./notfound";
-import SpinTheWheel from "./scndplctrdplc";
 import { getLCP, getFID, getCLS } from "web-vitals";
 import AdminComponent from "./admin";
 import AnnouncementPage from "./announcements";
@@ -43,11 +42,6 @@ import GameGuidePage from "./gameguide";
 import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
-import ConQuestChamps from "./conquest-champions";
-import ConQuestLast from "./last-place";
-import Email from "./enter-email-1";
-import Email2 from "./enter-email-2";
-import Email3 from "./enter-email-3";
 import TestComponent from "./test";
 // styles
 getCLS(console.log);
@@ -211,9 +205,6 @@ const Appcomponent = ({}) => {
                 <GogoRacingAnnouncementList announcements={announcements} />
               }
             />
-            <Route path="/scndplctrdplc" element={<SpinTheWheel />} />
-            <Route path="/conquest-champions" element={<ConQuestChamps />} />
-            <Route path="/last-place" element={<ConQuestLast />} />
             {/*  */}
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
             <Route path="/admin" element={<AdminComponent />} />
@@ -234,9 +225,6 @@ const Appcomponent = ({}) => {
               path="/ggr-news/*"
               element={<GGRnews newspage={newspage} />}
             />
-            <Route path="/enter-email-1" element={<Email />} />
-            <Route path="/enter-email-2" element={<Email2 />} />
-            <Route path="/enter-email-3" element={<Email3 />} />
             <Route path="/test" element={<TestComponent />} />
           </Routes>
         </div>

@@ -1,189 +1,115 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import draftToHtml from "draftjs-to-html";
-import embed from "embed-video";
-// import htmlToDraft from "html-to-draftjs";
-import { convertFromHTML } from "draft-convert";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { addPost, editPost } from "../actions/postActions";
-import { validPost } from "./validator";
-// Grabe inaantok na talaga ako Aaaa gusto ko pa matulog
-function WysiwygDataPersistence({ posts }) {
-  const routeParams = useParams();
-  const location = useLocation();
-  const navigate = useNavigate();
-  const [title, setTitle] = useState("");
-  const [description, setDescritipn] = useState("");
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-  const [editorState, setEditorState] = useState(() => {
-    if (location.pathname === "/posts/new") {
-      return EditorState.createEmpty();
-    } else if (routeParams.postId) {
-      const currentPost =
-        posts && posts.find(({ id }) => `${id}` === routeParams.postId);
-      setTitle(currentPost.title);
-      return EditorState.createWithContent(convertFromHTML(currentPost.body));
-    }
+function WysiwygDataPersistence() {
+  let nav = useNavigate();
+  const [userInfo, setuserInfo] = useState({
+    title: "",
   });
-
-  const onEditorStateChange = (editorState) => {
-    setEditorState(editorState);
-  };
-
-  function publish() {
-    const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
-    if (validPost(title, description, body)) {
-      console.log(body);
-      const postData = { title, description, body };
-      addPost("posts", postData, navigate);
-    } else {
-      console.log("Posts need to include a title and a body");
-    }
-  }
-
-  function update() {
-    const body = draftToHtml(
-      convertToRaw(editorState.getCurrentContent())
-    ).trim();
-    const id = routeParams.postId;
-    console.log(title);
-    console.log(body);
-    if (validPost(title, body)) {
-      const postData = { title, description, body };
-      editPost(id, postData, navigate);
-    } else {
-      console.log("Posts need to include a title and a body");
-    }
-  }
-
-  const handleTitle = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const handledescription = (event) => {
-    setDescritipn(event.target.value);
-  };
-
-  let buttons;
-  if (location.pathname === "/posts/new") {
-    buttons = <button onClick={publish}>Publish</button>;
-  } else {
-    buttons = <button onClick={update}>Update</button>;
-  }
-  const uploadCallback = (file) => {
-    return new Promise((resolve, reject) => {
-      if (file) {
-        let reader = new FileReader();
-        reader.onload = (e) => {
-          resolve({ data: { link: e.target.result } });
-        };
-        reader.readAsDataURL(file);
-      }
+  const onChangeValue = (e) => {
+    setuserInfo({
+      ...userInfo,
+      [e.target.name]: e.target.value,
     });
   };
-  const editorRef = useRef();
-  const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+
+  let editorState = EditorState.createEmpty();
+  const [description, setDescription] = useState(editorState);
+  const onEditorStateChange = (editorState) => {
+    setDescription(editorState);
+  };
+
+  const [isError, setError] = useState(null);
+  const WysiwygDataPersistenceDetails = async (event) => {
+    try {
+      event.preventDefault();
+      event.persist();
+      if (userInfo.description.value.length < 50) {
+        setError(
+          "Required, WysiwygDataPersistence description minimum length 50 characters"
+        );
+        return;
+      }
+      axios
+        .post(`http://localhost:8081/posts/new`, {
+          title: userInfo.title,
+          description: userInfo.description.value,
+        })
+        .then((res) => {
+          if (res.data.success === true) {
+            nav("/");
+          }
+        });
+    } catch (error) {
+      throw error;
+    }
+  };
 
   return (
-    <div className="textEditor">
-      <div className="text-editor-wrapper">
-        <div className="editorsk">
-          <header className="posteditor-header">
-            <strong>Post Editor</strong>
-          </header>
-          <input
-            type="text"
-            placeholder="Title"
-            value={title}
-            className="title"
-            onChange={handleTitle}
-          />
-          <input
-            type="text"
-            placeholder="description"
-            className="description"
-            value={description}
-            onChange={handledescription}
-          />
-          <Editor
-            spellCheck
-            editorState={editorState}
-            ref={editorRef}
-            wrapperClassName="wrapper-class"
-            editorClassName="editor-class"
-            toolbarClassName="toolbar-class"
-            onEditorStateChange={onEditorStateChange}
-            toolbar={{
-              link: {
-                linkCallback: (params) => ({ ...params }),
-              },
-              embedded: {
-                embedCallback: (link) => {
-                  const detectedSrc = /<iframe.*? src="(.*?)"/.exec(
-                    embed(link)
-                  );
-                  return (detectedSrc && detectedSrc[1]) || link;
-                },
-              },
-              options: [
-                "inline",
-                "blockType",
-                "fontSize",
-                "fontFamily",
-                "list",
-                "textAlign",
-                "colorPicker",
-                "link",
-                "embedded",
-                "emoji",
-                "image",
-                "remove",
-                "history",
-              ],
-              fontFamily: {
-                options: [
-                  "Arial",
-                  "Georgia",
-                  "Impact",
-                  "Tahoma",
-                  "Times New Roman",
-                  "Verdana",
-                  "Oswald",
-                  "'Lobster', cursive",
-                  "'Indie Flower', cursive",
-                  "'Rubik Moonrocks', cursive",
-                  "'Permanent Marker', cursive",
-                ],
-                className: undefined,
-                component: undefined,
-                dropdownClassName: undefined,
-              },
-              link: {
-                defaultTargetOption: "_blank",
-                popupClassName: "mail-editor-link",
-              },
-              image: {
-                uploadEnabled: true,
-                uploadCallback: uploadCallback,
-                previewImage: true,
-                inputAccept:
-                  "image/gif,image/jpeg,image/jpg,image/png,image/svg",
-                alt: { present: false, mandatory: false },
-                defaultSize: {
-                  height: "auto",
-                  width: "auto",
-                },
-              },
-            }}
-          />
+    <>
+      <div className="App">
+        <div className="container">
+          <div className="row">
+            <form
+              onSubmit={WysiwygDataPersistenceDetails}
+              className="update__forms"
+            >
+              <h3 className="myaccount-content"> WysiwygDataPersistence </h3>
+              <div className="form-row">
+                <div className="form-group col-md-12">
+                  <label className="font-weight-bold">
+                    {" "}
+                    Title <span className="required"> * </span>{" "}
+                  </label>
+                  <input
+                    type="text"
+                    name="title"
+                    value={userInfo.title}
+                    onChange={onChangeValue}
+                    className="form-control"
+                    placeholder="Title"
+                    required
+                  />
+                </div>
+                <div className="form-group col-md-12 editor">
+                  <label className="font-weight-bold">
+                    {" "}
+                    Description <span className="required"> * </span>{" "}
+                  </label>
+                  <Editor
+                    editorState={description}
+                    toolbarClassName="toolbarClassName"
+                    wrapperClassName="wrapperClassName"
+                    editorClassName="editorClassName"
+                    onEditorStateChange={onEditorStateChange}
+                  />
+                  <textarea
+                    style={{ display: "none" }}
+                    disabled
+                    ref={(val) => (userInfo.description = val)}
+                    value={draftToHtml(
+                      convertToRaw(description.getCurrentContent())
+                    )}
+                  />
+                </div>
+                {isError !== null && <div className="errors"> {isError} </div>}
+                <div className="form-group col-sm-12 text-right">
+                  <button type="submit" className="btn btn__theme">
+                    {" "}
+                    Submit{" "}
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="outputs" dangerouslySetInnerHTML={{ __html: body }} />
-        {buttons}
       </div>
-    </div>
+    </>
   );
 }
-
 export default WysiwygDataPersistence;

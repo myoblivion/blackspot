@@ -46,6 +46,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        z-index: 9999;
         margin-right: 4%;
         ul {
           display: flex;
@@ -720,6 +721,7 @@
         z-index: 1;
         .direction-navigation {
           ul {
+            z-index: 999;
             width: 100%;
             li {
               width: 100%;
@@ -812,6 +814,8 @@
   .direction {
     .description-map {
       .direction-navigation {
+        z-index: 999;
+
         ul {
           li {
             a {
@@ -999,11 +1003,11 @@
         position: relative;
         z-index: 1;
         .direction-navigation {
+          z-index: 999;
           height: 50vh;
-
-          z-index: 1;
           ul {
             width: 100%;
+            z-index: 999;
             li {
               width: 100%;
               a {
