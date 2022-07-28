@@ -43,6 +43,9 @@ import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
 import TestComponent from "./test";
+import EditPost from "./editPost";
+import { useParams } from "react-router-dom";
+
 // styles
 getCLS(console.log);
 getFID(console.log);
@@ -78,6 +81,8 @@ const Appcomponent = ({}) => {
       window.addEventListener("DOMContentLoaded", () => renderPosts);
     });
   }, []);
+  let getPostId = useParams();
+
   return (
     <>
       {loading ? (
@@ -226,6 +231,7 @@ const Appcomponent = ({}) => {
               element={<GGRnews newspage={newspage} />}
             />
             <Route path="/test" element={<TestComponent />} />
+            <Route path="/editpost/:postId" exact element={<EditPost />} />
           </Routes>
         </div>
       )}

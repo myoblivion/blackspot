@@ -96,7 +96,7 @@ app.post("/getPostId", async (req, res) => {
   }
 });
 
-app.post("/editArticle", async (req, res) => {
+app.post("/editPosts", async (req, res) => {
   try {
     const [update] = await db_connection.execute(
       "UPDATE `posts` SET `title`=?, `description`=? WHERE id = ?",
