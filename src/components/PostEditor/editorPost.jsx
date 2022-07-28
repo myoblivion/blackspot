@@ -43,7 +43,7 @@ function EditorPost(props) {
         return;
       }
       axios
-        .post(`http://localhost:8081/editPosts`, {
+        .post(`http://127.0.0.1/editPosts`, {
           title: userInfo.title,
           description: userInfo.description.value,
           ids: props.editPostID,

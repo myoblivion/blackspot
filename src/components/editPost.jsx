@@ -3,7 +3,7 @@ import axios from "axios";
 import EditorPost from "./PostEditor/editorPost";
 import { useParams } from "react-router-dom";
 
-const Edit = (props) => {
+const EditPost = (props) => {
   useEffect(() => {}, []);
   let postID = useParams();
   const [ispostId, setpostId] = useState([]);
@@ -39,4 +39,4 @@ const Edit = (props) => {
     </>
   );
 };
-export default Edit;
+export default EditPost;
