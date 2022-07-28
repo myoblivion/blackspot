@@ -15,7 +15,7 @@ function Post({}) {
 
   const viewPost = async () => {
     try {
-      await axios.get(`http://localhost:8081/posts`).then((res) => {
+      await axios.get(`http://127.0.0.1:8081/posts`).then((res) => {
         if (res.data.success === true) {
           setpost(res.data.listall);
         }
