@@ -55,7 +55,6 @@ const port = process.env.PORT || 8081;
 // Databse Connection
 const db_connection = require("./database").promise();
 
-app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function (req, res, next) {
@@ -84,7 +83,7 @@ app.use(function (req, res, next) {
 const allowedOrigins = [
   "http://localhost:8081",
   "http://blackspotstudio.ph",
-  "http://127.0.0:8081",
+  "http://127.0.0.1:8081",
   "*",
 ];
 const corsOptions = {
@@ -92,7 +91,7 @@ const corsOptions = {
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
-app.use(cors(corsOptions));
+app.use(cors({ corsOptions, origin: "*" }));
 console.log(allowedOrigins);
 app.post("/posts/new", async (req, res) => {
   try {
