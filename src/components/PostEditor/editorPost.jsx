@@ -12,7 +12,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import axios from "axios";
 
 function EditorPost(props) {
-  let history = useNavigate();
+  let navigate = useNavigate();
   const [userInfo, setuserInfo] = useState({
     title: props.postList[0].title,
   });
@@ -43,7 +43,7 @@ function EditorPost(props) {
         return;
       }
       axios
-        .post(`http://127.0.0.1/editPosts`, {
+        .post(`http://127.0.0.1:8081/editPosts`, {
           title: userInfo.title,
           description: userInfo.description.value,
           ids: props.editPostID,
@@ -51,7 +51,7 @@ function EditorPost(props) {
         .then((res) => {
           // then print response status
           if (res.data.success === true) {
-            history.push("/");
+            navigate.push("/");
           }
         });
     } catch (error) {

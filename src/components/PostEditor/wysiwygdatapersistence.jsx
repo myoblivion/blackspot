@@ -12,7 +12,7 @@ import { validPost } from "./validator";
 import axios from "axios";
 // Grabe inaantok na talaga ako Aaaa gusto ko pa matulog
 function WysiwygDataPersistence({ posts }) {
-  let nav = useNavigate();
+  let navigate = useNavigate();
   const [userInfo, setuserInfo] = useState({
     title: "",
   });
@@ -22,7 +22,15 @@ function WysiwygDataPersistence({ posts }) {
       [e.target.name]: e.target.value,
     });
   };
-
+  const [userInfos, setuserInfos] = useState({
+    postdes: "",
+  });
+  const onChangeValues = (e) => {
+    setuserInfos({
+      ...userInfos,
+      [e.target.name]: e.target.value,
+    });
+  };
   let editorState = EditorState.createEmpty();
   const [description, setDescription] = useState(editorState);
   const onEditorStateChange = (editorState) => {
@@ -39,13 +47,14 @@ function WysiwygDataPersistence({ posts }) {
         return;
       }
       axios
-        .post(`http://192.168.2.105:443/posts/new`, {
+        .post(`http://127.0.0.1:8081/posts/new`, {
           title: userInfo.title,
+          postdes: userInfo.postdes,
           description: userInfo.description.value,
         })
         .then((res) => {
           if (res.data.success === true) {
-            nav(`${"../"}`);
+            navigate(`${"../"}`);
           }
         });
     } catch (error) {
@@ -88,10 +97,14 @@ function WysiwygDataPersistence({ posts }) {
               />
               <label htmlFor="description">Description</label>
               <input
-                id="description"
                 type="text"
+                id="description"
+                name="postdes"
                 placeholder="description"
                 className="description"
+                value={userInfos.postdes}
+                onChange={onChangeValues}
+                required
               />
             </div>
             <Editor

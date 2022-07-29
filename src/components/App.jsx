@@ -81,7 +81,6 @@ const Appcomponent = ({}) => {
       window.addEventListener("DOMContentLoaded", () => renderPosts);
     });
   }, []);
-  let getPostId = useParams();
 
   return (
     <>
@@ -231,7 +230,7 @@ const Appcomponent = ({}) => {
               element={<GGRnews newspage={newspage} />}
             />
             <Route path="/test" element={<TestComponent />} />
-            <Route path="/editpost/:postId" exact element={<EditPost />} />
+            <Route path="/editpost/:postID" exact element={<EditPost />} />
           </Routes>
         </div>
       )}

@@ -1,63 +1,10 @@
-const fs = require("fs");
-const https = require("https");
-const jsonServer = require("json-server");
-const path = require("path");
-const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, "../db.json"));
-server.use(function (req, res, next) {
-  // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", "*");
-
-  // Request methods you wish to allow
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
-
-  // Request headers you wish to allow
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type"
-  );
-
-  // Set to true if you need the website to include cookies in the requests sent
-  // to the API (e.g. in case you use sessions)
-  res.setHeader("Access-Control-Allow-Credentials", true);
-
-  // Pass to next layer of middleware
-  next();
-});
-const middlewares = jsonServer.defaults({
-  static: "node_modules/json-server/dist",
-});
-const defaultMiddleware = jsonServer.defaults();
-var options = {
-  key: fs.readFileSync("./cert/CA/localhost/localhost.decrypted.key"),
-  cert: fs.readFileSync("./cert/CA/localhost/localhost.crt"),
-};
-server.db = router.db;
-server.use(defaultMiddleware);
-
-server.use(middlewares);
-server.use(router);
-server.use(jsonServer.bodyParser);
-https.createServer(options, server).listen(443, function () {
-  console.log("json-server started on port " + 443);
-});
-
-// const express = require("express");
-// const app = express();
+// const fs = require("fs");
+// const https = require("https");
+// const jsonServer = require("json-server");
 // const path = require("path");
-// const cors = require("cors");
-// const bodyParser = require("body-parser");
-// const port = process.env.PORT || 8081;
-
-// // Databse Connection
-// const db_connection = require("./database").promise();
-
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(function (req, res, next) {
+// const server = jsonServer.create();
+// const router = jsonServer.router(path.join(__dirname, "../db.json"));
+// server.use(function (req, res, next) {
 //   // Website you wish to allow to connect
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 
@@ -80,83 +27,88 @@ https.createServer(options, server).listen(443, function () {
 //   // Pass to next layer of middleware
 //   next();
 // });
-// const allowedOrigins = [
-//   "http://localhost:8081",
-//   "http://blackspotstudio.ph",
-//   "http://127.0.0.1:8081",
-//   "*",
-// ];
-// const corsOptions = {
-//   origin: "*",
-//   credentials: true, //access-control-allow-credentials:true
-//   optionSuccessStatus: 200,
+// const middlewares = jsonServer.defaults({
+//   static: "node_modules/json-server/dist",
+// });
+// const defaultMiddleware = jsonServer.defaults();
+// var options = {
+//   key: fs.readFileSync("./cert/CA/localhost/localhost.decrypted.key"),
+//   cert: fs.readFileSync("./cert/CA/localhost/localhost.crt"),
 // };
-// app.use(cors({ corsOptions, origin: "*" }));
-// console.log(allowedOrigins);
-// app.post("/posts/new", async (req, res) => {
-//   try {
-//     const [rows] = await db_connection.execute(
-//       "INSERT INTO `posts` (`title`,`description`) VALUES(?, ?)",
-//       [req.body.title, req.body.description]
-//     );
-//     if (rows.affectedRows === 1) {
-//       return res.json({ success: true });
-//     }
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
-// app.use(function (req, res, next) {
-//   res.header(
-//     "Access-Control-Allow-Origin",
-//     "*",
-//     "http://127.0.0.1:8081",
-//     "http://blackspotstudio.ph/"
-//   );
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept",
-//     "mutipart/form-data"
-//   );
-//   next();
-// });
-// app.get("/posts", async (req, res) => {
-//   try {
-//     const [rows] = await db_connection.execute("SELECT * FROM posts ");
-//     return res.json({ success: true, listall: rows });
-//   } catch (err) {
-//     console.log(err);
-//   }
+// server.db = router.db;
+// server.use(defaultMiddleware);
+
+// server.use(middlewares);
+// server.use(router);
+// server.use(jsonServer.bodyParser);
+// https.createServer(options, server).listen(443, function () {
+//   console.log("json-server started on port " + 443);
 // });
 
-// app.post("/getPostId", async (req, res) => {
-//   try {
-//     const [rows] = await db_connection.execute(
-//       "SELECT * FROM  posts where id = ? ",
-//       [req.body.ids]
-//     );
-//     if (rows.length > 0) {
-//       return res.json({ success: true, listId: rows });
-//     }
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
+const express = require("express");
+const app = express();
+const path = require("path");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const port = process.env.PORT || 8081;
 
-// app.post("/editPosts", async (req, res) => {
-//   try {
-//     const [update] = await db_connection.execute(
-//       "UPDATE `posts` SET `title`=?, `description`=? WHERE id = ?",
-//       [req.body.title, req.body.description, req.body.ids]
-//     );
-//     if (update.affectedRows === 1) {
-//       return res.json({ success: true });
-//     }
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
+// Databse Connection
+const db_connection = require("./database").promise();
 
-// app.listen(port, () =>
-//   console.log(`App listening at http://localhost:${port}`)
-// );
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.post("/posts/new", async (req, res) => {
+  try {
+    const [rows] = await db_connection.execute(
+      "INSERT INTO `posts` (`title`,`description`) VALUES(?, ?)",
+      [req.body.title, req.body.description]
+    );
+    if (rows.affectedRows === 1) {
+      return res.json({ success: true });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.get("/posts", async (req, res) => {
+  try {
+    const [rows] = await db_connection.execute("SELECT * FROM posts ");
+    return res.json({ success: true, listall: rows });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.post("/getPostId", async (req, res) => {
+  try {
+    const [rows] = await db_connection.execute(
+      "SELECT * FROM  posts where id = ? ",
+      [req.body.ids]
+    );
+    if (rows.length > 0) {
+      return res.json({ success: true, listId: rows });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.post("/editPosts", async (req, res) => {
+  try {
+    const [update] = await db_connection.execute(
+      "UPDATE `posts` SET `title`=?, `description`=? WHERE id = ?",
+      [req.body.title, req.body.description, req.body.ids]
+    );
+    if (update.affectedRows === 1) {
+      return res.json({ success: true });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.listen(port, () =>
+  console.log(`App listening at http://localhost:${port}`)
+);
