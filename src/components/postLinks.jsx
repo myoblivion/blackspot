@@ -35,7 +35,7 @@ function PostsLinks({ posts }) {
                   <h3>{item.title}</h3>
                 </div>
               </Link>
-              <Link to={`/editPost/`} className="btn btn__theme">
+              <Link to={`/editPost/${item.id}`} className="btn btn__theme">
                 {" "}
                 Edit{" "}
               </Link>
