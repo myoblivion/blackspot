@@ -13,7 +13,7 @@ const EditPost = (props) => {
   const viewPostId = async (ids) => {
     try {
       await axios
-        .post(`http://localhost:8081/getPostId`, {
+        .post(`https://192.168.2.105:8081/getPostId`, {
           ids: postID,
         })
         .then((res) => {

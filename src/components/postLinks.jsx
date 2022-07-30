@@ -9,7 +9,7 @@ function PostsLinks({ posts }) {
   const [ispost, setpost] = useState([]);
   const viewPost = async (res) => {
     try {
-      await axios.get(`http://127.0.0.1:8081/posts`).then((res) => {
+      await axios.get(`https://192.168.2.105:8081/posts`).then((res) => {
         if (res.data.success === true) {
           setpost(res.data.listall);
         }

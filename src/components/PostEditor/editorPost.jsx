@@ -43,7 +43,7 @@ function EditorPost(props) {
         return;
       }
       axios
-        .post(`http://127.0.0.1:8081/editPosts`, {
+        .post(`https://192.168.2.105:8081/editPosts`, {
           title: userInfo.title,
           description: userInfo.description.value,
           ids: props.editPostID,
@@ -51,7 +51,7 @@ function EditorPost(props) {
         .then((res) => {
           // then print response status
           if (res.data.success === true) {
-            navigate.push("/");
+            navigate(`/posts`);
           }
         });
     } catch (error) {
@@ -59,9 +59,9 @@ function EditorPost(props) {
     }
   };
   return (
-    <div className="App">
-      <div className="container">
-        <div className="row">
+    <div className="edit-post-app">
+      <div className="edit-pcontainer">
+        <div className="edit-row">
           <form onSubmit={PoemAddbooks} className="update__forms">
             <h3 className="myaccount-content"> Edit </h3>
             <div className="form-row">

@@ -93,3 +93,39 @@
     }
   }
 }
+.edit-post-app {
+  width: 100%;
+  height: 100%;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  background-image: url("/src/images/gogoracingbackground/withlogo.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 40%;
+  position: relative;
+  .edit-pcontainer {
+    width: 100%;
+    .edit-row {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .update__forms {
+        width: 70%;
+        height: 100%;
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 13%;
+        margin-bottom: 5%;
+        padding-bottom: 5%;
+        background-color: white;
+      }
+    }
+  }
+}
