@@ -43,6 +43,7 @@
     "gaxios": "^5.0.0",
     "gh-pages": "^3.2.3",
     "googleapis": "^100.0.0",
+    "greenlock-express": "^4.0.3",
     "hotel2": "^0.1.1",
     "html-to-draftjs": "^1.5.0",
     "https": "^1.0.0",
@@ -86,6 +87,7 @@
     "redux-thunk": "^2.4.1",
     "request": "^2.88.2",
     "slick-carousel": "^1.8.1",
+    "ssl-validator": "^1.0.7",
     "sweetalert": "^2.1.2",
     "typescript": "^4.7.4",
     "url-loader": "^4.1.1",
@@ -93,6 +95,7 @@
     "uuid": "^8.3.2",
     "wait-on": "^6.0.1",
     "web-vitals": "^2.1.4",
+    "webwebwebs": "^1.0.6",
     "whatwg-fetch": "^3.6.2"
   },
   "browser": {

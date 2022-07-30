@@ -44,7 +44,7 @@
 // https.createServer(options, server).listen(443, function () {
 //   console.log("json-server started on port " + 443);
 // });
-
+"use strict";
 const fs = require("fs");
 const express = require("express");
 const app = express();
@@ -54,8 +54,6 @@ const key = fs.readFileSync("./cert/CA/localhost/localhost.decrypted.key");
 const cert = fs.readFileSync("./cert/CA/localhost/localhost.crt");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8081;
-const https = require("https");
-const server = https.createServer({ key, cert }, app);
 // Databse Connection
 const db_connection = require("./database").promise();
 
@@ -113,6 +111,8 @@ app.post("/editPosts", async (req, res) => {
   }
 });
 
-server.listen(port, () => {
+const https = require("https");
+const server = https.createServer({ key, cert }, app);
+server.listen(port, (key, cert) => {
   console.log(`Server is listening on https://192.168.2.105:${port}`);
 });

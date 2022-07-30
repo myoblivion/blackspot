@@ -78,7 +78,7 @@ function WysiwygDataPersistence({ posts }) {
   return (
     <div className="textEditor">
       <div className="text-editor-wrapper">
-        <form onSubmit={addDetails}>
+        <form onSubmit={addDetails} autoComplete="off">
           <div className="editorsk">
             <header className="posteditor-header">
               <strong>Post Editor</strong>
@@ -107,6 +107,7 @@ function WysiwygDataPersistence({ posts }) {
                 required
               />
             </div>
+            <h2>Content</h2>
             <Editor
               spellCheck
               editorState={description}
