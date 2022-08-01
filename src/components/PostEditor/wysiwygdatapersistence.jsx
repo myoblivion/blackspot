@@ -47,7 +47,7 @@ function WysiwygDataPersistence({ posts }) {
         return;
       }
       axios
-        .post(`https://192.168.2.105:8081/posts/new`, {
+        .post(`http://localhost:8081/posts/new`, {
           title: userInfo.title,
           postdes: userInfo.postdes,
           description: userInfo.description.value,

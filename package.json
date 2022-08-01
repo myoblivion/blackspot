@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": " hotel start && nodemon server"
   },
-  "proxy": "https://192.168.2.105:8081",
+  "proxy": "http://localhost:8081/",
   "author": "France Lee",
   "license": "MIT",
   "dependencies": {
