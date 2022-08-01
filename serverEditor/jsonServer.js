@@ -51,11 +51,8 @@ const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8081;
-const key = fs.readFileSync("./cert/CA/localhost/localhost.decrypted.key");
-const cert = fs.readFileSync("./cert/CA/localhost/localhost.crt");
-const https = require("https");
 const pool = require("./database");
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/database"));
 // Databse Connection
 const db_connection = require("./database").promise();
 app.use(cors());
@@ -103,19 +100,20 @@ app.post("/getPostId", (req, res) => {
 });
 
 app.post("/editPosts", async (req, res) => {
-  try {
-    const [update] = await db_connection.execute(
-      "UPDATE `posts` SET `title`=?, `description`=? WHERE id = ?",
-      [req.body.title, req.body.description, req.body.ids]
-    );
-    if (update.affectedRows === 1) {
-      return res.json({ success: true });
+  pool.getConnection(async () => {
+    try {
+      const [update] = await db_connection.execute(
+        "UPDATE `posts` SET `title`=?, `description`=? WHERE id = ?",
+        [req.body.title, req.body.description, req.body.ids]
+      );
+      if (update.affectedRows === 1) {
+        return res.json({ success: true });
+      }
+    } catch (err) {
+      console.log(err);
     }
-  } catch (err) {
-    console.log(err);
-  }
+  });
 });
-const server = https.createServer({ key, cert }, app);
 
 app.listen(port, () =>
   console.log(`Server is listening on http://localhost:${port}`)
