@@ -54,7 +54,8 @@ const port = process.env.PORT || 8081;
 const key = fs.readFileSync("./cert/CA/localhost/localhost.decrypted.key");
 const cert = fs.readFileSync("./cert/CA/localhost/localhost.crt");
 const https = require("https");
-
+const pool = require("./database");
+app.use(express.static(__dirname + "/public"));
 // Databse Connection
 const db_connection = require("./database").promise();
 app.use(cors());
@@ -74,27 +75,31 @@ app.post("/posts/new", async (req, res) => {
   }
 });
 
-app.get("/posts", async (req, res) => {
-  try {
-    const [rows] = await db_connection.execute("SELECT * FROM posts ");
-    return res.json({ success: true, listall: rows });
-  } catch (err) {
-    console.log(err);
-  }
+app.get("/posts", (req, res) => {
+  pool.getConnection(async () => {
+    try {
+      const [rows] = await db_connection.execute("SELECT * FROM posts ");
+      return res.json({ success: true, listall: rows });
+    } catch (err) {
+      console.log(err);
+    }
+  });
 });
 
-app.post("/getPostId", async (req, res) => {
-  try {
-    const [rows] = await db_connection.execute(
-      "SELECT * FROM  posts where id = ? ",
-      [req.body.ids]
-    );
-    if (rows.length > 0) {
-      return res.json({ success: true, listId: rows });
+app.post("/getPostId", (req, res) => {
+  pool.getConnection(async () => {
+    try {
+      const [rows] = await db_connection.execute(
+        "SELECT * FROM  posts where id = ? ",
+        [req.body.ids]
+      );
+      if (rows.length > 0) {
+        return res.json({ success: true, listId: rows });
+      }
+    } catch (err) {
+      console.log(err);
     }
-  } catch (err) {
-    console.log(err);
-  }
+  });
 });
 
 app.post("/editPosts", async (req, res) => {

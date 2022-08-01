@@ -3,7 +3,7 @@ import axios from "axios";
 import EditorPost from "./PostEditor/editorPost";
 import { useParams } from "react-router-dom";
 
-const EditPost = (props) => {
+const EditPost = () => {
   const { postID } = useParams();
   useEffect(() => {
     viewPostId(postID);
