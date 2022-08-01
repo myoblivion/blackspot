@@ -52,7 +52,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8081;
 const pool = require("./database");
-app.use(express.static(__dirname + "/database"));
+app.use(express.static(__dirname + pool));
 // Databse Connection
 const db_connection = require("./database").promise();
 app.use(cors());
