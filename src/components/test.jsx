@@ -24,6 +24,7 @@ import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
 import game1 from "../images/edit/banner1.png";
 import game2 from "../images/edit/banner2.png";
 import game3 from "../images/edit/banner3.png";
+import playNow from "../images/icons/play_now.png";
 import game4 from "../images/banner4.png";
 // Devices
 import Phone from "../images/icons/phone.png";
@@ -525,7 +526,9 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 </div>
                 <div className="bottomzkie">
                   <div className="play-nowskiez">
-                    <button onClick={DetectAndServe}>Play Now</button>
+                    <button onClick={DetectAndServe}>
+                      <img src={playNow} alt="" />
+                    </button>
                   </div>
                   <div className="socialization">
                     <ul>

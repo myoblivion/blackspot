@@ -2505,18 +2505,14 @@ input[type="radio"] {
             button {
               position: absolute;
               width: 200px;
-              background-color: #024eb3;
               height: 50px;
               top: 480px;
-              border-radius: 20%;
-              color: white;
-              text-transform: uppercase;
-              font-weight: 900;
-              border: 5px solid #2d84f7;
-              box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
-              -webkit-box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
-              -moz-box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
+              left: 13%;
               z-index: 999;
+              background-color: transparent;
+              img {
+                background-color: none;
+              }
             }
           }
           .socialization {
@@ -2672,18 +2668,6 @@ input[type="radio"] {
             position: relative;
             button {
               position: absolute;
-              width: 200px;
-              background-color: #024eb3;
-              height: 50px;
-              top: 420px;
-              border-radius: 20%;
-              color: white;
-              text-transform: uppercase;
-              font-weight: 900;
-              border: 5px solid #2d84f7;
-              box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
-              -webkit-box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
-              -moz-box-shadow: 10px 10px 62px -9px rgba(0, 0, 0, 0.68) inset;
               z-index: 999;
             }
           }
