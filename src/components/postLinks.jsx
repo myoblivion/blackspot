@@ -1,25 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import { Link } from "react-router-dom";
 function PostsLinks({ posts }) {
-  useEffect(() => {
-    viewPost();
-  }, []);
-  const { postID } = useParams();
-  const navigate = useNavigate();
-  const [ispost, setpost] = useState([]);
-  const viewPost = async (res) => {
-    try {
-      await axios.get(`http://localhost:8081/posts`).then((res) => {
-        if (res.data.success === true) {
-          setpost(res.data.listall);
-        }
-      });
-    } catch (error) {
-      throw error;
-    }
-  };
-
   return (
     <div className="announcement-links">
       <div className="aLinks">
@@ -28,20 +9,20 @@ function PostsLinks({ posts }) {
         </Link>
         <h1>Updates</h1>
         <ol>
-          {ispost.map((item, index) => (
-            <li key={index}>
-              <Link to={`${item.id}`} className="btn btn__theme">
-                <div className="li-left"></div>
-                <div className="li-right">
-                  <h3>{item.title}</h3>
-                </div>
-              </Link>
-              <Link to={`/editPost/${item.id}`} className="btn btn__theme">
-                {" "}
-                Edit{" "}
-              </Link>
-            </li>
-          ))}
+          {posts &&
+            posts.map(({ title, id, description }) => {
+              return (
+                <Link to={`${id}`} key={id}>
+                  <li>
+                    <div className="li-left"></div>
+                    <div className="li-right">
+                      <h3>{title}</h3>
+                      <span>{description}</span>
+                    </div>
+                  </li>
+                </Link>
+              );
+            })}
         </ol>
       </div>
     </div>

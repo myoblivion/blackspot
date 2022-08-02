@@ -1,41 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
-
+import { deletePost } from "./actions/postActions";
 import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
-import axios from "axios";
 
-function Post({}) {
+function Post({ posts }) {
   const { postId } = useParams();
-  const [posts, setpost] = useState([]);
-  useEffect(() => {
-    viewPost();
-  }, []);
+  const navigate = useNavigate();
   const post = posts && posts.find(({ id }) => `${id}` === postId);
-
-  const viewPost = async () => {
-    try {
-      await axios.get(`http://localhost:8081/posts`).then((res) => {
-        if (res.data.success === true) {
-          setpost(res.data.listall);
-        }
-      });
-    } catch (error) {
-      throw error;
-    }
-  };
   return (
     <React.Fragment>
       {post ? (
         <div className="post wrapper">
           <div className="post-header">
-            <h3>{post.title}</h3>
+            <h1>{post.title}</h1>
           </div>
           <div className="posts-contents">
-            <div
-              className="post__description"
-              dangerouslySetInnerHTML={{ __html: post.description }}
-            />
+            <img src={backgroundimg} alt="" id="patch-posts-img" />
+            <Link to="edit" id="edit-posts" style={{ padding: 20 }}>
+              Edit
+            </Link>
+            <button
+              onClick={() => deletePost(postId, navigate)}
+              style={{
+                background: "#f3f3f3",
+                color: "inherit",
+                border: "none",
+                padding: "1%",
+                font: "inherit",
+                cursor: "pointer",
+                outline: "inherit",
+              }}
+              id="delete-posts"
+            >
+              Delete
+            </button>
+            <Interweave content={post.body} />
           </div>
         </div>
       ) : (
