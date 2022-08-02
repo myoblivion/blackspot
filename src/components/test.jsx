@@ -6,33 +6,13 @@ import VideoPlayer from "react-video-js-player";
 import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
-import cat from "../images/Icon_Character_0008_Reward.png";
 import getit from "../images/app-download.png";
 import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
-import Mongi from "../images/characters/Mongi.png";
-import Pengsuni from "../images/characters/Pengsuni.png";
-import Euik from "../images/characters/Euik.png";
-import Eureungi from "../images/characters/Eureungi.png";
-import ggrc1 from "../images/edit/nf-tcharacter.png";
-import ggrc2 from "../images/edit/2.png";
-import Temporary from "../images/testsample.png";
-import mobile1 from "../images/game_mobile/phone1.png";
-import mobile2 from "../images/game_mobile/phone2.png";
-import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
-import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
-import game1 from "../images/edit/banner1.png";
-import game2 from "../images/edit/banner2.png";
-import game3 from "../images/edit/banner3.png";
+
 import playNow from "../images/icons/play_now.png";
 import game4 from "../images/banner4.png";
-// Devices
-import Phone from "../images/icons/phone.png";
-import Laptop from "../images/icons/laptop.png";
-// Characters
-// Scion Fist
-import Irina from "../images/characters/ch6.png";
-import Risa from "../images/characters/ch11.png";
+
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
