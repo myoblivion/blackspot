@@ -18,7 +18,6 @@ import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
-import PlayNow from "../images/icons/playnow.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
@@ -29,6 +28,9 @@ import icono from "../images/icons/logo.png";
 import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
 import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
 import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
+import bshadowLeft from "../images/gogoracingbackground/bleft.png";
+import bshadowRight from "../images/gogoracingbackground/bright.png";
+import bshadowBottom from "../images/gogoracingbackground/bbottom.png";
 
 // Slider
 import video1 from "../images/video/Big Update Trailer FB (1).mp4";
@@ -69,20 +71,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
-  // slide show (banner)
-
-  // const [imageIndex, setImageIndex] = useState(0);
-  // const settings = {
-  //   Infinite: true,
-  //   lazyload: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   centerMode: true,
-  //   dots: true,
-  //   centerPadding: 0,
-  //   arrows: false,
-  //   beforeChange: (current, next) => setImageIndex(next),
-  // };
 
   const settings = {
     Infinite: true,
@@ -94,17 +82,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
     centerPadding: "0",
     centerMode: true,
     arrows: true,
-    dots: true,
-    appendDots: (dots) => (
-      <div
-        style={{
-          borderRadius: "10px",
-          padding: "10px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
   };
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
@@ -224,7 +201,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
   return (
     // Home
     <div className="wrapper">
-      <div className="home">
+      <div className="home" data-aos="fade-up" data-aos-duration="700">
         {/* Slideshow */}
 
         <div className="selectorz-wrapper">
@@ -233,7 +210,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
           <input type="radio" id="game3" name="slider-game" />
           <input type="radio" id="game4" name="slider-game" />
 
-          <div className="content1" data-aos="zoom-out" data-aos-duration="500">
+          <div className="content1">
             <div className="leftx">
               <Link
                 to="/gogoracing"
@@ -244,22 +221,20 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 <img src={Gogoracing} alt="" id="ggr-logz" />
               </Link>
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                debitis impedit quibusdam amet et porro vitae ipsum assumenda
-                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
-                veniam itaque fugit fugiat sint!{" "}
+                Ready your car, finish the line and win a coin and be
+                incentivized. Play to Earn? It’s a surprise.
                 <Link to="/gogoracingnews">read more.</Link>
               </h1>
               <div className="socialization">
                 <ul>
                   <li>
                     {" "}
-                    <a href="">
+                    <a href="https://bit.ly/3PjM6pL">
                       <FaFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="https://www.instagram.com/gogoracingph/">
                       <FaInstagram />
                     </a>
                   </li>
@@ -286,9 +261,15 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                   loop={true}
                   muted={true}
                 />
-                <img src={shadowLeft} alt="" id="leftu" />
-                <img src={shadowRight} alt="" id="rightu" />
-                <img src={shadowBottom} alt="" id="bottomtu" />
+                <img src={bshadowLeft} alt="" id="leftu" />
+                <img src={bshadowRight} alt="" id="rightu" />
+                <img src={bshadowBottom} alt="" id="bottomtu" />
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                  id="playnowss"
+                >
+                  <img src={playNow} alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -302,18 +283,16 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               >
                 <img src={ScionLogo} alt="" id="logo" />
               </Link>
-
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                debitis impedit quibusdam amet et porro vitae ipsum assumenda
-                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
-                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+                An Automatic First-Person Shooting game! The higher the rank,
+                the better performance. The battle is ready for you.{" "}
+                <a href="">Read More</a>
               </h1>
-              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                <img src={getit} alt="" id="getitt" />
-              </a>
-              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                <img src={appstore} alt="" id="appstur" />
+              <a
+                href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                id="playnowsss"
+              >
+                <img src={playNow} alt="" />
               </a>
               <div className="socialization">
                 <ul>
@@ -507,7 +486,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 <div className="bottomzkie">
                   <div className="play-nowskiez">
                     <button onClick={DetectAndServe}>
-                      <img src={playNow} alt="" />
+                      <img src={playNow} alt="" id="playimg" />
                     </button>
                   </div>
                   <div className="socialization">
@@ -553,7 +532,9 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 </div>
                 <div className="bottomzkie">
                   <div className="play-nowskiez">
-                    <button onClick={DetectAndServes}>Play Now</button>
+                    <button onClick={DetectAndServe}>
+                      <img src={playNow} alt="" id="playimg" />
+                    </button>
                   </div>
                   <div className="socialization">
                     <ul>

@@ -2,7 +2,14 @@
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-
+@font-face {
+  font-family: "BlackHans";
+  src: url("/src/Black\ Han\ Sans.ttf"),
+    url("/src/Black\ Han\ Sans.ttf") format("truetype"),
+    url("/src/Black\ Han\ Sans.ttf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 $RT: 1.5s; // .REMOVING TRANSITION TIME
 $RTDELAY: 0.3s; // .REMOVING TRANSITION DELAY (text hiding)
 $BG-T: 1s; // .ACTIVE BACKGROUND ZOOM TRANSITION
@@ -1647,6 +1654,7 @@ input[type="radio"] {
     height: 105vh;
     width: 100%;
     margin-bottom: 0;
+    margin-top: 0;
     &--control {
       left: 80%;
       width: 3em;
@@ -1813,14 +1821,16 @@ input[type="radio"] {
     }
     #leftu,
     #rightu,
-    #bottomtu {
+    #bottomtu,
+    #playnowss {
       position: absolute;
     }
     #leftu {
-      top: 70%;
-      left: 20%;
-      height: 770%;
-      width: 30%;
+      top: 0;
+      left: 0%;
+      height: 1000%;
+      opacity: 0.97;
+      width: 16%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -1828,11 +1838,11 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #rightu {
-      top: 70%;
-      right: -15%;
+      top: 0%;
+      right: 0%;
       z-index: 9;
-      height: 700%;
-      width: 100%;
+      height: 1000%;
+      width: 17%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -1840,52 +1850,44 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #bottomtu {
-      top: 470%;
-      left: 25%;
+      top: 600%;
+      left: 0;
       height: 400%;
+      opacity: 0.97;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 80%;
+      width: 100%;
     }
-    #rightggr {
-      width: 20%;
-      top: 406%;
-      position: absolute;
+    #playnowss {
+      top: 610%;
+      left: 9%;
+      height: 65%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      z-index: 9;
+      width: 15%;
+      z-index: 999;
     }
-    #leftggr {
-      width: 25%;
-      top: 206%;
-      left: 40%;
-      position: absolute;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      z-index: 9;
-    }
+
     .video {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 3%;
+      margin-top: 0;
       width: 100%;
       height: 100%;
       video {
-        position: absolute;
-        width: 100%;
-        height: 800%;
-        top: 20%;
-        right: -20%;
+        position: fixed;
+        width: 220%;
+        height: 950%;
+        filter: brightness(80%);
+        top: 1%;
+        left: -60%;
+        box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -webkit-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -moz-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
       }
     }
   }
@@ -1896,16 +1898,40 @@ input[type="radio"] {
     position: relative;
     transform: translate(0, 0);
     visibility: visible;
+    .leftx {
+      transition: 0.5s ease-in;
+      button {
+        position: absolute;
+        left: -5%;
+        top: 395%;
+        padding: 3%;
+        z-index: 999;
+      }
+      #playnowsss {
+        position: absolute;
+        top: 310%;
+        left: -7%;
+        height: 65%;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        width: 15%;
+        z-index: 999;
+      }
+    }
     #leftu,
     #rightu,
     #bottomtu {
       position: absolute;
     }
     #leftu {
-      top: 70%;
-      left: 20%;
-      height: 770%;
-      width: 30%;
+      top: 0;
+      left: 0%;
+      height: 1000%;
+      opacity: 0.97;
+      width: 16%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -1913,11 +1939,11 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #rightu {
-      top: 70%;
-      right: -8%;
+      top: 0%;
+      right: 0%;
       z-index: 9;
-      height: 800%;
-      width: 100%;
+      height: 1000%;
+      width: 17%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -1925,53 +1951,32 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #bottomtu {
-      top: 550%;
-      left: 30%;
+      top: 600%;
+      left: 0;
       height: 400%;
+      opacity: 0.97;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 95%;
+      width: 100%;
     }
-    #irina {
-      width: 15%;
-      top: 106%;
-      position: absolute;
-      right: 0%;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      z-index: 9;
-    }
-    #risa {
-      width: 15%;
-      top: 106%;
-      left: 40%;
-      position: absolute;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      z-index: 9;
-    }
+
     .video {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 3%;
+      margin-top: 0;
       width: 100%;
       height: 100%;
       video {
-        position: absolute;
-        width: 100%;
-        height: 800%;
-        top: 20%;
-        right: -20%;
+        position: fixed;
+        width: 220%;
+        height: 950%;
+        filter: brightness(80%);
+        top: 1%;
+        left: -60%;
+        box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -webkit-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -moz-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
       }
     }
   }
@@ -2182,7 +2187,7 @@ input[type="radio"] {
       z-index: 99;
       left: -12%;
       line-height: 2;
-      top: 330%;
+      top: 430%;
       position: absolute;
       box-shadow: 1px 1px 11px 1px solid black;
       ul {
@@ -2211,16 +2216,19 @@ input[type="radio"] {
     h1 {
       z-index: 99;
       position: fixed;
-      width: 48%;
-      font-weight: 100;
+      width: 33%;
+      text-shadow: rgb(0, 0, 0) 6px 0 20px;
+      text-align: center;
       font-size: 16px;
-      left: 41%;
-      top: 760%;
+      left: 2%;
+      font-family: "BlackHans";
+      top: 520%;
       a {
         color: white;
         text-decoration: underline;
       }
     }
+
     #ggr-logz {
       z-index: 99;
       left: 0;
@@ -2244,7 +2252,7 @@ input[type="radio"] {
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 35%;
+      width: 34%;
     }
     #worldsk {
       z-index: 99;
@@ -2294,19 +2302,19 @@ input[type="radio"] {
   .displayers {
     display: flex;
     margin-left: 2%;
-    width: 40%;
+    width: 55%;
+    height: 10%;
     label {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 2px;
-      margin: 2.8% 1%;
       background-color: #202023;
       border-radius: 5px;
+      border: 2px solid white;
       width: 13%;
-      margin-left: 3%;
+      margin-left: 0%;
       color: white;
       text-transform: uppercase;
       text-align: center;
@@ -2320,7 +2328,6 @@ input[type="radio"] {
       img {
         width: 100%;
         height: 100%;
-        filter: grayscale(100%);
       }
       &:hover {
         background-color: white;
@@ -2531,7 +2538,7 @@ input[type="radio"] {
               width: 200px;
               height: 50px;
               top: 480px;
-              left: 13%;
+              left: 10%;
               z-index: 999;
               background-color: transparent;
               img {
@@ -2540,8 +2547,8 @@ input[type="radio"] {
             }
           }
           .socialization {
-            width: 50%;
-            background-color: #33383b;
+            width: 75%;
+            background-color: #0b3652;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2556,7 +2563,7 @@ input[type="radio"] {
               width: 100%;
               padding: 2%;
               li {
-                margin: 0 5%;
+                margin: 0 7%;
                 a {
                   color: white;
                   font-size: 20px;
@@ -2688,24 +2695,31 @@ input[type="radio"] {
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
             height: 100%;
             position: relative;
             button {
               position: absolute;
+              left: 20%;
               top: 400px;
-              left: 10%;
+              bottom: 0%;
               z-index: 999;
+              box-shadow: 1px 55px 51px 4px black;
+              #playimg {
+                width: 120%;
+                height: 120%;
+              }
             }
           }
           .socialization {
-            width: 50%;
-            background-color: #33383b;
+            width: 70%;
+            background-color: #0b3652;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 15px;
             position: absolute;
-            top: 75%;
+            top: 85%;
             ul {
               margin: 0 auto;
               display: flex;
@@ -2714,7 +2728,7 @@ input[type="radio"] {
               width: 100%;
               padding: 2%;
               li {
-                margin: 0 5%;
+                margin: 0 10%;
                 a {
                   color: white;
                   font-size: 20px;

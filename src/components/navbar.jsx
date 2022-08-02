@@ -15,7 +15,6 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-
   let [myCheckbox, setMyCheckbox] = useState(false);
 
   let menuRef = useRef();
@@ -30,8 +29,32 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
   const [click, seClick] = useState(false);
 
   const [showText, setShowText] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  //logo scroll when active
+
+  //navbar scroll changeBackground function
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  //logo scroll function
+
+  window.addEventListener("scroll", changeBackground);
+  console.log(changeBackground);
   return (
-    <header className="navbar active">
+    <header className={navbar ? "navbar active" : "navbar"}>
       <div className="logo">
         <Link to="/">
           <img

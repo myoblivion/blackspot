@@ -7,19 +7,19 @@ a {
 /* header */
 
 .navbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  z-index: 80;
+  z-index: 999;
+  height: 6%;
   top: 0;
-  background-color: transparent;
-  backdrop-filter: blur(1px);
-  background-color: black;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: 0.2s ease-in;
+  backdrop-filter: blur(7px);
 }
 
 .navbar ul {
@@ -228,10 +228,26 @@ li:hover > .tabs {
     float: left;
   }
   .navbar li span {
-    padding: 20px 30px;
+    padding: 0 30px;
   }
   .navbar li a {
-    padding: 20px 30px;
+    padding: 0 30px;
+  }
+  .tabs {
+    li span {
+      padding: 15px 30px;
+    }
+    li a {
+      padding: 15px 30px;
+    }
+  }
+  .tab {
+    li span {
+      padding: 15px 30px;
+    }
+    li a {
+      padding: 15px 30px;
+    }
   }
   .navbar .menu {
     clear: none;
@@ -247,11 +263,14 @@ li:hover > .tabs {
     display: none;
   }
   .logo {
-    width: 15%;
+    width: 20%;
+    height: 90%;
     padding-left: 25px;
+    margin-top: 0;
+    padding-top: 1;
     .main-logo {
       width: 40%;
-      height: 10%;
+      height: 100%;
       &:hover {
         filter: grayscale(100%);
       }
@@ -325,4 +344,7 @@ li:hover > .tabs {
     background-color: black;
     margin: 0;
   }
+}
+.navbar.active {
+  background: rgb(0, 0, 0);
 }
