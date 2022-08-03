@@ -41,60 +41,10 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
             <h1>News & Announcements</h1>
           </div>
           <div className="news-cards">
-            <div className="news-card1">
-              <div className="left">
-                <img src={ggrcharacter} alt="" />
-              </div>
-              <div className="right">
-                <img src={ggricon} alt="" />
-                <h3>See latest news, announcements, patch and guides.</h3>
-                <Link
-                  to="/gogoracingnews"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Read More
-                </Link>
-              </div>
-            </div>
-            <div className="news-card2">
-              <div className="left">
-                <img src={scionchar} alt="" />
-              </div>
-              <div className="right">
-                <img src={scionlogo} alt="" />
-                <h3>See latest news, announcements, patch and guides.</h3>
-                <Link
-                  to="/scionnews"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Read More
-                </Link>
-              </div>
-            </div>
-            <div className="news-card3">
-              <div className="left">
-                <img src={gogoworldchar} alt="" />
-              </div>
-              <div className="right">
-                <img src={gogoworldicon} alt="" />
-                <h3>See latest news, announcements, patch and guides.</h3>
-                <p>Read more</p>
-              </div>
-            </div>
-            <div className="news-card4">
-              <div className="left">
-                <img src={gogochainchar} alt="" />
-              </div>
-              <div className="right">
-                <img src={gogochainicon} alt="" />
-                <h3>See latest news, announcements, patch and guides.</h3>
-                <p>Read More</p>
-              </div>
-            </div>
+            <div className="news-card1">Test</div>
+            <div className="news-card2">Test</div>
+            <div className="news-card3">Test</div>
+            <div className="news-card4">Test</div>
           </div>
         </div>
       </div>

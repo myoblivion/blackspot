@@ -6,7 +6,7 @@ import f1 from "../images/collection1.png";
 import f2 from "../images/collection2.jpg";
 import f4 from "../images/collection4.png";
 import f6 from "../images/collection6.png";
-import image from "../images/banner1.png";
+import image from "../images/bannerss-gw.png";
 import image2 from "../images/gogoworlds.jpg";
 import icono from "../images/icons/logo.png";
 import {
@@ -29,7 +29,6 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoworld wrapper">
       <section className="gogoworld-wrapper">
-        <h1>Coming Soon</h1>
         <img
           src={image}
           alt="Gogo World"

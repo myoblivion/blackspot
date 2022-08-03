@@ -1997,10 +1997,11 @@ input[type="radio"] {
       position: absolute;
     }
     #leftu {
-      top: 70%;
-      left: 20%;
-      height: 770%;
-      width: 30%;
+      top: 0;
+      left: 0%;
+      height: 1000%;
+      opacity: 0.97;
+      width: 16%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -2008,11 +2009,11 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #rightu {
-      top: 70%;
-      right: -15%;
+      top: 0%;
+      right: 0%;
       z-index: 9;
-      height: 700%;
-      width: 100%;
+      height: 1000%;
+      width: 17%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -2020,15 +2021,16 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #bottomtu {
-      top: 470%;
-      left: 25%;
+      top: 600%;
+      left: 0;
       height: 400%;
+      opacity: 0.97;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 80%;
+      width: 100%;
     }
     #rightggr {
       width: 20%;
@@ -2063,9 +2065,13 @@ input[type="radio"] {
       img {
         position: absolute;
         width: 100%;
-        height: 700%;
-        top: 100%;
-        right: -20%;
+        height: 950%;
+        filter: brightness(80%);
+        top: 1%;
+        left: 0%;
+        box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -webkit-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -moz-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
       }
       // video {
       //   position: absolute;
@@ -2097,10 +2103,11 @@ input[type="radio"] {
       position: absolute;
     }
     #leftu {
-      top: 70%;
-      left: 20%;
-      height: 770%;
-      width: 30%;
+      top: 0;
+      left: 0%;
+      height: 1000%;
+      opacity: 0.97;
+      width: 16%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -2108,11 +2115,11 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #rightu {
-      top: 70%;
-      right: -15%;
+      top: 0%;
+      right: 0%;
       z-index: 9;
-      height: 700%;
-      width: 100%;
+      height: 1000%;
+      width: 17%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -2120,15 +2127,16 @@ input[type="radio"] {
       -ms-user-select: none;
     }
     #bottomtu {
-      top: 470%;
-      left: 25%;
+      top: 600%;
+      left: 0;
       height: 400%;
+      opacity: 0.97;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 80%;
+      width: 100%;
     }
     #rightggr {
       width: 20%;
@@ -2163,9 +2171,13 @@ input[type="radio"] {
       img {
         position: absolute;
         width: 100%;
-        height: 700%;
-        top: 100%;
-        right: -20%;
+        height: 950%;
+        filter: brightness(80%);
+        top: 1%;
+        left: 0%;
+        box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -webkit-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
+        -moz-box-shadow: 10px 10px 91px 7px rgba(0, 0, 0, 0.57) inset;
       }
     }
   }
@@ -2257,7 +2269,7 @@ input[type="radio"] {
     #worldsk {
       z-index: 99;
       left: 3%;
-      top: 350%;
+      top: 270%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
@@ -2267,14 +2279,14 @@ input[type="radio"] {
     }
     #chain {
       z-index: 99;
-      left: 10%;
-      top: 310%;
+      left: 12%;
+      top: 280%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 15%;
+      width: 10%;
     }
     #getitt {
       top: 740%;

@@ -554,7 +554,7 @@
 }
 .wrapper6 {
   width: 100%;
-  height: 150%;
+  height: 100%;
   background-color: black;
   .titles {
     width: 100%;
@@ -612,6 +612,8 @@
   align-items: center;
   h1 {
     width: 30%;
+    height: 30%;
+    line-height: 5;
     margin: 0 auto;
     margin-bottom: 4%;
     background-size: 100% 100%;

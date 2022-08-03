@@ -80,6 +80,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import playNow from "../images/icons/play_now.png";
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -95,6 +96,39 @@ const PrevArrow = ({ onClick }) => {
     </div>
   );
 };
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Windows Phone must come first because its UA also contains "Android"
+  if (/windows phone/i.test(userAgent)) {
+    return "Windows Phone";
+  }
+
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
+
+  // iOS detection from: http://stackoverflow.com/a/9039885/177710
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    return "iOS";
+  }
+}
+function DetectAndServe() {
+  let os = getMobileOperatingSystem();
+  if (os == "Android") {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+  } else if (os == "iOS") {
+    window.location.href =
+      "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+  } else if (os == "Windows Phone") {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+  } else {
+    window.location.href =
+      "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+  }
+}
 
 const ScionComponent = ({ props, ref, currentRoute }) => {
   const settings = {
@@ -722,24 +756,9 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="playnow">
         <h1 data-aos="flip-up">DOWNLOAD NOW</h1>
-        <ul data-aos="flip-up">
-          <li>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
-              target="_blank"
-            >
-              <img src={googleplay} alt="" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://apps.apple.com/ph/app/scion-fist/id1591386655"
-              target="_blank"
-            >
-              <img src={applestore} alt="" />
-            </a>
-          </li>
-        </ul>
+        <button onClick={DetectAndServe}>
+          <img src={playNow} alt="" id="playimg" />
+        </button>
       </section>
       <div className="section">
         <footer className="footer-distributed">

@@ -32,7 +32,7 @@ import character15 from "../images/ggr-characters/6-hekhek-costume-3.png";
 import character16 from "../images/ggr-characters/8-eureungi-costume-1.png";
 import character17 from "../images/ggr-characters/8-eureungi-costume-2.png";
 import character18 from "../images/ggr-characters/8-eureungi-costume-3.png";
-
+import playNow from "../images/icons/play_now.png";
 import nftboi1 from "../images/gogoracingbackground/NFTcar_1.png";
 import nftboi2 from "../images/gogoracingbackground/weeee.png";
 
@@ -88,7 +88,39 @@ import icono from "../images/icons/logo.png";
 import { AiFillInstagram } from "react-icons/ai";
 
 // Prev, Next
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
+  // Windows Phone must come first because its UA also contains "Android"
+  if (/windows phone/i.test(userAgent)) {
+    return "Windows Phone";
+  }
+
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
+
+  // iOS detection from: http://stackoverflow.com/a/9039885/177710
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    return "iOS";
+  }
+}
+function DetectAndServe() {
+  let os = getMobileOperatingSystem();
+  if (os == "Android") {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+  } else if (os == "iOS") {
+    window.location.href =
+      "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+  } else if (os == "Windows Phone") {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+  } else {
+    window.location.href =
+      "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+  }
+}
 const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   const [isShown, setIsShown] = useState(true);
   const NextArrow = ({ onClick }) => {
@@ -137,22 +169,9 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
             </p>
           </span>
           <div className="links">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
-              target="_blank"
-            >
-              <LazyLoad>
-                <img src={getit} alt="" />
-              </LazyLoad>
-            </a>
-            <a
-              href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg"
-              target="_blank"
-            >
-              <LazyLoad>
-                <img src={appstore} alt="" />
-              </LazyLoad>
-            </a>
+            <button onClick={DetectAndServe}>
+              <img src={playNow} alt="" id="playimg" />
+            </button>
           </div>
           <div className="socials">
             <ul>

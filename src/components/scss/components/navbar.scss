@@ -98,7 +98,7 @@ a {
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.863);
   animation: bruh 0.3s ease;
 }
 .tabs {
@@ -108,7 +108,7 @@ a {
   border-bottom: 1px solid #bbb;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.836);
 }
 .navbar ul.tab li {
   float: none;
@@ -265,7 +265,7 @@ li:hover > .tabs {
   .logo {
     width: 20%;
     height: 90%;
-    padding-left: 25px;
+    margin: 0 auto;
     margin-top: 0;
     padding-top: 1;
     .main-logo {

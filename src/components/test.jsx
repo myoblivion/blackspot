@@ -11,8 +11,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
 
 import playNow from "../images/icons/play_now.png";
-import game4 from "../images/banner4.png";
-
+import game4 from "../images/gogoc.png";
+import scionnnnn from "../images/scionss.png";
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
@@ -21,7 +21,7 @@ import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
-import ggwbroskie from "../images/gogoch.jpg";
+import ggwbroskie from "../images/bannerss-gw.png";
 import icono from "../images/icons/logo.png";
 
 // Shadow :D
@@ -31,7 +31,12 @@ import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.pn
 import bshadowLeft from "../images/gogoracingbackground/bleft.png";
 import bshadowRight from "../images/gogoracingbackground/bright.png";
 import bshadowBottom from "../images/gogoracingbackground/bbottom.png";
-
+import yshadowBottom from "../images/gogoracingbackground/ybottom.png";
+import yshadowRight from "../images/gogoracingbackground/yright.png";
+import yshadowLeft from "../images/gogoracingbackground/yleft.png";
+import vshadowBottom from "../images/gogoracingbackground/vbottom.png";
+import vshadowRight from "../images/gogoracingbackground/vright.png";
+import vshadowLeft from "../images/gogoracingbackground/vleft.png";
 // Slider
 import video1 from "../images/video/Big Update Trailer FB (1).mp4";
 import video2 from "../images/video/Scion Fist PH Trailer.mp4";
@@ -201,7 +206,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
   return (
     // Home
     <div className="wrapper">
-      <div className="home" data-aos="fade-up" data-aos-duration="700">
+      <div className="home">
         {/* Slideshow */}
 
         <div className="selectorz-wrapper">
@@ -210,7 +215,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
           <input type="radio" id="game3" name="slider-game" />
           <input type="radio" id="game4" name="slider-game" />
 
-          <div className="content1">
+          <div className="content1" data-aos="zoom-in" data-aos-duration="700">
             <div className="leftx">
               <Link
                 to="/gogoracing"
@@ -223,7 +228,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               <h1>
                 Ready your car, finish the line and win a coin and be
                 incentivized. Play to Earn? It’s a surprise.
-                <Link to="/gogoracingnews">read more.</Link>
+                <Link to="/gogoracingnews"> read more.</Link>
               </h1>
               <div className="socialization">
                 <ul>
@@ -347,17 +352,9 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 <img src={Gogoworld} alt="" id="worldsk" />
               </Link>
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                debitis impedit quibusdam amet et porro vitae ipsum assumenda
-                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
-                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+                Adorable characters living in their own world. Check out how
+                they make your world more entertaining. <a href="">Read More</a>
               </h1>
-              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                <img src={getit} alt="" id="getitt" />
-              </a>
-              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                <img src={appstore} alt="" id="appstur" />
-              </a>
               <div className="socialization">
                 <ul>
                   <li>
@@ -388,9 +385,9 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               <div className="video">
                 <img src={ggwbroskie} alt="" />
               </div>
-              <img src={shadowLeft} alt="" id="leftu" />
-              <img src={shadowRight} alt="" id="rightu" />
-              <img src={shadowBottom} alt="" id="bottomtu" />
+              <img src={yshadowLeft} alt="" id="leftu" />
+              <img src={yshadowRight} alt="" id="rightu" />
+              <img src={yshadowBottom} alt="" id="bottomtu" />
             </div>
           </div>
           <div className="content4">
@@ -404,17 +401,9 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 <img src={Gogochain} alt="" id="chain" />
               </Link>
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                debitis impedit quibusdam amet et porro vitae ipsum assumenda
-                repudiandae eligendi exercitationem, cumque neque, soluta, sunt
-                veniam itaque fugit fugiat sint! <a href="">Read More</a>
+                Are you ready to explore the dimension of these cute characters?
+                They are coming soon to play with you. <a href="">Read More</a>
               </h1>
-              <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph">
-                <img src={getit} alt="" id="getitt" />
-              </a>
-              <a href="https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg">
-                <img src={appstore} alt="" id="appstur" />
-              </a>
               <div className="socialization">
                 <ul>
                   <li>
@@ -445,18 +434,22 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               <div className="video">
                 <img src={game4} alt="" />
               </div>
-              <img src={shadowLeft} alt="" id="leftu" />
-              <img src={shadowRight} alt="" id="rightu" />
-              <img src={shadowBottom} alt="" id="bottomtu" />
+              <img src={vshadowLeft} alt="" id="leftu" />
+              <img src={vshadowRight} alt="" id="rightu" />
+              <img src={vshadowBottom} alt="" id="bottomtu" />
             </div>
           </div>
-          <div className="displayers">
+          <div
+            className="displayers"
+            data-aos="flip-up"
+            data-aos-duration="700"
+          >
             <label htmlFor="game1">
               <img src={GGRICON} alt="" />
             </label>
             <label htmlFor="game2">
               {" "}
-              <img src={GGRICON} alt="ScionFist" />
+              <img src={scionnnnn} alt="ScionFist" />
             </label>
             <label htmlFor="game3">
               {" "}
