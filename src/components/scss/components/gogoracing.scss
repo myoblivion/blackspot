@@ -26,39 +26,37 @@
   .gogoracing-wrapper {
     width: 100%;
     height: 100vh;
-    background-image: url("/src/images/gogoracingbackground/GGR_BG.png");
+    background-image: url("/src/images/partyggr.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     position: relative;
     filter: brightness(85%);
     .ggrwelcome {
-      width: 30%;
-      height: 70%;
-      background-color: #6479d8af;
-      backdrop-filter: blur(8px);
+      width: 70%;
+      height: 25%;
+      background-color: #c564d8af;
+      backdrop-filter: blur(2px);
       border-radius: 30px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
       align-items: center;
       position: absolute;
-      top: 15%;
-      left: 5%;
+      top: 55%;
+      left: 15%;
       #ggrlogo {
-        width: 38%;
-        height: 50%;
-        margin-top: 10%;
-        max-width: 55%;
-        min-width: 50%;
+        width: 60%;
+        height: 30%;
+        margin-left: 5%;
       }
       span {
+        margin-right: 5%;
         width: 80%;
         p {
           color: white;
           text-align: justify;
           font-size: 16px;
           text-align: center;
+          margin-left: 5%;
           font-family: "BlackHans";
           text-shadow: rgb(7, 1, 65) 5px 5px 7px;
         }
@@ -69,7 +67,7 @@
         position: relative;
         margin: 0 auto;
         width: 100%;
-        height: 20%;
+        height: 40%;
         button {
           background-color: transparent;
           position: absolute;
@@ -114,9 +112,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      backdrop-filter: blur(11px);
-      right: 10%;
-      top: 40%;
+      right: 26%;
+      top: 20%;
       p {
         display: flex;
         flex-direction: column;
@@ -124,7 +121,7 @@
         justify-content: center;
         img {
           cursor: pointer;
-          width: 90%;
+          width: 50%;
         }
       }
     }
@@ -160,6 +157,13 @@
           text-align: justify;
           font-size: 16px;
         }
+      }
+      #somedog {
+        position: absolute;
+        left: 85%;
+        top: 40%;
+        width: 50%;
+        height: 80%;
       }
     }
   }
@@ -257,129 +261,85 @@
       position: fixed;
       top: 0;
     }
-    label {
-      font-size: 45px;
-      color: white;
-      margin-right: 15%;
-      border: 5px solid rgb(255, 255, 255);
-      border-radius: 15px;
-      width: 20%;
-      font-weight: 900;
-      text-align: center;
+    #testss {
+      position: absolute;
+      left: 40%;
+      top: 25%;
+      width: 30%;
     }
-  }
-  #control1,
-  #control2,
-  #control3 {
-    position: absolute;
-  }
-  #control1 {
-    top: 15%;
-    left: 10%;
-  }
-  #control2 {
-    top: 40%;
-    left: 10%;
-  }
-
-  #control3 {
-    top: 65%;
-    left: 10%;
-  }
-
-  .el-car {
-    display: block;
-    position: absolute;
-  }
-
-  .el-characters,
-  .el-tires {
-    display: none;
-  }
-  .el-characters,
-  .el-car,
-  .el-tires {
-    position: relative;
-  }
-  .el-car {
-    top: 10%;
-    right: 10%;
-  }
-  .el-characters {
-    top: 8%;
-    right: 10%;
-  }
-  .el-tires {
-    top: 8%;
-    right: 10%;
-  }
-  .el-cars-containers {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 50px;
-    margin: 0 auto;
-    right: 0;
-    align-items: center;
-    img {
-      width: 100%;
-      border: 3px solid white;
-      padding: 2%;
-      border-radius: 10px;
-      margin: 5%;
+    #floor {
+      position: absolute;
+      width: 35%;
+      height: 35%;
+      top: 37%;
+      left: 39%;
     }
-  }
-  .el-tires-container {
-    display: grid;
-    position: absolute;
-    right: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 0 auto;
-    grid-gap: 85px;
-    align-items: center;
-    img {
-      width: 120%;
-      margin: 5%;
-      height: 70%;
-      padding: 2%;
-      border-radius: 10px;
-      border: 3px solid white;
+    .cars-selection,
+    .character-selection,
+    .tire-selection {
+      display: none;
     }
-  }
-  .el-characters-container {
-    display: grid;
-    position: absolute;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    right: 0;
-    margin: 0 auto;
-    grid-gap: 88px;
-    align-items: center;
-    .gogocharacter {
-      height: 65%;
-      width: 130%;
-      margin: 2% auto;
-      padding: 2%;
-      border: 3px solid white;
-      border-radius: 10px;
+    .labels {
+      display: flex;
+      flex-direction: column;
+      width: 15%;
+      height: 5%;
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      label {
+        border: 5px solid white;
+        margin: 5% 0;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 900;
+        border-radius: 15px;
+        width: 100%;
+        padding: 7px;
+      }
     }
-  }
-  #tab1:checked ~ .el-car {
-    display: block;
-  }
+    #select-1:checked ~ .cars-selection {
+      width: 30%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5%;
+      position: absolute;
+      top: 10%;
+      left: 2%;
+      img {
+        width: 100%;
+        border: 2px solid white;
+      }
+    }
 
-  #tab2:checked ~ .el-characters {
-    display: block;
-  }
-
-  #tab3:checked ~ .el-tires {
-    display: block;
-  }
-  #tab2:checked ~ .el-car {
-    display: none;
-  }
-
-  #tab3:checked ~ .el-car {
-    display: none;
+    #select-2:checked ~ .character-selection {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 5%;
+      width: 30%;
+      height: 55%;
+      position: absolute;
+      top: 10%;
+      left: 3%;
+      img {
+        border: 2px solid white;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    #select-3:checked ~ .tire-selection {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 25%;
+      grid-gap: 5%;
+      position: absolute;
+      top: 10%;
+      left: 3%;
+      img {
+        border: 2px solid white;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -464,117 +424,6 @@
       .select-wrapper {
         display: none;
       }
-      .mobile-selection {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        input {
-          opacity: 0;
-          height: 0;
-          width: 0;
-          margin: 0;
-          padding: 0;
-          position: fixed;
-          top: 0;
-        }
-        label {
-          margin: 5% auto;
-          border: 2px solid white;
-          text-align: center;
-          width: 40%;
-          color: white;
-          font-weight: 900;
-          border-radius: 10px;
-        }
-        .carss {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          h1 {
-            padding-top: 10%;
-            text-align: center;
-            color: white;
-            text-transform: uppercase;
-            font-weight: 900;
-          }
-          img {
-            width: 70%;
-            height: 50%;
-            margin: 0 auto;
-            margin-top: 30%;
-          }
-        }
-        .characterss {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          h1 {
-            padding-top: 10%;
-            text-align: center;
-            color: white;
-            text-transform: uppercase;
-            font-weight: 900;
-          }
-          img {
-            width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            margin-top: 30%;
-          }
-        }
-        .tiress {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          h1 {
-            padding-top: 10%;
-            text-align: center;
-            color: white;
-            text-transform: uppercase;
-            font-weight: 900;
-          }
-          img {
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            margin-top: 30%;
-          }
-        }
-        .slick-slide {
-          opacity: 0;
-        }
-        .slick-active {
-          opacity: 1;
-        }
-      }
-
-      .arrow {
-        width: 25px;
-      }
-      .next,
-      .prev {
-        position: absolute;
-      }
-      .next {
-        right: 5%;
-        top: 50%;
-        img {
-          width: 35px;
-        }
-      }
-      .prev {
-        top: 50%;
-        z-index: 1;
-      }
-    }
-    .bootons {
-      right: 5%;
     }
   }
 }

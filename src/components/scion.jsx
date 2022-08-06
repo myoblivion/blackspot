@@ -151,7 +151,12 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
   return (
     <div className="scion wrapper">
       <section className="wrapper1">
-        <div className="scion-links" data-aos="fade-up">
+        <div
+          className="scion-links"
+          data-aos="fade-up"
+          data-aos-duration="300"
+          data-aos-offset="100"
+        >
           <ul>
             <li>
               <a href="https://www.facebook.com/ScionFistPhilippines/">
@@ -235,7 +240,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
       </section>
       <section className="wrapper5">
         <h2 className="titles">Characters</h2>
-        <div className="character-selections" data-aos="zoom-in">
+        <div className="character-selections" data-aos="zoom-out">
           <input type="radio" name="profiles" id="select1" />
           <input type="radio" name="profiles" id="select2" />
           <input type="radio" name="profiles" id="select3" />

@@ -21,8 +21,9 @@ import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
-import ggwbroskie from "../images/bannerss-gw.png";
+import ggwbroskie from "../images/gogoracingbackground/desktop.png";
 import icono from "../images/icons/logo.png";
+import bg1 from "../images/gogoracingbackground/tests.png";
 
 // Shadow :D
 import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
@@ -42,7 +43,8 @@ import video1 from "../images/video/Big Update Trailer FB (1).mp4";
 import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
-
+import character1 from "../images/Icon_Character_0008_Reward.png";
+import character2 from "../images/Icon_Character_6.png";
 import {
   FaEnvelope,
   FaFacebook,
@@ -258,14 +260,10 @@ const TestComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="rightx">
               <div className="video">
-                <video
-                  src={video1}
-                  width="750"
-                  height="500"
-                  autoPlay={true}
-                  loop={true}
-                  muted={true}
-                />
+                <img src={bg1} alt="" id="background" />
+                <video src={video1} autoPlay={true} loop={true} muted={true} />
+                <img src={character1} alt="" id="s1" />
+                <img src={character2} alt="" id="s2" />
                 <img src={bshadowLeft} alt="" id="leftu" />
                 <img src={bshadowRight} alt="" id="rightu" />
                 <img src={bshadowBottom} alt="" id="bottomtu" />
@@ -297,7 +295,11 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
                 id="playnowsss"
               >
-                <img src={playNow} alt="" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Play Now</p>
               </a>
               <div className="socialization">
                 <ul>
@@ -383,11 +385,11 @@ const TestComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="rightx">
               <div className="video">
-                <img src={ggwbroskie} alt="" />
+                <img src={ggwbroskie} alt="" className="background" />
               </div>
-              <img src={yshadowLeft} alt="" id="leftu" />
+              {/* <img src={yshadowLeft} alt="" id="leftu" />
               <img src={yshadowRight} alt="" id="rightu" />
-              <img src={yshadowBottom} alt="" id="bottomtu" />
+              <img src={yshadowBottom} alt="" id="bottomtu" /> */}
             </div>
           </div>
           <div className="content4">
