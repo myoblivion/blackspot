@@ -442,9 +442,9 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               <div className="video">
                 <img src={game4} alt="" />
               </div>
-              <img src={vshadowLeft} alt="" id="leftu" />
+              {/* <img src={vshadowLeft} alt="" id="leftu" />
               <img src={vshadowRight} alt="" id="rightu" />
-              <img src={vshadowBottom} alt="" id="bottomtu" />
+              <img src={vshadowBottom} alt="" id="bottomtu" /> */}
             </div>
           </div>
           <div
