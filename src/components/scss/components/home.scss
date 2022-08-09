@@ -1872,8 +1872,8 @@ input[type="radio"] {
       width: 100%;
     }
     #playnowss {
-      top: 785%;
-      left: 10%;
+      top: 685%;
+      left: 60%;
       height: 63%;
       -webkit-user-drag: none;
       user-select: none;
@@ -2382,7 +2382,7 @@ input[type="radio"] {
         width: 35%;
         height: 50%;
         z-index: 99;
-        left: -13%;
+        left: -12%;
         line-height: 2;
         top: 400%;
         position: absolute;
@@ -2433,14 +2433,14 @@ input[type="radio"] {
     }
     #ggr-logz {
       z-index: 99;
-      left: 50%;
-      top: 350%;
+      left: 44%;
+      top: 360%;
       -webkit-user-drag: none;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 27%;
+      width: 45%;
     }
     img {
       position: fixed;
@@ -2493,10 +2493,11 @@ input[type="radio"] {
   }
   .displayers {
     display: flex;
-    margin-left: 2%;
-    position: relative;
-    width: 55%;
+    position: absolute;
+    width: 50%;
     height: 10%;
+    top: 85%;
+    left: 35%;
     label {
       display: flex;
       flex-direction: column;

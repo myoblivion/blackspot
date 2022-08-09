@@ -408,7 +408,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                   overlayBackground="transparent"
                 />
               </Link>
-              <h1>
+              <h1 id="ggchainh1">
                 Are you ready to explore the dimension of these cute characters?
                 They are coming soon to play with you. <a href="">Read More</a>
               </h1>

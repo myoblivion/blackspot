@@ -42,7 +42,6 @@ import GameGuidePage from "./gameguide";
 import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
-import TestComponent from "./test";
 import EditPost from "./editPost";
 import { useParams } from "react-router-dom";
 
@@ -229,7 +228,6 @@ const Appcomponent = ({}) => {
               path="/ggr-news/*"
               element={<GGRnews newspage={newspage} />}
             />
-            <Route path="/test" element={<TestComponent />} />
             <Route path="/editpost/:postID" exact element={<EditPost />} />
           </Routes>
         </div>
