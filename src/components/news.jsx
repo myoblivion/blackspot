@@ -2,10 +2,18 @@ import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 // banners
-import image1 from "../images/gogoracingbackground/GGR_BG.png";
-import image2 from "../images/Scion Fist Desktop 2.png";
-import image3 from "../images/gogoracingbackground/GGR_BG.png";
-import image4 from "../images/gogoracingbackground/GGR_BG.png";
+import Banner1 from "../images/banner4l.png";
+import Banner2 from "../images/gogoraces.jpg";
+import Banner3 from "../images/gogoworlds.jpg";
+import Banner4 from "../images/game3.jpg";
+import scionchar from "../images/characters/ch11.png";
+import scionlogo from "../images/scionlogo.png";
+import ggricon from "../images/icons/gogoracing.png";
+import ggrcharacter from "../images/edit/ggrc-2.png";
+import gogoworldicon from "../images/icons/gogoworld.png";
+import gogoworldchar from "../images/characters/Jjiljjil.png";
+import gogochainicon from "../images/icons/gogoc.png";
+import gogochainchar from "../images/ggr-characters/6-hekhek-costume-1.png";
 import {
   FaUserCircle,
   FaSearch,
@@ -33,24 +41,59 @@ const NewsComponent = ({ props, ref, currentRoute }) => {
             <h1>News & Announcements</h1>
           </div>
           <div className="news-cards">
-            <div class="diamond-grid">
-              <div></div>
-              <img src={image1} alt="" class="diamond-grid__item" />
-              <div></div>
-              <img
-                src="https://picsum.photos/300"
-                alt=""
-                class="diamond-grid__item"
-              />
-              <div></div>
-              <img src={image2} alt="" class="diamond-grid__item" />
-              <div></div>
-              <img
-                src="https://picsum.photos/500"
-                alt=""
-                class="diamond-grid__item"
-              />
-              <div></div>
+            <div className="news-card1">
+              <div className="left">
+                <img src={ggrcharacter} alt="" />
+              </div>
+              <div className="right">
+                <img src={ggricon} alt="" />
+                <h3>See latest news, announcements, patch and guides.</h3>
+                <Link
+                  to="/gogoracingnews"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
+            <div className="news-card2">
+              <div className="left">
+                <img src={scionchar} alt="" />
+              </div>
+              <div className="right">
+                <img src={scionlogo} alt="" />
+                <h3>See latest news, announcements, patch and guides.</h3>
+                <Link
+                  to="/scionnews"
+                  {...props}
+                  ref={ref}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
+            <div className="news-card3">
+              <div className="left">
+                <img src={gogoworldchar} alt="" />
+              </div>
+              <div className="right">
+                <img src={gogoworldicon} alt="" />
+                <h3>See latest news, announcements, patch and guides.</h3>
+                <p>Read more</p>
+              </div>
+            </div>
+            <div className="news-card4">
+              <div className="left">
+                <img src={gogochainchar} alt="" />
+              </div>
+              <div className="right">
+                <img src={gogochainicon} alt="" />
+                <h3>See latest news, announcements, patch and guides.</h3>
+                <p>Read More</p>
+              </div>
             </div>
           </div>
         </div>

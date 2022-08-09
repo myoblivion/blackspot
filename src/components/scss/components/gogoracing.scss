@@ -22,6 +22,42 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Alba";
+  src: url("/src/alba.TTF"), url("/src/alba.TTF") format("truetype"),
+    url("/src/alba.TTF") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avengance";
+  src: url("/src/avengance.TTF"), url("/src/avengance.TTF") format("truetype"),
+    url("/src/avengance.TTF") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes names {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
 .gogoracing {
   .gogoracing-wrapper {
     width: 100%;
@@ -129,7 +165,7 @@
   .gamedescription {
     width: 100%;
     height: 100vh;
-    background-image: url("/src/images/gogoracingbackground/web_bg_2.png");
+    background-image: url("/src/images/gogoracingbackground/GGR_BG.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -226,7 +262,7 @@
 }
 .features-select {
   width: 100%;
-  height: 130vh;
+  height: 115vh;
   background-image: url(/src/images/gogoracingbackground/web_bg_3.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -236,8 +272,8 @@
   #titled {
     font-family: "EntezareZohoor2";
     color: #de35e8;
-    font-size: 98px;
-    padding-top: 5%;
+    font-size: 80px;
+    padding-top: 3%;
     text-shadow: 18px 12px #670a2a, -18px -12px #40d993;
     text-transform: uppercase;
     text-align: center;
@@ -261,17 +297,12 @@
       position: fixed;
       top: 0;
     }
-    #testss {
-      position: absolute;
-      left: 40%;
-      top: 25%;
-      width: 30%;
-    }
+
     #floor {
       position: absolute;
       width: 35%;
-      height: 35%;
-      top: 37%;
+      height: 20%;
+      top: 48%;
       left: 39%;
     }
     .cars-selection,
@@ -287,44 +318,666 @@
       position: absolute;
       right: 5%;
       top: 10%;
-      label {
+      #lblcars,
+      #lblchars {
         border: 5px solid white;
         margin: 5% 0;
         text-transform: uppercase;
+        text-align: center;
         color: white;
-        font-weight: 900;
         border-radius: 15px;
         width: 100%;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        font-size: 26px;
         padding: 7px;
+        font-family: "avengance";
       }
     }
+
     #select-1:checked ~ .cars-selection {
       width: 30%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 5%;
+      grid-gap: 6%;
       position: absolute;
-      top: 10%;
+      top: 2%;
       left: 2%;
-      img {
+      #tlt1 {
+        left: 39%;
+      }
+      #tlt2 {
+        top: 33%;
+        left: 39%;
+      }
+      #tlt3 {
+        top: 76%;
+        left: 39%;
+      }
+      label {
+        padding: 1px;
+        width: 90%;
+        img {
+          width: 140%;
+        }
+      }
+      #shwcar1,
+      #shwcar2,
+      #shwcar3,
+      #shwcar4,
+      #shwcar5,
+      #shwcar6,
+      #shwcar7,
+      #shwcar8,
+      #shwcar9,
+      #shwcar10,
+      #shwcar11,
+      #shwcar12 {
+        display: none;
+      }
+      #ncar1,
+      #ncar2,
+      #ncar3,
+      #ncar4,
+      #ncar5,
+      #ncar6,
+      #ncar7,
+      #ncar8,
+      #ncar9,
+      #ncar10,
+      #ncar11 {
+        display: none;
+      }
+      #slt1:checked ~ #ncar1 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 130%;
+      }
+      #slt2:checked ~ #ncar2 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 150%;
+      }
+      #slt3:checked ~ #ncar3 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 135%;
+      }
+      #slt4:checked ~ #ncar4 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 165%;
+      }
+      #slt5:checked ~ #ncar5 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 150%;
+      }
+      #slt6:checked ~ #ncar6 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 130%;
+      }
+      #slt7:checked ~ #ncar7 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 130%;
+      }
+      #slt8:checked ~ #ncar8 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 140%;
+      }
+      #slt9:checked ~ #ncar9 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 145%;
+      }
+      #slt10:checked ~ #ncar10 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 135%;
+      }
+      #slt11:checked ~ #ncar11 {
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 120%;
+      }
+      #lblcar1,
+      #lblcar2,
+      #lblcar3,
+      #lblcar4,
+      #lblcar5,
+      #lblcar6,
+      #lblcar7,
+      #lblcar8,
+      #lblcar9,
+      #lblcar10,
+      #lblcar11 {
+        filter: brightness(70%);
+      }
+      #lblcar1:hover {
+        filter: brightness(100%);
+      }
+      #lblcar2:hover {
+        filter: brightness(100%);
+      }
+      #lblcar3:hover {
+        filter: brightness(100%);
+      }
+      #lblcar4:hover {
+        filter: brightness(100%);
+      }
+      #lblcar5:hover {
+        filter: brightness(100%);
+      }
+      #lblcar6:hover {
+        filter: brightness(100%);
+      }
+      #lblcar7:hover {
+        filter: brightness(100%);
+      }
+      #lblcar8:hover {
+        filter: brightness(100%);
+      }
+      #lblcar9:hover {
+        filter: brightness(100%);
+      }
+      #lblcar10:hover {
+        filter: brightness(100%);
+      }
+      #slt1:checked ~ #lblcar1 {
+        filter: brightness(100%);
+      }
+      #slt2:checked ~ #lblcar2 {
+        filter: brightness(100%);
+      }
+      #slt3:checked ~ #lblcar3 {
+        filter: brightness(100%);
+      }
+      #slt4:checked ~ #lblcar4 {
+        filter: brightness(100%);
+      }
+      #slt5:checked ~ #lblcar5 {
+        filter: brightness(100%);
+      }
+      #slt6:checked ~ #lblcar6 {
+        filter: brightness(100%);
+      }
+      #slt7:checked ~ #lblcar7 {
+        filter: brightness(100%);
+      }
+      #slt8:checked ~ #lblcar8 {
+        filter: brightness(100%);
+      }
+      #slt19:checked ~ #lblcar9 {
+        filter: brightness(100%);
+      }
+      #slt10:checked ~ #lblcar10 {
+        filter: brightness(100%);
+      }
+      #slt11:checked ~ #lblcar11 {
+        filter: brightness(100%);
+      }
+      #slt1:checked ~ #shwcar1 {
+        display: block;
+        display: block;
         width: 100%;
-        border: 2px solid white;
+        position: absolute;
+        top: 35%;
+        left: 140%;
+      }
+      #slt2:checked ~ #shwcar2 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+
+        left: 140%;
+      }
+      #slt3:checked ~ #shwcar3 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+
+        left: 140%;
+      }
+      #slt4:checked ~ #shwcar4 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 140%;
+      }
+      #slt5:checked ~ #shwcar5 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+
+        left: 140%;
+      }
+      #slt6:checked ~ #shwcar6 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+
+        left: 140%;
+      }
+      #slt7:checked ~ #shwcar7 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+
+        left: 140%;
+      }
+      #slt8:checked ~ #shwcar8 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        left: 140%;
+      }
+      #slt9:checked ~ #shwcar9 {
+        display: block;
+        width: 120%;
+        position: absolute;
+        top: 35%;
+        left: 120%;
+      }
+      #slt10:checked ~ #shwcar10 {
+        display: block;
+        width: 90%;
+        position: absolute;
+        top: 35%;
+        left: 140%;
+      }
+      #slt11:checked ~ #shwcar11 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 140%;
       }
     }
 
     #select-2:checked ~ .character-selection {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 5%;
-      width: 30%;
-      height: 55%;
+      width: 25%;
       position: absolute;
-      top: 10%;
+      top: 2%;
       left: 3%;
-      img {
-        border: 2px solid white;
+      label {
         width: 100%;
-        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      #name1,
+      #name2,
+      #name3,
+      #name4,
+      #name5,
+      #name6,
+      #name7,
+      #name8,
+      #name9,
+      #name10 {
+        display: none;
+        animation: names 0.1s ease-in;
+      }
+      #chrslt1:checked ~ #name1 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt2:checked ~ #name2 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt3:checked ~ #name3 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt4:checked ~ #name4 {
+        display: block;
+        position: absolute;
+        left: 185%;
+        top: 85%;
+        width: 70%;
+      }
+      #chrslt5:checked ~ #name5 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt6:checked ~ #name6 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt7:checked ~ #name7 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt8:checked ~ #name8 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt9:checked ~ #name9 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 85%;
+        width: 100%;
+      }
+      #chrslt10:checked ~ #name10 {
+        display: block;
+        position: absolute;
+        left: 175%;
+        top: 85%;
+        width: 60%;
+      }
+      #chshw1,
+      #chshw2,
+      #chshw3,
+      #chshw4,
+      #chshw5,
+      #chshw6,
+      #chshw7,
+      #chshw8,
+      #chshw9,
+      #chshw10,
+      #chshw11,
+      #chshw12,
+      #chshw13,
+      #chshw14,
+      #chshw15,
+      #chshw16,
+      #chshw17,
+      #chshw18 {
+        display: none;
+        animation: names 0.1s ease-in;
+      }
+      #cl1,
+      #cl2,
+      #cl3,
+      #cl4,
+      #cl5,
+      #cl6,
+      #cl7,
+      #cl8,
+      #cl9,
+      #cl10 {
+        filter: brightness(60%);
+      }
+      #cl1:hover {
+        filter: brightness(100%);
+      }
+      #cl2:hover {
+        filter: brightness(100%);
+      }
+      #cl3:hover {
+        filter: brightness(100%);
+      }
+      #cl4:hover {
+        filter: brightness(100%);
+      }
+      #cl5:hover {
+        filter: brightness(100%);
+      }
+      #cl6:hover {
+        filter: brightness(100%);
+      }
+      #cl7:hover {
+        filter: brightness(100%);
+      }
+      #cl8:hover {
+        filter: brightness(100%);
+      }
+      #cl9:hover {
+        filter: brightness(100%);
+      }
+      #cl10:hover {
+        filter: brightness(100%);
+      }
+      #chrslt1:checked ~ #cl1 {
+        filter: brightness(100%);
+      }
+      #chrslt2:checked ~ #cl2 {
+        filter: brightness(100%);
+      }
+      #chrslt3:checked ~ #cl3 {
+        filter: brightness(100%);
+      }
+      #chrslt4:checked ~ #cl4 {
+        filter: brightness(100%);
+      }
+      #chrslt5:checked ~ #cl5 {
+        filter: brightness(100%);
+      }
+      #chrslt6:checked ~ #cl6 {
+        filter: brightness(100%);
+      }
+      #chrslt7:checked ~ #cl7 {
+        filter: brightness(100%);
+      }
+      #chrslt8:checked ~ #cl8 {
+        filter: brightness(100%);
+      }
+      #chrslt9:checked ~ #cl9 {
+        filter: brightness(100%);
+      }
+      #chrslt10:checked ~ #cl10 {
+        filter: brightness(100%);
+      }
+      #chrslt1:checked ~ #chshw1 {
+        display: block;
+        position: absolute;
+        left: 165%;
+        top: 19%;
+        width: 100%;
+        z-index: 99;
+      }
+      #chrslt2:checked ~ #chshw2 {
+        display: block;
+        position: absolute;
+        left: 185%;
+        z-index: 99;
+        top: 20%;
+        width: 100%;
+      }
+      #chrslt3:checked ~ #chshw3 {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        left: 200%;
+        top: 20%;
+        width: 100%;
+      }
+      #chrslt4:checked ~ #chshw4 {
+        display: block;
+        position: absolute;
+        left: 195%;
+        z-index: 99;
+        top: 20%;
+        width: 100%;
+      }
+      #chrslt5:checked ~ #chshw5 {
+        display: block;
+        position: absolute;
+        left: 205%;
+        z-index: 99;
+        top: 23%;
+        width: 100%;
+      }
+      #chrslt6:checked ~ #chshw6 {
+        display: block;
+        z-index: 99;
+        position: absolute;
+        left: 195%;
+        top: 22.5%;
+        width: 100%;
+      }
+      #chrslt7:checked ~ #chshw7 {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        left: 135%;
+        top: 23%;
+        width: 100%;
+      }
+      #chrslt8:checked ~ #chshw8 {
+        display: block;
+        position: absolute;
+        left: 195%;
+        z-index: 99;
+        top: 20%;
+        width: 100%;
+      }
+      #chrslt9:checked ~ #chshw9 {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        left: 125%;
+        top: 22%;
+        width: 100%;
+      }
+      #chrslt1:checked ~ #fade1 {
+        display: block;
+        position: absolute;
+        left: 130%;
+        top: 0%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #chrslt2:checked ~ #fade2 {
+        display: block;
+        position: absolute;
+        left: 108%;
+        top: 4%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #chrslt3:checked ~ #fade3 {
+        display: block;
+        position: absolute;
+        left: 110%;
+        top: 6%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #chrslt4:checked ~ #fade4 {
+        display: block;
+        position: absolute;
+        left: 125%;
+        top: 0%;
+        width: 130%;
+        opacity: 0.1;
+      }
+      #chrslt5:checked ~ #fade5 {
+        display: block;
+        position: absolute;
+        left: 130%;
+        top: 0%;
+        width: 120%;
+        opacity: 0.1;
+      }
+      #chrslt6:checked ~ #fade6 {
+        display: block;
+        position: absolute;
+        left: 110%;
+        top: 0%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #chrslt7:checked ~ #fade7 {
+        display: block;
+        position: absolute;
+        left: 155%;
+        top: 2%;
+        width: 130%;
+        opacity: 0.1;
+      }
+      #chrslt8:checked ~ #fade8 {
+        display: block;
+        position: absolute;
+        left: 115%;
+        top: 0%;
+        width: 130%;
+        opacity: 0.1;
+      }
+      #chrslt9:checked ~ #fade9 {
+        display: block;
+        position: absolute;
+        left: 146%;
+        top: 0%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #chrslt10:checked ~ #fade10 {
+        display: block;
+        position: absolute;
+        left: 128%;
+        top: 5%;
+        width: 130%;
+        opacity: 0.1;
+      }
+      #fade1,
+      #fade2,
+      #fade3,
+      #fade4,
+      #fade5,
+      #fade6,
+      #fade7,
+      #fade8,
+      #fade9,
+      #fade10 {
+        animation: fade 0.2s ease-in;
+        display: none;
+      }
+      #chrslt10:checked ~ #chshw10 {
+        display: block;
+        position: absolute;
+        left: 195%;
+        top: 39%;
+        z-index: 99;
+        width: 70%;
       }
     }
     #select-3:checked ~ .tire-selection {
@@ -333,11 +986,111 @@
       width: 25%;
       grid-gap: 5%;
       position: absolute;
-      top: 10%;
+      top: 2%;
       left: 3%;
-      img {
-        border: 2px solid white;
-        width: 100%;
+      label {
+        img {
+          border: 2px solid white;
+          width: 100%;
+        }
+      }
+      #trshw1,
+      #trshw2,
+      #trshw3,
+      #trshw4,
+      #trshw5,
+      #trshw6,
+      #trshw7,
+      #trshw8,
+      #trshw9,
+      #trshw10,
+      #trshw11,
+      #trshw12 {
+        display: none;
+      }
+      #trch1:checked ~ #trshw1 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch2:checked ~ #trshw2 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch3:checked ~ #trshw3 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch4:checked ~ #trshw4 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch5:checked ~ #trshw5 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch6:checked ~ #trshw6 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch7:checked ~ #trshw7 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch8:checked ~ #trshw8 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch9:checked ~ #trshw9 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch10:checked ~ #trshw10 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch11:checked ~ #trshw11 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
+      }
+      #trch12:checked ~ #trshw12 {
+        display: block;
+        position: absolute;
+        left: 180%;
+        width: 70%;
+        top: 50%;
       }
     }
   }
@@ -429,14 +1182,14 @@
 }
 
 .gogoracing-footer-distributed {
-  overflow-y: hidden;
   background: rgb(68, 68, 68);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-  padding: 35px 50px;
-  position: relative;
+  margin: 0;
+  overflow-y: hidden;
+  padding: 2% 50px;
 }
 .footer-left {
   display: flex;

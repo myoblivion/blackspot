@@ -9,9 +9,10 @@ import "aos/dist/aos.css";
 import getit from "../images/app-download.png";
 import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
-
+import GifLoader from "react-gif-loader";
 import playNow from "../images/icons/play_now.png";
 import game4 from "../images/gogoc.png";
+import GoGoChainLogo from "../images/icons/gogochain.png";
 import scionnnnn from "../images/scionss.png";
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
@@ -23,7 +24,8 @@ import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
 import ggwbroskie from "../images/gogoracingbackground/desktop.png";
 import icono from "../images/icons/logo.png";
-import bg1 from "../images/gogoracingbackground/tests.png";
+import bg1 from "../images/gogoracingbackground/ggrbackground.png";
+import sbg1 from "../images/gogoracingbackground/scionbg.png";
 
 // Shadow :D
 import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
@@ -262,8 +264,6 @@ const TestComponent = ({ props, ref, currentRoute }) => {
               <div className="video">
                 <img src={bg1} alt="" id="background" />
                 <video src={video1} autoPlay={true} loop={true} muted={true} />
-                <img src={character1} alt="" id="s1" />
-                <img src={character2} alt="" id="s2" />
                 <img src={bshadowLeft} alt="" id="leftu" />
                 <img src={bshadowRight} alt="" id="rightu" />
                 <img src={bshadowBottom} alt="" id="bottomtu" />
@@ -329,6 +329,7 @@ const TestComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="rightx">
               <div className="video">
+                <img src={sbg1} alt="" id="background" />
                 <video
                   src={video2}
                   width="750"
@@ -337,10 +338,10 @@ const TestComponent = ({ props, ref, currentRoute }) => {
                   loop={true}
                   muted={true}
                 />
-              </div>
-              <img src={shadowLeft} alt="" id="leftu" />
+                {/* <img src={shadowLeft} alt="" id="leftu" />
               <img src={shadowRight} alt="" id="rightu" />
-              <img src={shadowBottom} alt="" id="bottomtu" />
+              <img src={shadowBottom} alt="" id="bottomtu" /> */}
+              </div>
             </div>
           </div>
           <div className="content3">
@@ -395,12 +396,17 @@ const TestComponent = ({ props, ref, currentRoute }) => {
           <div className="content4">
             <div className="leftx">
               <Link
-                to="/scion"
+                to="/gogochain"
                 {...props}
                 ref={ref}
                 onClick={() => window.scrollTo(0, 0)}
+                id="chain"
               >
-                <img src={Gogochain} alt="" id="chain" />
+                <GifLoader
+                  loading={true}
+                  imageSrc="https://media1.giphy.com/media/essaF8bzvC3rra18sP/giphy.gif?cid=790b76111f299a6898d899429189b7e8ac6adaf3b9c80e60&rid=giphy.gif&ct=s"
+                  overlayBackground="transparent"
+                />
               </Link>
               <h1>
                 Are you ready to explore the dimension of these cute characters?
@@ -455,11 +461,11 @@ const TestComponent = ({ props, ref, currentRoute }) => {
             </label>
             <label htmlFor="game3">
               {" "}
-              <img src={GGRICON} alt="GogoWorld" />
+              <img src={Gogoworld} alt="GogoWorld" />
             </label>
             <label htmlFor="game4">
               {" "}
-              <img src={GGRICON} alt="GogoChain" />
+              <img src={GoGoChainLogo} alt="GogoChain" />
             </label>
           </div>
         </div>

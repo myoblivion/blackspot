@@ -14,24 +14,49 @@ import nextt from "../images/gogoracingbackground/next.png";
 import movingchar from "../images/edit/stuff.png";
 import marketplace from "../images/goto.png";
 // Characters
-import character1 from "../images/ggr-characters/1-pengsuni-costume-1.png";
-import character2 from "../images/ggr-characters/1-pengsuni-costume-2.png";
-import character3 from "../images/ggr-characters/1-pengsuni-costume-3.png";
-import character4 from "../images/ggr-characters/2-mongi-costume-1.png";
-import character5 from "../images/ggr-characters/2-mongi-costume-2.png";
-import character6 from "../images/ggr-characters/2-mongi-costume-3.png";
-import character7 from "../images/ggr-characters/3-euik-costume-1.png";
-import character8 from "../images/ggr-characters/3-euik-costume-2.png";
-import character9 from "../images/ggr-characters/3-euik-costume-3.png";
-import character10 from "../images/ggr-characters/4-tosuni-costume-1.png";
-import character11 from "../images/ggr-characters/4-tosuni-costume-1.png";
-import character12 from "../images/ggr-characters/4-tosuni-costume-1.png";
-import character13 from "../images/ggr-characters/6-hekhek-costume-1.png";
-import character14 from "../images/ggr-characters/6-hekhek-costume-2.png";
-import character15 from "../images/ggr-characters/6-hekhek-costume-3.png";
-import character16 from "../images/ggr-characters/8-eureungi-costume-1.png";
-import character17 from "../images/ggr-characters/8-eureungi-costume-2.png";
-import character18 from "../images/ggr-characters/8-eureungi-costume-3.png";
+import character1 from "../images/ggr-characters/ch1.png";
+import character2 from "../images/ggr-characters/ch2.png";
+import character3 from "../images/ggr-characters/ch3.png";
+import character4 from "../images/ggr-characters/ch4.png";
+import character5 from "../images/ggr-characters/ch5.png";
+import character6 from "../images/ggr-characters/ch6.png";
+import character7 from "../images/ggr-characters/ch7.png";
+import character8 from "../images/ggr-characters/ch8.png";
+import character9 from "../images/ggr-characters/ch9.png";
+import character10 from "../images/ggr-characters/ch10.png";
+// 3d Characters
+import dcharacter1 from "../images/ingamecharacters/ch1.png";
+import dcharacter2 from "../images/ingamecharacters/ch2.png";
+import dcharacter3 from "../images/ingamecharacters/ch3.png";
+import dcharacter4 from "../images/ingamecharacters/ch4.png";
+import dcharacter5 from "../images/ingamecharacters/ch5.png";
+import dcharacter6 from "../images/ingamecharacters/ch6.png";
+import dcharacter7 from "../images/ingamecharacters/ch7.png";
+import dcharacter8 from "../images/ingamecharacters/ch8.png";
+import dcharacter9 from "../images/ingamecharacters/ch9.png";
+import dcharacter10 from "../images/ingamecharacters/ch10.png";
+// fade ch
+import fade1 from "../images/ingamecharacters/fade1.png";
+import fade2 from "../images/ingamecharacters/fade2.png";
+import fade3 from "../images/ingamecharacters/fade3.png";
+import fade4 from "../images/ingamecharacters/fade4.png";
+import fade5 from "../images/ingamecharacters/fade5.png";
+import fade6 from "../images/ingamecharacters/fade6.png";
+import fade7 from "../images/ingamecharacters/fade7.png";
+import fade8 from "../images/ingamecharacters/fade8.png";
+import fade9 from "../images/ingamecharacters/fade9.png";
+import fade10 from "../images/ingamecharacters/fade10.png";
+// Name
+import Name1 from "../images/characters/name1.png";
+import Name2 from "../images/characters/name2.png";
+import Name3 from "../images/characters/name3.png";
+import Name4 from "../images/characters/name4.png";
+import Name5 from "../images/characters/name5.png";
+import Name6 from "../images/characters/name6.png";
+import Name7 from "../images/characters/name7.png";
+import Name8 from "../images/characters/name8.png";
+import Name9 from "../images/characters/name9.png";
+import Name10 from "../images/characters/name10.png";
 // end of characters
 import playNow from "../images/icons/play_now.png";
 import nftboi1 from "../images/gogoracingbackground/NFTcar_1.png";
@@ -39,18 +64,45 @@ import nftboi2 from "../images/gogoracingbackground/weeee.png";
 import somedog from "../images/somedog.png";
 import floor from "../images/floor.png";
 // Cars
-import car1 from "../images/ggr-cars/gogo-racing-car-02-1.png";
-import car2 from "../images/ggr-cars/gogo-racing-car-02-2.png";
-import car3 from "../images/ggr-cars/gogo-racing-car-02-3.png";
-import car4 from "../images/ggr-cars/gogo-racing-car-03-1.png";
-import car5 from "../images/ggr-cars/gogo-racing-car-03-2.png";
-import car6 from "../images/ggr-cars/gogo-racing-car-03-3.png";
-import car7 from "../images/ggr-cars/gogo-racing-car-04-1.png";
-import car8 from "../images/ggr-cars/gogo-racing-car-04-2.png";
-import car9 from "../images/ggr-cars/gogo-racing-car-04-3.png";
-import car10 from "../images/ggr-cars/gogo-racing-car-05-1.png";
-import car11 from "../images/ggr-cars/gogo-racing-car-05-2.png";
-import car12 from "../images/ggr-cars/gogo-racing-car-05-3.png";
+import car1 from "../images/characters/car1.png";
+import car2 from "../images/characters/car2.png";
+import car3 from "../images/characters/car3.png";
+import car4 from "../images/characters/car4.png";
+import car5 from "../images/characters/car5.png";
+import car6 from "../images/characters/car6.png";
+import car7 from "../images/characters/car7.png";
+import car8 from "../images/characters/car8.png";
+import car9 from "../images/characters/car9.png";
+import car10 from "../images/characters/car10.png";
+import car11 from "../images/characters/car11.png";
+
+//Car Names
+import Orca from "../images/ggr-cars/ncar1.png";
+import MadBear from "../images/ggr-cars/ncar2.png";
+import MastersStrix from "../images/ggr-cars/ncar3.png";
+import CarrotStar from "../images/ggr-cars/ncar4.png";
+import ILB from "../images/ggr-cars/ncar5.png";
+import DoggyVan from "../images/ggr-cars/ncar6.png";
+import GoldenCarriage from "../images/ggr-cars/ncar7.png";
+import Cactus from "../images/ggr-cars/ncar8.png";
+import Minimi from "../images/ggr-cars/ncar9.png";
+import SpeedStar from "../images/ggr-cars/ncar10.png";
+import TrainingCar from "../images/ggr-cars/ncar11.png";
+
+// Car Displays
+import cardisplay1 from "../images/ggr-cars/gogo-racing-car-02-1.png";
+import cardisplay2 from "../images/ggr-cars/gogo-racing-car-02-2.png";
+import cardisplay3 from "../images/ggr-cars/gogo-racing-car-02-3.png";
+// import cardisplay4 from "../images/ggr-cars/gogo-racing-car-03-1.png";
+import cardisplay4 from "../images/ggr-cars/carc1.png";
+import cardisplay5 from "../images/ggr-cars/gogo-racing-car-03-2.png";
+import cardisplay6 from "../images/ggr-cars/gogo-racing-car-03-3.png";
+import cardisplay7 from "../images/ggr-cars/gogo-racing-car-04-1.png";
+import cardisplay8 from "../images/ggr-cars/gogo-racing-car-04-2.png";
+import cardisplay9 from "../images/ggr-cars/gogo-racing-car-04-3.png";
+import cardisplay10 from "../images/ggr-cars/Icon_CarSet_0006.png";
+import cardisplay11 from "../images/ggr-cars/image-removebg-preview_39.png";
+
 // Tires
 import tire1 from "../images/ggr-tires/gogo-racing-tire-26-1.png";
 import tire2 from "../images/ggr-tires/gogo-racing-tire-26-2.png";
@@ -273,153 +325,238 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       {/* Tune Your Race */}
       <section className="features-select">
         <h1 id="titled">Tune your race</h1>
-        <h2 className="disclaimer">Some of these will be available SOON.</h2>
         <div className="select-wrapper">
-          <img src={floor} alt="" id="floor" />
-          <img src={car1} alt="" id="testss" />
+          {/* <img src={floor} alt="" id="floor" /> */}
           <div className="selections">
             {/* Labels */}
             <div className="selections-wrapper">
-              <input type="radio" id="select-1" name="selectors" />
+              <input
+                type="radio"
+                id="select-1"
+                name="selectors"
+                defaultChecked
+              />
               <input type="radio" id="select-2" name="selectors" />
-              <input type="radio" id="select-3" name="selectors" />
+              {/* <input type="radio" id="select-3" name="selectors" /> */}
               <div className="labels">
-                <label htmlFor="select-1">Cars</label>
-                <label htmlFor="select-2">Characters</label>
-                <label htmlFor="select-3">Custom Parts</label>
+                <label htmlFor="select-1" id="lblcars">
+                  Cars
+                </label>
+                <label htmlFor="select-2" id="lblchars">
+                  Characters
+                </label>
+                {/* <label htmlFor="select-3">Custom Parts</label> */}
               </div>
               <div className="cars-selection">
-                <label htmlFor="">
+                <input type="radio" name="sltchar" id="slt1" defaultChecked />
+                <input type="radio" name="sltchar" id="slt2" />
+                <input type="radio" name="sltchar" id="slt3" />
+                <input type="radio" name="sltchar" id="slt4" />
+                <input type="radio" name="sltchar" id="slt5" />
+                <input type="radio" name="sltchar" id="slt6" />
+                <input type="radio" name="sltchar" id="slt7" />
+                <input type="radio" name="sltchar" id="slt8" />
+                <input type="radio" name="sltchar" id="slt9" />
+                <input type="radio" name="sltchar" id="slt10" />
+                <input type="radio" name="sltchar" id="slt11" />
+                <label htmlFor="slt1" id="lblcar1">
                   <img src={car1} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt2" id="lblcar2">
                   <img src={car2} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt3" id="lblcar3">
                   <img src={car3} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt4" id="lblcar4">
                   <img src={car4} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt5" id="lblcar5">
                   <img src={car5} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt6" id="lblcar6">
                   <img src={car6} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt7" id="lblcar7">
                   <img src={car7} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt8" id="lblcar8">
                   <img src={car8} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt9" id="lblcar9">
                   <img src={car9} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt10" id="lblcar10">
                   <img src={car10} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="slt11" id="lblcar11">
                   <img src={car11} alt="" />
                 </label>
-                <label htmlFor="">
-                  <img src={car12} alt="" />
-                </label>
+                <img src={cardisplay1} alt="" id="shwcar1" />
+                <img src={TrainingCar} alt="" id="ncar1" />
+                <img src={cardisplay2} alt="" id="shwcar2" />
+                <img src={Minimi} alt="" id="ncar2" />
+                <img src={cardisplay3} alt="" id="shwcar3" />
+                <img src={SpeedStar} alt="" id="ncar3" />
+                <img src={cardisplay4} alt="" id="shwcar4" />
+                <img src={Orca} alt="" id="ncar4" />
+                <img src={cardisplay5} alt="" id="shwcar5" />
+                <img src={MadBear} alt="" id="ncar5" />
+                <img src={cardisplay6} alt="" id="shwcar6" />
+                <img src={MastersStrix} alt="" id="ncar6" />
+                <img src={cardisplay7} alt="" id="shwcar7" />
+                <img src={CarrotStar} alt="" id="ncar7" />
+                <img src={cardisplay8} alt="" id="shwcar8" />
+                <img src={DoggyVan} alt="" id="ncar8" />
+                <img src={cardisplay9} alt="" id="shwcar9" />
+                <img src={Cactus} alt="" id="ncar9" />
+                <img src={cardisplay10} alt="" id="shwcar10" />
+                <img src={ILB} alt="" id="ncar10" />
+                <img src={cardisplay11} alt="" id="shwcar11" />
+                <img src={GoldenCarriage} alt="" id="ncar11" />
+                {/* <img src={car10} alt="" id="shwcar10" />
+                <img src={car11} alt="" id="shwcar11" />
+                <img src={car12} alt="" id="shwcar12" /> */}
               </div>
               <div className="character-selection">
-                <label htmlFor="">
+                <input
+                  type="radio"
+                  name="char-selector"
+                  id="chrslt1"
+                  defaultChecked
+                />
+                <input type="radio" name="char-selector" id="chrslt2" />
+                <input type="radio" name="char-selector" id="chrslt3" />
+                <input type="radio" name="char-selector" id="chrslt4" />
+                <input type="radio" name="char-selector" id="chrslt5" />
+                <input type="radio" name="char-selector" id="chrslt6" />
+                <input type="radio" name="char-selector" id="chrslt7" />
+                <input type="radio" name="char-selector" id="chrslt8" />
+                <input type="radio" name="char-selector" id="chrslt9" />
+                <input type="radio" name="char-selector" id="chrslt10" />
+                <label htmlFor="chrslt1" id="cl1">
                   <img src={character1} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt2" id="cl2">
                   <img src={character2} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt3" id="cl3">
                   <img src={character3} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt4" id="cl4">
                   <img src={character4} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt5" id="cl5">
                   <img src={character5} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt6" id="cl6">
                   <img src={character6} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt7" id="cl7">
                   <img src={character7} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt8" id="cl8">
                   <img src={character8} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt9" id="cl9">
                   <img src={character9} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="chrslt10" id="cl10">
                   <img src={character10} alt="" />
                 </label>
-                <label htmlFor="">
-                  <img src={character11} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character12} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character13} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character14} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character15} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character16} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character17} alt="" />
-                </label>
-                <label htmlFor="">
-                  <img src={character18} alt="" />
-                </label>
+                <img src={dcharacter1} alt="" id="chshw1" />
+                <img src={fade1} alt="" id="fade1" />
+                <img src={Name1} alt="" id="name1" />
+                <img src={dcharacter2} alt="" id="chshw2" />
+                <img src={fade2} alt="" id="fade2" />
+                <img src={Name2} alt="" id="name2" />
+                <img src={dcharacter3} alt="" id="chshw3" />
+                <img src={fade3} alt="" id="fade3" />
+                <img src={Name3} alt="" id="name3" />
+                <img src={dcharacter4} alt="" id="chshw4" />
+                <img src={fade4} alt="" id="fade4" />
+                <img src={Name4} alt="" id="name4" />
+                <img src={dcharacter5} alt="" id="chshw5" />
+                <img src={fade5} alt="" id="fade5" />
+                <img src={Name5} alt="" id="name5" />
+                <img src={dcharacter6} alt="" id="chshw6" />
+                <img src={fade6} alt="" id="fade6" />
+                <img src={Name6} alt="" id="name6" />
+                <img src={dcharacter7} alt="" id="chshw7" />
+                <img src={fade7} alt="" id="fade7" />
+                <img src={Name7} alt="" id="name7" />
+                <img src={dcharacter8} alt="" id="chshw8" />
+                <img src={fade8} alt="" id="fade8" />
+                <img src={Name8} alt="" id="name8" />
+                <img src={dcharacter9} alt="" id="chshw9" />
+                <img src={fade9} alt="" id="fade9" />
+                <img src={Name9} alt="" id="name9" />
+                <img src={dcharacter10} alt="" id="chshw10" />
+                <img src={fade10} alt="" id="fade10" />
+                <img src={Name10} alt="" id="name10" />
               </div>
-              <div className="tire-selection">
-                <label htmlFor="">
+              {/* <div className="tire-selection">
+                <input type="radio" name="tires" id="trch1" defaultChecked />
+                <input type="radio" name="tires" id="trch2" />
+                <input type="radio" name="tires" id="trch3" />
+                <input type="radio" name="tires" id="trch4" />
+                <input type="radio" name="tires" id="trch5" />
+                <input type="radio" name="tires" id="trch6" />
+                <input type="radio" name="tires" id="trch7" />
+                <input type="radio" name="tires" id="trch8" />
+                <input type="radio" name="tires" id="trch9" />
+                <input type="radio" name="tires" id="trch10" />
+                <input type="radio" name="tires" id="trch11" />
+                <input type="radio" name="tires" id="trch12" />
+                <label htmlFor="trch1">
                   <img src={tire1} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch2">
                   <img src={tire2} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch3">
                   <img src={tire3} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch4">
                   <img src={tire4} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch5">
                   <img src={tire5} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch6">
                   <img src={tire6} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch7">
                   <img src={tire7} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch8">
                   <img src={tire8} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch9">
                   <img src={tire9} alt="" />
                 </label>
-                <label htmlFor="">
+                <label htmlFor="trch10">
                   <img src={tire10} alt="" />
                 </label>
-              </div>
-              <label htmlFor="">
-                <img src={tire11} alt="" />
-              </label>
-              <label htmlFor="">
-                <img src={tire12} alt="" />
-              </label>
+                <label htmlFor="trch11">
+                  <img src={tire11} alt="" />
+                </label>
+                <label htmlFor="trch12">
+                  <img src={tire12} alt="" />
+                </label>
+                <img src={tire1} alt="" id="trshw1" />
+                <img src={tire2} alt="" id="trshw2" />
+                <img src={tire3} alt="" id="trshw3" />
+                <img src={tire4} alt="" id="trshw4" />
+                <img src={tire5} alt="" id="trshw5" />
+                <img src={tire6} alt="" id="trshw6" />
+                <img src={tire7} alt="" id="trshw7" />
+                <img src={tire8} alt="" id="trshw8" />
+                <img src={tire9} alt="" id="trshw9" />
+                <img src={tire10} alt="" id="trshw10" />
+                <img src={tire11} alt="" id="trshw11" />
+                <img src={tire12} alt="" id="trshw12" />
+              </div> */}
             </div>
           </div>
         </div>
