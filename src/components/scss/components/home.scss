@@ -1950,7 +1950,6 @@ input[type="radio"] {
         position: relative;
         color: white;
         top: 380%;
-        background-color: black;
         left: 15%;
         line-height: 2;
         -webkit-user-drag: none;
@@ -1967,9 +1966,7 @@ input[type="radio"] {
         padding: 2px 5px;
         margin: 10px;
         transition: all 0.25s;
-        box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
-        -webkit-box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
-        -moz-box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
+
         background-image: linear-gradient(
           to top,
           #fff29d,
@@ -1978,15 +1975,17 @@ input[type="radio"] {
           #ffb32a,
           #ffed2f
         );
+        box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
+        -webkit-box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
+        -moz-box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
+        background-color: white;
         &:hover {
-          // background-color: #ffb347;
           background-color: white;
           color: black;
-          transition-delay: 1s;
+          transition-delay: 0.25s;
         }
         span {
           position: absolute;
