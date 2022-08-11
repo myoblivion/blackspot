@@ -55,176 +55,346 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
   console.log(changeBackground);
   return (
     <header className={navbar ? "navbar active" : "navbar"}>
-      <div className="logo">
-        <Link to="/">
-          <img
-            src={icono}
-            alt="Black Spot Studio"
-            className="main-logo"
-            data-aos="fade-right"
-          />
-        </Link>
-      </div>
-
-      <input
-        className="menu-btn"
-        type="checkbox"
-        id="menu-btn"
-        value={myCheckbox}
-        checked={myCheckbox}
-        onChange={(_e) => setMyCheckbox((prev) => !prev)}
-      />
-      <label className="menu-icon" htmlFor="menu-btn" onClick={seClick}>
-        <span className="navicon"></span>
-      </label>
-      <ul className="menu" ref={menuRef}>
-        <li
-          className={click ? "nav-menu active" : "nav-menu"}
-          onClick={() => setMyCheckbox((prev) => !prev)}
-        >
-          <Link
-            to="/"
-            className="nav-item a"
-            {...props}
-            ref={ref}
-            onClick={() => window.scrollTo(0, 0)}
+      <div className="nav-desktop">
+        <input
+          className="menu-btn"
+          type="checkbox"
+          id="menu-btn"
+          value={myCheckbox}
+          checked={myCheckbox}
+          onChange={(_e) => setMyCheckbox((prev) => !prev)}
+        />
+        <label className="menu-icon" htmlFor="menu-btn" onClick={seClick}>
+          <span className="navicon"></span>
+        </label>
+        <ul className="menu" ref={menuRef}>
+          <li
+            className={click ? "nav-menu active" : "nav-menu"}
+            onClick={() => setMyCheckbox((prev) => !prev)}
           >
-            Home
+            <Link
+              to="/"
+              className="nav-item a"
+              {...props}
+              ref={ref}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Home
+            </Link>
+          </li>
+          <li onClick={() => setShowText(!showText)}>
+            <span>
+              Games <FaCaretDown />
+            </span>
+            {showText && (
+              <ul className="tabs" id="menuz">
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/gogoracing"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GoGo Racing
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/scion"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Scion Fist
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/gogoworld"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GoGo World
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/gogochain"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GoGo Chain
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+        </ul>
+        <div className="logo">
+          <Link to="/">
+            <img src={icono} alt="Black Spot Studio" className="main-logo" />
           </Link>
-        </li>
-        <li onClick={() => setShowText(!showText)}>
-          <span>
-            Games <FaCaretDown />
-          </span>
-          {showText && (
-            <ul className="tabs" id="menuz">
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/gogoracing"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+        </div>
+        <ul id="menuz">
+          <li onClick={() => setShowText(!showText)}>
+            <span>
+              About <FaCaretDown />
+            </span>
+            {showText && (
+              <ul className="tab" id="menuz">
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  GoGo Racing
-                </Link>
-              </li>
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/scion"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/about"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  Scion Fist
-                </Link>
-              </li>
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/gogoworld"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/direction"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Directions
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  GoGo World
-                </Link>
-              </li>
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/gogochain"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/job"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  GoGo Chain
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li>
-        <li onClick={() => setShowText(!showText)}>
-          <span>
-            About <FaCaretDown />
-          </span>
-          {showText && (
-            <ul className="tab" id="menuz">
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/about"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/news"
+                    className="nav-item a"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    News & Announcements
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li
+            className={click ? "nav-menu active" : "nav-menu"}
+            onClick={() => setMyCheckbox((prev) => !prev)}
+          >
+            <HashLink smooth to="/#contact">
+              {" "}
+              Contact{" "}
+            </HashLink>
+          </li>
+        </ul>
+      </div>
+      <div className="nav-mobile">
+        <div className="logo">
+          <Link to="/">
+            <img
+              src={icono}
+              alt="Black Spot Studio"
+              className="main-logo"
+              data-aos="fade-right"
+            />
+          </Link>
+        </div>
+
+        <input
+          className="menu-btn"
+          type="checkbox"
+          id="menu-btn"
+          value={myCheckbox}
+          checked={myCheckbox}
+          onChange={(_e) => setMyCheckbox((prev) => !prev)}
+        />
+        <label className="menu-icon" htmlFor="menu-btn" onClick={seClick}>
+          <span className="navicon"></span>
+        </label>
+        <ul className="menu" ref={menuRef}>
+          <li
+            className={click ? "nav-menu active" : "nav-menu"}
+            onClick={() => setMyCheckbox((prev) => !prev)}
+          >
+            <Link
+              to="/"
+              className="nav-item a"
+              {...props}
+              ref={ref}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Home
+            </Link>
+          </li>
+          <li onClick={() => setShowText(!showText)}>
+            <span>
+              Games <FaCaretDown />
+            </span>
+            {showText && (
+              <ul className="tabs" id="menuz">
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  About Us
-                </Link>
-              </li>
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/direction"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/gogoracing"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GoGo Racing
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  Directions
-                </Link>
-              </li>
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/job"
-                  className="nav-item a"
-                  {...props}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/scion"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Scion Fist
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  Careers
-                </Link>
-              </li>
-              <li
-                className={click ? "nav-menu active" : "nav-menu"}
-                onClick={() => setMyCheckbox((prev) => !prev)}
-              >
-                <Link
-                  to="/news"
-                  className="nav-item a"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/gogoworld"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GoGo World
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
                 >
-                  News & Announcements
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li>
-        <li
-          className={click ? "nav-menu active" : "nav-menu"}
-          onClick={() => setMyCheckbox((prev) => !prev)}
-        >
-          <HashLink smooth to="/#contact">
-            {" "}
-            Contact{" "}
-          </HashLink>
-        </li>
-      </ul>
+                  <Link
+                    to="/gogochain"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GoGo Chain
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li onClick={() => setShowText(!showText)}>
+            <span>
+              About <FaCaretDown />
+            </span>
+            {showText && (
+              <ul className="tab" id="menuz">
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/about"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/direction"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Directions
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/job"
+                    className="nav-item a"
+                    {...props}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li
+                  className={click ? "nav-menu active" : "nav-menu"}
+                  onClick={() => setMyCheckbox((prev) => !prev)}
+                >
+                  <Link
+                    to="/news"
+                    className="nav-item a"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    News & Announcements
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li
+            className={click ? "nav-menu active" : "nav-menu"}
+            onClick={() => setMyCheckbox((prev) => !prev)}
+          >
+            <HashLink smooth to="/#contact">
+              {" "}
+              Contact{" "}
+            </HashLink>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 };

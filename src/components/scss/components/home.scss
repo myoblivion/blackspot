@@ -34,6 +34,18 @@ $TOTAL-T: $RT + $RTDELAY + $BG-T; // total effects transition before you can sho
     left: -100% * ($l - 1);
   }
 }
+@keyframes showYourSelf {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @mixin bg2Part($l, $t) {
   top: 0 + (100% / 3) * ($t - 1);
   left: 0 + (100% / 3) * ($l - 1);
@@ -1808,7 +1820,7 @@ input[type="radio"] {
     display: none;
     transform: translate(-16%, 0);
     visibility: hidden;
-    transition: 0s, opacity 0.5s linear;
+    animation: showYourSelf 0.4s ease-in-out;
   }
   #game1:checked ~ .content1 {
     position: relative;
@@ -1816,11 +1828,16 @@ input[type="radio"] {
     justify-content: space-around;
     color: white;
     background-image: url("/src/images/gogoracingbackground/ggrbackground.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     width: 100%;
+    height: 100%;
     visibility: visible;
-    transform: translate(0, 0);
-    .leftx {
+    .rightx {
       transition: 0.5s ease-in;
+      width: 100%;
+      height: 100%;
+      position: relative;
       button {
         position: absolute;
         left: -5%;
@@ -1828,64 +1845,63 @@ input[type="radio"] {
         padding: 3%;
         z-index: 999;
       }
-    }
-    #leftu,
-    #rightu,
-    #bottomtu,
-    #playnowss {
-      position: absolute;
-    }
-    #leftu {
-      top: 0;
-      left: 0%;
-      height: 1000%;
-      opacity: 0.97;
-      width: 16%;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-    }
-    #rightu {
-      top: 0%;
-      right: 0%;
-      z-index: 9;
-      height: 1000%;
-      width: 17%;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-    }
-    #bottomtu {
-      top: 600%;
-      left: 0;
-      height: 400%;
-      opacity: 0.97;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      width: 100%;
-    }
-    #playnowss {
-      top: 685%;
-      left: 60%;
-      height: 63%;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      width: 15%;
-      position: fixed;
-      z-index: 999;
+      h1 {
+        z-index: 99;
+        position: fixed;
+        width: 28%;
+        text-shadow: black 6px 0 20px;
+        text-align: center;
+        line-height: 2;
+        font-size: 17px;
+        right: 17%;
+        font-family: "BlackHans";
+        text-shadow: -4px -3px 5px black;
+        top: 55%;
+        backdrop-filter: blur(8px);
+        padding-left: 1%;
+        color: rgb(255, 255, 255);
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+      }
+      #ggr-logz {
+        z-index: 99;
+        right: 25%;
+        top: 40%;
+        position: absolute;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        transition: 0.1s ease-in;
+        width: 90%;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      #playnowss {
+        top: 65%;
+        right: 57%;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        width: 35%;
+        position: absolute;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
 
-    .video {
+    .leftx {
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -1893,40 +1909,73 @@ input[type="radio"] {
       width: 100%;
       height: 100%;
       position: relative;
-      #background {
-        position: fixed;
-        width: 100%;
-        height: 999%;
-        top: 1%;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        left: 0%;
+      left: 0;
+
+      .socialization {
+        ul {
+          background: #00070a;
+          border-radius: 15px;
+          width: 65%;
+          height: 5%;
+          z-index: 99;
+          left: -12%;
+          top: 70%;
+          position: absolute;
+          box-shadow: 1px 1px 11px 1px solid black;
+          display: flex;
+          align-items: center;
+          li {
+            font-size: 30px;
+            z-index: 999;
+            width: 50%;
+            margin: 0 7%;
+            transition: 0.1s ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              transform: scale(1.3);
+            }
+            a {
+              color: white;
+            }
+            top: 500%;
+          }
+        }
       }
-      video {
-        position: fixed;
-        width: 60%;
-        height: 350%;
-        filter: brightness(80%);
-        top: 280%;
-        left: -10%;
-      }
-      #s1,
-      #s2 {
-        position: fixed;
-        width: 10%;
-        height: 100%;
-      }
-      #s1 {
-        left: 83%;
-        top: 530%;
-      }
-      #s2 {
-        left: 50%;
-        top: 530%;
+      .video {
+        video {
+          position: absolute;
+          width: 100%;
+          height: 38%;
+          filter: brightness(80%);
+          top: 25%;
+          z-index: 99;
+          left: -27%;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 9;
+            top: 0;
+            left: 0;
+          }
+        }
+        #s1,
+        #s2 {
+          position: fixed;
+          width: 10%;
+          height: 100%;
+        }
+        #s1 {
+          left: 83%;
+          top: 530%;
+        }
+        #s2 {
+          left: 50%;
+          top: 530%;
+        }
       }
     }
   }
@@ -1939,13 +1988,6 @@ input[type="radio"] {
     visibility: visible;
     .leftx {
       transition: 0.5s ease-in;
-      button {
-        position: absolute;
-        left: -5%;
-        top: 395%;
-        padding: 3%;
-        z-index: 999;
-      }
       #playnowsss {
         position: relative;
         color: white;
@@ -1956,41 +1998,40 @@ input[type="radio"] {
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
+        width: 15%;
+        text-align: center;
         font-family: "highswift";
-        font-size: 30px;
+        font-size: 22px;
         -ms-user-select: none;
         z-index: 999;
         text-decoration: none;
         letter-spacing: 2px;
-        display: inline-block;
         padding: 2px 5px;
         margin: 10px;
         transition: all 0.25s;
-
-        background-image: linear-gradient(
-          to top,
+        background: linear-gradient(
+          to right,
           #fff29d,
           #ffea2e,
           #ffb32a,
           #ffb32a,
           #ffed2f
         );
-        box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
-        -webkit-box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
-        -moz-box-shadow: -1px 1px 43px -6px rgba(0, 0, 0, 0.61) inset;
-        background-clip: text;
+        background-size: 100% 100%;
+        background-clip: inherit;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-color: white;
-        &:hover {
-          background-color: white;
-          color: black;
-          transition-delay: 0.25s;
-        }
         span {
           position: absolute;
           display: block;
-          background-color: #ffffff;
+          background: linear-gradient(
+            to right,
+            #fff29d,
+            #ffea2e,
+            #ffb32a,
+            #ffb32a,
+            #ffed2f
+          );
           &:nth-child(1) {
             left: 0;
             bottom: 0;
@@ -2138,6 +2179,10 @@ input[type="radio"] {
     transform: translate(0, 0);
     .leftx {
       transition: 0.5s ease-in;
+      #onenonly {
+        top: 550%;
+        left: 5%;
+      }
     }
     #leftu,
     #rightu,
@@ -2210,6 +2255,14 @@ input[type="radio"] {
       margin-top: 3%;
       width: 100%;
       height: 100%;
+      #ggwcms {
+        position: absolute;
+        width: 40%;
+        height: 150%;
+        top: 535%;
+        left: 45%;
+        z-index: 999;
+      }
       .background {
         position: absolute;
         width: 100%;
@@ -2250,6 +2303,10 @@ input[type="radio"] {
     transform: translate(0, 0);
     .leftx {
       transition: 0.5s ease-in;
+      #ggchainh1 {
+        top: 680%;
+        left: 52%;
+      }
       #chain {
         z-index: 99;
         -webkit-user-drag: none;
@@ -2259,7 +2316,7 @@ input[type="radio"] {
         -ms-user-select: none;
         width: 10%;
         position: absolute;
-        top: -570%;
+        top: -530%;
         left: -15%;
         div {
           width: 100%;
@@ -2394,9 +2451,9 @@ input[type="radio"] {
           z-index: 999;
           width: 50%;
           margin: 0 7%;
-          transition: 0.3s ease-in-out;
+          transition: 0.1s ease-in;
           &:hover {
-            transform: scale(1);
+            transform: scale(1.3);
           }
           a {
             color: white;
@@ -2413,35 +2470,23 @@ input[type="radio"] {
       z-index: 99;
       position: fixed;
       width: 28%;
-      text-shadow: #000 6px 0 20px;
-      text-align: justify;
+      text-shadow: black 6px 0 20px;
+      text-align: center;
       line-height: 2;
-      font-size: 16px;
+      font-size: 17px;
       left: 50%;
       font-family: "BlackHans";
-      text-shadow: -4px -3px 5px #000;
-      top: 565%;
-      border-left: 5px solid white;
-      box-shadow: -9px 0px 0px 0px #000;
-      -webkit-box-shadow: -9px 0px 0px 0px #000;
-      -moz-box-shadow: -9px 0px 0px 0px #000;
+      text-shadow: -4px -3px 5px black;
+      top: 525%;
+      backdrop-filter: blur(8px);
       padding-left: 1%;
+      color: rgb(255, 255, 255);
       a {
         color: white;
         text-decoration: underline;
       }
     }
-    #ggr-logz {
-      z-index: 99;
-      left: 44%;
-      top: 360%;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      width: 45%;
-    }
+
     img {
       position: fixed;
     }
@@ -2455,6 +2500,10 @@ input[type="radio"] {
       -webkit-user-select: none;
       -ms-user-select: none;
       width: 34%;
+      transition: 0.1s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     #worldsk {
       z-index: 99;
@@ -2466,6 +2515,10 @@ input[type="radio"] {
       -webkit-user-select: none;
       -ms-user-select: none;
       width: 25%;
+      transition: 0.1s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     #getitt {
@@ -2478,6 +2531,10 @@ input[type="radio"] {
       -webkit-user-select: none;
       -ms-user-select: none;
       width: 11%;
+      transition: 0.1s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     #appstur {
       top: 740%;
@@ -2496,14 +2553,14 @@ input[type="radio"] {
     position: absolute;
     width: 50%;
     height: 10%;
-    top: 85%;
-    left: 35%;
+    top: 10%;
+    left: 10%;
     label {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-radius: 5px;
+      border-radius: 50%;
       border: 2px solid white;
       width: 13%;
       margin-left: 0%;
@@ -2649,7 +2706,7 @@ input[type="radio"] {
         }
       }
       .scion-m {
-        background-image: url("/src/images/background/char.png");
+        background-image: url("/src/images/gogoracingbackground/scionbgm.png");
         width: 100%;
         height: 80vh;
         position: relative;
@@ -2674,25 +2731,74 @@ input[type="radio"] {
         }
       }
       .ggworld-m {
-        background-image: url("/src/images/icons//Conquest_Invite2_no_karatula\ \(1\).png");
+        background-image: url("/src/images/gogoracingbackground/mobile.png");
         width: 100%;
         height: 80vh;
         position: relative;
         background-size: 100% 100%;
-        background-position: center;
+        background-position: bottom;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .play-nowskiez {
+          #comgson {
+            position: fixed;
+            top: 65%;
+            left: 0%;
+            width: 10%;
+          }
+        }
         .top {
           video {
             position: absolute;
             top: -5%;
           }
-          #mggr-logz {
+          #mworldsk {
             position: absolute;
             top: 40%;
             left: 10%;
+          }
+        }
+      }
+      .ggc-m {
+        background-image: url("/src/images/gogoracingbackground/testworld.png");
+        background-color: black;
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        background-position: center;
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .top {
+          z-index: 1;
+          -webkit-user-drag: none;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          width: 10%;
+          position: absolute;
+          top: 10%;
+          left: 0%;
+          div {
+            width: 20%;
+            text-align: center;
+            display: block;
+            background-color: transparent;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            img {
+              margin-top: 0;
+              width: 75%;
+              z-index: 1;
+            }
           }
         }
       }
