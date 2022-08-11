@@ -287,7 +287,6 @@ a {
     width: 10%;
     height: 90%;
     display: block;
-
     .main-logo {
       width: 35%;
       height: 90%;
@@ -298,6 +297,24 @@ a {
   }
 }
 @media (max-width: 450px) {
+  .navbar {
+    .nav-desktop {
+      display: none;
+    }
+    .nav-mobile {
+      display: block;
+      .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        img {
+          width: 200%;
+        }
+      }
+    }
+  }
   .menu-icon {
     border-radius: 50%;
   }
@@ -349,6 +366,9 @@ a {
     height: 50%;
     width: 100%;
     background-color: black;
+    .nav-mobile {
+      display: block;
+    }
   }
   .navbar ul {
     display: flex;
