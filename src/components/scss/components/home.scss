@@ -1827,12 +1827,13 @@ input[type="radio"] {
     display: flex;
     justify-content: space-around;
     color: white;
-    background-image: url("/src/images/gogoracingbackground/ggrbackground.png");
+    background-image: url("/src/images/GoGo_Racing.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
     height: 100%;
     visibility: visible;
+    left: 16%;
     .rightx {
       transition: 0.5s ease-in;
       width: 100%;
@@ -1841,7 +1842,7 @@ input[type="radio"] {
       button {
         position: absolute;
         left: -5%;
-        top: 395%;
+        top: 390%;
         padding: 3%;
         z-index: 999;
       }
@@ -1853,7 +1854,7 @@ input[type="radio"] {
         text-align: center;
         line-height: 2;
         font-size: 17px;
-        right: 17%;
+        right: 20%;
         font-family: "BlackHans";
         text-shadow: -4px -3px 5px black;
         top: 55%;
@@ -1867,7 +1868,7 @@ input[type="radio"] {
       }
       #ggr-logz {
         z-index: 99;
-        right: 25%;
+        right: 35%;
         top: 40%;
         position: absolute;
         -webkit-user-drag: none;
@@ -1883,7 +1884,7 @@ input[type="radio"] {
       }
       #playnowss {
         top: 65%;
-        right: 57%;
+        right: 64%;
         -webkit-user-drag: none;
         user-select: none;
         -moz-user-select: none;
@@ -1911,7 +1912,6 @@ input[type="radio"] {
       height: 100%;
       position: relative;
       left: 0;
-
       .socialization {
         ul {
           background: #00070a;
@@ -1920,7 +1920,7 @@ input[type="radio"] {
           height: 5%;
           z-index: 99;
           left: -12%;
-          top: 70%;
+          top: 64%;
           position: absolute;
           box-shadow: 1px 1px 11px 1px solid black;
           display: flex;
@@ -1945,12 +1945,20 @@ input[type="radio"] {
         }
       }
       .video {
+        #phone {
+          position: absolute;
+          left: -20.5%;
+          z-index: 999;
+          top: 16%;
+          height: 45%;
+          width: 85.6%;
+        }
         video {
           position: absolute;
           width: 100%;
           height: 38%;
           filter: brightness(80%);
-          top: 25%;
+          top: 18.5%;
           z-index: 99;
           left: -27%;
           &::after {
@@ -2176,6 +2184,16 @@ input[type="radio"] {
     .video {
       margin-top: 0;
       position: relative;
+      width: 100%;
+      height: 100%;
+      #phone {
+        position: fixed;
+        left: 7%;
+        z-index: 999;
+        width: 34%;
+        height: 430%;
+        top: 250%;
+      }
       #background {
         position: fixed;
         width: 100%;
@@ -2584,17 +2602,18 @@ input[type="radio"] {
     position: absolute;
     width: 50%;
     height: 10%;
-    top: 10%;
-    left: 10%;
+    // top: 10%;
+    // left: 10%;
+    top: 85%;
+    left: 35%;
     label {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      border: 2px solid white;
       width: 13%;
-      margin-left: 0%;
+      margin-left: 2%;
+      background-color: #aeaeae;
       color: white;
       letter-spacing: 4px;
       visibility: visible;
@@ -2612,58 +2631,14 @@ input[type="radio"] {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        filter: grayscale(0);
       }
       &:hover {
-        background-color: white;
-        color: black;
-        box-shadow: 4px -1px 40px 0px rgba(255, 255, 255, 0.75);
-        -webkit-box-shadow: 4px -1px 40px 0px rgba(255, 255, 255, 0.75);
-        -webkit-box-reflect: below 2px
-          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
-        border-radius: 5px;
-        -moz-box-shadow: 4px -1px 40px 0px rgba(255, 255, 255, 0.75);
         transform: scale(1);
-        img {
-          filter: grayscale(0);
-        }
       }
       &:active {
         background-color: #cacaca;
       }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        opacity: 0;
-        height: 0;
-        border-top: 0.4px solid rgb(0, 0, 0);
-        border-left: 0.4px solid rgb(0, 0, 0);
-        transition: 0.5s;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 0;
-        border-bottom: 0.4px solid rgb(0, 0, 0);
-        border-right: 0.4px solid rgb(0, 0, 0);
-        opacity: 0;
-        height: 0px;
-        transition: 0.5s;
-      }
-    }
-    label:hover:before {
-      height: 100%;
-      width: 100%;
-      opacity: 1;
-    }
-    label:hover:after {
-      height: 100%;
-      opacity: 1;
-      width: 100%;
     }
   }
 }
@@ -2714,12 +2689,13 @@ input[type="radio"] {
         }
       }
       .ggr-m {
-        background-image: url("/src/images/icons//Conquest_Invite2_no_karatula\ \(1\).png");
+        background-image: url("/src/images/gogoracingbackground/ggrbackground.png");
         width: 100%;
         height: 80vh;
         position: relative;
-        background-size: 100% 100%;
-        background-position: center;
+        background-size: 100% 60%;
+        background-repeat: no-repeat;
+        background-position: bottom;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2732,7 +2708,8 @@ input[type="radio"] {
           #mggr-logz {
             position: absolute;
             top: 40%;
-            left: 10%;
+            left: 5%;
+            right: 0;
           }
         }
       }
@@ -2801,7 +2778,7 @@ input[type="radio"] {
         background-position: center;
         background-size: 100% 70%;
         background-repeat: no-repeat;
-        background-position: bottom;
+        background-position: center;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2817,19 +2794,11 @@ input[type="radio"] {
           position: absolute;
           top: 10%;
           left: 0%;
-          div {
-            width: 20%;
-            text-align: center;
-            display: block;
-            background-color: transparent;
-            left: 0;
-            top: 0;
-            z-index: -1;
-            img {
-              margin-top: 0;
-              width: 75%;
-              z-index: 1;
-            }
+          #ggc-img {
+            position: fixed;
+            top: 20%;
+            left: 0%;
+            width: 10%;
           }
         }
       }
@@ -2860,12 +2829,48 @@ input[type="radio"] {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+
           .play-nowskiez {
             width: 100%;
             display: flex;
             justify-content: center;
             height: 100%;
             position: relative;
+            #playnowsssss {
+              position: relative;
+              color: white;
+              top: 420px;
+              cursor: pointer;
+              left: 0%;
+              line-height: 2;
+              -webkit-user-drag: none;
+              user-select: none;
+              -moz-user-select: none;
+              -webkit-user-select: none;
+              width: 100%;
+              text-align: center;
+              font-family: "highswift";
+              font-size: 22px;
+              -ms-user-select: none;
+              z-index: 999;
+              text-decoration: none;
+              letter-spacing: 2px;
+              padding: 2px 5px;
+              margin: 10px;
+              transition: all 0.25s;
+              background: linear-gradient(
+                to right,
+                #fff29d,
+                #ffea2e,
+                #ffb32a,
+                #ffb32a,
+                #ffed2f
+              );
+              background-size: 100% 100%;
+              background-clip: inherit;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
             button {
               position: absolute;
               width: 200px;
@@ -2888,6 +2893,7 @@ input[type="radio"] {
             border-radius: 15px;
             position: absolute;
             top: 80%;
+            z-index: 999;
             ul {
               margin: 0 auto;
               display: flex;

@@ -103,6 +103,19 @@ import cardisplay9 from "../images/ggr-cars/gogo-racing-car-04-3.png";
 import cardisplay10 from "../images/ggr-cars/Icon_CarSet_0006.png";
 import cardisplay11 from "../images/ggr-cars/image-removebg-preview_39.png";
 
+// Fade Cars bro
+import FadeC1 from "../images/ggr-cars/cfade1.png";
+import FadeC2 from "../images/ggr-cars/cfade2.png";
+import FadeC3 from "../images/ggr-cars/cfade3.png";
+import FadeC4 from "../images/ggr-cars/cfade4.png";
+import FadeC5 from "../images/ggr-cars/cfade5.png";
+import FadeC6 from "../images/ggr-cars/cfade6.png";
+import FadeC7 from "../images/ggr-cars/cfade7.png";
+import FadeC8 from "../images/ggr-cars/cfade8.png";
+import FadeC9 from "../images/ggr-cars/cfade9.png";
+import FadeC10 from "../images/ggr-cars/cfade10.png";
+import FadeC11 from "../images/ggr-cars/cfade11.png";
+
 // Tires
 import tire1 from "../images/ggr-tires/gogo-racing-tire-26-1.png";
 import tire2 from "../images/ggr-tires/gogo-racing-tire-26-2.png";
@@ -393,26 +406,37 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
                   <img src={car11} alt="" />
                 </label>
                 <img src={cardisplay1} alt="" id="shwcar1" />
+                <img src={FadeC1} alt="" id="cfade1" />
                 <img src={TrainingCar} alt="" id="ncar1" />
                 <img src={cardisplay2} alt="" id="shwcar2" />
+                <img src={FadeC2} alt="" id="cfade2" />
                 <img src={Minimi} alt="" id="ncar2" />
                 <img src={cardisplay3} alt="" id="shwcar3" />
                 <img src={SpeedStar} alt="" id="ncar3" />
+                <img src={FadeC3} alt="" id="cfade3" />
                 <img src={cardisplay4} alt="" id="shwcar4" />
                 <img src={Orca} alt="" id="ncar4" />
+                <img src={FadeC4} alt="" id="cfade4" />
                 <img src={cardisplay5} alt="" id="shwcar5" />
                 <img src={MadBear} alt="" id="ncar5" />
+                <img src={FadeC5} alt="" id="cfade5" />
                 <img src={cardisplay6} alt="" id="shwcar6" />
                 <img src={MastersStrix} alt="" id="ncar6" />
+                <img src={FadeC6} alt="" id="cfade6" />
                 <img src={cardisplay7} alt="" id="shwcar7" />
                 <img src={CarrotStar} alt="" id="ncar7" />
+                <img src={FadeC7} alt="" id="cfade7" />
                 <img src={cardisplay8} alt="" id="shwcar8" />
                 <img src={DoggyVan} alt="" id="ncar8" />
+                <img src={FadeC8} alt="" id="cfade8" />
                 <img src={cardisplay9} alt="" id="shwcar9" />
                 <img src={Cactus} alt="" id="ncar9" />
+                <img src={FadeC9} alt="" id="cfade9" />
                 <img src={cardisplay10} alt="" id="shwcar10" />
                 <img src={ILB} alt="" id="ncar10" />
+                <img src={FadeC10} alt="" id="cfade10" />
                 <img src={cardisplay11} alt="" id="shwcar11" />
+                <img src={FadeC11} alt="" id="cfade11" />
                 <img src={GoldenCarriage} alt="" id="ncar11" />
                 {/* <img src={car10} alt="" id="shwcar10" />
                 <img src={car11} alt="" id="shwcar11" />

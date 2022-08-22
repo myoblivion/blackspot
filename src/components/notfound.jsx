@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import notFoundPic from "../images/Yellow - 404.png";
 import Pengsuni from "../images/icons/Pengsuni_portrait3.png";
-import Sad from "../images/icons/Untitled-2.png";
+import Sad from "../images/ggr-characters/jijijiji.png";
 const NotFoundComponent = ({}) => {
   // Title
   useEffect(() => {

@@ -1,26 +1,16 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const request = require("request");
-const path = require("path");
-const App = express();
-App.use(express.static(path.join(__dirname, "App")));
-App.get("/ping", (req, res) => {
-  return res.send("pong");
-});
+const app = express();
+const mysql = require("mysql");
 
-App.use(bodyParser.urlencoded({ extended: false }));
-App.use(bodyParser.json);
-App.get("/", (req, res) => {
-  res.sendFile(__dirname + "../public/index.html");
+const db = (mysql.createPool = {
+  host: "localhost",
+  user: "root",
+  password: "BlackspotstudioPH",
+  database: "bssdatabase",
 });
-App.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../public/index.html"), function (err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
+app.get("/", (req, res) => {
+  res.send("Port is running. Welcome my Lord! ");
 });
-
-App.listen(5000, () => {
-  console.log("Port is running 5000");
+app.listen(3001, () => {
+  console.log("Port is running RUN BOI RUNNNNN");
 });

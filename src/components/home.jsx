@@ -11,14 +11,19 @@ import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
 import GifLoader from "react-gif-loader";
 import playNow from "../images/icons/play_now.png";
+import ggcm from "../images/icons/gogoc.png";
 import game4 from "../images/gogoc.png";
 import GoGoChainLogo from "../images/icons/gogochain.png";
-import scionnnnn from "../images/scionss.png";
+import scionnnnn from "../images/icons/SF.png";
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
+import GGworldBro from "../images/icons/gogo_world_backup.png";
+
+// phone
+import Phone from "../images/icons/phone.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
@@ -220,32 +225,45 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <input type="radio" id="game3" name="slider-game" />
           <input type="radio" id="game4" name="slider-game" />
 
-          <div className="content1" data-aos="zoom-in" data-aos-duration="700">
+          <div className="content1">
             <div className="leftx">
               <div className="video">
                 {/* <img src={bg1} alt="" id="background" /> */}
                 <video src={video1} autoPlay={true} loop={true} muted={true} />
+                <img src={Phone} alt="" id="phone" />
               </div>
               <div className="socialization">
                 <ul>
                   <li>
                     {" "}
-                    <a href="https://bit.ly/3PjM6pL">
+                    <a
+                      href="https://www.facebook.com/GogoRacingPhilippines"
+                      target="_blank"
+                    >
                       <FaFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/gogoracingph/">
+                    <a
+                      href="https://www.instagram.com/gogoracingph/"
+                      target="_blank"
+                    >
                       <FaInstagram />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://twitter.com/GogoRacingPhil"
+                      target="_blank"
+                    >
                       <FaTwitter />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.reddit.com/r/GogoRacingPH/"
+                      target="_blank"
+                    >
                       <FaReddit />
                     </a>
                   </li>
@@ -303,22 +321,31 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 <ul>
                   <li>
                     {" "}
-                    <a href="">
+                    <a
+                      href="https://www.facebook.com/ScionFistPhilippines"
+                      target="_blank"
+                    >
                       <FaFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.instagram.com/scionfistphilippinesofficial/"
+                      target="_blank"
+                    >
                       <FaInstagram />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="https://twitter.com/ScionFist_PH" target="_blank">
                       <FaTwitter />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.reddit.com/r/ScionFistPHofficial/"
+                      target="_blank"
+                    >
                       <FaReddit />
                     </a>
                   </li>
@@ -339,6 +366,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 {/* <img src={shadowLeft} alt="" id="leftu" />
               <img src={shadowRight} alt="" id="rightu" />
               <img src={shadowBottom} alt="" id="bottomtu" /> */}
+                <img src={Phone} alt="" id="phone" />
               </div>
             </div>
           </div>
@@ -360,22 +388,31 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 <ul>
                   <li>
                     {" "}
-                    <a href="">
+                    <a
+                      href="https://www.facebook.com/BlackspotstudioPH"
+                      target="_blank"
+                    >
                       <FaFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.instagram.com/phblackspotstudio/"
+                      target="_blank"
+                    >
                       <FaInstagram />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="https://twitter.com/BlackSpotPH" target="_blank">
                       <FaTwitter />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                      target="_blank"
+                    >
                       <FaReddit />
                     </a>
                   </li>
@@ -415,22 +452,31 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 <ul>
                   <li>
                     {" "}
-                    <a href="https://bit.ly/3PjM6pL">
+                    <a
+                      href="https://www.facebook.com/BlackspotstudioPH"
+                      target="_blank"
+                    >
                       <FaFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.instagram.com/phblackspotstudio/"
+                      target="_blank"
+                    >
                       <FaInstagram />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="https://twitter.com/BlackSpotPH" target="_blank">
                       <FaTwitter />
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a
+                      href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                      target="_blank"
+                    >
                       <FaReddit />
                     </a>
                   </li>
@@ -446,11 +492,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <img src={vshadowBottom} alt="" id="bottomtu" /> */}
             </div>
           </div>
-          <div
-            className="displayers"
-            data-aos="flip-up"
-            data-aos-duration="700"
-          >
+          <div className="displayers">
             <label htmlFor="game1">
               <img src={GGRICON} alt="" />
             </label>
@@ -460,7 +502,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
             </label>
             <label htmlFor="game3">
               {" "}
-              <img src={Gogoworld} alt="GogoWorld" />
+              <img src={GGworldBro} alt="GogoWorld" />
             </label>
             <label htmlFor="game4">
               {" "}
@@ -532,8 +574,8 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 </div>
                 <div className="bottomzkie">
                   <div className="play-nowskiez">
-                    <button onClick={DetectAndServe}>
-                      <img src={playNow} alt="" id="playimg" />
+                    <button onClick={DetectAndServe} id="playnowsssss">
+                      Play Now
                     </button>
                   </div>
                   <div className="socialization">
@@ -599,11 +641,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
               <div className="ggc-m">
                 <div className="top">
-                  <GifLoader
-                    loading={true}
-                    imageSrc="https://media1.giphy.com/media/essaF8bzvC3rra18sP/giphy.gif?cid=790b76111f299a6898d899429189b7e8ac6adaf3b9c80e60&rid=giphy.gif&ct=s"
-                    overlayBackground="transparent"
-                  />
+                  <img src={ggcm} alt="" id="ggc-img" />
                 </div>
                 <div className="bottomzkie">
                   <div className="play-nowskiez"></div>

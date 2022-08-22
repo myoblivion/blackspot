@@ -14,7 +14,7 @@ const LazyScionComponent = React.lazy(() => import("./scion"));
 const LazyGoGoWorldComponent = React.lazy(() => import("./gogoworld"));
 const LazyGoGoChainComponent = React.lazy(() => import("./gogochain"));
 const LazyGoGoRacingComponent = React.lazy(() => import("./gogoracing"));
-
+import TestComponent from "./jofpasjofwoepq";
 import LoadingComponent from "./loading";
 import PrivacyComponent from "./privacy";
 import ScionNewsComponent from "./scionnews";
@@ -56,12 +56,12 @@ const Appcomponent = ({}) => {
 
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 8000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+  }, []);
   const [posts, setPosts] = useState();
   const [announcements, setAnnouncements] = useState();
   const [gameguide, setGameGuide] = useState();
@@ -229,6 +229,7 @@ const Appcomponent = ({}) => {
               element={<GGRnews newspage={newspage} />}
             />
             <Route path="/editpost/:postID" exact element={<EditPost />} />
+            <Route path="/jofpasjofwoepq" exact element={<TestComponent />} />
           </Routes>
         </div>
       )}

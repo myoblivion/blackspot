@@ -7,6 +7,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Outrider";
+  src: url("/src/outrider.ttf"), url("/src/outrider.ttf") format("truetype"),
+    url("/src/outrider.ttf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Knicknack";
   src: url("/src/Knicknack-Bold.ttf"),
     url("/src/Knicknack-Bold.ttf") format("truetype"),
@@ -270,13 +277,14 @@
     display: none;
   }
   #titled {
-    font-family: "EntezareZohoor2";
-    color: #de35e8;
+    font-family: "Outrider";
+    color: #88f1d7;
     font-size: 80px;
     padding-top: 3%;
-    text-shadow: 18px 12px #670a2a, -18px -12px #40d993;
+    text-shadow: 0px 7px 1px#000000;
     text-transform: uppercase;
     text-align: center;
+    height: 15%;
   }
   .disclaimer {
     color: white;
@@ -454,6 +462,19 @@
         top: 90%;
         left: 120%;
       }
+      #cfade1,
+      #cfade2,
+      #cfade3,
+      #cfade4,
+      #cfade5,
+      #cfade6,
+      #cfade7,
+      #cfade8,
+      #cfade9,
+      #cfade10,
+      #cfade11 {
+        display: none;
+      }
       #lblcar1,
       #lblcar2,
       #lblcar3,
@@ -497,6 +518,94 @@
       #lblcar10:hover {
         filter: brightness(100%);
       }
+      #slt1:checked ~ #cfade2 {
+        display: block;
+        position: absolute;
+        left: 90%;
+        top: 35%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt2:checked ~ #cfade3 {
+        display: block;
+        position: absolute;
+        left: 110%;
+        top: 30%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt3:checked ~ #cfade4 {
+        display: block;
+        position: absolute;
+        left: 95%;
+        top: 30%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt4:checked ~ #cfade1 {
+        display: block;
+        position: absolute;
+        left: 105%;
+        top: 10%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt5:checked ~ #cfade5 {
+        display: block;
+        position: absolute;
+        left: 105%;
+        top: 35%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt6:checked ~ #cfade6 {
+        display: block;
+        position: absolute;
+        left: 105%;
+        top: 30%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt7:checked ~ #cfade8 {
+        display: block;
+        position: absolute;
+        left: 105%;
+        top: 30%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt8:checked ~ #cfade9 {
+        display: block;
+        position: absolute;
+        left: 115%;
+        top: 30%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt9:checked ~ #cfade10 {
+        display: block;
+        position: absolute;
+        left: 115%;
+        top: 35%;
+        width: 150%;
+        opacity: 0.1;
+      }
+      #slt10:checked ~ #cfade7 {
+        display: block;
+        position: absolute;
+        left: 115%;
+        top: 30%;
+        width: 155%;
+        opacity: 0.1;
+      }
+      #slt11:checked ~ #cfade11 {
+        display: block;
+        position: absolute;
+        left: 115%;
+        top: 40%;
+        width: 150%;
+        opacity: 0.1;
+      }
       #slt1:checked ~ #lblcar1 {
         filter: brightness(100%);
       }
@@ -521,7 +630,7 @@
       #slt8:checked ~ #lblcar8 {
         filter: brightness(100%);
       }
-      #slt19:checked ~ #lblcar9 {
+      #slt9:checked ~ #lblcar9 {
         filter: brightness(100%);
       }
       #slt10:checked ~ #lblcar10 {
@@ -536,82 +645,77 @@
         width: 100%;
         position: absolute;
         top: 35%;
-        left: 140%;
+        left: 160%;
       }
       #slt2:checked ~ #shwcar2 {
         display: block;
         width: 100%;
         position: absolute;
         top: 35%;
-
-        left: 140%;
+        left: 160%;
       }
       #slt3:checked ~ #shwcar3 {
         display: block;
         width: 100%;
         position: absolute;
         top: 35%;
-
-        left: 140%;
+        left: 160%;
       }
       #slt4:checked ~ #shwcar4 {
         display: block;
         width: 100%;
         position: absolute;
         top: 20%;
-        left: 140%;
+        left: 160%;
       }
       #slt5:checked ~ #shwcar5 {
         display: block;
         width: 100%;
         position: absolute;
         top: 35%;
-
-        left: 140%;
+        left: 160%;
       }
       #slt6:checked ~ #shwcar6 {
         display: block;
         width: 100%;
         position: absolute;
         top: 35%;
-
-        left: 140%;
+        left: 160%;
       }
       #slt7:checked ~ #shwcar7 {
         display: block;
         width: 100%;
         position: absolute;
         top: 35%;
-
-        left: 140%;
+        left: 160%;
       }
       #slt8:checked ~ #shwcar8 {
         display: block;
         width: 100%;
         position: absolute;
         top: 35%;
-        left: 140%;
+        left: 160%;
       }
       #slt9:checked ~ #shwcar9 {
         display: block;
         width: 120%;
         position: absolute;
         top: 35%;
-        left: 120%;
+        left: 140%;
       }
       #slt10:checked ~ #shwcar10 {
         display: block;
         width: 90%;
         position: absolute;
         top: 35%;
-        left: 140%;
+        left: 165%;
       }
       #slt11:checked ~ #shwcar11 {
         display: block;
         width: 100%;
         position: absolute;
         top: 40%;
-        left: 140%;
+        left: 160%;
       }
     }
 
@@ -1184,13 +1288,369 @@
     }
     .features-select {
       background-image: url("/src/images/gogoracingbackground/2.png");
-      height: 100vh;
+      height: 110vh;
       #titled {
         font-size: 40px;
         padding-top: 10%;
       }
       .disclaimer {
         font-size: 17px;
+      }
+      .labels {
+        flex-direction: row;
+        top: 2%;
+        width: 50%;
+        height: 5%;
+        right: 0;
+        left: 15%;
+        #lblcars,
+        #lblchars {
+          border: 5px solid white;
+          margin: 0 5%;
+        }
+      }
+      #select-1:checked ~ .cars-selection {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 6%;
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        label {
+          padding: 1px;
+          width: 100%;
+          img {
+            width: 140%;
+          }
+        }
+        #slt1:checked ~ #ncar1 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt2:checked ~ #ncar2 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 30%;
+          width: 40%;
+        }
+        #slt3:checked ~ #ncar3 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt4:checked ~ #ncar4 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 30%;
+          width: 40%;
+        }
+        #slt5:checked ~ #ncar5 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt6:checked ~ #ncar6 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt7:checked ~ #ncar7 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt8:checked ~ #ncar8 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt9:checked ~ #ncar9 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 30%;
+          width: 50%;
+        }
+        #slt10:checked ~ #ncar10 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt11:checked ~ #ncar11 {
+          display: block;
+          position: absolute;
+          top: -70%;
+          left: 10%;
+          width: 80%;
+        }
+        #slt1:checked ~ #shwcar1 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt2:checked ~ #shwcar2 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt3:checked ~ #shwcar3 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt4:checked ~ #shwcar4 {
+          display: block;
+          display: block;
+          width: 75%;
+          position: absolute;
+          top: -195%;
+          left: 15%;
+        }
+        #slt5:checked ~ #shwcar5 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt6:checked ~ #shwcar6 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt7:checked ~ #shwcar7 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt8:checked ~ #shwcar8 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt9:checked ~ #shwcar9 {
+          display: block;
+          display: block;
+          width: 120%;
+          position: absolute;
+          top: -185%;
+          left: -5%;
+        }
+        #slt10:checked ~ #shwcar10 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+        #slt11:checked ~ #shwcar11 {
+          display: block;
+          display: block;
+          width: 90%;
+          position: absolute;
+          top: -185%;
+          left: 10%;
+        }
+      }
+      #select-2:checked ~ .character-selection {
+        top: 50%;
+        width: 93%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        #chrslt1:checked ~ #name1 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 65%;
+        }
+        #chrslt1:checked ~ #name1 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 70%;
+        }
+        #chrslt2:checked ~ #name2 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 70%;
+        }
+        #chrslt3:checked ~ #name3 {
+          display: block;
+          position: absolute;
+          left: 25%;
+          top: -85%;
+          width: 55%;
+        }
+        #chrslt4:checked ~ #name4 {
+          display: block;
+          position: absolute;
+          left: 30%;
+          top: -85%;
+          width: 45%;
+        }
+        #chrslt5:checked ~ #name5 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -85%;
+          width: 60%;
+        }
+        #chrslt6:checked ~ #name6 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 70%;
+        }
+        #chrslt7:checked ~ #name7 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 70%;
+        }
+        #chrslt8:checked ~ #name8 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 70%;
+        }
+        #chrslt9:checked ~ #name9 {
+          display: block;
+          position: absolute;
+          left: 15%;
+          top: -85%;
+          width: 70%;
+        }
+        #chrslt10:checked ~ #name10 {
+          display: block;
+          position: absolute;
+          left: 30%;
+          top: -85%;
+          width: 35%;
+        }
+        #chrslt1:checked ~ #chshw1 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt2:checked ~ #chshw2 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt3:checked ~ #chshw3 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt4:checked ~ #chshw4 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt5:checked ~ #chshw5 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt6:checked ~ #chshw6 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt7:checked ~ #chshw7 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt8:checked ~ #chshw8 {
+          display: block;
+          position: absolute;
+          left: 25%;
+          top: -240%;
+          width: 60%;
+          z-index: 99;
+        }
+        #chrslt9:checked ~ #chshw9 {
+          display: block;
+          position: absolute;
+          left: 20%;
+          top: -270%;
+          width: 70%;
+          z-index: 99;
+        }
+        #chrslt10:checked ~ #chshw10 {
+          display: block;
+          position: absolute;
+          left: 30%;
+          top: -210%;
+          width: 50%;
+          z-index: 99;
+        }
       }
     }
   }
@@ -1362,7 +1822,7 @@
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-height: 800px) {
   .gogoracing {
     .gogoracing-wrapper {
       height: 120vh;
@@ -1377,7 +1837,7 @@
       }
     }
     .features-select {
-      height: 100vh;
+      height: 120vh;
     }
   }
 }

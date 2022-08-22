@@ -33,28 +33,8 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
 
   //logo scroll when active
 
-  //navbar scroll changeBackground function
-  const changeBackground = () => {
-    console.log(window.scrollY);
-    if (window.scrollY >= 66) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  useEffect(() => {
-    changeBackground();
-    // adding the event when scroll change background
-    window.addEventListener("scroll", changeBackground);
-  });
-
-  //logo scroll function
-
-  window.addEventListener("scroll", changeBackground);
-  console.log(changeBackground);
   return (
-    <header className={navbar ? "navbar active" : "navbar"}>
+    <header className="navbar">
       <div className="nav-desktop">
         <input
           className="menu-btn"

@@ -179,6 +179,9 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </a>
             </li>
           </ul>
+          <button onClick={DetectAndServe} id="playimg">
+            <img src={playNow} alt="" />
+          </button>
         </div>
       </section>
       <section className="wrapper2">
@@ -759,12 +762,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
           </div>
         </div>
       </section>
-      <section className="playnow">
-        <h1 data-aos="flip-up">DOWNLOAD NOW</h1>
-        <button onClick={DetectAndServe}>
-          <img src={playNow} alt="" id="playimg" />
-        </button>
-      </section>
+
       <div className="section">
         <footer className="footer-distributed">
           <div className="footer-left" data-aos="fade-up">
@@ -890,12 +888,12 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </footer>
-        <div className="bootons">
-          <HashLink smooth to="/scion#" id="up">
-            {" "}
-            <FaRegArrowAltCircleUp />
-          </HashLink>
-        </div>
+      </div>
+      <div className="bootons">
+        <HashLink smooth to="/scion#" id="up">
+          {" "}
+          <FaRegArrowAltCircleUp />
+        </HashLink>
       </div>
     </div>
   );

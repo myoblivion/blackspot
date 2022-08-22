@@ -9,12 +9,11 @@ a {
   .nav-mobile {
     display: none;
   }
-  position: fixed;
   width: 100%;
-  z-index: 999;
   height: 9%;
   top: 0;
   -webkit-touch-callout: none;
+  position: absolute;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -223,7 +222,7 @@ a {
 
 @media only screen and (min-width: 873px) {
   .navbar {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,7 +295,7 @@ a {
     }
   }
 }
-@media (max-width: 450px) {
+@media only screen and (max-width: 650px) {
   .navbar {
     .nav-desktop {
       display: none;
@@ -308,9 +307,10 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 20%;
         img {
           width: 200%;
+          margin: 0 auto;
+          margin-left: 50%;
         }
       }
     }
@@ -329,9 +329,10 @@ a {
   }
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (max-width: 650px) {
   .logo {
     img {
+      padding-top: 25%;
       width: 50%;
     }
   }
@@ -361,10 +362,12 @@ a {
   }
 }
 
-@media only screen and (max-width: 872) {
+@media only screen and (max-width: 650px) {
   .navbar {
-    height: 50%;
+    height: 8%;
     width: 100%;
+    position: absolute;
+    z-index: 9998;
     background-color: black;
     .nav-mobile {
       display: block;
@@ -372,14 +375,12 @@ a {
   }
   .navbar ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     display: flex;
     background-color: black;
     margin: 0;
+    li {
+      border-bottom: 1px solid rgb(80, 80, 80);
+    }
   }
-}
-.navbar.active {
-  background: rgb(0, 0, 0);
-  border-bottom: 1px solid #f3f3f3;
 }
