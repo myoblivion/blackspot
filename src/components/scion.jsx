@@ -179,10 +179,14 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
               </a>
             </li>
           </ul>
-          <button onClick={DetectAndServe} id="playimg">
-            <img src={playNow} alt="" />
-          </button>
         </div>
+        <button onClick={DetectAndServe} id="playnowsss">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <p>Play Now</p>
+        </button>
       </section>
       <section className="wrapper2">
         <div className="titles" data-aos="fade-right">

@@ -34,17 +34,125 @@
   background-image: url("/src/images/tet.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  #playnowsss {
+    color: white;
+    top: 30%;
+    left: 0%;
+    cursor: pointer;
+    line-height: 2;
+    position: relative;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    width: 13%;
+    text-align: center;
+    font-family: "highswift";
+    font-size: 20px;
+    -ms-user-select: none;
+    z-index: 999;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 2px 6px;
+    margin: 10px;
+    transition: all 0.25s;
+    background: linear-gradient(
+      to right,
+      #fff29d,
+      #ffea2e,
+      #ffb32a,
+      #ffb32a,
+      #ffed2f
+    );
+    background-size: 100% 100%;
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    span {
+      position: absolute;
+      display: block;
+      background: linear-gradient(
+        to right,
+        #fff29d,
+        #ffea2e,
+        #ffb32a,
+        #ffb32a,
+        #ffed2f
+      );
+      &:nth-child(1) {
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.25s;
+      }
+      &:nth-child(2) {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.25s;
+        transition-delay: 0.25s;
+      }
+      &:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        width: 3px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.25s;
+        transition-delay: 0.5s;
+      }
+      &:nth-child(4) {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s;
+        transition-delay: 0.75s;
+      }
+    }
 
+    &:hover span:nth-child(1) {
+      transform: scaleY(1);
+      transform-origin: bottom;
+      transition: transform 0.25s;
+    }
+
+    &:hover span:nth-child(2) {
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.25s;
+      transition-delay: 0.25s;
+    }
+
+    &:hover span:nth-child(3) {
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: transform 0.25s;
+      transition-delay: 0.5s;
+    }
+
+    &:hover span:nth-child(4) {
+      transform: scaleX(1);
+      transform-origin: right;
+      transition: transform 0.25s;
+      transition-delay: 0.75s;
+    }
+  }
   .scion-links {
     display: flex;
     width: 100%;
     position: absolute;
     bottom: 5%;
-    #playimg {
-      position: absolute;
-      left: 42%;
-      bottom: 125%;
-    }
+
     ul {
       display: flex;
       margin: 0 auto;

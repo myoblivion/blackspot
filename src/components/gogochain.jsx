@@ -32,7 +32,6 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
           data-aos="fade-right"
         />
       </section>
-
       <div className="section">
         <footer className="gogochain-footer-distributed">
           <div className="footer-left">
@@ -158,11 +157,11 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </footer>
-        <div className="bootons">
-          <HashLink smooth to="/gogochain#" id="up">
-            <FaRegArrowAltCircleUp />
-          </HashLink>
-        </div>
+      </div>
+      <div className="bootons">
+        <HashLink smooth to="/gogochain#" id="up">
+          <FaRegArrowAltCircleUp />
+        </HashLink>
       </div>
     </div>
   );

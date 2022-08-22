@@ -60,7 +60,7 @@ const Appcomponent = ({}) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 5000);
   }, []);
   const [posts, setPosts] = useState();
   const [announcements, setAnnouncements] = useState();
