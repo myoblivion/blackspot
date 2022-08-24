@@ -8,7 +8,7 @@ import NavbarComponent from "../components/navbar";
 const LazyHomeComponent = React.lazy(() => import("./home"));
 const LazyAboutComponent = React.lazy(() => import("./about"));
 const LazyDirectionComponent = React.lazy(() => import("./direction"));
-const LazyJobComponent = React.lazy(() => import("./job"));
+const LazyJobComponent = React.lazy(() => import("./career"));
 const LazyNewsComponent = React.lazy(() => import("./news"));
 const LazyScionComponent = React.lazy(() => import("./scion"));
 const LazyGoGoWorldComponent = React.lazy(() => import("./gogoworld"));
@@ -119,7 +119,7 @@ const Appcomponent = ({}) => {
             />
             <Route
               exact
-              path={"/job"}
+              path={"/career"}
               element={
                 <React.Suspense fallback="loading....">
                   <LazyJobComponent />

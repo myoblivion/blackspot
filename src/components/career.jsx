@@ -74,52 +74,12 @@ const JobComponent = ({ props, ref, currentRoute }) => {
             <div className="img-palpetine">
               <img src={Palpetine} alt="" />
             </div>
-            {!usuarioValido && (
-              <form onSubmit={submit}>
-                <div className="form-group">
-                  <div className="input-file-container">
-                    <h1 htmlFor="selectpos">
-                      Please upload your resume/CV: <span>*</span>
-                    </h1>
-                    <input
-                      name="any-name"
-                      label="Files"
-                      type="file"
-                      multiple
-                      id="inputf"
-                    />
-                  </div>
-                  <ReCAPTCHA
-                    ref={captcha}
-                    sitekey="6LfgXA4hAAAAAEKncvsfngTiqZPPRlv3903vapiP"
-                    onChange={onChange}
-                    size={"normal"}
-                    theme="dark"
-                  />
-                  {captchaValido === false && (
-                    <div className="error-captcha">
-                      You must verify the captcha
-                    </div>
-                  )}
-                  <div className="bots">
-                    <button
-                      id="submit"
-                      type="sumbit"
-                      data-id="#accessories-holder"
-                      className="red-select-btn model-selector btn-send-message"
-                    >
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </form>
-            )}
-          </div>
-          <div className="bootons">
-            <HashLink smooth to="/job#" id="up">
-              {" "}
-              <FaRegArrowAltCircleUp />
-            </HashLink>
+            <div className="message">
+              <h1>
+                SEND US YOUR UPDATED CV/RESUME & THE DESIRED POSITION YOU'RE
+                APPLYING FOR AT : <span>recruitment@blackspotstudio.ph</span>
+              </h1>
+            </div>
           </div>
         </div>
       </section>

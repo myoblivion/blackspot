@@ -578,6 +578,11 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   />
                 </div>
                 <div className="bottomzkie">
+                  <h1>
+                    An Automatic First-Person Shooting game! The higher the
+                    rank, the better performance. The battle is ready for you.{" "}
+                    <a href="">Read More</a>
+                  </h1>
                   <div className="play-nowskiez">
                     <button onClick={DetectAndServe} id="playnowsssss">
                       Play Now
@@ -649,7 +654,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   <img src={ggcm} alt="" id="ggc-img" />
                 </div>
                 <div className="bottomzkie">
-                  <div className="play-nowskiez"></div>
+                  <div className="play-nowskiez">
+                    <img src={ComingSoonGGW} alt="" id="comgson" />
+                  </div>
                   <div className="socialization">
                     <ul>
                       <li>
