@@ -80,13 +80,13 @@ const GoGoRacingGuide = ({ props, ref, currentRoute }) => {
       <div className="ggr-guide-contents">
         <div className="ggr-blah">
           {" "}
-          <img
+          {/* <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          />
+          /> */}
           <div className="ggr-gdecontents">
             <div className="ggr-header">
               <div className="ggr-top">

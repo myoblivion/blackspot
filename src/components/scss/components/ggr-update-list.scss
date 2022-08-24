@@ -1,11 +1,15 @@
 .gogoracing-list {
-  background: rgb(1, 0, 11);
-  background: linear-gradient(
-    96deg,
-    rgba(1, 0, 11, 1) 0%,
-    rgba(5, 5, 40, 1) 11%,
-    rgba(2, 82, 176, 1) 100%
-  );
+  // background: rgb(1, 0, 11);
+  // background: linear-gradient(
+  //   96deg,
+  //   rgba(1, 0, 11, 1) 0%,
+  //   rgba(5, 5, 40, 1) 11%,
+  //   rgba(2, 82, 176, 1) 100%
+  // );
+  background-image: url("/src/images/gogoracingbackground/withlogo.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
   overflow: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;

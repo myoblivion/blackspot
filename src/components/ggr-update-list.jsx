@@ -16,13 +16,13 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute, posts }) => {
     <div className="gogoracing-list wrapper">
       <div className="gogo-racing-list-wrapper">
         <div className="gr-list-wrap">
-          <img
+          {/* <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          />
+          /> */}
           <div
             className="ggrupdatelist-contents"
             data-aos="zoom-in"

@@ -20,13 +20,13 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
     <div className="gogoracingnews wrapper">
       <div className="gogo-racing-news-wrapper">
         <div className="gr-anews-wrap">
-          <img
+          {/* <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          />
+          /> */}
           <div
             className="ggrnews-contents"
             data-aos="zoom-in"

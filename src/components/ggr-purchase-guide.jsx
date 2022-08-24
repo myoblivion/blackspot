@@ -42,13 +42,13 @@ const GogoRacingPurchaseGuide = ({ props, ref, currentRoute }) => {
     <div className="gogoracing-purchase wrapper">
       <div className="ggr-purchase-contents">
         <div className="ggr-blah">
-          <img
+          {/* <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          />
+          /> */}
           <div className="ggr-pcrecontents">
             <div className="ggr-header">
               <div className="ggr-top">
