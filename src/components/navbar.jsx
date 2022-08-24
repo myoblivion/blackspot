@@ -31,7 +31,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
   const [showText, setShowText] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
-  //logo scroll when active
+  //logo scroll when
 
   return (
     <header className="navbar">
@@ -49,7 +49,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
         </label>
         <ul className="menu" ref={menuRef}>
           <li
-            className={click ? "nav-menu active" : "nav-menu"}
+            className={click ? "nav-menu" : "nav-menu"}
             onClick={() => setMyCheckbox((prev) => !prev)}
           >
             <Link
@@ -69,7 +69,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
             {showText && (
               <ul className="tabs" id="menuz">
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -82,7 +82,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -95,7 +95,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -108,7 +108,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -137,7 +137,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
             {showText && (
               <ul className="tab" id="menuz">
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -150,7 +150,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -163,7 +163,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -176,7 +176,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -193,7 +193,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
             )}
           </li>
           <li
-            className={click ? "nav-menu active" : "nav-menu"}
+            className={click ? "nav-menu" : "nav-menu"}
             onClick={() => setMyCheckbox((prev) => !prev)}
           >
             <HashLink smooth to="/#contact">
@@ -228,7 +228,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
         </label>
         <ul className="menu" ref={menuRef}>
           <li
-            className={click ? "nav-menu active" : "nav-menu"}
+            className={click ? "nav-menu" : "nav-menu"}
             onClick={() => setMyCheckbox((prev) => !prev)}
           >
             <Link
@@ -248,7 +248,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
             {showText && (
               <ul className="tabs" id="menuz">
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -261,7 +261,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -274,7 +274,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -287,7 +287,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -309,7 +309,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
             {showText && (
               <ul className="tab" id="menuz">
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -322,7 +322,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -335,7 +335,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -348,7 +348,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                   </Link>
                 </li>
                 <li
-                  className={click ? "nav-menu active" : "nav-menu"}
+                  className={click ? "nav-menu" : "nav-menu"}
                   onClick={() => setMyCheckbox((prev) => !prev)}
                 >
                   <Link
@@ -365,7 +365,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
             )}
           </li>
           <li
-            className={click ? "nav-menu active" : "nav-menu"}
+            className={click ? "nav-menu" : "nav-menu"}
             onClick={() => setMyCheckbox((prev) => !prev)}
           >
             <HashLink smooth to="/#contact">

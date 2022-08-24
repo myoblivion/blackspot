@@ -22,6 +22,7 @@ import purchase4 from "../images/ggrpurchaseguide/scp4.png";
 import purchase5 from "../images/ggrpurchaseguide/scp5.png";
 import purchase6 from "../images/ggrpurchaseguide/scp6.png";
 import purchase7 from "../images/ggrpurchaseguide/scp7.png";
+import dudes from "../images/gogoracingbackground/Announcement.png";
 import purchase8 from "../images/ggrpurchaseguide/scp8.png";
 import purchase9 from "../images/ggrpurchaseguide/scp9.png";
 import purchase10 from "../images/ggrpurchaseguide/scp10.png";
@@ -40,180 +41,189 @@ const GogoRacingPurchaseGuide = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing-purchase wrapper">
       <div className="ggr-purchase-contents">
-        <div className="ggr-pcrecontents">
-          <div className="ggr-header">
-            <div className="ggr-top">
-              <div className="ggr-left">
-                <Link
-                  to="/ggr-guide-list"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <IoIosArrowDropleftCircle />
-                </Link>
-                <h2>
-                  <FaUserCircle /> User
-                </h2>
+        <div className="ggr-blah">
+          <img
+            src={dudes}
+            alt=""
+            id="characters"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
+          <div className="ggr-pcrecontents">
+            <div className="ggr-header">
+              <div className="ggr-top">
+                <div className="ggr-left">
+                  <Link
+                    to="/ggr-guide-list"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <IoIosArrowDropleftCircle />
+                  </Link>
+                  <h2>
+                    <FaUserCircle /> User
+                  </h2>
+                </div>
+                <div className="ggr-right">
+                  <Link
+                    to="/ggrsearch"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <FaSearch />
+                  </Link>
+                </div>
               </div>
-              <div className="ggr-right">
-              <Link
-                to="/ggrsearch"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <FaSearch />
-              </Link>
-              </div>
+              <img src={backgroundimg} alt="" />
             </div>
-            <img src={backgroundimg} alt="" />
-          </div>
-          <div className="ggr-purchases">
-            <h1>Selecting a payment method</h1>
-            <h4>
-              The game will ask you to select your preferred payment method in
-              order to successfully purchase into the game.
-            </h4>
-            <img src={purchase1} alt="" id="ihateyou" />
-            <h2>Types of payment methods:</h2>
-            <h3>GCash</h3>
-            <ul>
-              <li>
-                <p>
-                  🌟 Select GCash as your payment method and tap “Continue”.{" "}
-                </p>
-              </li>
-              <li>
-                <img src={purchase2} alt="" />
-              </li>
-              <li>
-                {" "}
-                <p>🌟 Enter your GCash MPIN if you have any. </p>
-              </li>
-              <li>
-                <img src={purchase3} alt="" />
-              </li>
-              <li>
-                <p>
+            <div className="ggr-purchases">
+              <h1>Selecting a payment method</h1>
+              <h4>
+                The game will ask you to select your preferred payment method in
+                order to successfully purchase into the game.
+              </h4>
+              <img src={purchase1} alt="" id="ihateyou" />
+              <h2>Types of payment methods:</h2>
+              <h3>GCash</h3>
+              <ul>
+                <li>
+                  <p>
+                    🌟 Select GCash as your payment method and tap “Continue”.{" "}
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase2} alt="" />
+                </li>
+                <li>
                   {" "}
-                  🌟 Check the checkbox for GCash Terms and Conditions and tap
-                  “Authorize”.{" "}
-                </p>
-              </li>
-              <li>
-                <img src={purchase4} alt="" />
-              </li>
-              <li>
-                <p>
+                  <p>🌟 Enter your GCash MPIN if you have any. </p>
+                </li>
+                <li>
+                  <img src={purchase3} alt="" />
+                </li>
+                <li>
+                  <p>
+                    {" "}
+                    🌟 Check the checkbox for GCash Terms and Conditions and tap
+                    “Authorize”.{" "}
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase4} alt="" />
+                </li>
+                <li>
+                  <p>
+                    {" "}
+                    🌟 An authentication code will be sent to your GCash. Input
+                    the code and tap “Next”.{" "}
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase5} alt="" />
+                </li>
+                <li>
                   {" "}
-                  🌟 An authentication code will be sent to your GCash. Input
-                  the code and tap “Next”.{" "}
-                </p>
-              </li>
-              <li>
-                <img src={purchase5} alt="" />
-              </li>
-              <li>
-                {" "}
-                <p>🌟 When linking is successful. Press “OKAY”. </p>
-              </li>
-              <li>
-                <img src={purchase6} alt="" />
-              </li>
-              <li>
-                <p>
-                  🌟 When GCash is selected as a payment method, press “Buy” to
-                  proceed on purchasing.{" "}
-                </p>
-              </li>
-              <li>
-                <img src={purchase7} alt="" />
-              </li>
-            </ul>
-            <h3>Debit/Credit Card</h3>
-            <ul>
-              <li>
-                {" "}
-                <p>🌟 Input your Debit/Credit Card number. </p>
-              </li>
-              <li>
-                <img src={purchase8} alt="" />
-              </li>
-              <li>
-                {" "}
-                <p>Input your other Credit/Debit card details </p>
-              </li>
-              <li>
-                <img src={purchase9} alt="" />
-              </li>
-              <li>
-                {" "}
-                <p>🌟 Once done, tap “Save”. </p>
-              </li>
-              <li>
-                <img src={purchase10} alt="" />
-              </li>
-              <li>
-                {" "}
-                <p>
-                  🌟 When Debit/Credit card is selected as a payment method,
-                  press “Buy” to proceed on purchasing.{" "}
-                </p>
-              </li>
-              <li>
-                <img src={purchase11} alt="" />
-              </li>
-            </ul>
-            <h3>Paypal</h3>
-            <ul>
-              <li>
-                <p>🌟 Input your PayPal email address.</p>
-              </li>
-              <li>
-                <img src={purchase12} alt="" />
-              </li>
-              <li>
-                <p>🌟 Input your PayPal phone number.</p>{" "}
-              </li>
+                  <p>🌟 When linking is successful. Press “OKAY”. </p>
+                </li>
+                <li>
+                  <img src={purchase6} alt="" />
+                </li>
+                <li>
+                  <p>
+                    🌟 When GCash is selected as a payment method, press “Buy”
+                    to proceed on purchasing.{" "}
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase7} alt="" />
+                </li>
+              </ul>
+              <h3>Debit/Credit Card</h3>
+              <ul>
+                <li>
+                  {" "}
+                  <p>🌟 Input your Debit/Credit Card number. </p>
+                </li>
+                <li>
+                  <img src={purchase8} alt="" />
+                </li>
+                <li>
+                  {" "}
+                  <p>Input your other Credit/Debit card details </p>
+                </li>
+                <li>
+                  <img src={purchase9} alt="" />
+                </li>
+                <li>
+                  {" "}
+                  <p>🌟 Once done, tap “Save”. </p>
+                </li>
+                <li>
+                  <img src={purchase10} alt="" />
+                </li>
+                <li>
+                  {" "}
+                  <p>
+                    🌟 When Debit/Credit card is selected as a payment method,
+                    press “Buy” to proceed on purchasing.{" "}
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase11} alt="" />
+                </li>
+              </ul>
+              <h3>Paypal</h3>
+              <ul>
+                <li>
+                  <p>🌟 Input your PayPal email address.</p>
+                </li>
+                <li>
+                  <img src={purchase12} alt="" />
+                </li>
+                <li>
+                  <p>🌟 Input your PayPal phone number.</p>{" "}
+                </li>
 
-              <li>
-                <img src={purchase12} alt="" />
-              </li>
-              <li>
-                <p>
-                  🌟 Verify your PayPal account using by requesting a code by
-                  tapping “Request Code”.
-                </p>
-              </li>
-              <li>
-                <img src={purchase13} alt="" />
-              </li>
-              <li>
-                <p>
-                  🌟 A security code will be sent to your PayPal number to input
-                  it to the text box and tap “Verify”.
-                </p>
-              </li>
-              <li>
-                <img src={purchase13} alt="" />
-              </li>
-              <li>
-                <p>
-                  🌟 When PayPal is selected as a payment method, press “Buy” to
-                  proceed on purchasing.
-                </p>
-              </li>
-              <li>
-                <img src={purchase14} alt="" />
-              </li>
-            </ul>
+                <li>
+                  <img src={purchase12} alt="" />
+                </li>
+                <li>
+                  <p>
+                    🌟 Verify your PayPal account using by requesting a code by
+                    tapping “Request Code”.
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase13} alt="" />
+                </li>
+                <li>
+                  <p>
+                    🌟 A security code will be sent to your PayPal number to
+                    input it to the text box and tap “Verify”.
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase13} alt="" />
+                </li>
+                <li>
+                  <p>
+                    🌟 When PayPal is selected as a payment method, press “Buy”
+                    to proceed on purchasing.
+                  </p>
+                </li>
+                <li>
+                  <img src={purchase14} alt="" />
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="bootons">
-          <HashLink smooth to="/ggr-purchase-guide#" id="up">
-            <FaRegArrowAltCircleUp />
-          </HashLink>
+          <div className="bootons">
+            <HashLink smooth to="/ggr-purchase-guide#" id="up">
+              <FaRegArrowAltCircleUp />
+            </HashLink>
+          </div>
         </div>
       </div>
     </div>

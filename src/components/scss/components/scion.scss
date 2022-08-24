@@ -3,6 +3,28 @@
 .scion {
   overflow-x: hidden;
   overflow-y: hidden;
+  .active {
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    z-index: 999;
+    font-size: 30px;
+    background-color: #ffb808;
+    border-radius: 50%;
+    font-weight: 999;
+    opacity: 1;
+    transition: 0.3s ease-in;
+    line-height: 2;
+    &:hover {
+      background-color: #33383b;
+    }
+    #up {
+      color: white;
+      padding: 20px 15px;
+      width: 100%;
+      height: 100%;
+    }
+  }
   .bootons {
     position: fixed;
     bottom: 10%;
@@ -31,7 +53,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("/src/images/tet.jpg");
+  // background-image: url("/src/images/tet.jpg");
+  background-image: url("https://i.imgur.com/tcm9qwi.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   #playnowsss {
@@ -176,7 +199,8 @@
 }
 .wrapper2 {
   height: 120vh;
-  background-image: url("/src/images/background/bg-2.png");
+  // background-image: url("/src/images/background/bg-2.png");
+  background-image: url("https://i.imgur.com/zoD9ADJ.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;

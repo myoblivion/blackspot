@@ -1,8 +1,15 @@
 .gogoracingnews {
-  background-image: url("/src/images/gogoracingbackground/withlogo.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  // background-image: url("/src/images/gogoracingbackground/withlogo.png");
+  // background-repeat: no-repeat;
+  // background-position: center top;
+  // background-size: cover;
+  background: rgb(1, 0, 11);
+  background: linear-gradient(
+    96deg,
+    rgba(1, 0, 11, 1) 0%,
+    rgba(5, 5, 40, 1) 11%,
+    rgba(2, 82, 176, 1) 100%
+  );
   overflow: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -15,13 +22,21 @@
   .gogo-racing-news-wrapper {
     position: relative;
     .gr-anews-wrap {
+      position: relative;
       height: 100%;
       width: 100%;
       display: flex;
       justify-content: center;
+      #characters {
+        position: fixed;
+        width: 30%;
+        height: 30%;
+        z-index: 1;
+        top: 9.6%;
+      }
       .ggrnews-contents {
         height: 40%;
-        margin-top: 10%;
+        margin-top: 15%;
         width: 70%;
         .ggr-top {
           display: flex;

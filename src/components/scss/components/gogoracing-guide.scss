@@ -1,460 +1,475 @@
 .gogoracing-guide {
   width: 100%;
+  background: rgb(1, 0, 11);
+  background: linear-gradient(
+    96deg,
+    rgba(1, 0, 11, 1) 0%,
+    rgba(5, 5, 40, 1) 11%,
+    rgba(2, 82, 176, 1) 100%
+  );
   height: 100%;
   .admin {
     display: none;
   }
   .ggr-guide-contents {
     top: 0;
-    background-image: url("/src/images/gogoracingbackground/withlogo.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
     height: 100%;
-    margin-top: 5%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1;
     position: relative;
-    .ggr-gdecontents {
-      width: 70%;
+    .ggr-blah {
       height: 100%;
-      background-color: white;
-      margin-top: 10%;
+      position: relative;
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      margin-top: 13%;
-      margin-bottom: 5%;
-      padding-bottom: 5%;
-      .ggr-header {
+      justify-content: center;
+      margin-top: 5%;
+      #characters {
+        position: absolute;
+        width: 30%;
+        height: 1%;
+        z-index: 1;
+        top: 0.08%;
+      }
+      .ggr-gdecontents {
+        width: 70%;
+        height: 100%;
+        background-color: white;
         display: flex;
         flex-direction: column;
-        background-color: rgb(48, 48, 48);
-        color: white;
-        width: 100%;
-        height: 100%;
-        border-top: 8px solid black;
-        .ggr-top {
+        margin-top: 13%;
+        margin-bottom: 5%;
+        padding-bottom: 5%;
+        .ggr-header {
           display: flex;
-          justify-content: space-between;
-          height: 5vh;
-          align-items: center;
-          .ggr-left {
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            margin-left: 1%;
-            width: 100%;
-            a {
-              margin-left: 0;
-              font-size: 30px;
-              color: white;
-              margin-right: 2%;
-            }
-          }
-          .ggr-right {
-            margin-right: 2%;
-            display: flex;
-            justify-content: center;
-            align-self: center;
-            form {
-              position: relative;
-              display: flex;
-              label {
-                margin-right: 5px;
-              }
-            }
-            a {
-              display: block;
-              cursor: pointer;
-              padding: 7px 10px;
-              border-radius: 3px;
-              background-color: #51575a;
-              color: white;
-              &:hover {
-                background-color: azure;
-                color: black;
-              }
-            }
-            #selection {
-              display: none;
-            }
-            #text-search {
-              position: absolute;
-              right: 65%;
-              width: 450%;
-
-              height: 100%;
-              border-radius: 8px;
-              display: none;
-              padding-left: 5px;
-            }
-            input[type="checkbox"] {
-              opacity: 0;
-            }
-            #searchs {
-              cursor: pointer;
-              padding: 7px 10px;
-              border-radius: 3px;
-              background-color: #51575a;
-              &:hover {
-                background-color: azure;
-                color: black;
-              }
-            }
-            #submit {
-              transform: translate(0, -9000%);
-            }
-            #submitted {
-              display: none;
-            }
-            #close {
-              display: none;
-            }
-            #search:checked ~ #searchs {
-              display: none;
-            }
-            #search:checked ~ #text-search {
-              display: block;
-            }
-            #search:checked ~ #close {
-              display: block;
-              cursor: pointer;
-              padding: 7px 10px;
-              border-radius: 3px;
-              background-color: #51575a;
-              &:hover {
-                background-color: azure;
-                color: black;
-              }
-            }
-            #search:checked ~ #selection {
-              display: block;
-              position: absolute;
-              outline: none;
-              right: 530%;
-              width: 100%;
-              height: 100%;
-              border-radius: 7px;
-            }
-            #search:checked ~ #submitted {
-              display: block;
-              cursor: pointer;
-              padding: 7px 10px;
-              border-radius: 3px;
-              background-color: #51575a;
-              &:hover {
-                background-color: azure;
-                color: black;
-              }
-            }
-          }
-        }
-        img {
-          -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          -khtml-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-        }
-      }
-      .ggr-guides {
-        height: 100%;
-        display: flex;
-        position: relative;
-        .ggr-section-1 {
-          .game-introduction {
-            margin-top: 3%;
-            margin-left: 1%;
-            width: 40%;
-            h1 {
-              background-color: #116682;
-              height: 5vh;
-              color: white;
-              padding-left: 5px;
-
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              margin-left: 2%;
-            }
-            p {
-              margin-left: 5%;
-            }
-          }
-          .required {
-            margin-top: 3%;
-            width: 40%;
-            margin-left: 1%;
-
-            h2 {
-              background-color: #116682;
-              padding-left: 5px;
-
-              height: 5vh;
-              color: white;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              margin-left: 2%;
-            }
-            ul {
-              margin-left: 5%;
-              li {
-                margin: 3% 0;
-              }
-            }
-          }
-          .system-requirements {
-            margin-top: 3%;
-            width: 40%;
-            margin-left: 1%;
-            .minimum {
-              h2 {
-                background-color: #116682;
-                padding-left: 5px;
-
-                height: 5vh;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-left: 2%;
-                margin-bottom: 2%;
-              }
-              h3 {
-                margin-left: 2%;
-              }
-              ul {
-                margin-left: 5%;
-                li {
-                  margin: 3% 0;
-                }
-              }
-            }
-            .moderate {
-              h2 {
-                background-color: #116682;
-                height: 5vh;
-                color: white;
-                padding-left: 5px;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-left: 2%;
-                margin-bottom: 2%;
-              }
-              h3 {
-                margin-left: 2%;
-              }
-              ul {
-                margin-left: 5%;
-                li {
-                  margin: 3% 0;
-                }
-              }
-            }
-            .recommended {
-              margin-top: 3%;
-              width: 50%;
-              margin-left: 1%;
-              h2 {
-                background-color: #116682;
-                height: 5vh;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-left: 2%;
-                margin-bottom: 2%;
-                padding-left: 5px;
-              }
-              h3 {
-                margin-left: 2%;
-              }
-              ul {
-                margin-left: 5%;
-                li {
-                  margin: 5% 0;
-                }
-              }
-            }
-          }
-          .ui-guide {
-            width: 40%;
-            h3 {
-              margin: 1% 0;
-              margin-left: 2%;
-
-              font-size: 23px;
-            }
-            hr {
-              width: 90%;
-              margin-left: 2%;
-              margin-bottom: 1%;
-            }
-            h2 {
-              background-color: #116682;
-              height: 5vh;
-              color: white;
-              display: flex;
-              flex-direction: column;
-              padding-left: 5px;
-
-              justify-content: center;
-              margin-left: 2%;
-              margin-bottom: 3%;
-            }
-            img {
-              margin-left: 2%;
-            }
-            ul {
-              margin-left: 5%;
-              li {
-                margin: 3% 0;
-                a {
-                  strong {
-                    color: blue;
-                    text-decoration: underline;
-                  }
-                }
-                ul {
-                  li {
-                    list-style: circle;
-                    margin-left: 1%;
-                  }
-                }
-              }
-            }
-            p {
-              margin-left: 2%;
-            }
-            h4 {
-              margin-left: 3%;
-            }
-          }
-          #gogocoin,
-          #diamond {
-            width: 20%;
-          }
-          .acc-transfer {
-            img {
-              margin-top: 3%;
-            }
-          }
-          .currency {
+          flex-direction: column;
+          background-color: rgb(48, 48, 48);
+          color: white;
+          width: 100%;
+          height: 100%;
+          border-top: 8px solid black;
+          .ggr-top {
             display: flex;
             justify-content: space-between;
+            height: 5vh;
             align-items: center;
-            width: 100%;
-            text-align: center;
-            margin-left: 2%;
-            ul li {
-              margin-bottom: 1%;
-            }
-            .diamons,
-            .gogocoins {
+            .ggr-left {
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              margin-left: 1%;
               width: 100%;
-            }
-          }
-          .account-linking {
-            ul {
-              li {
-                img {
-                  margin-top: 3%;
-                  width: 180%;
-                }
+              a {
+                margin-left: 0;
+                font-size: 30px;
+                color: white;
+                margin-right: 2%;
               }
             }
-          }
-          .achievements {
-            width: 100%;
-            img {
-              margin-left: 10%;
-            }
-          }
-        }
-        .ggr-section-2 {
-          position: absolute;
-          right: 15%;
-          top: 0.2%;
-          width: 20%;
-          h2 {
-            margin-bottom: 5%;
-          }
-          ul {
-            color: black;
-            li {
+            .ggr-right {
+              margin-right: 2%;
               display: flex;
-              flex-direction: column;
-              margin-left: 5%;
-              font-weight: 900;
-              span {
-                width: 4%;
-                height: 5%;
-                background-color: #116682;
-                display: block;
+              justify-content: center;
+              align-self: center;
+              form {
+                position: relative;
+                display: flex;
+                label {
+                  margin-right: 5px;
+                }
               }
               a {
-                margin-bottom: 10%;
-              }
-              #hidden {
-                display: none;
-                li {
-                  margin-left: 10%;
-                  font-weight: 100;
+                display: block;
+                cursor: pointer;
+                padding: 7px 10px;
+                border-radius: 3px;
+                background-color: #51575a;
+                color: white;
+                &:hover {
+                  background-color: azure;
+                  color: black;
                 }
               }
-              input {
+              #selection {
+                display: none;
+              }
+              #text-search {
+                position: absolute;
+                right: 65%;
+                width: 450%;
+
+                height: 100%;
+                border-radius: 8px;
+                display: none;
+                padding-left: 5px;
+              }
+              input[type="checkbox"] {
                 opacity: 0;
               }
-              #drop-down:checked ~ #hidden {
+              #searchs {
+                cursor: pointer;
+                padding: 7px 10px;
+                border-radius: 3px;
+                background-color: #51575a;
+                &:hover {
+                  background-color: azure;
+                  color: black;
+                }
+              }
+              #submit {
+                transform: translate(0, -9000%);
+              }
+              #submitted {
+                display: none;
+              }
+              #close {
+                display: none;
+              }
+              #search:checked ~ #searchs {
+                display: none;
+              }
+              #search:checked ~ #text-search {
                 display: block;
               }
-              #dropss {
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+              #search:checked ~ #close {
+                display: block;
+                cursor: pointer;
+                padding: 7px 10px;
+                border-radius: 3px;
+                background-color: #51575a;
+                &:hover {
+                  background-color: azure;
+                  color: black;
+                }
+              }
+              #search:checked ~ #selection {
+                display: block;
+                position: absolute;
+                outline: none;
+                right: 530%;
+                width: 100%;
+                height: 100%;
+                border-radius: 7px;
+              }
+              #search:checked ~ #submitted {
+                display: block;
+                cursor: pointer;
+                padding: 7px 10px;
+                border-radius: 3px;
+                background-color: #51575a;
+                &:hover {
+                  background-color: azure;
+                  color: black;
+                }
               }
             }
           }
+          img {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
         }
-        .garages {
-          width: 80%;
-          margin-left: 2%;
-          ul {
-            list-style: decimal;
+        .ggr-guides {
+          height: 100%;
+          display: flex;
+          position: relative;
+          .ggr-section-1 {
+            .game-introduction {
+              margin-top: 3%;
+              margin-left: 1%;
+              width: 40%;
+              h1 {
+                background-color: #116682;
+                height: 5vh;
+                color: white;
+                padding-left: 5px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 2%;
+              }
+              p {
+                margin-left: 5%;
+              }
+            }
+            .required {
+              margin-top: 3%;
+              width: 40%;
+              margin-left: 1%;
+
+              h2 {
+                background-color: #116682;
+                padding-left: 5px;
+
+                height: 5vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 2%;
+              }
+              ul {
+                margin-left: 5%;
+                li {
+                  margin: 3% 0;
+                }
+              }
+            }
+            .system-requirements {
+              margin-top: 3%;
+              width: 40%;
+              margin-left: 1%;
+              .minimum {
+                h2 {
+                  background-color: #116682;
+                  padding-left: 5px;
+
+                  height: 5vh;
+                  color: white;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  margin-left: 2%;
+                  margin-bottom: 2%;
+                }
+                h3 {
+                  margin-left: 2%;
+                }
+                ul {
+                  margin-left: 5%;
+                  li {
+                    margin: 3% 0;
+                  }
+                }
+              }
+              .moderate {
+                h2 {
+                  background-color: #116682;
+                  height: 5vh;
+                  color: white;
+                  padding-left: 5px;
+
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  margin-left: 2%;
+                  margin-bottom: 2%;
+                }
+                h3 {
+                  margin-left: 2%;
+                }
+                ul {
+                  margin-left: 5%;
+                  li {
+                    margin: 3% 0;
+                  }
+                }
+              }
+              .recommended {
+                margin-top: 3%;
+                width: 50%;
+                margin-left: 1%;
+                h2 {
+                  background-color: #116682;
+                  height: 5vh;
+                  color: white;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  margin-left: 2%;
+                  margin-bottom: 2%;
+                  padding-left: 5px;
+                }
+                h3 {
+                  margin-left: 2%;
+                }
+                ul {
+                  margin-left: 5%;
+                  li {
+                    margin: 5% 0;
+                  }
+                }
+              }
+            }
+            .ui-guide {
+              width: 40%;
+              h3 {
+                margin: 1% 0;
+                margin-left: 2%;
+
+                font-size: 23px;
+              }
+              hr {
+                width: 90%;
+                margin-left: 2%;
+                margin-bottom: 1%;
+              }
+              h2 {
+                background-color: #116682;
+                height: 5vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                padding-left: 5px;
+
+                justify-content: center;
+                margin-left: 2%;
+                margin-bottom: 3%;
+              }
+              img {
+                margin-left: 2%;
+              }
+              ul {
+                margin-left: 5%;
+                li {
+                  margin: 3% 0;
+                  a {
+                    strong {
+                      color: blue;
+                      text-decoration: underline;
+                    }
+                  }
+                  ul {
+                    li {
+                      list-style: circle;
+                      margin-left: 1%;
+                    }
+                  }
+                }
+              }
+              p {
+                margin-left: 2%;
+              }
+              h4 {
+                margin-left: 3%;
+              }
+            }
+            #gogocoin,
+            #diamond {
+              width: 20%;
+            }
+            .acc-transfer {
+              img {
+                margin-top: 3%;
+              }
+            }
+            .currency {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              text-align: center;
+              margin-left: 2%;
+              ul li {
+                margin-bottom: 1%;
+              }
+              .diamons,
+              .gogocoins {
+                width: 100%;
+              }
+            }
+            .account-linking {
+              ul {
+                li {
+                  img {
+                    margin-top: 3%;
+                    width: 180%;
+                  }
+                }
+              }
+            }
+            .achievements {
+              width: 100%;
+              img {
+                margin-left: 10%;
+              }
+            }
+          }
+          .ggr-section-2 {
+            position: absolute;
+            right: 15%;
+            top: 0.2%;
+            width: 20%;
+            h2 {
+              margin-bottom: 5%;
+            }
+            ul {
+              color: black;
+              li {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5%;
+                font-weight: 900;
+                span {
+                  width: 4%;
+                  height: 5%;
+                  background-color: #116682;
+                  display: block;
+                }
+                a {
+                  margin-bottom: 10%;
+                }
+                #hidden {
+                  display: none;
+                  li {
+                    margin-left: 10%;
+                    font-weight: 100;
+                  }
+                }
+                input {
+                  opacity: 0;
+                }
+                #drop-down:checked ~ #hidden {
+                  display: block;
+                }
+                #dropss {
+                  -webkit-touch-callout: none;
+                  -webkit-user-select: none;
+                  -khtml-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+                }
+              }
+            }
+          }
+          .garages {
+            width: 80%;
+            margin-left: 2%;
+            ul {
+              list-style: decimal;
+            }
           }
         }
       }
     }
-  }
-  .bootons {
-    position: fixed;
-    bottom: 10%;
-    right: 3%;
-    z-index: 999;
-    font-size: 30px;
-    background-color: #ffb808;
-    border-radius: 50%;
-    font-weight: 999;
-    line-height: 2;
-    &:hover {
-      background-color: #33383b;
-    }
-    #up {
-      color: white;
-      padding: 20px 15px;
-      width: 100%;
-      height: 100%;
+    .bootons {
+      position: fixed;
+      bottom: 10%;
+      right: 3%;
+      z-index: 999;
+      font-size: 30px;
+      background-color: #ffb808;
+      border-radius: 50%;
+      font-weight: 999;
+      line-height: 2;
+      &:hover {
+        background-color: #33383b;
+      }
+      #up {
+        color: white;
+        padding: 20px 15px;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -462,9 +477,6 @@
 @media only screen and (max-width: 900px) {
   .gogoracing-guide {
     .ggr-guide-contents {
-      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-      background-size: 100% 100%;
-      background-position: center center;
       width: 100%;
       height: 100%;
       .ggr-gdecontents {
@@ -554,9 +566,6 @@
 @media only screen and (max-width: 900px) and (max-height: 700px) {
   .gogoracing-guide {
     .ggr-guide-contents {
-      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-      background-size: 100% 100%;
-      background-position: center center;
       width: 100%;
       height: 100%;
       .ggr-gdecontents {

@@ -1333,7 +1333,7 @@ input[type="radio"] {
     }
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .home {
     .stuffwrapper {
       width: 90%;
@@ -2655,155 +2655,115 @@ input[type="radio"] {
   .mobile-home {
     display: block;
     width: 100%;
-    height: 70vh;
-    padding-bottom: 5%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     .game-mobile-wrapper {
       position: relative;
       width: 100%;
       .slick-slider {
         width: 100%;
-
-        .slick-dots {
-          top: 90%;
-          left: 2%;
-          position: absolute;
-          ul {
-            width: 50%;
-            display: flex;
-            li {
-              background-color: #2e3c79d5;
-              height: 5px;
-              margin: 0 5%;
-              width: 100px;
-              button {
-                width: 70px;
-                opacity: 0;
-              }
-            }
-            .slick-active {
-              background-color: #132266;
-            }
-          }
-        }
       }
       .ggr-m {
+        width: 100%;
+        height: 100vh;
+        display: flex;
         background-image: url("/src/images/gogoracingbackground/ggrbackground.png");
-        width: 100%;
-        height: 80vh;
-        position: relative;
-        background-size: 100% 60%;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .top {
-          video {
-            position: absolute;
-            top: -5%;
-          }
-          #mggr-logz {
-            position: absolute;
-            top: 40%;
-            left: 5%;
-            right: 0;
-          }
-        }
-      }
-      .scion-m {
-        background-image: url("/src/images/gogoracingbackground/scionbgm.png");
-        width: 100%;
-        height: 80vh;
-        position: relative;
-        background-size: 100% 60%;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .top {
-          video {
-            position: absolute;
-            top: -5%;
-          }
-          #mlogo {
-            position: absolute;
-            top: 40%;
-            left: 10%;
-            z-index: 99;
-          }
-        }
-      }
-      .ggworld-m {
-        background-image: url("/src/images/gogoracingbackground/mobile.png");
-        width: 100%;
-        height: 80vh;
-        position: relative;
-        background-size: 100% 100%;
-        background-position: bottom;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .play-nowskiez {
-          #comgson {
-            position: fixed;
-            top: 65%;
-            left: 0%;
-            width: 10%;
-          }
-        }
-        .top {
-          video {
-            position: absolute;
-            top: -5%;
-          }
-          #mworldsk {
-            position: absolute;
-            top: 40%;
-            left: 10%;
-          }
-        }
-      }
-      .ggc-m {
-        background-image: url("/src/images/gogoracingbackground/testworld.png");
-        background-color: black;
-        width: 100%;
-        height: 80vh;
-        position: relative;
-        background-position: center;
         background-size: 100% 70%;
         background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
+        background-position: bottom;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-content: center;
         .top {
-          z-index: 1;
-          -webkit-user-drag: none;
-          user-select: none;
-          -moz-user-select: none;
-          -webkit-user-select: none;
-          -ms-user-select: none;
-          width: 10%;
-          position: absolute;
-          top: 10%;
-          left: 0%;
-          #ggc-img {
-            position: fixed;
-            top: 20%;
-            left: 0%;
-            width: 10%;
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+          top: 0;
+          #mggr-logz {
+            top: 35%;
+            width: 100%;
+            position: absolute;
+          }
+          video {
+            width: 100%;
+            height: 48%;
+          }
+          img {
+            margin: 0 auto;
+            width: 80%;
+          }
+        }
+        .bottomzkie {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h1 {
+            position: absolute;
+            top: 60%;
+            text-align: center;
+            width: 80%;
+            font-size: 17px;
+            color: white;
+            backdrop-filter: blur(20px);
+            a {
+              color: rgb(255, 208, 0);
+            }
+          }
+          .play-nowskiez {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+
+            button {
+              position: fixed;
+              width: 5%;
+              cursor: pointer;
+              height: 10%;
+              top: 70%;
+              left: 1.7%;
+              margin: 0 auto;
+              z-index: 9;
+              background-color: transparent;
+              img {
+                background-color: none;
+              }
+            }
+          }
+          .socialization {
+            width: 75%;
+            background-color: #0b3652;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            position: absolute;
+            top: 85%;
+            z-index: 999;
+            ul {
+              margin: 0 auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              padding: 2%;
+              li {
+                margin: 0 7%;
+                a {
+                  color: white;
+                  font-size: 20px;
+                }
+              }
+            }
           }
         }
       }
-      .ggr-m,
+
       .scion-m,
       .ggworld-m,
       .ggc-m {
@@ -2811,6 +2771,7 @@ input[type="radio"] {
         width: 50%;
         .top {
           display: flex;
+          height: 100%;
           flex-direction: column;
           width: 100%;
           video {
@@ -2917,197 +2878,6 @@ input[type="radio"] {
   }
 }
 
-@media only screen and (max-height: 700px) {
-  .selectorz-wrapper {
-    display: none;
-  }
-  .mobile-home {
-    display: block;
-    width: 100%;
-    height: 90vh;
-    padding-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .game-mobile-wrapper {
-      position: relative;
-      width: 100%;
-      .slick-slider {
-        width: 100%;
-        .slick-dots {
-          top: 90%;
-          left: 2%;
-          position: absolute;
-          ul {
-            width: 50%;
-            display: flex;
-            li {
-              background-color: #2e3c79d5;
-              height: 10px;
-              margin: 0 5%;
-              width: 100px;
-              button {
-                width: 70px;
-                opacity: 0;
-              }
-            }
-            .slick-active {
-              background-color: #132266;
-            }
-          }
-        }
-      }
-      .ggr-m {
-        background-image: url("/src/images/icons//Conquest_Invite2_no_karatula\ \(1\).png");
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        background-size: 100% 100%;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .top {
-          video {
-            position: absolute;
-            top: -4%;
-          }
-          #mggr-logz {
-            position: absolute;
-            top: 44%;
-            left: 10%;
-          }
-        }
-      }
-      .scion-m {
-        background-image: url("/src/images/background/sf.png");
-        background-size: contain;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .top {
-          video {
-            position: absolute;
-            top: -4%;
-          }
-          #mggr-logz {
-            position: absolute;
-            top: 44%;
-            left: 10%;
-          }
-        }
-      }
-      .ggr-m,
-      .scion-m,
-      .ggworld-m,
-      .ggc-m {
-        display: flex;
-        width: 50%;
-        .top {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          video {
-            width: 100%;
-          }
-          img {
-            margin: 0 auto;
-            width: 80%;
-          }
-          #mchain {
-            width: 40%;
-          }
-        }
-        .bottomzkie {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          .play-nowskiez {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            position: relative;
-            button {
-              position: absolute;
-              left: 20%;
-              top: 400px;
-              bottom: 0%;
-              z-index: 999;
-              box-shadow: 1px 55px 51px 4px black;
-              #playimg {
-                width: 120%;
-                height: 120%;
-              }
-            }
-          }
-          .socialization {
-            width: 70%;
-            background-color: #0b3652;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            position: absolute;
-            top: 85%;
-            ul {
-              margin: 0 auto;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 100%;
-              padding: 2%;
-              li {
-                margin: 0 10%;
-                a {
-                  color: white;
-                  font-size: 20px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 700px) {
-  .home {
-    .event-stuff {
-      position: fixed;
-      z-index: 99;
-      top: 20%;
-      left: 0%;
-      justify-content: center;
-      .ads {
-        label {
-          position: fixed;
-          z-index: 111;
-          top: 1%;
-          font-weight: 999;
-          left: 2%;
-          font-size: 30px;
-          padding: 2%;
-        }
-        img {
-          border: 2px solid black;
-          width: 100%;
-          height: 500px;
-        }
-      }
-    }
-  }
-}
 @media only screen and (max-height: 700px) {
   .home {
     .contactforms {

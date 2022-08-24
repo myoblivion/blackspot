@@ -131,6 +131,27 @@ function DetectAndServe() {
 }
 
 const ScionComponent = ({ props, ref, currentRoute }) => {
+  const [botoons, setBotoons] = useState(false);
+
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setBotoons(true);
+    } else {
+      setBotoons(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  //logo scroll function
+
+  window.addEventListener("scroll", changeBackground);
+  console.log(changeBackground);
   const settings = {
     Infinite: true,
     lazyload: true,
@@ -893,7 +914,7 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
           </div>
         </footer>
       </div>
-      <div className="bootons">
+      <div className={botoons ? "botoons active" : "botoons"}>
         <HashLink smooth to="/scion#" id="up">
           {" "}
           <FaRegArrowAltCircleUp />

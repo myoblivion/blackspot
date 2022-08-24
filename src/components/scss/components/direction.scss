@@ -20,6 +20,28 @@ $bg-color: #eeeeee !default;
   height: 100vh;
   color: white;
   background-color: #0c0c0c;
+  .active {
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    z-index: 999;
+    font-size: 30px;
+    background-color: #ffb808;
+    border-radius: 50%;
+    font-weight: 999;
+    opacity: 1;
+    transition: 0.3s ease-in;
+    line-height: 2;
+    &:hover {
+      background-color: #33383b;
+    }
+    #up {
+      color: white;
+      padding: 20px 15px;
+      width: 100%;
+      height: 100%;
+    }
+  }
   .bootons {
     position: fixed;
     bottom: 10%;
@@ -224,7 +246,7 @@ $bg-color: #eeeeee !default;
         .dright {
           width: 100%;
           line-height: 1.8;
-          margin-right: 5%;
+          margin-right: 0;
           text-align: justify;
           p {
             margin: 0 auto;
@@ -232,7 +254,8 @@ $bg-color: #eeeeee !default;
           h2 {
             font-size: 28px;
             border-bottom: 2px solid white;
-            width: 17%;
+            width: 20%;
+            margin-bottom: 1%;
           }
           ul {
             width: 100%;

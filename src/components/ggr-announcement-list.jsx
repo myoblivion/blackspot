@@ -5,6 +5,8 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import AnnouncementsLinks from "./announcementlinks";
 import Announcement from "./announcement";
+import dudes from "../images/gogoracingbackground/Announcement.png";
+
 const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
   // Title
   useEffect(() => {
@@ -14,6 +16,13 @@ const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
     <div className="ggr-announcements wrapper">
       <div className="ggr-announcement-contents">
         <div className="gr-a-wrap">
+          <img
+            src={dudes}
+            alt=""
+            id="characters"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
           <div
             className="ggr-alistgontents"
             data-aos="zoom-in"

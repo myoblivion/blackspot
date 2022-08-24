@@ -18,6 +18,7 @@ import prefferd from "../images/ggrguide/stuff30.png";
 import terms from "../images/ggrguide/stuff31.png";
 import confirm from "../images/ggrguide/stuff32.png";
 import priv from "../images/ggrguide/stuff33.png";
+import dudes from "../images/gogoracingbackground/Announcement.png";
 import confirm2 from "../images/ggrguide/stuff34.png";
 import all from "../images/ggrguide/stuff35.png";
 import download from "../images/ggrguide/stuff36.png";
@@ -38,200 +39,210 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
   return (
     <div className="gogoracing-acc wrapper">
       <div className="ggr-acc-contents">
-        <div className="ggr-acdecontents">
-          <div className="ggr-header">
-            <div className="ggr-top">
-              <div className="ggr-left">
-                <Link
-                  to="/ggr-guide-list"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <IoIosArrowDropleftCircle />
-                </Link>
-                <h2>
-                  <FaUserCircle /> User
-                </h2>
-              </div>
-              <div className="ggr-right">
-                <Link
-                  to="/ggrsearch"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <FaSearch />
-                </Link>
-              </div>
-            </div>
-            <img src={backgroundimg} alt="" />
-          </div>
-          <div className="ggr-accs">
-            <div className="ggr-section-1">
-              <div className="game-introduction">
-                <div className="account-linking">
-                  <h2 id="gmail-account-linking">Gmail Account Linking</h2>
-                  <ul>
-                    <li>
-                      👉 Step 1: Select Google Login
-                      <img src={linkacc} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 2: Select your preferred Google account.
-                      <img src={prefferd} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 3: Read the Terms of Service
-                      <img src={terms} alt="" />
-                    </li>{" "}
-                    <li>
-                      👉 Step 4: Press “Confirm” when done.
-                      <img src={confirm} alt="" />
-                    </li>{" "}
-                    <li>
-                      👉 Step 5: Read the Agree to collect and use personal
-                      information
-                      <img src={priv} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 6: Press “Confirm” when done.
-                      <img src={confirm2} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 7: Check “All agree” and press “Confirm”.
-                      <img src={all} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 8: Additional download will be required. (Size
-                      will depend on the update.) Press “Confirm” to continue.
-                      <img src={download} alt="" />
-                    </li>
-                    <li>
-                      👉Step 9: Complete the additional download. (Make sure to
-                      download the patch under Wi-fi connection)
-                      <img src={download2} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 10: Complete or Skip the tutorial
-                      <img src={tutorial} alt="" />
-                    </li>
-                    <li>
-                      👉 Step 11: Press “Confirm” to complete the tutorial.
-                      <img src={completetut} alt="" />
-                    </li>
-                  </ul>
-                  <h2 id="facebook-link">Facebook Account Linking</h2>
-                  <ul>
-                    <li>
-                      ⭐ Step 1: Select Facebook Login{" "}
-                      <img src={fblogin} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 2: Login your preferred Facebook account.
-                      <img src={fbinput} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 3: Continue as your Facebook profile
-                      <img src={fbcontinue} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 4: Read the Terms of Service
-                      <img src={terms} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 5: Press “Confirm” when done.
-                      <img src={confirm} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 6: Read the Agree to collect and use personal
-                      information
-                      <img src={priv} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 7: Press “Confirm” when done.
-                      <img src={confirm2} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 8: Check “All agree” and press “Confirm”.
-                      <img src={all} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 9: Additional download will be required. (Size
-                      will depend on the update.) Press “Confirm” to continue.
-                      <img src={download} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 10: Complete the additional download. (Make sure
-                      to download the patch under Wi-fi connection)
-                      <img src={download2} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Step 11: Complete or Skip the tutorial
-                      <img src={tutorial} alt="" />
-                    </li>
-                    <li>
-                      ⭐ Press “Confirm” to complete the tutorial.
-                      <img src={completetut} alt="" />
-                    </li>
-                  </ul>
-                </div>
-                <div className="acc-transfer" id="acc-transfer">
-                  <h2>Account Transfer</h2>
-                  <ul>
-                    <li>
-                      🏎️ Step 1: Make sure that you are using a “Guest” account
-                      where your IGN is consisting of BSS########.
-                      <br />
-                      <img src={link} alt="" />
-                    </li>
-                    <li>
-                      🏎️ Step 2: Select the account transfer button on the game
-                      lobby <br />
-                      <img src={link2} alt="" />
-                    </li>
-                    <li>
-                      🏎️ Step 3: Select the platform where you want to transfer
-                      your account.
-                      <img src={link3} alt="" />
-                    </li>
-                    <li>
-                      🏎️ Step 4: You will be rewarded with 3,000 GoGo Tokens and
-                      60 Diamonds after successfully transferring your account.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="ggr-section-2">
-              <h2>Labels</h2>
-              <ul>
-                <li>
-                  <HashLink
-                    smooth
-                    to="/ggr-account-linking#gmail-account-linking"
+        <div className="ggr-blah">
+          <img
+            src={dudes}
+            alt=""
+            id="characters"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
+          <div className="ggr-acdecontents">
+            <div className="ggr-header">
+              <div className="ggr-top">
+                <div className="ggr-left">
+                  <Link
+                    to="/ggr-guide-list"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
-                    Gmail Account Linking
-                  </HashLink>
-                </li>
-                <li>
-                  <HashLink smooth to="/ggr-account-linking#facebook-link">
-                    Facebook Account Linking
-                  </HashLink>
-                </li>
-                <li>
-                  <HashLink smooth to="/ggr-account-linking#acc-transfer">
-                    Guess Transfer
-                  </HashLink>
-                </li>
-              </ul>
+                    <IoIosArrowDropleftCircle />
+                  </Link>
+                  <h2>
+                    <FaUserCircle /> User
+                  </h2>
+                </div>
+                <div className="ggr-right">
+                  <Link
+                    to="/ggrsearch"
+                    {...props}
+                    ref={ref}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <FaSearch />
+                  </Link>
+                </div>
+              </div>
+              <img src={backgroundimg} alt="" />
+            </div>
+            <div className="ggr-accs">
+              <div className="ggr-section-1">
+                <div className="game-introduction">
+                  <div className="account-linking">
+                    <h2 id="gmail-account-linking">Gmail Account Linking</h2>
+                    <ul>
+                      <li>
+                        👉 Step 1: Select Google Login
+                        <img src={linkacc} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 2: Select your preferred Google account.
+                        <img src={prefferd} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 3: Read the Terms of Service
+                        <img src={terms} alt="" />
+                      </li>{" "}
+                      <li>
+                        👉 Step 4: Press “Confirm” when done.
+                        <img src={confirm} alt="" />
+                      </li>{" "}
+                      <li>
+                        👉 Step 5: Read the Agree to collect and use personal
+                        information
+                        <img src={priv} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 6: Press “Confirm” when done.
+                        <img src={confirm2} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 7: Check “All agree” and press “Confirm”.
+                        <img src={all} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 8: Additional download will be required. (Size
+                        will depend on the update.) Press “Confirm” to continue.
+                        <img src={download} alt="" />
+                      </li>
+                      <li>
+                        👉Step 9: Complete the additional download. (Make sure
+                        to download the patch under Wi-fi connection)
+                        <img src={download2} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 10: Complete or Skip the tutorial
+                        <img src={tutorial} alt="" />
+                      </li>
+                      <li>
+                        👉 Step 11: Press “Confirm” to complete the tutorial.
+                        <img src={completetut} alt="" />
+                      </li>
+                    </ul>
+                    <h2 id="facebook-link">Facebook Account Linking</h2>
+                    <ul>
+                      <li>
+                        ⭐ Step 1: Select Facebook Login{" "}
+                        <img src={fblogin} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 2: Login your preferred Facebook account.
+                        <img src={fbinput} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 3: Continue as your Facebook profile
+                        <img src={fbcontinue} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 4: Read the Terms of Service
+                        <img src={terms} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 5: Press “Confirm” when done.
+                        <img src={confirm} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 6: Read the Agree to collect and use personal
+                        information
+                        <img src={priv} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 7: Press “Confirm” when done.
+                        <img src={confirm2} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 8: Check “All agree” and press “Confirm”.
+                        <img src={all} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 9: Additional download will be required. (Size
+                        will depend on the update.) Press “Confirm” to continue.
+                        <img src={download} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 10: Complete the additional download. (Make sure
+                        to download the patch under Wi-fi connection)
+                        <img src={download2} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Step 11: Complete or Skip the tutorial
+                        <img src={tutorial} alt="" />
+                      </li>
+                      <li>
+                        ⭐ Press “Confirm” to complete the tutorial.
+                        <img src={completetut} alt="" />
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="acc-transfer" id="acc-transfer">
+                    <h2>Account Transfer</h2>
+                    <ul>
+                      <li>
+                        🏎️ Step 1: Make sure that you are using a “Guest”
+                        account where your IGN is consisting of BSS########.
+                        <br />
+                        <img src={link} alt="" />
+                      </li>
+                      <li>
+                        🏎️ Step 2: Select the account transfer button on the
+                        game lobby <br />
+                        <img src={link2} alt="" />
+                      </li>
+                      <li>
+                        🏎️ Step 3: Select the platform where you want to
+                        transfer your account.
+                        <img src={link3} alt="" />
+                      </li>
+                      <li>
+                        🏎️ Step 4: You will be rewarded with 3,000 GoGo Tokens
+                        and 60 Diamonds after successfully transferring your
+                        account.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="ggr-section-2">
+                <h2>Labels</h2>
+                <ul>
+                  <li>
+                    <HashLink
+                      smooth
+                      to="/ggr-account-linking#gmail-account-linking"
+                    >
+                      Gmail Account Linking
+                    </HashLink>
+                  </li>
+                  <li>
+                    <HashLink smooth to="/ggr-account-linking#facebook-link">
+                      Facebook Account Linking
+                    </HashLink>
+                  </li>
+                  <li>
+                    <HashLink smooth to="/ggr-account-linking#acc-transfer">
+                      Guess Transfer
+                    </HashLink>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="bootons">
-          <HashLink smooth to="/ggr-account-linking#" id="up">
-            <FaRegArrowAltCircleUp />
-          </HashLink>
+          <div className="bootons">
+            <HashLink smooth to="/ggr-account-linking#" id="up">
+              <FaRegArrowAltCircleUp />
+            </HashLink>
+          </div>
         </div>
       </div>
     </div>

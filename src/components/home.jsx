@@ -526,6 +526,11 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   <img src={Gogoracing} alt="" id="mggr-logz" />
                 </div>
                 <div className="bottomzkie">
+                  <h1>
+                    Ready your car, finish the line and win a coin and be
+                    incentivized. Play to Earn? It’s a surprise.
+                    <Link to="/gogoracingnews"> read more.</Link>
+                  </h1>
                   <div className="play-nowskiez">
                     <button onClick={DetectAndServe}>
                       <img src={playNow} alt="" id="playimg" />
@@ -933,11 +938,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </footer>
-          <div className="bootons">
-            <HashLink smooth to="/#" id="up">
-              <FaRegArrowAltCircleUp />
-            </HashLink>
-          </div>
         </div>
       </div>
     </div>

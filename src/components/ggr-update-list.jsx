@@ -5,6 +5,7 @@ import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import PostsLinks from "./postLinks";
 import Post from "./Post";
+import dudes from "../images/gogoracingbackground/Announcement.png";
 
 const GogoRacingUpdateList = ({ props, ref, currentRoute, posts }) => {
   // Title
@@ -15,6 +16,13 @@ const GogoRacingUpdateList = ({ props, ref, currentRoute, posts }) => {
     <div className="gogoracing-list wrapper">
       <div className="gogo-racing-list-wrapper">
         <div className="gr-list-wrap">
+          <img
+            src={dudes}
+            alt=""
+            id="characters"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
           <div
             className="ggrupdatelist-contents"
             data-aos="zoom-in"

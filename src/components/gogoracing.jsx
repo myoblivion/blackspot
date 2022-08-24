@@ -189,6 +189,27 @@ function DetectAndServe() {
   }
 }
 const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
+  const [botoons, setBotoons] = useState(false);
+
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setBotoons(true);
+    } else {
+      setBotoons(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  //logo scroll function
+
+  window.addEventListener("scroll", changeBackground);
+  console.log(changeBackground);
   const [isShown, setIsShown] = useState(true);
   const NextArrow = ({ onClick }) => {
     return (
@@ -587,136 +608,134 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       </section>
 
       {/* Footer */}
-      <div className="section">
-        <footer className="gogoracing-footer-distributed">
-          <div className="footer-left">
-            <img src={icono} alt="" className="logso" />
-            <p className="footer-links">
-              <Link
-                to="/about"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                About Us
-              </Link>
-              <Link
-                to="/privacy"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Privacy & Policy
-              </Link>
-              <Link
-                to="/terms-of-use"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Terms of Use
-              </Link>
-              <Link
-                to="/job"
-                {...props}
-                ref={ref}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Career
-              </Link>
+      <footer className="gogoracing-footer-distributed">
+        <div className="footer-left">
+          <img src={icono} alt="" className="logso" />
+          <p className="footer-links">
+            <Link
+              to="/about"
+              {...props}
+              ref={ref}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/privacy"
+              {...props}
+              ref={ref}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Privacy & Policy
+            </Link>
+            <Link
+              to="/terms-of-use"
+              {...props}
+              ref={ref}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Terms of Use
+            </Link>
+            <Link
+              to="/job"
+              {...props}
+              ref={ref}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Career
+            </Link>
 
-              <HashLink smooth to="/#contact">
-                {" "}
-                Contact Us
-              </HashLink>
-            </p>
+            <HashLink smooth to="/#contact">
+              {" "}
+              Contact Us
+            </HashLink>
+          </p>
 
-            <p className="footer-company-name">
-              Copyright © Black Spot Studio PH{" "}
-            </p>
-          </div>
-
-          <div className="footer-center">
-            <div className="desz">
-              <p>
-                <Link
-                  to="/direction"
-                  {...props}
-                  ref={ref}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
-                </Link>
-              </p>
-            </div>
-
-            <div className="desz">
-              <p>
-                <a href="mailto:support@company.com">
-                  {" "}
-                  <FaEnvelope /> support@company.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="footer-right">
-            <div className="footer-icons">
-              <ul className="social-media-list">
-                <li>
-                  <a
-                    href="https://www.facebook.com/BlackspotstudioPH"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaFacebook />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/phblackspotstudio/"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <AiFillInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/BlackSpotPH"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaTwitter />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.reddit.com/r/BlackSpotStudioPH/"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaReddit />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
-                    target="_blank"
-                    className="contact-icon"
-                  >
-                    <FaYoutube />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </footer>
-        <div className="bootons">
-          <HashLink smooth to="/gogoracing#" id="up">
-            <FaRegArrowAltCircleUp />
-          </HashLink>
+          <p className="footer-company-name">
+            Copyright © Black Spot Studio PH{" "}
+          </p>
         </div>
+
+        <div className="footer-center">
+          <div className="desz">
+            <p>
+              <Link
+                to="/direction"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
+              </Link>
+            </p>
+          </div>
+
+          <div className="desz">
+            <p>
+              <a href="mailto:support@company.com">
+                {" "}
+                <FaEnvelope /> support@company.com
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="footer-right">
+          <div className="footer-icons">
+            <ul className="social-media-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/BlackspotstudioPH"
+                  target="_blank"
+                  className="contact-icon"
+                >
+                  <FaFacebook />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/phblackspotstudio/"
+                  target="_blank"
+                  className="contact-icon"
+                >
+                  <AiFillInstagram />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/BlackSpotPH"
+                  target="_blank"
+                  className="contact-icon"
+                >
+                  <FaTwitter />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                  target="_blank"
+                  className="contact-icon"
+                >
+                  <FaReddit />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
+                  target="_blank"
+                  className="contact-icon"
+                >
+                  <FaYoutube />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div className={botoons ? "botoons active" : "botoons"}>
+        <HashLink smooth to="/gogoracing#" id="up">
+          <FaRegArrowAltCircleUp />
+        </HashLink>
       </div>
     </div>
   );

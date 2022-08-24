@@ -22,6 +22,27 @@ import {
 import { AiFillInstagram } from "react-icons/ai";
 
 const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
+  const [botoons, setBotoons] = useState(false);
+
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setBotoons(true);
+    } else {
+      setBotoons(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  //logo scroll function
+
+  window.addEventListener("scroll", changeBackground);
+  console.log(changeBackground);
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo World";
@@ -186,7 +207,7 @@ const GoGoWorldComponent = ({ props, ref, currentRoute }) => {
             </div>
           </div>
         </footer>
-        <div className="bootons">
+        <div className={botoons ? "botoons active" : "botoons"}>
           <HashLink smooth to="/gogoworld#" id="up">
             <FaRegArrowAltCircleUp />
           </HashLink>

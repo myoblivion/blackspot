@@ -7,6 +7,7 @@ import somedog from "../images/somedog.png";
 import { FaUserCircle, FaSearch, FaWindowClose } from "react-icons/fa";
 import catto from "../images/gogoracingbackground/catto.png";
 import { render } from "react-dom";
+import dudes from "../images/gogoracingbackground/Announcement.png";
 
 const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
   useEffect(() => {
@@ -19,6 +20,13 @@ const GoGoRacingNewsComponent = ({ props, ref, onSearch }) => {
     <div className="gogoracingnews wrapper">
       <div className="gogo-racing-news-wrapper">
         <div className="gr-anews-wrap">
+          <img
+            src={dudes}
+            alt=""
+            id="characters"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
           <div
             className="ggrnews-contents"
             data-aos="zoom-in"
