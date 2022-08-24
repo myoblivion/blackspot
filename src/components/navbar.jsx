@@ -549,7 +549,7 @@ const NavbarComponent = ({ props, ref, currentRoute, events }) => {
                 onClick={() => setMyCheckbox((prev) => !prev)}
               >
                 <Link
-                  to="/job"
+                  to="/career"
                   className="nav-item a"
                   {...props}
                   onClick={() => window.scrollTo(0, 0)}
