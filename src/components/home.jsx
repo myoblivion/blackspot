@@ -1,959 +1,7 @@
-// import React, { useState, useEffect, useRef, LinkProps } from "react";
-// import { Link } from "react-router-dom";
-// import ReCaptchaV2 from "react-google-recaptcha";
-// import VideoPlayer from "react-video-js-player";
-// // Animate on Scroll
-// import Aos from "aos";
-// // Animate on scroll css
-// import "aos/dist/aos.css";
-// import getit from "../images/app-download.png";
-// import ReCAPTCHA from "react-google-recaptcha";
-// import appstore from "../images/appstore.png";
-// import GifLoader from "react-gif-loader";
-// import playNow from "../images/icons/play_now.png";
-// import ggcm from "../images/icons/gogoc.png";
-// import game4 from "../images/gogoc.png";
-// import GoGoChainLogo from "../images/icons/gogochain.png";
-// import scionnnnn from "../images/icons/SF.png";
-// import GGRICON from "../images/gogoracing_icon.png";
-// import ScionLogo from "../images/scionlogo.png";
-// import Gogochain from "../images/icons/gogochain.png";
-// import Gogoworld from "../images/icons/gogoworld.png";
-// import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
-// import GGworldBro from "../images/icons/gogo_world_backup.png";
-
-// // phone
-// import Phone from "../images/icons/phone.png";
-// // Black Spot Studio Logos
-// import Korealogo from "../images/icons/Black_Spot_KR.png";
-// import Dubailogo from "../images/icons/Black_Spot_DB.png";
-// import ggwbroskie from "../images/gogoracingbackground/desktop.png";
-// import icono from "../images/icons/logo.png";
-// import bg1 from "../images/gogoracingbackground/ggrbackground.png";
-// import sbg1 from "../images/gogoracingbackground/scionbg.png";
-
-// import ComingSoonGGW from "../images/gogoracingbackground/gogoworldcm.png";
-// // Shadow :D
-// import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
-// import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
-// import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
-// import bshadowLeft from "../images/gogoracingbackground/bleft.png";
-// import bshadowRight from "../images/gogoracingbackground/bright.png";
-// import bshadowBottom from "../images/gogoracingbackground/bbottom.png";
-// import yshadowBottom from "../images/gogoracingbackground/ybottom.png";
-// import yshadowRight from "../images/gogoracingbackground/yright.png";
-// import yshadowLeft from "../images/gogoracingbackground/yleft.png";
-// import vshadowBottom from "../images/gogoracingbackground/vbottom.png";
-// import vshadowRight from "../images/gogoracingbackground/vright.png";
-// import vshadowLeft from "../images/gogoracingbackground/vleft.png";
-// // Slider
-// import video1 from "../images/video/Big Update Trailer FB (1).mp4";
-// import video2 from "../images/video/Scion Fist PH Trailer.mp4";
-// import Slider from "react-slick";
-// import { HashLink } from "react-router-hash-link";
-// import character1 from "../images/Icon_Character_0008_Reward.png";
-// import character2 from "../images/Icon_Character_6.png";
-// import {
-//   FaEnvelope,
-//   FaFacebook,
-//   FaGamepad,
-//   FaInstagramSquare,
-//   FaMapMarked,
-//   FaPaperPlane,
-//   FaPhone,
-//   FaReddit,
-//   FaRegArrowAltCircleLeft,
-//   FaRegArrowAltCircleRight,
-//   FaTwitter,
-//   FaYoutube,
-//   FaWindows,
-//   FaAppStore,
-//   FaGooglePlay,
-//   FaRegArrowAltCircleUp,
-//   FaWindowClose,
-//   FaInstagram,
-//   FaTiktok,
-// } from "react-icons/fa";
-// import { AiFillInstagram } from "react-icons/ai";
-// // Image Js
-// import emailjs from "emailjs-com";
-
-// // Captcha :D
-
-// const HomeComponent = ({ props, ref, currentRoute }) => {
-//   const [isShown, setIsShown] = useState(true);
-//   // Aos (Animation On Scroll)
-//   useEffect(() => {
-//     Aos.init({ duration: 1000 });
-//   }, []);
-
-//   const settings = {
-//     Infinite: true,
-//     lazyload: true,
-//     speed: 200,
-//     slidesToShow: 1,
-//     fade: true,
-//     slidesToScroll: 1,
-//     centerPadding: "0",
-//     centerMode: true,
-//     arrows: true,
-//   };
-//   useEffect(() => {
-//     document.title = "Black Spot Studio | Philippines";
-//   }, []);
-
-//   // Email Js
-
-//   function getMobileOperatingSystem() {
-//     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-//     // Windows Phone must come first because its UA also contains "Android"
-//     if (/windows phone/i.test(userAgent)) {
-//       return "Windows Phone";
-//     }
-
-//     if (/android/i.test(userAgent)) {
-//       return "Android";
-//     }
-
-//     // iOS detection from: http://stackoverflow.com/a/9039885/177710
-//     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-//       return "iOS";
-//     }
-//   }
-//   function DetectAndServe() {
-//     let os = getMobileOperatingSystem();
-//     if (os == "Android") {
-//       window.location.href =
-//         "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
-//     } else if (os == "iOS") {
-//       window.location.href =
-//         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
-//     } else if (os == "Windows Phone") {
-//       window.location.href =
-//         "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
-//     } else {
-//       window.location.href =
-//         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
-//     }
-//   }
-
-//   function getMobileOperatingSystems() {
-//     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-//     // Windows Phone must come first because its UA also contains "Android"
-//     if (/windows phone/i.test(userAgent)) {
-//       return "Windows Phone";
-//     }
-
-//     if (/android/i.test(userAgent)) {
-//       return "Android";
-//     }
-
-//     // iOS detection from: http://stackoverflow.com/a/9039885/177710
-//     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-//       return "iOS";
-//     }
-//   }
-//   function DetectAndServes() {
-//     let os = getMobileOperatingSystems();
-//     if (os == "Android") {
-//       window.location.href =
-//         "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
-//     } else if (os == "iOS") {
-//       window.location.href =
-//         "https://apps.apple.com/ph/app/scion-fist/id1591386655";
-//     } else if (os == "Windows Phone") {
-//       window.location.href =
-//         "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
-//     } else {
-//       window.location.href =
-//         "https://apps.apple.com/ph/app/scion-fist/id1591386655";
-//     }
-//   }
-
-//   // CaptCha
-//   const [captchaValido, changeCaptchaValid] = useState(null);
-//   const [usuarioValido, changeValidUser] = useState(false);
-//   const captcha = useRef(null);
-//   const onChange = () => {
-//     if (captcha.current.getValue()) {
-//       console.log("The User is not a Robot");
-//       changeCaptchaValid(true);
-//     }
-//   };
-
-//   // Email Js
-//   const submit = (e) => {
-//     e.preventDefault();
-//     if (captcha.current.getValue()) {
-//       console.log("El usuario no es un robot");
-//       changeValidUser(true);
-//       alert("Your message has been sent");
-//       changeCaptchaValid(true);
-//       emailjs
-//         .sendForm(
-//           "service_dhedxwz",
-//           "template_q1r5952",
-//           e.target,
-//           "nOqEMPnZOelgJtLCT"
-//         )
-//         .then(
-//           (result) => {
-//             console.log(result.text);
-//           },
-//           (error) => {
-//             console.log(error.text);
-//           }
-//         );
-//     } else {
-//       console.log("Accept Recaptcha pls");
-//       changeValidUser(false);
-//       changeCaptchaValid(false);
-//     }
-//   };
-
-//   return (
-//     // Home
-//     <div className="wrapper">
-//       <div className="home">
-//         {/* Slideshow */}
-
-//         <div className="selectorz-wrapper">
-//           <input type="radio" id="game1" name="slider-game" defaultChecked />
-//           <input type="radio" id="game2" name="slider-game" />
-//           <input type="radio" id="game3" name="slider-game" />
-//           <input type="radio" id="game4" name="slider-game" />
-
-//           <div className="content1">
-//             <div className="leftx">
-//               <div className="video">
-//                 {/* <img src={bg1} alt="" id="background" /> */}
-//                 <video src={video1} autoPlay={true} loop={true} muted={true} />
-//                 <img src={Phone} alt="" id="phone" />
-//               </div>
-//               <div className="socialization">
-//                 <ul>
-//                   <li>
-//                     {" "}
-//                     <a
-//                       href="https://www.facebook.com/GogoRacingPhilippines"
-//                       target="_blank"
-//                     >
-//                       <FaFacebook />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.instagram.com/gogoracingph/"
-//                       target="_blank"
-//                     >
-//                       <FaInstagram />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://twitter.com/GogoRacingPhil"
-//                       target="_blank"
-//                     >
-//                       <FaTwitter />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.reddit.com/r/GogoRacingPH/"
-//                       target="_blank"
-//                     >
-//                       <FaReddit />
-//                     </a>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//             <div className="rightx">
-//               <Link
-//                 to="/gogoracing"
-//                 {...props}
-//                 ref={ref}
-//                 onClick={() => window.scrollTo(0, 0)}
-//               >
-//                 <img src={Gogoracing} alt="" id="ggr-logz" />
-//               </Link>
-//               <h1>
-//                 Ready your car, finish the line and win a coin and be
-//                 incentivized. Play to Earn? It’s a surprise.
-//                 <Link to="/gogoracingnews"> read more.</Link>
-//               </h1>
-//               <a
-//                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
-//                 id="playnowss"
-//               >
-//                 <img src={playNow} alt="" />
-//               </a>
-//             </div>
-//           </div>
-//           <div className="content2">
-//             <div className="leftx">
-//               <Link
-//                 to="/scion"
-//                 {...props}
-//                 ref={ref}
-//                 onClick={() => window.scrollTo(0, 0)}
-//               >
-//                 <img src={ScionLogo} alt="" id="logo" />
-//               </Link>
-//               <h1>
-//                 An Automatic First-Person Shooting game! The higher the rank,
-//                 the better performance. The battle is ready for you.{" "}
-//                 <a href="">Read More</a>
-//               </h1>
-//               <a
-//                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
-//                 id="playnowsss"
-//               >
-//                 <span></span>
-//                 <span></span>
-//                 <span></span>
-//                 <span></span>
-//                 <p>Play Now</p>
-//               </a>
-//               <div className="socialization">
-//                 <ul>
-//                   <li>
-//                     {" "}
-//                     <a
-//                       href="https://www.facebook.com/ScionFistPhilippines"
-//                       target="_blank"
-//                     >
-//                       <FaFacebook />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.instagram.com/scionfistphilippinesofficial/"
-//                       target="_blank"
-//                     >
-//                       <FaInstagram />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a href="https://twitter.com/ScionFist_PH" target="_blank">
-//                       <FaTwitter />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.reddit.com/r/ScionFistPHofficial/"
-//                       target="_blank"
-//                     >
-//                       <FaReddit />
-//                     </a>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//             <div className="rightx">
-//               <div className="video">
-//                 <img src={sbg1} alt="" id="background" />
-//                 <video
-//                   src={video2}
-//                   width="750"
-//                   height="500"
-//                   autoPlay={true}
-//                   loop={true}
-//                   muted={true}
-//                 />
-//                 {/* <img src={shadowLeft} alt="" id="leftu" />
-//               <img src={shadowRight} alt="" id="rightu" />
-//               <img src={shadowBottom} alt="" id="bottomtu" /> */}
-//                 <img src={Phone} alt="" id="phone" />
-//               </div>
-//             </div>
-//           </div>
-//           <div className="content3">
-//             <div className="leftx">
-//               <Link
-//                 to="/scion"
-//                 {...props}
-//                 ref={ref}
-//                 onClick={() => window.scrollTo(0, 0)}
-//               >
-//                 <img src={Gogoworld} alt="" id="worldsk" />
-//               </Link>
-//               <h1 id="onenonly">
-//                 Adorable characters living in their own world. Check out how
-//                 they make your world more entertaining. <a href="">Read More</a>
-//               </h1>
-//               <div className="socialization">
-//                 <ul>
-//                   <li>
-//                     {" "}
-//                     <a
-//                       href="https://www.facebook.com/BlackspotstudioPH"
-//                       target="_blank"
-//                     >
-//                       <FaFacebook />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.instagram.com/phblackspotstudio/"
-//                       target="_blank"
-//                     >
-//                       <FaInstagram />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a href="https://twitter.com/BlackSpotPH" target="_blank">
-//                       <FaTwitter />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.reddit.com/r/BlackSpotStudioPH/"
-//                       target="_blank"
-//                     >
-//                       <FaReddit />
-//                     </a>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//             <div className="rightx">
-//               <div className="video">
-//                 <img src={ComingSoonGGW} alt="" id="ggwcms" />
-//                 <img src={ggwbroskie} alt="" className="background" />
-//               </div>
-//               {/* <img src={yshadowLeft} alt="" id="leftu" />
-//               <img src={yshadowRight} alt="" id="rightu" />
-//               <img src={yshadowBottom} alt="" id="bottomtu" /> */}
-//             </div>
-//           </div>
-//           <div className="content4">
-//             <div className="leftx">
-//               <Link
-//                 to="/gogochain"
-//                 {...props}
-//                 ref={ref}
-//                 onClick={() => window.scrollTo(0, 0)}
-//                 id="chain"
-//               >
-//                 <GifLoader
-//                   loading={true}
-//                   imageSrc="https://media1.giphy.com/media/essaF8bzvC3rra18sP/giphy.gif?cid=790b76111f299a6898d899429189b7e8ac6adaf3b9c80e60&rid=giphy.gif&ct=s"
-//                   overlayBackground="transparent"
-//                 />
-//               </Link>
-//               <h1 id="ggchainh1">
-//                 Are you ready to explore the dimension of these cute characters?
-//                 They are coming soon to play with you. <a href="">Read More</a>
-//               </h1>
-//               <div className="socialization">
-//                 <ul>
-//                   <li>
-//                     {" "}
-//                     <a
-//                       href="https://www.facebook.com/BlackspotstudioPH"
-//                       target="_blank"
-//                     >
-//                       <FaFacebook />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.instagram.com/phblackspotstudio/"
-//                       target="_blank"
-//                     >
-//                       <FaInstagram />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a href="https://twitter.com/BlackSpotPH" target="_blank">
-//                       <FaTwitter />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.reddit.com/r/BlackSpotStudioPH/"
-//                       target="_blank"
-//                     >
-//                       <FaReddit />
-//                     </a>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//             <div className="rightx">
-//               <div className="video">
-//                 <img src={game4} alt="" />
-//               </div>
-//               {/* <img src={vshadowLeft} alt="" id="leftu" />
-//               <img src={vshadowRight} alt="" id="rightu" />
-//               <img src={vshadowBottom} alt="" id="bottomtu" /> */}
-//             </div>
-//           </div>
-//           <div className="displayers">
-//             <label htmlFor="game1">
-//               <img src={GGRICON} alt="" />
-//             </label>
-//             <label htmlFor="game2">
-//               {" "}
-//               <img src={scionnnnn} alt="ScionFist" />
-//             </label>
-//             <label htmlFor="game3">
-//               {" "}
-//               <img src={GGworldBro} alt="GogoWorld" />
-//             </label>
-//             <label htmlFor="game4">
-//               {" "}
-//               <img src={GoGoChainLogo} alt="GogoChain" />
-//             </label>
-//           </div>
-//         </div>
-//         <div className="mobile-home">
-//           <div className="game-mobile-wrapper">
-//             <Slider {...settings}>
-//               <div className="ggr-m">
-//                 <div className="top">
-//                   <video
-//                     src={video1}
-//                     width="750"
-//                     height="500"
-//                     autoPlay={true}
-//                     loop={true}
-//                     muted={true}
-//                   />
-//                   <img src={Gogoracing} alt="" id="mggr-logz" />
-//                 </div>
-//                 <div className="bottomzkie">
-//                   <h1>
-//                     Ready your car, finish the line and win a coin and be
-//                     incentivized. Play to Earn? It’s a surprise.
-//                     <Link to="/gogoracingnews"> read more.</Link>
-//                   </h1>
-//                   <div className="play-nowskiez">
-//                     <button onClick={DetectAndServe}>
-//                       <img src={playNow} alt="" id="playimg" />
-//                     </button>
-//                   </div>
-//                   <div className="socialization">
-//                     <ul>
-//                       <li>
-//                         <a href="https://bit.ly/3PjM6pL" target="_blank">
-//                           <FaFacebook />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a
-//                           href="https://www.instagram.com/gogoracingph/"
-//                           target="_blank"
-//                         >
-//                           <FaInstagram />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaTwitter />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaReddit />
-//                         </a>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="scion-m">
-//                 <div className="top">
-//                   <img src={ScionLogo} alt="" id="mlogo" />
-//                   <video
-//                     src={video2}
-//                     width="750"
-//                     height="500"
-//                     autoPlay={true}
-//                     loop={true}
-//                     muted={true}
-//                   />
-//                 </div>
-//                 <div className="bottomzkie">
-//                   <h1>
-//                     An Automatic First-Person Shooting game! The higher the
-//                     rank, the better performance. The battle is ready for you.{" "}
-//                     <a href="">Read More</a>
-//                   </h1>
-//                   <div className="play-nowskiez">
-//                     <button onClick={DetectAndServe} id="playnowsssss">
-//                       Play Now
-//                     </button>
-//                   </div>
-//                   <div className="socialization">
-//                     <ul>
-//                       <li>
-//                         {" "}
-//                         <a href="https://www.facebook.com/ScionFistPhilippines">
-//                           <FaFacebook />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="https://www.instagram.com/scionfistphilippinesofficial/">
-//                           <FaInstagram />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="https://twitter.com/ScionFist_PH">
-//                           <FaTwitter />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="https://www.reddit.com/r/ScionFistPHofficial/">
-//                           <FaReddit />
-//                         </a>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="ggworld-m">
-//                 <div className="top">
-//                   <img src={Gogoworld} alt="" id="mworldsk" />
-//                 </div>
-//                 <div className="bottomzkie">
-//                   <div className="play-nowskiez">
-//                     <img src={ComingSoonGGW} alt="" id="comgson" />
-//                   </div>
-//                   <div className="socialization">
-//                     <ul>
-//                       <li>
-//                         <a href="">
-//                           <FaFacebook />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaInstagram />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaTwitter />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaReddit />
-//                         </a>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="ggc-m">
-//                 <div className="top">
-//                   <img src={ggcm} alt="" id="ggc-img" />
-//                 </div>
-//                 <div className="bottomzkie">
-//                   <div className="play-nowskiez">
-//                     <img src={ComingSoonGGW} alt="" id="comgson" />
-//                   </div>
-//                   <div className="socialization">
-//                     <ul>
-//                       <li>
-//                         {" "}
-//                         <a href="">
-//                           <FaFacebook />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaInstagram />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaTwitter />
-//                         </a>
-//                       </li>
-//                       <li>
-//                         <a href="">
-//                           <FaReddit />
-//                         </a>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                 </div>
-//               </div>
-//             </Slider>
-//           </div>
-//         </div>
-//         {/* Contact Us */}
-//         <div className="contactforms" id="contact">
-//           <div
-//             className="container contact-us-section"
-//             data-aos="fade-right"
-//             data-aos-offset="50"
-//             data-aos-duration="700"
-//           >
-//             <div className="contact-row h-100">
-//               <div className="col-md-3 section-title">
-//                 <h2>
-//                   Contact Us <span>We'd love to hear from you!</span>
-//                 </h2>
-//               </div>
-//               <div className="col-md-9">
-//                 {!usuarioValido && (
-//                   <form
-//                     className="contact-us-form"
-//                     id="someForm"
-//                     onSubmit={submit}
-//                     autoComplete="off"
-//                   >
-//                     <div className="form-group">
-//                       <label htmlFor="name">Name : *</label>
-//                       <input
-//                         placeholder="enter name"
-//                         type="text"
-//                         required
-//                         id="name"
-//                         name="name"
-//                       />
-//                     </div>
-//                     <div className="form-group">
-//                       <label htmlFor="email">Email Address : *</label>
-//                       <input type="email" name="email" id="email" required />
-//                     </div>
-//                     <div className="form-group">
-//                       <label htmlFor="message">Message :</label>
-//                       <textarea
-//                         placeholder="Message"
-//                         id="message"
-//                         rows="2"
-//                         name="message"
-//                         maxLength={600}
-//                       ></textarea>
-//                     </div>
-//                     <div className="form-group clearfix">
-//                       <ReCAPTCHA
-//                         ref={captcha}
-//                         sitekey="6LfgXA4hAAAAAEKncvsfngTiqZPPRlv3903vapiP"
-//                         onChange={onChange}
-//                         size={"normal"}
-//                         theme="dark"
-//                       />
-//                       {captchaValido === false && (
-//                         <div className="error-captcha">
-//                           You must verify the captcha
-//                         </div>
-//                       )}
-//                       <button
-//                         id="submit"
-//                         type="sumbit"
-//                         data-id="#accessories-holder"
-//                         className="red-select-btn model-selector btn-send-message"
-//                       >
-//                         <span>Submit</span>
-//                       </button>
-//                     </div>
-//                   </form>
-//                 )}
-//               </div>
-//             </div>
-//           </div>
-//           <div
-//             className="partners-logo"
-//             data-aos="fade-left"
-//             data-aos-offset="200"
-//             data-aos-duration="700"
-//           >
-//             <div className="ourpartners-title">
-//               <h1>Partners</h1>
-//             </div>
-//             <div className="desktop-partners">
-//               {isShown && (
-//                 <div className="korea">
-//                   <a
-//                     href="https://blackspotstudio.com/final/main/main.asp"
-//                     target="_blank"
-//                   >
-//                     <img src={Korealogo} alt="" />
-//                   </a>
-//                 </div>
-//               )}
-//               <div className="dubai">
-//                 <a
-//                   href="https://blackspotstudio.com/final/main/main.asp"
-//                   target="_blank"
-//                   onMouseEnter={() => setIsShown(false)}
-//                   onMouseLeave={() => setIsShown(true)}
-//                 >
-//                   <img src={Dubailogo} alt="dubaidesktop" />
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//           <div
-//             className="mobile-partners"
-//             data-aos="fade-up"
-//             data-aos-offset="200"
-//             data-aos-duration="700"
-//           >
-//             <div className="ourpartners-mobile-title">
-//               <h1>Partners</h1>
-//             </div>
-//             <div className="dubai-mobile">
-//               <a
-//                 href="https://blackspotstudio.com/final/main/main.asp"
-//                 target="_blank"
-//               >
-//                 <img src={Dubailogo} alt="" id="dubaimobile" />
-//               </a>
-//             </div>
-//             <div className="korea-mobile">
-//               <a
-//                 href="https://blackspotstudio.com/final/main/main.asp"
-//                 target="_blank"
-//               >
-//                 <img src={Korealogo} alt="" id="dubaimobile" />
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//         {/* Footer */}
-//         <div className="section">
-//           <footer className="footer-distributed">
-//             <div className="footer-left" data-aos="fade-up">
-//               <img src={icono} alt="" id="footer-logo" />
-//               <p className="footer-links">
-//                 <Link
-//                   to="/about"
-//                   {...props}
-//                   ref={ref}
-//                   onClick={() => window.scrollTo(0, 0)}
-//                 >
-//                   About Us
-//                 </Link>
-//                 <Link
-//                   to="/privacy"
-//                   {...props}
-//                   ref={ref}
-//                   onClick={() => window.scrollTo(0, 0)}
-//                 >
-//                   Privacy & Policy
-//                 </Link>
-//                 <Link
-//                   to="/terms-of-use"
-//                   {...props}
-//                   ref={ref}
-//                   onClick={() => window.scrollTo(0, 0)}
-//                 >
-//                   Terms of Use
-//                 </Link>
-//                 <Link
-//                   to="/job"
-//                   {...props}
-//                   ref={ref}
-//                   onClick={() => window.scrollTo(0, 0)}
-//                 >
-//                   Career
-//                 </Link>
-
-//                 <HashLink smooth to="/#contact">
-//                   {" "}
-//                   Contact Us
-//                 </HashLink>
-//               </p>
-
-//               <p className="footer-company-name">
-//                 Copyright © Black Spot Studio PH{" "}
-//               </p>
-//             </div>
-
-//             <div className="footer-center" data-aos="fade-up">
-//               <div className="desz">
-//                 <p>
-//                   <Link
-//                     to="/direction"
-//                     {...props}
-//                     ref={ref}
-//                     onClick={() => window.scrollTo(0, 0)}
-//                   >
-//                     <FaMapMarked /> 26th St, Taguig, 1634 Metro Manila
-//                   </Link>
-//                 </p>
-//               </div>
-
-//               <div className="desz">
-//                 <p>
-//                   <a href="play@blackspotstudio.ph">
-//                     {" "}
-//                     <FaEnvelope /> play@blackspotstudio.ph
-//                   </a>
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div className="footer-right">
-//               <div className="footer-icons">
-//                 <ul className="social-media-list">
-//                   <li>
-//                     <a
-//                       href="https://www.facebook.com/BlackspotstudioPH"
-//                       target="_blank"
-//                       className="contact-icon"
-//                     >
-//                       <FaFacebook />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.instagram.com/phblackspotstudio/"
-//                       target="_blank"
-//                       className="contact-icon"
-//                     >
-//                       <AiFillInstagram />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://twitter.com/BlackSpotPH"
-//                       target="_blank"
-//                       className="contact-icon"
-//                     >
-//                       <FaTwitter />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.reddit.com/r/BlackSpotStudioPH/"
-//                       target="_blank"
-//                       className="contact-icon"
-//                     >
-//                       <FaReddit />
-//                     </a>
-//                   </li>
-//                   <li>
-//                     <a
-//                       href="https://www.youtube.com/channel/UCL9FkYZu775aKfJ1zv4gZJQ"
-//                       target="_blank"
-//                       className="contact-icon"
-//                     >
-//                       <FaYoutube />
-//                     </a>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//           </footer>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomeComponent;
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
+import ReCaptchaV2 from "react-google-recaptcha";
+import VideoPlayer from "react-video-js-player";
 // Animate on Scroll
 import Aos from "aos";
 // Animate on scroll css
@@ -961,39 +9,50 @@ import "aos/dist/aos.css";
 import getit from "../images/app-download.png";
 import ReCAPTCHA from "react-google-recaptcha";
 import appstore from "../images/appstore.png";
-import ggrc1 from "../images/edit/nf-tcharacter.png";
-import ggrc2 from "../images/edit/2.png";
-import mobile1 from "../images/game_mobile/phone1.png";
-import mobile2 from "../images/game_mobile/phone2.png";
-import mobile3 from "../images/game_mobile/Gogo World 350 x 600px.png";
-import mobile4 from "../images/game_mobile/GogoChain 350 x600px.png";
-import game1 from "../images/edit/banner1.png";
-import game2 from "../images/edit/banner2.png";
-import game3 from "../images/edit/banner3.png";
-import EventImage from "../images/event/unknown.png";
-// Devices
-import Laptop from "../images/icons/laptop.png";
-// Characters
-import Irina from "../images/characters/ch6.png";
-import Risa from "../images/characters/ch11.png";
+import GifLoader from "react-gif-loader";
+import playNow from "../images/icons/play_now.png";
+import ggcm from "../images/icons/gogoc.png";
+import game4 from "../images/gogoc.png";
+import GoGoChainLogo from "../images/icons/gogochain.png";
+import scionnnnn from "../images/icons/SF.png";
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
-import Gogoworld from "../images/icons/gogoworld.png";
+import Gogoworld from "../images/icons/gogoworld.svg";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
-
+import GGworldBro from "../images/icons/gogo_world_backup.png";
+import BLACKSPOTMB from "../images/icons/Black_Spot_MB.png";
+// phone
+import Phone from "../images/icons/phone.png";
 // Black Spot Studio Logos
 import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
-import ggwbroskie from "../images/gogoch.jpg";
+import ggwbroskie from "../images/gogoracingbackground/desktop.png";
 import icono from "../images/icons/logo.png";
+import bg1 from "../images/gogoracingbackground/ggrbackground.png";
+import sbg1 from "../images/gogoracingbackground/scionbg.png";
 
+import ComingSoonGGW from "../images/gogoracingbackground/gogoworldcm.png";
 // Shadow :D
-
+import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
+import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
+import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
+import bshadowLeft from "../images/gogoracingbackground/bleft.png";
+import bshadowRight from "../images/gogoracingbackground/bright.png";
+import bshadowBottom from "../images/gogoracingbackground/bbottom.png";
+import yshadowBottom from "../images/gogoracingbackground/ybottom.png";
+import yshadowRight from "../images/gogoracingbackground/yright.png";
+import yshadowLeft from "../images/gogoracingbackground/yleft.png";
+import vshadowBottom from "../images/gogoracingbackground/vbottom.png";
+import vshadowRight from "../images/gogoracingbackground/vright.png";
+import vshadowLeft from "../images/gogoracingbackground/vleft.png";
 // Slider
+import video1 from "../images/video/Big Update Trailer FB (1).mp4";
+import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
-// Icons
+import character1 from "../images/Icon_Character_0008_Reward.png";
+import character2 from "../images/Icon_Character_6.png";
 import {
   FaEnvelope,
   FaFacebook,
@@ -1027,56 +86,23 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
-  // slide show (banner)
 
-  const radioButtons = document.querySelectorAll('input[name="control"]');
-
-  const [count, setTimeout] = useState(0);
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeout((c) => ++c % 4);
-    }, 6000);
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const [imageIndex, setImageIndex] = useState(0);
   const settings = {
     Infinite: true,
     lazyload: true,
-    speed: 300,
+    speed: 200,
     slidesToShow: 1,
+    fade: true,
+    slidesToScroll: 1,
+    centerPadding: "0",
     centerMode: true,
     dots: true,
-    centerPadding: 0,
-    arrows: false,
-    beforeChange: (current, next) => setImageIndex(next),
   };
-
-  // const settings = {
-  //   Infinite: true,
-  //   lazyload: true,
-  //   speed: 200,
-  //   slidesToShow: 1,
-  //   fade: true,
-  //   slidesToScroll: 1,
-  //   centerPadding: "0",
-  //   centerMode: true,
-  //   arrows: true,
-  //   dots: true,
-  //   appendDots: (dots) => (
-  //     <div
-  //       style={{
-  //         borderRadius: "10px",
-  //         padding: "10px",
-  //       }}
-  //     >
-  //       <ul style={{ margin: "0px" }}> {dots} </ul>
-  //     </div>
-  //   ),
-  // };
   useEffect(() => {
     document.title = "Black Spot Studio | Philippines";
   }, []);
+
+  // Email Js
 
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -1094,7 +120,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
-    console.log(userAgent);
   }
   function DetectAndServe() {
     let os = getMobileOperatingSystem();
@@ -1106,17 +131,51 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
     } else if (os == "Windows Phone") {
       window.location.href =
-        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
     } else {
       window.location.href =
-        "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+        "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
     }
   }
-  // Recaptcha
+
+  function getMobileOperatingSystems() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+  }
+  function DetectAndServes() {
+    let os = getMobileOperatingSystems();
+    if (os == "Android") {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
+    } else if (os == "iOS") {
+      window.location.href =
+        "https://apps.apple.com/ph/app/scion-fist/id1591386655";
+    } else if (os == "Windows Phone") {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
+    } else {
+      window.location.href =
+        "https://apps.apple.com/ph/app/scion-fist/id1591386655";
+    }
+  }
+
+  // CaptCha
   const [captchaValido, changeCaptchaValid] = useState(null);
   const [usuarioValido, changeValidUser] = useState(false);
   const captcha = useRef(null);
-
   const onChange = () => {
     if (captcha.current.getValue()) {
       console.log("The User is not a Robot");
@@ -1134,10 +193,10 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       changeCaptchaValid(true);
       emailjs
         .sendForm(
-          "service_dhedxwz",
-          "template_q1r5952",
+          "service_5bqvvsa",
+          "template_g2broht",
           e.target,
-          "nOqEMPnZOelgJtLCT"
+          "LrSieM1pE_SBGX6Us"
         )
         .then(
           (result) => {
@@ -1153,347 +212,505 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
       changeCaptchaValid(false);
     }
   };
+  const [botoons, setBotoons] = useState(false);
 
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setBotoons(true);
+    } else {
+      setBotoons(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  //logo scroll function
+
+  window.addEventListener("scroll", changeBackground);
   return (
     // Home
     <div className="wrapper">
       <div className="home">
         {/* Slideshow */}
-        <div className="slider">
-          <input
-            name="control"
-            id="page1"
-            type="radio"
-            value={count}
-            checked={count == 0}
-          />
-          <input
-            name="control"
-            id="page2"
-            type="radio"
-            value={count}
-            checked={count == 1}
-          />
-          <input
-            name="control"
-            id="page3"
-            type="radio"
-            value={count}
-            checked={count == 2}
-          />
-          <input
-            name="control"
-            id="page4"
-            type="radio"
-            value={count}
-            checked={count == 3}
-          />
-          <div className="slider--el slider--el-1 anim-4parts">
-            <div className="slider--el-bg">
-              <div className="part top left"></div>
-              <div className="part top right"></div>
-              <div className="part bot left"></div>
-              <div className="part bot right"></div>
+
+        <div className="selectorz-wrapper">
+          <input type="radio" id="game1" name="slider-game" defaultChecked />
+          <input type="radio" id="game2" name="slider-game" />
+          <input type="radio" id="game3" name="slider-game" />
+          <input type="radio" id="game4" name="slider-game" />
+
+          <div className="content1">
+            <div className="leftx">
+              <div className="video">
+                {/* <img src={bg1} alt="" id="background" /> */}
+                <video src={video1} autoPlay={true} loop={true} muted={true} />
+                <img src={Phone} alt="" id="phone" />
+              </div>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a
+                      href="https://www.facebook.com/GogoRacingPhilippines"
+                      target="_blank"
+                    >
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/gogoracingph/"
+                      target="_blank"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/GogoRacingPhil"
+                      target="_blank"
+                    >
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.reddit.com/r/GogoRacingPH/"
+                      target="_blank"
+                    >
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="slider--el-content">
-              <h2 className="slider--el-heading"></h2>
-            </div>
-          </div>
-          <div className="slider--el slider--el-2 anim-9parts">
-            <div className="slider--el-bg">
-              <div className="part left-top"></div>
-              <div className="part mid-top"></div>
-              <div className="part right-top"></div>
-              <div className="part left-mid"></div>
-              <div className="part mid-mid"></div>
-              <div className="part right-mid"></div>
-              <div className="part left-bot"></div>
-              <div className="part mid-bot"></div>
-              <div className="part right-bot"></div>
-            </div>
-            <div className="slider--el-content">
-              <h2 className="slider--el-heading"></h2>
-            </div>
-          </div>
-          <div className="slider--el slider--el-3 anim-5parts">
-            <div className="slider--el-bg">
-              <div className="part part-1"></div>
-              <div className="part part-2"></div>
-              <div className="part part-3"></div>
-              <div className="part part-4"></div>
-              <div className="part part-5"></div>
-            </div>
-            <div className="slider--el-content">
-              <h2 className="slider--el-heading"></h2>
-            </div>
-          </div>
-          <div className="slider--el slider--el-4 anim-3parts">
-            <div className="slider--el-bg">
-              <div className="part left"></div>
-              <div className="part mid"></div>
-              <div className="part right"></div>
-            </div>
-            <div className="slider--el-content">
-              <h2 className="slider--el-heading"></h2>
+            <div className="rightx">
+              <Link
+                to="/gogoracing"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <img src={Gogoracing} alt="" id="ggr-logz" />
+              </Link>
+              <h1>
+                Ready your car, finish the line and win a coin and be
+                incentivized. Play to Earn? It’s a surprise.
+                <Link to="/gogoracingnews"> read more.</Link>
+              </h1>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                id="playnowss"
+              >
+                <img src={playNow} alt="" />
+              </a>
             </div>
           </div>
-          <div className="slider--control left">
-            <label className="page1-left" htmlFor="page1"></label>
-            <label className="page2-left" htmlFor="page2"></label>
-            <label className="page3-left" htmlFor="page3"></label>
-            <label className="page4-left" htmlFor="page4"></label>
+          <div className="content2">
+            <div className="leftx">
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <img src={ScionLogo} alt="" id="logo" />
+              </Link>
+              <h1>
+                An Automatic First-Person Shooting game! The higher the rank,
+                the better performance. The battle is ready for you.{" "}
+                <a href="">Read More</a>
+              </h1>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                id="playnowsss"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Play Now</p>
+              </a>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a
+                      href="https://www.facebook.com/ScionFistPhilippines"
+                      target="_blank"
+                    >
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/scionfistphilippinesofficial/"
+                      target="_blank"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/ScionFist_PH" target="_blank">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.reddit.com/r/ScionFistPHofficial/"
+                      target="_blank"
+                    >
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <img src={sbg1} alt="" id="background" />
+                <video
+                  src={video2}
+                  width="750"
+                  height="500"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                />
+                {/* <img src={shadowLeft} alt="" id="leftu" />
+              <img src={shadowRight} alt="" id="rightu" />
+              <img src={shadowBottom} alt="" id="bottomtu" /> */}
+                <img src={Phone} alt="" id="phone" />
+              </div>
+            </div>
           </div>
-          <div className="slider--control right">
-            <label className="page1-right" htmlFor="page1"></label>
-            <label className="page2-right" htmlFor="page2"></label>
-            <label className="page3-right" htmlFor="page3"></label>
-            <label className="page4-right" htmlFor="page4"></label>
+          <div className="content3">
+            <div className="leftx">
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+                id="world"
+              >
+                <GifLoader
+                  loading={true}
+                  imageSrc="https://media3.giphy.com/media/F4JfsEBmIQyJLh0PDF/giphy.gif?cid=790b7611cda1ac71b17d4bf2b3d33dd63ef66898f7968d0c&rid=giphy.gif&ct=s"
+                  overlayBackground="transparent"
+                />
+              </Link>
+              <h1 id="onenonly">
+                Adorable characters living in their own world. Check out how
+                they make your world more entertaining. <a href="">Read More</a>
+              </h1>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a
+                      href="https://www.facebook.com/BlackspotstudioPH"
+                      target="_blank"
+                    >
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/phblackspotstudio/"
+                      target="_blank"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/BlackSpotPH" target="_blank">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                      target="_blank"
+                    >
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <img src={ComingSoonGGW} alt="" id="ggwcms" />
+                <img src={ggwbroskie} alt="" className="background" />
+              </div>
+              {/* <img src={yshadowLeft} alt="" id="leftu" />
+              <img src={yshadowRight} alt="" id="rightu" />
+              <img src={yshadowBottom} alt="" id="bottomtu" /> */}
+            </div>
+          </div>
+          <div className="content4">
+            <div className="leftx">
+              <Link
+                to="/gogochain"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+                id="chain"
+              >
+                <GifLoader
+                  loading={true}
+                  imageSrc="https://media1.giphy.com/media/essaF8bzvC3rra18sP/giphy.gif?cid=790b76111f299a6898d899429189b7e8ac6adaf3b9c80e60&rid=giphy.gif&ct=s"
+                  overlayBackground="transparent"
+                />
+              </Link>
+              <h1 id="ggchainh1">
+                Are you ready to explore the dimension of these cute characters?
+                They are coming soon to play with you. <a href="">Read More</a>
+              </h1>
+              <div className="socialization">
+                <ul>
+                  <li>
+                    {" "}
+                    <a
+                      href="https://www.facebook.com/BlackspotstudioPH"
+                      target="_blank"
+                    >
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/phblackspotstudio/"
+                      target="_blank"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/BlackSpotPH" target="_blank">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.reddit.com/r/BlackSpotStudioPH/"
+                      target="_blank"
+                    >
+                      <FaReddit />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="rightx">
+              <div className="video">
+                <img src={game4} alt="" />
+              </div>
+              {/* <img src={vshadowLeft} alt="" id="leftu" />
+              <img src={vshadowRight} alt="" id="rightu" />
+              <img src={vshadowBottom} alt="" id="bottomtu" /> */}
+            </div>
+          </div>
+          <div className="displayers">
+            <label htmlFor="game1">
+              <img src={GGRICON} alt="" />
+            </label>
+            <label htmlFor="game2">
+              {" "}
+              <img src={scionnnnn} alt="ScionFist" />
+            </label>
+            <label htmlFor="game3">
+              {" "}
+              <img src={GGworldBro} alt="GogoWorld" />
+            </label>
+            <label htmlFor="game4">
+              {" "}
+              <img src={GoGoChainLogo} alt="GogoChain" />
+            </label>
           </div>
         </div>
-
-        <div className="container-1">
-          <div className="container-wrapper"></div>
-        </div>
-
-        <div className="container-2" id="game">
-          <div
-            className="game-wrapper"
-            data-aos="fade-up"
-            data-aos-duration="700"
-          >
-            <div className="game-title">
-              <h2>Black Spot Studio PH</h2>
-              <h4 className="fourz">
-                Four exciting games are being developed for your entertainment.
-              </h4>
-              <div className="line"></div>
-            </div>
-            <div className="sliders">
-              <Slider {...settings}>
-                <div className="slider-image">
-                  <img alt="Game" id="desktop2" data-aos="fade-up" />
-                  <img src={ggrc1} alt="" id="ggrc1" data-aos="fade-up" />
-                  <img src={ggrc2} alt="" id="ggrc2" data-aos="fade-up" />
-                  <img src={mobile2} alt="" id="mobile2" data-aos="fade-up" />
-                  <Link
-                    to="/gogoracing"
-                    {...props}
-                    ref={ref}
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
-                    <img
-                      src={Gogoracing}
-                      alt="Gogo Racing Logo"
-                      id="gogoracingsz"
-                      data-aos="fade-up"
-                    />
-                  </Link>
-                  <div className="gamedes">
-                    <div className="logoz">
-                      <div className="icons">
-                        <div className="sccionlogo"></div>
-                      </div>
-                      <ul className="icon-list" id="ggr" data-aos="fade-up">
-                        <li>
-                          <a
-                            href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
-                            target="_blank"
-                          >
-                            <img src={getit} alt="" />
-                          </a>
-                        </li>
-                        <li id="secondu">
-                          <a
-                            href="https://apps.apple.com/app/id1623115563?platform=iphone"
-                            target="_blank"
-                          >
-                            <img src={appstore} alt="" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="video" id="gogoracevid" data-aos="fade-up">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/uwW4wjSUgSM"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+        <div className="mobile-home">
+          <div className="game-mobile-wrapper">
+            <Slider {...settings}>
+              <div className="ggr-m">
+                <div className="top">
+                  <video
+                    src={video1}
+                    width="750"
+                    height="500"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                  />
+                  <img src={Gogoracing} alt="" id="mggr-logz" />
+                </div>
+                <div className="bottomzkie">
+                  <h1>
+                    Ready your car, finish the line and win a coin and be
+                    incentivized. Play to Earn? It’s a surprise.
+                    <Link to="/gogoracingnews"> read more.</Link>
+                  </h1>
+                  <div className="play-nowskiez">
+                    <button onClick={DetectAndServe}>
+                      <img src={playNow} alt="" id="playimg" />
+                    </button>
+                  </div>
+                  <div className="socialization">
+                    <ul>
+                      <li>
+                        <a href="https://bit.ly/3PjM6pL" target="_blank">
+                          <FaFacebook />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/gogoracingph/"
+                          target="_blank"
+                        >
+                          <FaInstagram />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaTwitter />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaReddit />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div className="slider-image" id="firstgame">
-                  <img src={game1} alt="" id="desktop1" />
-                  <img src={Irina} alt="" id="irina" />
-                  <img src={Risa} alt="" id="risa" />
-                  <img src={mobile1} alt="" id="mobile1" />
-                  <div className="gamedes">
-                    <div className="logoz">
-                      <div className="icons">
-                        <div className="sccionlogo">
-                          <Link
-                            to="/scion"
-                            {...props}
-                            ref={ref}
-                            onClick={() => window.scrollTo(0, 0)}
-                          >
-                            <img
-                              src={ScionLogo}
-                              alt="Scion Fist Logo"
-                              id="logo1"
-                            />
-                          </Link>
-                        </div>
-                      </div>
-                      <ul className="icon-list">
-                        <li>
-                          <a
-                            href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
-                            target="_blank"
-                          >
-                            <FaGooglePlay />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://apps.apple.com/ph/app/scion-fist/id1591386655"
-                            target="_blank"
-                          >
-                            <FaAppStore />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="video" id="scionvid">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/pxSzRmCFqL0"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+              </div>
+              <div className="scion-m">
+                <div className="top">
+                  <img src={ScionLogo} alt="" id="mlogo" />
+                  <video
+                    src={video2}
+                    width="750"
+                    height="500"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                  />
+                </div>
+                <div className="bottomzkie">
+                  <h1>
+                    An Automatic First-Person Shooting game! The higher the
+                    rank, the better performance. The battle is ready for you.{" "}
+                    <a href="">Read More</a>
+                  </h1>
+                  <div className="play-nowskiez">
+                    <button onClick={DetectAndServe} id="playnowsssss">
+                      Play Now
+                    </button>
+                  </div>
+                  <div className="socialization">
+                    <ul>
+                      <li>
+                        {" "}
+                        <a href="https://www.facebook.com/ScionFistPhilippines">
+                          <FaFacebook />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/scionfistphilippinesofficial/">
+                          <FaInstagram />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/ScionFist_PH">
+                          <FaTwitter />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.reddit.com/r/ScionFistPHofficial/">
+                          <FaReddit />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div className="slider-image">
-                  <div className="slider-image" id="firstgame">
-                    <img src={game2} alt="Game" id="desktop3" />
-                    <img src={mobile3} alt="" id="mobile3" />
-                    <div className="gamedes">
-                      <div className="logoz">
-                        <div className="icons">
-                          <div className="sccionlogo">
-                            <Link
-                              to="/gogoworld"
-                              {...props}
-                              ref={ref}
-                              onClick={() => window.scrollTo(0, 0)}
-                            >
-                              <img
-                                src={Gogoworld}
-                                alt="Scion Fist Logo"
-                                id="gogoworld-logo"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                        <ul className="icon-list" id="display-nones">
-                          <li>
-                            <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
-                              <FaGooglePlay />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <FaAppStore />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <FaWindows />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="video" id="hidden-video">
-                        <iframe
-                          width="560"
-                          height="315"
-                          src="https://www.youtube.com/embed/pxSzRmCFqL0"
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </div>
+              </div>
+              <div className="ggworld-m">
+                <div className="top">
+                  <img src={Gogoworld} alt="" id="mworldsk" />
+                </div>
+                <div className="bottomzkie">
+                  <div className="play-nowskiez">
+                    <img src={ComingSoonGGW} alt="" id="comgson" />
+                  </div>
+                  <div className="socialization">
+                    <ul>
+                      <li>
+                        <a href="">
+                          <FaFacebook />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaInstagram />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaTwitter />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaReddit />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div className="slider-image">
-                  <div className="slider-image" id="firstgame">
-                    <img src={game3} alt="Game" id="desktop4" />
-                    <img src={mobile4} alt="" id="mobile4" />
-                    <div className="gamedes">
-                      <div className="logoz">
-                        <div className="icons">
-                          <div className="sccionlogo">
-                            <Link
-                              to="/gogochain"
-                              {...props}
-                              ref={ref}
-                              onClick={() => window.scrollTo(0, 0)}
-                            >
-                              <img
-                                src={Gogochain}
-                                alt="Scion Fist Logo"
-                                id="gogochain-logo"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                        <ul className="icon-list" id="display-nones">
-                          <li>
-                            <a href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist">
-                              <FaGooglePlay />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <FaAppStore />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <FaWindows />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="video" id="hidden-video">
-                        <iframe
-                          width="560"
-                          height="315"
-                          src="https://www.youtube.com/embed/pxSzRmCFqL0"
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </div>
+              </div>
+              <div className="ggc-m">
+                <div className="top">
+                  <img src={ggcm} alt="" id="ggc-img" />
+                </div>
+                <div className="bottomzkie">
+                  <div className="play-nowskiez">
+                    <img src={ComingSoonGGW} alt="" id="comgson" />
+                  </div>
+                  <div className="socialization">
+                    <ul>
+                      <li>
+                        {" "}
+                        <a href="">
+                          <FaFacebook />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaInstagram />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaTwitter />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <FaReddit />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </Slider>
-            </div>
+              </div>
+            </Slider>
           </div>
         </div>
-
         {/* Contact Us */}
         <div className="contactforms" id="contact">
           <div
@@ -1550,7 +767,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                       />
                       {captchaValido === false && (
                         <div className="error-captcha">
-                          Please Accept ReCAPTCHA
+                          You must verify the captcha
                         </div>
                       )}
                       <button
@@ -1602,7 +819,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <div
             className="mobile-partners"
             data-aos="fade-up"
-            data-aos-offset="200"
+            data-aos-offset="100"
             data-aos-duration="700"
           >
             <div className="ourpartners-mobile-title">
@@ -1613,15 +830,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 href="https://blackspotstudio.com/final/main/main.asp"
                 target="_blank"
               >
-                <img src={Dubailogo} alt="" id="dubaimobile" />
-              </a>
-            </div>
-            <div className="korea-mobile">
-              <a
-                href="https://blackspotstudio.com/final/main/main.asp"
-                target="_blank"
-              >
-                <img src={Korealogo} alt="" id="dubaimobile" />
+                <img src={BLACKSPOTMB} alt="" id="dubaimobile" />
               </a>
             </div>
           </div>
@@ -1631,14 +840,14 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
           <footer className="footer-distributed">
             <div className="footer-left" data-aos="fade-up">
               <img src={icono} alt="" id="footer-logo" />
-              <p className="footer-links">
+              <ul className="footer-links">
                 <Link
                   to="/about"
                   {...props}
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  About Us
+                  <li>About Us</li>
                 </Link>
                 <Link
                   to="/privacy"
@@ -1646,7 +855,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Privacy & Policy
+                  <li>Privacy & Policy</li>
                 </Link>
                 <Link
                   to="/terms-of-use"
@@ -1654,7 +863,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Terms of Use
+                  <li>Terms of Use</li>
                 </Link>
                 <Link
                   to="/job"
@@ -1662,14 +871,13 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                   ref={ref}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Career
+                  <li>Career</li>
                 </Link>
 
                 <HashLink smooth to="/#contact">
-                  {" "}
-                  Contact Us
+                  <li>Contact Us</li>
                 </HashLink>
-              </p>
+              </ul>
 
               <p className="footer-company-name">
                 Copyright © Black Spot Studio PH{" "}
@@ -1752,12 +960,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </div>
             </div>
           </footer>
-          <div className="bootons">
-            <HashLink smooth to="/#" id="up">
-              <FaRegArrowAltCircleUp />
-            </HashLink>
-          </div>
         </div>
+      </div>
+      <div className={botoons ? "botoons active" : "botoons"}>
+        <HashLink smooth to="/#" id="up">
+          <FaRegArrowAltCircleUp />
+        </HashLink>
       </div>
     </div>
   );

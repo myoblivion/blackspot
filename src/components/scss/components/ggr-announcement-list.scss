@@ -1,21 +1,13 @@
 .ggr-announcements {
-  // background: rgb(1, 0, 11);
-  // background: linear-gradient(
-  //   96deg,
-  //   rgba(1, 0, 11, 1) 0%,
-  //   rgba(5, 5, 40, 1) 11%,
-  //   rgba(2, 82, 176, 1) 100%
-  // );
-  background-image: url("/src/images/gogoracingbackground/withlogo.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background: rgb(1, 0, 11);
+  background: linear-gradient(
+    96deg,
+    rgba(1, 0, 11, 1) 0%,
+    rgba(5, 5, 40, 1) 11%,
+    rgba(2, 82, 176, 1) 100%
+  );
+
   overflow: auto;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
@@ -34,16 +26,26 @@
       width: 100%;
       display: flex;
       justify-content: center;
+      margin-top: 13%;
       #characters {
-        position: fixed;
+        position: absolute;
         width: 30%;
-        height: 30%;
+        height: 50%;
         z-index: 1;
-        top: 9.6%;
+        top: -35%;
+      }
+      h1 {
+        background-color: white;
+        margin: 0 auto;
+        margin-top: -5px;
+        padding: 0;
+        height: 200%;
+      }
+      h2 {
+        display: none;
       }
       .ggr-alistgontents {
-        height: 40%;
-        margin-top: 15%;
+        background-color: white;
         width: 70%;
         .ggr-top {
           display: flex;
@@ -168,7 +170,6 @@
       }
       .ggr-announces {
         background-color: white;
-        height: 100%;
         width: 100%;
         .announcement-header {
           display: none;
@@ -225,19 +226,50 @@
 
 @media only screen and (max-width: 600px) {
   .ggr-announcements {
-    background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+    // background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+    background: rgb(1, 0, 11);
+    background: linear-gradient(
+      96deg,
+      rgba(1, 0, 11, 1) 0%,
+      rgba(5, 5, 40, 1) 11%,
+      rgba(2, 82, 176, 1) 100%
+    );
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;
     height: 100vh;
     .ggr-announcement-contents {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .gr-a-wrap {
-        .ggr-alistgontents {
-          margin-top: 55%;
+        margin-top: 35%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        h2 {
+          display: flex;
+          flex-direction: column;
+          text-shadow: 0px 0px 5px 17px rgba(148, 178, 245, 1);
+          font-family: "BlackHans";
+          align-items: center;
+          justify-content: center;
+          color: white;
           width: 100%;
-          height: 100%;
+        }
+        #characters {
+          width: 50%;
+          height: 20%;
+          display: none;
+          top: 19%;
+        }
+        .ggr-alistgontents {
+          background-color: white;
+          width: 100%;
+          height: 50vh;
           .ggr-top {
             .ggr-right {
               #search:checked ~ #selection {

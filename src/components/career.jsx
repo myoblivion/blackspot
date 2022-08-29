@@ -20,44 +20,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import icono from "../images/icons/logo.png";
 
 const JobComponent = ({ props, ref, currentRoute }) => {
-  const [captchaValido, changeCaptchaValid] = useState(null);
-  const [usuarioValido, changeValidUser] = useState(false);
-  const captcha = useRef(null);
-  const onChange = () => {
-    if (captcha.current.getValue()) {
-      console.log("The User is not a Robot");
-      changeCaptchaValid(true);
-    }
-  };
   // Email Js
-  const submit = (e) => {
-    e.preventDefault();
-    if (captcha.current.getValue()) {
-      console.log("El usuario no es un robot");
-      changeValidUser(true);
-      alert("Your message has been sent");
-      changeCaptchaValid(true);
-      emailjs
-        .sendForm(
-          "service_dhedxwz",
-          "template_q1r5952",
-          e.target,
-          "nOqEMPnZOelgJtLCT"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    } else {
-      console.log("Accept Recaptcha pls");
-      changeValidUser(false);
-      changeCaptchaValid(false);
-    }
-  };
+
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | Job Posting";
@@ -76,8 +40,10 @@ const JobComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="message">
               <h1>
-                SEND US YOUR UPDATED CV/RESUME & THE DESIRED POSITION YOU'RE
-                APPLYING FOR AT : <span>recruitment@blackspotstudio.ph</span>
+                The BlackSpot WorkForce Is A Pathway To Many Abilities Some
+                Consider To Be Unnatural. Young one, let the blackspot flow
+                through you and send your CV here at:
+                <span>recruitment@blackspotstudio.ph</span>
               </h1>
             </div>
           </div>

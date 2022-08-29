@@ -40,13 +40,13 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
     <div className="gogoracing-acc wrapper">
       <div className="ggr-acc-contents">
         <div className="ggr-blah">
-          {/* <img
+          <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          /> */}
+          />
           <div className="ggr-acdecontents">
             <div className="ggr-header">
               <div className="ggr-top">

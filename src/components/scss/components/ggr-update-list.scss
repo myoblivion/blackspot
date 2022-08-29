@@ -1,15 +1,12 @@
 .gogoracing-list {
-  // background: rgb(1, 0, 11);
-  // background: linear-gradient(
-  //   96deg,
-  //   rgba(1, 0, 11, 1) 0%,
-  //   rgba(5, 5, 40, 1) 11%,
-  //   rgba(2, 82, 176, 1) 100%
-  // );
-  background-image: url("/src/images/gogoracingbackground/withlogo.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background: rgb(1, 0, 11);
+  background: linear-gradient(
+    96deg,
+    rgba(1, 0, 11, 1) 0%,
+    rgba(5, 5, 40, 1) 11%,
+    rgba(2, 82, 176, 1) 100%
+  );
+
   overflow: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -28,7 +25,7 @@
       display: flex;
       justify-content: center;
       #characters {
-        position: fixed;
+        position: absolute;
         width: 30%;
         height: 30%;
         z-index: 1;
@@ -233,7 +230,14 @@
 }
 @media only screen and (max-width: 600px) {
   .gogoracing-list {
-    background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+    // background-image: url("/src/images/gogoracingbackground/ggrmb.png");
+    background: rgb(1, 0, 11);
+    background: linear-gradient(
+      96deg,
+      rgba(1, 0, 11, 1) 0%,
+      rgba(5, 5, 40, 1) 11%,
+      rgba(2, 82, 176, 1) 100%
+    );
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -242,8 +246,30 @@
     height: 100vh;
     .gogo-racing-list-wrapper {
       .gr-list-wrap {
+        width: 100%;
+        height: 100%;
+        margin-top: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          display: flex;
+          flex-direction: column;
+          text-shadow: 0px 0px 5px 17px rgba(148, 178, 245, 1);
+          font-family: "BlackHans";
+          align-items: center;
+          justify-content: center;
+          color: white;
+          width: 100%;
+        }
+        #characters {
+          display: none;
+          width: 40%;
+          top: 17%;
+        }
         .ggrupdatelist-contents {
-          margin-top: 55%;
+          margin-top: 0;
           width: 100%;
           height: 100%;
           .ggrlists-contents {

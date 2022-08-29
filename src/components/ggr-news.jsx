@@ -26,6 +26,7 @@ const GGRnews = ({ props, ref, newspage }) => {
             data-aos="zoom-in"
             data-aos-duration="500"
           />
+          <h1> Gogo Racing News</h1>
           <div className="gr-nletter">
             <div
               className="ggrnewsletterwrap-contents"
@@ -50,7 +51,7 @@ const GGRnews = ({ props, ref, newspage }) => {
                 </div>
               </div>
               <div className="ggrnwsz-contents">
-                <Routes>
+                {/* <Routes>
                   <Route
                     path="/*"
                     element={<NewsPageLinks newspage={newspage} />}
@@ -59,7 +60,10 @@ const GGRnews = ({ props, ref, newspage }) => {
                     path="/:newsID/*"
                     element={<NewsPost newspage={newspage} />}
                   />
-                </Routes>
+                </Routes> */}
+                <ol>
+                  <li>No News for the moment</li>
+                </ol>
               </div>
             </div>
           </div>

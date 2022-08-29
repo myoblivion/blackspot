@@ -209,7 +209,6 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
   //logo scroll function
 
   window.addEventListener("scroll", changeBackground);
-  console.log(changeBackground);
   const [isShown, setIsShown] = useState(true);
   const NextArrow = ({ onClick }) => {
     return (

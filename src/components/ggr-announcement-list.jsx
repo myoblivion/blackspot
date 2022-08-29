@@ -16,13 +16,14 @@ const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
     <div className="ggr-announcements wrapper">
       <div className="ggr-announcement-contents">
         <div className="gr-a-wrap">
-          {/* <img
+          <h2>Gogo Racing Announcements</h2>
+          <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          /> */}
+          />
           <div
             className="ggr-alistgontents"
             data-aos="zoom-in"
@@ -39,9 +40,9 @@ const GogoRacingAnnouncementList = ({ props, ref, announcements }) => {
                   >
                     <IoIosArrowDropleftCircle />
                   </Link>
-                  <h2>
+                  <h3>
                     <FaUserCircle /> User
-                  </h2>
+                  </h3>
                 </div>
                 <div className="ggr-right">
                   <Link

@@ -17,13 +17,14 @@ const GogoracingGuidelist = ({ props, ref, currentRoute }) => {
           data-aos="zoom-in"
           data-aos-duration="500"
         >
-          {/* <img
+          <img
             src={dudes}
             alt=""
             id="characters"
             data-aos="zoom-in"
             data-aos-duration="500"
-          /> */}
+          />
+          <h1>Gogo Racing Game Guide</h1>
           <div
             className="ggr-alistgontents"
             data-aos="zoom-in"

@@ -36,7 +36,6 @@ const GoGoChainComponent = ({ props, ref, currentRoute }) => {
   //logo scroll function
 
   window.addEventListener("scroll", changeBackground);
-  console.log(changeBackground);
   // Title
   useEffect(() => {
     document.title = "Black Spot Studio | GoGo Chain";

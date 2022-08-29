@@ -151,7 +151,6 @@ const ScionComponent = ({ props, ref, currentRoute }) => {
   //logo scroll function
 
   window.addEventListener("scroll", changeBackground);
-  console.log(changeBackground);
   const settings = {
     Infinite: true,
     lazyload: true,
