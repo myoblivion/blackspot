@@ -348,14 +348,16 @@ body {
     margin: 0 auto;
     margin-right: 8%;
     margin-left: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     width: 100%;
     position: relative;
-    height: 55%;
+    height: 65%;
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column-reverse;
+    background-color: #393b3ba9;
     backdrop-filter: blur(10px);
+    border-radius: 15px;
     .ourpartners-title {
       position: absolute;
       top: 11%;
@@ -376,7 +378,7 @@ body {
         width: 90.5%;
         position: absolute;
         right: 5%;
-        top: 32.5%;
+        top: 33.6%;
         transition: all 0.5s ease-in-out;
         clip-path: polygon(0% 100%, 0 0%, 100% 0%, 25% 100%);
         z-index: 1;

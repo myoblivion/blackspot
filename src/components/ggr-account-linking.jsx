@@ -47,6 +47,7 @@ const GogoRacingAccountLinking = ({ props, ref, currentRoute }) => {
             data-aos="zoom-in"
             data-aos-duration="500"
           />
+          <h1>Gogo Racing Account Linking</h1>
           <div className="ggr-acdecontents">
             <div className="ggr-header">
               <div className="ggr-top">

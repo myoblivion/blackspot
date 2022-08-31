@@ -24,8 +24,11 @@
       width: 100%;
       display: flex;
       justify-content: center;
+      h1 {
+        display: none;
+      }
       #characters {
-        position: absolute;
+        position: fixed;
         width: 30%;
         height: 30%;
         z-index: 1;
