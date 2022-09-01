@@ -636,7 +636,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               Terms of Use
             </Link>
             <Link
-              to="/job"
+              to="/career"
               {...props}
               ref={ref}
               onClick={() => window.scrollTo(0, 0)}
