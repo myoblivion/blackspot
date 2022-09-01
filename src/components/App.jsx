@@ -43,6 +43,7 @@ import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
 import EditPost from "./editPost";
+import GogoSquadEvent from "./gogosquadevent";
 import { useParams } from "react-router-dom";
 
 // styles
@@ -216,6 +217,7 @@ const Appcomponent = ({}) => {
               element={<AnnouncementPage announcements={announcements} />}
             />
             <Route path="/grand-pix-guide" element={<GrandPixGuide />} />
+            <Route path="/gogosquadevent" element={<GogoSquadEvent />} />
             <Route
               path="/gameguide/*"
               element={<GameGuidePage gameguide={gameguide} />}
