@@ -3,11 +3,13 @@
   height: 100%;
 
   .ggr-updates-contents {
-    background-image: url("/src/images/gogoracingbackground/withlogo.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
+    background: rgb(1, 0, 11);
+    background: linear-gradient(
+      96deg,
+      rgba(1, 0, 11, 1) 0%,
+      rgba(5, 5, 40, 1) 11%,
+      rgba(2, 82, 176, 1) 100%
+    );
     height: 100%;
     margin-top: 5%;
     width: 100%;
@@ -24,6 +26,17 @@
       margin-top: 13%;
       margin-bottom: 5%;
       padding-bottom: 5%;
+      #characters {
+        position: absolute;
+        width: 30%;
+        height: 10%;
+        z-index: 1;
+        top: -7%;
+        left: 35%;
+      }
+      h1 {
+        display: none;
+      }
       .ggr-header {
         display: flex;
         flex-direction: column;
@@ -201,18 +214,25 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .gogoracing-updates {
     width: 100%;
     height: 100%;
     .ggr-updates-contents {
-      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-position: center;
+      background: rgb(1, 0, 11);
+      background: linear-gradient(
+        96deg,
+        rgba(1, 0, 11, 1) 0%,
+        rgba(5, 5, 40, 1) 11%,
+        rgba(2, 82, 176, 1) 100%
+      );
       .ggr-udecontents1 {
         margin-top: 70%;
         width: 100%;
+        #characters {
+          display: none;
+        }
+
         .ggr-header {
           .ggr-top {
             .ggr-right {

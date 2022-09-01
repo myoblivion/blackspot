@@ -23,6 +23,15 @@ function AnnouncementsLinks({ announcements }) {
                 </Link>
               );
             })}
+          <Link to="/gogosquadevent">
+            <li>
+              <div className="li-left"></div>
+              <div className="li-right">
+                <h3>📅 GogoSquad Event</h3>
+                <span>Here's your chance to win and play with your squad!</span>
+              </div>
+            </li>
+          </Link>
         </ol>
       </div>
     </div>

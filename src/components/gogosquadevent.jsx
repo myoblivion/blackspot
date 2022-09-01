@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import backgroundimg from "../images/gogoracingbackground/ingamesquad.png";
+import dudes from "../images/gogoracingbackground/Announcement.png";
 
 const GogoSquadEvent = ({ props, ref, currentRoute }) => {
   useEffect(() => {
@@ -26,6 +27,14 @@ const GogoSquadEvent = ({ props, ref, currentRoute }) => {
           data-aos="zoom-in"
           data-aos-duration="500"
         >
+          <img
+            src={dudes}
+            alt=""
+            id="characters"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
+          <h1>Gogo Racing Game Guide</h1>
           <div className="ggr-header">
             <div className="ggr-top">
               <div className="ggr-left">
