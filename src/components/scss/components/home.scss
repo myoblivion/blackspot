@@ -2493,21 +2493,23 @@ input[type="radio"] {
           }
           .play-nowskiez {
             width: 100%;
+            position: absolute;
             display: flex;
             justify-content: center;
-            height: 100%;
-            position: relative;
-
+            top: 59%;
+            height: 120%;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
             button {
-              position: fixed;
-              width: 5%;
+              width: 50%;
               cursor: pointer;
               height: 10%;
-              top: 60%;
+              z-index: 999;
               left: 1.7%;
-              z-index: 9;
               background-color: transparent;
               img {
+                width: 100%;
                 background-color: none;
               }
             }
@@ -2702,15 +2704,16 @@ input[type="radio"] {
           }
           .play-nowskiez {
             width: 100%;
+            position: absolute;
             display: flex;
             justify-content: center;
-            height: 100%;
-            position: relative;
-
-            #comgson {
-              top: 75%;
-              width: 10%;
-              position: fixed;
+            top: 70%;
+            height: 10%;
+            cursor: pointer;
+            left: 0;
+            img {
+              width: 100%;
+              background-color: none;
             }
           }
           .socialization {
@@ -2794,15 +2797,16 @@ input[type="radio"] {
           }
           .play-nowskiez {
             width: 100%;
+            position: absolute;
             display: flex;
             justify-content: center;
-            height: 100%;
-            position: relative;
-
-            #comgson {
-              top: 70%;
-              width: 10%;
-              position: fixed;
+            top: 70%;
+            height: 10%;
+            cursor: pointer;
+            left: 0;
+            img {
+              width: 100%;
+              background-color: none;
             }
           }
           .socialization {
