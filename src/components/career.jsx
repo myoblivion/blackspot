@@ -40,8 +40,8 @@ const JobComponent = ({ props, ref, currentRoute }) => {
             </div>
             <div className="message">
               <h1>
-                The BlackSpot WorkForce Is A Pathway To Many Abilities Some
-                Consider To Be Unnatural. Young one, let the blackspot flow
+                The BLACKSPOT workforce is a pathway to many abilities some
+                Consider to be unnatural. Young one, let the blackspot flow
                 through you and send your CV here at:
                 <span>recruitment@blackspotstudio.ph</span>
               </h1>

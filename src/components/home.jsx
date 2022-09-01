@@ -304,6 +304,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </h1>
               <a
                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                target="_blank"
                 id="playnowss"
               >
                 <img src={playNow} alt="" />
@@ -328,6 +329,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <a
                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
                 id="playnowsss"
+                target="_blank"
               >
                 <span></span>
                 <span></span>
