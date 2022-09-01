@@ -78,7 +78,7 @@ const DirectionComponent = ({ props, ref, currentRoute }) => {
         <div className="upper-direction">
           <div className="left-direction">
             <div className="inner-dwrap">
-              <h1>COME VISIT US!</h1>
+              <h1>YOU MAY COME AND VISIT US AT!</h1>
               <h2>
                 The Infinity Tower, 26th Street, Bonifacio Global City, Taguig,
                 1630 Philippines.

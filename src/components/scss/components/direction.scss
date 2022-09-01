@@ -106,7 +106,12 @@ $bg-color: #eeeeee !default;
           background-color: #222;
           position: absolute;
           left: 15%;
+          h1 {
+            font-family: BlackHans;
+            margin-bottom: 2%;
+          }
           h2 {
+            font-family: BlackHans;
             width: 90%;
           }
         }

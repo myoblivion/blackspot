@@ -261,7 +261,7 @@
 
       // The 404 Number
       .p404 {
-        font-size: 200px;
+        font-size: 250px;
         font-weight: 700;
         letter-spacing: 4px;
         color: white;
@@ -269,9 +269,8 @@
         justify-content: center;
         position: absolute;
         z-index: 2;
-        top: 12%;
+        top: 30% !important;
         animation: text 0.6s 1.8s ease backwards;
-
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -557,6 +556,9 @@
           width: 100vw;
           height: 100vh;
           vertical-align: middle;
+          #b4 {
+            top: 30% !important;
+          }
         }
         .one,
         .two,
@@ -565,7 +567,7 @@
         .p404 {
           width: 60%;
           height: 60%;
-          top: 20% !important;
+          top: 55%;
           left: 20% !important;
           min-width: 400px;
           min-height: 400px;

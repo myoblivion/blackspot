@@ -171,7 +171,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
         "https://apps.apple.com/ph/app/scion-fist/id1591386655";
     }
   }
-
   // CaptCha
   const [captchaValido, changeCaptchaValid] = useState(null);
   const [usuarioValido, changeValidUser] = useState(false);
@@ -327,7 +326,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                 <a href="">Read More</a>
               </h1>
               <a
-                href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
+                href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
                 id="playnowsss"
               >
                 <span></span>
@@ -400,7 +399,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               >
                 <GifLoader
                   loading={true}
-                  imageSrc="https://media3.giphy.com/media/F4JfsEBmIQyJLh0PDF/giphy.gif?cid=790b7611cda1ac71b17d4bf2b3d33dd63ef66898f7968d0c&rid=giphy.gif&ct=s"
+                  imageSrc="https://media4.giphy.com/media/gLTsodp3sOc3UJcbjE/giphy.gif?cid=790b7611091c34dba3661d782d555aeff543a267620cb3b3&rid=giphy.gif&ct=s"
                   overlayBackground="transparent"
                 />
               </Link>
@@ -608,7 +607,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
                     <a href="">Read More</a>
                   </h1>
                   <div className="play-nowskiez">
-                    <button onClick={DetectAndServe} id="playnowsssss">
+                    <button onClick={DetectAndServes} id="playnowsssss">
                       Play Now
                     </button>
                   </div>

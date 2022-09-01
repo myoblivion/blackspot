@@ -245,57 +245,74 @@
     }
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .gogoracing-purchase {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
     .ggr-purchase-contents {
-      background-image: url("/src/images/gogoracingbackground/ggrmb.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-position: center;
-      .ggr-pcrecontents {
-        margin-top: 70%;
+      .ggr-blah {
+        height: 100%;
+        position: relative;
+        margin-top: 25%;
         width: 100%;
-        .ggr-header {
-          .ggr-top {
-            .ggr-right {
-              #search:checked ~ #selection {
-                right: 175%;
-                width: 50%;
-              }
-              #text-search {
-                right: 60%;
-                width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        #characters {
+          display: none;
+        }
+        h1 {
+          display: flex;
+          flex-direction: column;
+          text-shadow: 0px 0px 5px 17px rgba(148, 178, 245, 1);
+          font-family: "BlackHans";
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 25px;
+        }
+        .ggr-pcrecontents {
+          width: 100%;
+          .ggr-header {
+            .ggr-top {
+              .ggr-right {
+                #search:checked ~ #selection {
+                  right: 175%;
+                  width: 50%;
+                }
+                #text-search {
+                  right: 60%;
+                  width: 100%;
+                }
               }
             }
           }
-        }
-        .ggr-purchases {
-          width: 100%;
-          #ihateyou {
-            margin-left: 4%;
-          }
-          h1 {
+          .ggr-purchases {
             width: 100%;
-            font-size: 20px;
-          }
-          h3 {
-            text-align: center;
-            width: 100%;
-            margin-left: 0;
-          }
-          ul {
-            display: flex;
-            flex-direction: column;
-            li {
-              margin-left: 1%;
-              img {
-                width: 40%;
-              }
-              p {
-                width: 400px;
+            #ihateyou {
+              margin-left: 4%;
+            }
+            h1 {
+              width: 100%;
+              font-size: 20px;
+            }
+            h3 {
+              text-align: center;
+              width: 100%;
+              margin-left: 0;
+            }
+            ul {
+              display: flex;
+              flex-direction: column;
+              li {
+                margin-left: 1%;
+                img {
+                  width: 40%;
+                }
+                p {
+                  width: 400px;
+                }
               }
             }
           }

@@ -43,7 +43,7 @@ const NotFoundComponent = ({}) => {
                 <span className="piece"></span>
               </div>
             </div>
-            <p className="p404" data-depth="0.50">
+            <p className="p404" id="b4" data-depth="0.50">
               404
             </p>
           </div>
