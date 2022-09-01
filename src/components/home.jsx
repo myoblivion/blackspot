@@ -300,7 +300,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <h1>
                 Ready your car, finish the line and win a coin and be
                 incentivized. Play to Earn? It’s a surprise.
-                <Link to="/gogoracingnews"> read more.</Link>
+                <Link to="/gogoracing"> read more.</Link>
               </h1>
               <a
                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
