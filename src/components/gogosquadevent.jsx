@@ -108,11 +108,8 @@ const GogoSquadEvent = ({ props, ref, currentRoute }) => {
               <li>60 Dias each</li>
               <li>1x Spoiler – Lollipop each</li>
               <li>1x Paint – Yellow each</li>
-              <li></li>
-              <li></li>
-              <li></li>
             </ul>
-            <h2>Consulatikon</h2>
+            <h2>Consolation </h2>
             <ul>
               <li>3 RANDOM LUCKY SQUAD / TEAM (each squad members)</li>
               <li>5,000 Gogo Tokens each </li>
@@ -133,6 +130,12 @@ const GogoSquadEvent = ({ props, ref, currentRoute }) => {
                 <a href="https://linktr.ee/BSSPH">https://linktr.ee/BSSPH</a>{" "}
               </li>
             </ul>
+            <h2>
+              To know more about the event click{" "}
+              <a href="https://fb.watch/fg9pwLNcQ6/" target="_blank">
+                here!
+              </a>
+            </h2>
           </div>
           <div className="bottom-eyes"></div>
         </div>
