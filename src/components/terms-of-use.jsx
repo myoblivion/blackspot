@@ -32,7 +32,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             <h2>Chapter 1: General Provisions</h2>
             <div className="article-1">
               <h3>Article 1 Purpose</h3>
-              <div className="lines"></div>
+              <div className="line"></div>
               <p>
                 The purpose of these terms and conditions is to specify rights,
                 obligations, and other necessary matters between the company and
