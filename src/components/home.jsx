@@ -412,7 +412,7 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               >
                 <GifLoader
                   loading={true}
-                  imageSrc="https://media4.giphy.com/media/gLTsodp3sOc3UJcbjE/giphy.gif?cid=790b7611091c34dba3661d782d555aeff543a267620cb3b3&rid=giphy.gif&ct=s"
+                  imageSrc="https://i.giphy.com/media/1QDX8WDjeKYBGc1Sww/giphy.webp"
                   overlayBackground="transparent"
                 />
               </Link>

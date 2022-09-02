@@ -27,12 +27,12 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
         <div className="terms-wrapper">
           <img src={icono} alt="" />
           <h1>Terms of Use</h1>
-          <div className="lines"></div>
+          <div className="line"></div>
           <div className="chapter-1">
             <h2>Chapter 1: General Provisions</h2>
             <div className="article-1">
               <h3>Article 1 Purpose</h3>
-              <div className="line"></div>
+              <div className="lines"></div>
               <p>
                 The purpose of these terms and conditions is to specify rights,
                 obligations, and other necessary matters between the company and
