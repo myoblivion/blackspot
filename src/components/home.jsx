@@ -18,7 +18,7 @@ import scionnnnn from "../images/icons/SF.png";
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
 import Gogochain from "../images/icons/gogochain.png";
-import Gogoworld from "../images/icons/gogoworld.svg";
+import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 import GGworldBro from "../images/icons/gogo_world_backup.png";
 import BLACKSPOTMB from "../images/icons/Black_Spot_MB.png";
