@@ -299,9 +299,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               </Link>
               <h1>
                 Ready your car, finish the line and win a coin and be
-                incentivized. Play to Earn? It’s a surprise.
-                <Link to="/gogoracing"> read more.</Link>
+                incentivized. Play to Earn? It’s a surprise. <br />
               </h1>
+              <Link to="/gogoracing" id="readmur">
+                {" "}
+                read more.
+              </Link>
               <a
                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph"
                 target="_blank"
@@ -324,8 +327,16 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <h1>
                 An Automatic First-Person Shooting game! The higher the rank,
                 the better performance. The battle is ready for you.{" "}
-                <a href="">Read More</a>
               </h1>
+              <Link
+                to="/scion"
+                {...props}
+                ref={ref}
+                onClick={() => window.scrollTo(0, 0)}
+                id="readmur"
+              >
+                Read More
+              </Link>
               <a
                 href="https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist"
                 id="playnowsss"

@@ -1594,10 +1594,21 @@ input[type="radio"] {
         top: 55%;
         padding-left: 1%;
         color: rgb(255, 255, 255);
-        a {
-          color: white;
-          text-decoration: underline;
-        }
+      }
+      #readmur {
+        z-index: 99;
+        position: fixed;
+        width: 28%;
+        text-align: center;
+        line-height: 2;
+        font-size: 17px;
+        right: 20%;
+        font-family: "BlackHans";
+        text-shadow: -2px -2px 0px rgb(0, 0, 0);
+        top: 62%;
+        padding-left: 1%;
+        color: rgb(236, 240, 44);
+        text-decoration: underline;
       }
       #ggr-logz {
         z-index: 99;
@@ -1616,7 +1627,7 @@ input[type="radio"] {
         }
       }
       #playnowss {
-        top: 65%;
+        top: 70%;
         right: 64%;
         -webkit-user-drag: none;
         user-select: none;
@@ -1685,7 +1696,7 @@ input[type="radio"] {
           z-index: 999;
           top: 16%;
           height: 45%;
-          width: 85.6%;
+          width: 86%;
         }
         video {
           position: absolute;
@@ -1731,6 +1742,21 @@ input[type="radio"] {
     visibility: visible;
     .leftx {
       transition: 0.5s ease-in;
+      #readmur {
+        z-index: 99;
+        position: fixed;
+        width: 28%;
+        text-align: center;
+        line-height: 2;
+        font-size: 17px;
+        right: 21%;
+        font-family: "BlackHans";
+        text-shadow: -2px -2px 0px rgb(0, 0, 0);
+        top: 600%;
+        padding-left: 1%;
+        color: rgb(236, 240, 44);
+        text-decoration: underline;
+      }
       #playnowsss {
         position: relative;
         color: white;
@@ -1922,9 +1948,9 @@ input[type="radio"] {
       height: 100%;
       #phone {
         position: fixed;
-        left: 7%;
+        left: 6.5%;
         z-index: 999;
-        width: 34%;
+        width: 34.3%;
         height: 430%;
         top: 250%;
       }
@@ -2276,7 +2302,7 @@ input[type="radio"] {
     h1 {
       z-index: 99;
       position: fixed;
-      width: 28%;
+      width: 30%;
       text-align: center;
       line-height: 2;
       font-size: 17px;

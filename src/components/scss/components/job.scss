@@ -2,7 +2,13 @@ $primary: #1d1f20;
 $secondary: #2c3e50;
 $success: #27ae60;
 $error: #e74c3c;
-
+@font-face {
+  font-family: "verdana";
+  src: url("/src/verdana.ttf"), url("/src/verdana.ttf") format("truetype"),
+    url("/src/verdana.ttf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 .joblist-wrapper {
   width: 100%;
   margin-top: 7%;
@@ -34,10 +40,13 @@ $error: #e74c3c;
     background-color: #1d1f20;
     h1 {
       width: 70%;
-      font-family: "BlackHans";
+      font-family: "verdana";
       display: flex;
+      letter-spacing: -3px;
       flex-direction: column;
       font-size: 30px;
+      text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+        1px 1px 0 #000;
       text-align: justify;
       span {
         color: rgb(255, 174, 0);
@@ -73,8 +82,9 @@ $error: #e74c3c;
             justify-content: center;
             font-size: 20px;
             width: 80%;
+            text-align: left;
             height: 100%;
-            text-align: center;
+            letter-spacing: normal;
           }
         }
       }

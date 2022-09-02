@@ -566,11 +566,15 @@
             justify-content: center;
             align-items: center;
             li {
-              width: 60%;
-              margin: 5% auto;
               display: flex;
               justify-content: center;
               align-items: center;
+              width: 60%;
+              a {
+                width: 100%;
+                font-size: 13px;
+                margin: 5% auto;
+              }
             }
           }
         }
