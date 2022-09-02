@@ -163,7 +163,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   for Protection of Content Users」 set by the Minister of
                   Culture, Sports and Tourism, and other related laws and
                   commercial practices You may change these terms and conditions
-                  to the extent that they are not
+                  to the extent that they are not.
                 </li>
                 <li>
                   When changing the terms and conditions, the company must
@@ -172,7 +172,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   7 days (30 days for changes that are unfavorable to users or
                   changes in material matters) for a considerable period of time
                   thereafter It is announced through the initial screen of the
-                  service or the company's website
+                  service or the company's website.
                 </li>
                 <li>
                   When changing the terms and conditions, the company assumes
@@ -181,7 +181,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   reject the company during the notice period in Paragraph 2.
                   However, a member who does not agree to the change of the
                   terms and conditions may withdraw by the method stipulated in
-                  these terms and conditions
+                  these terms and conditions.
                 </li>
                 <li>
                   Except in cases where the changed terms and conditions are
@@ -253,32 +253,32 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                       {" "}
                       In the event that the contents of the application for use
                       are entered falsely or the requirements for application
-                      for use are not met
+                      for use are not met.
                     </li>
                     <li>
                       In case the company uses the service through an abnormal
                       or detour in a country where the service has not been
-                      provided
+                      provided.
                     </li>
                     <li>
                       When applying for use for the purpose of performing acts
                       prohibited by relevant laws, such as the 「Game Industry
-                      Promotion Act」
+                      Promotion Act.
                     </li>
                     <li>
-                      . When an application is made for the purpose of impairing
-                      social well-being and order or good morals
+                      When an application is made for the purpose of impairing
+                      social well-being and order or good morals.
                     </li>
                     <li>
-                      If you want to use the game service for illegal purposes
+                      If you want to use the game service for illegal purposes.
                     </li>
                     <li>
                       If you want to use the game service for the purpose of
-                      pursuing profit
+                      pursuing profit.
                     </li>
                     <li>
                       In other cases where approval is deemed inappropriate for
-                      reasons equivalent to subparagraphs 1 to 6
+                      reasons equivalent to subparagraphs 1 to 6.
                     </li>
                   </ul>
                 </li>
@@ -289,15 +289,15 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                     <li>
                       In case the company's facilities are not available, it is
                       difficult to support a specific terminal, or there is a
-                      technical obstacle
+                      technical obstacle.
                     </li>
                     <li>
                       In the event of a failure in service, service fee, or
-                      payment method
+                      payment method.
                     </li>
                     <li>
                       If it is difficult to accept the application for use for
-                      other reasons
+                      other reasons.
                     </li>
                   </ul>
                 </li>
@@ -330,7 +330,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-9">
               <h3>
-                Article 9 Obligation for member ID and password management
+                Article 9 Obligation for member ID and password management.
               </h3>
               <div className="lines"></div>
 
@@ -398,7 +398,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
               </ul>
             </div>
             <div className="article-11">
-              <h3>Article 11 Protection and Use of Personal Information</h3>
+              <h3>Article 11 Protection and Use of Personal Information.</h3>
               <div className="lines"></div>
 
               <ul>
@@ -463,14 +463,14 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   subparagraphs. However, the company may reject the application
                   for use by users who fall under subparagraphs 1 to 3.
                   <ul>
-                    <li>In case of using someone else's name</li>
+                    <li>In case of using someone else's name.</li>
                     <li>
                       If false information is entered or the company does not
-                      provide information
+                      provide information.
                     </li>
                     <li>
                       If there is no room for service-related facilities or
-                      there is a technical or business problem
+                      there is a technical or business problem.
                     </li>
                     <li>
                       When the company's consent reaches the user, the service
@@ -607,12 +607,12 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   <ul>
                     <li>
                       In case the provision of game service is prohibited for a
-                      specific time or method by related laws
+                      specific time or method by related laws.
                     </li>
                     <li>
                       When it is impossible to provide normal game services due
                       to natural disasters, emergencies, power outages, service
-                      facility failures, or excessive use of services
+                      facility failures, or excessive use of services.
                     </li>
                     <li>
                       In case of serious business necessity, such as division of
@@ -703,46 +703,46 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   <ul>
                     <li>
                       If there is an intention to slander other members or a
-                      third party, or to damage or steal the reputation
+                      third party, or to damage or steal the reputation.
                     </li>
                     <li>
-                      In case of content that violates public order and morals
+                      In case of content that violates public order and morals.
                     </li>
                     <li>
                       If the content is recognized as being related to a
-                      criminal act
+                      criminal act.
                     </li>
                     <li>
                       If the content infringes on the company's copyright or a
                       third party's copyright, portrait right, and other
-                      intellectual property rights
+                      intellectual property rights.
                     </li>
                     <li>
                       When a member posts pornography or links to an obscene
-                      site
+                      site.
                     </li>
-                    <li> Make money, for commercial advertising posts</li>
-                    <li>If it interferes with the normal service operation</li>
+                    <li> Make money, for commercial advertising posts.</li>
+                    <li>If it interferes with the normal service operation.</li>
                     <li>
-                      If it does not conform to the company's operating policy
+                      If it does not conform to the company's operating policy.
                     </li>
                     <li>
                       In case it is judged to be in violation of other relevant
-                      laws
+                      laws.
                     </li>
                   </ul>
                 </li>
                 <li>
                   Members are solely responsible for all civil and criminal
                   responsibilities arising from the posting of materials or
-                  messages falling under each subparagraph of Paragraph{" "}
+                  messages falling under each subparagraph of Paragraph.
                 </li>
               </ul>
             </div>
             <div className="article-19">
               <h3>
                 Article 19 Publication of advertisements and transactions with
-                advertisers
+                advertisers.
               </h3>
               <div className="lines"></div>
 
@@ -786,7 +786,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   obtained by using the game service provided by the company,
                   the information belonging to the company or the provider. You
                   must not use it for any purpose or allow a third party to use
-                  it
+                  it.
                 </li>
                 <li>
                   {" "}
@@ -804,7 +804,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                       performance, transmission, distribution, broadcasting,
                       creation of secondary works, etc. can be used in any form,
                       and there are no restrictions on the period and region of
-                      use)
+                      use).
                     </li>
                     <li>
                       We do not sell, rent, or transfer user content for the
@@ -867,19 +867,19 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   If the company restricts the member's use of the service, the
                   content and scope of the restriction are as follows, and
                   details about this are determined in the company's operating
-                  policy
+                  policy.
                   <ul>
                     <li>
                       Restrictions on members' account names, character names,
-                      and specific group names in content
+                      and specific group names in content.
                     </li>
-                    <li>Restrictions on chat contents and methods</li>
-                    <li>Restrictions on the use of bulletin boards</li>
-                    <li>Restrictions on how to play the game</li>
+                    <li>Restrictions on chat contents and methods.</li>
+                    <li>Restrictions on the use of bulletin boards.</li>
+                    <li>Restrictions on how to play the game.</li>
                     <li>
                       Matters deemed necessary by the company for service
                       operation within the scope that does not infringe on the
-                      essential rights of other members to use the service
+                      essential rights of other members to use the service.
                     </li>
                   </ul>
                 </li>
@@ -892,18 +892,18 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   <ul>
                     <li>
                       In the event of an act that damages the reputation of or
-                      disadvantages others
+                      disadvantages others.
                     </li>
                     <li>
                       Impersonating an official operator of a service recognized
                       by the company or impersonating an employee of the company
                       or the company Intentionally interfering with the
-                      operation of other services
+                      operation of other services.
                     </li>
                     <li>
                       In case of stealing other people's information or
                       registering false information in the personal information
-                      required for membership registration
+                      required for membership registration.
                     </li>
                     <li>
                       In the case of using the service to violate laws or to
@@ -914,56 +914,56 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                       such as harming the rights and interests of others or
                       stealing information using the service, dispose of game
                       data (accounts, characters, game items, etc.) for a fee
-                      (transfer, sale, etc.) provision, rental, etc.)
+                      (transfer, sale, etc.) provision, rental, etc.
                     </li>
                     <li>
                       In case of inconvenience to members by sending spam
                       messages to members for advertising and publicity purposes
-                      without the company's permission
+                      without the company's permission.
                     </li>
                     <li>
                       . In case of changing the company's client program,
                       hacking the company's server, or arbitrarily changing
                       parts of the website without being granted special
-                      authority by the company
+                      authority by the company.
                     </li>
                     <li>
                       When using the service to acquire or use goods in an
-                      abnormal way
+                      abnormal way.
                     </li>
                     <li>
                       In case of inducing a visit to a specific site regardless
-                      of the intention of service visitors or other members
+                      of the intention of service visitors or other members.
                     </li>
                     <li>
                       {" "}
                       If the company attempts to extract the source code by
                       modifying the software provided to users as part of the
                       service, creating derivative works, reverse engineering,
-                      decompiling, or other methods
+                      decompiling, or other methods.
                     </li>
                     <li>
                       In case of infringing or using in a way that infringes
                       other rights, including intellectual property rights, such
                       as patent rights, trademark rights, copyrights, and trade
-                      secrets of a third party
+                      secrets of a third party.
                     </li>
                     <li>
                       If you collect other people's content and personal
-                      information
+                      information.
                     </li>
                     <li>
                       In case it is recognized as being related to a crime when
-                      objectively judged
+                      objectively judged.
                     </li>
                     <li>In case of an act that violates the relevant laws</li>
                     <li>
                       In case of causing or encouraging other users to perform
-                      the prohibited acts 1 to 14 above
+                      the prohibited acts 1 to 14 above.
                     </li>
                     <li>
                       In case of using the service for other purposes equivalent
-                      to subparagraphs 1 to 15
+                      to subparagraphs 1 to 15.
                     </li>
                   </ul>
                 </li>
@@ -1013,9 +1013,9 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   notified of each of the following items by e-mail, electronic
                   memo, in-game service screen, or service website.{" "}
                   <ul>
-                    <li>Reason for restriction of use</li>
-                    <li>Type and period of restrictions on use</li>
-                    <li>How to object to restrictions on use</li>
+                    <li>Reason for restriction of use.</li>
+                    <li>Type and period of restrictions on use.</li>
+                    <li>How to object to restrictions on use.</li>
                   </ul>
                 </li>
               </ul>
@@ -1031,16 +1031,16 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   <ul>
                     <li>
                       When receiving a report related to payment abusing,
-                      hacking or theft
+                      hacking or theft.
                     </li>
                     <li>
-                      . If it is reasonably suspected of being an illegal
+                      If it is reasonably suspected of being an illegal
                       activist, such as an illegal program user, workplace, or
-                      bug use
+                      bug use.
                     </li>
                     <li>
                       In other cases where provisional measures are necessary
-                      for reasons similar to the above
+                      for reasons similar to the above.
                     </li>
                   </ul>
                 </li>
@@ -1103,30 +1103,30 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   such as gifts and events provided free of charge from
                   companies or third parties, and paid content already used or
                   considered to have been used at the time of subscription
-                  withdrawal request, may be restricted by{" "}
+                  withdrawal request, may be restricted by.
                 </li>
                 <li>
                   The withdrawal of subscription for paid services is limited in
-                  the following cases
+                  the following cases.
                   <ul>
                     <li>
                       For items that start to be used immediately after purchase
-                      or are applied directly to content and services
+                      or are applied directly to content and services.
                     </li>
                     <li>
                       In the case of items acquired without payment in the
-                      course of normal use of contents and services
+                      course of normal use of contents and services.
                     </li>
                     <li>
                       If the additional benefit has already been used on an item
-                      for which the additional benefit is provided
+                      for which the additional benefit is provided.
                     </li>
-                    <li>If some of the items sold in bundles are used</li>
+                    <li>If some of the items sold in bundles are used.</li>
                     <li>
                       {" "}
                       In the case of capsule-type/probability-type items whose
                       opening behavior can be viewed as use or whose utility is
-                      determined upon opening
+                      determined upon opening.
                     </li>
                   </ul>
                 </li>
@@ -1147,7 +1147,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   and procedures of the device, subscription carrier, and each
                   store operator. If a refund is determined through examination,
                   we will calculate the refundable balance and refund the
-                  remaining amount, excluding 10% of the refund fee
+                  remaining amount, excluding 10% of the refund fee.
                 </li>
                 <li>
                   If a minor pays for paid services without the consent of the
@@ -1237,14 +1237,14 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   case of any of the following reasons.{" "}
                   <ul>
                     <li>
-                      If the content is not provided by the time of delivery
+                      If the content is not provided by the time of delivery.
                     </li>
                     <li>
                       In case the user cannot achieve the purpose of use due to
-                      the provision of defective content
+                      the provision of defective content.
                     </li>
                     <li>
-                      If you do not agree to the changed terms and conditions
+                      If you do not agree to the changed terms and conditions.
                     </li>
                   </ul>
                 </li>
@@ -1278,23 +1278,25 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   <ul>
                     <li>
                       If false information is registered when applying for
-                      service
+                      service.
                     </li>
                     <li>
                       In case of intentionally obstructing the operation of the
-                      service
+                      service.
                     </li>
-                    <li>If you steal someone else's service ID and password</li>
+                    <li>
+                      If you steal someone else's service ID and password.
+                    </li>
                     <li>
                       When a large amount of information is transmitted or
                       advertisement information is transmitted for the purpose
-                      of interfering with the stable operation of the service
+                      of interfering with the stable operation of the service.
                     </li>
                     <li>
                       In case of distributing computer virus programs that cause
-                      damage to the company and members
+                      damage to the company and members.
                     </li>
-                    <li>Other matters that violate the service policy</li>
+                    <li>Other matters that violate the service policy.</li>
                   </ul>
                 </li>
                 <li>
@@ -1345,7 +1347,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 <li>
                   If the company enters into a partnership agreement with an
                   individual service provider and agrees to the individual
-                  service provided to the member and uses it,{" "}
+                  service provided to the member and uses it.
                 </li>
               </ul>
             </div>
@@ -1388,7 +1390,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 <li>
                   The company shall not be held responsible for any damages
                   incurred by members due to the inability to use content and
-                  services due to causes other than the company's fault
+                  services due to causes other than the company's fault.
                 </li>
                 <li>
                   The company does not guarantee the reliability, legitimacy, or
