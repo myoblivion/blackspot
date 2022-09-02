@@ -838,12 +838,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <h1>Partners</h1>
             </div>
             <div className="dubai-mobile">
-              <a
-                href="https://blackspotstudio.com/final/main/main.asp"
-                target="_blank"
-              >
+              <HashLink smooth to="/about#partners">
                 <img src={BLACKSPOTMB} alt="" id="dubaimobile" />
-              </a>
+              </HashLink>
             </div>
           </div>
         </div>

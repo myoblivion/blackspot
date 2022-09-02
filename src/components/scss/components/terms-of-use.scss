@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "verdana";
+  src: url("/src/verdana.ttf"), url("/src/verdana.ttf") format("truetype"),
+    url("/src/verdana.ttf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 .terms {
-  width: 100%;
   .bootons {
     position: fixed;
     bottom: 10%;
@@ -21,112 +27,126 @@
     }
   }
   .terms-section {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-
+    height: 100%;
     .terms-wrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      font-family: "verdana";
       height: 100%;
-      width: 90%;
-      text-align: justify;
-      margin: 0 auto;
-      color: white;
-      margin-top: 7%;
-    }
-    .article-4,
-    .article-5,
-    .article-6 {
-      ul {
-        list-style-type: "● ";
-        margin-left: 2%;
-        li {
-          margin-bottom: 2%;
-          margin-top: 2%;
+      line-height: 2.5;
+      width: 100%;
+      img {
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      h1 {
+        color: #ffb808;
+        font-size: 45px;
+        text-align: center;
+        line-height: 2;
+        font-weight: 900;
+      }
+      .lines {
+        width: 5%;
+        height: 1%;
+        background-color: white;
+        margin-bottom: 2%;
+        padding: 1px;
+      }
+      .chapter-1,
+      .chapter-2,
+      .chapter-3,
+      .chapter-4,
+      .chapter-5,
+      .chapter-6 {
+        width: 50%;
+        h2 {
+          color: #ffb808;
+          font-size: 22px;
         }
       }
-    }
-    p {
-      width: 70%;
-    }
-    h2 {
-      font-size: 30px;
-      margin-bottom: 2%;
-    }
-    h3 {
-      font-size: 24px;
-      margin-bottom: 1%;
-    }
-    h4 {
-      margin-left: 1%;
-      margin-bottom: 1%;
-    }
-    img {
-      margin: 0 auto;
-      width: 30%;
-    }
-    margin-top: 7%;
-    h1 {
-      font-size: 45px;
-    }
-    ul {
-      list-style-type: "● ";
-      li {
-        width: 70%;
-        margin-bottom: 2%;
-      }
-    }
-    ul li ul li {
-      list-style: circle;
-    }
-    .chapter-1 {
-      margin: 0 auto;
-      .article-1 {
-        h3 {
-          margin: 0;
+      .article-1,
+      .article-2,
+      .article-3,
+      .article-4,
+      .article-5,
+      .article-6,
+      .article-7,
+      .article-8,
+      .article-9,
+      .article-10,
+      .article-11,
+      .article-12,
+      .article-13,
+      .article-14,
+      .article-15,
+      .article-16,
+      .article-17,
+      .article-18,
+      .article-19,
+      .article-20,
+      .article-21,
+      .article-22,
+      .article-23,
+      .article-24,
+      .article-25,
+      .article-26,
+      .article-27,
+      .article-28,
+      .article-29,
+      .article-30,
+      .article-31,
+      .article-32,
+      .article-33 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        .lines {
+          width: 100%;
+          height: 1%;
+          background-color: white;
+          padding: 1px;
+        }
+        h4 {
+          margin-left: 5%;
+          color: white;
         }
         p {
-          margin: 0;
-          margin-bottom: 8px;
+          color: white;
         }
-      }
-      .article-2 {
-        margin: 0 auto;
-      }
-    }
-    .chapter-2 {
-      .article-7 {
-        ul li {
-          list-style: none;
+        h2 {
+          color: #ffb808;
         }
-        ul li ul li {
-          list-style: circle;
-        }
-      }
-      .article-9 {
         ul {
-          list-style-type: "● ";
+          list-style: decimal;
+          color: white;
+          margin-left: 5%;
+          li {
+            ul {
+              list-style: circle;
+            }
+          }
         }
-      }
-      .article-10 {
-        ul {
-          list-style-type: "● ";
-        }
-      }
-      .article-11 {
-        ul {
-          list-style-type: "● ";
+        h3 {
+          color: #ffb808;
         }
       }
     }
-    .chapter-3 {
-      .article-12 {
-        ul li {
-          list-style-type: "● ";
-        }
-        ul li ul li {
-          list-style: circle;
-        }
+    .addendum {
+      color: white;
+      h5 {
+        color: #ffb808;
+
+        font-size: 20px;
       }
     }
   }
@@ -175,12 +195,13 @@
           margin: 0 auto;
         }
         ul {
+          width: 100%;
+          margin-left: 1%;
           li {
             margin: 0 auto;
             margin-bottom: 2%;
             margin-top: 2%;
-            text-align: justify;
-            width: 90%;
+            width: 100%;
             ul {
               li {
                 margin-bottom: 2%;
@@ -192,15 +213,23 @@
       }
 
       .terms-wrapper {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
         margin: 0 auto;
         margin-top: 25%;
         justify-content: center;
+        .chapter-1,
+        .chapter-2,
+        .chapter-3,
+        .chapter-4,
+        .chapter-5,
+        .chapter-6 {
+          width: 90%;
+        }
+
         img {
           width: 50%;
         }
@@ -213,6 +242,7 @@
       }
       .addendum {
         ul {
+          width: 100%;
           li {
             font-size: 10px;
             margin: 2% auto;

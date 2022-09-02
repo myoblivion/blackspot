@@ -1342,7 +1342,7 @@
     }
     .features-select {
       background-image: url("/src/images/gogoracingbackground/2.png");
-      height: 110vh;
+      height: 100vh;
       #titled {
         font-size: 40px;
         padding-top: 2%;
@@ -1352,7 +1352,7 @@
       }
       .labels {
         flex-direction: row;
-        top: -5%;
+        top: -1%;
         width: 100%;
         height: 5%;
         right: 0;
@@ -1372,13 +1372,13 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 6%;
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 2%;
         label {
-          padding: 1px;
+          padding: 2px;
           width: 100%;
           img {
-            width: 140%;
+            width: 145%;
           }
         }
         #slt1:checked ~ #ncar1 {
@@ -1647,8 +1647,8 @@
         }
       }
       #select-2:checked ~ .character-selection {
-        top: 50%;
-        width: 93%;
+        top: 55%;
+        width: 95%;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         #chrslt1:checked ~ #name1 {
           display: block;

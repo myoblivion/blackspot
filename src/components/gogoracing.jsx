@@ -610,14 +610,14 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
       <footer className="gogoracing-footer-distributed">
         <div className="footer-left">
           <img src={icono} alt="" className="logso" />
-          <p className="footer-links">
+          <ul className="footer-links">
             <Link
               to="/about"
               {...props}
               ref={ref}
               onClick={() => window.scrollTo(0, 0)}
             >
-              About Us
+              <li>About Us</li>
             </Link>
             <Link
               to="/privacy"
@@ -625,7 +625,7 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               ref={ref}
               onClick={() => window.scrollTo(0, 0)}
             >
-              Privacy & Policy
+              <li>Privacy & Policy</li>
             </Link>
             <Link
               to="/terms-of-use"
@@ -633,23 +633,21 @@ const GoGoRacingComponent = ({ props, ref, currentRoute }) => {
               ref={ref}
               onClick={() => window.scrollTo(0, 0)}
             >
-              Terms of Use
+              <li>Terms of Use</li>
             </Link>
             <Link
-              to="/career"
+              to="/job"
               {...props}
               ref={ref}
               onClick={() => window.scrollTo(0, 0)}
             >
-              Career
+              <li>Career</li>
             </Link>
 
             <HashLink smooth to="/#contact">
-              {" "}
-              Contact Us
+              <li>Contact Us</li>
             </HashLink>
-          </p>
-
+          </ul>
           <p className="footer-company-name">
             Copyright © Black Spot Studio PH{" "}
           </p>

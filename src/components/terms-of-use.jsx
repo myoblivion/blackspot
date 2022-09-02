@@ -16,7 +16,6 @@ import { AiFillInstagram } from "react-icons/ai";
 
 // Example adapted from https://fetch.spec.whatwg.org/#example-headers-class
 
-
 const TermsAndConditions = ({ props, ref, currentRoute }) => {
   // Title
   useEffect(() => {
@@ -28,10 +27,12 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
         <div className="terms-wrapper">
           <img src={icono} alt="" />
           <h1>Terms of Use</h1>
+          <div className="lines"></div>
           <div className="chapter-1">
             <h2>Chapter 1: General Provisions</h2>
             <div className="article-1">
               <h3>Article 1 Purpose</h3>
+              <div className="lines"></div>
               <p>
                 The purpose of these terms and conditions is to specify rights,
                 obligations, and other necessary matters between the company and
@@ -42,10 +43,11 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-2">
               <h3>Article 2 Definition</h3>
+              <div className="lines"></div>
               <h4>
                 {" "}
-                ● The definitions of terms used in these terms and conditions
-                are as follows.
+                The definitions of terms used in these terms and conditions are
+                as follows.
               </h4>
               <ul>
                 <li>
@@ -97,16 +99,17 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 </li>
               </ul>
               <h4>
-                ● Definitions of terms used in these Terms and Conditions shall
-                be governed by relevant laws and other general commercial
+                Definitions of terms used in these Terms and Conditions shall be
+                governed by relevant laws and other general commercial
                 practices, except as provided in each subparagraph of Paragraph
                 1.
               </h4>
             </div>
             <div className="article-3">
               <h3>Article 3 Provision of company information, etc.</h3>
+              <div className="lines"></div>
               <h4>
-                ● The company posts the following items on the company's website
+                The company posts the following items on the company's website
                 so that members can easily find out.
               </h4>
               <ul>
@@ -125,7 +128,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 <li>Privacy Policy - Separately Posted</li>
               </ul>
               <h4>
-                ● In relation to the services provided by the company, the
+                In relation to the services provided by the company, the
                 contents, information, conditions of use, and grades of service
                 are displayed on the company's website and sales screen of each
                 open market.
@@ -133,6 +136,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-4">
               <h3>Article 4 Publication of Terms and Conditions</h3>
+              <div className="lines"></div>
               <ul>
                 <li>
                   The company must present these terms and conditions when the
@@ -149,8 +153,9 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-5">
               <h3>Article 5 Change of Terms and Conditions</h3>
+              <div className="lines"></div>
               <ul>
-                {/* ● */}
+                {/*  */}
                 <li>
                   The company violates the 「Contents Industry Promotion Act」,
                   「Act on Consumer Protection in Electronic Commerce, Etc.」,
@@ -199,6 +204,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-6">
               <h3>Article 6 Interpretation of Terms and Conditions</h3>
+              <div className="lines"></div>
               <ul>
                 <li>
                   The company may determine specific contents not set forth in
@@ -228,15 +234,17 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </h2>
             <div className="article-7">
               <h3>Article 7 Generation of contract of use</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
-                  ● The contract of use is concluded when the user who wants to
+                  The contract of use is concluded when the user who wants to
                   become a member (hereafter, the applicant for membership)
                   agrees to the contents of these terms and conditions, applies
                   for service use, and the company approves the application.
                 </li>
                 <li>
-                  ● In principle, the company accepts the user's application for
+                  In principle, the company accepts the user's application for
                   service use. However, the company may not approve the
                   application for use that falls under any of the following
                   subparagraphs, or may cancel the contract of use afterwards.
@@ -275,8 +283,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   </ul>
                 </li>
                 <li>
-                  ● The company may withhold approval until the cause is
-                  resolved in any of the following cases.
+                  The company may withhold approval until the cause is resolved
+                  in any of the following cases.
                   <ul>
                     <li>
                       In case the company's facilities are not available, it is
@@ -294,11 +302,11 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                   </ul>
                 </li>
                 <li>
-                  ● The company classifies members' grades for each content of
-                  the service and may provide different service menus and
-                  service usage/additional functions for each member grade
-                  according to the collected information, such as usage time,
-                  frequency, and payment information.
+                  The company classifies members' grades for each content of the
+                  service and may provide different service menus and service
+                  usage/additional functions for each member grade according to
+                  the collected information, such as usage time, frequency, and
+                  payment information.
                 </li>
               </ul>
             </div>
@@ -307,6 +315,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 Article 8 Special rules regarding youth membership registration,
                 etc.
               </h3>
+              <div className="lines"></div>
+
               <p>
                 When a juvenile (including students under the age of 18 and
                 currently attending high school under Article 2 of the
@@ -322,6 +332,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
               <h3>
                 Article 9 Obligation for member ID and password management
               </h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   Members are responsible for managing member information such
@@ -361,6 +373,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-10">
               <h3>Article 10 Collection of information, etc.</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company may collect and use chat contents between members
@@ -385,6 +399,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-11">
               <h3>Article 11 Protection and Use of Personal Information</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company strives to protect members' personal information
@@ -421,6 +437,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 Article 12 Provision of information on services, etc. and
                 establishment of contract for use, etc.
               </h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   Before concluding a service use contract, the company clearly
@@ -464,6 +482,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-13">
               <h3>Article 13 Method of payment</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The limit for purchases made through the service is determined
@@ -481,6 +501,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-14">
               <h3>Article 14 Use of Paid Services</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The contents or services provided by the company to users are
@@ -495,6 +517,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-15">
               <h3>Article 15 Fault charge</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   In the event of an overpayment, the company refunds the entire
@@ -520,6 +544,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-16">
               <h3>Article 16 Provision and Suspension of Content</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   In principle, the company provides necessary services 24 hours
@@ -630,6 +656,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 Article 17 Provision of information and transmission of
                 advertisements
               </h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company may provide advertisements through game screens,
@@ -654,6 +682,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-18">
               <h3>Article 18 Management and Deletion of Posts</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   Regarding the contents registered/sent by the member
@@ -714,6 +744,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
                 Article 19 Publication of advertisements and transactions with
                 advertisers
               </h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   A part of the service investment base on which the company can
@@ -738,6 +770,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-20">
               <h3>Article 20 Attribution of Copyright, etc.</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   Copyrights and other intellectual property rights for contents
@@ -811,6 +845,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             <h2>
               Chapter 4 Withdrawal of Members and Restriction of Service Use
             </h2>
+            <div className="lines"></div>
+
             <div className="article-21">
               <h3>Article 21 Withdrawal of Member</h3>
               <p>
@@ -951,6 +987,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-23">
               <h3>Article 23 Procedures for Restriction of Use</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company determines the specific reasons and procedures for
@@ -984,6 +1022,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-24">
               <h3>Article 24 Restrictions on Use as Provisional Measures</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company may suspend the member's use of the service until
@@ -1017,6 +1057,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-25">
               <h3>Article 25 Procedure for objection to restrictions on use</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   When a member wishes to dissatisfied with the company's
@@ -1045,6 +1087,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             <h2>
               Chapter 5 Withdrawal of subscription and termination of contract
             </h2>
+            <div className="lines"></div>
+
             <div className="article-26">
               <h3>Article 26 Withdrawal of subscription</h3>
               <ul>
@@ -1138,6 +1182,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-27">
               <h3>Article 27 Effect of withdrawal of subscription</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The member who withdraws the subscription must return the
@@ -1183,6 +1229,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-28">
               <h3>Article 28 Termination of Member's Use Contract</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   A member may cancel or terminate the service use contract in
@@ -1214,6 +1262,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-29">
               <h3>Article 29 Termination of use contract by the company</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company may terminate the contract of use if the member
@@ -1276,6 +1326,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             <h2>Chapter 6 Compensation for Damages and Dispute Resolution</h2>
             <div className="article-30">
               <h3>Article 30 Compensation for Damage</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   The company is not responsible for any damage to members in
@@ -1299,6 +1351,8 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-31">
               <h3>Article 31 Company's Warranty and Indemnification</h3>
+              <div className="lines"></div>
+
               <ul>
                 <li>
                   Among the contents and services provided by the company, free
@@ -1385,6 +1439,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
             </div>
             <div className="article-32">
               <h3>Article 32 [Settlement of Disputes]</h3>
+              <div className="lines"></div>
               <ul>
                 <li>
                   In consideration of the user's convenience, the company
@@ -1444,7 +1499,7 @@ const TermsAndConditions = ({ props, ref, currentRoute }) => {
               <FaRegArrowAltCircleUp />
             </HashLink>
           </div>
-        </div>  
+        </div>
       </section>
     </div>
   );
