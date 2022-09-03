@@ -103,6 +103,31 @@
 }
 @media only screen and (max-width: 800px) {
   .gogochain {
+    .active {
+      position: fixed;
+      bottom: 10%;
+      right: 3%;
+      z-index: 999;
+      font-size: 30px;
+      background-color: #ffb808;
+      border-radius: 50%;
+      font-weight: 999;
+      opacity: 1;
+      transition: 0.3s ease-in;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+      height: 6%;
+      &:hover {
+        background-color: #33383b;
+      }
+      #up {
+        padding-top: 5%;
+        color: white;
+      }
+    }
     .wrapper {
       .logso {
         width: 47%;
