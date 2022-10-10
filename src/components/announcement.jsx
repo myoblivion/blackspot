@@ -1,41 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
-import { deleteAnnouncement } from "./actions/announcementAction";
-import backgroundimg from "../images/Untitled-1.png";
 
-function Announcement({ announcements }) {
+import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
+import axios from "axios";
+
+function announcement({}) {
   const { announcementID } = useParams();
-  const navigate = useNavigate();
+  const [announcements, setAnnouncement] = useState([]);
+  useEffect(() => {
+    viewPost();
+  }, []);
   const announce =
     announcements && announcements.find(({ id }) => `${id}` === announcementID);
+
+  const viewPost = async () => {
+    try {
+      await axios.get(`http://localhost:3001/announcementList`).then((res) => {
+        if (res.data.success === true) {
+          setAnnouncement(res.data.listall);
+        }
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
   return (
     <React.Fragment>
       {announce ? (
         <div className="announcement wrapper">
           <div className="announcement-header">
-            <h1>{announce.title}</h1>
+            <h3>{announce.title}</h3>
           </div>
           <div className="announcements-contents">
-            <Link to="edit" id="edit-announcements" style={{ padding: 20 }}>
-              Edit
-            </Link>
-            <button
-              onClick={() => deleteAnnouncement(announcementID, navigate)}
-              style={{
-                background: "#f3f3f3",
-                color: "inherit",
-                border: "none",
-                padding: "1%",
-                font: "inherit",
-                cursor: "pointer",
-                outline: "inherit",
-              }}
-              id="delete-announcements"
-            >
-              Delete
-            </button>
-            <Interweave content={announce.body} />
+            <Interweave content={announce.abody} />
           </div>
         </div>
       ) : (
@@ -45,4 +43,4 @@ function Announcement({ announcements }) {
   );
 }
 
-export default Announcement;
+export default announcement;

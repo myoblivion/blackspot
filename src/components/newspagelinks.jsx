@@ -1,33 +1,62 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-function NewsPageLinks({ newspage }) {
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+function PostsLinks({ posts }) {
+  useEffect(() => {
+    viewPost();
+  }, []);
+  const { newsID } = useParams();
+  const navigate = useNavigate();
+  const [news, setNews] = useState([]);
+  const viewPost = async (res) => {
+    try {
+      await axios.get(`http://localhost:3001/newsList`).then((res) => {
+        if (res.data.success === true) {
+          setNews(res.data.listall);
+        }
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
+  const deleteReview = (id) => {
+    axios.delete(`http://localhost:3001/deleteNewsList/${id}`);
+  };
   return (
     <div className="announcement-links">
       <div className="aLinks">
         <Link id="new-post" to="new" className="new-post">
           New Post
         </Link>
-        <h1 id="game-guideh1">News</h1>
-
+        <h1>News</h1>
         <ol>
-          {newspage &&
-            newspage.map(({ title, id, ndescription }) => {
-              return (
-                <Link to={`${id}`} key={id}>
-                  <li>
-                    <div className="li-left"></div>
-                    <div className="li-right">
-                      <h3>{title}</h3>
-                      <span>{ndescription}</span>
-                    </div>
-                  </li>
-                </Link>
-              );
-            })}
+          {news.map((item, index) => (
+            <li key={index}>
+              <Link to={`${item.id}`} className="btn btn__theme">
+                <div className="li-left"></div>
+                <div className="li-right">
+                  <h3>{item.title}</h3>
+                </div>
+              </Link>
+              <button
+                onClick={() => {
+                  {
+                    deleteReview(item.id);
+                  }
+                }}
+              >
+                Delete
+              </button>
+              {/* <Link to={`/editPost/${item.id}`} className="btn btn__theme">
+                {" "}
+                Edit{" "}
+              </Link> */}
+            </li>
+          ))}
         </ol>
       </div>
     </div>
   );
 }
 
-export default NewsPageLinks;
+export default PostsLinks;

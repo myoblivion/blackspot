@@ -32,13 +32,12 @@ function EditorPost(props) {
     setbody(editorState);
   };
 
-  const [isError, setError] = useState(null);
   const PoemAddbooks = async (event) => {
     try {
       event.preventDefault();
       event.persist();
       axios
-        .post(`http://localhost:3001/editUpdates`, {
+        .post(`http://localhost:3001/editAnnouncementss`, {
           title: userInfo.title,
           description: userInfo.description,
           body: userInfo.body.value,

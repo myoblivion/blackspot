@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AdminComponent = ({ props, ref }) => {
   return (
-    <div id="admin wrapper">
+    <div className="admin wrapper">
       <div className="admins">
         <div className="admin-contents">
           <h1 className="welcome-admin">Welcome Admin</h1>

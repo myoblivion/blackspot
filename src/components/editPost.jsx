@@ -3,7 +3,7 @@ import axios from "axios";
 import EditorPost from "./PostEditor/editorPost";
 import { useParams } from "react-router-dom";
 
-const EditPost = () => {
+const EditPost = (props) => {
   const { postID } = useParams();
   useEffect(() => {
     viewPostId(postID);
@@ -13,7 +13,7 @@ const EditPost = () => {
   const viewPostId = async (ids) => {
     try {
       await axios
-        .post(`http://localhost:8081/posts`, {
+        .post(`http://localhost:3001/getPostId`, {
           ids: postID,
         })
         .then((res) => {

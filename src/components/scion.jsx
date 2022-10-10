@@ -117,16 +117,16 @@ function DetectAndServe() {
   let os = getMobileOperatingSystem();
   if (os == "Android") {
     window.location.href =
-      "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+      "https://apps.apple.com/ph/app/scion-fist/id1591386655";
   } else if (os == "iOS") {
     window.location.href =
-      "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+      "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
   } else if (os == "Windows Phone") {
     window.location.href =
-      "https://play.google.com/store/apps/details?id=com.blackspotstudio.gogoracing.ph";
+      "https://apps.apple.com/ph/app/scion-fist/id1591386655";
   } else {
     window.location.href =
-      "https://apps.apple.com/ph/app/gogo-racing/id1623115563?fbclid=IwAR2o3x0fcL9yHW2BeMvHoEqn-ZDsT7d0EqyhZyGgvfP8oayODA4YU68FRKg";
+      "https://play.google.com/store/apps/details?id=com.blackspotstudio.scionfist";
   }
 }
 

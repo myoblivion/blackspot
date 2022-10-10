@@ -14,6 +14,7 @@ const LazyScionComponent = React.lazy(() => import("./scion"));
 const LazyGoGoWorldComponent = React.lazy(() => import("./gogoworld"));
 const LazyGoGoChainComponent = React.lazy(() => import("./gogochain"));
 const LazyGoGoRacingComponent = React.lazy(() => import("./gogoracing"));
+import SharkHoldemComponent from "./sharkholdem";
 import TestComponent from "./jofpasjofwoepq";
 import LoadingComponent from "./loading";
 import PrivacyComponent from "./privacy";
@@ -36,13 +37,14 @@ import PostPage from "./posts";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import NotFoundComponent from "./notfound";
 import { getLCP, getFID, getCLS } from "web-vitals";
-import AdminComponent from "./admin";
+import AdminComponent from "./bssphadmins";
 import AnnouncementPage from "./announcements";
 import GameGuidePage from "./gameguide";
 import NewsPageComponent from "./newspage";
 import GGRnews from "./ggr-news";
 import GrandPixGuide from "./grand-pix-guide";
 import EditPost from "./editPost";
+import EditAnnouncement from "./editAnnouncement";
 import GogoSquadEvent from "./gogosquadevent";
 import { useParams } from "react-router-dom";
 
@@ -57,12 +59,12 @@ const Appcomponent = ({}) => {
 
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  // }, []);
   const [posts, setPosts] = useState();
   const [announcements, setAnnouncements] = useState();
   const [gameguide, setGameGuide] = useState();
@@ -73,7 +75,6 @@ const Appcomponent = ({}) => {
       method: "get",
     };
     mockAPI(request).then((response) => {
-      console.log(response);
       setPosts(response.data.posts);
       setGameGuide(response.data.gameguide);
       setAnnouncements(response.data.announcements);
@@ -211,7 +212,7 @@ const Appcomponent = ({}) => {
             />
             {/*  */}
             <Route path="/posts/*" element={<PostPage posts={posts} />} />
-            <Route path="/admin" element={<AdminComponent />} />
+            <Route path="/bssphadmins" element={<AdminComponent />} />
             <Route
               path="/announcements/*"
               element={<AnnouncementPage announcements={announcements} />}
@@ -231,7 +232,13 @@ const Appcomponent = ({}) => {
               element={<GGRnews newspage={newspage} />}
             />
             <Route path="/editpost/:postID" exact element={<EditPost />} />
+            <Route
+              path="/editAnnouncement/:announcementID"
+              exact
+              element={<EditAnnouncement />}
+            />
             <Route path="/jofpasjofwoepq" exact element={<TestComponent />} />
+            <Route path="/sharkholdem/*" element={<SharkHoldemComponent />} />
           </Routes>
         </div>
       )}

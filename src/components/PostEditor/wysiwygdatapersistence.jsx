@@ -15,6 +15,7 @@ function WysiwygDataPersistence({ posts }) {
   let navigate = useNavigate();
   const [userInfo, setuserInfo] = useState({
     title: "",
+    description: "",
   });
   const onChangeValue = (e) => {
     setuserInfo({
@@ -22,17 +23,9 @@ function WysiwygDataPersistence({ posts }) {
       [e.target.name]: e.target.value,
     });
   };
-  const [userInfos, setuserInfos] = useState({
-    postdes: "",
-  });
-  const onChangeValues = (e) => {
-    setuserInfos({
-      ...userInfos,
-      [e.target.name]: e.target.value,
-    });
-  };
+
   let editorState = EditorState.createEmpty();
-  const [description, setDescription] = useState(editorState);
+  const [body, setDescription] = useState(editorState);
   const onEditorStateChange = (editorState) => {
     setDescription(editorState);
   };
@@ -42,15 +35,11 @@ function WysiwygDataPersistence({ posts }) {
     try {
       event.preventDefault();
       event.persist();
-      if (userInfo.description.value.length < 50) {
-        setError("Required, Add description minimum length 50 characters");
-        return;
-      }
       axios
-        .post(`http://localhost:8081/posts/new`, {
+        .post(`http://localhost:3001/addUpdates`, {
           title: userInfo.title,
-          postdes: userInfo.postdes,
-          description: userInfo.description.value,
+          description: userInfo.description,
+          body: userInfo.body.value,
         })
         .then((res) => {
           if (res.data.success === true) {
@@ -95,22 +84,22 @@ function WysiwygDataPersistence({ posts }) {
                 placeholder="Title"
                 required
               />
-              <label htmlFor="description">Description</label>
+              <label htmlFor="description">Description *</label>
               <input
                 type="text"
+                name="description"
                 id="description"
-                name="postdes"
-                placeholder="description"
-                className="description"
-                value={userInfos.postdes}
-                onChange={onChangeValues}
+                value={userInfo.description}
+                onChange={onChangeValue}
+                className="title"
+                placeholder="Title"
                 required
               />
             </div>
             <h2>Content</h2>
             <Editor
               spellCheck
-              editorState={description}
+              editorState={body}
               ref={editorRef}
               wrapperClassName="wrapper-class"
               editorClassName="editor-class"
@@ -182,12 +171,11 @@ function WysiwygDataPersistence({ posts }) {
             <textarea
               style={{ display: "none" }}
               disabled
-              ref={(val) => (userInfo.description = val)}
-              value={draftToHtml(convertToRaw(description.getCurrentContent()))}
+              ref={(val) => (userInfo.body = val)}
+              value={draftToHtml(convertToRaw(body.getCurrentContent()))}
             />
           </div>
 
-          {isError !== null && <div className="errors"> {isError} </div>}
           <button type="submit" className="btn btn__theme">
             {" "}
             Submit{" "}

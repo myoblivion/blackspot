@@ -1,38 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Interweave from "interweave";
-import { deleteNews } from "./actions/newsAction";
 
-function NewsPost({ newspage }) {
+import backgroundimg from "../images/gogoracingbackground/ggrpatchnotesbanner.png";
+import axios from "axios";
+
+function NewsPost({}) {
   const { newsID } = useParams();
-  const navigate = useNavigate();
+  const [newspage, setpost] = useState([]);
+  useEffect(() => {
+    viewPost();
+  }, []);
   const newspages = newspage && newspage.find(({ id }) => `${id}` === newsID);
+
+  const viewPost = async () => {
+    try {
+      await axios.get(`http://localhost:3001/newsList`).then((res) => {
+        if (res.data.success === true) {
+          setpost(res.data.listall);
+        }
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
   return (
     <React.Fragment>
       {newspages ? (
-        <div className="announcement wrapper">
-          <div className="announcement-header">
-            <h1>{newspages.title}</h1>
+        <div className="post wrapper">
+          <div className="post-header">
+            <h3>{newspages.title}</h3>
           </div>
-          <div className="announcements-contents">
-            <Link to="edit" id="edit-announcements" style={{ padding: 20 }}>
-              Edit
-            </Link>
-            <button
-              onClick={() => deleteNews(newsID, navigate)}
-              style={{
-                background: "#f3f3f3",
-                color: "inherit",
-                border: "none",
-                padding: "1%",
-                font: "inherit",
-                cursor: "pointer",
-                outline: "inherit",
-              }}
-              id="delete-announcements"
-            >
-              Delete
-            </button>
+          <div className="posts-contents">
             <Interweave content={newspages.body} />
           </div>
         </div>
