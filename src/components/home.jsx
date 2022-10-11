@@ -214,7 +214,6 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
   const [botoons, setBotoons] = useState(false);
 
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 66) {
       setBotoons(true);
     } else {

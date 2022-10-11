@@ -8,7 +8,7 @@ function AnnouncementLinks({ posts }) {
   const [ispost, setpost] = useState([]);
   const viewPost = async (res) => {
     try {
-      await axios.get(`http://localhost:3001/announcementList`).then((res) => {
+      await axios.get(`http://localhost:80/announcementList`).then((res) => {
         if (res.data.success === true) {
           setpost(res.data.listall);
         }
@@ -18,7 +18,7 @@ function AnnouncementLinks({ posts }) {
     }
   };
   const deleteReview = (id) => {
-    axios.delete(`http://localhost:3001/deleteannouncementList/${id}`);
+    axios.delete(`http://localhost:80/deleteannouncementList/${id}`);
   };
   return (
     <div className="announcement-links">

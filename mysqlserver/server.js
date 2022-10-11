@@ -175,8 +175,8 @@ app.post("/getAnnouncementId", async (req, res) => {
 app.post("/editAnnouncements", async (req, res) => {
   try {
     const [update] = await db_connection.execute(
-      "UPDATE `announcements` SET `title`=?, `description`=?, `body`=? WHERE id = ?",
-      [req.body.title, req.body.description, req.body.body, req.body.ids]
+      "UPDATE `announcements` SET `title`=?, `description`=?, `abody`=? WHERE id = ?",
+      [req.body.title, req.body.description, req.body.abody, req.body.ids]
     );
     if (update.affectedRows === 1) {
       return res.json({ success: true });
@@ -215,6 +215,6 @@ app.post("/getPostId", async (req, res) => {
 
 // const https = require("https");
 // const server = https.createServer({ key, cert }, app);
-app.listen(3001, () => {
+app.listen(80, () => {
   console.log("Port is running RUN BOI RUNNNNN");
 });

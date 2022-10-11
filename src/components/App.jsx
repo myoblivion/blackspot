@@ -49,9 +49,6 @@ import GogoSquadEvent from "./gogosquadevent";
 import { useParams } from "react-router-dom";
 
 // styles
-getCLS(console.log);
-getFID(console.log);
-getLCP(console.log);
 import "./scss/index.scss";
 
 const Appcomponent = ({}) => {

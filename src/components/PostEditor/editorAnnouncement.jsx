@@ -24,9 +24,9 @@ function EditorPost(props) {
     });
   };
   let editorState = EditorState.createWithContent(
-    ContentState.createFromBlockArray(convertFromHTML(props.postList[0].body))
+    ContentState.createFromBlockArray(convertFromHTML(props.postList[0].abody))
   );
-  const [body, setbody] = useState(editorState);
+  const [abody, setbody] = useState(editorState);
 
   const onEditorStateChange = (editorState) => {
     setbody(editorState);
@@ -37,10 +37,10 @@ function EditorPost(props) {
       event.preventDefault();
       event.persist();
       axios
-        .post(`http://localhost:3001/editAnnouncementss`, {
+        .post(`http://localhost:3001/editAnnouncements`, {
           title: userInfo.title,
           description: userInfo.description,
-          body: userInfo.body.value,
+          abody: userInfo.abody.value,
           ids: props.editPostID,
         })
         .then((res) => {
@@ -101,7 +101,7 @@ function EditorPost(props) {
                   required
                 />
                 <Editor
-                  editorState={body}
+                  editorState={abody}
                   toolbarClassName="toolbarClassName"
                   wrapperClassName="wrapperClassName"
                   editorClassName="editorClassName"
@@ -172,8 +172,8 @@ function EditorPost(props) {
                 <textarea
                   style={{ display: "none" }}
                   disabled
-                  ref={(val) => (userInfo.body = val)}
-                  value={draftToHtml(convertToRaw(body.getCurrentContent()))}
+                  ref={(val) => (userInfo.abody = val)}
+                  value={draftToHtml(convertToRaw(abody.getCurrentContent()))}
                 />
               </div>
               <div className="form-group col-sm-12 text-right">
