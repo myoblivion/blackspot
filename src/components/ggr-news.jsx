@@ -51,7 +51,7 @@ const GGRnews = ({ props, ref, newspage }) => {
                 </div>
               </div>
               <div className="ggrnwsz-contents">
-                {/* <Routes>
+                <Routes>
                   <Route
                     path="/*"
                     element={<NewsPageLinks newspage={newspage} />}
@@ -60,10 +60,8 @@ const GGRnews = ({ props, ref, newspage }) => {
                     path="/:newsID/*"
                     element={<NewsPost newspage={newspage} />}
                   />
-                </Routes> */}
-                <ol>
-                  <li>No News for the moment</li>
-                </ol>
+                </Routes>
+                <ol></ol>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ function announcement({}) {
 
   const viewPost = async () => {
     try {
-      await axios.get(`http://localhost:80/announcementList`).then((res) => {
+      await axios.get(`http://localhost:3001/announcementList`).then((res) => {
         if (res.data.success === true) {
           setAnnouncement(res.data.listall);
         }

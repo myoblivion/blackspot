@@ -33,12 +33,11 @@ function PostsLinks({ posts }) {
           {news.map((item, index) => (
             <li key={index}>
               <Link to={`${item.id}`} className="btn btn__theme">
-                <div className="li-left"></div>
-                <div className="li-right">
-                  <h3>{item.title}</h3>
-                </div>
+                <h3>{item.title}</h3>
+                <span>{item.description}</span>
               </Link>
               <button
+                className="button"
                 onClick={() => {
                   {
                     deleteReview(item.id);
@@ -47,10 +46,10 @@ function PostsLinks({ posts }) {
               >
                 Delete
               </button>
-              {/* <Link to={`/editPost/${item.id}`} className="btn btn__theme">
+              <Link to={`/editPost/${item.id}`} className="edits">
                 {" "}
                 Edit{" "}
-              </Link> */}
+              </Link>
             </li>
           ))}
         </ol>

@@ -215,6 +215,6 @@ app.post("/getPostId", async (req, res) => {
 
 // const https = require("https");
 // const server = https.createServer({ key, cert }, app);
-app.listen(80, () => {
+app.listen(3001, () => {
   console.log("Port is running RUN BOI RUNNNNN");
 });

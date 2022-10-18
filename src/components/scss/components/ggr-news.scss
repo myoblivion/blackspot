@@ -213,6 +213,12 @@
               -ms-user-select: none;
               user-select: none;
               text-align: left;
+              .button {
+                display: none;
+              }
+              .edits {
+                display: none;
+              }
               h3 {
                 margin-bottom: 8px;
               }
