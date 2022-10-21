@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, useLocation, Routes } from "react-router-dom";
+import { Route, useLocation, Routes, Link } from "react-router-dom";
 import { mockAPI } from "./mockApi/mockApi";
 // Components
 import NavbarComponent from "../components/navbar";
@@ -234,10 +234,17 @@ const Appcomponent = ({}) => {
             <Route path="/sharkholdem/*" element={<SharkHoldemComponent />} />
           </Routes>
           <CookieConsent
-            debug={true}
-            style={{ background: "#ffff", color: "black" }}
+            style={{ background: "#080808", color: "#525252" }}
+            location="bottom"
+            enableDeclineButton
           >
-            This website uses cookies to enhance the user experience.
+            We use Cookies to make our site work, customize content and your
+            experience, provide social media features and measure site usage.{" "}
+            <br />
+            You can accept or decline by clicking on the buttons below.
+            <br />
+            For more information please visit our{" "}
+            <Link to="/privacy">Privacy & Policy</Link>
           </CookieConsent>
         </div>
       )}
