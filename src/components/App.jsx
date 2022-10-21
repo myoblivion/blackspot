@@ -3,15 +3,15 @@ import { Route, useLocation, Routes, Link } from "react-router-dom";
 import { mockAPI } from "./mockApi/mockApi";
 // Components
 import NavbarComponent from "../components/navbar";
-const LazyHomeComponent = React.lazy(() => import("./home"));
-const LazyAboutComponent = React.lazy(() => import("./about"));
-const LazyDirectionComponent = React.lazy(() => import("./direction"));
-const LazyJobComponent = React.lazy(() => import("./career"));
-const LazyNewsComponent = React.lazy(() => import("./news"));
-const LazyScionComponent = React.lazy(() => import("./scion"));
-const LazyGoGoWorldComponent = React.lazy(() => import("./gogoworld"));
-const LazyGoGoChainComponent = React.lazy(() => import("./gogochain"));
-const LazyGoGoRacingComponent = React.lazy(() => import("./gogoracing"));
+import HomeComponent from "./home";
+import AboutComponent from "./about";
+import DirectionComponent from "./direction";
+import JobComponent from "./career";
+import NewsComponent from "./news";
+import ScionComponent from "./scion";
+import GoGoWorldComponent from "./gogoworld";
+import GoGoChainComponent from "./gogochain";
+import GoGoRacingComponent from "./gogoracing";
 import SharkHoldemComponent from "./sharkholdem";
 import TestComponent from "./jofpasjofwoepq";
 import LoadingComponent from "./loading";
@@ -90,7 +90,7 @@ const Appcomponent = ({}) => {
               path={"/"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyHomeComponent />
+                  <HomeComponent />
                 </React.Suspense>
               }
             />
@@ -99,7 +99,7 @@ const Appcomponent = ({}) => {
               path={"/about"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyAboutComponent />
+                  <AboutComponent />
                 </React.Suspense>
               }
             />
@@ -108,7 +108,7 @@ const Appcomponent = ({}) => {
               path={"/direction"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyDirectionComponent />
+                  <DirectionComponent />
                 </React.Suspense>
               }
             />
@@ -117,7 +117,7 @@ const Appcomponent = ({}) => {
               path={"/career"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyJobComponent />
+                  <JobComponent />
                 </React.Suspense>
               }
             />
@@ -126,7 +126,7 @@ const Appcomponent = ({}) => {
               path={"/news"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyNewsComponent />
+                  <NewsComponent />
                 </React.Suspense>
               }
             />
@@ -135,7 +135,7 @@ const Appcomponent = ({}) => {
               path={"/scion"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyScionComponent />
+                  <ScionComponent />
                 </React.Suspense>
               }
             />
@@ -144,7 +144,7 @@ const Appcomponent = ({}) => {
               path={"/gogoworld"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyGoGoWorldComponent />
+                  <GoGoWorldComponent />
                 </React.Suspense>
               }
             />
@@ -153,7 +153,7 @@ const Appcomponent = ({}) => {
               path={"/gogochain"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyGoGoChainComponent />
+                  <GoGoChainComponent />
                 </React.Suspense>
               }
             />
@@ -162,7 +162,7 @@ const Appcomponent = ({}) => {
               path={"/gogoracing"}
               element={
                 <React.Suspense fallback="loading....">
-                  <LazyGoGoRacingComponent />
+                  <GoGoRacingComponent />
                 </React.Suspense>
               }
             />
