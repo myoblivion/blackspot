@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, useLocation, Routes } from "react-router-dom";
 import { mockAPI } from "./mockApi/mockApi";
-import PostsLinks from "./postLinks";
-import WysiwygDataPersistence from "./PostEditor/wysiwygdatapersistence";
 // Components
 import NavbarComponent from "../components/navbar";
 const LazyHomeComponent = React.lazy(() => import("./home"));
@@ -36,7 +34,6 @@ import GogoRacingSearch from "./ggrsearch";
 import PostPage from "./posts";
 import GogoRacingAnnouncementList from "./ggr-announcement-list";
 import NotFoundComponent from "./notfound";
-import { getLCP, getFID, getCLS } from "web-vitals";
 import AdminComponent from "./bssphadmins";
 import AnnouncementPage from "./announcements";
 import GameGuidePage from "./gameguide";
@@ -46,8 +43,7 @@ import GrandPixGuide from "./grand-pix-guide";
 import EditPost from "./editPost";
 import EditAnnouncement from "./editAnnouncement";
 import GogoSquadEvent from "./gogosquadevent";
-import { useParams } from "react-router-dom";
-
+import CookieConsent from "react-cookie-consent";
 // styles
 import "./scss/index.scss";
 
@@ -237,6 +233,12 @@ const Appcomponent = ({}) => {
             <Route path="/jofpasjofwoepq" exact element={<TestComponent />} />
             <Route path="/sharkholdem/*" element={<SharkHoldemComponent />} />
           </Routes>
+          <CookieConsent
+            debug={true}
+            style={{ background: "#ffff", color: "black" }}
+          >
+            This website uses cookies to enhance the user experience.
+          </CookieConsent>
         </div>
       )}
     </>

@@ -6,12 +6,12 @@ const app = express();
 const db_connection = require("./mysql").promise();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
+const cookieParser = require("cookie-parser");
 // Cors
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(cookieParser());
 app.get("/", (req, res) => {
   res.send("Port is running. Welcome my Lord! ");
 });
