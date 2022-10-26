@@ -1,14 +1,10 @@
 import React, { useState, useEffect, useRef, LinkProps } from "react";
 import { Link } from "react-router-dom";
-import ReCaptchaV2 from "react-google-recaptcha";
-import VideoPlayer from "react-video-js-player";
 // Animate on Scroll
 import Aos from "aos";
 // Animate on scroll css
 import "aos/dist/aos.css";
-import getit from "../images/app-download.png";
 import ReCAPTCHA from "react-google-recaptcha";
-import appstore from "../images/appstore.png";
 import GifLoader from "react-gif-loader";
 import playNow from "../images/icons/play_now.png";
 import ggcm from "../images/icons/gogoc.png";
@@ -17,11 +13,12 @@ import GoGoChainLogo from "../images/icons/gogochain.png";
 import scionnnnn from "../images/icons/SF.png";
 import GGRICON from "../images/gogoracing_icon.png";
 import ScionLogo from "../images/scionlogo.png";
-import Gogochain from "../images/icons/gogochain.png";
 import Gogoworld from "../images/icons/gogoworld.png";
 import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 import GGworldBro from "../images/icons/gogo_world_backup.png";
 import BLACKSPOTMB from "../images/icons/Black_Spot_MB.png";
+// Test image optimize
+import Image from "react-image-webp";
 // phone
 import Phone from "../images/icons/phone.png";
 // Black Spot Studio Logos
@@ -29,50 +26,25 @@ import Korealogo from "../images/icons/Black_Spot_KR.png";
 import Dubailogo from "../images/icons/Black_Spot_DB.png";
 import ggwbroskie from "../images/gogoracingbackground/desktop.png";
 import icono from "../images/icons/logo.png";
-import bg1 from "../images/gogoracingbackground/ggrbackground.png";
 import sbg1 from "../images/gogoracingbackground/scionbg.png";
 
 import ComingSoonGGW from "../images/gogoracingbackground/gogoworldcm.png";
-// Shadow :D
-import shadowLeft from "../images/gogoracingbackground/left.6cf31a98.png";
-import shadowRight from "../images/gogoracingbackground/right.3d07e61b.png";
-import shadowBottom from "../images/gogoracingbackground/bottom_1920.e08eb6f5.png";
-import bshadowLeft from "../images/gogoracingbackground/bleft.png";
-import bshadowRight from "../images/gogoracingbackground/bright.png";
-import bshadowBottom from "../images/gogoracingbackground/bbottom.png";
-import yshadowBottom from "../images/gogoracingbackground/ybottom.png";
-import yshadowRight from "../images/gogoracingbackground/yright.png";
-import yshadowLeft from "../images/gogoracingbackground/yleft.png";
-import vshadowBottom from "../images/gogoracingbackground/vbottom.png";
-import vshadowRight from "../images/gogoracingbackground/vright.png";
-import vshadowLeft from "../images/gogoracingbackground/vleft.png";
+
 // Slider
 import video1 from "../images/video/Big Update Trailer FB (1).mp4";
 import video2 from "../images/video/Scion Fist PH Trailer.mp4";
 import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
-import character1 from "../images/Icon_Character_0008_Reward.png";
-import character2 from "../images/Icon_Character_6.png";
+
 import {
   FaEnvelope,
   FaFacebook,
-  FaGamepad,
-  FaInstagramSquare,
   FaMapMarked,
-  FaPaperPlane,
-  FaPhone,
   FaReddit,
-  FaRegArrowAltCircleLeft,
-  FaRegArrowAltCircleRight,
   FaTwitter,
   FaYoutube,
-  FaWindows,
-  FaAppStore,
-  FaGooglePlay,
   FaRegArrowAltCircleUp,
-  FaWindowClose,
   FaInstagram,
-  FaTiktok,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 // Image Js
@@ -247,7 +219,9 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
               <div className="video">
                 {/* <img src={bg1} alt="" id="background" /> */}
                 <video src={video1} autoPlay={true} loop={true} muted={true} />
-                <img src={Phone} alt="" id="phone" />
+                <picture>
+                  <img src={Phone} alt="phone handler" id="phone" />
+                </picture>
               </div>
               <div className="socialization">
                 <ul>
@@ -918,7 +892,12 @@ const HomeComponent = ({ props, ref, currentRoute }) => {
 
             <div className="footer-right">
               <div className="footer-icons">
-                <ul className="social-media-list">
+                <ul
+                  className="social-media-list"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-duration="700"
+                >
                   <li>
                     <a
                       href="https://www.facebook.com/BlackspotstudioPH"

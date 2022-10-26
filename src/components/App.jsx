@@ -52,12 +52,12 @@ const Appcomponent = ({}) => {
 
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  // }, []);
   const [posts, setPosts] = useState();
   const [announcements, setAnnouncements] = useState();
   const [gameguide, setGameGuide] = useState();
