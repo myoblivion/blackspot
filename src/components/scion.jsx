@@ -16,19 +16,19 @@ import feautures from "../images/background/feauture.png";
 import feautures2 from "../images/background/feauture2.png";
 import feautures3 from "../images/background/feauture3.png";
 // Characters
-import ch2 from "../images/characters/ch2.png";
-import ch3 from "../images/characters/ch3.png";
-import ch4 from "../images/characters/ch4.png";
-import ch5 from "../images/characters/ch5.png";
-import ch6 from "../images/characters/ch6.png";
-import ch7 from "../images/characters/ch7.png";
-import ch8 from "../images/characters/ch8.png";
-import ch9 from "../images/characters/ch9.png";
-import ch10 from "../images/characters/ch10.png";
-import ch11 from "../images/characters/ch11.png";
-import ch14 from "../images/characters/ch14.png";
-import ch16 from "../images/characters/ch16.png";
-import ch17 from "../images/characters/ch17.png";
+import ch2 from "../images/characters/ch2.webp";
+import ch3 from "../images/characters/ch3.webp";
+import ch4 from "../images/characters/ch4.webp";
+import ch5 from "../images/characters/ch5.webp";
+import ch6 from "../images/characters/ch6.webp";
+import ch7 from "../images/characters/ch7.webp";
+import ch8 from "../images/characters/ch8.webp";
+import ch9 from "../images/characters/ch9.webp";
+import ch10 from "../images/characters/ch10.webp";
+import ch11 from "../images/characters/ch11.webp";
+import ch14 from "../images/characters/ch14.webp";
+import ch16 from "../images/characters/ch16.webp";
+import ch17 from "../images/characters/ch17.webp";
 import prev from "../images/arrow-left.png";
 import next from "../images/arrow-right.png";
 // profiles
@@ -45,7 +45,6 @@ import profile10 from "../images/scionprofiles/10-off.png";
 import profile11 from "../images/scionprofiles/11-off.png";
 import profile12 from "../images/scionprofiles/12-off.png";
 import profile13 from "../images/scionprofiles/13-off.png";
-import tet from "../images/tet.jpg";
 // Weapons
 import w1 from "../images/weapons/w1.png";
 import w2 from "../images/weapons/w2.png";
@@ -61,10 +60,6 @@ import w11 from "../images/weapons/w11.png";
 import w12 from "../images/weapons/w12.png";
 import w13 from "../images/weapons/w13.png";
 import w14 from "../images/weapons/w14.png";
-import w15 from "../images/weapons/w15.png";
-
-import googleplay from "../images/icons/google.png";
-import applestore from "../images/icons/i-os.png";
 
 import icono from "../images/icons/logo.png";
 
@@ -80,7 +75,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import playNow from "../images/icons/play_now.png";
 
 const NextArrow = ({ onClick }) => {
   return (

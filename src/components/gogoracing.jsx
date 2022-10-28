@@ -47,16 +47,16 @@ import fade8 from "../images/ingamecharacters/fade8.png";
 import fade9 from "../images/ingamecharacters/fade9.png";
 import fade10 from "../images/ingamecharacters/fade10.png";
 // Name
-import Name1 from "../images/characters/name1.png";
-import Name2 from "../images/characters/name2.png";
-import Name3 from "../images/characters/name3.png";
-import Name4 from "../images/characters/name4.png";
-import Name5 from "../images/characters/name5.png";
-import Name6 from "../images/characters/name6.png";
-import Name7 from "../images/characters/name7.png";
-import Name8 from "../images/characters/name8.png";
-import Name9 from "../images/characters/name9.png";
-import Name10 from "../images/characters/name10.png";
+import Name1 from "../images/characters/name1.webp";
+import Name2 from "../images/characters/name2.webp";
+import Name3 from "../images/characters/name3.webp";
+import Name4 from "../images/characters/name4.webp";
+import Name5 from "../images/characters/name5.webp";
+import Name6 from "../images/characters/name6.webp";
+import Name7 from "../images/characters/name7.webp";
+import Name8 from "../images/characters/name8.webp";
+import Name9 from "../images/characters/name9.webp";
+import Name10 from "../images/characters/name10.webp";
 // end of characters
 import playNow from "../images/icons/play_now.png";
 import nftboi1 from "../images/gogoracingbackground/NFTcar_1.png";
@@ -64,17 +64,17 @@ import nftboi2 from "../images/gogoracingbackground/weeee.png";
 import somedog from "../images/somedog.png";
 import floor from "../images/floor.png";
 // Cars
-import car1 from "../images/characters/car1.png";
-import car2 from "../images/characters/car2.png";
-import car3 from "../images/characters/car3.png";
-import car4 from "../images/characters/car4.png";
-import car5 from "../images/characters/car5.png";
-import car6 from "../images/characters/car6.png";
-import car7 from "../images/characters/car7.png";
-import car8 from "../images/characters/car8.png";
-import car9 from "../images/characters/car9.png";
-import car10 from "../images/characters/car10.png";
-import car11 from "../images/characters/car11.png";
+import car1 from "../images/characters/car1.webp";
+import car2 from "../images/characters/car2.webp";
+import car3 from "../images/characters/car3.webp";
+import car4 from "../images/characters/car4.webp";
+import car5 from "../images/characters/car5.webp";
+import car6 from "../images/characters/car6.webp";
+import car7 from "../images/characters/car7.webp";
+import car8 from "../images/characters/car8.webp";
+import car9 from "../images/characters/car9.webp";
+import car10 from "../images/characters/car10.webp";
+import car11 from "../images/characters/car11.webp";
 
 //Car Names
 import Orca from "../images/ggr-cars/ncar1.png";
@@ -117,19 +117,19 @@ import FadeC10 from "../images/ggr-cars/cfade10.png";
 import FadeC11 from "../images/ggr-cars/cfade11.png";
 
 // Tires
-import tire1 from "../images/ggr-tires/gogo-racing-tire-26-1.png";
-import tire2 from "../images/ggr-tires/gogo-racing-tire-26-2.png";
-import tire3 from "../images/ggr-tires/gogo-racing-tire-26-3.png";
-import tire4 from "../images/ggr-tires/gogo-racing-tire-27-1.png";
-import tire5 from "../images/ggr-tires/gogo-racing-tire-27-2.png";
-import tire6 from "../images/ggr-tires/gogo-racing-tire-27-3.png";
-import tire7 from "../images/ggr-tires/gogo-racing-tire-29-1.png";
-import tire8 from "../images/ggr-tires/gogo-racing-tire-29-2.png";
-import tire9 from "../images/ggr-tires/gogo-racing-tire-29-3.png";
-import tire10 from "../images/ggr-tires/gogo-racing-tire-30-1.png";
-import tire11 from "../images/ggr-tires/gogo-racing-tire-30-2.png";
-import tire12 from "../images/ggr-tires/gogo-racing-tire-30-3.png";
-import upCar from "../images/icons/Tosuni_CarrotStar_01.png";
+// import tire1 from "../images/ggr-tires/gogo-racing-tire-26-1.png";
+// import tire2 from "../images/ggr-tires/gogo-racing-tire-26-2.png";
+// import tire3 from "../images/ggr-tires/gogo-racing-tire-26-3.png";
+// import tire4 from "../images/ggr-tires/gogo-racing-tire-27-1.png";
+// import tire5 from "../images/ggr-tires/gogo-racing-tire-27-2.png";
+// import tire6 from "../images/ggr-tires/gogo-racing-tire-27-3.png";
+// import tire7 from "../images/ggr-tires/gogo-racing-tire-29-1.png";
+// import tire8 from "../images/ggr-tires/gogo-racing-tire-29-2.png";
+// import tire9 from "../images/ggr-tires/gogo-racing-tire-29-3.png";
+// import tire10 from "../images/ggr-tires/gogo-racing-tire-30-1.png";
+// import tire11 from "../images/ggr-tires/gogo-racing-tire-30-2.png";
+// import tire12 from "../images/ggr-tires/gogo-racing-tire-30-3.png";
+// import upCar from "../images/icons/Tosuni_CarrotStar_01.png";
 import nftshop from "../images/gogoracingbackground/NFT_Shop.png";
 import {
   FaChartLine,

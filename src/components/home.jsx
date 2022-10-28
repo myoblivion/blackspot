@@ -18,7 +18,6 @@ import Gogoracing from "../images/icons/Gogo_Racing_Logo_Straight.png";
 import GGworldBro from "../images/icons/gogo_world_backup.png";
 import BLACKSPOTMB from "../images/icons/Black_Spot_MB.png";
 // Test image optimize
-import Image from "react-image-webp";
 // phone
 import Phone from "../images/icons/phone.png";
 // Black Spot Studio Logos
