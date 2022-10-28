@@ -46,20 +46,20 @@ import profile11 from "../images/scionprofiles/11-off.png";
 import profile12 from "../images/scionprofiles/12-off.png";
 import profile13 from "../images/scionprofiles/13-off.png";
 // Weapons
-import w1 from "../images/weapons/w1.png";
-import w2 from "../images/weapons/w2.png";
-import w3 from "../images/weapons/w3.png";
-import w4 from "../images/weapons/w4.png";
-import w5 from "../images/weapons/w5.png";
-import w6 from "../images/weapons/w6.png";
-import w7 from "../images/weapons/w7.png";
-import w8 from "../images/weapons/w8.png";
-import w9 from "../images/weapons/w9.png";
-import w10 from "../images/weapons/w10.png";
-import w11 from "../images/weapons/w11.png";
-import w12 from "../images/weapons/w12.png";
-import w13 from "../images/weapons/w13.png";
-import w14 from "../images/weapons/w14.png";
+import w1 from "../images/weapons/w1.webp";
+import w2 from "../images/weapons/w2.webp";
+import w3 from "../images/weapons/w3.webp";
+import w4 from "../images/weapons/w4.webp";
+import w5 from "../images/weapons/w5.webp";
+import w6 from "../images/weapons/w6.webp";
+import w7 from "../images/weapons/w7.webp";
+import w8 from "../images/weapons/w8.webp";
+import w9 from "../images/weapons/w9.webp";
+import w10 from "../images/weapons/w10.webp";
+import w11 from "../images/weapons/w11.webp";
+import w12 from "../images/weapons/w12.webp";
+import w13 from "../images/weapons/w13.webp";
+import w14 from "../images/weapons/w14.webp";
 
 import icono from "../images/icons/logo.png";
 
